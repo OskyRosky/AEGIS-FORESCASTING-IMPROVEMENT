@@ -1,0 +1,13 @@
+run_id,entity_key,current_model,recommended_model,recommendation,confidence_level,wmape_improvement_pct,primary_reason
+baseline_HDD_Enterprise_20260529,NAM-TDF,ExponentialSmoothing,AutoARIMA,Replace,High,-10.3,AutoARIMA captures trend change
+baseline_HDD_Enterprise_20260529,EUR-Dedicated,FixedGrowth2%,AutoARIMA,Replace,High,-8.7,AutoARIMA wins on wMAPE
+baseline_HDD_Enterprise_20260529,APC-Dedicated,ExponentialSmoothing,LightGBM,Test,Medium,-8.2,LightGBM handles nonlinear growth
+baseline_HDD_Enterprise_20260529,che-Go-Local,FixedGrowth1.5%,AutoARIMA,Replace,High,-6.7,AutoARIMA wins consistently
+baseline_HDD_Enterprise_20260529,deu-Go-Local,"ARIMA(0,2,2)",Theta,Test,Medium,-6.1,Theta wins on medium horizon
+baseline_HDD_Enterprise_20260529,MEA-Dedicated,Theta,Theta,Keep,High,0.2,Current model competitive
+baseline_HDD_Enterprise_20260529,APJ-Dedicated,"ETS(A,A,N)","ETS(A,A,N)",Keep,High,0.4,Current model competitive
+baseline_HDD_Enterprise_20260529,nam-TDF,FixedGrowth3%,FixedGrowth3%,Review,Low,1.4,Mixed horizon signals
+baseline_HDD_Enterprise_20260529,APJ-Local,FixedGrowth2%,AutoARIMA,Test,Medium,-5.5,AutoARIMA moderate improvement
+baseline_HDD_Enterprise_20260529,APC-Local,"ARIMA(0,2,2)",Theta,Test,Medium,-4.8,Theta wins short horizon
+baseline_HDD_Enterprise_20260529,EUR-Gallatin,FixedGrowth1.5%,AutoARIMA,Replace,High,-7.1,AutoARIMA wins clearly
+baseline_HDD_Enterprise_20260529,NAM-Dedicated,ExponentialSmoothing,LightGBM,Test,Medium,-5.9,LightGBM wins with lag features
