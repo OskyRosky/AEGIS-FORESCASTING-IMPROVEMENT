@@ -1,0 +1,59 @@
+Stage 4.2B Evaluation Source Discovery
+
+Recommended source for Stage 4.3: forecast_substrateBE_hdd_region_metrics for metrics validation only; no inspected table currently supports reconstructing raw backtests.
+
+Table: forecast_substrateBE_hdd_region_metrics
+Exists: True
+Row count: 2550
+Columns: Key;Count;Mean_Actual;Mean_Forecast;MAE;RMSE;Bias;Bias_Pct;MAPE;SMAPE;Accuracy;Forecast_Version;Start_Date;End_Date;Execution_Date
+ForecastVersions available: 2026-03-07;2026-04-16;2026-05-01
+ModelVersions available: 
+Date-related columns: Forecast_Version;Start_Date;End_Date;Execution_Date
+Entity columns: Key
+Metric columns: MAE;RMSE;Bias;Bias_Pct;MAPE;SMAPE;Accuracy
+Actual/forecast linkage columns: Mean_Actual;Mean_Forecast;Forecast_Version
+Precomputed metrics present: True
+Historical ForecastVersions present: True
+Actual/forecast linkage present: True
+Useful for backtesting: False
+Useful for metrics validation: True
+TOP 10 sample rows:
+          Key  Count  Mean_Actual  Mean_Forecast     MAE    RMSE     Bias  Bias_Pct  MAPE  SMAPE  Accuracy Forecast_Version Start_Date   End_Date             Execution_Date
+APC-Dedicated      7        28.81          52.28   23.47   23.47    23.47     81.47 81.47  57.89     18.53       2026-03-07 2026-04-09 2026-04-15 2026-04-16 13:38:59.220946
+APC-Dedicated      7        29.46          29.18    0.28    0.29    -0.28     -0.94  0.94   0.95     99.06       2026-05-01 2026-05-03 2026-05-09 2026-05-10 13:11:35.098872
+APC-Dedicated      7        29.09          28.87    0.23    0.23    -0.23     -0.78  0.78   0.79     99.22       2026-04-16 2026-04-22 2026-04-28 2026-04-29 13:13:05.056849
+ SGP-Go Local      7      5772.02        3948.02 1824.00 1824.57 -1824.00    -31.60 31.60  37.53     68.40       2026-04-16 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ CAN-Go Local      7    170761.19      171516.94  755.75  764.99   755.75      0.44  0.44   0.44     99.56       2026-04-16 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ MEX-Go Local      7      1571.79        1555.76   16.03   16.20   -16.03     -1.02  1.02   1.02     98.98       2026-04-16 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ GBR-Go Local      7    277367.39      275963.80 1403.58 1573.02 -1403.58     -0.51  0.51   0.51     99.49       2026-04-16 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+APC-Dedicated      7        28.79          52.33   23.54   23.54    23.54     81.78 81.78  58.05     18.22       2026-03-07 2026-04-12 2026-04-18 2026-04-19 13:11:34.619450
+ EUR-Go Local      7         0.50           0.44    0.06    0.06    -0.06    -11.59 11.59  12.31     88.41       2026-04-16 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+APC-Dedicated      7        28.98          28.84    0.15    0.16    -0.15     -0.50  0.50   0.50     99.50       2026-04-16 2026-04-19 2026-04-25 2026-04-26 13:11:21.818339
+
+Table: forecast_substrateBE_hdd_forest_metrics
+Exists: True
+Row count: 8828
+Columns: Key;Count;Mean_Actual;Mean_Forecast;MAE;RMSE;Bias;Bias_Pct;MAPE;SMAPE;Accuracy;Forecast_Version;Start_Date;End_Date;Execution_Date
+ForecastVersions available: Apr  6 2026  7:49PM;Apr 16 2026  7:50AM;May  1 2026  3:35AM
+ModelVersions available: 
+Date-related columns: Forecast_Version;Start_Date;End_Date;Execution_Date
+Entity columns: Key
+Metric columns: MAE;RMSE;Bias;Bias_Pct;MAPE;SMAPE;Accuracy
+Actual/forecast linkage columns: Mean_Actual;Mean_Forecast;Forecast_Version
+Precomputed metrics present: True
+Historical ForecastVersions present: True
+Actual/forecast linkage present: True
+Useful for backtesting: False
+Useful for metrics validation: True
+TOP 10 sample rows:
+     Key  Count  Mean_Actual  Mean_Forecast      MAE     RMSE     Bias  Bias_Pct    MAPE  SMAPE  Accuracy    Forecast_Version Start_Date   End_Date             Execution_Date
+ NAMP108      7      3060.44        3038.47    21.97    21.99   -21.97     -0.72    0.72   0.72     99.28 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ BRAP284      7     54914.93       54356.65   558.28   560.74  -558.28     -1.02    1.02   1.02     98.98 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+NAMPRD01      7    131589.13      144835.72 13246.59 13246.86 13246.59     10.07   10.07   9.58     89.93 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ EURP195      7     42317.94       70711.47 28393.53 28393.60 28393.53     67.10   67.10  50.24     32.90 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+EURPRD07      7    156121.02      199036.82 42915.80 42916.55 42915.80     27.49   27.49  24.17     72.51 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ APCP150      7        28.79          28.74     0.06     0.08    -0.05     -0.16    0.20   0.20     99.80 2026-04-06 19:49:02 2026-04-12 2026-04-18 2026-04-19 13:11:34.826329
+ APCP150      7        29.06         345.36   316.30   316.30   316.30   1088.48 1088.48 168.96      0.00 2026-04-16 07:50:38 2026-04-21 2026-04-27 2026-04-28 13:13:28.190999
+ EURP191      7     58040.13       72244.54 14204.41 14204.50 14204.41     24.47   24.47  21.81     75.53 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+AUSPRD01      7    134772.23      139606.86  4834.63  4835.58  4834.63      3.59    3.59   3.52     96.41 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000
+ DEUP281      7     92320.01       92669.13   349.13   356.90   349.13      0.38    0.38   0.38     99.62 2026-04-16 07:50:38 2026-04-24 2026-04-30    2026-05-04 12:10:17.000

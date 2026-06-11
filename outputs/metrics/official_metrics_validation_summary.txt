@@ -1,0 +1,49 @@
+Stage 4.3 Official Metrics Validation Summary
+
+All files passed schema validation: True
+Any metric sanity issues exist: False
+Files ready for Stage 4.4: True
+
+Per-file results:
+- hdd_region_metrics.csv
+  rows: 2550
+  columns: 15
+  unique Keys: 45
+  Forecast_Version values: 2026-03-07;2026-04-16;2026-05-01
+  Start_Date range: 2026-04-07 00:00:00 to 2026-06-03 00:00:00
+  End_Date range: 2026-04-13 00:00:00 to 2026-06-09 00:00:00
+  missing required columns: 
+  duplicate grain rows: 45
+  metric sanity issue count: 0
+- hdd_forest_metrics.csv
+  rows: 8828
+  columns: 15
+  unique Keys: 155
+  Forecast_Version values: 2026-04-06 19:49:02;2026-04-16 07:50:38;2026-05-01 03:35:00
+  Start_Date range: 2026-04-07 00:00:00 to 2026-06-03 00:00:00
+  End_Date range: 2026-04-13 00:00:00 to 2026-06-09 00:00:00
+  missing required columns: 
+  duplicate grain rows: 155
+  metric sanity issue count: 0
+- ssd_phx_lvwe_metrics.csv
+  rows: 7776
+  columns: 15
+  unique Keys: 137
+  Forecast_Version values: 2026-03-12
+  Start_Date range: 2026-04-07 00:00:00 to 2026-06-03 00:00:00
+  End_Date range: 2026-04-13 00:00:00 to 2026-06-09 00:00:00
+  missing required columns: 
+  duplicate grain rows: 137
+  metric sanity issue count: 0
+- ssd_phx_lvne_metrics.csv
+  rows: 7913
+  columns: 15
+  unique Keys: 137
+  Forecast_Version values: 2026-03-12
+  Start_Date range: 2026-04-03 00:00:00 to 2026-06-03 00:00:00
+  End_Date range: 2026-04-09 00:00:00 to 2026-06-09 00:00:00
+  missing required columns: 
+  duplicate grain rows: 137
+  metric sanity issue count: 0
+
+Recommended next step: Proceed to Stage 4.4 using the official metrics files as validated baseline inputs.
