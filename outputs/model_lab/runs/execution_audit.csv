@@ -1,0 +1,2 @@
+run_id,execution_timestamp,training_enabled,dry_run,planned_jobs,executed_jobs,skipped_jobs,status,message
+run_20260611_085430,2026-06-11T09:12:53,False,True,6356,0,6356,blocked_by_config,Training disabled by execution.yaml. No jobs executed.
