@@ -1,0 +1,6 @@
+artifact_type,artifact_root,required,description
+model_object,outputs/model_lab/artifacts/{run_id}/{model_name}/{entity_key}/{window_id}/,False,Serialized fitted model object for one job.
+training_log,outputs/model_lab/artifacts/{run_id}/{model_name}/{entity_key}/{window_id}/,True,Job-level training log for traceability.
+forecast_output,outputs/model_lab/artifacts/{run_id}/{model_name}/{entity_key}/{window_id}/,True,Forecast rows following forecast_output_schema.csv.
+metrics_output,outputs/model_lab/artifacts/{run_id}/{model_name}/{entity_key}/{window_id}/,True,Metric rows following metrics_output_schema.csv.
+error_log,outputs/model_lab/artifacts/{run_id}/{model_name}/{entity_key}/{window_id}/,True,Error details for failed jobs using the error handling contract.

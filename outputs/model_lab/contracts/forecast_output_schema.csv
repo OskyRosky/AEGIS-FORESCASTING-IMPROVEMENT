@@ -1,0 +1,10 @@
+field_name,data_type,required,description,example
+run_id,string,True,Unique Model Lab run identifier.,
+job_id,string,True,Unique planned job identifier.,
+entity_key,string,True,Forecast entity for the job.,
+model_name,string,True,Registered model name.,
+forecast_version,string,True,Forecast schema or generation version.,
+forecast_date,date,True,Date being forecast.,
+horizon_day,integer,True,Forecast horizon day number.,
+forecast_value,float,True,Forecasted target value.,
+created_timestamp,datetime,True,Forecast row creation timestamp.,

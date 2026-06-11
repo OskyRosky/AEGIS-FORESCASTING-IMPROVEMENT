@@ -1,0 +1,8 @@
+field_name,data_type,required,description,example
+run_id,string,True,Unique Model Lab run identifier.,
+entity_key,string,True,Forecast entity being ranked.,
+model_name,string,True,Registered model name.,
+rank,integer,True,Model rank for the entity.,
+composite_score,float,True,Final ranking score.,
+tournament_winner,boolean,True,Whether the model won for the entity.,
+created_timestamp,datetime,True,Tournament row creation timestamp.,
