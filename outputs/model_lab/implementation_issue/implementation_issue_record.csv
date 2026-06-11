@@ -1,0 +1,2 @@
+entity_key,window_id,model_name,metric_name,metric_value,root_cause
+NAM-TDF,3,ARIMA_Fixed,rmse,21.492760395497804,POSSIBLE_IMPLEMENTATION_ISSUE

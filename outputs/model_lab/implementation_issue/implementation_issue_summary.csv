@@ -1,0 +1,2 @@
+entity_key,window_id,model_name,forecast_rows,actual_rows,code_checks_passed,code_checks_failed,final_classification,recommendation
+NAM-TDF,3,ARIMA_Fixed,30,30,7,0,FALSE_POSITIVE,UNBLOCK_BASELINE_RANKING

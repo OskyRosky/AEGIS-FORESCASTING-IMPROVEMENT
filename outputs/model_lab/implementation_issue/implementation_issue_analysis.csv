@@ -1,0 +1,2 @@
+max_deviation,mean_deviation,signed_deviation,absolute_deviation,forecast_min,forecast_max,actual_min,actual_max,overshoot,undershoot,trend_reversal,discontinuity,collapse,explosion
+53.274682,9.756367900000004,9.756367900000004,292.6910370000001,53.526682,53.526682,0.252,53.519756,False,False,False,True,True,False
