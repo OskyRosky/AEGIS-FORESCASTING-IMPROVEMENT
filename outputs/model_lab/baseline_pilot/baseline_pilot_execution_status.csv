@@ -1,0 +1,71 @@
+run_id,job_id,entity_key,window_id,model_name,status,message,created_timestamp
+baseline_pilot_20260611_102542,job_000155,APC-Dedicated,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000158,APC-Dedicated,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000164,APC-Dedicated,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000159,APC-Dedicated,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000160,APC-Dedicated,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000161,APC-Dedicated,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000162,APC-Dedicated,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000323,APC-MSIT,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000326,APC-MSIT,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000332,APC-MSIT,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000327,APC-MSIT,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000328,APC-MSIT,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000329,APC-MSIT,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000330,APC-MSIT,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000491,APC-Multitenant,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000494,APC-Multitenant,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000500,APC-Multitenant,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000495,APC-Multitenant,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000496,APC-Multitenant,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000497,APC-Multitenant,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000498,APC-Multitenant,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000659,ARE-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000662,ARE-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000668,ARE-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000663,ARE-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000664,ARE-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000665,ARE-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000666,ARE-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000827,AUS-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000830,AUS-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000836,AUS-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000831,AUS-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000832,AUS-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000833,AUS-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000834,AUS-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000995,BRA-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000998,BRA-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001004,BRA-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_000999,BRA-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001000,BRA-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001001,BRA-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001002,BRA-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001163,CAN-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001166,CAN-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001172,CAN-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001167,CAN-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001168,CAN-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001169,CAN-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001170,CAN-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001331,CHE-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001334,CHE-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001340,CHE-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001335,CHE-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001336,CHE-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001337,CHE-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001338,CHE-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001499,DEU-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001502,DEU-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001508,DEU-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001503,DEU-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001504,DEU-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001505,DEU-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001506,DEU-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001667,ESP-Go Local,12,ARIMA_Fixed,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001670,ESP-Go Local,12,ETS_Current,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001676,ESP-Go Local,12,LinearRegression,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001671,ESP-Go Local,12,FixedGrowth_1_5,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001672,ESP-Go Local,12,FixedGrowth_3,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001673,ESP-Go Local,12,FixedGrowth_4,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42
+baseline_pilot_20260611_102542,job_001674,ESP-Go Local,12,FixedGrowth_6,completed,Larger baseline pilot job completed.,2026-06-11T10:25:42

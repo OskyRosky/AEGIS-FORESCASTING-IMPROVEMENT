@@ -1,0 +1,2 @@
+run_id,entity_key,window_id,jobs_planned,jobs_executed,jobs_failed,forecast_rows,models,created_timestamp
+smoke_20260611_101052,APC-Dedicated,1,7,7,0,210,ARIMA_Fixed;ETS_Current;LinearRegression;FixedGrowth_1_5;FixedGrowth_3;FixedGrowth_4;FixedGrowth_6,2026-06-11T10:10:52
