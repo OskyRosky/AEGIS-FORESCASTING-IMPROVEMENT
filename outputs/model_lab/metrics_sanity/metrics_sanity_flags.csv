@@ -1,0 +1,8 @@
+flag_type,level,subject,metric_name,value,threshold,severity,message
+wmape_extreme,metric,wmape,wmape,30,1.0,warning,wmape has 30 rows above 1.0.
+wmape_extreme,metric,wmape,wmape,325,0.158363039111948,warning,wmape has 325 rows greater than 10x median.
+mape_extreme,metric,mape,mape,108,1.0,warning,mape has 108 rows above 1.0.
+mape_extreme,metric,mape,mape,360,0.1585494346921305,warning,mape has 360 rows greater than 10x median.
+rmse_extreme,metric,rmse,rmse,474,5265.11372108434,warning,rmse has 474 rows greater than 10x median.
+smape_extreme,metric,smape,smape,362,0.1571821993877595,warning,smape has 362 rows greater than 10x median.
+bias_extreme,metric,abs_bias,abs_bias,513,3707.806331383691,warning,abs_bias has 513 rows greater than 10x median.

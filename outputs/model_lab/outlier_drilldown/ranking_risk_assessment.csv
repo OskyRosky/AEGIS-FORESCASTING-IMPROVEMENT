@@ -1,0 +1,45 @@
+risk_type,subject,risk_count,risk_message
+model_penalty_risk,ARIMA_Fixed,115,Model has metric outliers that could dominate ranking penalties.
+model_penalty_risk,ETS_Current,109,Model has metric outliers that could dominate ranking penalties.
+model_penalty_risk,FixedGrowth_1_5,83,Model has metric outliers that could dominate ranking penalties.
+model_penalty_risk,FixedGrowth_3,93,Model has metric outliers that could dominate ranking penalties.
+model_penalty_risk,FixedGrowth_4,113,Model has metric outliers that could dominate ranking penalties.
+model_penalty_risk,FixedGrowth_6,167,Model has metric outliers that could dominate ranking penalties.
+model_penalty_risk,LinearRegression,105,Model has metric outliers that could dominate ranking penalties.
+entity_distortion_risk,APC-Dedicated,27,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,APC-MSIT,1,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,APC-Multitenant,53,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,ARE-Go Local,10,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,AUS-Go Local,40,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,BRA-Go Local,1,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,CAN-Go Local,19,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,DEU-Go Local,7,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,ESP-Go Local,32,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,EUR-Dedicated,5,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,EUR-Multitenant,82,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,FRA-Go Local,6,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,GBR-Dedicated,32,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,GBR-Go Local,39,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,IND-Go Local,29,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,ISR-Go Local,4,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,ITA-Go Local,18,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,JPN-Go Local,31,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,LAM-Multitenant,23,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,MEX-Go Local,3,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-Dedicated,17,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-GCC Low,17,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-ITAR DoD,23,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-ITAR GCCH,29,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-Multitenant,84,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-SDF,41,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NAM-TDF,38,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NOR-Go Local,7,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,NZL-Go Local,7,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,POL-Go Local,31,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,QAT-Go Local,3,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,SWE-Go Local,10,Entity has metric outliers that could distort aggregate rankings.
+entity_distortion_risk,TWN-Go Local,16,Entity has metric outliers that could distort aggregate rankings.
+root_cause_mix,BASELINE_MODEL_LIMITATION,1,Root-cause category observed in diagnosed outlier windows.
+root_cause_mix,EXPECTED_VOLATILITY,40,Root-cause category observed in diagnosed outlier windows.
+root_cause_mix,POSSIBLE_IMPLEMENTATION_ISSUE,1,Root-cause category observed in diagnosed outlier windows.
+root_cause_mix,STRUCTURAL_BREAK,58,Root-cause category observed in diagnosed outlier windows.
