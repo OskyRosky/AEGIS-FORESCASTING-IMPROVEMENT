@@ -1,0 +1,4 @@
+rule_name,applies_to,action,silent_removal,description
+p95_control,all_metrics,diagnostic_flag_only,False,Values above p95 are retained but flagged for review.
+p99_control,all_metrics,winsorize_to_entity_metric_p99_before_normalization,False,Values above p99 are capped for scoring but retained in diagnostics.
+extreme_outlier_control,all_metrics,clip_to_p99_no_exclusion,False,No rows are excluded; extreme values are clipped only in normalized scoring input.

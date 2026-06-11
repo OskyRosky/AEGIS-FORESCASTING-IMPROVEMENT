@@ -1,0 +1,40 @@
+policy_name: baseline_ranking_policy
+policy_stage: Stage 5.13
+policy_scope: baseline_models_only
+policy_status: design_only
+allowed_metrics:
+  - wmape
+  - mape
+  - rmse
+  - smape
+  - abs_bias
+normalization:
+  method: percentile_rank_within_entity_window
+  raw_rmse_allowed: false
+  direction: lower_metric_is_better
+  normalized_score_range: 0_to_100
+  normalized_score_direction: higher_is_better
+outlier_handling:
+  p95_control: diagnostic_threshold
+  p99_control: winsorization_threshold
+  extreme_outlier_control: clip_to_p99
+  exclusions_allowed: false
+  silent_removal_allowed: false
+aggregation:
+  entity_window_score: weighted_mean_of_normalized_metrics
+  entity_score: median_across_windows
+  cross_entity_score: equal_weighted_mean_across_entities
+  global_score: equal_weighted_mean_of_entity_scores
+tie_breaking:
+  - normalized_wmape
+  - normalized_smape
+  - normalized_rmse
+  - normalized_abs_bias
+  - model_name_ascending
+prohibitions:
+  rank_models: true
+  select_winners: true
+  create_tournament_outputs: true
+  evaluate_challengers: true
+  rerun_forecasts: true
+  recalculate_metrics: true

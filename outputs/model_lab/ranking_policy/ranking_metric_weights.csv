@@ -1,0 +1,6 @@
+metric_name,weight,direction_before_normalization,normalized_score_direction
+wmape,0.3,lower_is_better,higher_is_better
+mape,0.15,lower_is_better,higher_is_better
+rmse,0.2,lower_is_better,higher_is_better
+smape,0.2,lower_is_better,higher_is_better
+abs_bias,0.15,lower_is_better,higher_is_better

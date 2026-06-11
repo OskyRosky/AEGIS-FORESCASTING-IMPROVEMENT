@@ -1,0 +1,6 @@
+priority,tiebreak_field,direction,description
+1,normalized_wmape,higher_is_better,Applied only when prior score fields are tied.
+2,normalized_smape,higher_is_better,Applied only when prior score fields are tied.
+3,normalized_rmse,higher_is_better,Applied only when prior score fields are tied.
+4,normalized_abs_bias,higher_is_better,Applied only when prior score fields are tied.
+5,model_name_ascending,lexicographic_ascending,Applied only when prior score fields are tied.

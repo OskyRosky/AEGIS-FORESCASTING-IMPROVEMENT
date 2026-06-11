@@ -1,0 +1,2 @@
+policy_name,metrics_covered,weights_sum,normalization_defined,outlier_handling_defined,aggregation_defined,tiebreaking_defined,winners_selected,tournament_outputs_created
+baseline_ranking_policy,5,1.0,True,True,True,True,False,False

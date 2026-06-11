@@ -1,0 +1,6 @@
+metric_name,normalization_method,formula,score_range,raw_metric_allowed_in_score,rationale
+wmape,percentile_rank_within_entity_window,100 * (1 - percentile_rank(metric_value_after_outlier_control)),0_to_100,False,"Controls scale, range, and entity-size dominance."
+mape,percentile_rank_within_entity_window,100 * (1 - percentile_rank(metric_value_after_outlier_control)),0_to_100,False,"Controls scale, range, and entity-size dominance."
+rmse,percentile_rank_within_entity_window,100 * (1 - percentile_rank(metric_value_after_outlier_control)),0_to_100,False,"Controls scale, range, and entity-size dominance."
+smape,percentile_rank_within_entity_window,100 * (1 - percentile_rank(metric_value_after_outlier_control)),0_to_100,False,"Controls scale, range, and entity-size dominance."
+abs_bias,percentile_rank_within_entity_window,100 * (1 - percentile_rank(metric_value_after_outlier_control)),0_to_100,False,"Controls scale, range, and entity-size dominance."
