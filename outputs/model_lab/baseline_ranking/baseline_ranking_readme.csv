@@ -1,0 +1,2 @@
+publication_summary,baseline_only_evaluation,challengers_included,tournament_performed,scores_normalized,future_challenger_requirement,creation_timestamp
+Baseline-only evaluation snapshot. No challengers included; no tournament performed; scores are normalized using the Stage 5.13 policy. Future challengers must be evaluated using the identical framework before comparison.,True,False,False,True,"Evaluate challengers with the same metrics, normalization, outlier controls, aggregation, and tie-break policy.",2026-06-11T12:31:48

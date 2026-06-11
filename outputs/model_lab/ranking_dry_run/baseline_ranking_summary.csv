@@ -1,0 +1,2 @@
+metric_rows_processed,score_rows_created,entity_score_rows,model_score_rows,models,entities,windows,normalization_method,outlier_control,weights_sum,flag_count,winner_selected,tournament_created
+3178,3178,273,7,7,39,454,percentile_rank_within_entity_window,clip_to_p99,1.0,0,False,False
