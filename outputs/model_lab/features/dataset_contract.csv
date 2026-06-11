@@ -1,0 +1,22 @@
+column_name,data_type,required,description
+entity_key,str,True,Unique forecasting entity identifier.
+date,datetime64[us],True,Daily observation date.
+target,float64,True,Historical actual target value.
+lag_1,float64,False,Feature column: lag_1.
+lag_7,float64,False,Feature column: lag_7.
+lag_14,float64,False,Feature column: lag_14.
+lag_30,float64,False,Feature column: lag_30.
+lag_60,float64,False,Feature column: lag_60.
+lag_90,float64,False,Feature column: lag_90.
+rolling_mean_7,float64,False,Feature column: rolling_mean_7.
+rolling_std_7,float64,False,Feature column: rolling_std_7.
+rolling_mean_30,float64,False,Feature column: rolling_mean_30.
+rolling_std_30,float64,False,Feature column: rolling_std_30.
+year,int32,False,Feature column: year.
+month,int32,False,Feature column: month.
+quarter,int32,False,Feature column: quarter.
+day_of_month,int32,False,Feature column: day_of_month.
+day_of_week,int32,False,Feature column: day_of_week.
+week_of_year,int64,False,Feature column: week_of_year.
+is_month_start,int64,False,Feature column: is_month_start.
+is_month_end,int64,False,Feature column: is_month_end.
