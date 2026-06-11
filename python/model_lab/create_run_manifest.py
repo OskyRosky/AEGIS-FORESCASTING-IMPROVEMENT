@@ -24,6 +24,8 @@ RUNS_DIR = MODEL_LAB_DIR / "runs"
 TRAINING_JOB_PLAN = MODEL_LAB_DIR / "training_job_plan.csv"
 RUN_MANIFEST_OUTPUT = RUNS_DIR / "run_manifest.csv"
 RUN_METADATA_OUTPUT = RUNS_DIR / "run_metadata.csv"
+RUN_MANIFEST_HISTORY_OUTPUT = RUNS_DIR / "run_manifest_history.csv"
+RUN_METADATA_HISTORY_OUTPUT = RUNS_DIR / "run_metadata_history.csv"
 
 
 def _require_input_file(path) -> None:
@@ -37,6 +39,12 @@ def _build_run_id(timestamp: datetime) -> str:
     """Create a deterministic timestamp-based run id."""
 
     return f"run_{timestamp.strftime('%Y%m%d_%H%M%S')}"
+
+
+def _append_history(frame: pd.DataFrame, path) -> None:
+    """Append rows to a history CSV, creating it with headers when missing."""
+
+    frame.to_csv(path, mode="a", header=not path.exists(), index=False)
 
 
 def create_run_manifest() -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -91,9 +99,13 @@ def create_run_manifest() -> tuple[pd.DataFrame, pd.DataFrame]:
 
     manifest.to_csv(RUN_MANIFEST_OUTPUT, index=False)
     metadata.to_csv(RUN_METADATA_OUTPUT, index=False)
+    _append_history(manifest, RUN_MANIFEST_HISTORY_OUTPUT)
+    _append_history(metadata, RUN_METADATA_HISTORY_OUTPUT)
 
     logger.info("Created %s with %s rows", RUN_MANIFEST_OUTPUT, len(manifest))
     logger.info("Created %s with %s rows", RUN_METADATA_OUTPUT, len(metadata))
+    logger.info("Appended %s rows to %s", len(manifest), RUN_MANIFEST_HISTORY_OUTPUT)
+    logger.info("Appended %s rows to %s", len(metadata), RUN_METADATA_HISTORY_OUTPUT)
     logger.info("Training enabled: %s", bool(execution_config["training_enabled"]))
     logger.info("Dry run: %s", bool(execution_config["dry_run"]))
     logger.info("Planned jobs: %s", len(job_plan))

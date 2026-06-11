@@ -24,6 +24,7 @@ RUNS_DIR = MODEL_LAB_DIR / "runs"
 TRAINING_JOB_PLAN = MODEL_LAB_DIR / "training_job_plan.csv"
 RUN_MANIFEST = RUNS_DIR / "run_manifest.csv"
 EXECUTION_AUDIT_OUTPUT = RUNS_DIR / "execution_audit.csv"
+EXECUTION_AUDIT_HISTORY_OUTPUT = RUNS_DIR / "execution_audit_history.csv"
 
 AUDIT_COLUMNS = [
     "run_id",
@@ -95,7 +96,16 @@ def _write_execution_audit(
         columns=AUDIT_COLUMNS,
     )
     audit.to_csv(EXECUTION_AUDIT_OUTPUT, index=False)
+    audit.to_csv(
+        EXECUTION_AUDIT_HISTORY_OUTPUT,
+        mode="a",
+        header=not EXECUTION_AUDIT_HISTORY_OUTPUT.exists(),
+        index=False,
+    )
     logger.info("Created %s with %s rows", EXECUTION_AUDIT_OUTPUT, len(audit))
+    logger.info(
+        "Appended %s rows to %s", len(audit), EXECUTION_AUDIT_HISTORY_OUTPUT
+    )
     logger.info("Execution audit status: %s", status)
     logger.info("Executed jobs: %s", executed_jobs)
     logger.info("Skipped jobs: %s", skipped_jobs)

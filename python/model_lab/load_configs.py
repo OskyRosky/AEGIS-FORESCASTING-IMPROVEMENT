@@ -36,30 +36,60 @@ def _parse_scalar(value: str) -> Any:
 
 
 def _fallback_yaml_load(path: Path) -> dict[str, Any]:
-    """Load a minimal YAML subset without adding a runtime dependency."""
+    """Load the small nested YAML subset used by local config files."""
 
+    raw_lines = path.read_text(encoding="utf-8").splitlines()
+    lines = [
+        line.rstrip()
+        for line in raw_lines
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
     config: dict[str, Any] = {}
-    current_key: str | None = None
+    stack: list[tuple[int, Any]] = [(-1, config)]
 
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        line = raw_line.rstrip()
-        if not line or line.lstrip().startswith("#"):
-            continue
+    def next_container_type(current_index: int, current_indent: int) -> type:
+        """Infer whether an empty YAML key should hold a mapping or list."""
 
+        for next_line in lines[current_index + 1 :]:
+            next_indent = len(next_line) - len(next_line.lstrip(" "))
+            if next_indent <= current_indent:
+                break
+            if next_line.strip().startswith("-"):
+                return list
+            return dict
+        return dict
+
+    for index, line in enumerate(lines):
+        indent = len(line) - len(line.lstrip(" "))
         stripped = line.strip()
+
+        while indent <= stack[-1][0]:
+            stack.pop()
+
+        parent = stack[-1][1]
         if stripped.startswith("-"):
-            if current_key is None:
-                raise ValueError(f"List item without key in {path}: {line}")
-            config.setdefault(current_key, []).append(_parse_scalar(stripped[1:]))
+            if not isinstance(parent, list):
+                raise ValueError(f"List item without list parent in {path}: {line}")
+            parent.append(_parse_scalar(stripped[1:].strip()))
             continue
 
         key, separator, value = stripped.partition(":")
         if not separator:
             raise ValueError(f"Invalid YAML line in {path}: {line}")
+        if not isinstance(parent, dict):
+            raise ValueError(f"Mapping item without mapping parent in {path}: {line}")
 
-        current_key = key.strip()
+        key = key.strip()
         value = value.strip()
-        config[current_key] = [] if value == "" else _parse_scalar(value)
+        if value:
+            parent[key] = _parse_scalar(value)
+            continue
+
+        container_class = next_container_type(index, indent)
+        container: dict[str, Any] | list[Any]
+        container = [] if container_class is list else {}
+        parent[key] = container
+        stack.append((indent, container))
 
     return config
 

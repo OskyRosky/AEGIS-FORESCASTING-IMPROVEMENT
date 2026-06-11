@@ -1,0 +1,38 @@
+metric_normalization:
+  wmape: lower_is_better_percent
+  mape: lower_is_better_percent
+  rmse: lower_is_better_normalized_by_entity_scale
+  bias: lower_absolute_is_better_percent
+  stability: lower_variance_is_better
+  horizon: lower_late_horizon_degradation_is_better
+
+composite_score:
+  method: weighted_normalized_score
+  score_range: 0_to_100
+  higher_is_better: true
+
+rmse_normalization:
+  method: divide_by_entity_mean_actual
+  fallback_if_entity_mean_zero: null
+
+bias_handling:
+  use_absolute_bias: true
+  signed_bias_retained_for_diagnostics: true
+
+zero_actual_handling:
+  exclude_zero_actuals_from_percentage_metrics: true
+  minimum_actual_threshold: 1e-9
+  log_excluded_rows: true
+
+stability_score:
+  definition: variance_of_window_level_wmape
+  normalization: percentile_rank_within_model_family
+  higher_is_better_after_transformation: true
+
+horizon_score:
+  definition: late_horizon_error_degradation
+  compare:
+    early_horizon_days: 1_10
+    late_horizon_days: 21_30
+    metric: wmape
+  higher_is_better_after_transformation: true
