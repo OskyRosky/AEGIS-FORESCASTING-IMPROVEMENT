@@ -2,10 +2,19 @@
 
 from __future__ import annotations
 
+from model_lab.models.arima_fixed_model import ARIMAFixedModel
 from model_lab.models.autoarima_model import AutoARIMAModel
 from model_lab.models.base_model import ForecastModel
 from model_lab.models.ets_model import ETSModel
+from model_lab.models.ets_current_model import ETSCurrentModel
+from model_lab.models.fixed_growth_model import (
+    FixedGrowth15Model,
+    FixedGrowth3Model,
+    FixedGrowth4Model,
+    FixedGrowth6Model,
+)
 from model_lab.models.lightgbm_model import LightGBMModel
+from model_lab.models.linear_regression_model import LinearRegressionModel
 from model_lab.models.nbeats_model import NBEATSModel
 from model_lab.models.nhits_model import NHITSModel
 from model_lab.models.theta_model import ThetaModel
@@ -44,6 +53,13 @@ def list_model_families() -> list[str]:
 
 
 for candidate_model in (
+    ARIMAFixedModel,
+    ETSCurrentModel,
+    LinearRegressionModel,
+    FixedGrowth15Model,
+    FixedGrowth3Model,
+    FixedGrowth4Model,
+    FixedGrowth6Model,
     AutoARIMAModel,
     ThetaModel,
     ETSModel,

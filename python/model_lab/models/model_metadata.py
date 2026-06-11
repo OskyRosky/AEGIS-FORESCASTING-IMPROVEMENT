@@ -5,6 +5,65 @@ from __future__ import annotations
 
 MODEL_METADATA = [
     {
+        "model_name": "ARIMA_Fixed",
+        "model_family": "BaselineProduction",
+        "description": (
+            "Fixed ARIMA configuration matching current AD notebook logic, "
+            "ARIMA(p=0,d=2,q=0)."
+        ),
+        "supports_multivariate": False,
+        "supports_exogenous": False,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
+        "model_name": "ETS_Current",
+        "model_family": "BaselineProduction",
+        "description": "Current ExponentialSmoothing baseline implementation.",
+        "supports_multivariate": False,
+        "supports_exogenous": False,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
+        "model_name": "LinearRegression",
+        "model_family": "BaselineProduction",
+        "description": "Current LinearRegressionModel with lags=30.",
+        "supports_multivariate": True,
+        "supports_exogenous": True,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
+        "model_name": "FixedGrowth_1_5",
+        "model_family": "BaselineProduction",
+        "description": "FixedGrowthModel with growth_rate=0.015.",
+        "supports_multivariate": False,
+        "supports_exogenous": False,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
+        "model_name": "FixedGrowth_3",
+        "model_family": "BaselineProduction",
+        "description": "FixedGrowthModel with growth_rate=0.03.",
+        "supports_multivariate": False,
+        "supports_exogenous": False,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
+        "model_name": "FixedGrowth_4",
+        "model_family": "BaselineProduction",
+        "description": "FixedGrowthModel with growth_rate=0.04.",
+        "supports_multivariate": False,
+        "supports_exogenous": False,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
+        "model_name": "FixedGrowth_6",
+        "model_family": "BaselineProduction",
+        "description": "FixedGrowthModel with growth_rate=0.06.",
+        "supports_multivariate": False,
+        "supports_exogenous": False,
+        "supports_probabilistic_forecasts": False,
+    },
+    {
         "model_name": "AutoARIMA",
         "model_family": "Statistical",
         "description": "Automatic ARIMA-style statistical forecasting model.",

@@ -1,2 +1,2 @@
 total_jobs,entity_count,window_count,model_count,models_planned,families_planned,min_train_rows,max_train_rows,min_test_rows,max_test_rows
-3178,39,454,7,AutoARIMA;ETS;LightGBM;NBEATS;NHITS;Theta;XGBoost,DeepLearning;MachineLearning;Statistical,381,2463,30,30
+6356,39,454,14,ARIMA_Fixed;AutoARIMA;ETS;ETS_Current;FixedGrowth_1_5;FixedGrowth_3;FixedGrowth_4;FixedGrowth_6;LightGBM;LinearRegression;NBEATS;NHITS;Theta;XGBoost,BaselineProduction;DeepLearning;MachineLearning;Statistical,381,2463,30,30

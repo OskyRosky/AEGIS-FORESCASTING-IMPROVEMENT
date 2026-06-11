@@ -16,6 +16,13 @@ from utils.logger import get_logger
 logger = get_logger("validate_model_registry")
 
 EXPECTED_MODELS = {
+    "ARIMA_Fixed": "BaselineProduction",
+    "ETS_Current": "BaselineProduction",
+    "LinearRegression": "BaselineProduction",
+    "FixedGrowth_1_5": "BaselineProduction",
+    "FixedGrowth_3": "BaselineProduction",
+    "FixedGrowth_4": "BaselineProduction",
+    "FixedGrowth_6": "BaselineProduction",
     "AutoARIMA": "Statistical",
     "Theta": "Statistical",
     "ETS": "Statistical",
