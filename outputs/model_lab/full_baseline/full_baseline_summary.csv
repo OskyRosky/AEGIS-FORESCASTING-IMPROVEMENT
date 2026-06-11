@@ -1,0 +1,2 @@
+run_id,windows_executed,entities_executed,models_executed,jobs_planned,jobs_executed,jobs_failed,forecast_rows,created_timestamp
+full_baseline_20260611_103953,454,39,7,3178,3178,0,95340,2026-06-11T10:39:53
