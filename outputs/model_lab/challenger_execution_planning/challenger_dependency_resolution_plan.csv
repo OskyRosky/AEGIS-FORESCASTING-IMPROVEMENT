@@ -1,0 +1,14 @@
+model_name,required_dependency,dependency_role,current_availability_status,resolution_required,recommended_resolution,fallback_available,blocks_sandbox,blocks_official,created_timestamp
+AutoARIMA,statsforecast,preferred,missing,True,Plan to install statsforecast in a controlled environment before sandbox.,False,True,True,2026-06-12T15:22:45
+AutoARIMA,pmdarima,preferred,missing,True,Optional AutoARIMA fallback; plan install only if statsforecast unavailable.,False,True,True,2026-06-12T15:22:45
+Theta,statsforecast,preferred,missing,True,Plan to install statsforecast in a controlled environment before sandbox.,False,True,True,2026-06-12T15:22:45
+Theta,darts,preferred,missing,True,Optional fallback for Theta/NBEATS; plan install only if primary backend unavailable.,False,True,True,2026-06-12T15:22:45
+ETS Explicit,statsmodels,preferred,missing,True,Plan to install statsmodels for explicit ETS state-space estimation.,False,True,True,2026-06-12T15:22:45
+ETS Explicit,statsforecast,preferred,missing,True,Plan to install statsforecast in a controlled environment before sandbox.,False,True,True,2026-06-12T15:22:45
+LightGBM,lightgbm,preferred,missing,True,Plan to install lightgbm before ML sandbox.,False,True,True,2026-06-12T15:22:45
+XGBoost,xgboost,preferred,missing,True,Plan to install xgboost before ML sandbox.,False,True,True,2026-06-12T15:22:45
+NBEATS,neuralforecast,preferred,missing,True,Plan to install neuralforecast (with torch) before deep-learning sandbox.,False,True,True,2026-06-12T15:22:45
+NBEATS,torch,preferred,missing,True,Plan to install a CPU/GPU-appropriate torch build before deep-learning sandbox.,False,True,True,2026-06-12T15:22:45
+NBEATS,darts,fallback,missing,True,Optional fallback for Theta/NBEATS; plan install only if primary backend unavailable.,False,True,True,2026-06-12T15:22:45
+NHITS,neuralforecast,preferred,missing,True,Plan to install neuralforecast (with torch) before deep-learning sandbox.,False,True,True,2026-06-12T15:22:45
+NHITS,torch,preferred,missing,True,Plan to install a CPU/GPU-appropriate torch build before deep-learning sandbox.,False,True,True,2026-06-12T15:22:45

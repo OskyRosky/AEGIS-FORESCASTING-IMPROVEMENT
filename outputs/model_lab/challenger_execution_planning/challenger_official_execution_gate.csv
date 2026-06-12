@@ -1,0 +1,11 @@
+gate_id,gate_name,gate_description,required_before_official_execution,blocking_if_failed,created_timestamp
+GATE-01,dependencies_resolved,All required dependencies for the model are installed and recorded.,True,True,2026-06-12T15:22:45
+GATE-02,sandbox_passed,Model passed sandbox execution on the controlled subset.,True,True,2026-06-12T15:22:45
+GATE-03,no_leakage_controls_failed,All mapped leakage controls verified and none failed.,True,True,2026-06-12T15:22:45
+GATE-04,tuning_budget_locked,"Tuning mode, max trials, and runtime budget are locked.",True,True,2026-06-12T15:22:45
+GATE-05,hyperparameter_space_locked,Hyperparameter search space is locked and pre-registered.,True,True,2026-06-12T15:22:45
+GATE-06,random_seed_locked,Random seed or deterministic policy is locked and recorded.,True,True,2026-06-12T15:22:45
+GATE-07,output_schema_validated,Forecast output schema matches the challenger forecast output contract.,True,True,2026-06-12T15:22:45
+GATE-08,official_windows_locked,Official backtesting windows are locked for the official run.,True,True,2026-06-12T15:22:45
+GATE-09,no_post_hoc_tuning,No tuning occurs after official evaluation on benchmark windows.,True,True,2026-06-12T15:22:45
+GATE-10,no_tournament_feedback_tuning,"No tuning from tournament rank, champion, significance, MASE, or RMSSE outcomes.",True,True,2026-06-12T15:22:45
