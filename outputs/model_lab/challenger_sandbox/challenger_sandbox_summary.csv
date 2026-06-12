@@ -1,0 +1,2 @@
+run_id,planned_challengers,models_attempted,models_passed,models_failed,models_blocked_dependency_missing,sandbox_forecast_rows,entities,windows,official_execution_allowed,created_timestamp
+challenger_sandbox,7,6,6,0,1,900,5,1,False,2026-06-12T15:53:09

@@ -1,0 +1,62 @@
+Collecting statsforecast
+  Using cached statsforecast-2.0.3.tar.gz (2.9 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: cloudpickle in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsforecast) (3.1.2)
+Collecting coreforecast>=0.0.12 (from statsforecast)
+  Using cached coreforecast-0.0.17-cp314-cp314-win_amd64.whl.metadata (3.6 kB)
+Requirement already satisfied: numba>=0.55.0 in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsforecast) (0.65.1)
+Requirement already satisfied: numpy>=1.21.6 in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsforecast) (2.4.6)
+Requirement already satisfied: pandas>=1.3.5 in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsforecast) (3.0.3)
+Collecting scipy<1.16.0,>=1.7.3 (from statsforecast)
+  Using cached scipy-1.15.3.tar.gz (59.4 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  Preparing metadata (pyproject.toml) did not run successfully.
+  exit code: 1
+  
+  [21 lines of output]
+  + meson setup C:\Users\oscarau\AppData\Local\Temp\pip-install-3y_9g_bv\scipy_204b3fd13ede4d63b821384208d78b84 C:\Users\oscarau\AppData\Local\Temp\pip-install-3y_9g_bv\scipy_204b3fd13ede4d63b821384208d78b84\.mesonpy-ozc23gt5 -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --native-file=C:\Users\oscarau\AppData\Local\Temp\pip-install-3y_9g_bv\scipy_204b3fd13ede4d63b821384208d78b84\.mesonpy-ozc23gt5\meson-python-native-file.ini
+  The Meson build system
+  Version: 1.11.1
+  Source dir: C:\Users\oscarau\AppData\Local\Temp\pip-install-3y_9g_bv\scipy_204b3fd13ede4d63b821384208d78b84
+  Build dir: C:\Users\oscarau\AppData\Local\Temp\pip-install-3y_9g_bv\scipy_204b3fd13ede4d63b821384208d78b84\.mesonpy-ozc23gt5
+  Build type: native build
+  WARNING: Failed to activate VS environment: Could not parse vswhere.exe output
+  Project name: scipy
+  Project version: 1.15.3
+  
+  ..\meson.build:1:0: ERROR: Unknown compiler(s): [['icl'], ['cl'], ['cc'], ['gcc'], ['clang'], ['clang-cl'], ['pgcc']]
+  The following exception(s) were encountered:
+  Running `icl ""` gave "[WinError 2] The system cannot find the file specified"
+  Running `cl /?` gave "[WinError 2] The system cannot find the file specified"
+  Running `cc --version` gave "[WinError 2] The system cannot find the file specified"
+  Running `gcc --version` gave "[WinError 2] The system cannot find the file specified"
+  Running `clang --version` gave "[WinError 2] The system cannot find the file specified"
+  Running `clang-cl /?` gave "[WinError 2] The system cannot find the file specified"
+  Running `pgcc --version` gave "[WinError 2] The system cannot find the file specified"
+  
+  A full log can be found at C:\Users\oscarau\AppData\Local\Temp\pip-install-3y_9g_bv\scipy_204b3fd13ede4d63b821384208d78b84\.mesonpy-ozc23gt5\meson-logs\meson-log.txt
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+Encountered error while generating package metadata.
+
+scipy
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.

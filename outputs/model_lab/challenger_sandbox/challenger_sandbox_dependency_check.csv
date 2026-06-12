@@ -1,0 +1,14 @@
+model_name,dependency_name,required_for_sandbox,available,status,notes,created_timestamp
+AutoARIMA,statsforecast,True,False,missing,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+AutoARIMA,pmdarima,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+Theta,statsforecast,True,False,missing,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+Theta,darts,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+ETS Explicit,statsmodels,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+ETS Explicit,statsforecast,True,False,missing,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+LightGBM,lightgbm,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+XGBoost,xgboost,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+NBEATS,neuralforecast,True,False,missing,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+NBEATS,torch,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+NBEATS,darts,True,True,available,satisfies sandbox backend (any one option-set suffices),2026-06-12T15:50:47
+NHITS,neuralforecast,True,False,missing,no complete option-set available for this model,2026-06-12T15:50:47
+NHITS,torch,True,True,available,no complete option-set available for this model,2026-06-12T15:50:47

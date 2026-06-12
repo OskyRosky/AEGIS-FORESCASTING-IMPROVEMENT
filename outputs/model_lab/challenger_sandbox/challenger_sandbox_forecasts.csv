@@ -1,0 +1,901 @@
+run_id,model_name,entity_key,window_id,forecast_date,horizon_day,forecast_value,execution_mode,created_timestamp
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-03-29,1,89831.18748937841,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-03-30,2,89727.06142825351,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-03-31,3,89645.31285972672,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-01,4,89560.42770851875,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-02,5,89471.21117386658,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-03,6,89391.54714279682,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-04,7,89309.03763779902,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-05,8,89222.6951747001,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-06,9,89138.82609776407,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-07,10,89054.94529576662,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-08,11,88970.25314788963,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-09,12,88886.36845579004,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-10,13,88802.39620006862,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-11,14,88718.01898202249,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-12,15,88633.86764545315,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-13,16,88549.755009714,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-14,17,88465.53586112542,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-15,18,88381.38167445385,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-16,19,88297.23686545753,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-17,20,88213.05038335505,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-18,21,88128.8819854996,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-19,22,88044.72154446911,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-20,23,87960.54918941096,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-21,24,87876.38148202344,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-22,25,87792.21631902369,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-23,26,87708.04704391751,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-24,27,87623.87897601342,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-25,28,87539.71207980908,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-26,29,87455.54398045235,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Dedicated,12,2026-04-27,30,87371.37613755277,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-03-29,1,2837506.060804136,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-03-30,2,2834979.284535428,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-03-31,3,2835090.093416863,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-01,4,2832858.596475778,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-02,5,2830483.0162337553,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-03,6,2829314.8354106774,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-04,7,2828134.931552313,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-05,8,2826649.9363755574,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-06,9,2826171.3151975158,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-07,10,2825772.9943638,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-08,11,2825316.49290412,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-09,12,2825249.767532408,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-10,13,2825328.513708291,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-11,14,2825281.6807380724,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-12,15,2825386.9201024496,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-13,16,2825537.473781358,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-14,17,2825599.750720055,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-15,18,2825681.3510898654,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-16,19,2825783.198018912,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-17,20,2825822.5576668857,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-18,21,2825854.599777511,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-19,22,2825893.739199893,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-20,23,2825903.4721082738,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-21,24,2825903.376524676,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-22,25,2825910.37097487,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-23,26,2825906.2270521424,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-24,27,2825897.565359995,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-25,28,2825894.630217359,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-26,29,2825889.5272295126,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-Multitenant,12,2026-04-27,30,2825882.6783301923,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-03-29,1,44.550090811106244,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-03-30,2,43.48326466442655,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-03-31,3,42.5755863635381,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-01,4,41.87530424238812,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-02,5,41.38528198220587,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-03,6,41.08141081613047,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-04,7,40.926717740505815,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-05,8,40.88121875695221,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-06,9,40.9080677760429,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-07,10,40.97677850496301,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-08,11,41.06433427258115,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-09,12,41.15492286397758,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-10,13,41.23889735131163,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-11,14,41.31141037317553,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-12,15,41.371024375609785,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-13,16,41.41847820785104,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-14,17,41.45569670872494,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-15,18,41.48506429863125,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-16,19,41.508942523368596,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-17,20,41.529389866039516,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-18,21,41.54803456833281,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-19,22,41.56605280086859,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-20,23,41.58421130542543,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-21,24,41.60294262425629,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-22,25,41.62243021704418,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-23,26,41.64268893798589,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-24,27,41.663632920704174,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-25,28,41.685127750856594,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-26,29,41.70702702339401,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,NAM-TDF,12,2026-04-27,30,41.72919525657154,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-03-29,1,13323.129383060352,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-03-30,2,13318.077329529426,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-03-31,3,13312.897080830562,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-01,4,13308.94039984673,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-02,5,13305.85644016378,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-03,6,13303.526617934447,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-04,7,13302.131747708876,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-05,8,13301.32561742684,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-06,9,13300.945830909324,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-07,10,13300.746317107783,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-08,11,13300.531484434445,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-09,12,13300.080807081475,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-10,13,13299.305135468026,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-11,14,13298.095007930095,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-12,15,13296.464525285859,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-13,16,13294.423921677966,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-14,17,13292.070151870175,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-15,18,13289.481897597385,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-16,19,13286.787764970106,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-17,20,13284.076834518713,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-18,21,13281.455521592557,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-19,22,13278.978669331245,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-20,23,13276.69981405422,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-21,24,13274.62175292405,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-22,25,13272.743026729371,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-23,26,13271.023480505752,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-24,27,13269.42616164622,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-25,28,13267.892569036265,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-26,29,13266.377879335449,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,POL-Go Local,12,2026-04-27,30,13264.831034995084,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-03-29,1,34067.224797745854,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-03-30,2,34069.95212016584,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-03-31,3,34076.15989140213,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-01,4,34082.857274361166,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-02,5,34091.97189258449,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-03,6,34101.806846423635,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-04,7,34113.33183011955,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-05,8,34125.652867563804,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-06,9,34139.1683439583,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-07,10,34153.464595994796,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-08,11,34168.61769057169,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-09,12,34184.48751204961,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-10,13,34200.983403688195,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-11,14,34218.11007697373,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-12,15,34235.703781185235,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-13,16,34253.83675991815,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-14,17,34272.32569823555,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-15,18,34291.26613907965,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-16,19,34310.48352399874,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-17,20,34330.07311817689,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-18,21,34349.882149633886,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-19,22,34369.994484851144,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-20,23,34390.28332523615,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-21,24,34410.81718497008,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-22,25,34431.49465847869,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-23,26,34452.368804844715,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-24,27,34473.36075386572,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-25,28,34494.509848449976,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-26,29,34515.75607356198,sandbox,2026-06-12T15:50:53
+challenger_sandbox,AutoARIMA,SWE-Go Local,12,2026-04-27,30,34537.127473681205,sandbox,2026-06-12T15:50:53
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-03-29,1,89916.88138644566,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-03-30,2,89932.63663642104,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-03-31,3,89948.39188639642,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-01,4,89964.1471363718,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-02,5,89979.90238634718,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-03,6,89995.65763632255,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-04,7,90011.41288629793,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-05,8,90027.1681362733,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-06,9,90042.92338624869,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-07,10,90058.67863622407,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-08,11,90074.43388619945,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-09,12,90090.18913617483,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-10,13,90105.9443861502,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-11,14,90121.69963612557,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-12,15,90137.45488610095,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-13,16,90153.21013607633,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-14,17,90168.96538605171,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-15,18,90184.7206360271,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-16,19,90200.47588600246,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-17,20,90216.23113597784,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-18,21,90231.98638595322,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-19,22,90247.7416359286,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-20,23,90263.49688590398,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-21,24,90279.25213587936,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-22,25,90295.00738585473,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-23,26,90310.7626358301,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-24,27,90326.51788580549,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-25,28,90342.27313578087,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-26,29,90358.02838575625,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Dedicated,12,2026-04-27,30,90373.78363573163,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-03-29,1,2824840.1749840006,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-03-30,2,2840768.475871609,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-03-31,3,2839718.4022309952,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-01,4,2854184.479558379,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-02,5,2880932.9278384256,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-03,6,2892875.481769488,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-04,7,2914602.7841587127,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-05,8,2937766.382555277,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-06,9,2935669.7449722616,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-07,10,2921610.646778472,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-08,11,2915675.181575329,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-09,12,2911551.0850501265,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-10,13,2895627.590917427,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-11,14,2911981.856218111,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-12,15,2935861.106727858,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-13,16,2938819.899821094,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-14,17,2928339.3283861643,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-15,18,2924256.0143273994,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-16,19,2920315.739969003,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-17,20,2924829.180295331,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-18,21,2944665.62850014,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-19,22,2948541.844893799,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-20,23,2947464.9625650938,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-21,24,2944191.1936363867,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-22,25,2942210.2802290483,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-23,26,2938070.181026867,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-24,27,2939182.023988695,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-25,28,2945724.2110024286,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-26,29,2947464.6095779766,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-Multitenant,12,2026-04-27,30,2945359.9962595687,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-03-29,1,46.97885599082531,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-03-30,2,46.207902281318,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-03-31,3,45.95644733309048,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-01,4,46.918683434151156,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-02,5,46.06096430419182,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-03,6,46.32284997081986,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-04,7,46.07664824242569,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-05,8,47.10162465581705,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-06,9,46.407776275354756,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-07,10,45.46197364089305,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-08,11,45.81240574387651,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-09,12,47.1350674422212,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-10,13,46.36150376922354,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-11,14,46.10916679883273,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-12,15,47.07455345126555,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-13,16,46.21393866583457,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-14,17,46.476647653592835,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-15,18,46.22958234448333,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-16,19,47.2579136231294,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-17,20,46.56171653294893,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-18,21,45.612731093823975,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-19,22,45.96427948771345,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-20,23,47.29127889361709,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-21,24,46.515105257129086,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-22,25,46.26188626457497,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-23,26,47.23042346837995,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-24,27,46.366913027477324,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-25,28,46.63044533636581,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-26,29,46.38251644654098,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,NAM-TDF,12,2026-04-27,30,47.41420259044174,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-03-29,1,13333.646374270471,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-03-30,2,13339.18766034939,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-03-31,3,13344.72894642831,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-01,4,13350.27023250723,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-02,5,13355.811518586148,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-03,6,13361.352804665068,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-04,7,13366.894090743988,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-05,8,13372.435376822907,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-06,9,13377.976662901827,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-07,10,13383.517948980747,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-08,11,13389.059235059665,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-09,12,13394.600521138585,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-10,13,13400.141807217504,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-11,14,13405.683093296424,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-12,15,13411.224379375344,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-13,16,13416.765665454262,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-14,17,13422.306951533183,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-15,18,13427.848237612103,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-16,19,13433.389523691021,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-17,20,13438.930809769941,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-18,21,13444.47209584886,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-19,22,13450.01338192778,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-20,23,13455.5546680067,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-21,24,13461.095954085618,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-22,25,13466.637240164539,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-23,26,13472.178526243459,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-24,27,13477.719812322377,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-25,28,13483.261098401297,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-26,29,13488.802384480216,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,POL-Go Local,12,2026-04-27,30,13494.343670559136,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-03-29,1,34075.26147470033,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-03-30,2,34086.015714796515,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-03-31,3,34096.7699548927,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-01,4,34107.52419498888,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-02,5,34118.27843508506,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-03,6,34129.032675181246,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-04,7,34139.78691527743,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-05,8,34150.54115537362,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-06,9,34161.2953954698,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-07,10,34172.049635565985,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-08,11,34182.80387566217,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-09,12,34193.55811575835,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-10,13,34204.312355854534,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-11,14,34215.06659595072,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-12,15,34225.8208360469,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-13,16,34236.57507614308,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-14,17,34247.329316239266,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-15,18,34258.083556335456,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-16,19,34268.83779643164,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-17,20,34279.59203652782,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-18,21,34290.346276624005,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-19,22,34301.10051672019,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-20,23,34311.85475681637,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-21,24,34322.60899691255,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-22,25,34333.363237008736,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-23,26,34344.11747710492,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-24,27,34354.87171720111,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-25,28,34365.62595729729,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-26,29,34376.380197393475,sandbox,2026-06-12T15:51:30
+challenger_sandbox,Theta,SWE-Go Local,12,2026-04-27,30,34387.13443748966,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-03-29,1,89925.58353698412,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-03-30,2,89950.04093736828,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-03-31,3,89974.49833775245,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-01,4,89998.95573813662,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-02,5,90023.41313852077,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-03,6,90047.87053890494,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-04,7,90072.32793928911,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-05,8,90096.78533967327,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-06,9,90121.24274005744,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-07,10,90145.70014044161,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-08,11,90170.15754082576,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-09,12,90194.61494120993,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-10,13,90219.0723415941,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-11,14,90243.52974197826,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-12,15,90267.98714236243,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-13,16,90292.4445427466,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-14,17,90316.90194313075,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-15,18,90341.35934351492,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-16,19,90365.8167438991,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-17,20,90390.27414428325,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-18,21,90414.73154466742,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-19,22,90439.18894505159,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-20,23,90463.64634543574,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-21,24,90488.10374581991,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-22,25,90512.56114620408,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-23,26,90537.01854658824,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-24,27,90561.47594697241,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-25,28,90585.93334735658,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-26,29,90610.39074774073,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Dedicated,12,2026-04-27,30,90634.8481481249,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-03-29,1,2838322.934579638,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-03-30,2,2839298.8576817815,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-03-31,3,2840274.7807839257,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-01,4,2841250.7038860694,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-02,5,2842226.6269882135,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-03,6,2843202.550090357,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-04,7,2844178.4731925013,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-05,8,2845154.396294645,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-06,9,2846130.319396789,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-07,10,2847106.2424989333,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-08,11,2848082.165601077,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-09,12,2849058.088703221,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-10,13,2850034.011805365,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-11,14,2851009.934907509,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-12,15,2851985.8580096527,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-13,16,2852961.781111797,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-14,17,2853937.7042139405,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-15,18,2854913.6273160847,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-16,19,2855889.550418229,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-17,20,2856865.4735203725,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-18,21,2857841.3966225167,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-19,22,2858817.3197246604,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-20,23,2859793.2428268045,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-21,24,2860769.165928948,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-22,25,2861745.0890310924,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-23,26,2862721.012133236,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-24,27,2863696.93523538,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-25,28,2864672.8583375243,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-26,29,2865648.781439668,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-Multitenant,12,2026-04-27,30,2866624.704541812,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-03-29,1,45.68482501611571,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-03-30,2,45.70911803703535,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-03-31,3,45.733411057954996,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-01,4,45.75770407887464,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-02,5,45.78199709979428,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-03,6,45.806290120713925,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-04,7,45.83058314163357,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-05,8,45.85487616255321,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-06,9,45.879169183472854,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-07,10,45.9034622043925,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-08,11,45.92775522531214,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-09,12,45.95204824623178,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-10,13,45.976341267151426,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-11,14,46.00063428807107,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-12,15,46.02492730899072,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-13,16,46.04922032991036,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-14,17,46.073513350830005,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-15,18,46.09780637174965,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-16,19,46.12209939266929,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-17,20,46.146392413588934,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-18,21,46.17068543450858,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-19,22,46.19497845542822,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-20,23,46.21927147634786,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-21,24,46.243564497267506,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-22,25,46.26785751818715,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-23,26,46.29215053910679,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-24,27,46.316443560026435,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-25,28,46.34073658094608,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-26,29,46.36502960186572,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,NAM-TDF,12,2026-04-27,30,46.389322622785365,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-03-29,1,13324.617656343442,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-03-30,2,13321.130224589,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-03-31,3,13317.642792834558,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-01,4,13314.155361080117,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-02,5,13310.667929325673,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-03,6,13307.180497571231,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-04,7,13303.69306581679,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-05,8,13300.205634062348,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-06,9,13296.718202307906,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-07,10,13293.230770553464,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-08,11,13289.743338799022,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-09,12,13286.25590704458,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-10,13,13282.768475290139,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-11,14,13279.281043535697,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-12,15,13275.793611781253,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-13,16,13272.306180026811,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-14,17,13268.81874827237,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-15,18,13265.331316517928,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-16,19,13261.843884763486,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-17,20,13258.356453009044,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-18,21,13254.869021254603,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-19,22,13251.38158950016,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-20,23,13247.894157745719,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-21,24,13244.406725991277,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-22,25,13240.919294236834,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-23,26,13237.431862482392,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-24,27,13233.94443072795,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-25,28,13230.456998973508,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-26,29,13226.969567219066,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,POL-Go Local,12,2026-04-27,30,13223.482135464625,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-03-29,1,34030.89596225736,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-03-30,2,33997.284690581306,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-03-31,3,33963.67341890526,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-01,4,33930.062147229204,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-02,5,33896.45087555315,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-03,6,33862.839603877095,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-04,7,33829.22833220105,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-05,8,33795.61706052499,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-06,9,33762.00578884894,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-07,10,33728.394517172885,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-08,11,33694.78324549684,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-09,12,33661.17197382078,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-10,13,33627.56070214473,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-11,14,33593.949430468674,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-12,15,33560.33815879263,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-13,16,33526.72688711657,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-14,17,33493.11561544052,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-15,18,33459.50434376446,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-16,19,33425.89307208842,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-17,20,33392.28180041236,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-18,21,33358.67052873631,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-19,22,33325.05925706025,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-20,23,33291.447985384206,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-21,24,33257.83671370815,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-22,25,33224.2254420321,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-23,26,33190.61417035604,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-24,27,33157.00289867999,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-25,28,33123.39162700394,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-26,29,33089.780355327886,sandbox,2026-06-12T15:51:30
+challenger_sandbox,ETS Explicit,SWE-Go Local,12,2026-04-27,30,33056.16908365183,sandbox,2026-06-12T15:51:30
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-03-29,1,89931.72538440367,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-03-30,2,90139.26334916719,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-03-31,3,90192.87248523171,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-01,4,90214.4714645191,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-02,5,90118.7990413193,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-03,6,90118.7990413193,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-04,7,90118.7990413193,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-05,8,90127.96648935684,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-06,9,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-07,10,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-08,11,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-09,12,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-10,13,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-11,14,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-12,15,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-13,16,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-14,17,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-15,18,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-16,19,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-17,20,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-18,21,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-19,22,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-20,23,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-21,24,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-22,25,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-23,26,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-24,27,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-25,28,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-26,29,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Dedicated,12,2026-04-27,30,90144.44295461859,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-03-29,1,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-03-30,2,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-03-31,3,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-01,4,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-02,5,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-03,6,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-04,7,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-05,8,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-06,9,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-07,10,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-08,11,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-09,12,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-10,13,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-11,14,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-12,15,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-13,16,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-14,17,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-15,18,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-16,19,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-17,20,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-18,21,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-19,22,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-20,23,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-21,24,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-22,25,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-23,26,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-24,27,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-25,28,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-26,29,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-Multitenant,12,2026-04-27,30,2819419.294099002,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-03-29,1,45.936007061930624,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-03-30,2,43.69668386034665,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-03-31,3,39.996342821141646,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-01,4,36.16796403964743,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-02,5,27.992853388984706,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-03,6,25.57979958384158,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-04,7,31.567718069865233,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-05,8,38.89638380510726,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-06,9,42.539209314458425,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-07,10,38.12052551135357,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-08,11,41.120523112239155,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-09,12,37.89826430740465,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-10,13,40.36158924146766,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-11,14,33.23903407250078,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-12,15,30.389509978352347,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-13,16,29.527421195654956,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-14,17,32.94871259330177,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-15,18,34.8319605490933,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-16,19,31.41709252774057,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-17,20,23.783003765967372,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-18,21,19.33524413903792,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-19,22,20.17326310465031,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-20,23,18.874444823247657,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-21,24,19.419164514313806,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-22,25,18.54128597810699,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-23,26,19.717605147166708,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-24,27,21.345967509514196,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-25,28,22.732426206010047,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-26,29,23.719136295605292,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,NAM-TDF,12,2026-04-27,30,20.79627826071537,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-03-29,1,13361.038550267487,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-03-30,2,13333.533299312363,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-03-31,3,13339.680566795396,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-01,4,13317.220138213224,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-02,5,13357.884557570243,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-03,6,13358.66789842652,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-04,7,13362.801316371233,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-05,8,13343.73799521451,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-06,9,13342.731905233977,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-07,10,13364.568924958094,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-08,11,13350.960386097318,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-09,12,13344.98354048671,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-10,13,13348.696013606223,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-11,14,13346.432955084496,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-12,15,13313.192270784446,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-13,16,13339.931224305335,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-14,17,13334.851426910189,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-15,18,13341.148651988495,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-16,19,13305.147221024683,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-17,20,13344.963468183389,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-18,21,13344.942347024024,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-19,22,13333.408662571079,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-20,23,13318.733363329522,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-21,24,13340.190891490372,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-22,25,13367.357635682996,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-23,26,13333.243011326389,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-24,27,13327.09380739855,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-25,28,13378.646456277165,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-26,29,13391.972939779818,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,POL-Go Local,12,2026-04-27,30,13363.327219815623,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-03-29,1,34003.38279658881,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-03-30,2,34274.32592443671,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-03-31,3,34941.56637284904,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-01,4,34803.53536502956,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-02,5,34803.53536502956,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-03,6,34745.02324853524,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-04,7,34745.02324853524,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-05,8,34745.02324853524,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-06,9,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-07,10,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-08,11,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-09,12,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-10,13,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-11,14,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-12,15,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-13,16,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-14,17,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-15,18,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-16,19,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-17,20,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-18,21,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-19,22,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-20,23,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-21,24,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-22,25,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-23,26,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-24,27,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-25,28,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-26,29,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,LightGBM,SWE-Go Local,12,2026-04-27,30,34679.948212304116,sandbox,2026-06-12T15:51:31
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-03-29,1,90005.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-03-30,2,90017.9140625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-03-31,3,90082.0625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-01,4,90082.0625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-02,5,90073.65625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-03,6,90073.65625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-04,7,90073.65625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-05,8,90073.65625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-06,9,90073.65625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-07,10,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-08,11,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-09,12,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-10,13,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-11,14,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-12,15,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-13,16,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-14,17,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-15,18,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-16,19,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-17,20,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-18,21,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-19,22,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-20,23,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-21,24,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-22,25,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-23,26,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-24,27,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-25,28,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-26,29,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Dedicated,12,2026-04-27,30,90099.4765625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-03-29,1,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-03-30,2,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-03-31,3,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-01,4,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-02,5,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-03,6,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-04,7,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-05,8,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-06,9,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-07,10,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-08,11,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-09,12,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-10,13,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-11,14,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-12,15,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-13,16,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-14,17,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-15,18,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-16,19,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-17,20,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-18,21,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-19,22,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-20,23,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-21,24,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-22,25,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-23,26,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-24,27,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-25,28,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-26,29,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-Multitenant,12,2026-04-27,30,2826480.75,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-03-29,1,46.7413215637207,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-03-30,2,46.45766067504883,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-03-31,3,46.66620635986328,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-01,4,46.212059020996094,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-02,5,46.70063018798828,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-03,6,46.955116271972656,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-04,7,46.65053176879883,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-05,8,45.450218200683594,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-06,9,47.0201416015625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-07,10,47.162662506103516,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-08,11,48.097381591796875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-09,12,44.85810852050781,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-10,13,44.940792083740234,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-11,14,45.35043716430664,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-12,15,46.6703987121582,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-13,16,46.414127349853516,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-14,17,44.300716400146484,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-15,18,17.590444564819336,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-16,19,14.61636734008789,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-17,20,20.14614486694336,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-18,21,31.08991241455078,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-19,22,18.304609298706055,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-20,23,11.345333099365234,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-21,24,9.27993392944336,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-22,25,8.331689834594727,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-23,26,10.414402961730957,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-24,27,10.555299758911133,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-25,28,12.48240852355957,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-26,29,9.444587707519531,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,NAM-TDF,12,2026-04-27,30,8.406373023986816,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-03-29,1,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-03-30,2,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-03-31,3,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-01,4,13296.6513671875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-02,5,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-03,6,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-04,7,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-05,8,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-06,9,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-07,10,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-08,11,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-09,12,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-10,13,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-11,14,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-12,15,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-13,16,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-14,17,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-15,18,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-16,19,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-17,20,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-18,21,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-19,22,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-20,23,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-21,24,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-22,25,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-23,26,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-24,27,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-25,28,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-26,29,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,POL-Go Local,12,2026-04-27,30,13291.9462890625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-03-29,1,34067.44140625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-03-30,2,34170.19921875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-03-31,3,34406.5546875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-01,4,34441.31640625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-02,5,34439.1328125,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-03,6,34365.76171875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-04,7,34390.359375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-05,8,34055.8359375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-06,9,34080.7421875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-07,10,34107.546875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-08,11,34101.4375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-09,12,34068.65625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-10,13,33885.1328125,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-11,14,33265.8203125,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-12,15,33139.875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-13,16,33812.54296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-14,17,33796.15625,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-15,18,33178.54296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-16,19,33565.328125,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-17,20,33861.29296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-18,21,33775.37109375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-19,22,33565.0859375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-20,23,33252.29296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-21,24,33861.29296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-22,25,33775.37109375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-23,26,33215.296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-24,27,33252.29296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-25,28,33861.29296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-26,29,33775.37109375,sandbox,2026-06-12T15:51:32
+challenger_sandbox,XGBoost,SWE-Go Local,12,2026-04-27,30,33215.296875,sandbox,2026-06-12T15:51:32
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-03-29,1,92126.7361785594,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-03-30,2,91361.07047609473,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-03-31,3,91251.02800976936,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-01,4,92127.04046028013,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-02,5,90616.96179102815,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-03,6,92336.23640695181,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-04,7,91974.41531450598,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-05,8,91216.0384109611,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-06,9,91218.80491886908,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-07,10,91371.06282221386,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-08,11,92143.86382753005,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-09,12,92930.40640730174,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-10,13,92326.43818047691,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-11,14,92738.31379865053,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-12,15,92163.39681944344,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-13,16,91329.52440126777,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-14,17,92876.59778320762,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-15,18,92494.02581191671,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-16,19,92425.87332491249,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-17,20,92501.91823227098,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-18,21,93613.58934023239,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-19,22,93266.76002721615,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-20,23,92992.44600157635,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-21,24,92315.14433899001,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-22,25,94200.39327182468,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-23,26,91742.01598748038,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-24,27,93064.89703023552,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-25,28,92181.05061300566,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-26,29,92256.1980660016,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Dedicated,12,2026-04-27,30,93287.67242553654,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-03-29,1,2900867.461619484,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-03-30,2,2851338.291987053,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-03-31,3,2845843.5055832514,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-01,4,2811401.2623255923,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-02,5,2858469.9791691476,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-03,6,2878366.4027591436,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-04,7,2851845.7861855226,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-05,8,2835873.2165393853,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-06,9,2861382.005412642,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-07,10,2799644.5037124436,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-08,11,2819591.4225307894,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-09,12,2877607.444000396,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-10,13,2864313.011997634,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-11,14,2910484.844918237,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-12,15,2894927.4584534676,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-13,16,2850523.3731152206,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-14,17,2948729.823867572,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-15,18,2936845.0289518163,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-16,19,2909964.143577301,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-17,20,2909440.7733397875,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-18,21,2981153.102452557,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-19,22,2937646.7724562446,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-20,23,2888678.4548250223,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-21,24,2884566.483994254,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-22,25,2930710.719078128,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-23,26,2878237.565932226,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-24,27,2933214.4106438756,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-25,28,2887543.647308479,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-26,29,2927254.712779781,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-Multitenant,12,2026-04-27,30,2951126.4348775176,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-03-29,1,39.25990034979172,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-03-30,2,37.797870394964875,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-03-31,3,44.50350689179596,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-01,4,35.75308779206372,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-02,5,38.18041308223907,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-03,6,40.55301851599073,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-04,7,45.79462558462692,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-05,8,38.0970328120961,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-06,9,37.83707971171902,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-07,10,37.80707052557302,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-08,11,32.7308672021735,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-09,12,38.091160055257845,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-10,13,35.02170012561083,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-11,14,41.55390854106012,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-12,15,39.45403377824261,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-13,16,41.77410946146016,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-14,17,41.435435859931374,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-15,18,40.472344862509104,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-16,19,38.119119447469,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-17,20,38.38550393634068,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-18,21,44.9264416937957,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-19,22,41.60700621569586,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-20,23,35.34438670113999,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-21,24,36.81113431317616,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-22,25,39.46406272730338,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-23,26,37.550344255155075,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-24,27,36.19347470877755,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-25,28,42.284933914990205,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-26,29,38.812269340839,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,NAM-TDF,12,2026-04-27,30,38.15160718352308,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-03-29,1,13483.647908853778,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-03-30,2,13382.255181053515,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-03-31,3,13220.725719709575,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-01,4,13040.98393463388,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-02,5,13860.199063377378,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-03,6,13481.142040769195,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-04,7,13430.263353273165,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-05,8,13498.616655852238,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-06,9,13364.665016689944,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-07,10,13440.796883936335,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-08,11,13132.536951804726,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-09,12,13742.807025398419,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-10,13,13453.414127405624,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-11,14,13034.208233865043,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-12,15,13381.403547557933,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-13,16,13641.098130143926,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-14,17,12983.443974016183,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-15,18,13716.85479016323,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-16,19,13337.16449319209,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-17,20,12964.081964055396,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-18,21,13158.762754794592,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-19,22,13558.719949485057,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-20,23,13283.37752177497,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-21,24,13113.828975377,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-22,25,13361.62724433323,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-23,26,13211.07170018209,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-24,27,13198.483775091785,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-25,28,13427.589189187505,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-26,29,13757.130335640091,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,POL-Go Local,12,2026-04-27,30,13664.616200760642,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-03-29,1,33861.0268597187,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-03-30,2,34075.596455193416,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-03-31,3,34393.725718184214,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-01,4,32333.556362791147,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-02,5,33863.60679130088,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-03,6,34464.64948343778,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-04,7,34003.418815944475,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-05,8,33426.65329168644,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-06,9,33826.15393057919,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-07,10,34614.37590071119,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-08,11,32269.702775166337,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-09,12,34432.945847944815,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-10,13,33763.26944855789,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-11,14,33613.83987303092,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-12,15,33914.33043420921,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-13,16,34313.290906932765,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-14,17,33537.62557159022,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-15,18,34516.015862590764,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-16,19,32542.277211121305,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-17,20,32286.532516948475,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-18,21,35059.27791747353,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-19,22,33700.26454756878,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-20,23,32861.75652004511,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-21,24,32884.05578078975,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-22,25,33087.74122512123,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-23,26,33824.71404616289,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-24,27,32556.695377927175,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-25,28,33845.44405706927,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-26,29,34575.13319636071,sandbox,2026-06-12T15:51:33
+challenger_sandbox,NBEATS,SWE-Go Local,12,2026-04-27,30,34397.71956486049,sandbox,2026-06-12T15:51:33

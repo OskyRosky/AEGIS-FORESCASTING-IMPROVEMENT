@@ -1,0 +1,9 @@
+dependency_name,required_by,import_available,version_detected,status,notes,created_timestamp
+darts,Theta; NBEATS (alt),True,0.44.1,available,import succeeded,2026-06-12T15:50:02
+lightgbm,LightGBM,True,4.6.0,available,import succeeded,2026-06-12T15:50:02
+neuralforecast,NHITS; NBEATS (alt),False,,installed_but_broken,import failed: AttributeError: module 'pytorch_lightning.utilities' has no attribute 'distributed',2026-06-12T15:50:02
+pmdarima,AutoARIMA,True,2.1.1,available,import succeeded,2026-06-12T15:50:02
+statsforecast,AutoARIMA (alt); Theta (alt); ETS Explicit (alt),False,,missing,package not installed,2026-06-12T15:50:02
+statsmodels,ETS Explicit,True,0.14.6,available,import succeeded,2026-06-12T15:50:02
+torch,NBEATS; NHITS,True,2.12.0+cpu,available,import succeeded,2026-06-12T15:50:02
+xgboost,XGBoost,True,3.2.0,available,import succeeded,2026-06-12T15:50:02

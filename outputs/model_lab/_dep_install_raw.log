@@ -1,0 +1,85 @@
+Collecting statsmodels
+  Downloading statsmodels-0.14.6-cp314-cp314-win_amd64.whl.metadata (9.8 kB)
+Collecting statsforecast
+  Downloading statsforecast-2.0.3.tar.gz (2.9 MB)
+     ---------------------------------------- 2.9/2.9 MB 13.0 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting lightgbm
+  Downloading lightgbm-4.6.0-py3-none-win_amd64.whl.metadata (17 kB)
+Collecting xgboost
+  Downloading xgboost-3.2.0-py3-none-win_amd64.whl.metadata (2.1 kB)
+Collecting torch
+  Downloading torch-2.12.0-cp314-cp314-win_amd64.whl.metadata (31 kB)
+Collecting neuralforecast
+  Downloading neuralforecast-3.1.9-py3-none-any.whl.metadata (14 kB)
+Collecting darts
+  Downloading darts-0.44.1-py3-none-any.whl.metadata (65 kB)
+Collecting pmdarima
+  Downloading pmdarima-2.1.1-cp314-cp314-win_amd64.whl.metadata (8.5 kB)
+Requirement already satisfied: numpy<3,>=1.22.3 in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsmodels) (2.4.6)
+Collecting scipy!=1.9.2,>=1.8 (from statsmodels)
+  Downloading scipy-1.17.1-cp314-cp314-win_amd64.whl.metadata (60 kB)
+Requirement already satisfied: pandas!=2.1.0,>=1.4 in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsmodels) (3.0.3)
+Collecting patsy>=0.5.6 (from statsmodels)
+  Downloading patsy-1.0.2-py2.py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: packaging>=21.3 in C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from statsmodels) (26.2)
+Collecting cloudpickle (from statsforecast)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting coreforecast>=0.0.12 (from statsforecast)
+  Downloading coreforecast-0.0.17-cp314-cp314-win_amd64.whl.metadata (3.6 kB)
+Collecting numba>=0.55.0 (from statsforecast)
+  Downloading numba-0.65.1-cp314-cp314-win_amd64.whl.metadata (3.0 kB)
+Collecting scipy!=1.9.2,>=1.8 (from statsmodels)
+  Downloading scipy-1.15.3.tar.gz (59.4 MB)
+     ---------------------------------------- 59.4/59.4 MB 63.5 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  Preparing metadata (pyproject.toml) did not run successfully.
+  exit code: 1
+  
+  [21 lines of output]
+  + meson setup C:\Users\oscarau\AppData\Local\Temp\pip-install-mqlnmv63\scipy_f0f971536a3247d684e95a5158fd3807 C:\Users\oscarau\AppData\Local\Temp\pip-install-mqlnmv63\scipy_f0f971536a3247d684e95a5158fd3807\.mesonpy-xx2z9w_h -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --native-file=C:\Users\oscarau\AppData\Local\Temp\pip-install-mqlnmv63\scipy_f0f971536a3247d684e95a5158fd3807\.mesonpy-xx2z9w_h\meson-python-native-file.ini
+  The Meson build system
+  Version: 1.11.1
+  Source dir: C:\Users\oscarau\AppData\Local\Temp\pip-install-mqlnmv63\scipy_f0f971536a3247d684e95a5158fd3807
+  Build dir: C:\Users\oscarau\AppData\Local\Temp\pip-install-mqlnmv63\scipy_f0f971536a3247d684e95a5158fd3807\.mesonpy-xx2z9w_h
+  Build type: native build
+  WARNING: Failed to activate VS environment: Could not parse vswhere.exe output
+  Project name: scipy
+  Project version: 1.15.3
+  
+  ..\meson.build:1:0: ERROR: Unknown compiler(s): [['icl'], ['cl'], ['cc'], ['gcc'], ['clang'], ['clang-cl'], ['pgcc']]
+  The following exception(s) were encountered:
+  Running `icl ""` gave "[WinError 2] The system cannot find the file specified"
+  Running `cl /?` gave "[WinError 2] The system cannot find the file specified"
+  Running `cc --version` gave "[WinError 2] The system cannot find the file specified"
+  Running `gcc --version` gave "[WinError 2] The system cannot find the file specified"
+  Running `clang --version` gave "[WinError 2] The system cannot find the file specified"
+  Running `clang-cl /?` gave "[WinError 2] The system cannot find the file specified"
+  Running `pgcc --version` gave "[WinError 2] The system cannot find the file specified"
+  
+  A full log can be found at C:\Users\oscarau\AppData\Local\Temp\pip-install-mqlnmv63\scipy_f0f971536a3247d684e95a5158fd3807\.mesonpy-xx2z9w_h\meson-logs\meson-log.txt
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+Encountered error while generating package metadata.
+
+scipy
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
