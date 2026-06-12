@@ -1,0 +1,455 @@
+run_id,entity_key,window_id,status,message,created_timestamp
+seasonal_naive_20260612_115936,APC-Dedicated,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Dedicated,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-MSIT,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,APC-Multitenant,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ARE-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,AUS-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,BRA-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CAN-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,CHE-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,DEU-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ESP-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Dedicated,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-MSIT,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,EUR-Multitenant,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,FRA-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Dedicated,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,GBR-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,IND-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ISR-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ITA-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,JPN-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,KOR-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,LAM-Multitenant,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,MEX-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Dedicated,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-GCC Low,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR DoD,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-ITAR GCCH,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-MSIT,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-Multitenant,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-SDF,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NAM-TDF,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NOR-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,NZL-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,POL-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,QAT-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,6,failed,ValueError: Missing seasonal reference actual for SGP-Go Local on 2025-08-31.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SGP-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,4,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,5,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,SWE-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,6,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,TWN-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,1,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,2,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,3,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,6,failed,ValueError: Missing seasonal reference actual for ZAF-Go Local on 2025-08-31.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,7,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,8,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,9,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,10,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,11,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
+seasonal_naive_20260612_115936,ZAF-Go Local,12,completed,Seasonal naive benchmark forecast completed.,2026-06-12T11:59:36
