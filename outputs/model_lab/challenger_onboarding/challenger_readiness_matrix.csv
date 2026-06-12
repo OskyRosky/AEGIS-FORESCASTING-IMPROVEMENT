@@ -1,0 +1,8 @@
+model_name,registered,dependencies_checked,leakage_controls_mapped,tuning_policy_declared,hyperparameter_space_declared,sandbox_ready,official_execution_ready,blocking_reasons,created_timestamp
+AutoARIMA,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26
+Theta,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26
+ETS Explicit,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26
+LightGBM,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26
+XGBoost,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26
+NBEATS,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26
+NHITS,True,True,True,True,True,False,False,dependency_missing_for_sandbox,2026-06-12T15:07:26

@@ -1,0 +1,114 @@
+# Challenger registry (Stage 5.28 onboarding metadata only).
+# No fitted parameters, learned values, or post-hoc tuning results.
+# No challenger is official-execution-ready in this block.
+challenger_registry:
+  policy_stage: Stage 5.28
+  policy_scope: challenger_onboarding_metadata_only
+  created_timestamp: 2026-06-12T15:07:26
+  official_execution_ready_any: false
+  challengers:
+    - challenger_id: CH-01
+      model_name: "AutoARIMA"
+      model_family: statistical
+      model_type: auto_arima
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["statsforecast", "pmdarima"]
+      fallback_dependencies: ["pmdarima"]
+      feature_requirements: univariate_target_series_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: low
+      expected_runtime_class: medium
+      status: registered_planned
+      official_execution_ready: false
+    - challenger_id: CH-02
+      model_name: "Theta"
+      model_family: statistical
+      model_type: theta
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["statsforecast", "darts"]
+      fallback_dependencies: ["darts"]
+      feature_requirements: univariate_target_series_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: low
+      expected_runtime_class: light
+      status: registered_planned
+      official_execution_ready: false
+    - challenger_id: CH-03
+      model_name: "ETS Explicit"
+      model_family: statistical
+      model_type: ets_explicit
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["statsmodels", "statsforecast"]
+      fallback_dependencies: ["statsforecast"]
+      feature_requirements: univariate_target_series_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: low
+      expected_runtime_class: light
+      status: registered_planned
+      official_execution_ready: false
+    - challenger_id: CH-04
+      model_name: "LightGBM"
+      model_family: machine_learning
+      model_type: gradient_boosting
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["lightgbm"]
+      fallback_dependencies: []
+      feature_requirements: engineered_lag_and_calendar_features_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: medium
+      expected_runtime_class: medium
+      status: registered_planned
+      official_execution_ready: false
+    - challenger_id: CH-05
+      model_name: "XGBoost"
+      model_family: machine_learning
+      model_type: gradient_boosting
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["xgboost"]
+      fallback_dependencies: []
+      feature_requirements: engineered_lag_and_calendar_features_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: medium
+      expected_runtime_class: medium
+      status: registered_planned
+      official_execution_ready: false
+    - challenger_id: CH-06
+      model_name: "NBEATS"
+      model_family: deep_learning
+      model_type: neural_basis_expansion
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["neuralforecast", "torch"]
+      fallback_dependencies: ["darts"]
+      feature_requirements: windowed_sequence_inputs_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: high
+      expected_runtime_class: heavy
+      status: registered_planned
+      official_execution_ready: false
+    - challenger_id: CH-07
+      model_name: "NHITS"
+      model_family: deep_learning
+      model_type: neural_hierarchical_interpolation
+      implementation_status: registered_placeholder
+      preferred_dependencies: ["neuralforecast", "torch"]
+      fallback_dependencies: []
+      feature_requirements: windowed_sequence_inputs_training_only
+      hyperparameter_space_status: declared_search_space_metadata_only
+      tuning_policy: inner_validation_training_only_no_official_metric_feedback
+      allowed_execution_mode: sandbox_pending_official_lock
+      leakage_risk_level: high
+      expected_runtime_class: heavy
+      status: registered_planned
+      official_execution_ready: false
