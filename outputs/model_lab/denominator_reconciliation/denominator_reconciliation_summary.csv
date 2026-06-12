@@ -1,2 +1,2 @@
 run_id,entities,windows,denominator_rows,epsilon,mase_denominator_floored_rows,rmsse_denominator_floored_rows,min_mase_denominator,median_mase_denominator,mean_mase_denominator,min_rmsse_denominator,median_rmsse_denominator,mean_rmsse_denominator,created_timestamp
-denominator_reconciliation_20260612_144136,39,454,454,1e-06,0,0,0.5254468736842105,35.978816480006145,231.61798166017672,3.4478459050268593,22479.82042517081,12326608.348669233,2026-06-12T14:41:36
+denominator_reconciliation_20260612_144157,39,454,454,1e-06,0,0,0.5254468736842105,35.978816480006145,231.61798166017672,3.4478459050268593,22479.82042517081,12326608.348669233,2026-06-12T14:41:57

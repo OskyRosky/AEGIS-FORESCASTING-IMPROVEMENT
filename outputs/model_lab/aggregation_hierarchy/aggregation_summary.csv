@@ -1,2 +1,2 @@
 run_id,entity_window_score_rows,entity_model_rows,model_rows,entities,windows,models,official_aggregation_method,primary_metric,guardrail_metric,created_timestamp
-aggregation_hierarchy_20260612_135234,3178,273,7,39,454,7,median_across_windows_per_entity_model_then_median_across_entities_per_model,MASE,RMSSE,2026-06-12T13:52:34
+aggregation_hierarchy_20260612_144220,3178,273,7,39,454,7,median_across_windows_per_entity_model_then_median_across_entities_per_model,MASE,RMSSE,2026-06-12T14:42:20
