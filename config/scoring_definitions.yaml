@@ -13,9 +13,12 @@ mase:
   role: primary_benchmark_metric
   lower_is_better: true
   denominator:
-    method: lag_1_naive_mae
+    method: training_only_lag_1_naive_mae
     slice: training_only
     never_use_test: true
+    formula: mean_abs_first_difference_over_training_actuals
+    block_519_naive_forecasts_allowed_as_denominator: false
+    seasonal_naive_allowed_as_denominator: false
     drift_model_allowed_as_contestant: true
     drift_model_allowed_as_denominator: false
     denominator_floor_epsilon: required
@@ -26,6 +29,15 @@ mase:
 rmsse:
   role: guardrail_only
   lower_is_better: true
+  denominator:
+    method: training_only_lag_1_naive_mse
+    slice: training_only
+    never_use_test: true
+    formula: mean_squared_first_difference_over_training_actuals
+    block_519_naive_forecasts_allowed_as_denominator: false
+    seasonal_naive_allowed_as_denominator: false
+    drift_model_allowed_as_denominator: false
+    denominator_floor_epsilon: required
   fail_guardrail_if_materially_worse_than_runner_up_by_gt: 1.5x
 
 metric_normalization:

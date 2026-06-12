@@ -25,10 +25,25 @@ Reglas obligatorias:
 
 - El denominador se calcula por entidad y ventana usando solo la porcion de entrenamiento.
 - El denominador nunca se calcula sobre test.
+- El denominador oficial es el MAE in-sample de un naive lag-1 sobre la serie de entrenamiento: `mean(abs(y_train[t] - y_train[t-1]))`.
+- Los forecasts lag-1 naive generados en Block 5.19 son benchmark/reference forecasts, pero no son el denominador oficial de `MASE`.
 - El modelo Drift puede competir como benchmark contestant, pero nunca puede ser el denominador.
 - El denominador corresponde al naive lag-1, no a un modelo entrenado ni a un ranking previo.
 - Se aplica un floor / epsilon al denominador para evitar divisiones por cero o denominadores cercanos a cero.
 - Un denominador flooreado debe quedar registrado como condicion diagnostica cuando se implemente el calculo.
+
+## Definicion de RMSSE Guardrail
+
+`RMSSE` usa el mismo principio de aislamiento temporal que `MASE`. Su denominador oficial es el MSE in-sample de un naive lag-1 sobre el training slice:
+
+`mean((y_train[t] - y_train[t-1])^2)`
+
+Reglas obligatorias:
+
+- El denominador de `RMSSE` se calcula por entidad y ventana usando solo actuals con fecha `<= train_end_date`.
+- Nunca se usan actuals del test horizon para el denominador.
+- Nunca se usan forecasts naive de Block 5.19, seasonal naive, Drift ni tablas de metricas previas como denominador.
+- Se aplica floor / epsilon al MSE del denominador cuando sea cero o cercano a cero.
 
 ## Agregacion del benchmark
 

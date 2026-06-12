@@ -17,10 +17,12 @@ normalization:
   primary_metric: MASE
   guardrail_metric: RMSSE
   denominator:
-    method: lag_1_naive_mae
+    method: training_only_lag_1_naive_mae
     slice: training_only
     never_use_test: true
     denominator_floor_epsilon: required
+    block_519_naive_forecasts_allowed_as_denominator: false
+    seasonal_naive_allowed_as_denominator: false
     drift_model_allowed_as_denominator: false
   deprecated_method: percentile_rank_within_entity_window
   deprecation_reason: Cohort-relative normalization rescales baseline scores when challengers are added.
