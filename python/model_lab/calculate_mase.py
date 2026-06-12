@@ -1,7 +1,7 @@
 """Calculate MASE for existing full-baseline forecasts.
 
-This Stage 5.21 script calculates MASE only. It does not calculate RMSSE, run
-models, create rankings, select champions, or write tournament outputs.
+MASE uses the official training-only lag-1 naive MAE denominator by
+entity/window. It does not use test-horizon naive forecast errors.
 """
 
 from __future__ import annotations
@@ -10,6 +10,11 @@ from datetime import datetime
 
 import pandas as pd
 
+from model_lab.benchmark_denominators import (
+    build_and_write_denominators,
+    load_actuals,
+    load_windows,
+)
 from utils.logger import get_logger
 from utils.paths import PROJECT_ROOT
 
@@ -17,14 +22,7 @@ from utils.paths import PROJECT_ROOT
 logger = get_logger("calculate_mase")
 
 MODEL_LAB_DIR = PROJECT_ROOT / "outputs" / "model_lab"
-FULL_BASELINE_FORECASTS = (
-    MODEL_LAB_DIR / "full_baseline" / "full_baseline_forecasts.csv"
-)
-NAIVE_FORECASTS = (
-    MODEL_LAB_DIR / "benchmark_reference" / "naive_benchmark_forecasts.csv"
-)
-WINDOWS_INPUT = MODEL_LAB_DIR / "backtesting_windows.csv"
-EVALUATION_DATASET = PROJECT_ROOT / "outputs" / "evaluation" / "evaluation_dataset.csv"
+FULL_BASELINE_FORECASTS = MODEL_LAB_DIR / "full_baseline" / "full_baseline_forecasts.csv"
 OUTPUT_DIR = MODEL_LAB_DIR / "mase"
 MASE_SCORES_OUTPUT = OUTPUT_DIR / "mase_scores.csv"
 MASE_BY_MODEL_OUTPUT = OUTPUT_DIR / "mase_by_model.csv"
@@ -33,7 +31,6 @@ MASE_SUMMARY_OUTPUT = OUTPUT_DIR / "mase_summary.csv"
 
 RUN_ID_PREFIX = "mase"
 FORECAST_HORIZON_DAYS = 30
-EPSILON = 1e-6
 BASELINE_MODELS = [
     "ARIMA_Fixed",
     "ETS_Current",
@@ -87,15 +84,11 @@ MASE_SUMMARY_COLUMNS = [
 
 
 def _require_file(path) -> None:
-    """Validate that a required input exists."""
-
     if not path.exists():
         raise FileNotFoundError(f"Required MASE input missing: {path}")
 
 
 def _load_baseline_forecasts() -> pd.DataFrame:
-    """Load existing full baseline forecasts."""
-
     _require_file(FULL_BASELINE_FORECASTS)
     forecasts = pd.read_csv(FULL_BASELINE_FORECASTS, parse_dates=["forecast_date"])
     required = {
@@ -108,86 +101,25 @@ def _load_baseline_forecasts() -> pd.DataFrame:
     }
     missing = required.difference(forecasts.columns)
     if missing:
-        raise ValueError(
-            f"full_baseline_forecasts.csv missing columns: {sorted(missing)}"
-        )
+        raise ValueError(f"full_baseline_forecasts.csv missing columns: {sorted(missing)}")
     forecasts = forecasts.copy()
     forecasts["window_id"] = forecasts["window_id"].astype(int)
-    forecasts["forecast_value"] = pd.to_numeric(
-        forecasts["forecast_value"], errors="coerce"
-    )
-    forecasts = forecasts.dropna(
+    forecasts["forecast_value"] = pd.to_numeric(forecasts["forecast_value"], errors="coerce")
+    return forecasts.dropna(
         subset=["entity_key", "window_id", "model_name", "forecast_date", "forecast_value"]
     )
-    return forecasts
 
 
-def _load_naive_forecasts() -> pd.DataFrame:
-    """Load lag-1 naive benchmark forecasts from Block 5.19."""
-
-    _require_file(NAIVE_FORECASTS)
-    naive = pd.read_csv(NAIVE_FORECASTS, parse_dates=["forecast_date"])
-    required = {
-        "entity_key",
-        "window_id",
-        "forecast_date",
-        "horizon_day",
-        "naive_forecast_value",
-    }
-    missing = required.difference(naive.columns)
-    if missing:
-        raise ValueError(f"naive_benchmark_forecasts.csv missing columns: {sorted(missing)}")
-    naive = naive.copy()
-    naive["window_id"] = naive["window_id"].astype(int)
-    naive["naive_forecast_value"] = pd.to_numeric(
-        naive["naive_forecast_value"], errors="coerce"
+def _actuals_for_forecast_dates() -> pd.DataFrame:
+    actuals = load_actuals()
+    return actuals[["entity_key", "date", "value"]].rename(
+        columns={"date": "forecast_date", "value": "actual_value"}
     )
-    naive = naive.dropna(
-        subset=["entity_key", "window_id", "forecast_date", "naive_forecast_value"]
-    )
-    return naive[
-        ["entity_key", "window_id", "forecast_date", "horizon_day", "naive_forecast_value"]
-    ]
-
-
-def _load_actuals() -> pd.DataFrame:
-    """Load actual values from the evaluation dataset."""
-
-    _require_file(EVALUATION_DATASET)
-    actuals = pd.read_csv(EVALUATION_DATASET, parse_dates=["date"])
-    required = {"entity_key", "date", "value", "record_type"}
-    missing = required.difference(actuals.columns)
-    if missing:
-        raise ValueError(f"evaluation_dataset.csv missing columns: {sorted(missing)}")
-    actuals = actuals[actuals["record_type"] == "actual"].copy()
-    actuals["actual_value"] = pd.to_numeric(actuals["value"], errors="coerce")
-    actuals = actuals.dropna(subset=["entity_key", "date", "actual_value"])
-    if actuals.duplicated(["entity_key", "date"]).any():
-        raise ValueError("Duplicate actual rows found for entity/date.")
-    return actuals[["entity_key", "date", "actual_value"]].rename(
-        columns={"date": "forecast_date"}
-    )
-
-
-def _load_valid_windows() -> pd.DataFrame:
-    """Load valid backtesting windows used to count expected baseline jobs."""
-
-    _require_file(WINDOWS_INPUT)
-    windows = pd.read_csv(WINDOWS_INPUT)
-    required = {"entity_key", "window_id", "forecast_horizon_days"}
-    missing = required.difference(windows.columns)
-    if missing:
-        raise ValueError(f"backtesting_windows.csv missing columns: {sorted(missing)}")
-    windows = windows[windows["forecast_horizon_days"] == FORECAST_HORIZON_DAYS].copy()
-    windows["window_id"] = windows["window_id"].astype(int)
-    return windows[["entity_key", "window_id"]].drop_duplicates()
 
 
 def _build_scoring_frame(
-    forecasts: pd.DataFrame, naive: pd.DataFrame, actuals: pd.DataFrame
+    forecasts: pd.DataFrame, denominators: pd.DataFrame, actuals: pd.DataFrame
 ) -> pd.DataFrame:
-    """Join model forecasts, naive forecasts, and actuals by entity/window/date."""
-
     merged = forecasts.merge(
         actuals,
         on=["entity_key", "forecast_date"],
@@ -195,44 +127,42 @@ def _build_scoring_frame(
         validate="many_to_one",
     )
     merged = merged.merge(
-        naive,
-        on=["entity_key", "window_id", "forecast_date", "horizon_day"],
+        denominators[
+            [
+                "entity_key",
+                "window_id",
+                "mase_denominator_mae",
+                "mase_denominator_floored",
+            ]
+        ],
+        on=["entity_key", "window_id"],
         how="inner",
         validate="many_to_one",
     )
     if merged.empty:
-        raise ValueError("No rows available after joining forecasts, naive, and actuals.")
-    merged["model_abs_error"] = (
-        merged["actual_value"] - merged["forecast_value"]
-    ).abs()
-    merged["naive_abs_error"] = (
-        merged["actual_value"] - merged["naive_forecast_value"]
-    ).abs()
+        raise ValueError("No rows available after joining forecasts, actuals, and denominators.")
+    merged["model_abs_error"] = (merged["actual_value"] - merged["forecast_value"]).abs()
     return merged
 
 
 def _calculate_scores(scoring_frame: pd.DataFrame, run_id: str, timestamp: str) -> pd.DataFrame:
-    """Calculate MASE per entity/window/model."""
-
-    grouped = scoring_frame.groupby(["entity_key", "window_id", "model_name"], sort=True)
     rows = []
-    for (entity_key, window_id, model_name), group in grouped:
-        forecast_rows = len(group)
+    for (entity_key, window_id, model_name), group in scoring_frame.groupby(
+        ["entity_key", "window_id", "model_name"], sort=True
+    ):
         mae_model = float(group["model_abs_error"].mean())
-        raw_mae_naive = float(group["naive_abs_error"].mean())
-        denominator_floored = raw_mae_naive < EPSILON
-        mae_naive = EPSILON if denominator_floored else raw_mae_naive
+        mae_naive = float(group["mase_denominator_mae"].iloc[0])
         rows.append(
             {
                 "run_id": run_id,
                 "entity_key": entity_key,
                 "window_id": int(window_id),
                 "model_name": model_name,
-                "forecast_rows": int(forecast_rows),
+                "forecast_rows": int(len(group)),
                 "mase": mae_model / mae_naive,
                 "mae_model": mae_model,
                 "mae_naive": mae_naive,
-                "denominator_floored": bool(denominator_floored),
+                "denominator_floored": bool(group["mase_denominator_floored"].iloc[0]),
                 "created_timestamp": timestamp,
             }
         )
@@ -240,8 +170,6 @@ def _calculate_scores(scoring_frame: pd.DataFrame, run_id: str, timestamp: str) 
 
 
 def _aggregate_by_model(scores: pd.DataFrame, timestamp: str) -> pd.DataFrame:
-    """Create model-level MASE diagnostics without rankings."""
-
     rows = []
     for model_name, group in scores.groupby("model_name", sort=True):
         rows.append(
@@ -259,8 +187,6 @@ def _aggregate_by_model(scores: pd.DataFrame, timestamp: str) -> pd.DataFrame:
 
 
 def _aggregate_by_entity(scores: pd.DataFrame, timestamp: str) -> pd.DataFrame:
-    """Create entity-level MASE diagnostics without rankings."""
-
     rows = []
     for entity_key, group in scores.groupby("entity_key", sort=True):
         rows.append(
@@ -277,9 +203,7 @@ def _aggregate_by_entity(scores: pd.DataFrame, timestamp: str) -> pd.DataFrame:
 
 
 def _create_summary(scores: pd.DataFrame, run_id: str, timestamp: str) -> pd.DataFrame:
-    """Create global MASE summary."""
-
-    summary = pd.DataFrame(
+    return pd.DataFrame(
         [
             {
                 "run_id": run_id,
@@ -295,60 +219,42 @@ def _create_summary(scores: pd.DataFrame, run_id: str, timestamp: str) -> pd.Dat
         ],
         columns=MASE_SUMMARY_COLUMNS,
     )
-    return summary
 
 
-def _write_outputs(
-    scores: pd.DataFrame,
-    by_model: pd.DataFrame,
-    by_entity: pd.DataFrame,
-    summary: pd.DataFrame,
-) -> None:
-    """Write MASE outputs only."""
-
+def _write_outputs(scores, by_model, by_entity, summary) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     scores.to_csv(MASE_SCORES_OUTPUT, index=False)
     by_model.to_csv(MASE_BY_MODEL_OUTPUT, index=False)
     by_entity.to_csv(MASE_BY_ENTITY_OUTPUT, index=False)
     summary.to_csv(MASE_SUMMARY_OUTPUT, index=False)
-    logger.info("Created %s with %s rows", MASE_SCORES_OUTPUT, len(scores))
-    logger.info("Created %s with %s rows", MASE_BY_MODEL_OUTPUT, len(by_model))
-    logger.info("Created %s with %s rows", MASE_BY_ENTITY_OUTPUT, len(by_entity))
-    logger.info("Created %s with %s rows", MASE_SUMMARY_OUTPUT, len(summary))
 
 
 def calculate_mase() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    """Calculate MASE for all existing full-baseline jobs."""
-
-    logger.info("Stage 5.21 MASE calculation started")
+    logger.info("Stage 5.21 MASE calculation started with training-only denominator")
     run_id = f"{RUN_ID_PREFIX}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     timestamp = datetime.now().isoformat(timespec="seconds")
 
+    denominators, _ = build_and_write_denominators(
+        run_id=f"denominator_reconciliation_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+        timestamp=timestamp,
+    )
     forecasts = _load_baseline_forecasts()
-    naive = _load_naive_forecasts()
-    actuals = _load_actuals()
-    valid_windows = _load_valid_windows()
+    actuals = _actuals_for_forecast_dates()
+    valid_windows = load_windows()
     expected_jobs = len(valid_windows) * len(BASELINE_MODELS)
 
-    scoring_frame = _build_scoring_frame(forecasts, naive, actuals)
+    scoring_frame = _build_scoring_frame(forecasts, denominators, actuals)
     scores = _calculate_scores(scoring_frame, run_id, timestamp)
     by_model = _aggregate_by_model(scores, timestamp)
     by_entity = _aggregate_by_entity(scores, timestamp)
     summary = _create_summary(scores, run_id, timestamp)
 
-    mase_lt_1 = int((scores["mase"] < 1.0).sum())
-    mase_eq_1 = int((scores["mase"] == 1.0).sum())
-    mase_gt_1 = int((scores["mase"] > 1.0).sum())
     logger.info("Expected baseline jobs: %s", expected_jobs)
     logger.info("MASE metric rows: %s", len(scores))
-    logger.info("Rows with MASE < 1: %s", mase_lt_1)
-    logger.info("Rows with MASE = 1: %s", mase_eq_1)
-    logger.info("Rows with MASE > 1: %s", mase_gt_1)
-    logger.info(
-        "pct_windows_beating_naive: %.6f", float((scores["mase"] < 1.0).mean())
-    )
-    logger.info("MASE interpretation: <1 beats naive, =1 equals naive, >1 worse.")
-
+    logger.info("Training-only denominator rows: %s", len(denominators))
+    logger.info("Rows with MASE < 1: %s", int((scores["mase"] < 1.0).sum()))
+    logger.info("Rows with MASE = 1: %s", int((scores["mase"] == 1.0).sum()))
+    logger.info("Rows with MASE > 1: %s", int((scores["mase"] > 1.0).sum()))
     _write_outputs(scores, by_model, by_entity, summary)
     logger.info("Stage 5.21 MASE calculation completed")
     return scores, by_model, by_entity, summary

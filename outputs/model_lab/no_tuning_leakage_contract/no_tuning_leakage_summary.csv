@@ -1,0 +1,2 @@
+run_id,planned_challengers,contract_controls,blocking_controls,sandbox_mode_defined,official_mode_defined,challengers_ready_for_official_execution,audit_ready,created_timestamp
+no_tuning_leakage_contract_20260612_141407,7,12,12,True,True,0,True,2026-06-12T14:14:07

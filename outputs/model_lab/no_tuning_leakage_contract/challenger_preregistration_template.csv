@@ -1,0 +1,8 @@
+model_name,model_family,status,allowed_features,hyperparameter_space_declared,tuning_budget_declared,training_window_policy_declared,random_seed_policy_declared,dependency_requirements_declared,leakage_risk_level,ready_for_official_execution
+AutoARIMA,ClassicalStatistical,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
+Theta,ClassicalStatistical,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
+ETS Explicit,ClassicalStatistical,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
+LightGBM,GradientBoosting,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
+XGBoost,GradientBoosting,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
+NBEATS,DeepLearning,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
+NHITS,DeepLearning,planned,TBD_before_official_execution,False,False,False,False,False,TBD,False
