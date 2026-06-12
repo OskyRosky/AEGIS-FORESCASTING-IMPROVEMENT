@@ -1,0 +1,2 @@
+run_id,forecast_rows,adjusted_forecast_rows,negative_forecast_rows,pct_negative_forecast_rows,models,entities,windows,original_min_forecast,adjusted_min_forecast,mase_median_before,mase_median_after,rmsse_median_before,rmsse_median_after,created_timestamp
+non_negative_policy_20260612_122931,95340,735,735,0.007709251101321586,7,39,454,-17661382.654663995,0.0,0.9995779032967591,0.9995779032967591,1.0042237370985716,1.0031371831799922,2026-06-12T12:29:31
