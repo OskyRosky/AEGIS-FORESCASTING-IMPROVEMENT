@@ -1,0 +1,2 @@
+run_id,sandbox_passed_models,official_candidate_models,deferred_models,ready_for_official_execution_models,expected_total_forecast_rows,official_execution_run_performed,rankings_created,tournament_created,champion_selected,created_timestamp
+challenger_official_execution_prep,6,6,1,6,81720,False,False,False,False,2026-06-12T17:00:53

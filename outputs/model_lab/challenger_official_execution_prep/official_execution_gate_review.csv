@@ -1,0 +1,71 @@
+gate_id,gate_name,model_name,gate_status,blocking_if_failed,evidence_source,notes,created_timestamp
+GATE-01,dependencies_resolved,AutoARIMA,pass,True,challenger_dependency_resolution/dependency_import_check.csv,,2026-06-12T17:00:53
+GATE-02,sandbox_passed,AutoARIMA,pass,True,challenger_sandbox/challenger_sandbox_execution_status.csv,,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,AutoARIMA,pass,True,no_tuning_leakage_contract/leakage_control_checklist.csv,,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,AutoARIMA,pass,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,AutoARIMA,pass,True,challenger_onboarding/challenger_registry_snapshot.csv,,2026-06-12T17:00:53
+GATE-06,random_seed_locked,AutoARIMA,pass,True,challenger_official_execution_prep/official_execution_locked_policy.csv,,2026-06-12T17:00:53
+GATE-07,output_schema_validated,AutoARIMA,pass,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,,2026-06-12T17:00:53
+GATE-08,official_windows_locked,AutoARIMA,pass,True,challenger_official_execution_prep/official_execution_scope.csv,,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,AutoARIMA,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,AutoARIMA,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-01,dependencies_resolved,Theta,pass,True,challenger_dependency_resolution/dependency_import_check.csv,,2026-06-12T17:00:53
+GATE-02,sandbox_passed,Theta,pass,True,challenger_sandbox/challenger_sandbox_execution_status.csv,,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,Theta,pass,True,no_tuning_leakage_contract/leakage_control_checklist.csv,,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,Theta,pass,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,Theta,pass,True,challenger_onboarding/challenger_registry_snapshot.csv,,2026-06-12T17:00:53
+GATE-06,random_seed_locked,Theta,pass,True,challenger_official_execution_prep/official_execution_locked_policy.csv,,2026-06-12T17:00:53
+GATE-07,output_schema_validated,Theta,pass,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,,2026-06-12T17:00:53
+GATE-08,official_windows_locked,Theta,pass,True,challenger_official_execution_prep/official_execution_scope.csv,,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,Theta,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,Theta,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-01,dependencies_resolved,ETS Explicit,pass,True,challenger_dependency_resolution/dependency_import_check.csv,,2026-06-12T17:00:53
+GATE-02,sandbox_passed,ETS Explicit,pass,True,challenger_sandbox/challenger_sandbox_execution_status.csv,,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,ETS Explicit,pass,True,no_tuning_leakage_contract/leakage_control_checklist.csv,,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,ETS Explicit,pass,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,ETS Explicit,pass,True,challenger_onboarding/challenger_registry_snapshot.csv,,2026-06-12T17:00:53
+GATE-06,random_seed_locked,ETS Explicit,pass,True,challenger_official_execution_prep/official_execution_locked_policy.csv,,2026-06-12T17:00:53
+GATE-07,output_schema_validated,ETS Explicit,pass,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,,2026-06-12T17:00:53
+GATE-08,official_windows_locked,ETS Explicit,pass,True,challenger_official_execution_prep/official_execution_scope.csv,,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,ETS Explicit,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,ETS Explicit,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-01,dependencies_resolved,LightGBM,pass,True,challenger_dependency_resolution/dependency_import_check.csv,,2026-06-12T17:00:53
+GATE-02,sandbox_passed,LightGBM,pass,True,challenger_sandbox/challenger_sandbox_execution_status.csv,,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,LightGBM,pass,True,no_tuning_leakage_contract/leakage_control_checklist.csv,,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,LightGBM,pass,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,LightGBM,pass,True,challenger_onboarding/challenger_registry_snapshot.csv,,2026-06-12T17:00:53
+GATE-06,random_seed_locked,LightGBM,pass,True,challenger_official_execution_prep/official_execution_locked_policy.csv,,2026-06-12T17:00:53
+GATE-07,output_schema_validated,LightGBM,pass,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,,2026-06-12T17:00:53
+GATE-08,official_windows_locked,LightGBM,pass,True,challenger_official_execution_prep/official_execution_scope.csv,,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,LightGBM,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,LightGBM,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-01,dependencies_resolved,XGBoost,pass,True,challenger_dependency_resolution/dependency_import_check.csv,,2026-06-12T17:00:53
+GATE-02,sandbox_passed,XGBoost,pass,True,challenger_sandbox/challenger_sandbox_execution_status.csv,,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,XGBoost,pass,True,no_tuning_leakage_contract/leakage_control_checklist.csv,,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,XGBoost,pass,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,XGBoost,pass,True,challenger_onboarding/challenger_registry_snapshot.csv,,2026-06-12T17:00:53
+GATE-06,random_seed_locked,XGBoost,pass,True,challenger_official_execution_prep/official_execution_locked_policy.csv,,2026-06-12T17:00:53
+GATE-07,output_schema_validated,XGBoost,pass,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,,2026-06-12T17:00:53
+GATE-08,official_windows_locked,XGBoost,pass,True,challenger_official_execution_prep/official_execution_scope.csv,,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,XGBoost,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,XGBoost,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-01,dependencies_resolved,NBEATS,pass,True,challenger_dependency_resolution/dependency_import_check.csv,,2026-06-12T17:00:53
+GATE-02,sandbox_passed,NBEATS,pass,True,challenger_sandbox/challenger_sandbox_execution_status.csv,,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,NBEATS,pass,True,no_tuning_leakage_contract/leakage_control_checklist.csv,,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,NBEATS,pass,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,NBEATS,pass,True,challenger_onboarding/challenger_registry_snapshot.csv,,2026-06-12T17:00:53
+GATE-06,random_seed_locked,NBEATS,pass,True,challenger_official_execution_prep/official_execution_locked_policy.csv,,2026-06-12T17:00:53
+GATE-07,output_schema_validated,NBEATS,pass,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,,2026-06-12T17:00:53
+GATE-08,official_windows_locked,NBEATS,pass,True,challenger_official_execution_prep/official_execution_scope.csv,,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,NBEATS,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,NBEATS,pass,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,,2026-06-12T17:00:53
+GATE-01,dependencies_resolved,NHITS,fail,True,challenger_dependency_resolution/dependency_import_check.csv,deferred: dependency unresolved on Python 3.14,2026-06-12T17:00:53
+GATE-02,sandbox_passed,NHITS,fail,True,challenger_sandbox/challenger_sandbox_execution_status.csv,deferred: dependency unresolved on Python 3.14,2026-06-12T17:00:53
+GATE-03,no_leakage_controls_failed,NHITS,not_applicable_deferred,True,no_tuning_leakage_contract/leakage_control_checklist.csv,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-04,tuning_budget_locked,NHITS,not_applicable_deferred,True,challenger_execution_planning/challenger_tuning_budget_plan.csv,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-05,hyperparameter_space_locked,NHITS,not_applicable_deferred,True,challenger_onboarding/challenger_registry_snapshot.csv,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-06,random_seed_locked,NHITS,not_applicable_deferred,True,challenger_official_execution_prep/official_execution_locked_policy.csv,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-07,output_schema_validated,NHITS,not_applicable_deferred,True,challenger_sandbox/challenger_sandbox_contract_validation.csv,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-08,official_windows_locked,NHITS,not_applicable_deferred,True,challenger_official_execution_prep/official_execution_scope.csv,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-09,no_post_hoc_tuning,NHITS,not_applicable_deferred,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,model deferred; gate not evaluated,2026-06-12T17:00:53
+GATE-10,no_tournament_feedback_tuning,NHITS,not_applicable_deferred,True,no_tuning_leakage_contract/no_tuning_leakage_contract.md,model deferred; gate not evaluated,2026-06-12T17:00:53

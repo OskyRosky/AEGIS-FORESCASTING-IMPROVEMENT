@@ -1,0 +1,8 @@
+model_name,entity_count,window_count,horizon_days,expected_forecast_rows,runtime_class,estimated_relative_cost,notes,created_timestamp
+AutoARIMA,39,454,30,13620,medium,3,statistical/ML model; light-to-medium runtime.,2026-06-12T17:00:53
+Theta,39,454,30,13620,light,1,statistical/ML model; light-to-medium runtime.,2026-06-12T17:00:53
+ETS Explicit,39,454,30,13620,light,1,statistical/ML model; light-to-medium runtime.,2026-06-12T17:00:53
+LightGBM,39,454,30,13620,medium,3,statistical/ML model; light-to-medium runtime.,2026-06-12T17:00:53
+XGBoost,39,454,30,13620,medium,3,statistical/ML model; light-to-medium runtime.,2026-06-12T17:00:53
+NBEATS,39,454,30,13620,heavy,20,HEAVY deep-learning model; dominant runtime/cost driver.,2026-06-12T17:00:53
+NHITS,39,454,30,0,heavy,20,deferred - not part of the official run estimate,2026-06-12T17:00:53

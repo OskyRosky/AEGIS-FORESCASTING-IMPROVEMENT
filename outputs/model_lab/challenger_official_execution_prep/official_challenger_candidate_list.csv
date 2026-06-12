@@ -1,0 +1,8 @@
+model_name,model_family,model_type,sandbox_status,dependency_status,official_candidate,official_execution_prep_status,deferred_reason,created_timestamp
+AutoARIMA,statistical,auto_arima,sandbox_passed,resolved,True,prepared_for_official_execution,,2026-06-12T17:00:53
+Theta,statistical,theta,sandbox_passed,resolved,True,prepared_for_official_execution,,2026-06-12T17:00:53
+ETS Explicit,statistical,ets_explicit,sandbox_passed,resolved,True,prepared_for_official_execution,,2026-06-12T17:00:53
+LightGBM,machine_learning,gradient_boosting,sandbox_passed,resolved,True,prepared_for_official_execution,,2026-06-12T17:00:53
+XGBoost,machine_learning,gradient_boosting,sandbox_passed,resolved,True,prepared_for_official_execution,,2026-06-12T17:00:53
+NBEATS,deep_learning,neural_basis_expansion,sandbox_passed,resolved,True,prepared_for_official_execution,,2026-06-12T17:00:53
+NHITS,deep_learning,neural_hierarchical_interpolation,sandbox_blocked_dependency_missing,unresolved_python314_neuralforecast_ray,False,deferred,"deferred_dependency_blocked: NHITS depends solely on neuralforecast, which cannot be made importable on Python 3.14 - modern neuralforecast requires ray (no 3.14 wheel) and the legacy fallback is incompatible with the installed pytorch-lightning. Excluded from the immediate official run; re-enable on a Python 3.11/3.12 environment.",2026-06-12T17:00:53

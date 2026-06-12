@@ -1,0 +1,7 @@
+model_name,tuning_allowed,tuning_mode,max_trials,max_runtime_minutes,random_seed,inner_validation_required,official_results_may_tune_model,hyperparameter_policy_status,created_timestamp
+AutoARIMA,True,library_auto_search_bounded,limited_by_library_auto_search,20,42,True,False,locked_preregistered,2026-06-12T17:00:53
+Theta,False,fixed_default,1,10,42,True,False,locked_preregistered,2026-06-12T17:00:53
+ETS Explicit,True,bounded_grid,10,20,42,True,False,locked_preregistered,2026-06-12T17:00:53
+LightGBM,True,bounded_random_search,20,45,42,True,False,locked_preregistered,2026-06-12T17:00:53
+XGBoost,True,bounded_random_search,20,45,42,True,False,locked_preregistered,2026-06-12T17:00:53
+NBEATS,True,bounded_config_search,5,90,42,True,False,locked_preregistered,2026-06-12T17:00:53
