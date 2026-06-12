@@ -1,0 +1,2 @@
+run_id,metric_rows,entities,windows,models,global_median_rmsse,global_mean_rmsse,pct_beating_naive,pct_high_risk,created_timestamp
+rmsse_20260612_122215,3178,39,454,7,1.0042237370985716,2895.761478666735,0.4776589049716803,0.10163624921334173,2026-06-12T12:22:15
