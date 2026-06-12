@@ -1,4 +1,36 @@
+scoring_semantics:
+  status: benchmark_semantics_approved
+  reference: docs/benchmark_semantics/benchmark_semantics_v1.md
+  primary_metric: MASE
+  guardrail_metric: RMSSE
+  diagnostics_only:
+    - wMAPE
+    - SMAPE
+    - abs_bias
+    - pct_beating_naive
+
+mase:
+  role: primary_benchmark_metric
+  lower_is_better: true
+  denominator:
+    method: lag_1_naive_mae
+    slice: training_only
+    never_use_test: true
+    drift_model_allowed_as_contestant: true
+    drift_model_allowed_as_denominator: false
+    denominator_floor_epsilon: required
+  aggregation:
+    per_entity: median_across_windows
+    global: median_across_entities
+
+rmsse:
+  role: guardrail_only
+  lower_is_better: true
+  fail_guardrail_if_materially_worse_than_runner_up_by_gt: 1.5x
+
 metric_normalization:
+  status: deprecated_for_benchmark_score
+  deprecation_reason: Benchmark score must be absolute MASE; cohort-relative normalization is allowed only for later tournament rank.
   wmape: lower_is_better_percent
   mape: lower_is_better_percent
   rmse: lower_is_better_normalized_by_entity_scale
@@ -7,11 +39,15 @@ metric_normalization:
   horizon: lower_late_horizon_degradation_is_better
 
 composite_score:
+  status: deprecated_for_benchmark_score
+  deprecation_reason: Weighted normalized composite score is cohort-sensitive and must not define Absolute Benchmark Score.
   method: weighted_normalized_score
   score_range: 0_to_100
   higher_is_better: true
 
 rmse_normalization:
+  status: deprecated_for_primary_benchmark
+  replacement: RMSSE_guardrail_only
   method: divide_by_entity_mean_actual
   fallback_if_entity_mean_zero: null
 
@@ -25,11 +61,13 @@ zero_actual_handling:
   log_excluded_rows: true
 
 stability_score:
+  status: diagnostic_only
   definition: variance_of_window_level_wmape
   normalization: percentile_rank_within_model_family
   higher_is_better_after_transformation: true
 
 horizon_score:
+  status: diagnostic_only
   definition: late_horizon_error_degradation
   compare:
     early_horizon_days: 1_10

@@ -1,19 +1,34 @@
 policy_name: baseline_ranking_policy
-policy_stage: Stage 5.13
+policy_stage: Stage 5.18
 policy_scope: baseline_models_only
-policy_status: design_only
+policy_status: benchmark_semantics_approved
+reference: docs/benchmark_semantics/benchmark_semantics_v1.md
 allowed_metrics:
+  - MASE
+  - RMSSE
   - wmape
   - mape
   - rmse
   - smape
   - abs_bias
+  - pct_beating_naive
 normalization:
-  method: percentile_rank_within_entity_window
+  method: mase_absolute
+  primary_metric: MASE
+  guardrail_metric: RMSSE
+  denominator:
+    method: lag_1_naive_mae
+    slice: training_only
+    never_use_test: true
+    denominator_floor_epsilon: required
+    drift_model_allowed_as_denominator: false
+  deprecated_method: percentile_rank_within_entity_window
+  deprecation_reason: Cohort-relative normalization rescales baseline scores when challengers are added.
+  tournament_rank_allowed_later: true
+  tournament_rank_scope: within_cohort_only
   raw_rmse_allowed: false
   direction: lower_metric_is_better
-  normalized_score_range: 0_to_100
-  normalized_score_direction: higher_is_better
+  absolute_score_direction: lower_is_better
 outlier_handling:
   p95_control: diagnostic_threshold
   p99_control: winsorization_threshold
@@ -21,16 +36,29 @@ outlier_handling:
   exclusions_allowed: false
   silent_removal_allowed: false
 aggregation:
-  entity_window_score: weighted_mean_of_normalized_metrics
-  entity_score: median_across_windows
-  cross_entity_score: equal_weighted_mean_across_entities
-  global_score: equal_weighted_mean_of_entity_scores
+  entity_window_score: MASE
+  entity_score: median_mase_across_windows
+  cross_entity_score: median_across_entities
+  global_score: median_of_entity_median_mase
+  deprecated_entity_window_score: weighted_mean_of_normalized_metrics
+  deprecated_global_score: equal_weighted_mean_of_entity_scores
+guardrails:
+  rmsse:
+    role: guardrail_only
+    fail_if_materially_worse_than_runner_up_by_gt: 1.5x
+diagnostics_only:
+  - wmape
+  - smape
+  - abs_bias
+  - pct_beating_naive
 tie_breaking:
-  - normalized_wmape
-  - normalized_smape
-  - normalized_rmse
-  - normalized_abs_bias
-  - model_name_ascending
+  status: deferred_to_tournament_rank
+  tournament_only:
+    - normalized_wmape
+    - normalized_smape
+    - normalized_rmse
+    - normalized_abs_bias
+    - model_name_ascending
 prohibitions:
   rank_models: true
   select_winners: true
