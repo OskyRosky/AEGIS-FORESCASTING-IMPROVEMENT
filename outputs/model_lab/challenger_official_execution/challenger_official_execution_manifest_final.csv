@@ -1,8 +1,8 @@
 run_id,model_name,execution_mode,entity_window_count,horizon_days,expected_forecast_rows,actual_forecast_rows,official_execution_status,created_timestamp
-challenger_official_execution,AutoARIMA,official,454,30,13620,13620,official_model_passed,2026-06-13T15:43:35
-challenger_official_execution,Theta,official,454,30,13620,13620,official_model_passed,2026-06-13T15:43:35
-challenger_official_execution,ETS Explicit,official,454,30,13620,13620,official_model_passed,2026-06-13T15:43:35
-challenger_official_execution,LightGBM,official,454,30,13620,13620,official_model_passed,2026-06-13T15:43:35
-challenger_official_execution,XGBoost,official,454,30,13620,13620,official_model_passed,2026-06-13T15:43:35
-challenger_official_execution,NBEATS,official,454,30,13620,150,official_model_partial,2026-06-13T15:43:35
-challenger_official_execution,NHITS,official,454,30,0,0,official_model_deferred,2026-06-13T15:43:35
+challenger_official_execution,AutoARIMA,official,454,30,13620,13620,official_model_passed,2026-06-13T15:54:50
+challenger_official_execution,Theta,official,454,30,13620,13620,official_model_passed,2026-06-13T15:54:50
+challenger_official_execution,ETS Explicit,official,454,30,13620,13620,official_model_passed,2026-06-13T15:54:50
+challenger_official_execution,LightGBM,official,454,30,13620,13620,official_model_passed,2026-06-13T15:54:50
+challenger_official_execution,XGBoost,official,454,30,13620,13620,official_model_passed,2026-06-13T15:54:50
+challenger_official_execution,NBEATS,official,454,30,13620,900,official_model_partial,2026-06-13T15:54:50
+challenger_official_execution,NHITS,official,454,30,0,0,official_model_deferred,2026-06-13T15:54:50

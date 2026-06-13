@@ -1,6 +1,6 @@
 # Block 5.29D - Challenger Official Execution Report
 
-Generated: 2026-06-13T15:43:35
+Generated: 2026-06-13T15:54:50
 
 ## Purpose
 
@@ -38,24 +38,24 @@ Execute official challenger forecasts for the six approved candidates over the l
 | ETS Explicit | official_model_passed | 454 | 454 | 0 | 13620 | 13620 | 17.690698 |
 | LightGBM | official_model_passed | 454 | 454 | 0 | 13620 | 13620 | 20.155779 |
 | XGBoost | official_model_passed | 454 | 454 | 0 | 13620 | 13620 | 28.63315 |
-| NBEATS | official_model_partial | 5 | 5 | 0 | 150 | 13620 | 142.477646 |
+| NBEATS | official_model_partial | 30 | 30 | 0 | 900 | 13620 | 811.056159 |
 | NHITS | official_model_deferred | 0 | 0 | 0 | 0 | 0 | 0.0 |
 
 ## Forecast Row Reconciliation
 
 - Expected total forecast rows: 81720
-- Actual total forecast rows: 68250
+- Actual total forecast rows: 69000
 
 ## Contract Validation
 
 - Checks passed: 14
 - Checks failed: 2
-- FAIL ALL / expected_total_rows_reconciled: expected=81720 actual=68250
-- FAIL NBEATS / per_model_expected_rows_reconciled: expected=13620 actual=150
+- FAIL ALL / expected_total_rows_reconciled: expected=81720 actual=69000
+- FAIL NBEATS / per_model_expected_rows_reconciled: expected=13620 actual=900
 
 ## Failures
 
-- NBEATS: official_model_partial (0 failed windows, 150 rows).
+- NBEATS: official_model_partial (0 failed windows, 900 rows).
 
 ## Scope and Safety Findings
 

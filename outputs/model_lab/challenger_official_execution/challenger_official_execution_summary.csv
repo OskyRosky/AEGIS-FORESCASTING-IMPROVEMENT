@@ -1,2 +1,2 @@
 run_id,official_candidate_models,models_attempted,models_passed,models_partial,models_failed,models_deferred,entity_windows,horizon_days,expected_total_forecast_rows,actual_total_forecast_rows,official_forecast_execution_completed,metrics_created,rankings_created,tournament_created,champion_selected,created_timestamp
-challenger_official_execution,6,6,5,1,0,1,454,30,81720,68250,False,False,False,False,False,2026-06-13T15:43:35
+challenger_official_execution,6,6,5,1,0,1,454,30,81720,69000,False,False,False,False,False,2026-06-13T15:54:50
