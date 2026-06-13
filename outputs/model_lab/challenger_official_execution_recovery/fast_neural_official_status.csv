@@ -1,0 +1,2 @@
+run_id,model_name,execution_mode,official_status,entity_windows_attempted,entity_windows_passed,entity_windows_failed,forecast_rows,error_message,runtime_seconds,created_timestamp
+block_5_29d_recovery,FastNeuralAR_MLP,official,official_passed,454,454,0,13620,,124.163928,2026-06-13T16:11:28
