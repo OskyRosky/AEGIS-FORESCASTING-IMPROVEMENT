@@ -1,0 +1,17 @@
+run_id,model_name,check_name,status,details,created_timestamp
+challenger_official_execution,ALL,required_columns_present,pass,missing=none,2026-06-13T15:43:35
+challenger_official_execution,ALL,execution_mode_is_official,pass,values=['official'],2026-06-13T15:43:35
+challenger_official_execution,ALL,no_nan_forecast_value,pass,nan_count=0,2026-06-13T15:43:35
+challenger_official_execution,ALL,no_inf_forecast_value,pass,inf_count=0,2026-06-13T15:43:35
+challenger_official_execution,ALL,horizon_day_1_to_30,pass,min=1 max=30,2026-06-13T15:43:35
+challenger_official_execution,ALL,only_approved_models_forecasted,pass,bad_models=none,2026-06-13T15:43:35
+challenger_official_execution,ALL,no_nhits_forecasts,pass,NHITS absent from forecast rows,2026-06-13T15:43:35
+challenger_official_execution,ALL,forecast_date_within_official_test_window,pass,out_of_window_count=0,2026-06-13T15:43:35
+challenger_official_execution,ALL,thirty_rows_per_successful_model_entity_window,pass,bad_successful_windows=0,2026-06-13T15:43:35
+challenger_official_execution,ALL,expected_total_rows_reconciled,fail,expected=81720 actual=68250,2026-06-13T15:43:35
+challenger_official_execution,AutoARIMA,per_model_expected_rows_reconciled,pass,expected=13620 actual=13620,2026-06-13T15:43:35
+challenger_official_execution,Theta,per_model_expected_rows_reconciled,pass,expected=13620 actual=13620,2026-06-13T15:43:35
+challenger_official_execution,ETS Explicit,per_model_expected_rows_reconciled,pass,expected=13620 actual=13620,2026-06-13T15:43:35
+challenger_official_execution,LightGBM,per_model_expected_rows_reconciled,pass,expected=13620 actual=13620,2026-06-13T15:43:35
+challenger_official_execution,XGBoost,per_model_expected_rows_reconciled,pass,expected=13620 actual=13620,2026-06-13T15:43:35
+challenger_official_execution,NBEATS,per_model_expected_rows_reconciled,fail,expected=13620 actual=150,2026-06-13T15:43:35
