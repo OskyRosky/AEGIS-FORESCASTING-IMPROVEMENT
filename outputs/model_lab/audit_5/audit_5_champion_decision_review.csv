@@ -1,0 +1,11 @@
+field,expected_value,observed_value,audit_status,notes,created_timestamp
+decision,CHAMPION_SELECTED_WITH_CONDITIONS,CHAMPION_SELECTED_WITH_CONDITIONS,PASS,Matches across champion_decision.csv and closure summary,2026-06-14T12:00:00
+selected_model,ETS Explicit,ETS Explicit,PASS,Consistent in all artifacts,2026-06-14T12:00:00
+origin,challenger,challenger,PASS,selected_champion_origin=challenger,2026-06-14T12:00:00
+family,statistical,statistical,PASS,selected_champion_family=statistical,2026-06-14T12:00:00
+confidence,medium,medium,PASS,decision_confidence=medium,2026-06-14T12:00:00
+official_median_mase,6.901143533373399,6.901143533373399,PASS,champion_summary matches scorecard and standings,2026-06-14T12:00:00
+official_median_rmsse,1.856193218184295,1.856193218184295,PASS,champion_summary matches scorecard and standings,2026-06-14T12:00:00
+supported_better_count,8,8,PASS,Matches tournament standings position 1,2026-06-14T12:00:00
+supported_worse_count,0,0,PASS,Matches tournament standings position 1,2026-06-14T12:00:00
+conditions_not_empty,non-empty,"Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as non-champion conditions.",PASS,Conditions populated; conditions_present=True,2026-06-14T12:00:00
