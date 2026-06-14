@@ -1,0 +1,16 @@
+run_id,model_name,model_origin,model_family,included_in_tournament,exclusion_reason,audit_risk_flag,created_timestamp
+tournament_engine,ARIMA_Fixed,baseline,statistical,True,,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,True,,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,True,,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,True,,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,True,,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,True,,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,True,,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,True,,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,True,,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,True,,False,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,True,,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,True,,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,True,,True,2026-06-13T18:07:40
+tournament_engine,NBEATS,challenger,deep_learning,False,deferred_runtime_impractical,True,2026-06-13T18:07:40
+tournament_engine,NHITS,challenger,deep_learning,False,deferred_dependency_blocked,True,2026-06-13T18:07:40
