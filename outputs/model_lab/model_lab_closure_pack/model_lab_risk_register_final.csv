@@ -1,0 +1,8 @@
+risk_id,risk_type,risk_level,model_name,risk_description,impact,decision_treatment,carry_forward_to_dashboard,carry_forward_to_future_work,created_timestamp
+R-001,model_behavior,high,FastNeuralAR_MLP,High MASE/RMSSE; possible scale or recursive collapse issue,Not champion eligible; future investigation required,carried_forward,True,True,2026-06-13T20:36:01
+R-002,deferred_model,medium,NBEATS,deferred_runtime_impractical,Not included in final tournament,documented_deferred,True,True,2026-06-13T20:36:01
+R-003,deferred_model,medium,NHITS,deferred_dependency_blocked,Not included in final tournament,documented_deferred,True,True,2026-06-13T20:36:01
+R-004,decision_condition,medium,ETS Explicit,Champion selected with conditions; confidence is medium,Closure pack and final audit must preserve caveats,selected_with_conditions,True,False,2026-06-13T20:36:01
+R-005,audit_condition,advisory,Audit #4,Approve with conditions,Conditions carried into tournament and closure,carried_forward,True,False,2026-06-13T20:36:01
+R-006,sanity_review,minor,5.30A,Tournament sanity advisories/minors,Non-blocking; document for final audit,carried_forward,True,False,2026-06-13T20:36:01
+R-007,manual_review,medium,FixedGrowth_6,Manual review required due to risk status,Not selected champion; documented condition,reviewed_not_selected,True,False,2026-06-13T20:36:01

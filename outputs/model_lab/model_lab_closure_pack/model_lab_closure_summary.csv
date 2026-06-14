@@ -1,0 +1,2 @@
+stage_id,stage_name,closure_status,champion_decision,selected_champion_model,selected_champion_origin,selected_champion_family,decision_confidence,conditions_present,ready_for_final_audit,ready_for_dashboard_handoff,created_timestamp
+05,Model Lab,completed_pending_final_audit,CHAMPION_SELECTED_WITH_CONDITIONS,ETS Explicit,challenger,statistical,medium,True,True,True,2026-06-13T20:36:01

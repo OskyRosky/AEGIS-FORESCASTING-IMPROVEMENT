@@ -1,0 +1,15 @@
+dashboard_section,artifact_path,artifact_type,recommended_use,required_for_mvp_dashboard,created_timestamp
+Executive Summary,outputs/model_lab/model_lab_closure_pack/model_lab_key_results.csv,csv,KPI summary,True,2026-06-13T20:36:01
+Model Universe,outputs/model_lab/model_lab_closure_pack/model_lab_final_model_universe.csv,csv,Final model status table,True,2026-06-13T20:36:01
+Champion Decision,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,csv,Champion decision summary,True,2026-06-13T20:36:01
+Tournament Standings,outputs/model_lab/tournament_engine/tournament_preliminary_standings.csv,csv,Preliminary standings visualization,True,2026-06-13T20:36:01
+Baseline vs Challenger Scorecard,outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,csv,Unified scorecard,True,2026-06-13T20:36:01
+Pairwise Evidence,outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,csv,Pairwise evidence heatmap/table,True,2026-06-13T20:36:01
+Risk Register,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,csv,Risk and conditions panel,True,2026-06-13T20:36:01
+Challenger Metrics,outputs/model_lab/challenger_metrics/challenger_metrics_by_model_diagnostic.csv,csv,Challenger diagnostics,True,2026-06-13T20:36:01
+Aggregation Summary,outputs/model_lab/challenger_aggregation_significance/challenger_aggregation_by_model.csv,csv,Challenger aggregation details,True,2026-06-13T20:36:01
+Audit Status,outputs/model_lab/audit_4/audit_4_summary.csv,csv,Audit #4 status,True,2026-06-13T20:36:01
+Audit Status,outputs/model_lab/tournament_sanity_review/tournament_sanity_summary.csv,csv,Tournament sanity status,True,2026-06-13T20:36:01
+Deferred Models,outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv,csv,Deferred model details,True,2026-06-13T20:36:01
+Methodology / Governance,outputs/model_lab/champion_decision/champion_decision_report.md,markdown,Decision governance narrative,True,2026-06-13T20:36:01
+Methodology / Governance,outputs/model_lab/champion_decision/champion_decision.csv,csv,Machine-readable champion decision,True,2026-06-13T20:36:01
