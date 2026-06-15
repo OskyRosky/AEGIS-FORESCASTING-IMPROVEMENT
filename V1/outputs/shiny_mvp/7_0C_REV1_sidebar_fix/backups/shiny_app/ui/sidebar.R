@@ -1,4 +1,4 @@
-# TESSERACT v2 | sidebar.R | Stage 07 left navigation definition
+# TESSERACT v2 | sidebar.R | Stage 07 navigation definition
 
 stage07_sections <- function() {
   list(
@@ -16,30 +16,5 @@ stage07_sections <- function() {
     list(id = "sources", title = "Source Artifacts", value = "sources"),
     list(id = "methodology", title = "Methodology / Metric Policy", value = "methodology"),
     list(id = "version", title = "Version Info", value = "version")
-  )
-}
-
-app_sidebar <- function() {
-  tags$aside(
-    class = "app-sidebar",
-    tags$div(
-      class = "sidebar-heading",
-      tags$div(class = "sidebar-kicker", "Stage 07"),
-      tags$div(class = "sidebar-title", "Dashboard Navigation")
-    ),
-    tags$nav(
-      class = "sidebar-nav",
-      lapply(
-        stage07_sections(),
-        function(section) {
-          tags$a(
-            href = "#",
-            class = paste("sidebar-link", if (identical(section$value, "cover")) "active" else ""),
-            `data-section` = section$value,
-            section$title
-          )
-        }
-      )
-    )
   )
 }

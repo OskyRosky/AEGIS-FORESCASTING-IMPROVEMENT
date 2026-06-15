@@ -24,7 +24,7 @@ planned_panel <- function(title) {
 }
 
 cover_landing_tab <- function() {
-  tabPanel(
+  nav_panel(
     "Cover / Landing",
     value = "cover",
     div(
@@ -86,7 +86,7 @@ cover_landing_tab <- function() {
 }
 
 version_info_tab <- function() {
-  tabPanel(
+  nav_panel(
     "Version Info",
     value = "version",
     div(
@@ -106,31 +106,21 @@ version_info_tab <- function() {
   )
 }
 
-stage07_tab_items <- function() {
+stage07_nav_items <- function() {
   list(
     cover_landing_tab(),
-    tabPanel("Executive Overview", value = "executive", planned_panel("Executive Overview")),
-    tabPanel("Champion Decision", value = "champion", planned_panel("Champion Decision")),
-    tabPanel("Champion Conditions", value = "conditions", planned_panel("Champion Conditions")),
-    tabPanel("Model Universe", value = "universe", planned_panel("Model Universe")),
-    tabPanel("Tournament Evidence", value = "tournament", planned_panel("Tournament Evidence")),
-    tabPanel("Pairwise Evidence", value = "pairwise", planned_panel("Pairwise Evidence")),
-    tabPanel("Risk Register", value = "risk", planned_panel("Risk Register")),
-    tabPanel("Deferred Models", value = "deferred", planned_panel("Deferred Models")),
-    tabPanel("Governance Actions", value = "actions", planned_panel("Governance Actions")),
-    tabPanel("Audit Trail", value = "audit", planned_panel("Audit Trail")),
-    tabPanel("Source Artifacts", value = "sources", planned_panel("Source Artifacts")),
-    tabPanel("Methodology / Metric Policy", value = "methodology", planned_panel("Methodology / Metric Policy")),
+    nav_panel("Executive Overview", value = "executive", planned_panel("Executive Overview")),
+    nav_panel("Champion Decision", value = "champion", planned_panel("Champion Decision")),
+    nav_panel("Champion Conditions", value = "conditions", planned_panel("Champion Conditions")),
+    nav_panel("Model Universe", value = "universe", planned_panel("Model Universe")),
+    nav_panel("Tournament Evidence", value = "tournament", planned_panel("Tournament Evidence")),
+    nav_panel("Pairwise Evidence", value = "pairwise", planned_panel("Pairwise Evidence")),
+    nav_panel("Risk Register", value = "risk", planned_panel("Risk Register")),
+    nav_panel("Deferred Models", value = "deferred", planned_panel("Deferred Models")),
+    nav_panel("Governance Actions", value = "actions", planned_panel("Governance Actions")),
+    nav_panel("Audit Trail", value = "audit", planned_panel("Audit Trail")),
+    nav_panel("Source Artifacts", value = "sources", planned_panel("Source Artifacts")),
+    nav_panel("Methodology / Metric Policy", value = "methodology", planned_panel("Methodology / Metric Policy")),
     version_info_tab()
-  )
-}
-
-stage07_tabset <- function() {
-  do.call(
-    tabsetPanel,
-    c(
-      list(id = "stage07_tabs", type = "hidden", selected = "cover"),
-      stage07_tab_items()
-    )
   )
 }
