@@ -1,0 +1,5 @@
+action_id,priority,target_file_or_area,action_type,description,rationale,requires_manual_review,recommended_before_stage_07,notes
+MA-001,low,outputs/model_lab and outputs/governance historical artifacts,leave_historical_artifact_unchanged,Leave historical artifacts unchanged even if old roots appear.,Audit/closure evidence should not be rewritten for path migration.,False,False,2 historical files detected.
+MA-002,medium,.venv,manual_review,Treat virtual environment as non-portable and recreate if needed.,Virtual environments often contain internal absolute paths.,True,True,Do not manually rewrite .venv files.
+MA-003,high,Stage 07 Shiny loaders,manual_review,"Before Stage 07, decide whether loaders derive root from V1 project path or use relative paths.",Prevents old container-root assumptions in new Shiny code.,True,True,Use outputs/governance/6_4 dashboard contract.
+MA-004,low,V1 workspace,no_action,No runtime or operational doc old-root actions detected.,Scanner found no blocking old-root references outside historical artifacts.,False,False,Proceed after audit review.
