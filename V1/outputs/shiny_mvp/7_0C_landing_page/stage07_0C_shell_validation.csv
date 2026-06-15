@@ -1,0 +1,18 @@
+check_name,status,details
+landing page exists,pass,Rendered landing page title checked.
+sidebar/navigation visible,pass,Required navigation labels checked.
+header visible,pass,Header branding/status checked.
+footer/version info visible,pass,Footer policy/version checked.
+champion language uses approved conditional wording,pass,Conditional champion wording checked.
+no visible AutoARIMA best candidate language,pass,Legacy candidate wording scan checked.
+no visible winner or absolute best language,pass,Prohibited winner/absolute-best wording checked.
+no visible sample data active language,pass,Sample-data wording checked.
+Shiny app launches,pass,Launch CSV row exists.
+HTTP status captured,pass,HTTP status: 200
+HTTP status is 200,pass,HTTP status: 200; fetch_error=
+no Stage 05 artifacts modified,pass,"7.0C wrote only shiny_app, scripts launcher, validator, and 7.0C outputs."
+no Stage 06 artifacts modified,pass,7.0C did not write outputs/governance.
+no Audit #6 artifacts modified,pass,7.0C did not write outputs/governance/audit_6.
+no MassiveForecasting-V3 files modified,pass,Reference project was not modified.
+no models/forecasts/metrics/tournament recomputed,pass,Server is visual shell only; no model or metric code invoked.
+ready for Oscar visual inspection,pass,URL: http://127.0.0.1:3838

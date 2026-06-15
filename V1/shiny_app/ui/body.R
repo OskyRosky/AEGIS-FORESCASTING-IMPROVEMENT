@@ -4,18 +4,23 @@ source("ui/tabs.R")
 source("ui/footer.R")
 
 app_ui <- function() {
-  page_navbar(
-    title = app_header_title(),
-    theme = app_theme,
-    navbar_options = navbar_options(bg = APP_COLORS$navbar, theme = "dark"),
-    fillable = FALSE,
-    header = tagList(
-      tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
-      tags$script(src = "custom.js")
-    ),
-    nav_spacer(),
-    run_context_badge(),
-    !!!stage07_nav_items(),
-    footer = app_footer()
+  do.call(
+    page_navbar,
+    c(
+      list(
+        title = app_header_title(),
+        theme = app_theme,
+        navbar_options = navbar_options(bg = APP_COLORS$navbar, theme = "dark"),
+        fillable = FALSE,
+        header = tagList(
+          tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
+          tags$script(src = "custom.js")
+        ),
+        nav_spacer(),
+        run_context_badge()
+      ),
+      stage07_nav_items(),
+      list(footer = app_footer())
+    )
   )
 }

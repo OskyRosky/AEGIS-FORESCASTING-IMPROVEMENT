@@ -1,5 +1,7 @@
 Param(
-    [int]$PreferredPort = 3838
+    [int]$PreferredPort = 3838,
+    [string]$LogDir = "",
+    [string]$LogPrefix = "baseline_shiny_runtime"
 )
 
 $ErrorActionPreference = "Stop"
@@ -7,9 +9,13 @@ $ErrorActionPreference = "Stop"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 $RscriptPath = "C:\Program Files\R\R-4.6.0\bin\x64\Rscript.exe"
 $HostName = "127.0.0.1"
-$OutputDir = Join-Path $ProjectRoot "outputs\shiny_mvp\7_0B_runtime_fix"
-$StdoutLog = Join-Path $OutputDir "baseline_shiny_runtime_stdout.log"
-$StderrLog = Join-Path $OutputDir "baseline_shiny_runtime_stderr.log"
+if ([string]::IsNullOrWhiteSpace($LogDir)) {
+    $OutputDir = Join-Path $ProjectRoot "outputs\shiny_mvp\7_0B_runtime_fix"
+} else {
+    $OutputDir = Join-Path $ProjectRoot $LogDir
+}
+$StdoutLog = Join-Path $OutputDir ("{0}_stdout.log" -f $LogPrefix)
+$StderrLog = Join-Path $OutputDir ("{0}_stderr.log" -f $LogPrefix)
 
 New-Item -ItemType Directory -Force $OutputDir | Out-Null
 

@@ -1,7 +1,4 @@
-# TESSERACT v2 | data_loader.R | legacy sample CSV loading
-if (isTRUE(getOption("tesseract.visual_shell_only", TRUE))) {
-  forecasts <- actuals <- metrics <- rankings <- run_meta <- recommendations <- NULL
-} else {
+# TESSERACT v2 | data_loader.R | sample CSV loading
 source("R/constants.R")
 source("R/helpers.R")
 source("R/plots.R")
@@ -27,4 +24,3 @@ metrics <- safe_read("metrics.csv")
 rankings <- safe_read("rankings.csv")
 run_meta <- safe_read("run_metadata.csv")
 recommendations <- safe_read("recommendations.csv")
-}
