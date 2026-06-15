@@ -1,1 +1,63 @@
-# TESSERACT v2 | custom.css | future custom styles
+/* TESSERACT v2 | governed Shiny shell styles */
+
+body {
+  background: #f5f7fb;
+}
+
+.navbar {
+  box-shadow: 0 2px 14px rgba(16, 42, 67, 0.18);
+}
+
+.governance-badge {
+  background: #dbeafe;
+  color: #1f3864;
+}
+
+.tess-shell {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.landing-hero {
+  background: linear-gradient(135deg, #102a43 0%, #1f3864 52%, #2e75b6 100%);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 34px;
+  box-shadow: 0 12px 28px rgba(16, 42, 67, 0.22);
+}
+
+.governance-card {
+  border: 1px solid #e6edf5;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16, 42, 67, 0.08);
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #edf2f7;
+  color: #1f3864;
+}
+
+.policy-list li {
+  margin-bottom: 6px;
+}
+
+.placeholder-panel {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 28px;
+}
+
+.app-footer {
+  border-top: 1px solid #e5eaf0;
+  color: #5d6d7e;
+  font-size: 12px;
+  padding: 16px 24px 22px;
+  margin-top: 24px;
+}

@@ -1,11 +1,7 @@
-# TESSERACT v2 | body.R | navbar page composition
-source("ui/tabs/overview_tab.R")
-source("ui/tabs/forecast_overlay_tab.R")
-source("ui/tabs/accuracy_tab.R")
-source("ui/tabs/models_tab.R")
-source("ui/tabs/backtesting_tab.R")
-source("ui/tabs/governance_tab.R")
-source("ui/tabs/settings_tab.R")
+# TESSERACT v2 | body.R | governed navbar page composition
+source("ui/sidebar.R")
+source("ui/tabs.R")
+source("ui/footer.R")
 
 app_ui <- function() {
   page_navbar(
@@ -19,11 +15,7 @@ app_ui <- function() {
     ),
     nav_spacer(),
     run_context_badge(),
-    overview_tab(),
-    forecast_overlay_tab(),
-    accuracy_tab(),
-    models_tab(),
-    backtesting_tab(),
-    governance_tab()
+    !!!stage07_nav_items(),
+    footer = app_footer()
   )
 }

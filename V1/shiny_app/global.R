@@ -1,3 +1,5 @@
-# TESSERACT v2 | global.R | shared startup sources
+# TESSERACT v2 | global.R | governed shared startup sources
 source("R/libraries.R")
-source("R/data_loader.R")
+source("R/constants.R")
+source("R/helpers.R")
+source("R/llm_client.R")
