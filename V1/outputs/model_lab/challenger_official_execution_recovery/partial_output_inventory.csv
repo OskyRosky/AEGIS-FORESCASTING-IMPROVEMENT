@@ -1,0 +1,13 @@
+source_file,model_name,rows_found,complete_model_output,included_in_final_output,excluded_reason,created_timestamp
+outputs\model_lab\challenger_official_execution\challenger_official_forecasts.csv,AutoARIMA,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\challenger_official_forecasts.csv,ETS Explicit,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\challenger_official_forecasts.csv,LightGBM,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\challenger_official_forecasts.csv,NBEATS,900,False,False,excluded_partial_deferred_runtime_impractical,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\challenger_official_forecasts.csv,Theta,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\challenger_official_forecasts.csv,XGBoost,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\_checkpoint_forecasts.csv,AutoARIMA,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\_checkpoint_forecasts.csv,ETS Explicit,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\_checkpoint_forecasts.csv,LightGBM,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\_checkpoint_forecasts.csv,NBEATS,960,False,False,excluded_partial_deferred_runtime_impractical,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\_checkpoint_forecasts.csv,Theta,13620,True,True,,2026-06-13T16:09:21
+outputs\model_lab\challenger_official_execution\_checkpoint_forecasts.csv,XGBoost,13620,True,True,,2026-06-13T16:09:21

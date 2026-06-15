@@ -1,0 +1,10 @@
+column_name,required,description
+run_id,True,Unique identifier for the official challenger execution run.
+model_name,True,Challenger model name exactly as registered.
+entity_key,True,Entity identifier for the forecasted series.
+window_id,True,Backtesting window identifier.
+forecast_date,True,Calendar date of the forecasted point.
+horizon_day,True,Forecast horizon day index within the window (1..30).
+forecast_value,True,Point forecast value (pre non-negative policy).
+execution_mode,True,Execution mode: must be 'official' in the execution block.
+created_timestamp,True,ISO timestamp when the forecast row was produced.

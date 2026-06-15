@@ -1,0 +1,16 @@
+model_name,model_origin,model_family,final_status,included_in_tournament,eligible_for_champion,selected_champion,deferred_reason,risk_flag,created_timestamp
+ARIMA_Fixed,baseline,statistical,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+ETS_Current,baseline,statistical,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+LinearRegression,baseline,machine_learning,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+FixedGrowth_1_5,baseline,growth_baseline,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+FixedGrowth_3,baseline,growth_baseline,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+FixedGrowth_4,baseline,growth_baseline,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+FixedGrowth_6,baseline,growth_baseline,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+AutoARIMA,challenger,statistical,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+Theta,challenger,statistical,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+ETS Explicit,challenger,statistical,selected_champion,True,True,True,,False,2026-06-13T20:36:01
+LightGBM,challenger,machine_learning,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+XGBoost,challenger,machine_learning,active_tournament_model,True,True,False,,False,2026-06-13T20:36:01
+FastNeuralAR_MLP,challenger,lightweight_neural,active_tournament_model,True,False,False,,True,2026-06-13T20:36:01
+NBEATS,challenger,deep_learning,deferred_runtime_impractical,False,False,False,deferred_runtime_impractical,True,2026-06-13T20:36:01
+NHITS,challenger,deep_learning,deferred_dependency_blocked,False,False,False,deferred_dependency_blocked,True,2026-06-13T20:36:01

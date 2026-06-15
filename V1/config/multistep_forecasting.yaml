@@ -1,0 +1,36 @@
+default_strategy: recursive
+
+strategies:
+  statistical_models:
+    strategy: native_multi_step
+    applies_to:
+      - ARIMA_Fixed
+      - ETS_Current
+      - ETS
+      - AutoARIMA
+      - Theta
+      - FixedGrowth_1_5
+      - FixedGrowth_3
+      - FixedGrowth_4
+      - FixedGrowth_6
+
+  linear_and_ml_models:
+    strategy: recursive
+    applies_to:
+      - LinearRegression
+      - LightGBM
+      - XGBoost
+    lag_update_policy: append_predictions_as_future_history
+    rolling_update_policy: recompute_from_available_history_and_predictions
+    allow_actuals_inside_forecast_horizon: false
+
+  deep_learning_models:
+    strategy: direct_multi_horizon
+    applies_to:
+      - NBEATS
+      - NHITS
+
+leakage_rules:
+  train_data_cutoff: train_end_date
+  test_actuals_allowed_only_for_evaluation: true
+  no_actual_values_allowed_during_prediction_horizon: true

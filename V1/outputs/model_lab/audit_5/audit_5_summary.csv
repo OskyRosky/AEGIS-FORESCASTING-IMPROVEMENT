@@ -1,0 +1,2 @@
+audit_id,audit_name,audit_status,stage_audited,champion_decision,selected_champion_model,closure_pack_complete,dashboard_handoff_ready,final_audit_verdict,blockers,major_findings,minor_findings,advisories,ready_to_close_model_lab,ready_for_next_stage,created_timestamp
+audit_5_model_lab_closure_dashboard_handoff,Audit #5 - Model Lab Closure / Dashboard Handoff Audit,completed,05 - Model Lab,CHAMPION_SELECTED_WITH_CONDITIONS,ETS Explicit,True,True,APPROVE_WITH_CONDITIONS_TO_DASHBOARD_HANDOFF,0,0,1,4,True,True,2026-06-14T12:00:00

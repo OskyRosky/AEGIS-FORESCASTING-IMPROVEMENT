@@ -1,0 +1,33 @@
+check_id,area,check_name,status,evidence,created_timestamp
+C-01,closure_pack_completeness,closure summary exists,PASS,model_lab_closure_summary.csv present and readable,2026-06-14T12:00:00
+C-02,closure_pack_completeness,closure summary has one row,PASS,single data row in model_lab_closure_summary.csv,2026-06-14T12:00:00
+C-03,closure_pack_completeness,closure status is completed_pending_final_audit,PASS,closure_status=completed_pending_final_audit,2026-06-14T12:00:00
+C-04,champion_decision_consistency,champion decision exists,PASS,champion_decision/champion_decision.csv present,2026-06-14T12:00:00
+C-05,champion_decision_consistency,champion decision is CHAMPION_SELECTED_WITH_CONDITIONS,PASS,decision=CHAMPION_SELECTED_WITH_CONDITIONS across all artifacts,2026-06-14T12:00:00
+C-06,champion_decision_consistency,selected champion is ETS Explicit,PASS,selected_champion_model=ETS Explicit,2026-06-14T12:00:00
+C-07,champion_decision_consistency,selected champion origin is challenger,PASS,selected_champion_origin=challenger,2026-06-14T12:00:00
+C-08,champion_decision_consistency,selected champion family is statistical,PASS,selected_champion_family=statistical,2026-06-14T12:00:00
+C-09,champion_decision_consistency,confidence is medium,PASS,decision_confidence=medium,2026-06-14T12:00:00
+C-10,champion_decision_consistency,champion conditions are documented,PASS,conditions field populated in champion_decision.csv and champion_summary.csv; conditions_present=True,2026-06-14T12:00:00
+C-11,model_universe_consistency,final model universe has 15 models,PASS,model_lab_final_model_universe.csv has 15 data rows,2026-06-14T12:00:00
+C-12,model_universe_consistency,final model universe has 7 baseline models,PASS,7 rows with model_origin=baseline,2026-06-14T12:00:00
+C-13,model_universe_consistency,final model universe has 6 final challengers,PASS,6 challenger rows with final_status=active_tournament_model / selected_champion,2026-06-14T12:00:00
+C-14,model_universe_consistency,final model universe has 2 deferred models,PASS,NBEATS and NHITS rows with deferred final_status,2026-06-14T12:00:00
+C-15,model_universe_consistency,FastNeuralAR_MLP is risk-flagged,PASS,FastNeuralAR_MLP risk_flag=True; eligible_for_champion=False,2026-06-14T12:00:00
+C-16,deferred_models,NBEATS is deferred_runtime_impractical,PASS,final_status/deferred_reason=deferred_runtime_impractical,2026-06-14T12:00:00
+C-17,deferred_models,NHITS is deferred_dependency_blocked,PASS,final_status/deferred_reason=deferred_dependency_blocked,2026-06-14T12:00:00
+C-18,risk_carryforward,risk register contains required carry-forward risks,PASS,risk_register_final.csv R-001..R-007 cover FastNeuralAR_MLP/NBEATS/NHITS/champion/Audit#4/5.30A/FixedGrowth_6,2026-06-14T12:00:00
+C-19,deferred_models,deferred models file contains NBEATS and NHITS,PASS,model_lab_deferred_models.csv lists both,2026-06-14T12:00:00
+C-20,dashboard_handoff,dashboard handoff manifest exists,PASS,model_lab_dashboard_handoff_manifest.csv present (14 rows),2026-06-14T12:00:00
+C-21,dashboard_handoff,dashboard handoff manifest has all required dashboard sections,PASS,12 distinct required sections all present,2026-06-14T12:00:00
+C-22,artifact_manifest,artifact manifest exists,PASS,model_lab_artifact_manifest.csv present (12 rows),2026-06-14T12:00:00
+C-23,executive_summary,executive summary exists,PASS,model_lab_executive_summary.md present and accurate,2026-06-14T12:00:00
+C-24,closure_pack_completeness,closure validation has no fail rows,PASS,model_lab_closure_validation.csv all 11 rows status=pass,2026-06-14T12:00:00
+C-25,champion_decision_consistency,champion decision validation has no fail rows,PASS,champion_decision_validation.csv all 10 rows status=pass,2026-06-14T12:00:00
+C-26,next_stage_readiness,tournament sanity has no blockers,PASS,tournament_sanity_summary.csv blockers=0 major_findings=0,2026-06-14T12:00:00
+C-27,next_stage_readiness,audit #4 has no blockers,PASS,audit_4_summary.csv blockers=0 major_findings=0,2026-06-14T12:00:00
+C-28,source_output_safety,Shiny untouched,PASS,shiny_app/ present and unmodified; closure_validation shiny_untouched=pass,2026-06-14T12:00:00
+C-29,source_output_safety,no source outputs modified,PASS,audit writes only under outputs/model_lab/audit_5,2026-06-14T12:00:00
+C-30,next_stage_readiness,ready_for_final_audit is true,PASS,closure_summary.csv ready_for_final_audit=True,2026-06-14T12:00:00
+C-31,next_stage_readiness,ready_for_dashboard_handoff is true,PASS,closure_summary.csv ready_for_dashboard_handoff=True,2026-06-14T12:00:00
+C-32,artifact_manifest,artifact manifest referenced files exist,WARNING,All referenced files exist on disk; however manifest marks model_lab_closure_summary.csv artifact_exists=False (stale self-reference) - see finding F-010,2026-06-14T12:00:00

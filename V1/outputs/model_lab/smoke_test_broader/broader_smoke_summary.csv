@@ -1,0 +1,2 @@
+run_id,entities_tested,windows_tested,models_tested,jobs_planned,jobs_executed,jobs_failed,forecast_rows,created_timestamp
+broader_smoke_20260611_101755,3,3,7,21,21,0,630,2026-06-11T10:17:55

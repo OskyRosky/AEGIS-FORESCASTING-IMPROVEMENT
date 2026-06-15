@@ -1,0 +1,7 @@
+run_id,model_name,execution_mode,entity_count,window_count,horizon_days,expected_forecast_rows,official_candidate,ready_for_official_execution,created_timestamp
+challenger_official_execution_prep,AutoARIMA,official,39,454,30,13620,True,True,2026-06-12T17:00:53
+challenger_official_execution_prep,Theta,official,39,454,30,13620,True,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ETS Explicit,official,39,454,30,13620,True,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LightGBM,official,39,454,30,13620,True,True,2026-06-12T17:00:53
+challenger_official_execution_prep,XGBoost,official,39,454,30,13620,True,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NBEATS,official,39,454,30,13620,True,True,2026-06-12T17:00:53

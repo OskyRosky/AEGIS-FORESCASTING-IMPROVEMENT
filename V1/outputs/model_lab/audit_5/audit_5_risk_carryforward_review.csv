@@ -1,0 +1,8 @@
+risk_type,model_name,risk_level,found_in_closure_pack,found_in_champion_decision,found_in_tournament_sanity,audit_status,notes,created_timestamp
+model_behavior_high_error,FastNeuralAR_MLP,high,True,True,True,PASS,Closure R-001; champion risk_review high rows; 5.30A TSR-003,2026-06-14T12:00:00
+deferred_runtime_impractical,NBEATS,medium,True,True,True,PASS,Closure R-002 + deferred_models; champion risk_review NBEATS; 5.30A TSR-004,2026-06-14T12:00:00
+deferred_dependency_blocked,NHITS,medium,True,True,True,PASS,Closure R-003 + deferred_models; champion risk_review NHITS; 5.30A TSR-005,2026-06-14T12:00:00
+manual_review,FixedGrowth_6,medium,True,True,True,PASS,Closure R-007; champion validation fixedgrowth6_manual_review_addressed=pass; standings risk_status=medium,2026-06-14T12:00:00
+decision_condition,ETS Explicit,medium,True,True,NOT_APPLICABLE,PASS,Closure R-004; champion decision CHAMPION_SELECTED_WITH_CONDITIONS; sanity precedes decision so N/A there,2026-06-14T12:00:00
+audit_4_conditions,Audit #4,advisory,True,True,True,PASS,Closure R-005; champion risk_review audit_4 carry-forward rows; sanity carried Audit#4 conditions,2026-06-14T12:00:00
+sanity_review_findings,5.30A,minor,True,True,True,PASS,Closure R-006; champion risk_review 5_30A TSR rows; tournament_sanity_summary 2 minor/2 advisory,2026-06-14T12:00:00
