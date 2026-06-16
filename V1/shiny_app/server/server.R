@@ -1,7 +1,6 @@
-# TESSERACT v2 | server.R | governed read-only server shell
+# TESSERACT v2 | server.R | minimal clean shell read-only server (Block 7.0C-RESET)
 
 app_server <- function(input, output, session) {
-  observeEvent(input$stage07_section, {
-    updateTabsetPanel(session, "stage07_tabs", selected = input$stage07_section)
-  }, ignoreInit = TRUE)
+  # Layout-only block: no reactive bindings, no data, no recompute.
+  invisible(NULL)
 }

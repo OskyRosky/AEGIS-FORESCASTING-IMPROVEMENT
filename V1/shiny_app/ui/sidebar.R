@@ -1,21 +1,57 @@
-# TESSERACT v2 | sidebar.R | Stage 07 left navigation definition
+# TESSERACT v2 | sidebar.R | collapsible grouped left navigation (Block 7.0C)
+# Structure appropriated from MassiveForecasting-V3/sider.R (menuItem/menuSubItem),
+# rebuilt in plain Shiny + CSS/JS (no shinydashboard dependency).
 
-stage07_sections <- function() {
+stage07_menu <- function() {
   list(
-    list(id = "cover", title = "Cover / Landing", value = "cover"),
-    list(id = "executive", title = "Executive Overview", value = "executive"),
-    list(id = "champion", title = "Champion Decision", value = "champion"),
-    list(id = "conditions", title = "Champion Conditions", value = "conditions"),
-    list(id = "universe", title = "Model Universe", value = "universe"),
-    list(id = "tournament", title = "Tournament Evidence", value = "tournament"),
-    list(id = "pairwise", title = "Pairwise Evidence", value = "pairwise"),
-    list(id = "risk", title = "Risk Register", value = "risk"),
-    list(id = "deferred", title = "Deferred Models", value = "deferred"),
-    list(id = "actions", title = "Governance Actions", value = "actions"),
-    list(id = "audit", title = "Audit Trail", value = "audit"),
-    list(id = "sources", title = "Source Artifacts", value = "sources"),
-    list(id = "methodology", title = "Methodology / Metric Policy", value = "methodology"),
-    list(id = "version", title = "Version Info", value = "version")
+    list(group = "Overview", icon = "gauge-high", expanded = TRUE, items = list(
+      list(value = "dashboard", title = "Dashboard",          icon = "table-columns", active = TRUE),
+      list(value = "executive", title = "Executive Overview", icon = "chart-line")
+    )),
+    list(group = "Champion & Models", icon = "trophy", items = list(
+      list(value = "champion",   title = "Champion",            icon = "trophy"),
+      list(value = "conditions", title = "Champion Conditions", icon = "list-check"),
+      list(value = "universe",   title = "Model Universe",      icon = "layer-group")
+    )),
+    list(group = "Evidence", icon = "clipboard-check", items = list(
+      list(value = "tournament", title = "Tournament Evidence", icon = "chart-column"),
+      list(value = "pairwise",   title = "Pairwise Evidence",   icon = "code-compare"),
+      list(value = "risk",       title = "Risk Register",       icon = "triangle-exclamation")
+    )),
+    list(group = "Governance", icon = "scale-balanced", items = list(
+      list(value = "actions", title = "Governance Actions", icon = "gavel"),
+      list(value = "audit",   title = "Audit Trail",        icon = "list-ol")
+    )),
+    list(group = "Reference", icon = "book", items = list(
+      list(value = "sources",     title = "Source Artifacts", icon = "folder-open"),
+      list(value = "methodology", title = "Methodology",      icon = "book-open"),
+      list(value = "version",     title = "Version Info",     icon = "circle-info")
+    ))
+  )
+}
+
+sidebar_group <- function(g) {
+  expanded <- isTRUE(g$expanded)
+  tags$div(
+    class = paste("sidebar-group", if (expanded) "expanded" else ""),
+    tags$button(
+      type = "button", class = "sidebar-group-header",
+      tags$span(class = "sidebar-group-icon", tess_icon(g$icon)),
+      tags$span(class = "sidebar-group-label", g$group),
+      tags$span(class = "sidebar-group-caret", tess_icon("chevron-down"))
+    ),
+    tags$div(
+      class = "sidebar-sub",
+      lapply(g$items, function(it) {
+        tags$a(
+          href = "#",
+          class = paste("sidebar-sublink", if (isTRUE(it$active)) "active" else ""),
+          `data-section` = it$value,
+          tags$span(class = "sidebar-sublink-icon", tess_icon(it$icon)),
+          tags$span(class = "sidebar-sublink-label", it$title)
+        )
+      })
+    )
   )
 }
 
@@ -23,23 +59,13 @@ app_sidebar <- function() {
   tags$aside(
     class = "app-sidebar",
     tags$div(
-      class = "sidebar-heading",
-      tags$div(class = "sidebar-kicker", "Stage 07"),
-      tags$div(class = "sidebar-title", "Dashboard Navigation")
+      class = "sidebar-brand",
+      tags$span(class = "sidebar-brand-dot"),
+      tags$span(class = "sidebar-brand-text", "Navigation")
     ),
     tags$nav(
       class = "sidebar-nav",
-      lapply(
-        stage07_sections(),
-        function(section) {
-          tags$a(
-            href = "#",
-            class = paste("sidebar-link", if (identical(section$value, "cover")) "active" else ""),
-            `data-section` = section$value,
-            section$title
-          )
-        }
-      )
+      lapply(stage07_menu(), sidebar_group)
     )
   )
 }

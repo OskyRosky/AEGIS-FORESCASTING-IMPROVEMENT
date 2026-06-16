@@ -1,15 +1,8 @@
-# TESSERACT v2 | footer.R | version and policy footer
+# TESSERACT v2 | footer.R | minimal clean shell footer (Block 7.0C-RESET)
 
 app_footer <- function() {
   tags$footer(
     class = "app-footer",
-    tags$div(
-      class = "d-flex flex-wrap gap-3 justify-content-between",
-      tags$span(tags$strong("Version:"), paste(APP_VERSION)),
-      tags$span(tags$strong("Stage:"), APP_STAGE),
-      tags$span(tags$strong("Policy:"), APP_POLICY),
-      tags$span(tags$strong("Active root:"), APP_VERSION),
-      tags$span(tags$strong("Audit state:"), "approved to Stage 07")
-    )
+    tags$span(class = "app-footer-text", "V1 \u00B7 Stage 07 \u00B7 Read-only dashboard")
   )
 }
