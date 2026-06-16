@@ -83,7 +83,7 @@
     // 4b) Section guide open (central header button) -> show active section's guide
     if (closest(target, "#hdr-guide-btn")) {
       var activeSec = document.querySelector(".content-section.is-active");
-      var secName = activeSec ? activeSec.getAttribute("data-section") : "dashboard";
+      var secName = activeSec ? activeSec.getAttribute("data-section") : "home";
       var guideOverlay = document.getElementById("tess-guide-overlay");
       if (!guideOverlay) return;
       var titleEl = document.getElementById("tess-guide-title-text");
@@ -103,7 +103,7 @@
       if (headIcon && headSrc) headIcon.innerHTML = headSrc.innerHTML;
       // Fallback to the dashboard guide if no section is active yet
       if (!matched) {
-        var first = guideOverlay.querySelector('.guide-entry[data-guide="dashboard"]');
+        var first = guideOverlay.querySelector('.guide-entry[data-guide="home"]');
         if (first) {
           first.classList.add("is-shown");
           if (titleEl) titleEl.textContent = first.getAttribute("data-title");
@@ -133,7 +133,7 @@
   // Initialize the central guide button from the section active on load.
   function initGuideButton() {
     var active = document.querySelector(".content-section.is-active");
-    updateGuideButton(active ? active.getAttribute("data-section") : "dashboard");
+    updateGuideButton(active ? active.getAttribute("data-section") : "home");
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initGuideButton);

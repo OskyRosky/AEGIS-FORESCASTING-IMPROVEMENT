@@ -86,35 +86,46 @@ controls_preview <- function() {
   )
 }
 
+# Planned (not-yet-bound) placeholder block, used for sections whose governed
+# artifact does not exist yet (TTL / Downloads).
+planned_card <- function(title, detail) {
+  tags$div(
+    class = "shell-card",
+    tags$span(class = "pill pill-amber", "Planned"),
+    tags$h3(class = "shell-card-title", title),
+    tags$p(class = "shell-card-detail", detail)
+  )
+}
+
 # ---------------------------------------------------------------------------
-# Sections
+# Sections (PROJECT / FORECASTING / MODELS / GOVERNANCE / REFERENCE)
 # ---------------------------------------------------------------------------
-section_dashboard <- function() {
+section_home <- function() {
   panel(
-    "dashboard", active = TRUE,
-    section_head("TESSERACT v2 Dashboard",
-                 "Forecast Improvement Platform \u2014 Stage 07 Shiny MVP"),
+    "home", active = TRUE,
+    section_head("Project Home",
+                 "TESSERACT v2 \u2014 Forecast Improvement Platform (read-only governed dashboard)."),
     card_grid(
-      shell_card("Layout ready", "Shell initialized",
-                 "Header + collapsible sidebar + body structure initialized."),
-      shell_card("Read-only mode", "No recompute",
-                 "No model rerun, no forecast recomputation, no metric recalculation."),
-      shell_card("Next step", "Populate further",
-                 "Sections are scaffolded and will be bound to governed artifacts block by block.")
+      shell_card("Purpose", "Governed review",
+                 "Present the Model Lab outcome \u2014 champion, evidence and governance \u2014 from governed artifacts only."),
+      shell_card("Scope", "Stage 05 \u2192 dashboard",
+                 "Model Lab is closed; this MVP is the governed hand-off surface (no recompute)."),
+      shell_card("Goal #3", "Codebase ownership",
+                 "Supports deeper ownership of the forecast generation codebase and a documented improvement.")
     ),
-    tags$h3(class = "section-block-title", "Platform map"),
+    tags$h3(class = "section-block-title", "Dashboard map"),
     card_grid(
-      shell_card("Overview", "Executive view", "Headline status and KPIs (placeholders)."),
-      shell_card("Champion & Models", "Decision & universe", "Governed champion and model universe."),
-      shell_card("Evidence", "Tournament & risk", "Tournament, pairwise and risk register."),
-      shell_card("Governance", "Actions & audit", "Governance actions and audit trail.")
+      shell_card("Forecasting", "Explorer / Accuracy / TTL", "Series exploration and official MASE/RMSSE accuracy."),
+      shell_card("Models", "Universe / Tournament / Champion / Comparison", "Model universe, standings, champion and pairwise evidence."),
+      shell_card("Governance", "Conditions / Risks / Audit", "Champion conditions, risk register and audit trail."),
+      shell_card("Reference", "Artifacts / Methodology / Version", "Traceability, methodology and build metadata.")
     )
   )
 }
 
-section_executive <- function() {
+section_overview <- function() {
   panel(
-    "executive",
+    "overview",
     section_head("Executive Overview",
                  "Headline status of the forecast improvement review (read-only)."),
     card_grid(
@@ -131,10 +142,76 @@ section_executive <- function() {
   )
 }
 
+section_explorer <- function() {
+  panel(
+    "explorer",
+    section_head("Forecast Explorer",
+                 "Actual vs baseline vs challenger forecast curves (placeholder \u2014 charting block)."),
+    card_grid(
+      shell_card("Series", "Actual vs forecast", "Per-entity actual and forecast curves will be charted here."),
+      shell_card("Filters", "Entity / model / window", "Read-only selectors for entity, model and backtest window."),
+      shell_card("Source", "Governed forecasts", "Bound to processed forecasts/actuals in a later block.")
+    ),
+    tags$div(style = "margin-top:18px;", controls_preview())
+  )
+}
+
+section_accuracy <- function() {
+  panel(
+    "accuracy",
+    section_head("Accuracy Overview",
+                 "Official MASE / RMSSE plus diagnostic metrics by model (placeholder)."),
+    card_grid(
+      shell_card("Primary", "MASE / RMSSE", "Absolute benchmark metric (MASE) with RMSSE guardrail."),
+      shell_card("Diagnostics", "wMAPE / SMAPE / bias", "Supporting diagnostics \u2014 never the primary score."),
+      shell_card("Granularity", "Model / entity", "Errors broken down by model and entity in a later block.")
+    )
+  )
+}
+
+section_ttl <- function() {
+  panel(
+    "ttl",
+    section_head("TTL / Capacity View",
+                 "Months-to-Live / capacity perspective \u2014 pending a governed artifact."),
+    card_grid(
+      planned_card("TTL view", "No governed TTL/capacity artifact exists yet; this section stays Planned until one is produced.")
+    )
+  )
+}
+
+section_universe <- function() {
+  panel(
+    "universe",
+    section_head("Model Universe",
+                 "Baseline, challenger and deferred models with status and eligibility (placeholder)."),
+    info_list(
+      info_row("Baselines", "7 governed baseline models in the tournament universe."),
+      info_row("Challengers", "6 audited challengers competing in the tournament."),
+      info_row("Deferred", "NBEATS (runtime) and NHITS (dependency) excluded from the tournament."),
+      info_row("Status", "Placeholders pending artifact binding.")
+    ),
+    tags$div(style = "margin-top:18px;", controls_preview())
+  )
+}
+
+section_tournament <- function() {
+  panel(
+    "tournament",
+    section_head("Tournament Standings",
+                 "Model standings ranked by official MASE / RMSSE (placeholder)."),
+    card_grid(
+      shell_card("Protocol", "Rolling-origin", "Backtesting protocol used during the governed review."),
+      shell_card("Ranking", "Pending binding", "Standings table will be bound to governed tournament metrics."),
+      shell_card("Metric policy", "MASE primary", "MASE primary, RMSSE guardrail per benchmark semantics.")
+    )
+  )
+}
+
 section_champion <- function() {
   panel(
     "champion",
-    section_head("Champion", "Governed champion decision (read-only display)."),
+    section_head("Champion Decision", "Governed champion decision (read-only display)."),
     card_grid(
       shell_card("Decision", APP_CHAMPION,
                  "Selected champion under governance conditions; not an unconditional selection."),
@@ -144,6 +221,19 @@ section_champion <- function() {
                  "Champion is displayed from governed artifacts; nothing is recalculated here.")
     ),
     tags$div(style = "margin-top:18px;", controls_preview())
+  )
+}
+
+section_comparison <- function() {
+  panel(
+    "comparison",
+    section_head("Model Comparison Evidence",
+                 "Model-vs-model scorecard and pairwise statistical support (placeholder)."),
+    card_grid(
+      shell_card("Scorecard", "Pending binding", "Unified model scorecard will be bound to governed artifacts."),
+      shell_card("Pairwise", "Head-to-head", "Pairwise deltas with bootstrap CI and adjusted p-values."),
+      shell_card("Support", "Significance", "Comparison status: supported difference vs inconclusive.")
+    )
   )
 }
 
@@ -161,68 +251,17 @@ section_conditions <- function() {
   )
 }
 
-section_universe <- function() {
+section_risks <- function() {
   panel(
-    "universe",
-    section_head("Model Universe",
-                 "Families considered in the governed review (read-only)."),
-    info_list(
-      info_row("ETS family", "Exponential smoothing \u2014 governed champion family."),
-      info_row("ARIMA family", "Auto-regressive integrated moving average."),
-      info_row("Seasonal naive", "Seasonal baseline reference."),
-      info_row("TSLM", "Time-series linear model with trend/seasonality.")
-    ),
-    tags$div(style = "margin-top:18px;", controls_preview())
-  )
-}
-
-section_tournament <- function() {
-  panel(
-    "tournament",
-    section_head("Tournament Evidence",
-                 "Backtesting / ranking evidence summary (placeholders)."),
-    card_grid(
-      shell_card("Protocol", "Rolling-origin", "Backtesting protocol used during the governed review."),
-      shell_card("Ranking", "Pending binding", "Model ranking table will be bound to governed metrics."),
-      shell_card("Metric policy", "Governed", "Metric definitions follow the Stage 07 metric policy.")
-    )
-  )
-}
-
-section_pairwise <- function() {
-  panel(
-    "pairwise",
-    section_head("Pairwise Evidence",
-                 "Head-to-head model comparisons (placeholder)."),
-    shell_card("Pairwise comparisons", "Pending binding",
-               "Pairwise comparison evidence will be bound to governed artifacts in a later block.")
-  )
-}
-
-section_risk <- function() {
-  panel(
-    "risk",
+    "risks",
     section_head("Risk Register",
-                 "Risks tracked for the forecast improvement review."),
+                 "Open risks and deferred models tracked for the review (placeholder)."),
     info_list(
-      info_row("R-01", "Seasonal drift in upcoming periods \u2014 monitor."),
-      info_row("R-02", "Structural break sensitivity \u2014 contingency model retained."),
-      info_row("R-03", "Data latency at month boundaries \u2014 governed ingestion."),
+      info_row("FastNeuralAR_MLP", "High-risk MASE/RMSSE behaviour \u2014 not champion eligible."),
+      info_row("NBEATS", "Deferred \u2014 runtime impractical for the MVP."),
+      info_row("NHITS", "Deferred \u2014 dependency blocked (Python 3.14)."),
+      info_row("FixedGrowth_6", "Manual review condition due to risk status."),
       info_row("Status", "Placeholders pending artifact binding.")
-    )
-  )
-}
-
-section_actions <- function() {
-  panel(
-    "actions",
-    section_head("Governance Actions",
-                 "Decisions and actions recorded by governance."),
-    info_list(
-      info_row("Action", "Approved to Stage 07 Shiny MVP."),
-      info_row("Conditions", "Champion selected with conditions."),
-      info_row("Owner", "Governance board."),
-      info_row("Next", "Bind cards/tables to governed artifacts.")
     )
   )
 }
@@ -241,15 +280,15 @@ section_audit <- function() {
   )
 }
 
-section_sources <- function() {
+section_artifacts <- function() {
   panel(
-    "sources",
+    "artifacts",
     section_head("Source Artifacts",
-                 "Governed artifacts that will feed the dashboard."),
+                 "Governed artifacts that feed the dashboard (placeholder)."),
     info_list(
-      info_row("outputs/governance", "Governance decisions and audit records."),
-      info_row("outputs/evaluation", "Evaluation and backtesting outputs."),
-      info_row("outputs/model_lab", "Model lab results."),
+      info_row("model_lab closure pack", "Key results, model universe, champion summary, risk register."),
+      info_row("tournament_engine", "Standings, scorecard and pairwise evidence."),
+      info_row("challenger_metrics", "Diagnostic metrics by model."),
       info_row("config", "Governed YAML policies (read-only).")
     )
   )
@@ -259,11 +298,23 @@ section_methodology <- function() {
   panel(
     "methodology",
     section_head("Methodology",
-                 "Metric policy and review methodology (read-only)."),
+                 "Benchmark semantics and metric policy (read-only)."),
     card_grid(
-      shell_card("Backtesting", "Rolling-origin", "Out-of-sample evaluation across origins."),
-      shell_card("Metrics", "Governed definitions", "Metrics follow the Stage 07 scoring policy."),
-      shell_card("Selection", "With conditions", "Champion selection is governed and conditional.")
+      shell_card("Primary metric", "MASE", "Absolute benchmark score; cohort-stable, naive lag-1 denominator on training."),
+      shell_card("Guardrail", "RMSSE", "Severe-degradation guardrail alongside the primary metric."),
+      shell_card("Aggregation", "Median of medians", "Robust window \u2192 entity \u2192 global aggregation."),
+      shell_card("Significance", "Bootstrap / sign-test", "Pairwise support with adjusted p-values.")
+    )
+  )
+}
+
+section_downloads <- function() {
+  panel(
+    "downloads",
+    section_head("Downloads Center",
+                 "General and per-section artifact downloads \u2014 pending a governed export."),
+    card_grid(
+      planned_card("Downloads", "Download handlers will be wired to governed closure-pack artifacts in a later block.")
     )
   )
 }
@@ -287,18 +338,21 @@ section_version <- function() {
 app_sections <- function() {
   tags$div(
     class = "content-inner",
-    section_dashboard(),
-    section_executive(),
-    section_champion(),
-    section_conditions(),
+    section_home(),
+    section_overview(),
+    section_explorer(),
+    section_accuracy(),
+    section_ttl(),
     section_universe(),
     section_tournament(),
-    section_pairwise(),
-    section_risk(),
-    section_actions(),
+    section_champion(),
+    section_comparison(),
+    section_conditions(),
+    section_risks(),
     section_audit(),
-    section_sources(),
+    section_artifacts(),
     section_methodology(),
+    section_downloads(),
     section_version()
   )
 }

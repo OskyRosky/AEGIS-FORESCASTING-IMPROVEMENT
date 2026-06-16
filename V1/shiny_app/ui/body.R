@@ -56,7 +56,7 @@ tess_guide_overlay <- function() {
         tags$h2(
           tags$span(class = "tess-guide-head-icon", id = "tess-guide-head-icon",
                     tess_icon("table-columns")),
-          tags$span(id = "tess-guide-title-text", "Dashboard")
+          tags$span(id = "tess-guide-title-text", "Project Home")
         ),
         tags$button(id = "tess-guide-close", class = "tess-overlay-close",
                     type = "button", "\u00D7")
@@ -65,18 +65,18 @@ tess_guide_overlay <- function() {
         class = "tess-overlay-body tess-guide-body",
 
         guide_entry(
-          "dashboard", "Dashboard",
-          "This is the landing page of the dashboard. It gives an overall view of the forecast improvement platform status (Stage 07) and a map of everything you will find inside.",
+          "home", "Project Home",
+          "This is the landing page of the dashboard. It states the purpose, scope and how the platform relates to the codebase-ownership goal (Goal #3).",
           list(
-            "Status cards: confirm the dashboard is initialized and running in read-only mode.",
-            "Platform map: summarizes the four main blocks (Overview, Champion & Models, Evidence and Governance).",
+            "Purpose / Scope / Goal #3 cards summarize what the dashboard is for.",
+            "Dashboard map: the four working areas (Forecasting, Models, Governance, Reference).",
             "Use the left sidebar to navigate; collapse it with the \u2630 button and hover an icon to reveal its subsections."
           ),
           "Read-only mode: no models, forecasts or metrics are recomputed."
         ),
 
         guide_entry(
-          "executive", "Executive Overview",
+          "overview", "Executive Overview",
           "Shows the high-level status of the forecast improvement review, designed for a quick read by decision makers.",
           list(
             "Key indicators (KPIs): governance state, current champion, decision confidence and active version.",
@@ -87,13 +87,73 @@ tess_guide_overlay <- function() {
         ),
 
         guide_entry(
-          "champion", "Champion",
+          "explorer", "Forecast Explorer",
+          "Lets you explore forecast curves: actual versus baseline versus challenger models, filtered by entity, model and window.",
+          list(
+            "Series: actual and forecast curves per entity.",
+            "Filters: entity, model and backtest window (read-only).",
+            "Charting and data binding arrive in a later block."
+          ),
+          "Charting block: bound to governed forecasts/actuals; nothing is recomputed."
+        ),
+
+        guide_entry(
+          "accuracy", "Accuracy Overview",
+          "Presents the official accuracy metrics by model, with MASE as the primary score and RMSSE as guardrail.",
+          list(
+            "Primary: MASE (absolute benchmark) with RMSSE guardrail.",
+            "Diagnostics: wMAPE, SMAPE and bias \u2014 supporting only, never the primary score.",
+            "Granularity: errors by model and entity."
+          )
+        ),
+
+        guide_entry(
+          "ttl", "TTL / Capacity View",
+          "A Months-to-Live / capacity perspective. It stays Planned until a governed TTL/capacity artifact exists.",
+          list(
+            "No governed TTL artifact is available yet.",
+            "The section is intentionally marked Planned to avoid showing non-governed data."
+          )
+        ),
+
+        guide_entry(
+          "universe", "Model Universe",
+          "Lists the full model universe: baseline, challenger and deferred models, with status, family and eligibility.",
+          list(
+            "7 baseline models and 6 audited challengers in the tournament.",
+            "NBEATS and NHITS are deferred (runtime / dependency).",
+            "Includes a controls preview (read-only)."
+          )
+        ),
+
+        guide_entry(
+          "tournament", "Tournament Standings",
+          "Summarizes the tournament standings ranked by the official MASE / RMSSE metrics.",
+          list(
+            "Protocol: rolling-origin validation.",
+            "Ranking: standings table bound to governed tournament metrics.",
+            "Metric policy: MASE primary, RMSSE guardrail."
+          )
+        ),
+
+        guide_entry(
+          "champion", "Champion Decision",
           "Presents the champion model selected under governance: the central decision of the review.",
           list(
             "Decision: the selected champion model (a conditional, not unconditional, selection).",
             "Confidence: the confidence level recorded by governance.",
             "Policy: the champion is shown from governed artifacts, with no recomputation.",
             "The controls preview (horizon, model family) is illustrative only and is disabled."
+          )
+        ),
+
+        guide_entry(
+          "comparison", "Model Comparison Evidence",
+          "Shows model-versus-model comparison: scorecard and pairwise statistical support.",
+          list(
+            "Scorecard: unified per-model metrics.",
+            "Pairwise: head-to-head deltas with bootstrap CI and adjusted p-values.",
+            "Support: comparison status (supported difference vs inconclusive)."
           )
         ),
 
@@ -107,78 +167,49 @@ tess_guide_overlay <- function() {
         ),
 
         guide_entry(
-          "universe", "Model Universe",
-          "Lists the model families considered in the governed review, giving context on the alternatives evaluated.",
+          "risks", "Risk Register",
+          "Captures the open risks and deferred models identified for the review and their tracking.",
           list(
-            "ETS: exponential smoothing \u2014 the champion family.",
-            "ARIMA, Seasonal naive and TSLM: reference and comparison alternatives.",
-            "Includes a controls preview (read-only)."
-          )
-        ),
-
-        guide_entry(
-          "tournament", "Tournament Evidence",
-          "Summarizes the backtesting and ranking evidence that supports the champion selection.",
-          list(
-            "Protocol: rolling-origin validation.",
-            "Ranking: the ranking table will be bound to governed metrics.",
-            "Metric policy: definitions follow the Stage 07 policy."
-          )
-        ),
-
-        guide_entry(
-          "pairwise", "Pairwise Evidence",
-          "Shows head-to-head comparisons between models, to understand their relative strengths.",
-          list(
-            "Direct comparisons between pairs of models.",
-            "Evidence will be bound to governed artifacts in a later block."
-          )
-        ),
-
-        guide_entry(
-          "risk", "Risk Register",
-          "Captures the risks identified for the forecast improvement review and their tracking.",
-          list(
-            "Each risk (R-01, R-02, R-03) describes a threat and its mitigation.",
-            "Covers seasonal drift, structural-break sensitivity and data latency.",
-            "The status reflects tracking under governance."
-          )
-        ),
-
-        guide_entry(
-          "actions", "Governance Actions",
-          "Records the decisions and actions taken by the governance board.",
-          list(
-            "Approved action, associated conditions and owner.",
-            "Next steps defined by governance."
+            "FastNeuralAR_MLP: high-risk behaviour, not champion eligible.",
+            "NBEATS / NHITS: deferred for runtime / dependency reasons.",
+            "FixedGrowth_6: manual review condition."
           )
         ),
 
         guide_entry(
           "audit", "Audit Trail",
-          "Provides the chronological record of governed checkpoints, for traceability.",
+          "Provides the chronological record of governed checkpoints and audits, for traceability.",
           list(
-            "Checkpoint, stage, version and active policy.",
+            "Audit chain, sanity checks and decisions.",
             "Lets you verify the approved status of the review."
           )
         ),
 
         guide_entry(
-          "sources", "Source Artifacts",
+          "artifacts", "Source Artifacts",
           "Indicates the governed artifacts that feed the dashboard, giving transparency on the data origin.",
           list(
-            "outputs/governance, outputs/evaluation and outputs/model_lab: governed outputs.",
+            "model_lab closure pack, tournament_engine and challenger_metrics outputs.",
             "config: governed YAML policies (read-only)."
           )
         ),
 
         guide_entry(
           "methodology", "Methodology",
-          "Explains the review methodology and the metric policy applied.",
+          "Explains the benchmark semantics and the metric policy applied.",
           list(
-            "Rolling-origin backtesting for out-of-sample evaluation.",
-            "Metrics with governed definitions (Stage 07 scoring policy).",
-            "Governed and conditional champion selection."
+            "MASE as primary absolute benchmark; RMSSE as guardrail.",
+            "Robust median-of-medians aggregation (window \u2192 entity \u2192 global).",
+            "Pairwise significance with bootstrap and adjusted p-values."
+          )
+        ),
+
+        guide_entry(
+          "downloads", "Downloads Center",
+          "A general and per-section downloads center. It stays Planned until a governed export is wired.",
+          list(
+            "Download handlers will target governed closure-pack artifacts.",
+            "The section is marked Planned for now."
           )
         ),
 

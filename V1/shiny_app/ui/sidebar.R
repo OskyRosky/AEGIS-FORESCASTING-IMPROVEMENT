@@ -4,28 +4,31 @@
 
 stage07_menu <- function() {
   list(
-    list(group = "Overview", icon = "gauge-high", expanded = TRUE, items = list(
-      list(value = "dashboard", title = "Dashboard",          icon = "table-columns", active = TRUE),
-      list(value = "executive", title = "Executive Overview", icon = "chart-line")
+    list(group = "Project", icon = "house", expanded = TRUE, items = list(
+      list(value = "home",     label = "Home",     title = "Project Home",       icon = "house", active = TRUE),
+      list(value = "overview", label = "Overview", title = "Executive Overview", icon = "gauge-high")
     )),
-    list(group = "Champion & Models", icon = "trophy", items = list(
-      list(value = "champion",   title = "Champion",            icon = "trophy"),
-      list(value = "conditions", title = "Champion Conditions", icon = "list-check"),
-      list(value = "universe",   title = "Model Universe",      icon = "layer-group")
+    list(group = "Forecasting", icon = "chart-line", items = list(
+      list(value = "explorer", label = "Explorer", title = "Forecast Explorer",  icon = "chart-line"),
+      list(value = "accuracy", label = "Accuracy", title = "Accuracy Overview",  icon = "bullseye"),
+      list(value = "ttl",      label = "TTL",      title = "TTL / Capacity View", icon = "hourglass-half", planned = TRUE)
     )),
-    list(group = "Evidence", icon = "clipboard-check", items = list(
-      list(value = "tournament", title = "Tournament Evidence", icon = "chart-column"),
-      list(value = "pairwise",   title = "Pairwise Evidence",   icon = "code-compare"),
-      list(value = "risk",       title = "Risk Register",       icon = "triangle-exclamation")
+    list(group = "Models", icon = "trophy", items = list(
+      list(value = "universe",   label = "Universe",   title = "Model Universe",            icon = "layer-group"),
+      list(value = "tournament", label = "Tournament", title = "Tournament Standings",      icon = "chart-column"),
+      list(value = "champion",   label = "Champion",   title = "Champion Decision",         icon = "trophy"),
+      list(value = "comparison", label = "Comparison", title = "Model Comparison Evidence", icon = "code-compare")
     )),
     list(group = "Governance", icon = "scale-balanced", items = list(
-      list(value = "actions", title = "Governance Actions", icon = "gavel"),
-      list(value = "audit",   title = "Audit Trail",        icon = "list-ol")
+      list(value = "conditions", label = "Conditions", title = "Champion Conditions", icon = "list-check"),
+      list(value = "risks",      label = "Risks",      title = "Risk Register",       icon = "triangle-exclamation"),
+      list(value = "audit",      label = "Audit",      title = "Audit Trail",         icon = "list-ol")
     )),
     list(group = "Reference", icon = "book", items = list(
-      list(value = "sources",     title = "Source Artifacts", icon = "folder-open"),
-      list(value = "methodology", title = "Methodology",      icon = "book-open"),
-      list(value = "version",     title = "Version Info",     icon = "circle-info")
+      list(value = "artifacts",   label = "Artifacts",   title = "Source Artifacts", icon = "folder-open"),
+      list(value = "methodology", label = "Methodology", title = "Methodology",      icon = "book-open"),
+      list(value = "downloads",   label = "Downloads",   title = "Downloads Center", icon = "download", planned = TRUE),
+      list(value = "version",     label = "Version",     title = "Version Info",     icon = "circle-info")
     ))
   )
 }
@@ -45,10 +48,12 @@ sidebar_group <- function(g) {
       lapply(g$items, function(it) {
         tags$a(
           href = "#",
-          class = paste("sidebar-sublink", if (isTRUE(it$active)) "active" else ""),
+          class = paste("sidebar-sublink",
+                        if (isTRUE(it$active)) "active" else "",
+                        if (isTRUE(it$planned)) "is-planned" else ""),
           `data-section` = it$value, title = it$title,
           tags$span(class = "sidebar-sublink-icon", tess_icon(it$icon)),
-          tags$span(class = "sidebar-sublink-label", it$title)
+          tags$span(class = "sidebar-sublink-label", it$label)
         )
       })
     )
