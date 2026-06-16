@@ -3,7 +3,3 @@ source("R/libraries.R")
 source("R/constants.R")
 source("R/helpers.R")
 source("R/llm_client.R")
-
-# Block 7.0E | governed, read-only data loader (no recompute, never stops app)
-source("R/data_loader.R")
-tess_init_governed_loader()

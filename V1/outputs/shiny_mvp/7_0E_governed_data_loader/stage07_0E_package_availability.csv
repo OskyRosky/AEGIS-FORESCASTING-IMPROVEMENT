@@ -1,0 +1,8 @@
+"package_name","available","planned_usage","fallback_strategy"
+"highcharter",FALSE,"Primary interactive charts","Fallback to plotly (installed) or static placeholder"
+"reactable",FALSE,"Styled interactive tables","Fallback to DT (installed) or styled HTML/CSS table"
+"DT",TRUE,"Export / search-heavy tables","Skip export/search-only tables if missing"
+"plotly",TRUE,"Chart fallback when highcharter absent","Static placeholder if also missing"
+"shiny",TRUE,"App runtime","Hard requirement - report blocking issue if missing"
+"bslib",TRUE,"Theme / layout","Report blocking issue if missing"
+"htmltools",TRUE,"HTML tag building","Report blocking issue if missing"

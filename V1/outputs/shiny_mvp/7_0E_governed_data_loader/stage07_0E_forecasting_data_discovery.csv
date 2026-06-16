@@ -1,0 +1,6 @@
+"artifact_key","rel_path","presence","rows","cols"
+"forecasts","data/processed/forecasts.csv","available",65095,9
+"actuals","data/processed/actuals.csv","available",84537,7
+"forecast_comparison","data/processed/forecast_comparison.csv","available",0,11
+"entities","data/processed/entities.csv","available",45,8
+"run_metadata","data/processed/run_metadata.csv","available",1,12
