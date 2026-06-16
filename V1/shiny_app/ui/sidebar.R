@@ -35,7 +35,7 @@ sidebar_group <- function(g) {
   tags$div(
     class = paste("sidebar-group", if (expanded) "expanded" else ""),
     tags$button(
-      type = "button", class = "sidebar-group-header",
+      type = "button", class = "sidebar-group-header", title = g$group,
       tags$span(class = "sidebar-group-icon", tess_icon(g$icon)),
       tags$span(class = "sidebar-group-label", g$group),
       tags$span(class = "sidebar-group-caret", tess_icon("chevron-down"))
@@ -46,7 +46,7 @@ sidebar_group <- function(g) {
         tags$a(
           href = "#",
           class = paste("sidebar-sublink", if (isTRUE(it$active)) "active" else ""),
-          `data-section` = it$value,
+          `data-section` = it$value, title = it$title,
           tags$span(class = "sidebar-sublink-icon", tess_icon(it$icon)),
           tags$span(class = "sidebar-sublink-label", it$title)
         )

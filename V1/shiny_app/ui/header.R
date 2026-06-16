@@ -12,19 +12,31 @@ app_header <- function() {
   tags$header(
     class = "app-header",
     tags$div(
-      class = "app-header-brand",
-      tags$span(class = "app-header-logo", tess_icon("chart-line")),
-      tags$span(class = "app-header-title", "TESSERACT v2"),
-      tags$span(class = "app-header-subtitle", "Forecast Improvement Platform")
+      class = "app-header-left",
+      tags$button(
+        id = "hdr-collapse-btn", class = "hdr-tool-btn hdr-collapse-btn",
+        type = "button", title = "Collapse / expand sidebar",
+        `aria-label` = "Toggle sidebar", tess_icon("bars")
+      ),
+      tags$div(
+        class = "app-header-brand",
+        tags$span(class = "app-header-logo", tess_icon("chart-line")),
+        tags$span(class = "app-header-title", "TESSERACT v2"),
+        tags$span(class = "app-header-subtitle", "Forecast Improvement Platform")
+      )
+    ),
+    tags$div(
+      class = "app-header-center",
+      tags$button(
+        id = "hdr-guide-btn", class = "hdr-guide-btn", type = "button",
+        title = "Open the guide for the current section",
+        `aria-label` = "Open section guide",
+        tags$span(class = "hdr-guide-label", id = "hdr-guide-label", "Dashboard Guide"),
+        tags$span(class = "hdr-guide-icon", id = "hdr-guide-icon", tess_icon("table-columns"))
+      )
     ),
     tags$div(
       class = "app-header-actions",
-      tags$div(
-        class = "app-header-badges",
-        tags$span(class = "hdr-badge hdr-badge-version", "V1"),
-        tags$span(class = "hdr-badge hdr-badge-stage", "Stage 07"),
-        tags$span(class = "hdr-badge hdr-badge-readonly", "Read-only")
-      ),
       tags$div(
         class = "app-header-tools",
         tags$button(

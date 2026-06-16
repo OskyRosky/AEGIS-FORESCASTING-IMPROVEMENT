@@ -443,3 +443,170 @@ body {
 .theme-dark .preview-select { background: #0f1d30; border-color: #2a425f; color: #c4d2e2; }
 .theme-dark .preview-btn { background: #1c2f47; border-color: #2a425f; color: #9fb0c4; }
 .theme-dark .app-footer { background: #0c1726; color: #7d8da0; border-color: #23374f; }
+
+/* ===================== Sidebar collapse (hamburger -> mini icon rail) ===================== */
+
+/* Header left cluster (hamburger + brand) */
+.app-header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.hdr-collapse-btn { font-size: 15px; }
+
+/* Smooth width transition when toggling */
+.app-main { transition: grid-template-columns 220ms ease; }
+.app-sidebar { transition: padding 220ms ease; overflow-x: hidden; }
+
+/* Collapsed (mini) state */
+.tess-app.sidebar-mini .app-main { grid-template-columns: 68px minmax(0, 1fr); }
+.tess-app.sidebar-mini .app-sidebar { padding: 16px 6px; overflow: visible; }
+.tess-app.sidebar-mini .sidebar-nav { overflow: visible; }
+
+/* Brand: keep dot, hide text */
+.tess-app.sidebar-mini .sidebar-brand { justify-content: center; padding: 2px 0 12px; }
+.tess-app.sidebar-mini .sidebar-brand-text { display: none; }
+
+/* Each group anchors its fly-out panel */
+.tess-app.sidebar-mini .sidebar-group { position: relative; margin-bottom: 2px; }
+
+/* Group header: show only the centered icon */
+.tess-app.sidebar-mini .sidebar-group-header { justify-content: center; padding: 11px 0; }
+.tess-app.sidebar-mini .sidebar-group-label,
+.tess-app.sidebar-mini .sidebar-group-caret { display: none; }
+.tess-app.sidebar-mini .sidebar-group-icon { width: auto; font-size: 16px; }
+
+/* Sub-menu becomes a floating fly-out panel, revealed on hover/focus */
+.tess-app.sidebar-mini .sidebar-sub {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 212px;
+  max-height: none !important;
+  overflow: visible;
+  margin-left: 10px;
+  padding: 7px;
+  background: var(--tess-navy-2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(8, 20, 35, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition: opacity 140ms ease, transform 140ms ease, visibility 140ms;
+  z-index: 60;
+}
+
+/* Invisible bridge so the gap between icon and panel keeps hover alive */
+.tess-app.sidebar-mini .sidebar-sub::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 12px;
+  height: 100%;
+}
+
+/* Little arrow pointing back to the icon */
+.tess-app.sidebar-mini .sidebar-sub::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 16px;
+  width: 12px;
+  height: 12px;
+  background: var(--tess-navy-2);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transform: rotate(45deg);
+}
+
+.tess-app.sidebar-mini .sidebar-group:hover .sidebar-sub,
+.tess-app.sidebar-mini .sidebar-group:focus-within .sidebar-sub {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Inside the fly-out, sub-links show their label again */
+.tess-app.sidebar-mini .sidebar-sublink {
+  justify-content: flex-start;
+  padding: 8px 12px;
+  margin: 2px 0;
+  white-space: nowrap;
+}
+.tess-app.sidebar-mini .sidebar-sublink-label { display: inline; }
+.tess-app.sidebar-mini .sidebar-sublink-icon { width: 16px; font-size: 12px; opacity: 0.9; }
+
+/* On narrow screens the sidebar stacks on top; disable mini there */
+@media (max-width: 860px) {
+  .tess-app.sidebar-mini .app-main { grid-template-columns: 1fr; }
+  .tess-app.sidebar-mini .sidebar-sub {
+    position: static;
+    margin-left: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .tess-app.sidebar-mini .sidebar-sub::after,
+  .tess-app.sidebar-mini .sidebar-sub::before { display: none; }
+}
+
+/* ===================== Central header guide button + section guide modal ===================== */
+/* Anchor the header so the central button can be perfectly centered */
+.app-header { position: relative; }
+.app-header-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.hdr-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #21a35a 0%, #15834a 100%);
+  box-shadow: 0 2px 10px rgba(21, 131, 74, 0.42);
+  transition: filter 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+  white-space: nowrap;
+}
+.hdr-guide-btn:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(21, 131, 74, 0.5);
+}
+.hdr-guide-btn:active { transform: translateY(0); }
+.hdr-guide-btn .fa, .hdr-guide-btn svg { font-size: 13px; }
+.hdr-guide-icon { display: inline-flex; align-items: center; }
+.hdr-guide-label { line-height: 1; }
+
+/* Section guide modal (reuses .tess-overlay mechanics, wider card) */
+.tess-guide-card { max-width: 660px; }
+.tess-guide-head { background: linear-gradient(135deg, #15834a 0%, #102a43 90%); }
+.tess-guide-head h2 { display: flex; align-items: center; gap: 10px; }
+.tess-guide-body { max-height: 70vh; overflow-y: auto; }
+.guide-entry { display: none; }
+.guide-entry.is-shown { display: block; }
+.guide-intro { font-size: 14px; line-height: 1.6; margin: 0 0 14px; color: #33455c; }
+.guide-list { padding-left: 20px; margin: 0 0 6px; }
+.guide-list li { margin-bottom: 9px; line-height: 1.55; }
+.guide-note {
+  margin-top: 14px;
+  padding: 11px 14px;
+  background: #ecf6f0;
+  border-left: 3px solid #21a35a;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #2a4b3a;
+}
+
+/* Hide the button label on very narrow screens (keep the icon) */
+@media (max-width: 720px) {
+  .hdr-guide-btn .hdr-guide-label { display: none; }
+  .hdr-guide-btn { padding: 7px 11px; }
+}
