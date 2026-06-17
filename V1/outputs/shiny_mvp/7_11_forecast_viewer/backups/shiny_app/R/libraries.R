@@ -6,6 +6,3 @@ library(plotly)
 library(dplyr)
 library(readr)
 library(tidyr)
-
-# Block 7.11 | interactive forecast charting (Forecast Viewer)
-suppressPackageStartupMessages(library(highcharter))

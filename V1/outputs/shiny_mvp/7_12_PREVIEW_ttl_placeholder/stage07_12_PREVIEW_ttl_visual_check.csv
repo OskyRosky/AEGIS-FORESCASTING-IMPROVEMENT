@@ -1,0 +1,17 @@
+element,expected,observed,status
+ttl_section_served,present,"data-section ttl panel served",pass
+header_title,"TTL / Capacity View",present,pass
+status_callout,"** TTL source not available yet - planned for capacity view **",present,pass
+readiness_barometer,"three zones + pinned marker",present,pass
+barometer_zone_missing,"Source missing",present,pass
+barometer_zone_connected,"Source connected",present,pass
+barometer_zone_ready,"Ready for interpretation",present,pass
+marker_position,"pinned to Source missing / pending",present,pass
+future_card_time_to_impact,"Time-to-impact",present,pass
+future_card_capacity_pressure,"Capacity pressure",present,pass
+future_card_bridge,"Forecast-to-capacity bridge",present,pass
+source_checklist,"5 rows with status pills",present,pass
+methodology_note,"will not estimate TTL from unrelated data",present,pass
+visual_review_note,"Please review this TTL placeholder...",present,pass
+future_work_markers,"** markers on missing items",present (9),pass
+no_fake_metrics,"no numeric TTL/capacity values",none,pass

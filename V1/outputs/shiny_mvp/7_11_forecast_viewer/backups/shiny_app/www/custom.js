@@ -63,12 +63,6 @@
 
       var content = document.querySelector(".app-content");
       if (content) content.scrollTop = 0;
-
-      // Reflow any chart in the newly shown section (Highcharts sizes to 0
-      // while hidden; a resize event makes it fill its container).
-      setTimeout(function () {
-        window.dispatchEvent(new Event("resize"));
-      }, 60);
       return;
     }
 

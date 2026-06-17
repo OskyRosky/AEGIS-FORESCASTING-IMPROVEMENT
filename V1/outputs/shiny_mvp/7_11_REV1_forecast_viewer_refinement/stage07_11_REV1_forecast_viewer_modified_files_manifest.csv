@@ -1,0 +1,5 @@
+file,change_type,summary
+shiny_app/ui/tabs.R,modified,Rewrote section_explorer into guided workflow (numbered steps 1-5 + Analyze forecast button + result column with uiOutput fv_view); removed old crowded one-row fv-controls and fv_summary_cards
+shiny_app/server/server.R,modified,Added fv_model_note (single-model honesty note + diagnostic) reactive to entity; fv_request eventReactive gated on Analyze button; fv_view empty-state-then-chart; fv_availability data panel; chart driven by analyzed snapshot
+shiny_app/R/helpers.R,modified,Added fv_model_count_global() and fv_availability(); upgraded fv_chart() to highchart(type=stock) with hc_navigator/hc_scrollbar/hc_rangeSelector + shift-pan + shared tooltip with entity/model
+shiny_app/www/custom.css,modified,Replaced Block 7.11 styles with REV1 guided-workflow styles (.fv-setup two-column, .fv-step/.fv-step-num, .fv-analyze-btn, .fv-model-note, .fv-empty-card, .fv-avail-grid/.fv-avail-card + dark variants)

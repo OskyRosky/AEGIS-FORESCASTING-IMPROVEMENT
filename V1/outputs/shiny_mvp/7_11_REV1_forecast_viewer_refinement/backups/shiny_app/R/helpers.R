@@ -237,14 +237,6 @@ fv_models_for_entity <- function(entity, fc = fv_forecasts()) {
 # Allowed forecast-horizon options (days).
 fv_horizon_choices <- function() c(5, 10, 15, 20, 25, 30, 45, 60)
 
-# Total distinct model versions available across ALL forecast artifacts.
-fv_model_count_global <- function(fc = fv_forecasts()) {
-  if (!is.data.frame(fc) || !("model_version" %in% names(fc)) || nrow(fc) == 0) {
-    return(0L)
-  }
-  length(unique(trimws(as.character(fc$model_version))))
-}
-
 # Filtered actual series for an entity, trimmed to a history window (days).
 # hist_days <= 0 (or NA) means "all available history".
 fv_actual_series <- function(entity, hist_days = 90, ac = fv_actuals()) {
@@ -306,32 +298,6 @@ fv_summary <- function(entity, model, horizon_days = 30, hist_days = 90) {
   )
 }
 
-# Richer data-availability snapshot for the explanation panel. Reports, for the
-# selected combination, how many forecast/actual points exist, how many models
-# the entity has (vs globally), and how the requested horizon compares with what
-# can actually be displayed (so a short model list / clipped horizon is honest).
-fv_availability <- function(entity, model, horizon_days = 30, hist_days = 90) {
-  ent_models  <- fv_models_for_entity(entity)
-  glob_models <- fv_model_count_global()
-  a    <- fv_actual_series(entity, hist_days)
-  fall <- fv_forecast_series(entity, model, horizon_days = 0)   # all forecast rows
-  req  <- if (is.null(horizon_days) || is.na(horizon_days) || horizon_days <= 0)
-            nrow(fall) else as.integer(horizon_days)
-  shown <- min(nrow(fall), req)
-  list(
-    entity            = if (is.null(entity) || !nzchar(entity)) "\u2014" else entity,
-    model             = if (is.null(model)  || !nzchar(model))  "\u2014" else model,
-    n_forecast_total  = nrow(fall),
-    n_actual          = nrow(a),
-    n_models_entity   = length(ent_models),
-    models_entity     = ent_models,
-    n_models_global   = glob_models,
-    horizon_requested = req,
-    horizon_displayed = shown,
-    horizon_clipped   = (req > nrow(fall))
-  )
-}
-
 # A calm empty-state highchart (no series), shown when a combination has no data.
 fv_empty_chart <- function(
     msg = "No forecast data is available for this selected series/model/horizon.") {
@@ -369,13 +335,9 @@ fv_chart <- function(entity, model, horizon_days = 30, hist_days = 90) {
     ))
   }
 
-  # Stock chart -> built-in range selector + navigator + scrollbar give the
-  # user true horizontal time navigation (zoom + scroll) over the series.
-  hc <- highcharter::highchart(type = "stock") |>
-    highcharter::hc_chart(zoomType = "x", panning = list(enabled = TRUE),
-                          panKey = "shift",
-                          style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
-    highcharter::hc_title(text = ttl_entity,
+  hc <- highcharter::highchart() |>
+    highcharter::hc_chart(zoomType = "x", style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
+    highcharter::hc_title(text = paste0(ttl_entity),
                           style = list(fontSize = "15px", fontWeight = "600", color = "#102a43")) |>
     highcharter::hc_subtitle(text = paste0("Model: ", ttl_model),
                              style = list(fontSize = "12px", color = "#627d98")) |>
@@ -383,25 +345,9 @@ fv_chart <- function(entity, model, horizon_days = 30, hist_days = 90) {
                           plotLines = plot_lines) |>
     highcharter::hc_yAxis(title = list(text = "Value"), opposite = FALSE) |>
     highcharter::hc_legend(enabled = TRUE) |>
-    highcharter::hc_tooltip(shared = TRUE, xDateFormat = "%Y-%m-%d", valueDecimals = 3,
-                            headerFormat = paste0(
-                              "<span style='font-size:11px;color:#627d98'>",
-                              ttl_entity, " \u00b7 ", ttl_model,
-                              "</span><br/><b>{point.key}</b><br/>")) |>
+    highcharter::hc_tooltip(shared = FALSE, xDateFormat = "%Y-%m-%d", valueDecimals = 3) |>
     highcharter::hc_credits(enabled = FALSE) |>
-    highcharter::hc_navigator(enabled = TRUE) |>
-    highcharter::hc_scrollbar(enabled = TRUE) |>
-    highcharter::hc_rangeSelector(
-      enabled = TRUE, selected = 4,
-      buttons = list(
-        list(type = "month", count = 1, text = "1m"),
-        list(type = "month", count = 3, text = "3m"),
-        list(type = "month", count = 6, text = "6m"),
-        list(type = "ytd", text = "YTD"),
-        list(type = "all", text = "All"))) |>
-    highcharter::hc_plotOptions(
-      line   = list(marker = list(enabled = FALSE), lineWidth = 2),
-      series = list(showInNavigator = TRUE))
+    highcharter::hc_plotOptions(line = list(marker = list(enabled = FALSE), lineWidth = 2))
 
   if (!is.null(a_df)) {
     hc <- hc |> highcharter::hc_add_series(

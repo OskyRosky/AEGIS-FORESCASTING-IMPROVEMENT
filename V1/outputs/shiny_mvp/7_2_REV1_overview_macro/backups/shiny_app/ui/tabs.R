@@ -200,214 +200,35 @@ section_home <- function() {
 }
 
 section_overview <- function() {
-  # Read-only governed reads (7.0E loader). Never recompute; safe fallbacks.
-  cs <- home_champion_summary()
-  kr <- home_key_results()
-  uc <- universe_counts()
-
-  champ      <- first_label(cs_value(cs, "selected_champion_model"), APP_CHAMPION)
-  origin     <- cs_value(cs, "model_origin", "challenger")
-  family     <- cs_value(cs, "model_family", "statistical")
-  decision   <- first_label(cs_value(cs, "decision_type"), APP_CHAMPION_DECISION)
-  confidence <- first_label(cs_value(cs, "decision_confidence"), APP_CHAMPION_CONFIDENCE)
-  mase       <- fmt_metric(cs_value(cs, "official_median_mase"), 2)
-  rmsse      <- fmt_metric(cs_value(cs, "official_median_rmsse"), 2)
-  better     <- first_label(cs_value(cs, "supported_better_count"))
-  worse      <- first_label(cs_value(cs, "supported_worse_count"))
-  pairwise   <- first_label(kr_value(kr, "tournament_pairwise_comparisons"))
-  conditions <- cs_value(cs, "conditions",
-                         "Conditions are retained in the governed closure pack.")
-
-  ni <- function(x) if (length(x) != 1 || is.na(x)) "\u2014" else as.character(x)
-
   panel(
     "overview",
-
-    # A. Header --------------------------------------------------------------
-    section_head(
-      "Executive Overview",
-      "A read-only macro summary of the TESSERACT v2 forecast improvement review."
-    ),
-
-    # B. Macro headline (real governed values) -------------------------------
+    section_head("Executive Overview",
+                 "Headline status of the forecast improvement review (read-only)."),
     card_grid(
-      kpi_card("Approved", "Governance state",
-               pill = "With conditions", pill_class = "pill-amber"),
-      kpi_card(champ, "Governed champion",
-               pill = "Selected with conditions", pill_class = "pill-blue"),
-      kpi_card(mase, "Median MASE \u00b7 primary metric",
-               pill = "Lower is stronger", pill_class = "pill-blue"),
-      kpi_card(rmsse, "Median RMSSE \u00b7 guardrail",
-               pill = "Stability check", pill_class = "pill-blue")
+      kpi_card("Approved", "Governance state", pill = "Stage 07", pill_class = "pill-green"),
+      kpi_card(APP_CHAMPION, "Governed champion", pill = "Conditions apply", pill_class = "pill-amber"),
+      kpi_card(APP_CHAMPION_CONFIDENCE, "Decision confidence", pill = "Governed", pill_class = "pill-blue"),
+      kpi_card(APP_VERSION, "Active version", pill = "Read-only", pill_class = "pill-blue")
     ),
-
-    # C. What this overview shows --------------------------------------------
-    tags$h3(class = "section-block-title", "What this overview shows"),
-    tags$div(
-      class = "home-prose",
-      tags$p(
-        "This page is a one-screen, read-only summary of the forecast ",
-        "improvement review. Every figure below is read directly from the ",
-        "governed closure pack \u2014 nothing here is recalculated, and no ",
-        "forecasts or models are run by the dashboard."
-      ),
-      tags$p(
-        "The review compared a broad universe of baseline and challenger ",
-        "models on the same data, scored them with consistent accuracy ",
-        "metrics, and selected a governed champion under explicit conditions."
-      )
-    ),
-
-    # D. What the review concluded -------------------------------------------
-    tags$h3(class = "section-block-title", "What the review concluded"),
-    info_list(
-      info_row("Champion decision", decision),
-      info_row("Decision confidence", confidence),
-      info_row("Champion model", paste0(champ, " (", origin, " \u00b7 ", family, ")")),
-      info_row("Pairwise evidence",
-               paste0(ni(better), " supported better \u00b7 ", ni(worse),
-                      " worse \u00b7 across ", ni(pairwise), " comparisons"))
-    ),
-
-    # E. Model landscape at a glance (universe counts) -----------------------
-    tags$h3(class = "section-block-title", "Model landscape at a glance"),
-    info_list(
-      info_row("Models reviewed", ni(uc$total)),
-      info_row("Baselines / challengers",
-               paste0(ni(uc$baselines), " / ", ni(uc$challengers))),
-      info_row("Carried into the tournament", ni(uc$in_tournament)),
-      info_row("Champion-eligible", ni(uc$champion_eligible)),
-      info_row("Risk-flagged for follow-up", ni(uc$risk_flagged))
-    ),
-
-    # F. Conditions attached to the decision ---------------------------------
-    tags$h3(class = "section-block-title", "Conditions attached to the decision"),
-    tags$div(
-      class = "home-prose",
-      tags$p(conditions)
-    ),
-
-    # G. Where to go next ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Where to go next"),
-    info_list(
-      info_row("Home", "Why this dashboard exists and how the methodology works"),
-      info_row("Model Universe", "The full list of governed baseline and challenger models"),
-      info_row("Tournament", "** Pairwise standings and head-to-head evidence (planned)"),
-      info_row("Accuracy", "** MASE / RMSSE detail by model and entity (planned)"),
-      info_row("Risks", "** Model risk flags and follow-up notes (planned)"),
-      info_row("TTL / Capacity", "** Forecast-to-capacity view (planned, source pending)")
-    ),
-
-    # H. Visual review note --------------------------------------------------
     tags$div(
       style = "margin-top:18px;",
-      info_list(
-        tags$li(
-          tags$span(class = "pill pill-amber", "Visual review"),
-          tags$span(class = "info-val",
-                    "Please review this Executive Overview before we continue to the next Stage 07 block.")
-        )
-      )
+      shell_card("Summary", "Review status",
+                 "All headline values shown here are placeholders and will be bound to governed artifacts in a later block.")
     )
   )
 }
 
 section_explorer <- function() {
-  ents          <- fv_entity_choices()
-  default_entity <- if (length(ents)) ents[[1]] else NULL
-  default_models <- if (!is.null(default_entity)) fv_models_for_entity(default_entity) else character(0)
-  default_model  <- if (length(default_models)) default_models[[1]] else NULL
-
-  # A small numbered "step" wrapper so the controls read as a guided workflow.
-  fv_step <- function(num, title, control, hint, extra = NULL) {
-    tags$div(
-      class = "fv-step",
-      tags$div(
-        class = "fv-step-head",
-        tags$span(class = "fv-step-num", as.character(num)),
-        tags$span(class = "fv-step-title", title)
-      ),
-      control,
-      tags$p(class = "fv-step-hint", hint),
-      extra
-    )
-  }
-
   panel(
     "explorer",
-    section_head(
-      "Forecast Viewer",
-      "Visual comparison of actual values and model forecasts across selectable series, models, and forecast horizons."
+    section_head("Forecast Explorer",
+                 "Actual vs baseline vs challenger forecast curves (placeholder \u2014 charting block)."),
+    card_grid(
+      shell_card("Series", "Actual vs forecast", "Per-entity actual and forecast curves will be charted here."),
+      shell_card("Filters", "Entity / model / window", "Read-only selectors for entity, model and backtest window."),
+      shell_card("Source", "Governed forecasts", "Bound to processed forecasts/actuals in a later block.")
     ),
-
-    # B. Guided, sectioned control panel (no longer a single crowded row) ----
-    tags$div(
-      class = "fv-setup",
-      tags$div(
-        class = "fv-setup-panel",
-        tags$div(class = "fv-setup-title", "Set up the forecast view"),
-
-        fv_step(
-          1, "Select series",
-          selectInput("fv_entity", NULL, choices = ents,
-                      selected = default_entity, width = "100%"),
-          "Choose the forecast series to inspect."
-        ),
-
-        fv_step(
-          2, "Select model",
-          selectInput("fv_model", NULL, choices = default_models,
-                      selected = default_model, width = "100%"),
-          "Models are shown based on the forecast artifacts available for the selected series.",
-          extra = uiOutput("fv_model_note")
-        ),
-
-        fv_step(
-          3, "Select horizon",
-          selectInput("fv_horizon", NULL,
-                      choices = fv_horizon_choices(), selected = 30, width = "100%"),
-          "Forecast horizon in days (5\u201360). If fewer forecast points exist, only the available points are shown."
-        ),
-
-        fv_step(
-          4, "Select history window",
-          selectInput("fv_history", NULL,
-                      choices = c("Last 30 days" = 30, "Last 60 days" = 60,
-                                  "Last 90 days" = 90, "Last 180 days" = 180,
-                                  "All history" = 0),
-                      selected = 90, width = "100%"),
-          "How much actual history to show before the forecast. If fewer points exist, all available history is shown."
-        ),
-
-        tags$div(
-          class = "fv-step fv-step-action",
-          tags$div(
-            class = "fv-step-head",
-            tags$span(class = "fv-step-num", "5"),
-            tags$span(class = "fv-step-title", "Analyze")
-          ),
-          actionButton("fv_go", "Analyze forecast", class = "fv-analyze-btn"),
-          tags$p(class = "fv-step-hint",
-                 "The chart renders only after you click Analyze forecast.")
-        ),
-
-        tags$p(class = "fv-entity-note",
-               "Series names are read directly from the governed entity / forecast artifacts.")
-      ),
-
-      # Right-hand result column: empty state until the button is clicked, then
-      # the data-availability panel + interactive chart (rendered server-side).
-      tags$div(
-        class = "fv-result",
-        uiOutput("fv_view")
-      )
-    ),
-
-    # F. Methodology note ----------------------------------------------------
-    tags$p(
-      class = "fv-method-note",
-      "This page visualizes existing forecast artifacts only. It does not generate new forecasts or recalculate model outputs."
-    )
+    tags$div(style = "margin-top:18px;", controls_preview())
   )
 }
 

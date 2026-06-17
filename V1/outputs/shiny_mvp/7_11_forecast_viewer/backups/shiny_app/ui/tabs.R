@@ -313,101 +313,16 @@ section_overview <- function() {
 }
 
 section_explorer <- function() {
-  ents          <- fv_entity_choices()
-  default_entity <- if (length(ents)) ents[[1]] else NULL
-  default_models <- if (!is.null(default_entity)) fv_models_for_entity(default_entity) else character(0)
-  default_model  <- if (length(default_models)) default_models[[1]] else NULL
-
-  # A small numbered "step" wrapper so the controls read as a guided workflow.
-  fv_step <- function(num, title, control, hint, extra = NULL) {
-    tags$div(
-      class = "fv-step",
-      tags$div(
-        class = "fv-step-head",
-        tags$span(class = "fv-step-num", as.character(num)),
-        tags$span(class = "fv-step-title", title)
-      ),
-      control,
-      tags$p(class = "fv-step-hint", hint),
-      extra
-    )
-  }
-
   panel(
     "explorer",
-    section_head(
-      "Forecast Viewer",
-      "Visual comparison of actual values and model forecasts across selectable series, models, and forecast horizons."
+    section_head("Forecast Explorer",
+                 "Actual vs baseline vs challenger forecast curves (placeholder \u2014 charting block)."),
+    card_grid(
+      shell_card("Series", "Actual vs forecast", "Per-entity actual and forecast curves will be charted here."),
+      shell_card("Filters", "Entity / model / window", "Read-only selectors for entity, model and backtest window."),
+      shell_card("Source", "Governed forecasts", "Bound to processed forecasts/actuals in a later block.")
     ),
-
-    # B. Guided, sectioned control panel (no longer a single crowded row) ----
-    tags$div(
-      class = "fv-setup",
-      tags$div(
-        class = "fv-setup-panel",
-        tags$div(class = "fv-setup-title", "Set up the forecast view"),
-
-        fv_step(
-          1, "Select series",
-          selectInput("fv_entity", NULL, choices = ents,
-                      selected = default_entity, width = "100%"),
-          "Choose the forecast series to inspect."
-        ),
-
-        fv_step(
-          2, "Select model",
-          selectInput("fv_model", NULL, choices = default_models,
-                      selected = default_model, width = "100%"),
-          "Models are shown based on the forecast artifacts available for the selected series.",
-          extra = uiOutput("fv_model_note")
-        ),
-
-        fv_step(
-          3, "Select horizon",
-          selectInput("fv_horizon", NULL,
-                      choices = fv_horizon_choices(), selected = 30, width = "100%"),
-          "Forecast horizon in days (5\u201360). If fewer forecast points exist, only the available points are shown."
-        ),
-
-        fv_step(
-          4, "Select history window",
-          selectInput("fv_history", NULL,
-                      choices = c("Last 30 days" = 30, "Last 60 days" = 60,
-                                  "Last 90 days" = 90, "Last 180 days" = 180,
-                                  "All history" = 0),
-                      selected = 90, width = "100%"),
-          "How much actual history to show before the forecast. If fewer points exist, all available history is shown."
-        ),
-
-        tags$div(
-          class = "fv-step fv-step-action",
-          tags$div(
-            class = "fv-step-head",
-            tags$span(class = "fv-step-num", "5"),
-            tags$span(class = "fv-step-title", "Analyze")
-          ),
-          actionButton("fv_go", "Analyze forecast", class = "fv-analyze-btn"),
-          tags$p(class = "fv-step-hint",
-                 "The chart renders only after you click Analyze forecast.")
-        ),
-
-        tags$p(class = "fv-entity-note",
-               "Series names are read directly from the governed entity / forecast artifacts.")
-      ),
-
-      # Right-hand result column: empty state until the button is clicked, then
-      # the data-availability panel + interactive chart (rendered server-side).
-      tags$div(
-        class = "fv-result",
-        uiOutput("fv_view")
-      )
-    ),
-
-    # F. Methodology note ----------------------------------------------------
-    tags$p(
-      class = "fv-method-note",
-      "This page visualizes existing forecast artifacts only. It does not generate new forecasts or recalculate model outputs."
-    )
+    tags$div(style = "margin-top:18px;", controls_preview())
   )
 }
 

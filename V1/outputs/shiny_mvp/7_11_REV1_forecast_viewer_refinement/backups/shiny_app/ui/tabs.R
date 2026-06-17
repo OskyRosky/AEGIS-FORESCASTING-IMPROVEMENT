@@ -318,21 +318,6 @@ section_explorer <- function() {
   default_models <- if (!is.null(default_entity)) fv_models_for_entity(default_entity) else character(0)
   default_model  <- if (length(default_models)) default_models[[1]] else NULL
 
-  # A small numbered "step" wrapper so the controls read as a guided workflow.
-  fv_step <- function(num, title, control, hint, extra = NULL) {
-    tags$div(
-      class = "fv-step",
-      tags$div(
-        class = "fv-step-head",
-        tags$span(class = "fv-step-num", as.character(num)),
-        tags$span(class = "fv-step-title", title)
-      ),
-      control,
-      tags$p(class = "fv-step-hint", hint),
-      extra
-    )
-  }
-
   panel(
     "explorer",
     section_head(
@@ -340,67 +325,45 @@ section_explorer <- function() {
       "Visual comparison of actual values and model forecasts across selectable series, models, and forecast horizons."
     ),
 
-    # B. Guided, sectioned control panel (no longer a single crowded row) ----
+    # B. Control panel (every control drives the chart) ----------------------
     tags$div(
-      class = "fv-setup",
+      class = "fv-controls",
       tags$div(
-        class = "fv-setup-panel",
-        tags$div(class = "fv-setup-title", "Set up the forecast view"),
-
-        fv_step(
-          1, "Select series",
-          selectInput("fv_entity", NULL, choices = ents,
-                      selected = default_entity, width = "100%"),
-          "Choose the forecast series to inspect."
-        ),
-
-        fv_step(
-          2, "Select model",
-          selectInput("fv_model", NULL, choices = default_models,
-                      selected = default_model, width = "100%"),
-          "Models are shown based on the forecast artifacts available for the selected series.",
-          extra = uiOutput("fv_model_note")
-        ),
-
-        fv_step(
-          3, "Select horizon",
-          selectInput("fv_horizon", NULL,
-                      choices = fv_horizon_choices(), selected = 30, width = "100%"),
-          "Forecast horizon in days (5\u201360). If fewer forecast points exist, only the available points are shown."
-        ),
-
-        fv_step(
-          4, "Select history window",
-          selectInput("fv_history", NULL,
-                      choices = c("Last 30 days" = 30, "Last 60 days" = 60,
-                                  "Last 90 days" = 90, "Last 180 days" = 180,
-                                  "All history" = 0),
-                      selected = 90, width = "100%"),
-          "How much actual history to show before the forecast. If fewer points exist, all available history is shown."
-        ),
-
-        tags$div(
-          class = "fv-step fv-step-action",
-          tags$div(
-            class = "fv-step-head",
-            tags$span(class = "fv-step-num", "5"),
-            tags$span(class = "fv-step-title", "Analyze")
-          ),
-          actionButton("fv_go", "Analyze forecast", class = "fv-analyze-btn"),
-          tags$p(class = "fv-step-hint",
-                 "The chart renders only after you click Analyze forecast.")
-        ),
-
-        tags$p(class = "fv-entity-note",
-               "Series names are read directly from the governed entity / forecast artifacts.")
+        class = "fv-control",
+        tags$label(`for` = "fv_entity", "Series / entity"),
+        selectInput("fv_entity", NULL, choices = ents,
+                    selected = default_entity, width = "100%")
       ),
-
-      # Right-hand result column: empty state until the button is clicked, then
-      # the data-availability panel + interactive chart (rendered server-side).
       tags$div(
-        class = "fv-result",
-        uiOutput("fv_view")
+        class = "fv-control",
+        tags$label(`for` = "fv_model", "Model"),
+        selectInput("fv_model", NULL, choices = default_models,
+                    selected = default_model, width = "100%")
+      ),
+      tags$div(
+        class = "fv-control",
+        tags$label(`for` = "fv_horizon", "Forecast horizon (days)"),
+        selectInput("fv_horizon", NULL,
+                    choices = fv_horizon_choices(), selected = 30, width = "100%")
+      ),
+      tags$div(
+        class = "fv-control",
+        tags$label(`for` = "fv_history", "History window"),
+        selectInput("fv_history", NULL,
+                    choices = c("Last 30 days" = 30, "Last 60 days" = 60,
+                                "Last 90 days" = 90, "Last 180 days" = 180,
+                                "All history" = 0),
+                    selected = 90, width = "100%")
       )
+    ),
+
+    # D. Supporting summary row ---------------------------------------------
+    uiOutput("fv_summary_cards"),
+
+    # C. Main interactive chart ---------------------------------------------
+    tags$div(
+      class = "fv-chart-wrap",
+      highcharter::highchartOutput("fv_chart", height = "440px")
     ),
 
     # F. Methodology note ----------------------------------------------------

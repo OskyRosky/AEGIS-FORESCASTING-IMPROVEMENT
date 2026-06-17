@@ -9,7 +9,7 @@ stage07_menu <- function() {
       list(value = "overview", label = "Overview", title = "Executive Overview", icon = "gauge-high")
     )),
     list(group = "Forecasting", icon = "chart-line", items = list(
-      list(value = "explorer", label = "Viewer", title = "Forecast Viewer",  icon = "chart-line"),
+      list(value = "explorer", label = "Explorer", title = "Forecast Explorer",  icon = "chart-line"),
       list(value = "accuracy", label = "Accuracy", title = "Accuracy Overview",  icon = "bullseye"),
       list(value = "ttl",      label = "TTL",      title = "TTL / Capacity View", icon = "hourglass-half", planned = TRUE)
     )),
