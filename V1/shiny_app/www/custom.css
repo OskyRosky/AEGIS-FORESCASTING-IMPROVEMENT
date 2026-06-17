@@ -610,3 +610,53 @@ body {
   .hdr-guide-btn .hdr-guide-label { display: none; }
   .hdr-guide-btn { padding: 7px 11px; }
 }
+
+/* ===================== Block 7.3 | Model Universe DT table ===================== */
+/* Wrap the read-only DataTable in a card surface consistent with .info-list.   */
+.tess-table-wrap {
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 10px;
+  padding: 10px 14px 14px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.tess-table-wrap table.dataTable {
+  border-collapse: collapse !important;
+  font-size: 13px;
+  width: 100% !important;
+}
+.tess-table-wrap table.dataTable thead th {
+  color: #102a43;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 2px solid #e3eaf2;
+  white-space: nowrap;
+}
+.tess-table-wrap table.dataTable tbody td {
+  color: #33455c;
+  border-top: 1px solid #eef2f7;
+  vertical-align: middle;
+}
+.tess-table-wrap table.dataTable tbody tr:hover td { background: #f6f9fd; }
+.tess-table-wrap .dataTables_filter { margin-bottom: 8px; text-align: left; }
+.tess-table-wrap .dataTables_filter label { font-size: 12px; color: #5a6b80; font-weight: 600; }
+.tess-table-wrap .dataTables_filter input {
+  border: 1px solid #d7e0ec;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-left: 8px;
+  font-size: 12px;
+}
+.tess-table-wrap .pill { font-size: 10px; padding: 2px 8px; }
+
+/* Dark theme variants */
+.theme-dark .tess-table-wrap { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .tess-table-wrap table.dataTable thead th { color: #e8eef6; border-bottom-color: #23374f; }
+.theme-dark .tess-table-wrap table.dataTable tbody td { color: #c4d2e2; border-top-color: #23374f; }
+.theme-dark .tess-table-wrap table.dataTable tbody tr:hover td { background: #1b2f48; }
+.theme-dark .tess-table-wrap .dataTables_filter label { color: #9fb0c4; }
+.theme-dark .tess-table-wrap .dataTables_filter input { background: #0f1d2e; border-color: #2a3f59; color: #e8eef6; }

@@ -279,144 +279,18 @@ section_ttl <- function() {
   )
 }
 
-# Small inline badge built on the existing .pill classes (no new CSS).
-.tess_badge <- function(text, pill_class = "pill-blue") {
-  paste0('<span class="pill ', pill_class, '">', htmltools::htmlEscape(text), '</span>')
-}
-
-# Build the governed model universe table as a static DT widget (read-only).
-# All values come straight from the final_model_universe artifact; nothing is
-# recomputed. Badges only re-label existing columns for readability.
-universe_table_widget <- function(df = universe_normalized()) {
-  if (!is.data.frame(df) || nrow(df) == 0) {
-    return(tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-amber", "Artifact missing"),
-      tags$h3(class = "shell-card-title", "Model universe unavailable"),
-      tags$p(class = "shell-card-detail",
-             "The governed final_model_universe artifact could not be read. No values are shown.")
-    ))
-  }
-
-  origin_badge <- ifelse(
-    df$model_origin == "baseline",
-    .tess_badge("Baseline", "pill-blue"),
-    ifelse(df$model_origin == "challenger",
-           .tess_badge("Challenger", "pill-amber"),
-           .tess_badge(ifelse(nzchar(df$model_origin), df$model_origin, "\u2014"), "pill-blue"))
-  )
-
-  status_txt   <- universe_status_label(df$final_status)
-  status_badge <- ifelse(
-    df$final_status == "selected_champion",
-    .tess_badge(status_txt, "pill-green"),
-    ifelse(grepl("^deferred", df$final_status),
-           .tess_badge(status_txt, "pill-amber"),
-           .tess_badge(status_txt, "pill-blue"))
-  )
-
-  yn <- function(flag, yes_txt, no_txt, yes_cls = "pill-green", no_cls = "pill-amber") {
-    ifelse(flag %in% TRUE, .tess_badge(yes_txt, yes_cls),
-           ifelse(flag %in% FALSE, .tess_badge(no_txt, no_cls), "\u2014"))
-  }
-
-  tournament_badge <- yn(df$included_in_tournament, "Included", "Excluded")
-  eligible_badge   <- yn(df$eligible_for_champion, "Eligible", "Not eligible")
-  champion_badge   <- ifelse(df$selected_champion %in% TRUE,
-                             .tess_badge("Selected champion (with conditions)", "pill-green"),
-                             "\u2014")
-  risk_badge       <- ifelse(df$risk_flag %in% TRUE,
-                             .tess_badge("Risk flag", "pill-amber"),
-                             .tess_badge("None", "pill-blue"))
-
-  family_txt   <- ifelse(nzchar(df$model_family),
-                         gsub("_", " ", df$model_family), "\u2014")
-  deferred_txt <- ifelse(nzchar(df$deferred_reason),
-                         gsub("_", " ", df$deferred_reason), "\u2014")
-
-  tbl <- data.frame(
-    Model      = htmltools::htmlEscape(df$model_name),
-    Origin     = origin_badge,
-    Family     = htmltools::htmlEscape(family_txt),
-    Status     = status_badge,
-    Tournament = tournament_badge,
-    `Champion eligibility` = eligible_badge,
-    Champion   = champion_badge,
-    Risk       = risk_badge,
-    `Deferred reason` = htmltools::htmlEscape(deferred_txt),
-    check.names = FALSE,
-    stringsAsFactors = FALSE
-  )
-
-  DT::datatable(
-    tbl,
-    rownames  = FALSE,
-    escape    = FALSE,
-    class     = "stripe hover row-border",
-    options   = list(
-      paging        = FALSE,
-      searching     = TRUE,
-      info          = FALSE,
-      ordering      = TRUE,
-      scrollX       = TRUE,
-      dom           = "ft",
-      columnDefs    = list(list(className = "dt-left", targets = "_all"))
-    )
-  )
-}
-
 section_universe <- function() {
-  # --- Governed data binding (read-only, from the 7.0E loader cache) ---
-  uni <- universe_normalized()
-  cnt <- universe_counts(uni)
-  champ <- first_label(universe_champion_name(uni), APP_CHAMPION)
-
-  n <- function(x) if (is.null(x) || is.na(x)) "\u2014" else as.character(x)
-
   panel(
     "universe",
-
-    # A. Header --------------------------------------------------------------
-    section_head(
-      "Model Universe",
-      "Final baseline, challenger, deferred, and champion-eligible model set for the governed Model Lab."
-    ),
-
-    # B. Summary cards (counts read straight from the artifact) --------------
-    card_grid(
-      kpi_card(n(cnt$total), "Total models", pill = "Governed universe", pill_class = "pill-blue"),
-      kpi_card(n(cnt$baselines), "Baselines", pill = "Reference families", pill_class = "pill-blue"),
-      kpi_card(n(cnt$challengers), "Challengers", pill = "Candidate models", pill_class = "pill-amber"),
-      kpi_card(n(cnt$in_tournament), "Included in tournament", pill = "Ranked", pill_class = "pill-green")
-    ),
-    card_grid(
-      kpi_card(n(cnt$deferred), "Deferred models", pill = "Out of ranking", pill_class = "pill-amber"),
-      kpi_card(n(cnt$champion_eligible), "Champion eligible", pill = "Governed eligibility", pill_class = "pill-blue"),
-      kpi_card(n(cnt$selected_champion), "Selected champion (with conditions)", pill = champ, pill_class = "pill-green"),
-      kpi_card(n(cnt$risk_flagged), "Models with risk flags", pill = "Review", pill_class = "pill-amber")
-    ),
-
-    # C. Main model universe table -------------------------------------------
-    tags$h3(class = "section-block-title", "Governed model universe"),
-    tags$div(class = "tess-table-wrap", universe_table_widget(uni)),
-
-    # D. Governed interpretation notes ---------------------------------------
-    tags$h3(class = "section-block-title", "How to read this universe"),
+    section_head("Model Universe",
+                 "Baseline, challenger and deferred models with status and eligibility (placeholder)."),
     info_list(
-      info_row("Baselines",
-               "Current and reference model families that anchor the comparison; they are not improvement candidates."),
-      info_row("Challengers",
-               "Candidate improvement models evaluated against the baselines inside the governed tournament."),
-      info_row("Included in tournament",
-               "Models that entered the governed rolling-origin ranking; deferred models did not."),
-      info_row("Deferred models",
-               "Excluded from the tournament ranking due to runtime or dependency constraints \u2014 not a quality verdict."),
-      info_row("Champion eligibility",
-               "A governed eligibility flag indicating a model could be considered for champion selection; it does not by itself decide the champion."),
-      info_row("Selected champion (with conditions)",
-               paste0("The governed champion selection (", champ,
-                      ") is conditional: it is approved with conditions and must be read alongside the documented risks and governance notes."))
-    )
+      info_row("Baselines", "7 governed baseline models in the tournament universe."),
+      info_row("Challengers", "6 audited challengers competing in the tournament."),
+      info_row("Deferred", "NBEATS (runtime) and NHITS (dependency) excluded from the tournament."),
+      info_row("Status", "Placeholders pending artifact binding.")
+    ),
+    tags$div(style = "margin-top:18px;", controls_preview())
   )
 }
 
