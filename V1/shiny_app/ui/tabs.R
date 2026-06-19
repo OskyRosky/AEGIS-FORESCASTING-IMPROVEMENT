@@ -313,13 +313,28 @@ section_overview <- function() {
 }
 
 section_explorer <- function() {
-  ents          <- fv_entity_choices()
-  default_entity <- if (length(ents)) ents[[1]] else NULL
-  default_models <- if (!is.null(default_entity)) fv_models_for_entity(default_entity) else character(0)
-  default_model  <- if (length(default_models)) default_models[[1]] else NULL
+  # Block 7.11-FULL-REBIND: two clearly separated Forecast Viewer sections.
+  #   1) Backtest Comparison  -> full Stage 05H artifact
+  #      (data/processed/forecast_viewer_model_outputs.csv), 39 series.
+  #   2) Forward Forecast      -> data/processed/forecasts.csv (production)
+  #      + data/processed/actuals.csv history, 45 series.
+  # Each section has its own action button; charts live in STATIC containers
+  # (always in the DOM) to avoid blank-chart regressions, and never render
+  # before the user clicks the section's Analyze button.
 
-  # A small numbered "step" wrapper so the controls read as a guided workflow.
-  fv_step <- function(num, title, control, hint, extra = NULL) {
+  # ---- Backtest section inputs ----
+  bt_series      <- fvp_series_choices()                 # 39 eligible series
+  bt_default     <- if (length(bt_series)) bt_series[[1]] else NULL
+  horizon_opts   <- fvp_horizon_choices()                # 5..30
+  horizon_named  <- stats::setNames(as.character(horizon_opts),
+                                    paste0(horizon_opts, " days"))
+  horizon_unavail <- fvp_horizon_unavailable()           # 35, 45 (disabled)
+
+  # ---- Forward section inputs ----
+  fw_series  <- fvf_series_choices()                     # 45 series
+
+  # Numbered "step" wrapper so the controls read as a guided workflow.
+  fv_step <- function(num, title, control, hint = NULL, extra = NULL) {
     tags$div(
       class = "fv-step",
       tags$div(
@@ -328,7 +343,7 @@ section_explorer <- function() {
         tags$span(class = "fv-step-title", title)
       ),
       control,
-      tags$p(class = "fv-step-hint", hint),
+      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
       extra
     )
   }
@@ -337,76 +352,217 @@ section_explorer <- function() {
     "explorer",
     section_head(
       "Forecast Viewer",
-      "Visual comparison of actual values and model forecasts across selectable series, models, and forecast horizons."
+      "Two separate views: a historical multi-model Backtest Comparison and the single-model Forward Forecast. Each renders only after you click its Analyze button."
     ),
 
-    # B. Guided, sectioned control panel (no longer a single crowded row) ----
-    tags$div(
-      class = "fv-setup",
+    # =====================================================================
+    # SECTION 1 - BACKTEST COMPARISON (full Stage 05H artifact)
+    # =====================================================================
+    tags$section(
+      class = "fvx-section fvx-backtest",
       tags$div(
-        class = "fv-setup-panel",
-        tags$div(class = "fv-setup-title", "Set up the forecast view"),
+        class = "fvx-section-head",
+        tags$span(class = "fvx-section-kicker", "Section 1"),
+        tags$h3(class = "fvx-section-title", "Backtest Comparison"),
+        tags$span(class = "pill pill-blue", "Historical \u00b7 multi-model")
+      ),
+      tags$p(
+        class = "fvx-section-lead",
+        "Actual known values versus multiple model forecasts over historical dates. ",
+        "Source: ", tags$code("forecast_viewer_model_outputs.csv"),
+        " (39 eligible series, 13 models, horizons 5\u201330)."
+      ),
 
-        fv_step(
-          1, "Select series",
-          selectInput("fv_entity", NULL, choices = ents,
-                      selected = default_entity, width = "100%"),
-          "Choose the forecast series to inspect."
-        ),
+      tags$div(
+        class = "fv-setup",
+        tags$div(
+          class = "fv-setup-panel",
+          tags$div(class = "fv-setup-title", "Set up the backtest view"),
 
-        fv_step(
-          2, "Select model",
-          selectInput("fv_model", NULL, choices = default_models,
-                      selected = default_model, width = "100%"),
-          "Models are shown based on the forecast artifacts available for the selected series.",
-          extra = uiOutput("fv_model_note")
-        ),
-
-        fv_step(
-          3, "Select horizon",
-          selectInput("fv_horizon", NULL,
-                      choices = fv_horizon_choices(), selected = 30, width = "100%"),
-          "Forecast horizon in days (5\u201360). If fewer forecast points exist, only the available points are shown."
-        ),
-
-        fv_step(
-          4, "Select history window",
-          selectInput("fv_history", NULL,
-                      choices = c("Last 30 days" = 30, "Last 60 days" = 60,
-                                  "Last 90 days" = 90, "Last 180 days" = 180,
-                                  "All history" = 0),
-                      selected = 90, width = "100%"),
-          "How much actual history to show before the forecast. If fewer points exist, all available history is shown."
+          fv_step(
+            1, "Select series",
+            selectInput("fvp_series", NULL, choices = bt_series,
+                        selected = bt_default, width = "100%"),
+            "Choose one of the 39 eligible multi-model series."
+          ),
+          fv_step(
+            2, "Select models",
+            uiOutput("fvp_model_groups"),
+            "Tick one or more models. Grouped by family; \u2605 marks the selected challenger champion and \u26A0 marks higher-risk models (still selectable).",
+            extra = uiOutput("fvp_model_count")
+          ),
+          fv_step(
+            3, "Select horizon",
+            tagList(
+              radioButtons("fvp_horizon", NULL, choices = horizon_named,
+                           selected = "5", inline = TRUE),
+              tags$div(
+                class = "fv-horizon-unavail",
+                lapply(horizon_unavail, function(h)
+                  tags$span(class = "fv-horizon-chip is-disabled",
+                            title = "Not available in current artifact",
+                            paste0(h, " days"))),
+                tags$span(class = "fv-horizon-unavail-note",
+                          "Not available in current artifact")
+              )
+            ),
+            "The artifact covers 5\u201330 day horizons. 35 and 45 are shown disabled because they do not exist in the governed data."
+          ),
+          fv_step(
+            4, "Select history window",
+            selectInput("fvp_history", NULL,
+                        choices = c("Last 90 days" = 90, "Last 180 days" = 180,
+                                    "Full available window" = 0),
+                        selected = 0, width = "100%"),
+            "How much of the backtest date range to show."
+          ),
+          tags$div(
+            class = "fv-step fv-step-action",
+            tags$div(
+              class = "fv-step-head",
+              tags$span(class = "fv-step-num", "5"),
+              tags$span(class = "fv-step-title", "Analyze")
+            ),
+            actionButton("fvp_go", "Analyze Backtest", class = "fv-analyze-btn"),
+            tags$p(class = "fv-step-hint",
+                   "The chart updates only after you click Analyze Backtest. Changing selectors does not auto-refresh.")
+          ),
+          tags$p(class = "fv-entity-note",
+                 "Series, models and values are read directly from the governed Stage 05H full artifact.")
         ),
 
         tags$div(
-          class = "fv-step fv-step-action",
+          class = "fv-result",
           tags$div(
             class = "fv-step-head",
-            tags$span(class = "fv-step-num", "5"),
-            tags$span(class = "fv-step-title", "Analyze")
+            tags$span(class = "fv-step-num", "6"),
+            tags$span(class = "fv-step-title", "Backtest chart")
           ),
-          actionButton("fv_go", "Analyze forecast", class = "fv-analyze-btn"),
-          tags$p(class = "fv-step-hint",
-                 "The chart renders only after you click Analyze forecast.")
-        ),
-
-        tags$p(class = "fv-entity-note",
-               "Series names are read directly from the governed entity / forecast artifacts.")
-      ),
-
-      # Right-hand result column: empty state until the button is clicked, then
-      # the data-availability panel + interactive chart (rendered server-side).
-      tags$div(
-        class = "fv-result",
-        uiOutput("fv_view")
+          tags$div(
+            class = "fv-chart-wrap",
+            highcharter::highchartOutput("fvp_chart", height = "520px")
+          ),
+          tags$div(
+            class = "fv-notes-head",
+            tags$span(class = "fv-step-num", "7"),
+            tags$span(class = "fv-step-title", "Data notes")
+          ),
+          uiOutput("fvp_notes"),
+          tags$div(
+            class = "fv-warn-card",
+            tags$ul(
+              class = "fv-warn-list",
+              tags$li(tags$span(class = "pill pill-amber", "Backtest"),
+                      "This section uses historical backtest comparison data. Actual values are already known. This is for comparing model behavior, not future production forecast."),
+              tags$li(tags$span(class = "pill pill-slate", "No intervals"),
+                      "Prediction intervals are not available in this artifact, so only point forecasts are drawn.")
+            )
+          )
+        )
       )
     ),
 
-    # F. Methodology note ----------------------------------------------------
+    # =====================================================================
+    # SECTION 2 - FORWARD FORECAST (production forecast + actual history)
+    # =====================================================================
+    tags$section(
+      class = "fvx-section fvx-forward",
+      tags$div(
+        class = "fvx-section-head",
+        tags$span(class = "fvx-section-kicker", "Section 2"),
+        tags$h3(class = "fvx-section-title", "Forward Forecast"),
+        tags$span(class = "pill pill-teal", "Future \u00b7 single-model")
+      ),
+      tags$p(
+        class = "fvx-section-lead",
+        "Actual history up to the last actual date, then the forward production forecast after that point. ",
+        "Sources: ", tags$code("actuals.csv"), " + ", tags$code("forecasts.csv"),
+        " (45 series, one selected model per series)."
+      ),
+
+      tags$div(
+        class = "fv-setup",
+        tags$div(
+          class = "fv-setup-panel",
+          tags$div(class = "fv-setup-title", "Set up the forward view"),
+
+          fv_step(
+            1, "Select series",
+            selectInput("fvf_series", NULL, choices = fw_series,
+                        selected = if (length(fw_series)) fw_series[[1]] else NULL,
+                        width = "100%"),
+            "Choose one of the 45 production series."
+          ),
+          fv_step(
+            2, "Forecast window",
+            selectInput("fvf_window", NULL,
+                        choices = c("Next 30 days" = 30, "Next 90 days" = 90,
+                                    "Next 180 days" = 180,
+                                    "Full forecast window" = 0),
+                        selected = 90, width = "100%"),
+            "How far into the future to draw the forward forecast line."
+          ),
+          fv_step(
+            3, "Actual history window",
+            selectInput("fvf_history", NULL,
+                        choices = c("Last 90 actual days" = 90,
+                                    "Last 180 actual days" = 180,
+                                    "Last 365 actual days" = 365),
+                        selected = 180, width = "100%"),
+            "How much observed history to show before the forecast start boundary."
+          ),
+          tags$div(
+            class = "fv-step fv-step-action",
+            tags$div(
+              class = "fv-step-head",
+              tags$span(class = "fv-step-num", "4"),
+              tags$span(class = "fv-step-title", "Analyze")
+            ),
+            actionButton("fvf_go", "Analyze Forward Forecast",
+                         class = "fv-analyze-btn fv-analyze-btn-fwd"),
+            tags$p(class = "fv-step-hint",
+                   "The chart updates only after you click Analyze Forward Forecast. Changing selectors does not auto-refresh.")
+          ),
+          uiOutput("fvf_model_note"),
+          tags$p(class = "fv-entity-note",
+                 "Actual history and the forward production forecast are read directly from governed artifacts.")
+        ),
+
+        tags$div(
+          class = "fv-result",
+          tags$div(
+            class = "fv-step-head",
+            tags$span(class = "fv-step-num", "5"),
+            tags$span(class = "fv-step-title", "Forward chart")
+          ),
+          tags$div(
+            class = "fv-chart-wrap",
+            highcharter::highchartOutput("fvf_chart", height = "520px")
+          ),
+          tags$div(
+            class = "fv-notes-head",
+            tags$span(class = "fv-step-num", "6"),
+            tags$span(class = "fv-step-title", "Data notes")
+          ),
+          uiOutput("fvf_notes"),
+          tags$div(
+            class = "fv-warn-card fv-warn-card-fwd",
+            tags$ul(
+              class = "fv-warn-list",
+              tags$li(tags$span(class = "pill pill-teal", "Forward"),
+                      "This section uses the forward production forecast artifact. It is a single selected forecast per series, not a multi-model comparison."),
+              tags$li(tags$span(class = "pill pill-slate", "Boundary"),
+                      "The vertical \u201cForecast start\u201d line marks the last actual date; everything to its right is projected, not observed.")
+            )
+          )
+        )
+      )
+    ),
+
+    # B. Methodology note ----------------------------------------------------
     tags$p(
       class = "fv-method-note",
-      "This page visualizes existing forecast artifacts only. It does not generate new forecasts or recalculate model outputs."
+      "This page visualizes existing governed artifacts only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion. Backtest and Forward Forecast are deliberately kept as separate views."
     )
   )
 }

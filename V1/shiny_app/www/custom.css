@@ -944,6 +944,40 @@ body {
   .fv-avail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* Block 7.11-PILOT-REBIND : pilot multi-model viewer extras --------------- */
+.fvp-model-grid { display: flex; flex-direction: column; gap: 10px; }
+.fvp-fam-group {
+  border: 1px solid #e3e9f1; border-radius: 9px;
+  padding: 8px 11px 4px; background: #fbfdff;
+}
+.fvp-fam-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: #486581; margin-bottom: 4px;
+}
+.fvp-fam-group .checkbox label,
+.fvp-fam-group .shiny-options-group label { font-size: 13px; color: #243b53; }
+.fv-notes-head, .fv-result > .fv-step-head { margin: 18px 0 8px; }
+.fv-warn-card {
+  margin-top: 12px; background: #fcf6ec; border: 1px solid #ecdcc0;
+  border-radius: 10px; padding: 10px 14px;
+}
+.fv-warn-list { list-style: none; margin: 0; padding: 0; }
+.fv-warn-list li {
+  display: flex; align-items: baseline; gap: 8px;
+  font-size: 12.5px; color: #6b5733; padding: 4px 0;
+}
+.pill-slate {
+  background: #e1e8f0; color: #486581;
+}
+.theme-dark .fvp-fam-group { background: #11253b; border-color: #23374f; }
+.theme-dark .fvp-fam-label { color: #9fb0c4; }
+.theme-dark .fvp-fam-group .checkbox label,
+.theme-dark .fvp-fam-group .shiny-options-group label { color: #cfe0f2; }
+.theme-dark .fv-warn-card { background: #2a2516; border-color: #4a4127; }
+.theme-dark .fv-warn-list li { color: #d8c79e; }
+.theme-dark .pill-slate { background: #23374f; color: #9fb0c4; }
+
+
 /* Dark theme */
 .theme-dark .fv-setup-panel { background: #15263b; border-color: #23374f; box-shadow: none; }
 .theme-dark .fv-setup-title { color: #9fb0c4; }
@@ -970,3 +1004,72 @@ body {
 .theme-dark .fv-avail-note { background: #3a2f1c; color: #e0b878; border-left-color: #d9a441; }
 .theme-dark .fv-chart-wrap { background: #15263b; border-color: #23374f; box-shadow: none; }
 .theme-dark .fv-method-note { color: #9fb0c4; }
+
+/* =====================================================================
+   Block 7.11-FULL-REBIND | Forecast Viewer two-section layout
+   ===================================================================== */
+/* Distinct, well-separated sections: Backtest (blue) vs Forward (teal). */
+.fvx-section {
+  border: 1px solid #e3e9f1; border-radius: 14px;
+  padding: 18px 20px 20px; margin: 18px 0;
+  background: #ffffff; box-shadow: 0 1px 3px rgba(16,42,67,.05);
+  border-top: 4px solid #2e75b6;
+}
+.fvx-forward { border-top-color: #0f9d6e; }
+.fvx-section-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.fvx-section-kicker {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: #829ab1;
+  border: 1px solid #d9e2ec; border-radius: 20px; padding: 2px 9px;
+}
+.fvx-section-title { font-size: 18px; font-weight: 700; color: #102a43; margin: 0; }
+.fvx-backtest .fvx-section-title { color: #1f3864; }
+.fvx-forward .fvx-section-title { color: #0b3d2e; }
+.fvx-section-lead {
+  font-size: 13px; color: #627d98; margin: 8px 0 14px; line-height: 1.55; max-width: 920px;
+}
+.fvx-section-lead code {
+  background: #f1f5f9; color: #334155; padding: 1px 6px; border-radius: 5px;
+  font-size: 12px;
+}
+.pill-teal { background: #d4f3ea; color: #0b6b52; }
+
+/* Disabled horizon chips (35 / 45 do not exist in the artifact). */
+.fv-horizon-unavail { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.fv-horizon-chip {
+  display: inline-block; font-size: 12px; padding: 3px 9px; border-radius: 7px;
+  border: 1px dashed #cbd5e1; color: #94a3b8; background: #f8fafc;
+}
+.fv-horizon-chip.is-disabled { cursor: not-allowed; text-decoration: line-through; }
+.fv-horizon-unavail-note { font-size: 11px; color: #b0879b; font-style: italic; }
+
+/* Forward Analyze button uses the teal accent to match its section. */
+.fv-analyze-btn-fwd { background: #0b6b52; }
+.fv-analyze-btn-fwd:hover { background: #0f9d6e; }
+
+/* Forward warning card (teal-tinted to distinguish from backtest amber). */
+.fv-warn-card-fwd { background: #eafaf4; border-color: #c2e9da; }
+.fv-warn-card-fwd .fv-warn-list li { color: #2f5e50; }
+
+/* Visual cleanup: let multi-value cards (date range / long model_version)
+   wrap instead of truncating. */
+.fv-avail-value { white-space: normal; overflow: visible; text-overflow: clip;
+  font-size: 14px; line-height: 1.35; word-break: break-word; }
+.fv-avail-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1280px) { .fv-avail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px)  { .fv-avail-grid { grid-template-columns: 1fr; } }
+
+/* Dark theme for the two-section layout. */
+.theme-dark .fvx-section { background: #13243a; border-color: #23374f; box-shadow: none; }
+.theme-dark .fvx-section-title { color: #e8eef6; }
+.theme-dark .fvx-backtest .fvx-section-title { color: #bcd4f2; }
+.theme-dark .fvx-forward .fvx-section-title { color: #9fe6cd; }
+.theme-dark .fvx-section-kicker { color: #9fb0c4; border-color: #2a3f59; }
+.theme-dark .fvx-section-lead { color: #9fb0c4; }
+.theme-dark .fvx-section-lead code { background: #0f1d2e; color: #cfe0f2; }
+.theme-dark .pill-teal { background: #123f33; color: #7fe3c6; }
+.theme-dark .fv-horizon-chip { background: #0f1d2e; border-color: #2a3f59; color: #6b7f96; }
+.theme-dark .fv-horizon-unavail-note { color: #c08fa6; }
+.theme-dark .fv-warn-card-fwd { background: #112e26; border-color: #1f4d3f; }
+.theme-dark .fv-warn-card-fwd .fv-warn-list li { color: #9fd6c4; }
+

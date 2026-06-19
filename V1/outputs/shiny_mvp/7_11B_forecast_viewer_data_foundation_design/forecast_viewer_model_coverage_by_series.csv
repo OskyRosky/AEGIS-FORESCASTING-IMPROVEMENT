@@ -1,0 +1,79 @@
+"series_key","model_name","model_origin","model_family","display_family","eligible_for_champion","selected_champion","final_status","risk_flag"
+"APC-Dedicated","FixedGrowth_1_5","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","FixedGrowth_3","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","FixedGrowth_4","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","FixedGrowth_6","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","LightGBM","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","LinearRegression","baseline","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","XGBoost","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","FastNeuralAR_MLP","challenger","lightweight_neural","neural_lightweight_high_risk",FALSE,FALSE,"active_tournament_model",TRUE
+"APC-Dedicated","ARIMA_Fixed","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","AutoARIMA","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","ETS Explicit","challenger","statistical","statistical",TRUE,TRUE,"selected_champion",FALSE
+"APC-Dedicated","ETS_Current","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Dedicated","Theta","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","FixedGrowth_1_5","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","FixedGrowth_3","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","FixedGrowth_4","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","FixedGrowth_6","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","LightGBM","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","LinearRegression","baseline","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","XGBoost","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","FastNeuralAR_MLP","challenger","lightweight_neural","neural_lightweight_high_risk",FALSE,FALSE,"active_tournament_model",TRUE
+"APC-MSIT","ARIMA_Fixed","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","AutoARIMA","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","ETS Explicit","challenger","statistical","statistical",TRUE,TRUE,"selected_champion",FALSE
+"APC-MSIT","ETS_Current","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-MSIT","Theta","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","FixedGrowth_1_5","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","FixedGrowth_3","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","FixedGrowth_4","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","FixedGrowth_6","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","LightGBM","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","LinearRegression","baseline","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","XGBoost","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","FastNeuralAR_MLP","challenger","lightweight_neural","neural_lightweight_high_risk",FALSE,FALSE,"active_tournament_model",TRUE
+"APC-Multitenant","ARIMA_Fixed","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","AutoARIMA","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","ETS Explicit","challenger","statistical","statistical",TRUE,TRUE,"selected_champion",FALSE
+"APC-Multitenant","ETS_Current","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"APC-Multitenant","Theta","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","FixedGrowth_1_5","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","FixedGrowth_3","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","FixedGrowth_4","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","FixedGrowth_6","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","LightGBM","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","LinearRegression","baseline","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","XGBoost","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","FastNeuralAR_MLP","challenger","lightweight_neural","neural_lightweight_high_risk",FALSE,FALSE,"active_tournament_model",TRUE
+"ARE-Go Local","ARIMA_Fixed","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","AutoARIMA","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","ETS Explicit","challenger","statistical","statistical",TRUE,TRUE,"selected_champion",FALSE
+"ARE-Go Local","ETS_Current","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"ARE-Go Local","Theta","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","FixedGrowth_1_5","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","FixedGrowth_3","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","FixedGrowth_4","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","FixedGrowth_6","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","LightGBM","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","LinearRegression","baseline","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","XGBoost","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","FastNeuralAR_MLP","challenger","lightweight_neural","neural_lightweight_high_risk",FALSE,FALSE,"active_tournament_model",TRUE
+"AUS-Go Local","ARIMA_Fixed","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","AutoARIMA","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","ETS Explicit","challenger","statistical","statistical",TRUE,TRUE,"selected_champion",FALSE
+"AUS-Go Local","ETS_Current","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"AUS-Go Local","Theta","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","FixedGrowth_1_5","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","FixedGrowth_3","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","FixedGrowth_4","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","FixedGrowth_6","baseline","growth_baseline","baseline_reference",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","LightGBM","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","LinearRegression","baseline","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","XGBoost","challenger","machine_learning","machine_learning",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","FastNeuralAR_MLP","challenger","lightweight_neural","neural_lightweight_high_risk",FALSE,FALSE,"active_tournament_model",TRUE
+"BRA-Go Local","ARIMA_Fixed","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","AutoARIMA","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","ETS Explicit","challenger","statistical","statistical",TRUE,TRUE,"selected_champion",FALSE
+"BRA-Go Local","ETS_Current","baseline","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE
+"BRA-Go Local","Theta","challenger","statistical","statistical",TRUE,FALSE,"active_tournament_model",FALSE

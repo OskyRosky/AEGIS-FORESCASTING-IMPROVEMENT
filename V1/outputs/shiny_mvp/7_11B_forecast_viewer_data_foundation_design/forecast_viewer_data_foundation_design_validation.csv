@@ -1,0 +1,25 @@
+check_name,status,details
+no_shiny_files_modified,pass,No edits to tabs.R/server.R/data_loader.R/CSS/sidebar/header/footer; only new files under 7_11B_forecast_viewer_data_foundation_design created
+no_source_data_modified,pass,data/processed read-only; nothing written there
+no_model_outputs_modified,pass,outputs/model_lab read-only; nothing written there
+no_governance_outputs_modified,pass,outputs/governance untouched
+no_audit_outputs_modified,pass,audit artifacts untouched
+no_forecasts_generated,pass,No forecasting executed; existing artifacts only read
+no_models_run,pass,No model fitting/inference performed
+no_metrics_recalculated,pass,No metric recomputation
+no_packages_installed,pass,Only pre-existing readr/dplyr used
+no_synthetic_data_created,pass,No synthetic forecasts; consolidated artifact NOT created
+blueprint_reviewed,pass,updated_tesseract_forecast_improvement_blueprint.md reviewed (stages 3-7)
+stage_ownership_identified,pass,Stage 5 Model Lab -> Stage 7 handoff artifact
+all_available_series_inventoried,pass,45 series inventoried; 39 multimodel + 6 final-only
+representative_mvp_series_proposed,pass,APC-Dedicated/APC-MSIT/APC-Multitenant/ARE-Go Local/AUS-Go Local (+BRA-Go Local)
+model_coverage_by_series_computed,pass,13 models/series across 4 active families for 39 series
+confidence_interval_availability_checked,pass,0 forecast-timeseries artifacts have prediction bands; 8 metric-level CIs only
+artifact_engineering_options_compared,pass,CSV/parquet/partitioned/per-file/wide compared; long-format single file recommended
+recommended_schema_produced,pass,22-column long-format schema with required/optional/future flags
+future_artifact_creation_plan_produced,pass,Join plan + validations documented; artifact NOT created
+shiny_consumption_plan_produced,pass,Series/model/horizon/history/Analyze flow + static-chart fix documented
+governance_plan_produced,pass,Manifest + build validations + runtime no-recompute documented
+limitations_stated_clearly,pass,Backtest-only / 39-of-45 / no deep learning / no intervals / AUDIT#2 caveat
+deep_learning_forecasts_available,fail,NBEATS/NHITS deferred; no deep-learning forecast rows exist (expected)
+prediction_intervals_available,fail,No lower/upper bounds in any forecast time-series artifact (expected)

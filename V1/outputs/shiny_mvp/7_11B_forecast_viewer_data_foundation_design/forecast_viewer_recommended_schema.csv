@@ -1,0 +1,23 @@
+column,required_now,optional_now,future_extension,type,description,source
+series_key,TRUE,FALSE,FALSE,string,Stable entity/series join key (e.g. APC-Dedicated),entities.csv / forecasts.csv / model_lab
+series_label,TRUE,FALSE,FALSE,string,Human-readable series name (initially = series_key),entities.csv
+date,TRUE,FALSE,FALSE,date,Target date of the forecast/actual point,forecast_date (model_lab) / date (processed)
+actual_value,TRUE,FALSE,FALSE,double,Observed actual at date (NA where unknown),actuals.csv / challenger_actual_forecast_join.csv
+model_name,TRUE,FALSE,FALSE,string,Model identifier (multiple rows per series),full_baseline + challenger_actual_forecast_join
+model_origin,TRUE,FALSE,FALSE,string,baseline | challenger,model_lab_final_model_universe.csv
+model_family,TRUE,FALSE,FALSE,string,statistical | machine_learning | growth_baseline | lightweight_neural,model_lab_final_model_universe.csv
+forecast_value,TRUE,FALSE,FALSE,double,Point forecast value,full_baseline + challenger forecasts
+forecast_type,TRUE,FALSE,FALSE,string,backtest | final_production,derived (artifact provenance)
+horizon_days,FALSE,TRUE,FALSE,integer,Days between forecast_start_date and date,horizon_day (model_lab)
+forecast_start_date,FALSE,TRUE,FALSE,date,Origin date the forecast was issued from,derived from window_id / run
+run_id,FALSE,TRUE,FALSE,string,Execution/run identifier for provenance,full_baseline + challenger forecasts
+source_artifact,TRUE,FALSE,FALSE,string,Originating governed artifact path,derived (provenance)
+is_baseline,FALSE,TRUE,FALSE,boolean,TRUE if model_origin == baseline,derived
+is_challenger,FALSE,TRUE,FALSE,boolean,TRUE if model_origin == challenger,derived
+is_deferred,FALSE,TRUE,FALSE,boolean,TRUE for models defined but not executed (NBEATS/NHITS),model_lab_final_model_universe.csv
+is_selected_champion,FALSE,TRUE,FALSE,boolean,TRUE for selected_champion (ETS Explicit),model_lab_final_model_universe.csv
+risk_status,FALSE,TRUE,FALSE,string,ok | high_risk (from risk_flag),model_lab_final_model_universe.csv
+window_id,FALSE,TRUE,FALSE,string,Backtest window identifier,full_baseline + challenger forecasts
+lower_bound,FALSE,FALSE,TRUE,double,Lower prediction-interval bound (NOT available today),future model-output extension
+upper_bound,FALSE,FALSE,TRUE,double,Upper prediction-interval bound (NOT available today),future model-output extension
+interval_level,FALSE,FALSE,TRUE,double,Nominal interval coverage e.g. 0.80/0.95 (NOT available today),future model-output extension

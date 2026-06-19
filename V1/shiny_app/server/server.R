@@ -1,114 +1,217 @@
-# TESSERACT v2 | server.R | read-only server (Block 7.11 Forecast Viewer)
+# TESSERACT v2 | server.R | read-only server (Block 7.11-FULL-REBIND Forecast Viewer)
 
 app_server <- function(input, output, session) {
 
-  # --- Forecast Viewer (FORECASTING / Viewer) ------------------------------
-  # Read-only reactivity: filters existing governed forecast/actual rows.
-  # No model runs, no forecast generation, no metric recompute.
+  # --- Forecast Viewer SECTION 1 : BACKTEST COMPARISON (full artifact) ------
+  # Read-only reactivity: filters / reshapes existing rows from the Stage 05H
+  # FULL artifact (forecast_viewer_model_outputs.csv) for charting only.
+  # No model runs, no forecast generation, no metric recompute, no champion
+  # change, and no persisted reshaped data.
 
-  # Keep the model selector in sync with the chosen entity.
-  observeEvent(input$fv_entity, {
-    models <- fv_models_for_entity(input$fv_entity)
-    sel    <- if (length(models)) models[[1]] else character(0)
-    updateSelectInput(session, "fv_model", choices = models, selected = sel)
-  }, ignoreInit = TRUE)
+  fvp_all <- fvp_data()  # cached governed read (parsed once at loader init)
 
-  # Honest model-availability note under the model selector (reacts live to the
-  # selected entity, before the chart is rendered).
-  output$fv_model_note <- renderUI({
-    ent     <- input$fv_entity
-    models  <- fv_models_for_entity(ent)
-    glob    <- fv_model_count_global()
-    n_ent   <- length(models)
-    note <- if (n_ent <= 1) {
-      "Only one model is available for this selected series in the current forecast artifact."
-    } else {
-      paste0(n_ent, " models are available for this selected series.")
+  # Grouped model checkboxes for the selected series (re-renders on series
+  # change). One checkboxGroupInput per model family; recommended defaults are
+  # pre-ticked where available.
+  output$fvp_model_groups <- renderUI({
+    series <- input$fvp_series
+    meta   <- fvp_model_meta(series, fvp_all)
+    if (nrow(meta) == 0) {
+      return(tags$p(class = "fv-step-hint",
+                    "No models are available for this series in the pilot artifact."))
     }
-    tags$div(
-      class = "fv-model-note",
-      tags$div(class = "fv-model-note-line", note),
-      tags$div(class = "fv-model-note-diag",
-               paste0("Available models for selected series: ", n_ent,
-                      "  \u00b7  Total models in forecast artifacts: ", glob))
-    )
-  })
-
-  # Snapshot the chosen setup ONLY when the user clicks "Analyze forecast".
-  # eventReactive does not fire on init, so nothing renders before the click.
-  fv_request <- eventReactive(input$fv_go, {
-    list(
-      entity  = input$fv_entity,
-      model   = input$fv_model,
-      horizon = suppressWarnings(as.numeric(input$fv_horizon)),
-      history = suppressWarnings(as.numeric(input$fv_history))
-    )
-  })
-
-  # Result column: empty state until the first click, then availability + chart.
-  output$fv_view <- renderUI({
-    if (is.null(input$fv_go) || input$fv_go == 0) {
-      return(tags$div(
-        class = "fv-empty-card",
-        tags$div(class = "fv-empty-icon", "\u25C8"),
-        tags$div(class = "fv-empty-title", "No forecast rendered yet"),
-        tags$p(class = "fv-empty-text",
-               "Choose a series, model, horizon, and history window, then click Analyze forecast to render the forecast.")
-      ))
-    }
-    tagList(
-      uiOutput("fv_availability"),
+    defaults <- intersect(fvp_default_models(), meta$model_name)
+    fams <- FVP_FAMILY_ORDER[FVP_FAMILY_ORDER %in% meta$model_family]
+    groups <- lapply(fams, function(fam) {
+      rows <- meta[meta$model_family == fam, , drop = FALSE]
+      choice_names <- lapply(seq_len(nrow(rows)), function(i) {
+        tags$span(fvp_model_label(rows$model_name[i],
+                                  rows$is_selected_champion[i],
+                                  rows$risk_status[i]))
+      })
       tags$div(
-        class = "fv-chart-wrap",
-        highcharter::highchartOutput("fv_chart", height = "480px")
+        class = "fvp-fam-group",
+        tags$div(class = "fvp-fam-label",
+                 if (!is.na(FVP_FAMILY_LABELS[fam])) FVP_FAMILY_LABELS[[fam]] else fam),
+        checkboxGroupInput(
+          inputId  = paste0("fvp_models_", fam),
+          label    = NULL,
+          choiceNames  = choice_names,
+          choiceValues = as.list(rows$model_name),
+          selected = intersect(defaults, rows$model_name)
+        )
       )
-    )
+    })
+    tags$div(class = "fvp-model-grid", groups)
   })
 
-  # E. Data-availability / explanation panel (snapshot of the analyzed setup).
-  output$fv_availability <- renderUI({
-    r  <- fv_request()
-    av <- fv_availability(r$entity, r$model, r$horizon, r$history)
+  # Combined currently-selected models across the per-family checkbox groups.
+  fvp_selected_models <- reactive({
+    sel <- unlist(lapply(FVP_FAMILY_ORDER, function(f) {
+      input[[paste0("fvp_models_", f)]]
+    }), use.names = FALSE)
+    sel <- sel[!is.na(sel) & nzchar(sel)]
+    unique(sel)
+  })
+
+  # Live count of selected models (under the model picker, before Analyze).
+  output$fvp_model_count <- renderUI({
+    n <- length(fvp_selected_models())
+    txt <- if (n == 0) {
+      "No models selected yet \u2014 tick at least one model."
+    } else {
+      paste0(n, if (n == 1) " model selected." else " models selected.")
+    }
+    tags$div(class = "fv-model-note",
+             tags$div(class = "fv-model-note-line", txt))
+  })
+
+  # Snapshot the chosen setup ONLY when the user clicks "Analyze Forecast".
+  fvp_request <- eventReactive(input$fvp_go, {
+    list(
+      series  = input$fvp_series,
+      models  = fvp_selected_models(),
+      horizon = suppressWarnings(as.numeric(input$fvp_horizon)),
+      history = suppressWarnings(as.numeric(input$fvp_history))
+    )
+  }, ignoreNULL = FALSE)
+
+  # STATIC chart: the container is always in the DOM (declared in tabs.R), which
+  # fixes the previous blank-chart regression. Before the first Analyze click we
+  # render a calm empty state into the live container; afterwards we render the
+  # multi-model chart from the analyzed snapshot.
+  output$fvp_chart <- highcharter::renderHighchart({
+    if (is.null(input$fvp_go) || input$fvp_go == 0) {
+      return(fvp_empty_chart(
+        "Select a series, tick one or more models, choose a horizon, then click Analyze Forecast."))
+    }
+    r <- fvp_request()
+    if (length(r$models) == 0) {
+      return(fvp_empty_chart(
+        "No models selected \u2014 tick at least one model and click Analyze Forecast again."))
+    }
+    fvp_chart(r$series, r$models, r$horizon, r$history, fvp_all)
+  })
+
+  # Data notes (Section 7): snapshot of what the chart is showing.
+  output$fvp_notes <- renderUI({
+    if (is.null(input$fvp_go) || input$fvp_go == 0) {
+      return(tags$p(class = "fv-step-hint",
+                    "Click Analyze Backtest to see a summary of the rendered series, models, horizon and date range."))
+    }
+    r <- fvp_request()
+    s <- fvp_summary(r$series, r$models, r$horizon, r$history, fvp_all)
     cell <- function(label, value) {
       tags$div(class = "fv-avail-card",
                tags$div(class = "fv-avail-label", label),
                tags$div(class = "fv-avail-value", value))
     }
-    horizon_val <- if (av$horizon_clipped) {
-      paste0(av$horizon_displayed, " of ", av$horizon_requested, " (clipped)")
-    } else {
-      as.character(av$horizon_displayed)
-    }
+    models_txt <- if (s$n_models == 0) "\u2014" else paste(s$models, collapse = ", ")
     tagList(
-      tags$div(class = "fv-avail-title", "Forecast data availability"),
       tags$div(
         class = "fv-avail-grid",
-        cell("Selected entity", av$entity),
-        cell("Selected model", av$model),
-        cell("Available forecast points", av$n_forecast_total),
-        cell("Available history points", av$n_actual),
-        cell("Models for this entity", av$n_models_entity),
-        cell("Horizon requested (days)", av$horizon_requested),
-        cell("Horizon points displayed", horizon_val),
-        cell("Models in artifacts (global)", av$n_models_global)
+        cell("Series", s$series),
+        cell("Models selected", s$n_models),
+        cell("Horizon (days)", s$horizon),
+        cell("Actual points", s$n_actual),
+        cell("Forecast points drawn", s$rows_used),
+        cell("Date range", paste0(s$date_min, " \u2192 ", s$date_max))
       ),
-      if (av$horizon_clipped)
+      tags$p(class = "fv-avail-note",
+             paste0("View: historical backtest comparison  \u00b7  source: ",
+                    "forecast_viewer_model_outputs.csv  \u00b7  models drawn: ",
+                    models_txt, ".")),
+      if (s$rows_used == 0 && s$n_actual == 0)
         tags$p(class = "fv-avail-note",
-               "Requested horizon exceeds the available forecast points for this series/model \u2014 showing all available points."),
-      if (av$n_forecast_total == 0 && av$n_actual == 0)
-        tags$p(class = "fv-avail-note",
-               "No forecast data is available for this selected series/model/horizon.")
+               "No data was found for this series / model / horizon combination in the full artifact.")
     )
   })
 
-  # Main interactive highcharter chart (driven by the analyzed snapshot).
-  output$fv_chart <- highcharter::renderHighchart({
-    r <- fv_request()
-    fv_chart(r$entity, r$model, r$horizon, r$history)
+  # --- Forecast Viewer SECTION 2 : FORWARD FORECAST ------------------------
+  # Read-only: observed actuals (actuals.csv) + forward production forecast
+  # (forecasts.csv). Single model_version per series, no multi-model picker,
+  # no horizon selector. Action-gated on the "Analyze Forward Forecast" button.
+  fvf_fdf <- fvf_forecasts()   # cached governed read (forward production)
+  fvf_adf <- fvf_actuals()     # cached governed read (observed history)
+
+  # Production model metadata for the selected series (updates on series change,
+  # but only as a metadata note - it does NOT draw the chart).
+  output$fvf_model_note <- renderUI({
+    series <- input$fvf_series
+    mver   <- fvf_model_version(series, fvf_fdf)
+    bnd    <- fvf_boundary_date(series, fvf_adf)
+    bnd_txt <- if (is.na(bnd)) "\u2014" else format(bnd, "%Y-%m-%d")
+    tags$div(class = "fv-model-note",
+             tags$div(class = "fv-model-note-line",
+                      paste0("Production model: ", mver)),
+             tags$div(class = "fv-model-note-diag",
+                      paste0("Last actual (forecast start boundary): ", bnd_txt,
+                             ". Single-model forward forecast \u2014 no model comparison here.")))
   })
-  # Render even while the section is hidden so it is ready on first navigation;
-  # custom.js dispatches a resize when the section is shown to reflow the chart.
-  outputOptions(output, "fv_chart", suspendWhenHidden = FALSE)
+
+  # Snapshot the forward setup ONLY when "Analyze Forward Forecast" is clicked.
+  fvf_request <- eventReactive(input$fvf_go, {
+    list(
+      series  = input$fvf_series,
+      window  = suppressWarnings(as.numeric(input$fvf_window)),
+      history = suppressWarnings(as.numeric(input$fvf_history))
+    )
+  }, ignoreNULL = FALSE)
+
+  # STATIC forward chart container: empty state before the first Analyze click,
+  # then actual history + forward forecast with the "Forecast start" boundary.
+  output$fvf_chart <- highcharter::renderHighchart({
+    if (is.null(input$fvf_go) || input$fvf_go == 0) {
+      return(fvf_empty_chart(
+        "Select a series, a forecast window and an actual-history window, then click Analyze Forward Forecast."))
+    }
+    r <- fvf_request()
+    fvf_chart(r$series, r$window, r$history, fvf_fdf, fvf_adf)
+  })
+
+  # Forward data notes: snapshot of what the forward chart is showing.
+  output$fvf_notes <- renderUI({
+    if (is.null(input$fvf_go) || input$fvf_go == 0) {
+      return(tags$p(class = "fv-step-hint",
+                    "Click Analyze Forward Forecast to see a summary of the actual history, forward forecast and boundary."))
+    }
+    r <- fvf_request()
+    s <- fvf_summary(r$series, r$window, r$history, fvf_fdf, fvf_adf)
+    cell <- function(label, value) {
+      tags$div(class = "fv-avail-card",
+               tags$div(class = "fv-avail-label", label),
+               tags$div(class = "fv-avail-value", value))
+    }
+    tagList(
+      tags$div(
+        class = "fv-avail-grid",
+        cell("Series", s$series),
+        cell("Model version", s$model_version),
+        cell("Forecast start", s$boundary),
+        cell("Actual points", s$n_actual),
+        cell("Forecast points", s$n_forecast),
+        cell("Date range", paste0(s$date_min, " \u2192 ", s$date_max))
+      ),
+      tags$p(class = "fv-avail-note",
+             paste0("View: forward production forecast  \u00b7  source: forecasts.csv + actuals.csv  \u00b7  forecast span: ",
+                    s$fwd_first, " \u2192 ", s$fwd_last, ".")),
+      if (s$n_forecast == 0)
+        tags$p(class = "fv-avail-note",
+               "No forward forecast rows were found after the last actual date for this series.")
+    )
+  })
+
+  # The chart + model picker / count / notes live in a section that is hidden at
+  # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
+  # chart containers and controls are populated on first navigation. custom.js
+  # dispatches a resize when the section is shown to reflow the charts.
+  outputOptions(output, "fvp_chart",        suspendWhenHidden = FALSE)
+  outputOptions(output, "fvp_model_groups", suspendWhenHidden = FALSE)
+  outputOptions(output, "fvp_model_count",  suspendWhenHidden = FALSE)
+  outputOptions(output, "fvp_notes",        suspendWhenHidden = FALSE)
+  outputOptions(output, "fvf_chart",        suspendWhenHidden = FALSE)
+  outputOptions(output, "fvf_model_note",   suspendWhenHidden = FALSE)
+  outputOptions(output, "fvf_notes",        suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }

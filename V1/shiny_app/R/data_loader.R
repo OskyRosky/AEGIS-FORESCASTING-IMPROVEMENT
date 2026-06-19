@@ -148,6 +148,23 @@ build_artifact_registry <- function() {
     c("run_metadata",               "forecasting",  "csv",  "optional",
       "data/processed/run_metadata.csv"),
 
+    # --- Stage 05H FULL multi-model handoff (Forecast Viewer - ACTIVE) ---
+    # Long/tidy historical BACKTEST comparison artifact: 39 eligible series,
+    # 13 models each, horizons 1-30. Read-only; the ACTIVE full Forecast Viewer
+    # Backtest Comparison section consumes ONLY this artifact (Block
+    # 7.11-FULL-REBIND). It is never modified by the app.
+    c("forecast_viewer_full",           "forecasting", "csv", "optional",
+      "data/processed/forecast_viewer_model_outputs.csv"),
+    c("forecast_viewer_full_manifest",  "forecasting", "csv", "optional",
+      "data/processed/forecast_viewer_model_outputs_manifest.csv"),
+
+    # --- Stage 05H pilot multi-model handoff (superseded by full; kept for
+    #     provenance only - the ACTIVE viewer no longer reads the pilot). ---
+    c("forecast_viewer_pilot",          "forecasting", "csv", "optional",
+      "data/processed/forecast_viewer_model_outputs_pilot.csv"),
+    c("forecast_viewer_pilot_manifest", "forecasting", "csv", "optional",
+      "data/processed/forecast_viewer_model_outputs_pilot_manifest.csv"),
+
     # --- TTL / capacity-to-live (no governed artifact yet -> roadmap) ---
     c("ttl_capacity",               "ttl",          "csv",  "roadmap",
       "outputs/model_lab/ttl/ttl_capacity_view.csv")
