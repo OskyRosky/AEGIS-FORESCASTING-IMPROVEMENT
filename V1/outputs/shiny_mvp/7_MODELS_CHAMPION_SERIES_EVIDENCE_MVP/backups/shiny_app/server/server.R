@@ -359,10 +359,10 @@ app_server <- function(input, output, session) {
   })
 
   # ==========================================================================
-  # MODELS / CHAMPION PAGE MVP - BLOCK A + BLOCK B
-  # Governed read-only champion decision display and series-level diagnostic
-  # evidence. No composite score, weights, metrics, forecasts, tournaments, or
-  # champion decisions are computed here.
+  # MODELS / CHAMPION PAGE MVP - BLOCK A
+  # Governed read-only champion decision display. No series-level evidence,
+  # composite score, weights, metrics, forecasts, tournaments, or champion
+  # decisions are computed here.
   # ==========================================================================
   output$champion_conditions_table <- DT::renderDataTable({
     champion_conditions_table()
@@ -370,18 +370,6 @@ app_server <- function(input, output, session) {
 
   output$champion_sources_table <- DT::renderDataTable({
     champion_sources_table()
-  })
-
-  output$champion_leadership_count_chart <- plotly::renderPlotly({
-    champion_leadership_count_chart()
-  })
-
-  output$champion_series_evidence_table <- DT::renderDataTable({
-    champion_series_evidence_table()
-  })
-
-  output$champion_exceptions_table <- DT::renderDataTable({
-    champion_exceptions_table()
   })
 
   # The chart + model picker / count / notes live in a section that is hidden at
@@ -408,9 +396,6 @@ app_server <- function(input, output, session) {
   outputOptions(output, "tournament_pairwise_table",  suspendWhenHidden = FALSE)
   outputOptions(output, "champion_conditions_table",  suspendWhenHidden = FALSE)
   outputOptions(output, "champion_sources_table",     suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_leadership_count_chart", suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_series_evidence_table",  suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_exceptions_table",       suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }

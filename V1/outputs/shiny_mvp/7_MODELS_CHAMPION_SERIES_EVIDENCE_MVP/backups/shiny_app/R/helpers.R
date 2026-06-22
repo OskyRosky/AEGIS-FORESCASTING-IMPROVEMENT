@@ -1242,27 +1242,25 @@ ttl_status_color <- function(status) {
 }
 
 ttl_snapshot <- function() {
-  df <- tryCatch(ttl_provider_snapshot(), error = function(e) data.frame())
+  df <- tryCatch(load_csv_artifact("ttl_months_to_live_snapshot"),
+                 error = function(e) data.frame())
   if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
-  # Canonical schema from the provider + legacy aliases so existing consumers
-  # (table, gauge, summary, heatmap) keep working unchanged.
-  df$entity_key      <- df$forest
-  df$months_to_live  <- suppressWarnings(as.numeric(df$ttl_months))
-  df$supply_now      <- suppressWarnings(as.numeric(df$supply))
-  df$utilization_pct <- suppressWarnings(as.numeric(df$utilization) * 100)
-  df$crossover_date  <- ifelse(is.na(df$intersection_date), "",
-                               as.character(df$intersection_date))
+  df$months_to_live   <- suppressWarnings(as.numeric(df$months_to_live))
+  df$supply_now       <- suppressWarnings(as.numeric(df$supply_now))
+  df$demand_now       <- suppressWarnings(as.numeric(df$demand_now))
+  df$utilization_pct  <- suppressWarnings(as.numeric(df$utilization_pct))
+  df$monthly_growth_rate <- suppressWarnings(as.numeric(df$monthly_growth_rate))
   df
 }
 
 ttl_timeseries <- function() {
-  df <- tryCatch(ttl_provider_timeseries(), error = function(e) data.frame())
+  df <- tryCatch(load_csv_artifact("ttl_supply_demand_timeseries"),
+                 error = function(e) data.frame())
   if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
-  df$entity_key      <- df$forest
   df$month_date      <- as.Date(df$month_date)
   df$demand          <- suppressWarnings(as.numeric(df$demand))
   df$supply          <- suppressWarnings(as.numeric(df$supply))
-  df$utilization_pct <- suppressWarnings(as.numeric(df$utilization) * 100)
+  df$utilization_pct <- suppressWarnings(as.numeric(df$utilization_pct))
   df
 }
 
@@ -1363,11 +1361,8 @@ ttl_gauge <- function(series, snap = ttl_snapshot()) {
     highcharter::hc_credits(enabled = FALSE)
 }
 
-# Demand (red) vs flat Supply (blue horizontal line) over time, following the
-# official TTL model: supply is point-in-time (today), the VERTICAL dashed line
-# marks the intersection DATE, and the YELLOW band spans the TTL runway
-# (today -> crossover). eTTL series add a DASHED demand projection beyond the
-# forecast horizon up to the estimated crossing.
+# Supply (blue step) vs Demand (red line) over time, with a vertical crossover
+# plotLine where demand first reaches supply. Mirrors the AEGIS line chart.
 ttl_line_chart <- function(series, ts = ttl_timeseries(), snap = ttl_snapshot()) {
   if (nrow(ts) == 0 || is.null(series) || !nzchar(series)) {
     return(ttl_empty_chart("No supply/demand series available for this selection."))
@@ -1381,92 +1376,69 @@ ttl_line_chart <- function(series, ts = ttl_timeseries(), snap = ttl_snapshot())
     as.Date(row$crossover_date[[1]])
   } else NA
   status <- if (nrow(row)) as.character(row$ttl_status[[1]]) else "\u2014"
-  method <- if (nrow(row) && "method" %in% names(row)) as.character(row$method[[1]]) else "intersection"
-  mtl    <- if (nrow(row)) row$months_to_live[[1]] else NA
+  mtl <- if (nrow(row)) row$months_to_live[[1]] else NA
   mtl_txt <- if (is.na(mtl)) "no crossover in horizon" else paste0(round(mtl, 1), " months")
 
-  today_date <- min(d$month_date)
-
-  # Adaptive window: today -> a little past the crossover (never clip it).
+  # Adaptive window: keep the crossover comfortably on the RIGHT (~52% in, and
+  # never past ~66%) so it ALWAYS reads as a FUTURE event regardless of how fast
+  # demand climbs. No lower floor on the window: a fixed floor would push the
+  # crossover of very fast-growing (urgent) series back to the LEFT, which is
+  # exactly what we must avoid. Short-TTL series therefore show a compact window.
   if (!is.na(cross_date)) {
-    span_days <- as.numeric(cross_date - today_date)
-    xmax_date <- today_date + span_days * 1.30
-    xmax_date <- max(min(xmax_date, max(d$month_date)), cross_date)
+    start_date <- min(d$month_date)
+    span_days  <- as.numeric(cross_date - start_date)
+    xmax_date  <- start_date + span_days / 0.52
+    xmax_date  <- min(xmax_date, max(d$month_date))
     d <- d[d$month_date <= xmax_date, , drop = FALSE]
   }
 
-  is_proj <- if ("is_projection" %in% names(d)) as.logical(d$is_projection) else rep(FALSE, nrow(d))
-  is_proj[is.na(is_proj)] <- FALSE
-  real_idx <- which(!is_proj)
-  proj_idx <- which(is_proj)
+  dem_df <- data.frame(x = highcharter::datetime_to_timestamp(d$month_date),
+                       y = round(d$demand, 2))
+  sup_df <- data.frame(x = highcharter::datetime_to_timestamp(d$month_date),
+                       y = round(d$supply, 2))
 
-  ts_ms <- function(x) highcharter::datetime_to_timestamp(x)
-  dem_real <- d[real_idx, , drop = FALSE]
-  dem_real_df <- data.frame(x = ts_ms(dem_real$month_date), y = round(dem_real$demand, 2))
-  sup_df      <- data.frame(x = ts_ms(d$month_date),        y = round(d$supply, 2))
-
-  # Yellow TTL-runway band (today -> crossover) + vertical crossover DATE line.
-  x_plotbands <- list()
-  x_plotlines <- list()
-  if (!is.na(cross_date)) {
-    x_plotbands <- list(list(
-      from = ts_ms(today_date), to = ts_ms(cross_date),
-      color = "rgba(253, 174, 97, 0.20)", zIndex = 0,
-      label = list(text = paste0("TTL runway \u00b7 ", mtl_txt),
-                   verticalAlign = "top", y = 16,
-                   style = list(color = "#b45309", fontWeight = "600", fontSize = "10px"))))
-    x_plotlines <- list(list(
-      value = ts_ms(cross_date), color = "#b91c1c", width = 2, dashStyle = "Dash", zIndex = 5,
-      label = list(text = paste0("Crossover \u00b7 ", format(cross_date, "%Y-%m-%d")),
-                   y = 30,
-                   style = list(color = "#b91c1c", fontWeight = "600", fontSize = "11px"))))
-  }
-  # Subtle "today" marker.
-  x_plotlines <- c(x_plotlines, list(list(
-    value = ts_ms(today_date), color = "#94a3b8", width = 1, dashStyle = "Dot", zIndex = 3,
-    label = list(text = "today", style = list(color = "#64748b", fontSize = "10px")))))
-
-  title_mtl <- round(if (is.na(mtl)) TTL_GAUGE_MAX else mtl, 1)
   hc <- highcharter::highchart() |>
     highcharter::hc_chart(
       type = "line", zoomType = "x",
       style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
     highcharter::hc_title(
-      text = paste0(title_mtl, " months TTL based on HDD for ", series),
+      text = paste0(round(if (is.na(mtl)) TTL_GAUGE_MAX else mtl, 1),
+                    " months TTL based on HDD for ", series),
       style = list(fontSize = "14px", fontWeight = "600", color = "#102a43")) |>
     highcharter::hc_subtitle(
-      text = paste0("Demand (forecast, real) vs Supply (point-in-time)  \u00b7  ",
-                    status, "  \u00b7  method: ", method, "  \u00b7  TTL: ", mtl_txt),
+      text = paste0("Demand (forecast, real) vs Supply (simulated)  \u00b7  ",
+                    status, "  \u00b7  TTL: ", mtl_txt),
       style = list(fontSize = "11px", color = "#627d98")) |>
-    highcharter::hc_xAxis(type = "datetime", title = list(text = NULL),
-                          plotLines = x_plotlines, plotBands = x_plotbands) |>
+    highcharter::hc_xAxis(type = "datetime", title = list(text = NULL)) |>
     highcharter::hc_yAxis(title = list(text = "HDD (TB)"), opposite = FALSE) |>
     highcharter::hc_legend(enabled = TRUE) |>
-    highcharter::hc_tooltip(shared = TRUE, xDateFormat = "%Y-%m", valueDecimals = 1) |>
+    highcharter::hc_tooltip(shared = TRUE, xDateFormat = "%Y-%m",
+                            valueDecimals = 1) |>
     highcharter::hc_credits(enabled = FALSE) |>
     highcharter::hc_plotOptions(line = list(marker = list(enabled = FALSE)))
 
-  # Supply: flat blue line = the HORIZONTAL resource threshold to watch.
-  hc <- hc |>
-    highcharter::hc_add_series(
-      name = "Supply (today)", type = "line", color = "#2c7bb6", lineWidth = 2.5,
-      data = highcharter::list_parse2(sup_df), tooltip = list(valueSuffix = " TB")) |>
-    highcharter::hc_add_series(
-      name = "Demand (forecast)", type = "line", color = "#d7191c", lineWidth = 2.5,
-      data = highcharter::list_parse2(dem_real_df), tooltip = list(valueSuffix = " TB"))
-
-  # eTTL dotted projection (bridged from the last real demand point).
-  if (length(proj_idx)) {
-    bridge <- d[real_idx[length(real_idx)], , drop = FALSE]
-    dem_proj <- rbind(bridge, d[proj_idx, , drop = FALSE])
-    dem_proj_df <- data.frame(x = ts_ms(dem_proj$month_date), y = round(dem_proj$demand, 2))
-    hc <- hc |>
-      highcharter::hc_add_series(
-        name = "Demand (eTTL projection)", type = "line", color = "#d7191c",
-        lineWidth = 2, dashStyle = "ShortDash",
-        data = highcharter::list_parse2(dem_proj_df), tooltip = list(valueSuffix = " TB"))
+  if (!is.na(cross_date)) {
+    hc <- hc |> highcharter::hc_xAxis(
+      type = "datetime", title = list(text = NULL),
+      plotLines = list(list(
+        value = highcharter::datetime_to_timestamp(cross_date),
+        color = "#b91c1c", width = 2, dashStyle = "Dash", zIndex = 5,
+        label = list(text = "Crossover",
+                     style = list(color = "#b91c1c", fontWeight = "600",
+                                  fontSize = "11px")))))
   }
-  hc
+
+  hc |>
+    highcharter::hc_add_series(
+      name = "Supply (simulated)", type = "line", step = "left",
+      color = "#2c7bb6", lineWidth = 2.5,
+      data = highcharter::list_parse2(sup_df),
+      tooltip = list(valueSuffix = " TB")) |>
+    highcharter::hc_add_series(
+      name = "Demand (forecast)", type = "line",
+      color = "#d7191c", lineWidth = 2.5,
+      data = highcharter::list_parse2(dem_df),
+      tooltip = list(valueSuffix = " TB"))
 }
 
 # Projected utilization heatmap across ALL series (rows) by month (cols).
@@ -1476,12 +1448,6 @@ ttl_heatmap <- function(ts = ttl_timeseries(), snap = ttl_snapshot(),
   if (nrow(ts) == 0) {
     return(acc_empty_plot(
       "No TTL timeseries available. Generate the prototype artifacts first."))
-  }
-  # eTTL projection rows extend far into the future; keep the fleet heatmap to
-  # the real forecast horizon only.
-  if ("is_projection" %in% names(ts)) {
-    keep <- !as.logical(ts$is_projection); keep[is.na(keep)] <- TRUE
-    ts <- ts[keep, , drop = FALSE]
   }
   ord <- ttl_series_choices(snap)
   ord <- ord[ord %in% unique(ts$entity_key)]
@@ -1999,8 +1965,7 @@ champion_sources_manifest <- function() {
       "outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv",
       "outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv",
       "outputs/model_lab/tournament_engine/tournament_model_scorecard.csv",
-      "outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv",
-      "outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv"
+      "outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv"
     ),
     purpose = c(
       "Formal champion decision and confidence",
@@ -2008,8 +1973,7 @@ champion_sources_manifest <- function() {
       "Governed champion conditions and caveats",
       "Approved, discouraged, and prohibited dashboard language",
       "Supporting governed tournament scorecard evidence",
-      "Supporting governed pairwise tournament evidence",
-      "Series-level diagnostic evidence at entity x model grain"
+      "Supporting governed pairwise tournament evidence"
     ),
     stringsAsFactors = FALSE
   )
@@ -2047,224 +2011,6 @@ champion_sources_table <- function(df = champion_sources_manifest()) {
       scrollX = TRUE,
       dom = "t",
       columnDefs = list(list(className = "dt-left", targets = "_all"))
-    )
-  )
-}
-
-champion_entity_model_scores <- function() {
-  df <- champion_read_csv("outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv")
-  if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
-  for (col in c("median_mase", "median_rmsse", "median_wmape",
-                "median_smape", "median_bias", "entity_weight")) {
-    if (col %in% names(df)) df[[col]] <- suppressWarnings(as.numeric(df[[col]]))
-  }
-  for (col in c("entity_key", "model_name", "model_origin", "model_family")) {
-    if (col %in% names(df)) df[[col]] <- trimws(as.character(df[[col]]))
-  }
-  df
-}
-
-champion_series_evidence <- function(df = champion_entity_model_scores(),
-                                     champion = APP_CHAMPION) {
-  required <- c("entity_key", "model_name", "median_mase", "median_rmsse")
-  if (!is.data.frame(df) || nrow(df) == 0 || !all(required %in% names(df))) {
-    return(data.frame())
-  }
-  entities <- sort(unique(df$entity_key))
-  rows <- lapply(entities, function(entity) {
-    sub <- df[df$entity_key == entity & !is.na(df$median_mase), , drop = FALSE]
-    if (nrow(sub) == 0) return(NULL)
-    sub <- sub[order(sub$median_mase, sub$model_name), , drop = FALSE]
-    leader_mase <- min(sub$median_mase, na.rm = TRUE)
-    leaders <- sub$model_name[sub$median_mase == leader_mase]
-    leader_rmsse <- sub$median_rmsse[sub$median_mase == leader_mase][[1]]
-    ets <- sub[sub$model_name == champion, , drop = FALSE]
-    ets_available <- nrow(ets) > 0
-    ets_mase <- if (ets_available) ets$median_mase[[1]] else NA_real_
-    ets_rmsse <- if (ets_available) ets$median_rmsse[[1]] else NA_real_
-    ranks <- rank(sub$median_mase, ties.method = "min", na.last = "keep")
-    ets_rank <- if (ets_available) ranks[which(sub$model_name == champion)[[1]]] else NA_integer_
-    status <- if (!ets_available) {
-      "ETS unavailable"
-    } else if (champion %in% leaders) {
-      "ETS leads"
-    } else {
-      "ETS does not lead"
-    }
-    data.frame(
-      entity_key = entity,
-      series_level_leader = paste(leaders, collapse = "; "),
-      tied_leader_count = length(leaders),
-      leader_median_mase = leader_mase,
-      leader_median_rmsse = leader_rmsse,
-      ets_median_mase = ets_mase,
-      ets_median_rmsse = ets_rmsse,
-      ets_rank_by_mase = ets_rank,
-      gap_vs_local_leader = if (ets_available) ets_mase - leader_mase else NA_real_,
-      status = status,
-      stringsAsFactors = FALSE
-    )
-  })
-  out <- do.call(rbind, rows)
-  if (!is.data.frame(out) || nrow(out) == 0) return(data.frame())
-  status_order <- match(out$status, c("ETS does not lead", "ETS unavailable", "ETS leads"))
-  out <- out[order(status_order, -out$gap_vs_local_leader, out$entity_key,
-                   na.last = TRUE), , drop = FALSE]
-  out
-}
-
-champion_leadership_counts <- function(evidence = champion_series_evidence()) {
-  if (!is.data.frame(evidence) || nrow(evidence) == 0 ||
-      !("series_level_leader" %in% names(evidence))) {
-    return(data.frame())
-  }
-  split_leaders <- strsplit(as.character(evidence$series_level_leader), ";\\s*")
-  leaders <- unlist(split_leaders, use.names = FALSE)
-  leaders <- leaders[nzchar(leaders)]
-  if (length(leaders) == 0) return(data.frame())
-  tab <- sort(table(leaders), decreasing = TRUE)
-  data.frame(
-    model_name = names(tab),
-    series_lead_count = as.integer(tab),
-    is_ets_explicit = names(tab) == APP_CHAMPION,
-    stringsAsFactors = FALSE
-  )
-}
-
-champion_series_summary_values <- function(df = champion_entity_model_scores(),
-                                           evidence = champion_series_evidence(df),
-                                           counts = champion_leadership_counts(evidence)) {
-  total_series <- if (is.data.frame(df) && "entity_key" %in% names(df))
-    length(unique(df$entity_key)) else NA_integer_
-  models_per_series <- if (is.data.frame(df) && all(c("entity_key", "model_name") %in% names(df))) {
-    per <- tapply(df$model_name, df$entity_key, function(x) length(unique(x)))
-    if (length(unique(per)) == 1) as.integer(per[[1]]) else paste(range(per), collapse = "-")
-  } else NA
-  ets_leads <- if (is.data.frame(evidence) && "status" %in% names(evidence))
-    sum(evidence$status == "ETS leads", na.rm = TRUE) else NA_integer_
-  ets_not_leads <- if (is.data.frame(evidence) && "status" %in% names(evidence))
-    sum(evidence$status == "ETS does not lead", na.rm = TRUE) else NA_integer_
-  most_freq <- if (is.data.frame(counts) && nrow(counts) > 0)
-    paste0(counts$model_name[[1]], " (", counts$series_lead_count[[1]], ")") else "Unavailable"
-  largest_gap <- if (is.data.frame(evidence) && "gap_vs_local_leader" %in% names(evidence)) {
-    gaps <- evidence$gap_vs_local_leader[evidence$status == "ETS does not lead"]
-    if (length(gaps) == 0 || all(is.na(gaps))) "Unavailable" else fmt_metric(max(gaps, na.rm = TRUE), 3)
-  } else "Unavailable"
-  list(
-    total_series = ifelse(is.na(total_series), "Unavailable", as.character(total_series)),
-    models_per_series = ifelse(length(models_per_series) == 0 || is.na(models_per_series),
-                               "Unavailable", as.character(models_per_series)),
-    ets_leads = ifelse(is.na(ets_leads), "Unavailable", as.character(ets_leads)),
-    ets_not_leads = ifelse(is.na(ets_not_leads), "Unavailable", as.character(ets_not_leads)),
-    most_frequent_leader = most_freq,
-    largest_ets_gap = largest_gap
-  )
-}
-
-champion_leadership_count_chart <- function(counts = champion_leadership_counts()) {
-  if (!is.data.frame(counts) || nrow(counts) == 0) {
-    return(plotly::plot_ly() |>
-             plotly::layout(title = "Series-level leadership counts unavailable"))
-  }
-  counts <- counts[order(counts$series_lead_count, counts$model_name), , drop = FALSE]
-  colors <- ifelse(counts$is_ets_explicit, "#1a9641", "#2c7bb6")
-  plotly::plot_ly(
-    data = counts,
-    x = ~series_lead_count,
-    y = ~stats::reorder(model_name, series_lead_count),
-    type = "bar",
-    orientation = "h",
-    marker = list(color = colors),
-    hoverinfo = "text",
-    text = ~paste0(model_name, "<br>Series-level leads: ", series_lead_count,
-                   ifelse(is_ets_explicit, "<br>Governed champion under conditions", ""))
-  ) |>
-    plotly::layout(
-      title = list(text = "Series-level leaders by lowest median MASE",
-                   font = list(size = 14)),
-      xaxis = list(title = "Series-level lead count"),
-      yaxis = list(title = ""),
-      margin = list(l = 160, r = 20, t = 50, b = 50),
-      paper_bgcolor = "rgba(0,0,0,0)",
-      plot_bgcolor = "rgba(0,0,0,0)"
-    ) |>
-    plotly::config(displayModeBar = FALSE)
-}
-
-champion_series_evidence_table <- function(evidence = champion_series_evidence()) {
-  if (!is.data.frame(evidence) || nrow(evidence) == 0) {
-    return(DT::datatable(
-      data.frame(Message = "Series-level diagnostic evidence artifact is unavailable."),
-      rownames = FALSE, options = list(dom = "t")))
-  }
-  tbl <- data.frame(
-    Series = evidence$entity_key,
-    `Series-level leader` = evidence$series_level_leader,
-    `Leader median MASE` = round(evidence$leader_median_mase, 3),
-    `Leader median RMSSE` = round(evidence$leader_median_rmsse, 3),
-    `ETS Explicit median MASE` = round(evidence$ets_median_mase, 3),
-    `ETS Explicit median RMSSE` = round(evidence$ets_median_rmsse, 3),
-    `ETS Explicit rank by MASE` = evidence$ets_rank_by_mase,
-    `Gap vs local leader` = round(evidence$gap_vs_local_leader, 3),
-    Status = evidence$status,
-    check.names = FALSE,
-    stringsAsFactors = FALSE
-  )
-  DT::datatable(
-    tbl,
-    rownames = FALSE,
-    class = "stripe hover row-border",
-    options = list(
-      pageLength = 12,
-      paging = TRUE,
-      searching = TRUE,
-      info = TRUE,
-      ordering = TRUE,
-      scrollX = TRUE,
-      dom = "ftip",
-      order = list(list(8, "asc"), list(7, "desc"))
-    )
-  )
-}
-
-champion_exceptions_table <- function(evidence = champion_series_evidence()) {
-  if (!is.data.frame(evidence) || nrow(evidence) == 0) {
-    return(DT::datatable(
-      data.frame(Message = "Series-level exceptions are unavailable."),
-      rownames = FALSE, options = list(dom = "t")))
-  }
-  ex <- evidence[evidence$status == "ETS does not lead", , drop = FALSE]
-  if (nrow(ex) == 0) {
-    return(DT::datatable(
-      data.frame(Message = "No series-level exceptions found: ETS Explicit leads every available series."),
-      rownames = FALSE, options = list(dom = "t")))
-  }
-  ex <- ex[order(-ex$gap_vs_local_leader, ex$entity_key), , drop = FALSE]
-  tbl <- data.frame(
-    Series = ex$entity_key,
-    `Local series-level leader` = ex$series_level_leader,
-    `Leader median MASE` = round(ex$leader_median_mase, 3),
-    `ETS Explicit median MASE` = round(ex$ets_median_mase, 3),
-    `Gap vs leader` = round(ex$gap_vs_local_leader, 3),
-    `ETS Explicit rank` = ex$ets_rank_by_mase,
-    `Leader median RMSSE` = round(ex$leader_median_rmsse, 3),
-    `ETS Explicit median RMSSE` = round(ex$ets_median_rmsse, 3),
-    check.names = FALSE,
-    stringsAsFactors = FALSE
-  )
-  DT::datatable(
-    tbl,
-    rownames = FALSE,
-    class = "stripe hover row-border",
-    options = list(
-      pageLength = 10,
-      paging = TRUE,
-      searching = TRUE,
-      info = TRUE,
-      ordering = TRUE,
-      scrollX = TRUE,
-      dom = "ftip",
-      order = list(list(4, "desc"))
     )
   )
 }

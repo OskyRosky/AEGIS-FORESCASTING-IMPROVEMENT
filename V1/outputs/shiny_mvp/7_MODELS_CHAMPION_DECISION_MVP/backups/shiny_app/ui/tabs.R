@@ -1151,163 +1151,18 @@ section_tournament <- function() {
 }
 
 section_champion <- function() {
-  vals <- champion_decision_values()
-  series_vals <- champion_series_summary_values()
-
   panel(
     "champion",
-    section_head(
-      "Champion Decision",
-      "Governed champion decision from Model Lab and Governance artifacts. This page explains the selected champion under conditions and does not recompute tournament results."
-    ),
-
-    # A. Champion decision summary cards ------------------------------------
+    section_head("Champion Decision", "Governed champion decision (read-only display)."),
     card_grid(
-      kpi_card(vals$champion, "Selected champion under conditions",
-               pill = "Governed decision", pill_class = "pill-green"),
-      kpi_card(vals$decision_status, "Decision status",
-               pill = "Conditional", pill_class = "pill-amber"),
-      kpi_card(vals$confidence, "Confidence",
-               pill = "Governance confidence", pill_class = "pill-amber"),
-      kpi_card(vals$mase_display, "Official median MASE",
-               pill = "Primary metric", pill_class = "pill-blue")
+      shell_card("Decision", APP_CHAMPION,
+                 "Selected champion under governance conditions; not an unconditional selection."),
+      shell_card("Confidence", APP_CHAMPION_CONFIDENCE,
+                 "Decision confidence recorded by governance."),
+      shell_card("Policy", "No recompute",
+                 "Champion is displayed from governed artifacts; nothing is recalculated here.")
     ),
-    card_grid(
-      kpi_card(vals$rmsse_display, "Official median RMSSE",
-               pill = "Guardrail metric", pill_class = "pill-blue"),
-      kpi_card(paste0(vals$supported_better, " better / ", vals$supported_worse, " worse"),
-               "Pairwise support",
-               pill = "Tournament evidence", pill_class = "pill-green"),
-      kpi_card(vals$pairwise_total, "Total pairwise comparisons",
-               pill = "Governed evidence", pill_class = "pill-blue"),
-      kpi_card(paste0(vals$origin, " / ", vals$family), "Model origin / family",
-               pill = "Lineage", pill_class = "pill-blue")
-    ),
-
-    # B. Champion evidence panel --------------------------------------------
-    tags$h3(class = "section-block-title", "Champion evidence"),
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-green", "Selected under conditions"),
-      tags$h3(class = "shell-card-title", "Governed champion decision"),
-      tags$p(
-        class = "shell-card-detail",
-        vals$champion,
-        " is the selected champion under governed conditions. This decision is supported by official MASE/RMSSE results, pairwise tournament evidence, eligibility checks, and governance conditions. It does not imply dominance in every individual series."
-      ),
-      info_list(
-        info_row("Primary accuracy evidence", paste0("Official median MASE = ", vals$mase_display)),
-        info_row("Guardrail evidence", paste0("Official median RMSSE = ", vals$rmsse_display)),
-        info_row("Pairwise support", paste0(vals$supported_better, " supported better / ",
-                                            vals$supported_worse, " supported worse / ",
-                                            vals$pairwise_total, " total comparisons")),
-        info_row("Decision confidence", vals$confidence),
-        info_row("Governance conditions", vals$conditions)
-      )
-    ),
-
-    # C. Governance conditions / caveats -------------------------------------
-    tags$h3(class = "section-block-title", "Governance conditions / caveats"),
-    tags$p(
-      class = "shell-card-detail",
-      "Conditions are read from the governed Champion Conditions Protocol. They must remain visible downstream and are not removed or downgraded by this dashboard."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_conditions_table")),
-
-    # D. Approved dashboard language -----------------------------------------
-    tags$h3(class = "section-block-title", "Approved dashboard language"),
-    tags$p(
-      class = "shell-card-detail",
-      "This page uses governed language for stakeholder-safe communication. Prohibited or discouraged phrases are shown only as language-policy warnings."
-    ),
-    champion_language_policy_panel(),
-
-    # E. Source / lineage ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Source / lineage"),
-    tags$p(
-      class = "shell-card-detail",
-      "Shiny reads governed artifacts only. No champion decision, score, MASE, RMSSE, or tournament result is recomputed on this page."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_sources_table")),
-
-    # F. Block A scope guard -------------------------------------------------
-    tags$div(
-      style = "margin-top:18px;",
-      info_list(
-        info_row("Block A scope", "This page explains the governed champion decision only."),
-        info_row("Not implemented here", "No per-series leader table, no series-level diagnostic evidence, and no tournament_entity_model_scores visualization."),
-        info_row("No scoring layer", "No composite score is computed and no weights are introduced.")
-      )
-    ),
-
-    # G. Block B: Series-level diagnostic evidence ---------------------------
-    tags$h3(class = "section-block-title", "Series-Level Diagnostic Evidence"),
-    tags$p(
-      class = "shell-card-detail",
-      "Governed entity x model scores showing where ETS Explicit leads and where another model has the lowest median MASE. This section is diagnostic evidence and does not change the governed champion decision."
-    ),
-
-    # B1. Diagnostic summary cards ------------------------------------------
-    card_grid(
-      kpi_card(series_vals$total_series, "Total series",
-               pill = "Entity x model artifact", pill_class = "pill-blue"),
-      kpi_card(series_vals$models_per_series, "Models evaluated per series",
-               pill = "Governed scores", pill_class = "pill-blue"),
-      kpi_card(series_vals$ets_leads, "Series where ETS Explicit leads",
-               pill = "Lowest median MASE", pill_class = "pill-green"),
-      kpi_card(series_vals$ets_not_leads, "Series where ETS Explicit does not lead",
-               pill = "Local exceptions", pill_class = "pill-amber")
-    ),
-    card_grid(
-      kpi_card(series_vals$most_frequent_leader, "Most frequent series-level leader",
-               pill = "Tie-aware count", pill_class = "pill-blue"),
-      kpi_card(series_vals$largest_ets_gap, "Largest ETS gap vs local leader",
-               pill = "Median MASE gap", pill_class = "pill-amber"),
-      shell_card("Tie handling", "Exact ties retained",
-                 "If models have exactly the same lowest median MASE for a series, all tied leaders are counted and displayed."),
-      shell_card("Governance", "Diagnostic only",
-                 "Local series-level leadership does not replace the selected champion under conditions.")
-    ),
-
-    # B2. Leadership count chart --------------------------------------------
-    tags$h3(class = "section-block-title", "Leadership count by model"),
-    tags$p(
-      class = "shell-card-detail",
-      "Series-level leader means the model with the lowest governed median MASE for that series. ETS Explicit is highlighted when present."
-    ),
-    tags$div(class = "shell-card", plotly::plotlyOutput("champion_leadership_count_chart", height = "520px")),
-
-    # B3. Series-level evidence table ---------------------------------------
-    tags$h3(class = "section-block-title", "Series-level evidence table"),
-    tags$p(
-      class = "shell-card-detail",
-      "One row per series. Sorted to show local exceptions first, then larger ETS Explicit median MASE gaps."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_series_evidence_table")),
-
-    # B4. Exceptions review table -------------------------------------------
-    tags$h3(class = "section-block-title", "Exceptions review"),
-    tags$p(
-      class = "shell-card-detail",
-      "Focused view of series where ETS Explicit is not the local series-level leader, with the largest median MASE gaps first."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_exceptions_table")),
-
-    # B5. Governance note ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Diagnostic governance note"),
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-amber", "Diagnostic evidence"),
-      tags$h3(class = "shell-card-title", "Not the governed champion decision"),
-      tags$p(
-        class = "shell-card-detail",
-        "Diagnostic evidence - not the governed champion decision. Series-level leadership is based on governed entity x model scores and helps identify local exceptions. It does not replace the selected champion under conditions."
-      ),
-      tags$p(
-        class = "shell-card-detail",
-        "ETS Explicit may be the governed champion overall while other models lead individual series."
-      )
-    )
+    tags$div(style = "margin-top:18px;", controls_preview())
   )
 }
 

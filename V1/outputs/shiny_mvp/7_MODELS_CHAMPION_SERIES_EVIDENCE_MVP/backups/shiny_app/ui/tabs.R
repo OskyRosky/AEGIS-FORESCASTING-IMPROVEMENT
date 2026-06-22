@@ -1152,7 +1152,6 @@ section_tournament <- function() {
 
 section_champion <- function() {
   vals <- champion_decision_values()
-  series_vals <- champion_series_summary_values()
 
   panel(
     "champion",
@@ -1237,75 +1236,6 @@ section_champion <- function() {
         info_row("Block A scope", "This page explains the governed champion decision only."),
         info_row("Not implemented here", "No per-series leader table, no series-level diagnostic evidence, and no tournament_entity_model_scores visualization."),
         info_row("No scoring layer", "No composite score is computed and no weights are introduced.")
-      )
-    ),
-
-    # G. Block B: Series-level diagnostic evidence ---------------------------
-    tags$h3(class = "section-block-title", "Series-Level Diagnostic Evidence"),
-    tags$p(
-      class = "shell-card-detail",
-      "Governed entity x model scores showing where ETS Explicit leads and where another model has the lowest median MASE. This section is diagnostic evidence and does not change the governed champion decision."
-    ),
-
-    # B1. Diagnostic summary cards ------------------------------------------
-    card_grid(
-      kpi_card(series_vals$total_series, "Total series",
-               pill = "Entity x model artifact", pill_class = "pill-blue"),
-      kpi_card(series_vals$models_per_series, "Models evaluated per series",
-               pill = "Governed scores", pill_class = "pill-blue"),
-      kpi_card(series_vals$ets_leads, "Series where ETS Explicit leads",
-               pill = "Lowest median MASE", pill_class = "pill-green"),
-      kpi_card(series_vals$ets_not_leads, "Series where ETS Explicit does not lead",
-               pill = "Local exceptions", pill_class = "pill-amber")
-    ),
-    card_grid(
-      kpi_card(series_vals$most_frequent_leader, "Most frequent series-level leader",
-               pill = "Tie-aware count", pill_class = "pill-blue"),
-      kpi_card(series_vals$largest_ets_gap, "Largest ETS gap vs local leader",
-               pill = "Median MASE gap", pill_class = "pill-amber"),
-      shell_card("Tie handling", "Exact ties retained",
-                 "If models have exactly the same lowest median MASE for a series, all tied leaders are counted and displayed."),
-      shell_card("Governance", "Diagnostic only",
-                 "Local series-level leadership does not replace the selected champion under conditions.")
-    ),
-
-    # B2. Leadership count chart --------------------------------------------
-    tags$h3(class = "section-block-title", "Leadership count by model"),
-    tags$p(
-      class = "shell-card-detail",
-      "Series-level leader means the model with the lowest governed median MASE for that series. ETS Explicit is highlighted when present."
-    ),
-    tags$div(class = "shell-card", plotly::plotlyOutput("champion_leadership_count_chart", height = "520px")),
-
-    # B3. Series-level evidence table ---------------------------------------
-    tags$h3(class = "section-block-title", "Series-level evidence table"),
-    tags$p(
-      class = "shell-card-detail",
-      "One row per series. Sorted to show local exceptions first, then larger ETS Explicit median MASE gaps."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_series_evidence_table")),
-
-    # B4. Exceptions review table -------------------------------------------
-    tags$h3(class = "section-block-title", "Exceptions review"),
-    tags$p(
-      class = "shell-card-detail",
-      "Focused view of series where ETS Explicit is not the local series-level leader, with the largest median MASE gaps first."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_exceptions_table")),
-
-    # B5. Governance note ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Diagnostic governance note"),
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-amber", "Diagnostic evidence"),
-      tags$h3(class = "shell-card-title", "Not the governed champion decision"),
-      tags$p(
-        class = "shell-card-detail",
-        "Diagnostic evidence - not the governed champion decision. Series-level leadership is based on governed entity x model scores and helps identify local exceptions. It does not replace the selected champion under conditions."
-      ),
-      tags$p(
-        class = "shell-card-detail",
-        "ETS Explicit may be the governed champion overall while other models lead individual series."
       )
     )
   )

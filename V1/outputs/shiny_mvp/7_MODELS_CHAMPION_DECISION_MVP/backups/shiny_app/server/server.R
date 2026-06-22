@@ -358,32 +358,6 @@ app_server <- function(input, output, session) {
     tournament_pairwise_table()
   })
 
-  # ==========================================================================
-  # MODELS / CHAMPION PAGE MVP - BLOCK A + BLOCK B
-  # Governed read-only champion decision display and series-level diagnostic
-  # evidence. No composite score, weights, metrics, forecasts, tournaments, or
-  # champion decisions are computed here.
-  # ==========================================================================
-  output$champion_conditions_table <- DT::renderDataTable({
-    champion_conditions_table()
-  })
-
-  output$champion_sources_table <- DT::renderDataTable({
-    champion_sources_table()
-  })
-
-  output$champion_leadership_count_chart <- plotly::renderPlotly({
-    champion_leadership_count_chart()
-  })
-
-  output$champion_series_evidence_table <- DT::renderDataTable({
-    champion_series_evidence_table()
-  })
-
-  output$champion_exceptions_table <- DT::renderDataTable({
-    champion_exceptions_table()
-  })
-
   # The chart + model picker / count / notes live in a section that is hidden at
   # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
   # chart containers and controls are populated on first navigation. custom.js
@@ -406,11 +380,6 @@ app_server <- function(input, output, session) {
   outputOptions(output, "tournament_standings_table", suspendWhenHidden = FALSE)
   outputOptions(output, "tournament_mase_rmsse_plot", suspendWhenHidden = FALSE)
   outputOptions(output, "tournament_pairwise_table",  suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_conditions_table",  suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_sources_table",     suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_leadership_count_chart", suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_series_evidence_table",  suspendWhenHidden = FALSE)
-  outputOptions(output, "champion_exceptions_table",       suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }
