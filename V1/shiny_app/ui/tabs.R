@@ -313,14 +313,12 @@ section_overview <- function() {
 }
 
 section_explorer <- function() {
-  # Block 7.11-FULL-REBIND: two clearly separated Forecast Viewer sections.
-  #   1) Backtest Comparison  -> full Stage 05H artifact
-  #      (data/processed/forecast_viewer_model_outputs.csv), 39 series.
-  #   2) Forward Forecast      -> data/processed/forecasts.csv (production)
-  #      + data/processed/actuals.csv history, 45 series.
-  # Each section has its own action button; charts live in STATIC containers
-  # (always in the DOM) to avoid blank-chart regressions, and never render
-  # before the user clicks the section's Analyze button.
+  # Stage 07 Forecasting Sidebar Correction: the Viewer page hosts the historical
+  # Backtest Comparison ONLY. The forward production forecast was moved to its own
+  # Forecast page (section_forecast()).
+  #   Source: data/processed/forecast_viewer_model_outputs.csv (39 series).
+  # The chart lives in a STATIC container (always in the DOM) to avoid blank-chart
+  # regressions, and never renders before the user clicks Analyze Backtest.
 
   # ---- Backtest section inputs ----
   bt_series      <- fvp_series_choices()                 # 39 eligible series
@@ -329,9 +327,6 @@ section_explorer <- function() {
   horizon_named  <- stats::setNames(as.character(horizon_opts),
                                     paste0(horizon_opts, " days"))
   horizon_unavail <- fvp_horizon_unavailable()           # 35, 45 (disabled)
-
-  # ---- Forward section inputs ----
-  fw_series  <- fvf_series_choices()                     # 45 series
 
   # Numbered "step" wrapper so the controls read as a guided workflow.
   fv_step <- function(num, title, control, hint = NULL, extra = NULL) {
@@ -352,17 +347,17 @@ section_explorer <- function() {
     "explorer",
     section_head(
       "Forecast Viewer",
-      "Two separate views: a historical multi-model Backtest Comparison and the single-model Forward Forecast. Each renders only after you click its Analyze button."
+      "Historical multi-model Backtest Comparison. It renders only after you click Analyze Backtest. The forward production forecast now lives on the separate Forecast page."
     ),
 
     # =====================================================================
-    # SECTION 1 - BACKTEST COMPARISON (full Stage 05H artifact)
+    # BACKTEST COMPARISON (full Stage 05H artifact)
     # =====================================================================
     tags$section(
       class = "fvx-section fvx-backtest",
       tags$div(
         class = "fvx-section-head",
-        tags$span(class = "fvx-section-kicker", "Section 1"),
+        tags$span(class = "fvx-section-kicker", "Backtest"),
         tags$h3(class = "fvx-section-title", "Backtest Comparison"),
         tags$span(class = "pill pill-blue", "Historical \u00b7 multi-model")
       ),
@@ -462,14 +457,53 @@ section_explorer <- function() {
       )
     ),
 
+    # Methodology note -------------------------------------------------------
+    tags$p(
+      class = "fv-method-note",
+      "This page visualizes the governed Stage 05H backtest artifact only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion. The forward production forecast is shown on the separate Forecast page."
+    )
+  )
+}
+
+section_forecast <- function() {
+  # Stage 07 Forecasting Sidebar Correction: dedicated Forecast page hosts the
+  # single-model Forward Forecast ONLY (moved out of the Viewer page).
+  #   Sources: data/processed/actuals.csv (history) +
+  #            data/processed/forecasts.csv (production), 45 series.
+  # Action-gated: the chart lives in a STATIC container and renders only after
+  # the user clicks Analyze Forward Forecast.
+
+  fw_series <- fvf_series_choices()                      # 45 series
+
+  fv_step <- function(num, title, control, hint = NULL, extra = NULL) {
+    tags$div(
+      class = "fv-step",
+      tags$div(
+        class = "fv-step-head",
+        tags$span(class = "fv-step-num", as.character(num)),
+        tags$span(class = "fv-step-title", title)
+      ),
+      control,
+      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
+      extra
+    )
+  }
+
+  panel(
+    "forecast",
+    section_head(
+      "Forecast",
+      "Single-model Forward Forecast: actual history followed by the forward production forecast. It renders only after you click Analyze Forward Forecast."
+    ),
+
     # =====================================================================
-    # SECTION 2 - FORWARD FORECAST (production forecast + actual history)
+    # FORWARD FORECAST (production forecast + actual history)
     # =====================================================================
     tags$section(
       class = "fvx-section fvx-forward",
       tags$div(
         class = "fvx-section-head",
-        tags$span(class = "fvx-section-kicker", "Section 2"),
+        tags$span(class = "fvx-section-kicker", "Forward"),
         tags$h3(class = "fvx-section-title", "Forward Forecast"),
         tags$span(class = "pill pill-teal", "Future \u00b7 single-model")
       ),
@@ -550,7 +584,7 @@ section_explorer <- function() {
             tags$ul(
               class = "fv-warn-list",
               tags$li(tags$span(class = "pill pill-teal", "Forward"),
-                      "This section uses the forward production forecast artifact. It is a single selected forecast per series, not a multi-model comparison."),
+                      "This page uses the forward production forecast artifact. It is a single selected forecast per series, not a multi-model comparison."),
               tags$li(tags$span(class = "pill pill-slate", "Boundary"),
                       "The vertical \u201cForecast start\u201d line marks the last actual date; everything to its right is projected, not observed.")
             )
@@ -559,23 +593,160 @@ section_explorer <- function() {
       )
     ),
 
-    # B. Methodology note ----------------------------------------------------
+    # Methodology note -------------------------------------------------------
     tags$p(
       class = "fv-method-note",
-      "This page visualizes existing governed artifacts only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion. Backtest and Forward Forecast are deliberately kept as separate views."
+      "This page visualizes the governed forward production forecast only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion."
     )
   )
 }
 
 section_accuracy <- function() {
+  # Stage 07 Accuracy Page MVP: heatmap-first accuracy diagnostics derived in
+  # memory from the FROZEN Stage 05H backtest artifact
+  # (data/processed/forecast_viewer_model_outputs.csv). These are dashboard
+  # diagnostics only - they are never persisted and never change the champion.
+  # Heatmap + table live in STATIC containers and render only after the user
+  # clicks Analyze Accuracy.
+
+  acc_series    <- acc_series_choices()                  # 39 eligible series
+  acc_models    <- acc_model_choices()                   # 13 family-ordered models
+  horizon_opts  <- acc_horizon_choices()                 # 5..30
+  horizon_named <- stats::setNames(as.character(horizon_opts),
+                                   paste0(horizon_opts, " days"))
+
+  acc_step <- function(num, title, control, hint = NULL, extra = NULL) {
+    tags$div(
+      class = "fv-step",
+      tags$div(
+        class = "fv-step-head",
+        tags$span(class = "fv-step-num", as.character(num)),
+        tags$span(class = "fv-step-title", title)
+      ),
+      control,
+      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
+      extra
+    )
+  }
+
   panel(
     "accuracy",
-    section_head("Accuracy Overview",
-                 "Official MASE / RMSSE plus diagnostic metrics by model (placeholder)."),
-    card_grid(
-      shell_card("Primary", "MASE / RMSSE", "Absolute benchmark metric (MASE) with RMSSE guardrail."),
-      shell_card("Diagnostics", "wMAPE / SMAPE / bias", "Supporting diagnostics \u2014 never the primary score."),
-      shell_card("Granularity", "Model / entity", "Errors broken down by model and entity in a later block.")
+    section_head(
+      "Accuracy",
+      "Heatmap-first backtest accuracy diagnostics from the frozen Stage 05H model-comparison artifact. Standardized severity scores let different error measures be compared visually."
+    ),
+
+    # Summary cards (populated after Analyze Accuracy) ----------------------
+    uiOutput("acc_summary_cards"),
+
+    tags$section(
+      class = "fvx-section acc-section",
+      tags$div(
+        class = "fvx-section-head",
+        tags$span(class = "fvx-section-kicker", "Accuracy"),
+        tags$h3(class = "fvx-section-title", "Standardized error heatmap"),
+        tags$span(class = "pill pill-blue", "Backtest \u00b7 diagnostics")
+      ),
+      tags$p(
+        class = "fvx-section-lead",
+        "Per series \u00d7 model error severity at a chosen horizon. ",
+        "Source: ", tags$code("forecast_viewer_model_outputs.csv"),
+        " (39 series, 13 models, horizons 5\u201330). Red cells = higher error; ",
+        "blue cells = lower error / more stable."
+      ),
+
+      tags$div(
+        class = "fv-setup",
+        tags$div(
+          class = "fv-setup-panel",
+          tags$div(class = "fv-setup-title", "Set up the accuracy view"),
+
+          acc_step(
+            1, "Select horizon",
+            radioButtons("acc_horizon", NULL, choices = horizon_named,
+                         selected = "30", inline = TRUE),
+            "Backtest horizon (days) used to compute the diagnostics."
+          ),
+          acc_step(
+            2, "Select metric",
+            selectInput("acc_metric", NULL, choices = ACC_METRICS,
+                        selected = "MAE", width = "100%"),
+            "Drives both the heatmap color (standardized) and the headline severity ranking. All metrics: lower is better."
+          ),
+          acc_step(
+            3, "Select models",
+            selectizeInput("acc_models", NULL,
+                           choices = c("All models" = "__ALL__", acc_models),
+                           selected = "__ALL__", multiple = TRUE, width = "100%",
+                           options = list(placeholder = "All models")),
+            "Keep All models or restrict to one or several."
+          ),
+          acc_step(
+            4, "Filter series",
+            selectizeInput("acc_series", NULL, choices = acc_series,
+                           selected = NULL, multiple = TRUE, width = "100%",
+                           options = list(placeholder = "All eligible series")),
+            "Leave empty to include every eligible series."
+          ),
+          acc_step(
+            5, "Rows shown",
+            selectInput("acc_topn", NULL,
+                        choices = c("Top 10" = 10, "Top 20" = 20, "All (39)" = 39),
+                        selected = 20, width = "100%"),
+            "Heatmap keeps this many series, ranked worst-first by the selected metric."
+          ),
+          tags$div(
+            class = "fv-step fv-step-action",
+            tags$div(
+              class = "fv-step-head",
+              tags$span(class = "fv-step-num", "6"),
+              tags$span(class = "fv-step-title", "Analyze")
+            ),
+            actionButton("acc_go", "Analyze Accuracy", class = "fv-analyze-btn"),
+            tags$p(class = "fv-step-hint",
+                   "The heatmap and table update only after you click Analyze Accuracy. Changing selectors does not auto-refresh.")
+          ),
+          tags$p(class = "fv-entity-note",
+                 "All values are computed in memory from the governed Stage 05H backtest artifact. Nothing is written back.")
+        ),
+
+        tags$div(
+          class = "fv-result",
+          tags$div(
+            class = "fv-step-head",
+            tags$span(class = "fv-step-num", "7"),
+            tags$span(class = "fv-step-title", "Severity heatmap (standardized)")
+          ),
+          tags$div(
+            class = "fv-chart-wrap",
+            plotly::plotlyOutput("acc_heatmap", height = "560px")
+          ),
+          tags$div(
+            class = "fv-notes-head",
+            tags$span(class = "fv-step-num", "8"),
+            tags$span(class = "fv-step-title", "Metric values (raw + standardized)")
+          ),
+          tags$div(class = "tess-table-wrap",
+                   DT::dataTableOutput("acc_table")),
+          tags$div(
+            class = "fv-warn-card",
+            tags$ul(
+              class = "fv-warn-list",
+              tags$li(tags$span(class = "pill pill-amber", "Diagnostics"),
+                      "These are dashboard diagnostics derived from the frozen Stage 05H backtest output. They are not official governance metrics and do not change champion selection."),
+              tags$li(tags$span(class = "pill pill-slate", "Standardized"),
+                      "Heatmap color uses a robust standardized severity score (median / IQR) so different measures are visually comparable. The table shows raw values."),
+              tags$li(tags$span(class = "pill pill-blue", "Backtest only"),
+                      "Accuracy uses historical backtest data only (never the forward forecast / actuals files). It does not generate forecasts.")
+            )
+          )
+        )
+      ),
+
+      tags$p(
+        class = "fv-method-note",
+        "This page visualizes the governed Stage 05H backtest artifact only. It does not generate new forecasts, recompute official metrics, rerun tournaments, or change any selected champion under conditions. MASE / RMSSE are intentionally excluded here because no governed scale baseline is bundled with this artifact."
+      )
     )
   )
 }
@@ -992,6 +1163,7 @@ app_sections <- function() {
     section_overview(),
     section_explorer(),
     section_accuracy(),
+    section_forecast(),
     section_ttl(),
     section_universe(),
     section_tournament(),

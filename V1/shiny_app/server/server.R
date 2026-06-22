@@ -201,6 +201,86 @@ app_server <- function(input, output, session) {
     )
   })
 
+  # ==========================================================================
+  # ACCURACY PAGE MVP (acc_*) -- heatmap-first backtest diagnostics.
+  # Read-only, computed in memory from the frozen Stage 05H backtest artifact.
+  # Action-gated: nothing renders until the user clicks Analyze Accuracy.
+  # ==========================================================================
+  acc_all <- acc_data()
+
+  # Snapshot the accuracy setup ONLY when "Analyze Accuracy" is clicked.
+  acc_request <- eventReactive(input$acc_go, {
+    list(
+      horizon = suppressWarnings(as.numeric(input$acc_horizon)),
+      metric  = input$acc_metric,
+      models  = input$acc_models,
+      series  = input$acc_series,
+      topn    = suppressWarnings(as.numeric(input$acc_topn))
+    )
+  }, ignoreNULL = FALSE)
+
+  # Computed diagnostics for the current snapshot (per series x model).
+  acc_result <- reactive({
+    r <- acc_request()
+    models <- if (is.null(r$models) || length(r$models) == 0 ||
+                  "__ALL__" %in% r$models) NULL else r$models
+    series <- if (is.null(r$series) || length(r$series) == 0) NULL else r$series
+    acc_compute(r$horizon, models, series, r$metric, acc_all)
+  })
+
+  # Summary cards at the top of the page.
+  output$acc_summary_cards <- renderUI({
+    cell <- function(label, value, cls = "") {
+      tags$div(class = paste("acc-kpi-card", cls),
+               tags$div(class = "acc-kpi-label", label),
+               tags$div(class = "acc-kpi-value", value))
+    }
+    if (is.null(input$acc_go) || input$acc_go == 0) {
+      return(tags$div(
+        class = "acc-kpi-grid",
+        cell("Series covered", "\u2014"),
+        cell("Models covered", "\u2014"),
+        cell("Selected horizon", "\u2014"),
+        cell("Selected metric", "\u2014"),
+        cell("Worst error pocket", "Click Analyze Accuracy", "acc-kpi-wide"),
+        cell("Most stable pocket", "Click Analyze Accuracy", "acc-kpi-wide")
+      ))
+    }
+    r <- acc_request()
+    s <- acc_summary(acc_result(), r$metric, r$horizon)
+    tags$div(
+      class = "acc-kpi-grid",
+      cell("Series covered", s$n_series),
+      cell("Models covered", s$n_models),
+      cell("Selected horizon", paste0(s$horizon, " days")),
+      cell("Selected metric", s$metric),
+      cell("Worst error pocket", s$worst, "acc-kpi-wide acc-kpi-bad"),
+      cell("Most stable pocket", s$stable, "acc-kpi-wide acc-kpi-good")
+    )
+  })
+
+  # STATIC heatmap container: empty state before the first Analyze click.
+  output$acc_heatmap <- plotly::renderPlotly({
+    if (is.null(input$acc_go) || input$acc_go == 0) {
+      return(acc_empty_plot(
+        "Choose a horizon, metric and filters, then click Analyze Accuracy."))
+    }
+    r <- acc_request()
+    acc_heatmap(acc_result(), metric = r$metric, horizon = r$horizon,
+                top_n = r$topn)
+  })
+
+  # Supporting diagnostics table (raw values + standardized score).
+  output$acc_table <- DT::renderDataTable({
+    if (is.null(input$acc_go) || input$acc_go == 0) {
+      return(DT::datatable(
+        data.frame(Message = "Click Analyze Accuracy to populate the metric table."),
+        rownames = FALSE, options = list(dom = "t")))
+    }
+    r <- acc_request()
+    acc_table(acc_result(), metric = r$metric)
+  })
+
   # The chart + model picker / count / notes live in a section that is hidden at
   # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
   # chart containers and controls are populated on first navigation. custom.js
@@ -212,6 +292,9 @@ app_server <- function(input, output, session) {
   outputOptions(output, "fvf_chart",        suspendWhenHidden = FALSE)
   outputOptions(output, "fvf_model_note",   suspendWhenHidden = FALSE)
   outputOptions(output, "fvf_notes",        suspendWhenHidden = FALSE)
+  outputOptions(output, "acc_summary_cards", suspendWhenHidden = FALSE)
+  outputOptions(output, "acc_heatmap",       suspendWhenHidden = FALSE)
+  outputOptions(output, "acc_table",         suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }

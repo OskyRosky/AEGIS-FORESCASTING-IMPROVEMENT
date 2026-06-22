@@ -1073,3 +1073,36 @@ body {
 .theme-dark .fv-warn-card-fwd { background: #112e26; border-color: #1f4d3f; }
 .theme-dark .fv-warn-card-fwd .fv-warn-list li { color: #9fd6c4; }
 
+/* =====================================================================
+   Stage 07 | Accuracy Page MVP (heatmap-first diagnostics)
+   ===================================================================== */
+.acc-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 6px 0 18px;
+}
+.acc-kpi-card {
+  background: #ffffff; border: 1px solid #e3e9f1; border-radius: 12px;
+  padding: 12px 14px; box-shadow: 0 1px 3px rgba(16,42,67,.05);
+}
+.acc-kpi-wide { grid-column: span 2; }
+.acc-kpi-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: #627d98; margin-bottom: 6px;
+}
+.acc-kpi-value { font-size: 15px; font-weight: 600; color: #102a43; word-break: break-word; }
+.acc-kpi-bad .acc-kpi-value { color: #b03a2e; }
+.acc-kpi-good .acc-kpi-value { color: #1e7a52; }
+@media (max-width: 960px) {
+  .acc-kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .acc-kpi-wide { grid-column: span 2; }
+}
+
+/* Dark theme variants */
+.theme-dark .acc-kpi-card { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .acc-kpi-label { color: #9fb0c4; }
+.theme-dark .acc-kpi-value { color: #e8eef6; }
+.theme-dark .acc-kpi-bad .acc-kpi-value { color: #f3a99e; }
+.theme-dark .acc-kpi-good .acc-kpi-value { color: #87e0b4; }
+

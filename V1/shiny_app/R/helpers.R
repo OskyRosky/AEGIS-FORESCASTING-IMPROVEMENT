@@ -941,3 +941,274 @@ fvf_summary <- function(series, fwd_window = 90, hist_window = 180,
     fwd_last      = if (nrow(f)) format(max(f$date), "%Y-%m-%d") else "\u2014"
   )
 }
+
+# ===========================================================================
+# Stage 07 ACCURACY page diagnostics (acc_*)
+# ---------------------------------------------------------------------------
+# Read-only DASHBOARD DIAGNOSTICS derived in memory from the frozen Stage 05H
+# backtest / model-comparison artifact (forecast_viewer_model_outputs.csv).
+# These are NOT official governance metrics, are NEVER written to data/processed,
+# and are NEVER used to change champion selection. Accuracy deliberately uses the
+# backtest artifact only (never forecasts.csv / actuals.csv, which belong to the
+# Forward Forecast page).
+# ===========================================================================
+
+ACC_METRICS <- c("MAE", "RMSE", "sMAPE", "wMAPE",
+                 "Bias severity", "Error variability")
+
+# Valid UI horizons (governed subset of the 1..30 artifact horizons).
+acc_horizon_choices <- function() c(5, 10, 15, 20, 25, 30)
+
+# Same governed read as the Viewer (backtest artifact, cached at loader init).
+acc_data <- function() fvp_data()
+
+# Sorted eligible series keys (39).
+acc_series_choices <- function(df = acc_data()) fvp_series_choices(df)
+
+# Family-ordered model names present in the artifact (13).
+acc_model_choices <- function(df = acc_data()) {
+  if (!is.data.frame(df) || !all(c("model_name", "model_family") %in% names(df)) ||
+      nrow(df) == 0) {
+    return(character(0))
+  }
+  m <- unique(df[, c("model_name", "model_family"), drop = FALSE])
+  fam_rank <- match(m$model_family, FVP_FAMILY_ORDER)
+  fam_rank[is.na(fam_rank)] <- length(FVP_FAMILY_ORDER) + 1L
+  m <- m[order(fam_rank, m$model_name), , drop = FALSE]
+  m$model_name
+}
+
+# Robust standardized severity score: (x - median) / IQR.
+# Fallbacks: z-score when IQR == 0 (sd > 0); 0 when sd is also 0.
+acc_standardize <- function(x) {
+  x <- suppressWarnings(as.numeric(x))
+  v <- x[is.finite(x)]
+  if (length(v) == 0) return(rep(0, length(x)))
+  iqr <- stats::IQR(v, na.rm = TRUE)
+  if (is.finite(iqr) && iqr > 0) {
+    z <- (x - stats::median(v)) / iqr
+  } else {
+    s <- stats::sd(v)
+    if (is.finite(s) && s > 0) {
+      z <- (x - mean(v)) / s
+    } else {
+      z <- rep(0, length(x))
+    }
+  }
+  z[!is.finite(z)] <- 0
+  z
+}
+
+# Which standardization branch was used (for the validation / warning report).
+acc_standardize_method <- function(x) {
+  v <- suppressWarnings(as.numeric(x)); v <- v[is.finite(v)]
+  if (length(v) == 0) return("zero")
+  if (is.finite(stats::IQR(v)) && stats::IQR(v) > 0) return("iqr")
+  if (is.finite(stats::sd(v)) && stats::sd(v) > 0) return("zscore")
+  "zero"
+}
+
+# Pick the raw metric column matching the metric label.
+acc_metric_column <- function(res, metric) {
+  switch(metric,
+    "MAE"               = res$MAE,
+    "RMSE"              = res$RMSE,
+    "sMAPE"             = res$sMAPE,
+    "wMAPE"             = res$wMAPE,
+    "Bias severity"     = res$abs_bias_severity,
+    "Error variability" = res$error_variability,
+    res$MAE)
+}
+
+# Core diagnostics: per (series_key x model_name) at a single horizon.
+# Returns raw metrics + the standardized score for the selected `metric`.
+# All values are computed in memory from actual_value / forecast_value.
+acc_compute <- function(horizon = 30, models = NULL, series = NULL,
+                        metric = "MAE", df = acc_data()) {
+  needed <- c("series_key", "model_name", "model_family",
+              "horizon_days", "actual_value", "forecast_value")
+  if (!is.data.frame(df) || nrow(df) == 0 || !all(needed %in% names(df))) {
+    return(data.frame())
+  }
+  hz <- suppressWarnings(as.numeric(horizon))
+  d <- df[!is.na(df$horizon_days) &
+            suppressWarnings(as.numeric(df$horizon_days)) == hz, , drop = FALSE]
+  if (!is.null(models) && length(models)) d <- d[d$model_name %in% models, , drop = FALSE]
+  if (!is.null(series) && length(series)) d <- d[d$series_key %in% series, , drop = FALSE]
+  if (nrow(d) == 0) return(data.frame())
+
+  a <- suppressWarnings(as.numeric(d$actual_value))
+  f <- suppressWarnings(as.numeric(d$forecast_value))
+  ok <- is.finite(a) & is.finite(f)
+  d <- d[ok, , drop = FALSE]; a <- a[ok]; f <- f[ok]
+  if (nrow(d) == 0) return(data.frame())
+  e <- f - a; ae <- abs(e)
+
+  key   <- paste(d$series_key, d$model_name, sep = "\r")
+  parts <- split(seq_len(nrow(d)), key)
+  rows  <- lapply(parts, function(idx) {
+    aa <- a[idx]; ff <- f[idx]; ee <- e[idx]; aee <- ae[idx]
+    denom <- (abs(aa) + abs(ff)) / 2
+    smape_terms <- ifelse(denom == 0, NA_real_, aee / denom)
+    smape <- if (all(is.na(smape_terms))) NA_real_
+             else mean(smape_terms, na.rm = TRUE) * 100
+    sum_abs_actual <- sum(abs(aa))
+    wmape <- if (sum_abs_actual == 0) NA_real_ else sum(aee) / sum_abs_actual * 100
+    data.frame(
+      series_key        = d$series_key[idx[1]],
+      model_name        = d$model_name[idx[1]],
+      model_family      = d$model_family[idx[1]],
+      horizon           = hz,
+      n_points          = length(idx),
+      MAE               = mean(aee),
+      RMSE              = sqrt(mean(ee^2)),
+      sMAPE             = smape,
+      wMAPE             = wmape,
+      signed_bias       = mean(ee),
+      abs_bias_severity = abs(mean(ee)),
+      error_variability = if (length(ee) > 1) stats::sd(ee) else 0,
+      stringsAsFactors  = FALSE
+    )
+  })
+  res <- do.call(rbind, rows)
+  rownames(res) <- NULL
+  res$metric_value       <- acc_metric_column(res, metric)
+  res$standardized_score <- acc_standardize(res$metric_value)
+  res
+}
+
+# Empty / blocked plotly placeholder (keeps the static container stable).
+acc_empty_plot <- function(msg) {
+  plotly::plot_ly() |>
+    plotly::layout(
+      xaxis = list(visible = FALSE), yaxis = list(visible = FALSE),
+      annotations = list(list(
+        text = msg, showarrow = FALSE, x = 0.5, y = 0.5,
+        xref = "paper", yref = "paper",
+        font = list(size = 14, color = "#627d98"))),
+      margin = list(l = 20, r = 20, t = 20, b = 20),
+      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)"
+    ) |>
+    plotly::config(displayModeBar = FALSE)
+}
+
+# Standardized accuracy heatmap (rows = series, cols = model). Worst at top.
+# Standardized scores are winsorized to +/- `cap` for COLOR ONLY; the table
+# keeps raw values. Higher score (red) = worse; lower (blue) = better/stable.
+acc_heatmap <- function(res, metric = "MAE", horizon = 30, top_n = 20, cap = 3) {
+  if (!is.data.frame(res) || nrow(res) == 0) {
+    return(acc_empty_plot(
+      "No accuracy data for this selection. Adjust the filters and click Analyze Accuracy."))
+  }
+  agg <- tapply(res$metric_value, res$series_key,
+                function(v) mean(v, na.rm = TRUE))
+  agg <- sort(agg, decreasing = TRUE)         # worst series first
+  keep_series <- names(agg)
+  if (is.finite(top_n) && top_n > 0 && length(keep_series) > top_n) {
+    keep_series <- keep_series[seq_len(top_n)]
+  }
+  res <- res[res$series_key %in% keep_series, , drop = FALSE]
+
+  models_all <- acc_model_choices(res)
+  models <- models_all[models_all %in% unique(res$model_name)]
+  if (length(models) == 0) models <- sort(unique(res$model_name))
+  series_order <- keep_series
+
+  ns <- length(series_order); nm <- length(models)
+  z  <- matrix(NA_real_, nrow = ns, ncol = nm)
+  ht <- matrix("",        nrow = ns, ncol = nm)
+  idx_s <- stats::setNames(seq_along(series_order), series_order)
+  idx_m <- stats::setNames(seq_along(models), models)
+  fam_lk <- stats::setNames(res$model_family, res$model_name)
+  for (i in seq_len(nrow(res))) {
+    si <- idx_s[[res$series_key[i]]]; mi <- idx_m[[res$model_name[i]]]
+    if (is.null(si) || is.null(mi)) next
+    zz <- res$standardized_score[i]
+    z[si, mi] <- max(min(zz, cap), -cap)
+    ht[si, mi] <- paste0(
+      "Series: ", res$series_key[i],
+      "<br>Model: ", res$model_name[i],
+      "<br>Horizon: ", horizon, " days",
+      "<br>", metric, " (raw): ",
+      formatC(res$metric_value[i], format = "f", digits = 3),
+      "<br>Std score: ",
+      formatC(res$standardized_score[i], format = "f", digits = 2),
+      "<br>Backtest points: ", res$n_points[i],
+      "<br>Family: ", gsub("_", " ", res$model_family[i]))
+  }
+
+  plotly::plot_ly(
+    x = models, y = series_order, z = z, type = "heatmap",
+    text = ht, hoverinfo = "text",
+    zmin = -cap, zmax = cap, zmid = 0,
+    xgap = 1, ygap = 1,
+    colorscale = list(c(0, "#2c7bb6"), c(0.5, "#ffffbf"), c(1, "#d7191c")),
+    colorbar = list(title = list(text = "Severity"), thickness = 12)
+  ) |>
+    plotly::layout(
+      xaxis = list(title = "", tickangle = -40, side = "top",
+                   tickfont = list(size = 11)),
+      yaxis = list(title = "", autorange = "reversed",
+                   tickfont = list(size = 11)),
+      margin = list(l = 150, r = 10, t = 70, b = 10),
+      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)"
+    ) |>
+    plotly::config(displayModeBar = FALSE)
+}
+
+# Supporting diagnostics table (raw values + standardized score). Sorted worst
+# first by standardized score for the selected metric.
+acc_table <- function(res, metric = "MAE") {
+  if (!is.data.frame(res) || nrow(res) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "No accuracy data for this selection."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  res <- res[order(-res$standardized_score), , drop = FALSE]
+  r3 <- function(x) round(suppressWarnings(as.numeric(x)), 3)
+  std_col <- paste0("std_score(", metric, ")")
+  tbl <- data.frame(
+    Series            = res$series_key,
+    Model             = res$model_name,
+    Family            = gsub("_", " ", res$model_family),
+    Horizon           = res$horizon,
+    n_points          = res$n_points,
+    MAE               = r3(res$MAE),
+    RMSE              = r3(res$RMSE),
+    sMAPE             = r3(res$sMAPE),
+    wMAPE             = r3(res$wMAPE),
+    signed_bias       = r3(res$signed_bias),
+    abs_bias_severity = r3(res$abs_bias_severity),
+    error_variability = r3(res$error_variability),
+    std_score         = round(res$standardized_score, 2),
+    check.names = FALSE, stringsAsFactors = FALSE
+  )
+  names(tbl)[names(tbl) == "std_score"] <- std_col
+  DT::datatable(
+    tbl, rownames = FALSE, class = "stripe hover row-border",
+    options = list(
+      paging = TRUE, pageLength = 15, searching = TRUE, info = TRUE,
+      ordering = TRUE, scrollX = TRUE, dom = "ftip",
+      order = list(list(ncol(tbl) - 1, "desc")),
+      columnDefs = list(list(className = "dt-left", targets = c(0, 1, 2)))
+    )
+  )
+}
+
+# Summary card values for the top of the Accuracy page.
+acc_summary <- function(res, metric = "MAE", horizon = 30) {
+  if (!is.data.frame(res) || nrow(res) == 0) {
+    return(list(n_series = 0, n_models = 0, horizon = horizon, metric = metric,
+                worst = "\u2014", stable = "\u2014"))
+  }
+  worst_i  <- which.max(res$metric_value)
+  stable_i <- which.min(res$error_variability)
+  list(
+    n_series = length(unique(res$series_key)),
+    n_models = length(unique(res$model_name)),
+    horizon  = horizon,
+    metric   = metric,
+    worst    = paste0(res$series_key[worst_i], " \u00b7 ", res$model_name[worst_i]),
+    stable   = paste0(res$series_key[stable_i], " \u00b7 ", res$model_name[stable_i])
+  )
+}
