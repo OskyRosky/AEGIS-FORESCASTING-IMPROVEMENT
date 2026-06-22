@@ -752,23 +752,27 @@ section_accuracy <- function() {
 }
 
 section_ttl <- function() {
-  # --- Check governed TTL artifact availability (read-only, no compute) ----
-  reg <- tryCatch(get_artifact_status(), error = function(e) NULL)
-  ttl_status <- "roadmap"
-  if (is.data.frame(reg) && "key" %in% names(reg) && "status" %in% names(reg)) {
-    row <- reg[reg$key == "ttl_capacity", , drop = FALSE]
-    if (nrow(row) >= 1) ttl_status <- as.character(row$status[1])
-  }
-  source_available <- !is.na(ttl_status) &&
-    !ttl_status %in% c("roadmap", "roadmap_missing", "optional_missing", "required_missing")
+  # Stage 07 TTL PROTOTYPE. DEMAND is our REAL forecast; SUPPLY and the derived
+  # Months-to-Live (TTL) are SIMULATED (python/shiny_mvp/build_ttl_prototype.py)
+  # and clearly labelled as such. This is an illustrative example of how the
+  # forecasting work feeds a Time-To-Live / capacity view; it is NOT governed
+  # and does not change any champion. It mirrors the AEGIS capacity views so a
+  # later swap to the real SQL sources is a drop-in replacement.
 
-  # A small checklist row: label + status pill. Items we still have to build
-  # are flagged with "**" so they are easy to spot as future work.
-  ttl_check <- function(label, state, pill_class = "pill-amber") {
-    tags$li(
-      tags$span(class = "info-key", label),
-      tags$span(class = "info-val",
-                tags$span(class = paste("pill", pill_class), state))
+  ttl_series <- ttl_series_choices()
+  n_series   <- length(ttl_series)
+
+  ttl_step <- function(num, title, control, hint = NULL, extra = NULL) {
+    tags$div(
+      class = "fv-step",
+      tags$div(
+        class = "fv-step-head",
+        tags$span(class = "fv-step-num", as.character(num)),
+        tags$span(class = "fv-step-title", title)
+      ),
+      control,
+      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
+      extra
     )
   }
 
@@ -778,98 +782,147 @@ section_ttl <- function() {
     # A. Header --------------------------------------------------------------
     section_head(
       "TTL / Capacity View",
-      "Planned view for connecting forecast outcomes to capacity timing, risk, and operational readiness."
+      "Time-to-Live (Months to Live): how long until forecast demand reaches supply, so capacity can be added before a shortage. Prototype example built on our forecasts."
     ),
 
-    # B. Main status callout -------------------------------------------------
+    # B. Prototype / governance banner --------------------------------------
     tags$div(
-      class = "ttl-callout",
-      tags$span(class = "pill pill-amber", "Planned section"),
+      class = "ttl-callout ttl-callout-proto",
+      tags$span(class = "pill pill-amber", "Prototype \u00b7 simulated supply"),
       tags$h3(class = "ttl-callout-title",
-              "** TTL source not available yet \u2014 planned for capacity view **"),
+              "Demand is real (our forecast) \u00b7 Supply & TTL are simulated"),
       tags$p(
         class = "ttl-callout-text",
-        "This page is reserved for a governed Months-to-Live / capacity artifact. ",
-        "Until that artifact is available, the dashboard does not calculate or infer ",
-        "TTL, and it does not derive any capacity health score from unrelated data."
+        "This page shows how forecasting improvements feed a Time-To-Live view. ",
+        "The demand line comes from our real forecasts; supply and the derived ",
+        "Months-to-Live are simulated for illustration. Real AEGIS sources ",
+        "(", tags$code("vw_SubstrateBE_MonthsToLive_*"), ", ",
+        tags$code("HLC_BE_Future_Supply_TimeSeries_*"),
+        ") are identified but not yet validated as governed artifacts."
       )
     ),
 
-    # C. Capacity view readiness barometer -----------------------------------
-    tags$h3(class = "section-block-title", "Capacity view readiness"),
-    tags$p(class = "shell-card-detail", style = "margin:-6px 0 12px;",
-           "This meter shows how ready the page is to display TTL \u2014 it is ",
-           tags$strong("data/source readiness"),
-           ", not capacity health and not operational health."),
-    tags$div(
-      class = "ttl-barometer",
+    # C. Summary KPIs (band counts) -----------------------------------------
+    uiOutput("ttl_summary_cards"),
+
+    # D. Per-series gauge + supply/demand line ------------------------------
+    tags$section(
+      class = "fvx-section ttl-section",
       tags$div(
-        class = "ttl-barometer-track",
-        tags$div(class = "ttl-zone ttl-zone-missing", "Source missing"),
-        tags$div(class = "ttl-zone ttl-zone-connected", "Source connected"),
-        tags$div(class = "ttl-zone ttl-zone-ready", "Ready for interpretation"),
-        # Marker pinned to the first zone while the source is missing.
+        class = "fvx-section-head",
+        tags$span(class = "fvx-section-kicker", "Per series"),
+        tags$h3(class = "fvx-section-title", "Months to Live \u00b7 Supply vs Demand"),
+        tags$span(class = "pill pill-blue", "Gauge + crossover")
+      ),
+      tags$p(
+        class = "fvx-section-lead",
+        "Pick a series to see its Months-to-Live gauge and the supply-vs-demand ",
+        "crossover (where demand reaches supply). ", as.character(n_series),
+        " series available, ordered most-urgent first."
+      ),
+
+      tags$div(
+        class = "fv-setup",
         tags$div(
-          class = if (source_available) "ttl-marker ttl-marker-connected" else "ttl-marker ttl-marker-missing",
-          tags$span(class = "ttl-marker-dot"),
-          tags$span(class = "ttl-marker-label",
-                    if (source_available) "Source detected" else "Source missing / pending")
+          class = "fv-setup-panel",
+          tags$div(class = "fv-setup-title", "Set up the TTL view"),
+          ttl_step(
+            1, "Select series",
+            selectInput("ttl_series", NULL, choices = ttl_series,
+                        selected = if (n_series) ttl_series[[1]] else NULL,
+                        width = "100%"),
+            "Series are sorted shortest Time-to-Live first (most urgent at the top)."
+          ),
+          tags$div(
+            class = "fv-step fv-step-action",
+            tags$div(
+              class = "fv-step-head",
+              tags$span(class = "fv-step-num", "2"),
+              tags$span(class = "fv-step-title", "Analyze")
+            ),
+            actionButton("ttl_go", "Analyze TTL", class = "fv-analyze-btn"),
+            tags$p(class = "fv-step-hint",
+                   "The gauge and chart update only after you click Analyze TTL.")
+          ),
+          tags$p(class = "fv-entity-note",
+                 "Demand = real forecast. Supply & TTL = simulated. Nothing is written back.")
+        ),
+
+        tags$div(
+          class = "fv-result",
+          tags$div(
+            class = "fv-step-head",
+            tags$span(class = "fv-step-num", "3"),
+            tags$span(class = "fv-step-title", "Months to Live")
+          ),
+          tags$div(
+            class = "ttl-gauge-wrap",
+            highcharter::highchartOutput("ttl_gauge", height = "300px")
+          ),
+          tags$div(
+            class = "fv-notes-head",
+            tags$span(class = "fv-step-num", "4"),
+            tags$span(class = "fv-step-title", "Supply vs Demand (crossover)")
+          ),
+          tags$div(
+            class = "fv-chart-wrap",
+            highcharter::highchartOutput("ttl_line", height = "380px")
+          )
         )
+      )
+    ),
+
+    # E. Fleet heatmap (all series) -----------------------------------------
+    tags$section(
+      class = "fvx-section ttl-section",
+      tags$div(
+        class = "fvx-section-head",
+        tags$span(class = "fvx-section-kicker", "All series"),
+        tags$h3(class = "fvx-section-title", "Projected utilization heatmap"),
+        tags$span(class = "pill pill-blue", "Fleet view")
+      ),
+      tags$p(
+        class = "fvx-section-lead",
+        "Projected monthly utilization for every series (rows), most-urgent first. ",
+        "Blue = healthy headroom, yellow = tightening, red = at/over capacity."
       ),
       tags$div(
-        class = "ttl-barometer-foot",
-        tags$span(class = "ttl-readiness-state",
-                  if (source_available) "State: source detected (preview only)" else "State: source unavailable"),
-        tags$span(class = "ttl-readiness-score",
-                  if (source_available) "Readiness: pending interpretation" else "Readiness: 0% \u00b7 pending source")
+        class = "fv-chart-wrap",
+        plotly::plotlyOutput("ttl_heatmap", height = "640px")
       )
     ),
 
-    # D. Future interpretation cards ----------------------------------------
-    tags$h3(class = "section-block-title", "What this page will show"),
-    card_grid(
-      shell_card("** Future view", "Time-to-impact",
-                 "How many days or months remain before a capacity threshold is reached, once a governed TTL source exists."),
-      shell_card("** Future view", "Capacity pressure",
-                 "Forecast-driven resource pressure by entity, forest, region, or SKU \u2014 shown only if those fields exist in the governed source."),
-      shell_card("** Future view", "Forecast-to-capacity bridge",
-                 "The link between forecast outputs and capacity planning decisions, connecting the Model Lab to operational readiness.")
-    ),
-
-    # E. Required source checklist ------------------------------------------
-    tags$h3(class = "section-block-title", "Required source checklist"),
-    tags$ul(
-      class = "info-list",
-      ttl_check("** Governed TTL artifact",
-                if (source_available) "Detected (preview)" else "Missing / roadmap",
-                if (source_available) "pill-green" else "pill-amber"),
-      ttl_check("** Entity mapping", "Pending source"),
-      ttl_check("** Capacity threshold definition", "Pending source"),
-      ttl_check("** Forecast linkage", "Pending source"),
-      ttl_check("Visualization readiness", "Shell ready", "pill-green")
-    ),
-
-    # F. Methodology note ----------------------------------------------------
-    tags$div(
-      class = "ttl-method-note",
-      tags$span(class = "pill pill-blue", "Methodology"),
-      tags$span(
-        "TTL will only be displayed when a governed source artifact exists. ",
-        "This dashboard will not estimate TTL from unrelated data or create proxy capacity health scores."
-      )
-    ),
-
-    # G. Visual review note --------------------------------------------------
-    tags$div(
-      style = "margin-top:18px;",
+    # F. Snapshot table -----------------------------------------------------
+    tags$section(
+      class = "fvx-section ttl-section",
       tags$div(
-        class = "info-list", style = "padding:14px 18px;",
-        tags$div(
-          style = "display:flex; align-items:center; gap:10px;",
-          tags$span(class = "pill pill-amber", "Visual review"),
-          tags$span(style = "font-size:14px; color:#33455c;",
-                    "Please review this TTL placeholder visually before moving to the next Stage 07 block.")
-        )
+        class = "fvx-section-head",
+        tags$span(class = "fvx-section-kicker", "Snapshot"),
+        tags$h3(class = "fvx-section-title", "Time-to-Live snapshot table"),
+        tags$span(class = "pill pill-blue", "All series")
+      ),
+      tags$div(class = "tess-table-wrap",
+               DT::dataTableOutput("ttl_table")),
+
+      # TTL color legend
+      tags$div(
+        class = "ttl-legend",
+        lapply(names(TTL_BANDS), function(k) {
+          b <- TTL_BANDS[[k]]
+          tags$span(class = "ttl-legend-item",
+                    tags$span(class = "ttl-legend-swatch",
+                              style = paste0("background:", b$color, ";")),
+                    paste0(b$label, " (", b$hint, ")"))
+        })
+      ),
+
+      tags$p(
+        class = "fv-method-note",
+        "Prototype only. Demand is our real forecast; supply and the derived ",
+        "Months-to-Live are simulated for illustration. This page does not ",
+        "generate new forecasts, recompute governed metrics, or change any ",
+        "selected champion. It will be repointed to governed AEGIS capacity ",
+        "sources once those are validated."
       )
     )
   )
@@ -1017,14 +1070,82 @@ section_universe <- function() {
 }
 
 section_tournament <- function() {
+  vals <- tournament_summary_values()
+  n <- function(x) {
+    if (length(x) != 1 || is.na(x) || !nzchar(as.character(x))) "\u2014" else as.character(x)
+  }
   panel(
     "tournament",
     section_head("Tournament Standings",
-                 "Model standings ranked by official MASE / RMSSE (placeholder)."),
+                 "Governed tournament evidence from the Model Lab. Official MASE/RMSSE and pairwise evidence are shown without recomputing rankings or creating a composite score."),
+
+    # A. Executive summary cards --------------------------------------------
     card_grid(
-      shell_card("Protocol", "Rolling-origin", "Backtesting protocol used during the governed review."),
-      shell_card("Ranking", "Pending binding", "Standings table will be bound to governed tournament metrics."),
-      shell_card("Metric policy", "MASE primary", "MASE primary, RMSSE guardrail per benchmark semantics.")
+      kpi_card(n(vals$models_ranked), "Models ranked",
+               pill = "Governed scorecard", pill_class = "pill-blue"),
+      kpi_card(vals$primary_metric, "Primary metric",
+               pill = "Lower is better", pill_class = "pill-blue"),
+      kpi_card(vals$guardrail_metric, "Guardrail metric",
+               pill = "Lower is better", pill_class = "pill-blue"),
+      kpi_card(vals$selected_champion, "Selected champion under conditions",
+               pill = "Governed", pill_class = "pill-green")
+    ),
+    card_grid(
+      kpi_card(vals$confidence, "Confidence",
+               pill = "Decision confidence", pill_class = "pill-amber"),
+      kpi_card(n(vals$pairwise_comparisons), "Pairwise comparisons",
+               pill = "Governed evidence", pill_class = "pill-blue"),
+      kpi_card(paste0(n(vals$supported_better), " / ", n(vals$supported_worse)),
+               "Champion support better / worse",
+               pill = "Evidence summary", pill_class = "pill-green"),
+      kpi_card("No formula", "Composite Tournament Score",
+               pill = "Not computed", pill_class = "pill-amber")
+    ),
+
+    # B. Standings table -----------------------------------------------------
+    tags$h3(class = "section-block-title", "Governed tournament standings"),
+    tags$p(
+      class = "shell-card-detail",
+      "Rows are ordered by official median MASE ascending for readability. This ordering is not a final composite score and does not by itself decide the selected champion under conditions."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("tournament_standings_table")),
+
+    # C. MASE / RMSSE tradeoff ----------------------------------------------
+    tags$h3(class = "section-block-title", "MASE vs RMSSE tradeoff"),
+    tags$p(
+      class = "shell-card-detail",
+      "Each point is one model from the governed tournament scorecard. Lower-left indicates lower error on both governed metrics; no new score is calculated from this chart."
+    ),
+    tags$div(class = "shell-card", plotly::plotlyOutput("tournament_mase_rmsse_plot", height = "520px")),
+
+    # D. Pairwise evidence ---------------------------------------------------
+    tags$h3(class = "section-block-title", "Pairwise evidence"),
+    tags$p(
+      class = "shell-card-detail",
+      "Pairwise comparisons come from the governed tournament evidence artifact. The table reports MASE deltas, bootstrap confidence intervals, p-values, adjusted p-values, practical threshold flags, and comparison status."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("tournament_pairwise_table")),
+
+    # E. Composite score note ------------------------------------------------
+    tags$h3(class = "section-block-title", "Composite Tournament Score"),
+    tags$div(
+      class = "shell-card",
+      tags$span(class = "pill pill-amber", "No governed formula found"),
+      tags$h3(class = "shell-card-title", "No composite tournament score is computed here"),
+      tags$p(
+        class = "shell-card-detail",
+        "No governed numeric Composite Tournament Score formula was found in the current artifacts. The current Tournament page displays governed MASE/RMSSE, guardrail, risk, eligibility, and pairwise evidence. A future proposed composite score could combine accuracy, pairwise support, coverage, risk, and confidence, but the formula and weights require Oscar approval before implementation."
+      )
+    ),
+
+    # F. Scope guard ---------------------------------------------------------
+    tags$div(
+      style = "margin-top:18px;",
+      info_list(
+        info_row("Source policy", "Tournament uses governed Model Lab artifacts only; it does not use forecast_viewer_model_outputs.csv as an official tournament source."),
+        info_row("No recompute", "The page does not recompute MASE, RMSSE, pairwise evidence, rankings, forecasts, or champion decisions."),
+        info_row("Language policy", "ETS Explicit is shown only as selected champion under conditions, never as an unconditional winner.")
+      )
     )
   )
 }
@@ -1178,4 +1299,3 @@ app_sections <- function() {
     section_version()
   )
 }
-

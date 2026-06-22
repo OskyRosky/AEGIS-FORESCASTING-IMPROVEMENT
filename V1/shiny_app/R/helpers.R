@@ -1212,3 +1212,588 @@ acc_summary <- function(res, metric = "MAE", horizon = 30) {
     stable   = paste0(res$series_key[stable_i], " \u00b7 ", res$model_name[stable_i])
   )
 }
+
+# ===========================================================================
+# Stage 7 | TTL PROTOTYPE accessors (read-only, SIMULATED supply + TTL)
+# ---------------------------------------------------------------------------
+# These read ONLY the two simulated artifacts produced by
+# python/shiny_mvp/build_ttl_prototype.py:
+#   ttl_supply_demand_timeseries  (series x month: demand REAL, supply SIMULATED)
+#   ttl_months_to_live_snapshot   (one row per series: months_to_live SIMULATED)
+# DEMAND is our real forecast; SUPPLY and TTL are simulated for the prototype.
+# Nothing governed is touched; no champion logic is involved.
+# ===========================================================================
+
+# TTL color bands (Alert / Warning / Healthy / Cool). Single source of truth.
+TTL_BANDS <- list(
+  Alert   = list(color = "#d7191c", label = "Alert",   hint = "< 3 months"),
+  Warning = list(color = "#fdae61", label = "Warning", hint = "3 \u2013 6 months"),
+  Healthy = list(color = "#1a9641", label = "Healthy", hint = "6 \u2013 12 months"),
+  Cool    = list(color = "#2c7bb6", label = "Cool",    hint = "12+ months")
+)
+TTL_GAUGE_MAX <- 24  # months shown on the gauge dial
+
+ttl_status_color <- function(status) {
+  s <- as.character(status)
+  vapply(s, function(x) {
+    b <- TTL_BANDS[[x]]
+    if (is.null(b)) "#94a3b8" else b$color
+  }, character(1))
+}
+
+ttl_snapshot <- function() {
+  df <- tryCatch(load_csv_artifact("ttl_months_to_live_snapshot"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
+  df$months_to_live   <- suppressWarnings(as.numeric(df$months_to_live))
+  df$supply_now       <- suppressWarnings(as.numeric(df$supply_now))
+  df$demand_now       <- suppressWarnings(as.numeric(df$demand_now))
+  df$utilization_pct  <- suppressWarnings(as.numeric(df$utilization_pct))
+  df$monthly_growth_rate <- suppressWarnings(as.numeric(df$monthly_growth_rate))
+  df
+}
+
+ttl_timeseries <- function() {
+  df <- tryCatch(load_csv_artifact("ttl_supply_demand_timeseries"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
+  df$month_date      <- as.Date(df$month_date)
+  df$demand          <- suppressWarnings(as.numeric(df$demand))
+  df$supply          <- suppressWarnings(as.numeric(df$supply))
+  df$utilization_pct <- suppressWarnings(as.numeric(df$utilization_pct))
+  df
+}
+
+# Series choices ordered most-urgent first (shortest TTL at the top). Cool
+# (no crossover) series sink to the bottom.
+ttl_series_choices <- function(snap = ttl_snapshot()) {
+  if (nrow(snap) == 0) return(character(0))
+  ord <- order(ifelse(is.na(snap$months_to_live), Inf, snap$months_to_live))
+  snap$entity_key[ord]
+}
+
+ttl_default_series <- function(snap = ttl_snapshot()) {
+  ch <- ttl_series_choices(snap)
+  if (length(ch)) ch[[1]] else ""
+}
+
+# Empty-state gauge / line (calm placeholders before Analyze).
+ttl_empty_gauge <- function(msg = "Select a series and click Analyze TTL.") {
+  highcharter::highchart() |>
+    highcharter::hc_title(text = msg,
+                          style = list(fontSize = "13px", color = "#627d98",
+                                       fontWeight = "500")) |>
+    highcharter::hc_credits(enabled = FALSE) |>
+    highcharter::hc_chart(
+      style = list(fontFamily = "Inter, system-ui, sans-serif"))
+}
+
+ttl_empty_chart <- function(msg = "Select a series and click Analyze TTL.") {
+  highcharter::highchart() |>
+    highcharter::hc_title(text = msg,
+                          style = list(fontSize = "13px", color = "#627d98",
+                                       fontWeight = "500")) |>
+    highcharter::hc_credits(enabled = FALSE) |>
+    highcharter::hc_xAxis(visible = FALSE) |>
+    highcharter::hc_yAxis(visible = FALSE) |>
+    highcharter::hc_chart(
+      style = list(fontFamily = "Inter, system-ui, sans-serif"))
+}
+
+# Speedometer-style gauge of Months to Live for one series, with the four TTL
+# color bands. No-crossover series are pinned at the top of the dial (24+).
+ttl_gauge <- function(series, snap = ttl_snapshot()) {
+  if (nrow(snap) == 0 || is.null(series) || !nzchar(series)) {
+    return(ttl_empty_gauge("No TTL snapshot available for this series."))
+  }
+  row <- snap[snap$entity_key == series, , drop = FALSE]
+  if (nrow(row) == 0) return(ttl_empty_gauge("Series not found in TTL snapshot."))
+  mtl <- row$months_to_live[[1]]
+  status <- as.character(row$ttl_status[[1]])
+  no_cross <- is.na(mtl)
+  dial <- if (no_cross) TTL_GAUGE_MAX else min(mtl, TTL_GAUGE_MAX)
+  lbl  <- if (no_cross) paste0(TTL_GAUGE_MAX, "+ mo") else paste0(round(mtl, 1), " mo")
+
+  highcharter::highchart() |>
+    highcharter::hc_chart(
+      type = "gauge",
+      style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
+    highcharter::hc_title(
+      text = "Months to Live",
+      style = list(fontSize = "14px", fontWeight = "600", color = "#102a43")) |>
+    highcharter::hc_subtitle(
+      text = paste0(series, "  \u00b7  ", status,
+                    if (no_cross) "  \u00b7  no crossover in horizon" else ""),
+      style = list(fontSize = "11px", color = "#627d98")) |>
+    highcharter::hc_pane(
+      startAngle = -120, endAngle = 120,
+      background = list(list(
+        backgroundColor = "#f8fafc", innerRadius = "62%", outerRadius = "100%",
+        shape = "arc", borderWidth = 0))) |>
+    highcharter::hc_yAxis(
+      min = 0, max = TTL_GAUGE_MAX,
+      reversed = TRUE,                       # 24 mo (safe) on the LEFT, 0 (danger) on the RIGHT
+      tickInterval = 6, minorTickInterval = 3,
+      tickPixelInterval = 30, tickWidth = 1, tickPosition = "inside",
+      labels = list(distance = -18, style = list(fontSize = "10px")),
+      title = list(text = lbl, y = 56,
+                   style = list(fontSize = "20px", fontWeight = "700",
+                                color = ttl_status_color(status))),
+      # Left -> right: blue 50% (OK) -> green 25% -> yellow 15% -> red 5% ->
+      # dark red 5% (extreme care). Months: blue 12-24, green 6-12, yellow
+      # 2.4-6, red 1.2-2.4, dark red 0-1.2.
+      plotBands = list(
+        list(from = 12,  to = TTL_GAUGE_MAX, color = "#2c7bb6", thickness = 20),
+        list(from = 6,   to = 12,  color = "#1a9641", thickness = 20),
+        list(from = 2.4, to = 6,   color = "#fdae61", thickness = 20),
+        list(from = 1.2, to = 2.4, color = "#d7191c", thickness = 20),
+        list(from = 0,   to = 1.2, color = "#6b0a0a", thickness = 20))) |>
+    highcharter::hc_add_series(
+      name = "Months to Live", data = list(round(dial, 2)),
+      dataLabels = list(enabled = FALSE),
+      dial = list(radius = "80%", backgroundColor = "#102a43",
+                  baseWidth = 10, topWidth = 1, rearLength = "12%"),
+      pivot = list(radius = 6, backgroundColor = "#102a43")) |>
+    highcharter::hc_tooltip(
+      headerFormat = "",
+      pointFormat = paste0("<b>", series, "</b><br/>Months to Live: <b>",
+                           lbl, "</b><br/>Status: ", status)) |>
+    highcharter::hc_credits(enabled = FALSE)
+}
+
+# Supply (blue step) vs Demand (red line) over time, with a vertical crossover
+# plotLine where demand first reaches supply. Mirrors the AEGIS line chart.
+ttl_line_chart <- function(series, ts = ttl_timeseries(), snap = ttl_snapshot()) {
+  if (nrow(ts) == 0 || is.null(series) || !nzchar(series)) {
+    return(ttl_empty_chart("No supply/demand series available for this selection."))
+  }
+  d <- ts[ts$entity_key == series, , drop = FALSE]
+  d <- d[order(d$month_date), , drop = FALSE]
+  if (nrow(d) == 0) return(ttl_empty_chart("Series not found in the timeseries."))
+
+  row <- snap[snap$entity_key == series, , drop = FALSE]
+  cross_date <- if (nrow(row) && nzchar(as.character(row$crossover_date[[1]]))) {
+    as.Date(row$crossover_date[[1]])
+  } else NA
+  status <- if (nrow(row)) as.character(row$ttl_status[[1]]) else "\u2014"
+  mtl <- if (nrow(row)) row$months_to_live[[1]] else NA
+  mtl_txt <- if (is.na(mtl)) "no crossover in horizon" else paste0(round(mtl, 1), " months")
+
+  # Adaptive window: keep the crossover comfortably on the RIGHT (~52% in, and
+  # never past ~66%) so it ALWAYS reads as a FUTURE event regardless of how fast
+  # demand climbs. No lower floor on the window: a fixed floor would push the
+  # crossover of very fast-growing (urgent) series back to the LEFT, which is
+  # exactly what we must avoid. Short-TTL series therefore show a compact window.
+  if (!is.na(cross_date)) {
+    start_date <- min(d$month_date)
+    span_days  <- as.numeric(cross_date - start_date)
+    xmax_date  <- start_date + span_days / 0.52
+    xmax_date  <- min(xmax_date, max(d$month_date))
+    d <- d[d$month_date <= xmax_date, , drop = FALSE]
+  }
+
+  dem_df <- data.frame(x = highcharter::datetime_to_timestamp(d$month_date),
+                       y = round(d$demand, 2))
+  sup_df <- data.frame(x = highcharter::datetime_to_timestamp(d$month_date),
+                       y = round(d$supply, 2))
+
+  hc <- highcharter::highchart() |>
+    highcharter::hc_chart(
+      type = "line", zoomType = "x",
+      style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
+    highcharter::hc_title(
+      text = paste0(round(if (is.na(mtl)) TTL_GAUGE_MAX else mtl, 1),
+                    " months TTL based on HDD for ", series),
+      style = list(fontSize = "14px", fontWeight = "600", color = "#102a43")) |>
+    highcharter::hc_subtitle(
+      text = paste0("Demand (forecast, real) vs Supply (simulated)  \u00b7  ",
+                    status, "  \u00b7  TTL: ", mtl_txt),
+      style = list(fontSize = "11px", color = "#627d98")) |>
+    highcharter::hc_xAxis(type = "datetime", title = list(text = NULL)) |>
+    highcharter::hc_yAxis(title = list(text = "HDD (TB)"), opposite = FALSE) |>
+    highcharter::hc_legend(enabled = TRUE) |>
+    highcharter::hc_tooltip(shared = TRUE, xDateFormat = "%Y-%m",
+                            valueDecimals = 1) |>
+    highcharter::hc_credits(enabled = FALSE) |>
+    highcharter::hc_plotOptions(line = list(marker = list(enabled = FALSE)))
+
+  if (!is.na(cross_date)) {
+    hc <- hc |> highcharter::hc_xAxis(
+      type = "datetime", title = list(text = NULL),
+      plotLines = list(list(
+        value = highcharter::datetime_to_timestamp(cross_date),
+        color = "#b91c1c", width = 2, dashStyle = "Dash", zIndex = 5,
+        label = list(text = "Crossover",
+                     style = list(color = "#b91c1c", fontWeight = "600",
+                                  fontSize = "11px")))))
+  }
+
+  hc |>
+    highcharter::hc_add_series(
+      name = "Supply (simulated)", type = "line", step = "left",
+      color = "#2c7bb6", lineWidth = 2.5,
+      data = highcharter::list_parse2(sup_df),
+      tooltip = list(valueSuffix = " TB")) |>
+    highcharter::hc_add_series(
+      name = "Demand (forecast)", type = "line",
+      color = "#d7191c", lineWidth = 2.5,
+      data = highcharter::list_parse2(dem_df),
+      tooltip = list(valueSuffix = " TB"))
+}
+
+# Projected utilization heatmap across ALL series (rows) by month (cols).
+# Shortest-TTL series at the top. Blue (healthy) -> yellow -> red (>=100%).
+ttl_heatmap <- function(ts = ttl_timeseries(), snap = ttl_snapshot(),
+                        top_n = 45) {
+  if (nrow(ts) == 0) {
+    return(acc_empty_plot(
+      "No TTL timeseries available. Generate the prototype artifacts first."))
+  }
+  ord <- ttl_series_choices(snap)
+  ord <- ord[ord %in% unique(ts$entity_key)]
+  if (is.finite(top_n) && top_n > 0 && length(ord) > top_n) ord <- ord[seq_len(top_n)]
+  ts <- ts[ts$entity_key %in% ord, , drop = FALSE]
+
+  months <- sort(unique(ts$month_date))
+  m_lab  <- format(months, "%Y-%m")
+  ns <- length(ord); nm <- length(months)
+  z  <- matrix(NA_real_, nrow = ns, ncol = nm)
+  ht <- matrix("",        nrow = ns, ncol = nm)
+  idx_s <- stats::setNames(seq_along(ord), ord)
+  idx_m <- stats::setNames(seq_along(m_lab), format(months, "%Y-%m"))
+  for (i in seq_len(nrow(ts))) {
+    si <- idx_s[[ts$entity_key[i]]]
+    mi <- idx_m[[format(ts$month_date[i], "%Y-%m")]]
+    if (is.null(si) || is.null(mi)) next
+    uval <- ts$utilization_pct[i]
+    z[si, mi] <- uval
+    ht[si, mi] <- paste0(
+      "Series: ", ts$entity_key[i],
+      "<br>Month: ", format(ts$month_date[i], "%Y-%m"),
+      "<br>Utilization: ", formatC(uval, format = "f", digits = 1), "%",
+      "<br>Demand: ", formatC(ts$demand[i], format = "f", digits = 1),
+      "<br>Supply: ", formatC(ts$supply[i], format = "f", digits = 1))
+  }
+
+  plotly::plot_ly(
+    x = m_lab, y = ord, z = z, type = "heatmap",
+    text = ht, hoverinfo = "text",
+    zmin = 60, zmax = 110, zauto = FALSE,
+    xgap = 1, ygap = 1,
+    colorscale = list(c(0, "#2c7bb6"), c(0.5, "#ffffbf"), c(1, "#d7191c")),
+    colorbar = list(title = list(text = "Util %"), thickness = 12)
+  ) |>
+    plotly::layout(
+      xaxis = list(title = "", tickangle = -40, side = "top",
+                   tickfont = list(size = 10)),
+      yaxis = list(title = "", autorange = "reversed",
+                   tickfont = list(size = 10)),
+      margin = list(l = 150, r = 10, t = 60, b = 10),
+      paper_bgcolor = "rgba(0,0,0,0)", plot_bgcolor = "rgba(0,0,0,0)"
+    ) |>
+    plotly::config(displayModeBar = FALSE)
+}
+
+# Snapshot table for all series, most-urgent first, with a colored TTL status
+# pill via DT formatting.
+ttl_table <- function(snap = ttl_snapshot()) {
+  if (nrow(snap) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "No TTL snapshot available."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  ord <- order(ifelse(is.na(snap$months_to_live), Inf, snap$months_to_live))
+  s <- snap[ord, , drop = FALSE]
+  tbl <- data.frame(
+    Series        = s$entity_key,
+    Region        = s$region,
+    Environment   = s$environment,
+    Resource      = s$resource,
+    `Supply (TB)` = round(s$supply_now, 1),
+    `Demand (TB)` = round(s$demand_now, 1),
+    `Util %`      = round(s$utilization_pct, 1),
+    `Growth /mo`  = round(s$monthly_growth_rate * 100, 2),
+    `Months to Live` = ifelse(is.na(s$months_to_live), NA, round(s$months_to_live, 1)),
+    `Crossover`   = ifelse(nzchar(as.character(s$crossover_date)),
+                           as.character(s$crossover_date), "\u2014"),
+    Status        = s$ttl_status,
+    check.names = FALSE, stringsAsFactors = FALSE
+  )
+  DT::datatable(
+    tbl, rownames = FALSE, class = "stripe hover row-border",
+    options = list(
+      paging = TRUE, pageLength = 15, searching = TRUE, info = TRUE,
+      ordering = TRUE, scrollX = TRUE, dom = "ftip",
+      columnDefs = list(list(className = "dt-left", targets = c(0, 1, 2)))
+    )
+  ) |>
+    DT::formatStyle(
+      "Status",
+      backgroundColor = DT::styleEqual(
+        names(TTL_BANDS),
+        vapply(TTL_BANDS, function(b) b$color, character(1))),
+      color = "white", fontWeight = "600"
+    )
+}
+
+# Summary KPIs for the top of the TTL page (read-only counts).
+ttl_summary <- function(snap = ttl_snapshot()) {
+  if (nrow(snap) == 0) {
+    return(list(n_series = 0, n_alert = 0, n_warning = 0, n_healthy = 0,
+                n_cool = 0, soonest = "\u2014", soonest_mtl = "\u2014"))
+  }
+  counts <- table(factor(snap$ttl_status, levels = names(TTL_BANDS)))
+  has_cross <- !is.na(snap$months_to_live)
+  soonest <- "\u2014"; soonest_mtl <- "\u2014"
+  if (any(has_cross)) {
+    sub <- snap[has_cross, , drop = FALSE]
+    i <- which.min(sub$months_to_live)
+    soonest <- sub$entity_key[i]
+    soonest_mtl <- paste0(round(sub$months_to_live[i], 1), " mo")
+  }
+  list(
+    n_series    = nrow(snap),
+    n_alert     = as.integer(counts[["Alert"]]),
+    n_warning   = as.integer(counts[["Warning"]]),
+    n_healthy   = as.integer(counts[["Healthy"]]),
+    n_cool      = as.integer(counts[["Cool"]]),
+    soonest     = soonest,
+    soonest_mtl = soonest_mtl
+  )
+}
+
+# ===========================================================================
+# Stage 7 | Models > Tournament governed artifact accessors
+# ---------------------------------------------------------------------------
+# These helpers read ONLY governed tournament/champion artifacts exposed by the
+# 7.0E loader. They do not compute a composite score, invent weights, rerun
+# tournaments, or recalculate official MASE/RMSSE.
+# ===========================================================================
+
+tournament_scorecard <- function() {
+  df <- tryCatch(load_csv_artifact("tournament_scorecard"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+tournament_pairwise <- function() {
+  df <- tryCatch(load_csv_artifact("tournament_pairwise"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+tournament_champion_summary <- function() {
+  df <- tryCatch(load_csv_artifact("champion_summary"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+tournament_selected_champion <- function(champ = tournament_champion_summary()) {
+  if (!is.data.frame(champ) || nrow(champ) == 0 ||
+      !("selected_champion_model" %in% names(champ))) {
+    return(APP_CHAMPION)
+  }
+  first_label(champ$selected_champion_model[[1]], APP_CHAMPION)
+}
+
+tournament_scorecard_normalized <- function(df = tournament_scorecard(),
+                                            champion = tournament_selected_champion()) {
+  if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
+  out <- df
+  num_cols <- c("entity_count", "official_median_mase", "official_median_rmsse",
+                "median_wmape", "median_smape", "median_bias")
+  for (col in intersect(num_cols, names(out))) {
+    out[[col]] <- suppressWarnings(as.numeric(out[[col]]))
+  }
+  flag_cols <- c("audit_risk_flag", "eligible_for_champion_consideration")
+  for (col in intersect(flag_cols, names(out))) {
+    out[[col]] <- .tess_as_logical(out[[col]])
+  }
+  if (!("selected_champion" %in% names(out))) {
+    out$selected_champion <- trimws(as.character(out$model_name)) == champion
+  } else {
+    out$selected_champion <- .tess_as_logical(out$selected_champion)
+  }
+  if ("official_median_mase" %in% names(out)) {
+    out <- out[order(out$official_median_mase, na.last = TRUE), , drop = FALSE]
+  }
+  out
+}
+
+tournament_summary_values <- function(scorecard = tournament_scorecard_normalized(),
+                                      pairwise = tournament_pairwise(),
+                                      champ = tournament_champion_summary()) {
+  champion <- tournament_selected_champion(champ)
+  confidence <- if (is.data.frame(champ) && nrow(champ) > 0 &&
+                    "decision_confidence" %in% names(champ)) {
+    first_label(champ$decision_confidence[[1]], APP_CHAMPION_CONFIDENCE)
+  } else APP_CHAMPION_CONFIDENCE
+  better <- if (is.data.frame(champ) && nrow(champ) > 0 &&
+                "supported_better_count" %in% names(champ)) {
+    first_label(champ$supported_better_count[[1]])
+  } else "\u2014"
+  worse <- if (is.data.frame(champ) && nrow(champ) > 0 &&
+               "supported_worse_count" %in% names(champ)) {
+    first_label(champ$supported_worse_count[[1]])
+  } else "\u2014"
+  list(
+    models_ranked = if (is.data.frame(scorecard)) nrow(scorecard) else NA_integer_,
+    primary_metric = "MASE",
+    guardrail_metric = "RMSSE",
+    selected_champion = champion,
+    confidence = confidence,
+    pairwise_comparisons = if (is.data.frame(pairwise)) nrow(pairwise) else NA_integer_,
+    supported_better = better,
+    supported_worse = worse
+  )
+}
+
+tournament_badge <- function(text, class = "pill-blue") {
+  paste0('<span class="pill ', class, '">', htmltools::htmlEscape(text), '</span>')
+}
+
+tournament_bool_badge <- function(x, true_text, false_text,
+                                  true_class = "pill-green",
+                                  false_class = "pill-amber") {
+  ifelse(x %in% TRUE, tournament_badge(true_text, true_class),
+         ifelse(x %in% FALSE, tournament_badge(false_text, false_class), "\u2014"))
+}
+
+tournament_standings_table <- function(df = tournament_scorecard_normalized()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed tournament scorecard artifact is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+
+  risk_cls <- ifelse(tolower(as.character(df$risk_status)) %in% c("high", "high_risk"),
+                     "pill-amber", "pill-blue")
+  risk_badge <- tournament_badge(ifelse(nzchar(as.character(df$risk_status)),
+                                        as.character(df$risk_status), "none"), risk_cls)
+  champion_badge <- ifelse(df$selected_champion %in% TRUE,
+                           tournament_badge("Selected champion (conditions)", "pill-green"),
+                           "\u2014")
+  eligible_badge <- tournament_bool_badge(df$eligible_for_champion_consideration,
+                                          "Eligible", "Not eligible")
+  audit_badge <- tournament_bool_badge(df$audit_risk_flag,
+                                       "Audit risk", "No audit risk",
+                                       true_class = "pill-amber",
+                                       false_class = "pill-blue")
+
+  tbl <- data.frame(
+    Model = htmltools::htmlEscape(df$model_name),
+    Origin = htmltools::htmlEscape(df$model_origin),
+    Family = htmltools::htmlEscape(gsub("_", " ", df$model_family)),
+    `Median MASE` = round(df$official_median_mase, 3),
+    `Median RMSSE` = round(df$official_median_rmsse, 3),
+    `MASE guardrail` = htmltools::htmlEscape(df$mase_guardrail_status),
+    `RMSSE guardrail` = htmltools::htmlEscape(df$rmsse_guardrail_status),
+    Coverage = df$entity_count,
+    Risk = risk_badge,
+    `Audit risk` = audit_badge,
+    Eligibility = eligible_badge,
+    Champion = champion_badge,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    escape = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      pageLength = 13,
+      paging = FALSE,
+      searching = TRUE,
+      info = FALSE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "ft",
+      order = list(list(3, "asc")),
+      columnDefs = list(list(className = "dt-left", targets = c(0, 1, 2, 8, 9, 10, 11)))
+    )
+  )
+}
+
+tournament_tradeoff_plot <- function(df = tournament_scorecard_normalized()) {
+  if (!is.data.frame(df) || nrow(df) == 0 ||
+      !all(c("official_median_mase", "official_median_rmsse") %in% names(df))) {
+    return(plotly::plot_ly() |>
+             plotly::layout(title = "Governed tournament scorecard unavailable"))
+  }
+
+  risk_status <- ifelse(nzchar(as.character(df$risk_status)),
+                        as.character(df$risk_status), "low")
+  champion <- df$selected_champion %in% TRUE
+  tooltip <- paste0(
+    "Model: ", htmltools::htmlEscape(df$model_name),
+    "<br>Median MASE: ", formatC(df$official_median_mase, format = "f", digits = 3),
+    "<br>Median RMSSE: ", formatC(df$official_median_rmsse, format = "f", digits = 3),
+    "<br>Risk status: ", htmltools::htmlEscape(risk_status),
+    "<br>Champion eligible: ", ifelse(df$eligible_for_champion_consideration %in% TRUE, "yes", "no"),
+    "<br>Selected champion under conditions: ", ifelse(champion, "yes", "no"),
+    "<br>Entity coverage: ", df$entity_count
+  )
+  color <- ifelse(champion, "#1a9641",
+                  ifelse(tolower(risk_status) %in% c("high", "high_risk"), "#f59e0b", "#2c7bb6"))
+  size <- ifelse(champion, 18, 12)
+
+  plotly::plot_ly(
+    data = df,
+    x = ~official_median_mase,
+    y = ~official_median_rmsse,
+    type = "scatter",
+    mode = "markers+text",
+    text = ~model_name,
+    textposition = "top center",
+    hoverinfo = "text",
+    hovertext = tooltip,
+    marker = list(size = size, color = color, opacity = 0.86,
+                  line = list(color = "#ffffff", width = 1.5))
+  ) |>
+    plotly::layout(
+      title = list(text = "MASE vs RMSSE tradeoff (governed scorecard metrics)",
+                   font = list(size = 14)),
+      xaxis = list(title = "Official median MASE (lower is better)",
+                   zeroline = FALSE),
+      yaxis = list(title = "Official median RMSSE (lower is better)",
+                   zeroline = FALSE),
+      margin = list(l = 72, r = 22, t = 56, b = 62),
+      paper_bgcolor = "rgba(0,0,0,0)",
+      plot_bgcolor = "rgba(0,0,0,0)",
+      showlegend = FALSE
+    ) |>
+    plotly::config(displayModeBar = FALSE)
+}
+
+tournament_pairwise_table <- function(df = tournament_pairwise()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed pairwise evidence artifact is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  keep <- intersect(
+    c("model_a", "model_b", "paired_entity_count", "median_delta_mase",
+      "bootstrap_ci_low", "bootstrap_ci_high", "sign_test_p_value",
+      "bh_adjusted_p_value", "practical_threshold", "practically_meaningful",
+      "statistically_supported", "comparison_status"),
+    names(df)
+  )
+  tbl <- df[, keep, drop = FALSE]
+  names(tbl) <- gsub("_", " ", names(tbl))
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      pageLength = 12,
+      paging = TRUE,
+      searching = TRUE,
+      info = TRUE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "ftip"
+    )
+  )
+}

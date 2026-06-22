@@ -281,6 +281,83 @@ app_server <- function(input, output, session) {
     acc_table(acc_result(), metric = r$metric)
   })
 
+  # ==========================================================================
+  # TTL PROTOTYPE (ttl_*) -- Time-to-Live / capacity view.
+  # DEMAND = real forecast; SUPPLY + TTL = simulated. Read-only, not governed.
+  # Band-count cards + heatmap + table render immediately (global view); the
+  # per-series gauge and supply/demand line are gated behind Analyze TTL.
+  # ==========================================================================
+  ttl_snap <- ttl_snapshot()
+  ttl_ts   <- ttl_timeseries()
+
+  ttl_request <- eventReactive(input$ttl_go, {
+    list(series = input$ttl_series)
+  }, ignoreNULL = FALSE)
+
+  # Band-count KPI cards (global; shown immediately).
+  output$ttl_summary_cards <- renderUI({
+    cell <- function(label, value, cls = "") {
+      tags$div(class = paste("acc-kpi-card", cls),
+               tags$div(class = "acc-kpi-label", label),
+               tags$div(class = "acc-kpi-value", value))
+    }
+    s <- ttl_summary(ttl_snap)
+    tags$div(
+      class = "acc-kpi-grid",
+      cell("Series", s$n_series),
+      cell("Alert (< 3 mo)", s$n_alert, "acc-kpi-bad"),
+      cell("Warning (3\u20136 mo)", s$n_warning),
+      cell("Healthy (6\u201312 mo)", s$n_healthy, "acc-kpi-good"),
+      cell("Cool (12+ mo)", s$n_cool),
+      cell("Soonest crossover", paste0(s$soonest, " \u00b7 ", s$soonest_mtl),
+           "acc-kpi-wide acc-kpi-bad")
+    )
+  })
+
+  # Per-series gauge (gated on Analyze TTL).
+  output$ttl_gauge <- highcharter::renderHighchart({
+    if (is.null(input$ttl_go) || input$ttl_go == 0) {
+      return(ttl_empty_gauge("Select a series and click Analyze TTL."))
+    }
+    ttl_gauge(ttl_request()$series, ttl_snap)
+  })
+
+  # Per-series supply vs demand line + crossover (gated on Analyze TTL).
+  output$ttl_line <- highcharter::renderHighchart({
+    if (is.null(input$ttl_go) || input$ttl_go == 0) {
+      return(ttl_empty_chart("Select a series and click Analyze TTL."))
+    }
+    ttl_line_chart(ttl_request()$series, ttl_ts, ttl_snap)
+  })
+
+  # Fleet utilization heatmap (global; all series).
+  output$ttl_heatmap <- plotly::renderPlotly({
+    ttl_heatmap(ttl_ts, ttl_snap)
+  })
+
+  # Snapshot table (global; all series, most-urgent first).
+  output$ttl_table <- DT::renderDataTable({
+    ttl_table(ttl_snap)
+  })
+
+  # ==========================================================================
+  # MODELS / TOURNAMENT PAGE MVP
+  # Governed read-only display from tournament_model_scorecard.csv and
+  # tournament_pairwise_evidence.csv. No composite score, weights, metrics,
+  # forecasts, tournaments, or champion decisions are computed here.
+  # ==========================================================================
+  output$tournament_standings_table <- DT::renderDataTable({
+    tournament_standings_table()
+  })
+
+  output$tournament_mase_rmsse_plot <- plotly::renderPlotly({
+    tournament_tradeoff_plot()
+  })
+
+  output$tournament_pairwise_table <- DT::renderDataTable({
+    tournament_pairwise_table()
+  })
+
   # The chart + model picker / count / notes live in a section that is hidden at
   # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
   # chart containers and controls are populated on first navigation. custom.js
@@ -295,6 +372,14 @@ app_server <- function(input, output, session) {
   outputOptions(output, "acc_summary_cards", suspendWhenHidden = FALSE)
   outputOptions(output, "acc_heatmap",       suspendWhenHidden = FALSE)
   outputOptions(output, "acc_table",         suspendWhenHidden = FALSE)
+  outputOptions(output, "ttl_summary_cards", suspendWhenHidden = FALSE)
+  outputOptions(output, "ttl_gauge",         suspendWhenHidden = FALSE)
+  outputOptions(output, "ttl_line",          suspendWhenHidden = FALSE)
+  outputOptions(output, "ttl_heatmap",       suspendWhenHidden = FALSE)
+  outputOptions(output, "ttl_table",         suspendWhenHidden = FALSE)
+  outputOptions(output, "tournament_standings_table", suspendWhenHidden = FALSE)
+  outputOptions(output, "tournament_mase_rmsse_plot", suspendWhenHidden = FALSE)
+  outputOptions(output, "tournament_pairwise_table",  suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }

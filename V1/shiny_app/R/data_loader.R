@@ -167,7 +167,16 @@ build_artifact_registry <- function() {
 
     # --- TTL / capacity-to-live (no governed artifact yet -> roadmap) ---
     c("ttl_capacity",               "ttl",          "csv",  "roadmap",
-      "outputs/model_lab/ttl/ttl_capacity_view.csv")
+      "outputs/model_lab/ttl/ttl_capacity_view.csv"),
+
+    # --- TTL PROTOTYPE (SIMULATED supply + TTL; REAL demand from forecasts).
+    #     Not governed. Mirrors AEGIS capacity views so the swap to the real
+    #     SQL sources (vw_SubstrateBE_MonthsToLive_*, HLC_BE_Future_Supply_*)
+    #     is a drop-in replacement. See python/shiny_mvp/build_ttl_prototype.py.
+    c("ttl_supply_demand_timeseries", "ttl",        "csv",  "optional",
+      "data/processed/ttl_supply_demand_timeseries.csv"),
+    c("ttl_months_to_live_snapshot",  "ttl",        "csv",  "optional",
+      "data/processed/ttl_months_to_live_snapshot.csv")
   )
 
   reg <- do.call(rbind, lapply(rows, function(r) {

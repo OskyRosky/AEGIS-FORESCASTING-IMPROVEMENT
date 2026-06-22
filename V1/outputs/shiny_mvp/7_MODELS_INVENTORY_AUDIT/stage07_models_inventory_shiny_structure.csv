@@ -1,0 +1,21 @@
+file_path,section,object_or_function,purpose,page,status,notes
+shiny_app/app.R,general,,general app structure,,source/helper,inputs: 
+shiny_app/global.R,general,,general app structure,,source/helper,inputs: 
+shiny_app/R/libraries.R,general,,general app structure,,source/helper,inputs: 
+shiny_app/R/constants.R,models,,champion,champion,source/helper,inputs: 
+shiny_app/R/data_loader.R,models,find_project_root; .tess_read_csv_file; .tess_read_text_file; build_artifact_registry; load_governed_artifacts; tess_artifact; load_csv_artifact; load_text_artifact; get_artifact_status; get_package_availability; tess_init_governed_loader,champion; comparison; tournament; universe,"universe, tournament, champion, comparison",source/helper; placeholder elements present,inputs: 
+shiny_app/R/helpers.R,models,kpi_card; placeholder; rec_count_card; home_key_results; home_champion_summary; kr_value; cs_value; fmt_metric; first_label; .tess_as_logical; universe_models; universe_normalized; .tess_count_true; .tess_count_eq; universe_counts; universe_champion_name; universe_status_label; fv_forecasts; fv_actuals; fv_entity_choices,champion; comparison; tournament; universe,"universe, tournament, champion, comparison",source/helper; placeholder elements present,inputs: 
+shiny_app/R/tables.R,general,build_opp_table,general app structure,,source/helper,inputs: 
+shiny_app/R/cards.R,models,comparison_card; recommendations_card; llm_insight_card; opportunities_card,comparison,comparison,source/helper,inputs: 
+shiny_app/R/plots.R,models,build_comparison_chart; build_overlay_chart,comparison,comparison,source/helper,inputs: 
+shiny_app/ui/header.R,general,tess_icon; app_header,general app structure,,source/helper,inputs: 
+shiny_app/ui/sidebar.R,models,stage07_menu; sidebar_group; app_sidebar,champion; comparison; tournament; universe,"universe, tournament, champion, comparison",source/helper,inputs: 
+shiny_app/ui/body.R,models,tess_help_overlay; guide_entry; tess_guide_overlay; app_ui,champion; comparison; tournament; universe,"universe, tournament, champion, comparison",source/helper; placeholder elements present,inputs: 
+shiny_app/ui/tabs.R,models,section_head; shell_card; kpi_card; info_row; info_list; card_grid; panel; controls_preview; planned_card; home_step; section_home; section_overview; section_explorer; section_forecast; section_accuracy; section_ttl; .tess_badge; universe_table_widget; section_universe; section_tournament,champion; comparison; tournament; universe,"universe, tournament, champion, comparison",functional; placeholder elements present,inputs: 
+shiny_app/ui/footer.R,general,app_footer,general app structure,,source/helper,inputs: 
+shiny_app/server/server.R,models,app_server; output$fvp_model_groups; output$fvp_model_count; output$fvp_chart; output$fvp_notes; output$fvf_model_note; output$fvf_chart; output$fvf_notes; output$acc_summary_cards; output$acc_heatmap; output$acc_table; output$ttl_summary_cards; output$ttl_gauge; output$ttl_line; output$ttl_heatmap; output$ttl_table,champion; comparison,"champion, comparison",functional,"inputs: acc_go, acc_horizon, acc_metric, acc_models, acc_series, acc_topn, fvf_go, fvf_history, fvf_series, fvf_window, fvp_go, fvp_history"
+shiny_app/server/models_server.R,models,models_server; output$models_placeholder,tournament,tournament,functional; placeholder elements present,inputs: 
+shiny_app/www/custom.css,models,,universe,universe,source/helper; placeholder elements present,inputs: 
+shiny_app/www/custom.js,general,,general app structure,,source/helper,inputs: 
+shiny_app/modules/model_ranking/model_ranking_ui.R,general,model_ranking_ui,general app structure,,source/helper,inputs: 
+shiny_app/modules/model_ranking/model_ranking_server.R,general,model_ranking_server,general app structure,,source/helper,inputs: 

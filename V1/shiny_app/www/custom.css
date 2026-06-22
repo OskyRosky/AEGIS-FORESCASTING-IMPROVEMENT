@@ -775,6 +775,36 @@ body {
 .theme-dark .ttl-marker-label { background: #15263b; border-color: #23374f; color: #cfe0f2; }
 .theme-dark .ttl-readiness-state { color: #c4d2e2; }
 .theme-dark .ttl-method-note { color: #9fb0c4; }
+
+/* ===================== TTL PROTOTYPE (Stage 07) ===================== */
+.ttl-callout-proto { border-left: 4px solid #f0a020; }
+.ttl-section { border-top: 4px solid #2c7bb6; }
+.ttl-gauge-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 6px;
+  margin-bottom: 14px;
+}
+.ttl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 14px 0 6px;
+  font-size: 12.5px;
+  color: #4a5b70;
+}
+.ttl-legend-item { display: inline-flex; align-items: center; gap: 7px; }
+.ttl-legend-swatch {
+  width: 14px; height: 14px; border-radius: 3px;
+  display: inline-block; border: 1px solid rgba(0,0,0,0.12);
+}
+.theme-dark .ttl-gauge-wrap { background: #11202f; border-color: #24405e; }
+.theme-dark .ttl-legend { color: #9fb0c4; }
+
 .guide-entry.is-shown { display: block; }
 .guide-intro { font-size: 14px; line-height: 1.6; margin: 0 0 14px; color: #33455c; }
 .guide-list { padding-left: 20px; margin: 0 0 6px; }
