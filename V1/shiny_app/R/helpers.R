@@ -1538,11 +1538,19 @@ ttl_table <- function(snap = ttl_snapshot()) {
   }
   ord <- order(ifelse(is.na(snap$months_to_live), Inf, snap$months_to_live))
   s <- snap[ord, , drop = FALSE]
+  method_vec  <- if ("method" %in% names(s)) as.character(s$method) else rep("intersection", nrow(s))
+  res_disp    <- if ("resource_display" %in% names(s) && any(nzchar(as.character(s$resource_display)))) {
+    as.character(s$resource_display)
+  } else as.character(s$resource)
+  binding_vec <- if ("is_binding" %in% names(s)) {
+    ifelse(as.logical(s$is_binding), res_disp, "\u2014")
+  } else res_disp
   tbl <- data.frame(
     Series        = s$entity_key,
     Region        = s$region,
     Environment   = s$environment,
     Resource      = s$resource,
+    Binding       = binding_vec,
     `Supply (TB)` = round(s$supply_now, 1),
     `Demand (TB)` = round(s$demand_now, 1),
     `Util %`      = round(s$utilization_pct, 1),
@@ -1550,6 +1558,7 @@ ttl_table <- function(snap = ttl_snapshot()) {
     `Months to Live` = ifelse(is.na(s$months_to_live), NA, round(s$months_to_live, 1)),
     `Crossover`   = ifelse(nzchar(as.character(s$crossover_date)),
                            as.character(s$crossover_date), "\u2014"),
+    Method        = method_vec,
     Status        = s$ttl_status,
     check.names = FALSE, stringsAsFactors = FALSE
   )
@@ -1593,6 +1602,41 @@ ttl_summary <- function(snap = ttl_snapshot()) {
     n_cool      = as.integer(counts[["Cool"]]),
     soonest     = soonest,
     soonest_mtl = soonest_mtl
+  )
+}
+
+# Binding-resource KPI facts for ONE series: the shortest-TTL (constraining)
+# resource and its status / utilization / method. Multi-resource ready -- with a
+# single resource the binding row is simply that resource.
+ttl_series_kpi <- function(series, snap = ttl_snapshot()) {
+  blank <- list(ttl_txt = "\u2014", status = "\u2014", status_color = "#627d98",
+                resource = "\u2014", util_txt = "\u2014", method = "\u2014",
+                cross_txt = "\u2014")
+  if (nrow(snap) == 0 || is.null(series) || !nzchar(series)) return(blank)
+  row <- snap[snap$entity_key == series, , drop = FALSE]
+  if (nrow(row) == 0) return(blank)
+  bind_idx <- if ("is_binding" %in% names(row) && any(as.logical(row$is_binding), na.rm = TRUE)) {
+    which(as.logical(row$is_binding))[1]
+  } else {
+    order(ifelse(is.na(row$months_to_live), Inf, row$months_to_live))[1]
+  }
+  row <- row[bind_idx, , drop = FALSE]
+  mtl    <- row$months_to_live[[1]]
+  status <- as.character(row$ttl_status[[1]])
+  method <- if ("method" %in% names(row)) as.character(row$method[[1]]) else "intersection"
+  resource <- if ("resource_display" %in% names(row) && nzchar(as.character(row$resource_display[[1]]))) {
+    as.character(row$resource_display[[1]])
+  } else as.character(row$resource[[1]])
+  util  <- suppressWarnings(as.numeric(row$utilization_pct[[1]]))
+  cross <- if ("crossover_date" %in% names(row) && nzchar(as.character(row$crossover_date[[1]]))) {
+    as.character(row$crossover_date[[1]])
+  } else "\u2014"
+  list(
+    ttl_txt = if (is.na(mtl)) "no crossover" else paste0(round(mtl, 1), " mo"),
+    status = status, status_color = ttl_status_color(status),
+    resource = resource,
+    util_txt = if (is.na(util)) "\u2014" else paste0(round(util, 1), "%"),
+    method = method, cross_txt = cross
   )
 }
 
@@ -2265,6 +2309,349 @@ champion_exceptions_table <- function(evidence = champion_series_evidence()) {
       scrollX = TRUE,
       dom = "ftip",
       order = list(list(4, "desc"))
+    )
+  )
+}
+
+# ==========================================================================
+# Governance: Risk Register (Block 7.x)
+# Reads governed closure-pack artifacts only:
+#   - model_lab_risk_register_final.csv  (key: risk_register_final)
+#   - model_lab_deferred_models.csv      (key: deferred_models)
+# No risk is computed here; the page renders the governed register verbatim.
+# ==========================================================================
+
+risk_register_artifact <- function() {
+  df <- tryCatch(load_csv_artifact("risk_register_final"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
+  for (col in c("risk_id", "risk_type", "risk_level", "model_name",
+                "risk_description", "impact", "decision_treatment")) {
+    if (col %in% names(df)) df[[col]] <- trimws(as.character(df[[col]]))
+  }
+  df
+}
+
+risk_deferred_models_artifact <- function() {
+  df <- tryCatch(load_csv_artifact("deferred_models"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+# A governed flag may arrive as logical or as "True"/"False" text.
+risk_is_true <- function(x) {
+  tolower(trimws(as.character(x))) %in% c("true", "yes", "1")
+}
+
+# Map a governed risk_level to a pill colour class.
+risk_level_class <- function(level) {
+  lv <- tolower(trimws(as.character(level)))
+  cls <- rep("pill-slate", length(lv))
+  cls[lv == "high"]     <- "pill-red"
+  cls[lv == "medium"]   <- "pill-amber"
+  cls[lv == "advisory"] <- "pill-blue"
+  cls[lv == "minor"]    <- "pill-slate"
+  cls
+}
+
+risk_register_values <- function(df = risk_register_artifact(),
+                                 deferred = risk_deferred_models_artifact()) {
+  lv <- if (is.data.frame(df) && "risk_level" %in% names(df))
+    tolower(trimws(as.character(df$risk_level))) else character(0)
+  cf_dash <- if (is.data.frame(df) && "carry_forward_to_dashboard" %in% names(df))
+    sum(risk_is_true(df$carry_forward_to_dashboard)) else 0L
+  cf_future <- if (is.data.frame(df) && "carry_forward_to_future_work" %in% names(df))
+    sum(risk_is_true(df$carry_forward_to_future_work)) else 0L
+  list(
+    total    = if (is.data.frame(df)) nrow(df) else 0L,
+    high     = sum(lv == "high"),
+    medium   = sum(lv == "medium"),
+    advisory = sum(lv == "advisory"),
+    minor    = sum(lv == "minor"),
+    carry_forward_dashboard = cf_dash,
+    carry_forward_future    = cf_future,
+    deferred = if (is.data.frame(deferred)) nrow(deferred) else 0L
+  )
+}
+
+risk_register_table <- function(df = risk_register_artifact()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed risk register artifact is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  # Order by severity: high -> medium -> advisory -> minor -> other.
+  sev_rank <- c(high = 1, medium = 2, advisory = 3, minor = 4)
+  rk <- sev_rank[tolower(trimws(as.character(df$risk_level)))]
+  rk[is.na(rk)] <- 99
+  df <- df[order(rk, df$risk_id), , drop = FALSE]
+
+  level_badge <- tournament_badge(toupper(as.character(df$risk_level)),
+                                  risk_level_class(df$risk_level))
+  dash_badge <- tournament_bool_badge(risk_is_true(df$carry_forward_to_dashboard),
+                                      "Dashboard", "No",
+                                      true_class = "pill-green",
+                                      false_class = "pill-slate")
+  future_badge <- tournament_bool_badge(risk_is_true(df$carry_forward_to_future_work),
+                                        "Future work", "No",
+                                        true_class = "pill-blue",
+                                        false_class = "pill-slate")
+
+  tbl <- data.frame(
+    ID = htmltools::htmlEscape(df$risk_id),
+    Level = level_badge,
+    Type = htmltools::htmlEscape(gsub("_", " ", df$risk_type)),
+    Subject = htmltools::htmlEscape(df$model_name),
+    Description = htmltools::htmlEscape(df$risk_description),
+    Impact = htmltools::htmlEscape(df$impact),
+    Treatment = htmltools::htmlEscape(gsub("_", " ", df$decision_treatment)),
+    `Carry-forward` = dash_badge,
+    `Future work` = future_badge,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    escape = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      paging = FALSE,
+      searching = TRUE,
+      info = FALSE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "ft",
+      columnDefs = list(list(className = "dt-left", targets = "_all"))
+    )
+  )
+}
+
+risk_deferred_models_table <- function(df = risk_deferred_models_artifact()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed deferred-models artifact is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  keep <- intersect(
+    c("model_name", "model_family", "deferred_reason",
+      "deferred_stage", "future_resolution_option"),
+    names(df))
+  tbl <- df[, keep, drop = FALSE]
+  if ("model_family" %in% names(tbl))
+    tbl$model_family <- gsub("_", " ", as.character(tbl$model_family))
+  names(tbl) <- c(
+    model_name = "Model",
+    model_family = "Family",
+    deferred_reason = "Deferred reason",
+    deferred_stage = "Stage",
+    future_resolution_option = "Future resolution option"
+  )[names(tbl)]
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      paging = FALSE,
+      searching = FALSE,
+      info = FALSE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "t",
+      columnDefs = list(list(className = "dt-left", targets = "_all"))
+    )
+  )
+}
+
+# ==========================================================================
+# Governance: Audit Trail (Block 7.x)
+# Reads governed audit artifacts only:
+#   - audit_4/audit_4_summary.csv              (key: audit_4_summary)
+#   - tournament_sanity_review/...summary.csv  (key: tournament_sanity_summary)
+#   - audit_5/audit_5_findings.csv             (key: audit_5_findings)
+#   - model_lab_closure_pack/...next_steps.csv (key: next_steps)
+# No audit is recomputed here; the governed verdicts are rendered verbatim.
+# ==========================================================================
+
+audit_4_summary_artifact <- function() {
+  df <- tryCatch(load_csv_artifact("audit_4_summary"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+audit_sanity_summary_artifact <- function() {
+  df <- tryCatch(load_csv_artifact("tournament_sanity_summary"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+audit_findings_artifact <- function() {
+  df <- tryCatch(load_csv_artifact("audit_5_findings"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
+  for (col in c("finding_id", "severity", "area", "finding",
+                "evidence", "recommendation")) {
+    if (col %in% names(df)) df[[col]] <- trimws(as.character(df[[col]]))
+  }
+  df
+}
+
+audit_next_steps_artifact <- function() {
+  df <- tryCatch(load_csv_artifact("next_steps"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+# Map a governed finding severity to a pill colour class.
+audit_severity_class <- function(severity) {
+  sv <- tolower(trimws(as.character(severity)))
+  cls <- rep("pill-slate", length(sv))
+  cls[sv == "pass"]     <- "pill-green"
+  cls[sv == "advisory"] <- "pill-blue"
+  cls[sv == "minor"]    <- "pill-amber"
+  cls[sv == "major"]    <- "pill-red"
+  cls[sv == "blocker"]  <- "pill-red"
+  cls
+}
+
+# Shorten a long governed verdict token to a readable phrase.
+audit_short_verdict <- function(verdict) {
+  v <- toupper(trimws(as.character(verdict)))
+  if (length(v) == 0 || is.na(v) || !nzchar(v)) return("Unavailable")
+  if (grepl("APPROVE_WITH_CONDITIONS", v)) return("Approve with conditions")
+  if (grepl("^APPROVE", v)) return("Approve")
+  if (grepl("REJECT|BLOCK", v)) return("Blocked")
+  gsub("_", " ", v)
+}
+
+audit_summary_values <- function(a4 = audit_4_summary_artifact(),
+                                 sanity = audit_sanity_summary_artifact(),
+                                 findings = audit_findings_artifact()) {
+  num <- function(df, col) {
+    v <- suppressWarnings(as.numeric(cs_value(df, col, NA)))
+    if (length(v) == 0 || is.na(v)) NA_real_ else v
+  }
+  sv <- if (is.data.frame(findings) && "severity" %in% names(findings))
+    toupper(trimws(as.character(findings$severity))) else character(0)
+  blocking_closure <- if (is.data.frame(findings) &&
+                          "blocking_for_model_lab_closure" %in% names(findings))
+    sum(risk_is_true(findings$blocking_for_model_lab_closure)) else 0L
+  blocking_handoff <- if (is.data.frame(findings) &&
+                          "blocking_for_dashboard_handoff" %in% names(findings))
+    sum(risk_is_true(findings$blocking_for_dashboard_handoff)) else 0L
+  list(
+    a4_verdict   = audit_short_verdict(cs_value(a4, "verdict", "Unavailable")),
+    a4_blockers  = num(a4, "blockers"),
+    a4_major     = num(a4, "major_findings"),
+    a4_minor     = num(a4, "minor_findings"),
+    a4_advisory  = num(a4, "advisories"),
+    a4_ready     = risk_is_true(cs_value(a4, "ready_for_5_30_tournament_engine", "")),
+
+    sanity_models   = num(sanity, "models_reviewed"),
+    sanity_baseline = num(sanity, "baseline_models"),
+    sanity_chall    = num(sanity, "challenger_models"),
+    sanity_pairwise = num(sanity, "pairwise_comparisons_reviewed"),
+    sanity_blockers = num(sanity, "blockers"),
+    sanity_minor    = num(sanity, "minor_findings"),
+    sanity_advisory = num(sanity, "advisories"),
+    sanity_ready    = risk_is_true(cs_value(sanity, "ready_for_5_31_champion_decision", "")),
+
+    a5_total    = if (is.data.frame(findings)) nrow(findings) else 0L,
+    a5_pass     = sum(sv == "PASS"),
+    a5_minor    = sum(sv == "MINOR"),
+    a5_advisory = sum(sv == "ADVISORY"),
+    a5_major    = sum(sv == "MAJOR"),
+    a5_blocker  = sum(sv == "BLOCKER"),
+    a5_blocking_closure = blocking_closure,
+    a5_blocking_handoff = blocking_handoff,
+    a5_verdict  = if (sum(sv %in% c("BLOCKER", "MAJOR")) == 0)
+      "Approve with conditions" else "Conditions to resolve"
+  )
+}
+
+audit_findings_table <- function(df = audit_findings_artifact()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed Audit #5 findings artifact is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  # Order by severity: blocker -> major -> minor -> advisory -> pass.
+  sev_rank <- c(blocker = 1, major = 2, minor = 3, advisory = 4, pass = 5)
+  rk <- sev_rank[tolower(trimws(as.character(df$severity)))]
+  rk[is.na(rk)] <- 99
+  df <- df[order(rk, df$finding_id), , drop = FALSE]
+
+  severity_badge <- tournament_badge(toupper(as.character(df$severity)),
+                                     audit_severity_class(df$severity))
+  closure_badge <- tournament_bool_badge(risk_is_true(df$blocking_for_model_lab_closure),
+                                         "Blocking", "Non-blocking",
+                                         true_class = "pill-red",
+                                         false_class = "pill-green")
+  handoff_badge <- tournament_bool_badge(risk_is_true(df$blocking_for_dashboard_handoff),
+                                         "Blocking", "Non-blocking",
+                                         true_class = "pill-red",
+                                         false_class = "pill-green")
+  tbl <- data.frame(
+    ID = htmltools::htmlEscape(df$finding_id),
+    Severity = severity_badge,
+    Area = htmltools::htmlEscape(gsub("_", " ", df$area)),
+    Finding = htmltools::htmlEscape(df$finding),
+    Evidence = htmltools::htmlEscape(df$evidence),
+    Recommendation = htmltools::htmlEscape(df$recommendation),
+    `Closure` = closure_badge,
+    `Handoff` = handoff_badge,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    escape = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      pageLength = 10,
+      paging = TRUE,
+      searching = TRUE,
+      info = TRUE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "ftip",
+      columnDefs = list(list(className = "dt-left", targets = "_all"))
+    )
+  )
+}
+
+audit_next_steps_table <- function(df = audit_next_steps_artifact()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed next-steps artifact is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  pr <- tolower(trimws(as.character(df$priority)))
+  pr_cls <- ifelse(pr == "high", "pill-amber",
+                   ifelse(pr == "medium", "pill-blue", "pill-slate"))
+  priority_badge <- tournament_badge(toupper(as.character(df$priority)), pr_cls)
+  tbl <- data.frame(
+    ID = htmltools::htmlEscape(df$next_step_id),
+    `Next step` = htmltools::htmlEscape(df$next_step_name),
+    Priority = priority_badge,
+    Description = htmltools::htmlEscape(df$description),
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    escape = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      paging = FALSE,
+      searching = FALSE,
+      info = FALSE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "t",
+      columnDefs = list(list(className = "dt-left", targets = "_all"))
     )
   )
 }

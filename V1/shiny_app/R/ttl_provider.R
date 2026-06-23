@@ -154,20 +154,142 @@ ttl_provider_timeseries <- function(source = ttl_data_source()) {
 }
 
 # ---------------------------------------------------------------------------
-# API source -- STUB. Wiring deferred until access + function key are granted.
-# Activation (future):
-#   options(ttl_source = "api", ttl_api_env = "prod")
-#   Sys.setenv(CALCULATE_TTL_KEY = "<function key>")
-# Body per contract: {forest, resource, supplyDate, scenarioDemand, demandMode}
-# Auth header: x-functions-key. (What-if ADD/REPLACE also lands here.)
+# API source -- finalized scaffold, INACTIVE by default.
+#
+# Because every downstream consumer reads the CANONICAL schema, wiring the real
+# endpoint is a DATA-SOURCE-ONLY change: provision a function key, flip the
+# option, and (if the live payload differs) adjust the field mapping in the two
+# normalizers below. No helper / UI / server code changes are required.
+#
+# Enable (future):
+#   Sys.setenv(CALCULATE_TTL_KEY = "<function key>")    # never hard-code a key
+#   options(ttl_source = "api", ttl_api_env = "prod")   # env: npe | ppe | prod
+#
+# Official contract (POST /api/v1/calculate-ttl):
+#   request  : { forest, resource, supplyDate, scenarioDemand?, demandMode }
+#   auth     : header  x-functions-key
+#   response : per (forest x resource) TTL record + monthly supply/demand series
+#
+# What-if ADD / REPLACE (capacity scenarios) is intentionally DEFERRED: it
+# reuses .ttl_api_request_body(scenario_demand=, demand_mode="add"|"replace")
+# and the same normalizers once the read path is proven against a live payload.
 # ---------------------------------------------------------------------------
-.ttl_api_not_ready <- function() {
-  stop("TTL API source not yet enabled. Set options(ttl_source='mock') ",
-       "until /api/v1/calculate-ttl access (function key) is provisioned.",
-       call. = FALSE)
+
+# Small null/empty-safe default helper (kept local; no global operator added).
+.ttl_or <- function(x, default) if (is.null(x) || length(x) == 0) default else x
+
+# Resolve the active endpoint (defaults to the safest non-prod environment).
+ttl_api_endpoint <- function(env = getOption("ttl_api_env", "npe")) {
+  url <- TTL_API_ENDPOINTS[[env]]
+  if (is.null(url)) TTL_API_ENDPOINTS[["npe"]] else url
 }
-.ttl_api_snapshot   <- function() .ttl_api_not_ready()
-.ttl_api_timeseries <- function() .ttl_api_not_ready()
+
+# The API path is "ready" only when BOTH a function key is present AND the HTTP
+# packages are installed. Until then the provider stays on the mock and never
+# crashes the running app.
+ttl_api_ready <- function() {
+  nzchar(Sys.getenv("CALCULATE_TTL_KEY")) &&
+    requireNamespace("httr", quietly = TRUE) &&
+    requireNamespace("jsonlite", quietly = TRUE)
+}
+
+# Graceful, explicit failure when someone flips ttl_source='api' too early.
+.ttl_api_not_ready <- function() {
+  stop("TTL API source not enabled. Provision CALCULATE_TTL_KEY and install ",
+       "httr + jsonlite, then options(ttl_source='api', ttl_api_env='npe'|'ppe'|'prod'). ",
+       "Until then keep options(ttl_source='mock').", call. = FALSE)
+}
+
+# Request body per the official contract (also serves what-if scenarios).
+.ttl_api_request_body <- function(forest = NULL, resource = "HDD",
+                                  supply_date = NULL, scenario_demand = NULL,
+                                  demand_mode = "forecast") {
+  body <- list(resource = resource, demandMode = demand_mode)
+  if (!is.null(forest))          body$forest         <- forest
+  if (!is.null(supply_date))     body$supplyDate     <- as.character(supply_date)
+  if (!is.null(scenario_demand)) body$scenarioDemand <- scenario_demand
+  body
+}
+
+# Single guarded call site -- the ONE place that talks to the network. This is
+# the only function to enable once the key is provisioned.
+.ttl_api_call <- function(body, env = getOption("ttl_api_env", "npe")) {
+  if (!ttl_api_ready()) .ttl_api_not_ready()
+  resp <- httr::POST(
+    ttl_api_endpoint(env),
+    httr::add_headers(`x-functions-key` = Sys.getenv("CALCULATE_TTL_KEY")),
+    body = body, encode = "json", httr::timeout(30))
+  httr::stop_for_status(resp)
+  jsonlite::fromJSON(
+    httr::content(resp, as = "text", encoding = "UTF-8"), simplifyVector = TRUE)
+}
+
+# Public API accessors: build request -> call -> normalize to canonical schema.
+.ttl_api_snapshot <- function() {
+  if (!ttl_api_ready()) .ttl_api_not_ready()
+  .ttl_normalize_api_snapshot(.ttl_api_call(.ttl_api_request_body()))
+}
+
+.ttl_api_timeseries <- function() {
+  if (!ttl_api_ready()) .ttl_api_not_ready()
+  .ttl_normalize_api_timeseries(.ttl_api_call(.ttl_api_request_body()))
+}
+
+# Map the live JSON to the canonical SNAPSHOT frame. Left-hand (canonical) names
+# are FIXED; adjust only the right-hand candidate names to the real payload.
+.ttl_normalize_api_snapshot <- function(raw) {
+  if (is.null(raw) || length(raw) == 0) return(.ttl_empty_snapshot())
+  df  <- as.data.frame(raw, stringsAsFactors = FALSE)
+  num <- function(x) suppressWarnings(as.numeric(x))
+  pick <- function(...) { for (n in c(...)) if (n %in% names(df)) return(df[[n]]); NULL }
+  res <- .ttl_or(pick("resource"), "HDD")
+  data.frame(
+    forest            = as.character(.ttl_or(pick("forest", "forestName"), NA)),
+    region            = as.character(.ttl_or(pick("region"), "")),
+    environment       = as.character(.ttl_or(pick("environment", "env"), "")),
+    resource          = as.character(res),
+    resource_display  = ttl_resource_display(res),
+    supply_date       = as.character(.ttl_or(pick("supplyDate", "supply_date"), NA)),
+    supply            = num(pick("supply", "supplyTb")),
+    demand_now        = num(pick("demandNow", "demand")),
+    utilization       = num(pick("utilization")),
+    intersection_date = suppressWarnings(as.Date(as.character(
+                          .ttl_or(pick("intersectionDate", "crossoverDate"), NA)))),
+    ttl_months        = num(pick("ttlMonths", "monthsToLive")),
+    method            = as.character(.ttl_or(pick("method"), "intersection")),
+    ttl_status        = as.character(.ttl_or(pick("ttlStatus", "status"), NA)),
+    is_binding        = as.logical(.ttl_or(pick("isBinding"), TRUE)),
+    status_comment    = as.character(.ttl_or(pick("statusComment"), "")),
+    monthly_growth_rate = num(.ttl_or(pick("monthlyGrowthRate"), NA)),
+    growth_per_month    = num(.ttl_or(pick("growthPerMonth"), NA)),
+    stringsAsFactors = FALSE
+  )
+}
+
+# Map the live JSON to the canonical TIMESERIES frame (same mapping discipline).
+.ttl_normalize_api_timeseries <- function(raw) {
+  if (is.null(raw) || length(raw) == 0) return(.ttl_empty_timeseries())
+  df  <- as.data.frame(raw, stringsAsFactors = FALSE)
+  num <- function(x) suppressWarnings(as.numeric(x))
+  pick <- function(...) { for (n in c(...)) if (n %in% names(df)) return(df[[n]]); NULL }
+  res <- .ttl_or(pick("resource"), "HDD")
+  data.frame(
+    forest           = as.character(.ttl_or(pick("forest", "forestName"), NA)),
+    region           = as.character(.ttl_or(pick("region"), "")),
+    environment      = as.character(.ttl_or(pick("environment", "env"), "")),
+    resource         = as.character(res),
+    resource_display = ttl_resource_display(res),
+    month_date       = suppressWarnings(as.Date(as.character(
+                         .ttl_or(pick("monthDate", "month"), NA)))),
+    demand           = num(pick("demand")),
+    supply           = num(pick("supply")),
+    utilization      = num(pick("utilization")),
+    is_crossover     = as.logical(.ttl_or(pick("isCrossover"), FALSE)),
+    is_projection    = as.logical(.ttl_or(pick("isProjection"), FALSE)),
+    data_origin      = as.character(.ttl_or(pick("dataOrigin"), "api")),
+    stringsAsFactors = FALSE
+  )
+}
 
 # ---------------------------------------------------------------------------
 # Empty canonical frames (stable columns so downstream never errors).

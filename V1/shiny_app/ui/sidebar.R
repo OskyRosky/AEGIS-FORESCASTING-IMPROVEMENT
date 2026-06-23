@@ -17,11 +17,9 @@ stage07_menu <- function() {
     list(group = "Models", icon = "trophy", items = list(
       list(value = "universe",   label = "Universe",   title = "Model Universe",            icon = "layer-group"),
       list(value = "tournament", label = "Tournament", title = "Tournament Standings",      icon = "chart-column"),
-      list(value = "champion",   label = "Champion",   title = "Champion Decision",         icon = "trophy"),
-      list(value = "comparison", label = "Comparison", title = "Model Comparison Evidence", icon = "code-compare")
+      list(value = "champion",   label = "Champion",   title = "Champion Decision",         icon = "trophy")
     )),
     list(group = "Governance", icon = "scale-balanced", items = list(
-      list(value = "conditions", label = "Conditions", title = "Champion Conditions", icon = "list-check"),
       list(value = "risks",      label = "Risks",      title = "Risk Register",       icon = "triangle-exclamation"),
       list(value = "audit",      label = "Audit",      title = "Audit Trail",         icon = "list-ol")
     )),

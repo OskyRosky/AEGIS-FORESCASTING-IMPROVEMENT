@@ -314,6 +314,30 @@ app_server <- function(input, output, session) {
     )
   })
 
+  # Per-series binding KPI strip (gated on Analyze TTL).
+  output$ttl_series_kpis <- renderUI({
+    if (is.null(input$ttl_go) || input$ttl_go == 0) return(NULL)
+    k <- ttl_series_kpi(ttl_request()$series, ttl_snap)
+    cell <- function(label, value, sub = NULL, color = NULL, cls = "") {
+      tags$div(class = paste("acc-kpi-card", cls),
+               tags$div(class = "acc-kpi-label", label),
+               tags$div(class = "acc-kpi-value",
+                        style = if (!is.null(color)) paste0("color:", color, ";") else NULL,
+                        value),
+               if (!is.null(sub))
+                 tags$div(class = "acc-kpi-label",
+                          style = "margin-top:2px;font-weight:500;", sub))
+    }
+    tags$div(
+      class = "acc-kpi-grid",
+      cell("TTL (binding)", k$ttl_txt, sub = k$status, color = k$status_color),
+      cell("Constraining resource", k$resource),
+      cell("Utilization (today)", k$util_txt),
+      cell("Method", k$method,
+           sub = if (!identical(k$cross_txt, "\u2014")) paste0("crossover ", k$cross_txt) else "estimated TTL")
+    )
+  })
+
   # Per-series gauge (gated on Analyze TTL).
   output$ttl_gauge <- highcharter::renderHighchart({
     if (is.null(input$ttl_go) || input$ttl_go == 0) {
@@ -339,6 +363,13 @@ app_server <- function(input, output, session) {
   output$ttl_table <- DT::renderDataTable({
     ttl_table(ttl_snap)
   })
+
+  # Keep TTL outputs alive across tab switches (render even while hidden) so the
+  # page is fully populated the first time the user opens it.
+  for (.ttl_out in c("ttl_summary_cards", "ttl_series_kpis", "ttl_gauge",
+                     "ttl_line", "ttl_heatmap", "ttl_table")) {
+    outputOptions(output, .ttl_out, suspendWhenHidden = FALSE)
+  }
 
   # ==========================================================================
   # MODELS / TOURNAMENT PAGE MVP
@@ -384,6 +415,24 @@ app_server <- function(input, output, session) {
     champion_exceptions_table()
   })
 
+  # Governance: Risk Register ------------------------------------------------
+  output$risk_register_table <- DT::renderDataTable({
+    risk_register_table()
+  })
+
+  output$risk_deferred_models_table <- DT::renderDataTable({
+    risk_deferred_models_table()
+  })
+
+  # Governance: Audit Trail --------------------------------------------------
+  output$audit_findings_table <- DT::renderDataTable({
+    audit_findings_table()
+  })
+
+  output$audit_next_steps_table <- DT::renderDataTable({
+    audit_next_steps_table()
+  })
+
   # The chart + model picker / count / notes live in a section that is hidden at
   # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
   # chart containers and controls are populated on first navigation. custom.js
@@ -411,6 +460,10 @@ app_server <- function(input, output, session) {
   outputOptions(output, "champion_leadership_count_chart", suspendWhenHidden = FALSE)
   outputOptions(output, "champion_series_evidence_table",  suspendWhenHidden = FALSE)
   outputOptions(output, "champion_exceptions_table",       suspendWhenHidden = FALSE)
+  outputOptions(output, "risk_register_table",             suspendWhenHidden = FALSE)
+  outputOptions(output, "risk_deferred_models_table",      suspendWhenHidden = FALSE)
+  outputOptions(output, "audit_findings_table",            suspendWhenHidden = FALSE)
+  outputOptions(output, "audit_next_steps_table",          suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }

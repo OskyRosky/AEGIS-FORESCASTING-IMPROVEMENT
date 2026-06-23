@@ -148,40 +148,24 @@ tess_guide_overlay <- function() {
         ),
 
         guide_entry(
-          "comparison", "Model Comparison Evidence",
-          "Shows model-versus-model comparison: scorecard and pairwise statistical support.",
-          list(
-            "Scorecard: unified per-model metrics.",
-            "Pairwise: head-to-head deltas with bootstrap CI and adjusted p-values.",
-            "Support: comparison status (supported difference vs inconclusive)."
-          )
-        ),
-
-        guide_entry(
-          "conditions", "Champion Conditions",
-          "Lists the conditions attached to the champion decision. Its approval is not unconditional: these conditions must be monitored.",
-          list(
-            "Each condition describes a monitoring commitment (accuracy, seasonal stability, fallback model).",
-            "The status indicates that tracking is performed under governance."
-          )
-        ),
-
-        guide_entry(
           "risks", "Risk Register",
-          "Captures the open risks and deferred models identified for the review and their tracking.",
+          "Shows the governed risk register from the Model Lab closure pack: open risks and deferred models carried forward from the review.",
           list(
-            "FastNeuralAR_MLP: high-risk behaviour, not champion eligible.",
-            "NBEATS / NHITS: deferred for runtime / dependency reasons.",
-            "FixedGrowth_6: manual review condition."
+            "Each risk has a severity level (high, medium, advisory, minor) and a governed treatment.",
+            "Carry-forward flags show which risks must stay visible on the dashboard and which feed future work.",
+            "Deferred models (NBEATS, NHITS) are documented as future-work candidates, not rejected.",
+            "No risk is computed here \u2014 the register is read from governed artifacts."
           )
         ),
 
         guide_entry(
           "audit", "Audit Trail",
-          "Provides the chronological record of governed checkpoints and audits, for traceability.",
+          "Shows the independent governance audits that supported the conditional champion decision: Audit #4, the 5.30A sanity review, and Audit #5.",
           list(
-            "Audit chain, sanity checks and decisions.",
-            "Lets you verify the approved status of the review."
+            "Each gate approved with conditions and zero blockers before the dashboard handoff.",
+            "Audit #5 findings are listed by severity, with closure and handoff blocking flags.",
+            "Governed next steps are carried forward to the dashboard and future work.",
+            "Read-only checks: no models were rerun and no source outputs were modified."
           )
         ),
 

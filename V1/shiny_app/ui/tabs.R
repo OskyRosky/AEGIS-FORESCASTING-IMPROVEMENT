@@ -850,6 +850,7 @@ section_ttl <- function() {
 
         tags$div(
           class = "fv-result",
+          uiOutput("ttl_series_kpis"),
           tags$div(
             class = "fv-step-head",
             tags$span(class = "fv-step-num", "3"),
@@ -1311,58 +1312,154 @@ section_champion <- function() {
   )
 }
 
-section_comparison <- function() {
-  panel(
-    "comparison",
-    section_head("Model Comparison Evidence",
-                 "Model-vs-model scorecard and pairwise statistical support (placeholder)."),
-    card_grid(
-      shell_card("Scorecard", "Pending binding", "Unified model scorecard will be bound to governed artifacts."),
-      shell_card("Pairwise", "Head-to-head", "Pairwise deltas with bootstrap CI and adjusted p-values."),
-      shell_card("Support", "Significance", "Comparison status: supported difference vs inconclusive.")
-    )
-  )
-}
-
-section_conditions <- function() {
-  panel(
-    "conditions",
-    section_head("Champion Conditions",
-                 "Conditions attached to the governed champion decision."),
-    info_list(
-      info_row("Condition 1", "Monitor accuracy on the next governed evaluation cycle."),
-      info_row("Condition 2", "Re-confirm seasonal stability before promotion."),
-      info_row("Condition 3", "Keep fallback model available for contingency."),
-      info_row("Status", "Tracked under governance \u2014 placeholders pending artifact binding.")
-    )
-  )
-}
-
 section_risks <- function() {
+  vals <- risk_register_values()
+
   panel(
     "risks",
-    section_head("Risk Register",
-                 "Open risks and deferred models tracked for the review (placeholder)."),
-    info_list(
-      info_row("FastNeuralAR_MLP", "High-risk MASE/RMSSE behaviour \u2014 not champion eligible."),
-      info_row("NBEATS", "Deferred \u2014 runtime impractical for the MVP."),
-      info_row("NHITS", "Deferred \u2014 dependency blocked (Python 3.14)."),
-      info_row("FixedGrowth_6", "Manual review condition due to risk status."),
-      info_row("Status", "Placeholders pending artifact binding.")
+    section_head(
+      "Risk Register",
+      "Governed risk register from the Model Lab closure pack. These are the open risks and deferred models carried forward from the review. No risk is computed on this page."
+    ),
+
+    # A. Risk level summary cards -------------------------------------------
+    card_grid(
+      kpi_card(vals$total, "Registered risks",
+               pill = "Governed register", pill_class = "pill-blue"),
+      kpi_card(vals$high, "High",
+               pill = "Highest severity", pill_class = "pill-red"),
+      kpi_card(vals$medium, "Medium",
+               pill = "Carry-forward", pill_class = "pill-amber"),
+      kpi_card(paste0(vals$advisory, " / ", vals$minor), "Advisory / Minor",
+               pill = "Non-blocking", pill_class = "pill-blue")
+    ),
+    card_grid(
+      kpi_card(vals$carry_forward_dashboard, "Carried forward to dashboard",
+               pill = "Must stay visible", pill_class = "pill-green"),
+      kpi_card(vals$carry_forward_future, "Carried forward to future work",
+               pill = "Future investigation", pill_class = "pill-blue"),
+      kpi_card(vals$deferred, "Deferred models",
+               pill = "Not in final tournament", pill_class = "pill-amber"),
+      shell_card("Governance", "Read-only register",
+                 "Risks are read from the governed closure pack. This page does not add, remove, or downgrade any risk.")
+    ),
+
+    # B. Risk register table -------------------------------------------------
+    tags$h3(class = "section-block-title", "Risk register"),
+    tags$p(
+      class = "shell-card-detail",
+      "One row per governed risk. Ordered by severity (high first). Carry-forward flags show which risks must remain visible on the dashboard and which feed future work."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("risk_register_table")),
+
+    # C. Deferred models -----------------------------------------------------
+    tags$h3(class = "section-block-title", "Deferred models"),
+    tags$p(
+      class = "shell-card-detail",
+      "Models that were deferred from the final tournament for runtime or dependency reasons. They are documented as future-work candidates and are not rejected."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("risk_deferred_models_table")),
+
+    # D. Governance note -----------------------------------------------------
+    tags$div(
+      class = "shell-card",
+      tags$span(class = "pill pill-amber", "Carry-forward"),
+      tags$h3(class = "shell-card-title", "Conditional decision context"),
+      tags$p(
+        class = "shell-card-detail",
+        "These risks are the monitoring side of the conditional champion decision. They include the high-risk model under investigation, the deferred deep-learning models retained for future work, and the audit and sanity conditions carried into closure."
+      )
     )
   )
 }
 
 section_audit <- function() {
+  vals <- audit_summary_values()
+
+  fmt_count <- function(x) if (is.na(x)) "\u2014" else as.character(as.integer(x))
+
   panel(
     "audit",
-    section_head("Audit Trail",
-                 "Chronological record of governed checkpoints (read-only)."),
-    info_list(
-      info_row("Checkpoint", APP_AUDIT_STATE),
-      info_row("Stage", APP_STAGE),
-      info_row("Version", APP_VERSION),
-      info_row("Policy", APP_POLICY)
+    section_head(
+      "Audit Trail",
+      "Independent governance audits that supported the conditional champion decision. These verdicts are read from governed artifacts and are not recomputed on this page."
+    ),
+
+    # A. Verdict summary cards ----------------------------------------------
+    card_grid(
+      kpi_card(vals$a4_verdict, "Audit #4 verdict",
+               pill = "Challenger readiness", pill_class = "pill-green"),
+      kpi_card(paste0(fmt_count(vals$a4_blockers), " / ", fmt_count(vals$a4_major),
+                      " / ", fmt_count(vals$a4_minor), " / ", fmt_count(vals$a4_advisory)),
+               "Audit #4 blockers / major / minor / advisory",
+               pill = "Findings", pill_class = "pill-blue"),
+      kpi_card(paste0(fmt_count(vals$sanity_models), " models \u00b7 ",
+                      fmt_count(vals$sanity_pairwise), " pairwise"),
+               "Sanity review scope",
+               pill = "5.30A review", pill_class = "pill-blue"),
+      kpi_card(paste0(fmt_count(vals$sanity_blockers), " blockers"),
+               "Sanity review result",
+               pill = if (isTRUE(vals$sanity_ready)) "Ready for 5.31" else "Pending",
+               pill_class = "pill-green")
+    ),
+    card_grid(
+      kpi_card(vals$a5_verdict, "Audit #5 verdict",
+               pill = "Closure / handoff", pill_class = "pill-green"),
+      kpi_card(fmt_count(vals$a5_total), "Audit #5 findings reviewed",
+               pill = "Independent audit", pill_class = "pill-blue"),
+      kpi_card(fmt_count(vals$a5_pass), "Findings passed",
+               pill = "No action required", pill_class = "pill-green"),
+      kpi_card(paste0(fmt_count(vals$a5_minor), " minor / ",
+                      fmt_count(vals$a5_advisory), " advisory"),
+               "Non-blocking conditions",
+               pill = paste0(fmt_count(vals$a5_blocking_closure), " blocking"),
+               pill_class = "pill-amber")
+    ),
+
+    # B. Governance timeline -------------------------------------------------
+    tags$h3(class = "section-block-title", "Governance timeline"),
+    tags$p(
+      class = "shell-card-detail",
+      "The conditional champion decision passed through three independent governance gates before the dashboard handoff. Each gate approved with conditions and zero blockers."
+    ),
+    card_grid(
+      shell_card("Audit #4", "Challenger results readiness",
+                 "Approved with conditions to proceed to the 5.30 tournament engine. Zero blockers; conditions carried forward."),
+      shell_card("Sanity review (5.30A)", "Tournament sanity",
+                 paste0(fmt_count(vals$sanity_models), " models and ",
+                        fmt_count(vals$sanity_pairwise),
+                        " pairwise comparisons reviewed. Zero blockers; ready for the 5.31 champion decision.")),
+      shell_card("Audit #5", "Closure / dashboard handoff",
+                 "Final independent audit. Approved with conditions; zero blockers and zero major findings across all required areas."),
+      shell_card("Handoff", "Stage 06 dashboard",
+                 "All required dashboard sections covered with verified artifacts. No source outputs were modified by the audits.")
+    ),
+
+    # C. Audit #5 findings ---------------------------------------------------
+    tags$h3(class = "section-block-title", "Audit #5 findings"),
+    tags$p(
+      class = "shell-card-detail",
+      "One row per governed finding, ordered by severity. Closure and handoff flags show whether a finding blocks Model Lab closure or the dashboard handoff. There are no blocking findings."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("audit_findings_table")),
+
+    # D. Next steps ----------------------------------------------------------
+    tags$h3(class = "section-block-title", "Governed next steps"),
+    tags$p(
+      class = "shell-card-detail",
+      "Next steps recorded in the Model Lab closure pack, carried forward to the dashboard and future work."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("audit_next_steps_table")),
+
+    # E. Governance note -----------------------------------------------------
+    tags$div(
+      class = "shell-card",
+      tags$span(class = "pill pill-green", "Approve with conditions"),
+      tags$h3(class = "shell-card-title", "Independent verification"),
+      tags$p(
+        class = "shell-card-detail",
+        "These audits verified closure-pack completeness, champion-decision consistency, risk carry-forward, and dashboard-handoff readiness. They are read-only checks: no models were rerun, no metrics recomputed, and no source outputs altered. The conditional, medium-confidence champion status must be surfaced on the dashboard rather than presented as an unconditional outcome."
+      )
     )
   )
 }
@@ -1434,8 +1531,6 @@ app_sections <- function() {
     section_universe(),
     section_tournament(),
     section_champion(),
-    section_comparison(),
-    section_conditions(),
     section_risks(),
     section_audit(),
     section_artifacts(),
