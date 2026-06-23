@@ -1,0 +1,15 @@
+field,value
+launch_script,scripts\start_shiny.ps1
+stop_script,scripts\stop_shiny.ps1
+url,http://127.0.0.1:3838
+host,127.0.0.1
+port,3838
+process_id,19644
+http_status,200
+http_content_length,144554
+stdout_log_path,V2\outputs\shiny_mvp\7_V2_NEUTRAL_LAUNCH_SCRIPT_CLEANUP\logs\neutral_cleanup_stdout.log
+stderr_log_path,V2\outputs\shiny_mvp\7_V2_NEUTRAL_LAUNCH_SCRIPT_CLEANUP\logs\neutral_cleanup_stderr.log
+launch_command,powershell -ExecutionPolicy Bypass -File scripts\start_shiny.ps1 -PreferredPort 3838 -LogDir "outputs\shiny_mvp\7_V2_NEUTRAL_LAUNCH_SCRIPT_CLEANUP\logs" -LogPrefix "neutral_cleanup"
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 19644
+stop_result,stopped (port 3838 no longer listening; 0 Rscript processes)
+stderr_status,benign (package-masking notices + 1 preexisting vroom parsing warning)

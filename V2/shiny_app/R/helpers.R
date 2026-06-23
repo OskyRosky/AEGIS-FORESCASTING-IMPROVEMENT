@@ -2880,6 +2880,22 @@ methodology_dataset_values <- function(df = methodology_run_metadata()) {
 }
 
 # ---------------------------------------------------------------------------
+# Header "Last update" badge (last data ingestion + model computation)
+# ---------------------------------------------------------------------------
+# Returns the date of the most recent governed data-contract build, i.e. the
+# last time Tesseract data was ingested and the forecasting models were
+# (re)computed for this release. Sourced from run_metadata$run_timestamp.
+
+header_last_update <- function() {
+  dash <- "\u2014"
+  df <- tryCatch(methodology_run_metadata(), error = function(e) NULL)
+  ts <- tryCatch(cs_value(df, "run_timestamp", fallback = NA_character_),
+                 error = function(e) NA_character_)
+  if (is.null(ts) || is.na(ts) || !nzchar(ts)) return(dash)
+  substr(ts, 1, 10)
+}
+
+# ---------------------------------------------------------------------------
 # Version page accessors (loader runtime + package availability)
 # ---------------------------------------------------------------------------
 

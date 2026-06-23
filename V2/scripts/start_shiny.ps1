@@ -47,7 +47,7 @@ $Process = Start-Process -FilePath $RscriptPath `
     -WindowStyle Hidden
 
 $Url = "http://${HostName}:$SelectedPort"
-$StopCommand = "powershell -ExecutionPolicy Bypass -File scripts\stop_shiny_v1.ps1 -PidToStop $($Process.Id)"
+$StopCommand = "powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop $($Process.Id)"
 
 [pscustomobject]@{
     process_id = $Process.Id

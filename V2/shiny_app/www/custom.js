@@ -79,6 +79,34 @@
       return;
     }
 
+    // 3b) Comments & suggestions contact menu (toggle on button click)
+    var contactBtn = closest(target, "#hdr-contact-btn");
+    if (contactBtn) {
+      var contactWrap = closest(contactBtn, ".hdr-contact");
+      if (contactWrap) {
+        var isOpen = contactWrap.classList.toggle("open");
+        contactBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+      return;
+    }
+    // Clicking a contact item lets the mailto fire, but closes the menu.
+    if (closest(target, ".hdr-contact-item")) {
+      var openWrap = document.querySelector(".hdr-contact.open");
+      if (openWrap) {
+        openWrap.classList.remove("open");
+        var ob = openWrap.querySelector("#hdr-contact-btn");
+        if (ob) ob.setAttribute("aria-expanded", "false");
+      }
+      return;
+    }
+    // Any other click closes an open contact menu.
+    var openContact = document.querySelector(".hdr-contact.open");
+    if (openContact && !closest(target, ".hdr-contact")) {
+      openContact.classList.remove("open");
+      var ob2 = openContact.querySelector("#hdr-contact-btn");
+      if (ob2) ob2.setAttribute("aria-expanded", "false");
+    }
+
     // 4) Help overlay close (button or backdrop)
     if (closest(target, "#tess-help-close") || target.id === "tess-help-overlay") {
       var overlay2 = document.getElementById("tess-help-overlay");

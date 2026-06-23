@@ -23,6 +23,16 @@ app_header <- function() {
         tags$span(class = "app-header-logo", tess_icon("chart-line")),
         tags$span(class = "app-header-title", "AEGIS"),
         tags$span(class = "app-header-subtitle", "Forecast Improvement Platform")
+      ),
+      tags$div(
+        class = "app-header-lastupdate",
+        title = paste0(
+          "Last update: the most recent time Tesseract data was ingested ",
+          "and the forecasting models were computed for this release."
+        ),
+        tess_icon("rotate"),
+        tags$span(class = "lastupdate-label", "Last update"),
+        tags$span(class = "lastupdate-value", header_last_update())
       )
     ),
     tags$div(
@@ -43,9 +53,48 @@ app_header <- function() {
           id = "hdr-help-btn", class = "hdr-tool-btn", type = "button",
           title = "Help / About", tess_icon("circle-question")
         ),
-        tags$a(
-          class = "hdr-tool-btn", href = "mailto:oscarau@microsoft.com",
-          title = "Comments & suggestions", tess_icon("comment")
+        tags$div(
+          class = "hdr-contact",
+          tags$button(
+            id = "hdr-contact-btn", class = "hdr-tool-btn", type = "button",
+            title = "Comments & suggestions",
+            `aria-haspopup` = "true", `aria-expanded` = "false",
+            tess_icon("comment")
+          ),
+          tags$div(
+            id = "hdr-contact-menu", class = "hdr-contact-menu",
+            tags$div(class = "hdr-contact-head", "Comments & suggestions"),
+            tags$a(
+              class = "hdr-contact-item",
+              href = "mailto:oscarau@microsoft.com",
+              tess_icon("envelope"),
+              tags$div(
+                class = "hdr-contact-text",
+                tags$span(class = "hdr-contact-name", "Oscar Centeno Mora"),
+                tags$span(class = "hdr-contact-mail", "oscarau@microsoft.com")
+              )
+            ),
+            tags$a(
+              class = "hdr-contact-item",
+              href = "mailto:sihuiwang@microsoft.com",
+              tess_icon("envelope"),
+              tags$div(
+                class = "hdr-contact-text",
+                tags$span(class = "hdr-contact-name", "Sihui Wang"),
+                tags$span(class = "hdr-contact-mail", "sihuiwang@microsoft.com")
+              )
+            ),
+            tags$a(
+              class = "hdr-contact-item",
+              href = "mailto:chinmaytyagi@microsoft.com",
+              tess_icon("envelope"),
+              tags$div(
+                class = "hdr-contact-text",
+                tags$span(class = "hdr-contact-name", "Chinmay Tyagi"),
+                tags$span(class = "hdr-contact-mail", "chinmaytyagi@microsoft.com")
+              )
+            )
+          )
         ),
         tags$button(
           id = "hdr-theme-btn", class = "hdr-tool-btn", type = "button",
