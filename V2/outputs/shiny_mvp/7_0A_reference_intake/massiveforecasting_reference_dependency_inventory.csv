@@ -1,0 +1,17 @@
+package_name,source_file,required_or_optional,purpose_detected,needed_for_tesseract_mvp,risk_level,recommendation,notes
+pkg,Librerias.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+shiny,run_dashboard.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+readxl,Tablas_Dashboard_Ingresos.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+dplyr,Tablas_Dashboard_Ingresos.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+DT,Tablas_Dashboard_Ingresos.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+plyr,Tablas_Dashboard_Ingresos.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+readr,Tablas_Dashboard_Ingresos.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+tidyr,Tablas_Dashboard_Ingresos.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+stringr,Tablas_Dashboard_Ingresos.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+highcharter,Tablas_Dashboard_Ingresos.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+RcppRoll,Tablas_Dashboard_Ingresos.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+openxlsx,Tablas_Dashboard_Ingresos.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+shiny,ui.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+shinydashboard,ui.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+shinyWidgets,ui.R,manual_review,display/ui/data display,likely,low,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.
+shinyjs,ui.R,manual_review,unknown/support,manual_review,medium,Use only if needed for read-only UI/display.,Reference dependency inventory; no install performed.

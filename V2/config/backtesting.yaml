@@ -1,0 +1,7 @@
+forecast_horizon_days: 30
+validation_method: walk_forward
+n_windows: 12
+minimum_training_observations: 365
+minimum_test_observations: 30
+expanding_window: true
+frequency: daily

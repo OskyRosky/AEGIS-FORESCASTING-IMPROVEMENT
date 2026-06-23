@@ -1,0 +1,19 @@
+check_name,status,details
+sidebar exists,pass,Checked rendered HTML and sidebar source.
+sidebar is vertical/left layout,pass,CSS defines left column and sidebar styling.
+all 14 nav sections exist in sidebar,pass,Rendered page contains every required sidebar label.
+header no longer contains full navigation menu,pass,Header source contains branding/status only.
+body still renders,pass,Landing title present.
+footer still renders,pass,Footer tokens present.
+landing page content remains governed,pass,Champion decision and confidence present.
+no prohibited visible language,pass,Rendered HTML checked for legacy/prohibited terms.
+app launches successfully,pass,Launch record exists.
+HTTP status captured,pass,HTTP status: 200
+HTTP status is 200,pass,HTTP status: 200; fetch_error=
+sidebar click handler exists,pass,Client and server tab selection hooks present.
+no Stage 05 artifacts modified,pass,REV1 wrote only Shiny files and REV1 outputs.
+no Stage 06 artifacts modified,pass,REV1 did not write outputs/governance.
+no Audit #6 artifacts modified,pass,REV1 did not write audit artifacts.
+no MassiveForecasting-V3 files modified,pass,Reference sidebar was read-only.
+no models/forecasts/metrics/tournament recomputed,pass,Server only updates hidden tab selection.
+ready for Oscar visual inspection,pass,URL: http://127.0.0.1:3838

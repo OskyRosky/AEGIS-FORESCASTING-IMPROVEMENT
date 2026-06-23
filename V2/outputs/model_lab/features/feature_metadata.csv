@@ -1,0 +1,19 @@
+feature_name,feature_type,description
+lag_1,lag,Target value from 1 day(s) before the row date.
+lag_7,lag,Target value from 7 day(s) before the row date.
+lag_14,lag,Target value from 14 day(s) before the row date.
+lag_30,lag,Target value from 30 day(s) before the row date.
+lag_60,lag,Target value from 60 day(s) before the row date.
+lag_90,lag,Target value from 90 day(s) before the row date.
+rolling_mean_7,rolling,"Mean target over the prior 7 observations, excluding the current row."
+rolling_std_7,rolling,"Target standard deviation over the prior 7 observations, excluding the current row."
+rolling_mean_30,rolling,"Mean target over the prior 30 observations, excluding the current row."
+rolling_std_30,rolling,"Target standard deviation over the prior 30 observations, excluding the current row."
+year,calendar,Calendar-derived feature: year.
+month,calendar,Calendar-derived feature: month.
+quarter,calendar,Calendar-derived feature: quarter.
+day_of_month,calendar,Calendar-derived feature: day_of_month.
+day_of_week,calendar,Calendar-derived feature: day_of_week.
+week_of_year,calendar,Calendar-derived feature: week_of_year.
+is_month_start,calendar,Calendar-derived feature: is_month_start.
+is_month_end,calendar,Calendar-derived feature: is_month_end.

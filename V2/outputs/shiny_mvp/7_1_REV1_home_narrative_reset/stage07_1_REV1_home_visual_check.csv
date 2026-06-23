@@ -1,0 +1,13 @@
+element,expected,observed,status
+home_section_served,present,"data-section=\"home\" section length 15466 chars",pass
+hero_title,"TESSERACT v2 Forecast Improvement Platform",present,pass
+why_block,"Why this dashboard exists prose card",present,pass
+methodology_flow,"5 numbered steps (home-step-num)",present,pass
+model_families_list,"4 family rows",present,pass
+where_to_go_next,"navigation guide info_list",present,pass
+visual_review_note,"Please review this Home page visually...",present,pass
+old_build_stage_card,absent,absent,pass
+old_governed_snapshot,absent,absent,pass
+old_ets_explicit_card,absent,absent,pass
+old_readonly_norecompute_cards,absent,absent,pass
+forbidden_language,absent,absent,pass

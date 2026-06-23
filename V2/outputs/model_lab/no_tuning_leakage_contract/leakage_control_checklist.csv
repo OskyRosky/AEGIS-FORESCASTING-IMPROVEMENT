@@ -1,0 +1,13 @@
+control_id,control_area,control_description,required_for_challenger_onboarding,required_for_official_execution,blocking_if_failed
+LC-001,temporal cutoff,Training data ends at train_end_date for each window.,True,True,True
+LC-002,feature lag safety,Lag features are created only from historical values available before forecast generation.,True,True,True
+LC-003,rolling window safety,Rolling windows exclude test-period and future actual values.,True,True,True
+LC-004,normalization safety,Normalizers are fitted on training-only rows within each window.,True,True,True
+LC-005,imputation safety,Imputation uses training-only information and no future/test rows.,True,True,True
+LC-006,hyperparameter tuning isolation,Tuning occurs only through inner validation using training-only data.,True,True,True
+LC-007,sandbox/official separation,Sandbox outputs cannot be promoted to official tournament evidence.,True,True,True
+LC-008,random seed reproducibility,Official runs record locked seeds or deterministic policy.,True,True,True
+LC-009,dependency recording,Official runs record dependency versions when available.,True,True,True
+LC-010,metadata recording,"Official runs record data, features, hyperparameters, tuning status, and mode.",True,True,True
+LC-011,no post-hoc tuning,No tuning after official evaluation on benchmark windows.,True,True,True
+LC-012,no tournament-feedback tuning,"No tuning from tournament rank, champion feedback, significance, MASE, or RMSSE outcomes.",True,True,True

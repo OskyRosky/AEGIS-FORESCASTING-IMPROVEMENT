@@ -1,0 +1,5 @@
+run_id,model_name,risk_type,risk_level,evidence,recommended_audit_action,created_timestamp
+challenger_aggregation_significance,AutoARIMA,unstable_forecasts,medium,diagnostic_p95_mase_to_median_ratio=6.183561,Inspect high-error entities/windows.,2026-06-13T17:27:28
+challenger_aggregation_significance,ETS Explicit,unstable_forecasts,medium,diagnostic_p95_mase_to_median_ratio=5.365306,Inspect high-error entities/windows.,2026-06-13T17:27:28
+challenger_aggregation_significance,FastNeuralAR_MLP,extremely_high_mase,high,official_median_mase=739.921888,Review model behavior and keep included unless validation fails.,2026-06-13T17:27:28
+challenger_aggregation_significance,FastNeuralAR_MLP,extremely_high_rmsse,high,official_median_rmsse=164.622417,Review guardrail behavior before tournament use.,2026-06-13T17:27:28

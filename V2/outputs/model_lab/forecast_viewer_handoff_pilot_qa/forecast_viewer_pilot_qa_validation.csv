@@ -1,0 +1,25 @@
+check_name,status,details
+pilot_artifact_exists,pass,data\processed\forecast_viewer_model_outputs_pilot.csv
+required_columns_exist,pass,all present
+no_shiny_files_modified,pass,QA is read-only on artifact; writes only outputs/model_lab/forecast_viewer_handoff_pilot_qa/
+pilot_artifact_not_overwritten,pass,artifact opened read-only; no write back to data/processed pilot CSV
+no_full_artifact_created,pass,only QA preview/report files written
+no_models_run,pass,no model fitting/inference
+no_forecasts_generated,pass,QA reads existing forecast_value only
+only_three_pilot_series,pass,"present=['APC-Dedicated', 'APC-MSIT', 'APC-Multitenant']"
+models_available_per_series,pass,"model_counts=[13, 13, 13] (consistent=True)"
+model_families_populated,pass,"families=['growth_baseline', 'lightweight_neural', 'machine_learning', 'statistical']"
+horizon_days_populated,pass,min=1 max=30 distinct=30
+selected_ui_horizons_present,warning,"present=[5, 10, 15, 20, 25, 30]; missing=[45, 60]"
+actual_value_populated,pass,missing=0.00% (0 rows)
+forecast_value_populated,pass,missing=0.00% (0 rows)
+actual_value_consistent_per_series_date,pass,actual_value identical across models for same series/date
+forecast_value_varies_by_model,pass,100.0% of series/date groups have >1 distinct forecast
+values_numeric,pass,actual_value and forecast_value parse as numeric
+date_parsing,pass,0 unparseable dates
+horizon_parsing,pass,0 unparseable horizons
+no_duplicate_grain_rows,pass,"grain=['series_key', 'model_name', 'date', 'horizon_days']; duplicate_rows=0"
+forecasts_not_all_identical,pass,models produce differing forecasts
+chart_readiness_assessed,pass,series_ready=3/3
+long_preview_created,pass,"series=APC-Dedicated, horizon=1, dates=4, rows=52"
+wide_preview_created,pass,pivot date×model; 4 rows × 16 cols

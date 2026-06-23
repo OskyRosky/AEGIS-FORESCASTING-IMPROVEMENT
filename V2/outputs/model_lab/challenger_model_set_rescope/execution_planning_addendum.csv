@@ -1,0 +1,4 @@
+model_name,execution_plan_status,recommended_mode,runtime_class,expected_runtime_profile,official_execution_allowed,notes,created_timestamp
+FastNeuralAR_MLP,added_to_current_official_plan,official_after_sandbox,light_or_medium,fast enough for MVP/prototype automation,True,"Run sandbox first, then official 454 entity-window execution.",2026-06-13T16:08:35
+NBEATS,excluded_from_current_official_execution,deferred,heavy,runtime impractical for current MVP automation,False,Partial interrupted rows must not be included in final forecasts.,2026-06-13T16:08:35
+NHITS,excluded_from_current_official_execution,deferred,blocked,dependency blocked,False,Python 3.14 / neuralforecast / ray incompatibility.,2026-06-13T16:08:35

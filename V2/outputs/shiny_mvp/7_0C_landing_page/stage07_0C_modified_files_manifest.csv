@@ -1,0 +1,14 @@
+file_path,change_type,backup_path,reason,visual_validation_required,notes
+shiny_app/global.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/global.R,Limit global sourcing to governed shell dependencies.,true,Governed 7.0C shell change.
+shiny_app/R/constants.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/R/constants.R,Replace sample stage constants with governed Stage 07 constants.,true,Governed 7.0C shell change.
+shiny_app/R/llm_client.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/R/llm_client.R,Neutralize prohibited recommendation language.,true,Governed 7.0C shell change.
+shiny_app/R/data_loader.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/R/data_loader.R,Guard legacy sample CSV loading during the visual-shell block.,true,Governed 7.0C shell change.
+shiny_app/ui/header.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/ui/header.R,Add governed header badges and V1 status.,true,Governed 7.0C shell change.
+shiny_app/ui/body.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/ui/body.R,Assemble governed navbar shell and source Stage 07 UI files.,true,Governed 7.0C shell change.
+shiny_app/server/server.R,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/server/server.R,Set server to visual shell only for 7.0C.,true,Governed 7.0C shell change.
+shiny_app/www/custom.css,modify,outputs/shiny_mvp/7_0C_landing_page/backups/shiny_app/www/custom.css,Add landing page and governance dashboard styling.,true,Governed 7.0C shell change.
+shiny_app/ui/sidebar.R,create,,Create Stage 07 navigation section registry.,true,Governed 7.0C shell change.
+shiny_app/ui/footer.R,create,,Create governed footer/version display.,true,Governed 7.0C shell change.
+shiny_app/ui/tabs.R,create,,Create landing page and placeholder nav panels.,true,Governed 7.0C shell change.
+scripts/launch_shiny_v1.ps1,modify,,Allow block-specific stdout/stderr log paths.,false,Governed 7.0C shell change.
+python/shiny_mvp/validate_stage07_0C_landing_page.py,create,,Create 7.0C validator and report generator.,false,Governed 7.0C shell change.

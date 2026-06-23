@@ -1,0 +1,2 @@
+"artifact_key","expected_path","presence","classification","note"
+"ttl_capacity","outputs/model_lab/ttl/ttl_capacity_view.csv","missing","roadmap","No governed TTL / capacity-to-live artifact exists yet; TTL page stays Planned."

@@ -1,0 +1,7 @@
+next_step_id,next_step_name,priority,description,created_timestamp
+NS-001,Audit #5 - Model Lab Closure / Dashboard Handoff Audit,high,Validate closure pack and dashboard handoff readiness,2026-06-13T20:36:01
+NS-002,Build Shiny MVP dashboard,high,Use dashboard handoff manifest artifacts,2026-06-13T20:36:01
+NS-003,Investigate FastNeuralAR_MLP implementation issue,medium,Review scale/normalization or recursive collapse behavior,2026-06-13T20:36:01
+NS-004,Consider optimized NBEATS/NHITS future environment,medium,Use stronger runtime or compatible Python environment,2026-06-13T20:36:01
+NS-005,Package artifacts for stakeholder review,high,Prepare shareable closure pack bundle,2026-06-13T20:36:01
+NS-006,Prepare executive summary for Boon / team,high,Use executive summary and key results,2026-06-13T20:36:01

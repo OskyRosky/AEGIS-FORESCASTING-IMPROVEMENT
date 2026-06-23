@@ -1,0 +1,9 @@
+item,value
+url,http://127.0.0.1:3838
+http_status,200
+http_200,PASS
+header_visible,PASS
+sidebar_visible,PASS
+body_visible,PASS
+horizontal_nav_present,NO
+crowded_cards_present,NO

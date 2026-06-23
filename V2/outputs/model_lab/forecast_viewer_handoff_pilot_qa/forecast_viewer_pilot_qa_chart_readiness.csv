@@ -1,0 +1,4 @@
+series_key,can_plot_single_actual_line,can_plot_forecast_line_per_model,horizon_filterable,date_window_filterable,models_plottable,chart_ready
+APC-Dedicated,True,True,True,True,13,True
+APC-MSIT,True,True,True,True,13,True
+APC-Multitenant,True,True,True,True,13,True

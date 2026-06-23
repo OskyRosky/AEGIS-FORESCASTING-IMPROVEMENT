@@ -1,0 +1,45 @@
+file_path,file_type,exists,row_count,column_count,likely_grain,date_range,model_count,series_count,horizon_range,likely_use,notes
+data/processed/forecast_viewer_model_outputs.csv,csv,true,177060,21,series_key x model_name x horizon_days x date,2025-05-03 to 2026-04-27,13,39,1 to 30 (30 horizons),"Comparison, Accuracy diagnostics, Forecast Viewer","tabular; processed app data; exact completeness: missing actual_value=0, missing forecast_value=0, duplicate grain rows=0"
+data/processed/forecast_viewer_model_outputs_manifest.csv,csv,true,52,2,artifact rows,,,,,"Comparison, Accuracy diagnostics, Forecast Viewer",tabular; processed app data
+data/processed/forecasts.csv,csv,true,65095,9,entity_key x model_version x date,2026-04-28 to 2030-04-25,16,45,,"Forward Forecast, Comparison context only",tabular; processed app data
+data/processed/actuals.csv,csv,true,84537,7,entity_key x date,2019-07-01 to 2026-04-27,0,45,,"Forward Forecast, Comparison context only",tabular; processed app data
+data/processed/forecast_comparison.csv,csv,true,0,11,,,,,,reference,tabular; processed app data
+data/processed/entities.csv,csv,true,45,8,entity_key x first_actual_date,sample 2019-07-01 to 2025-12-10,,45,,reference,tabular; processed app data
+outputs/model_lab/model_lab_closure_pack/model_lab_final_model_universe.csv,csv,true,15,10,model_name,,15,,,"Universe, Champion, Governance",tabular; governed/historical output
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,csv,true,1,11,selected_champion_model,,1,,,"Champion, Governance",tabular; governed/historical output
+outputs/model_lab/model_lab_closure_pack/model_lab_key_results.csv,csv,true,11,5,artifact rows,,,,,reference,tabular; governed/historical output
+outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,csv,true,7,10,model_name,,7,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv,csv,true,2,6,model_name,,2,,,reference,tabular; governed/historical output
+outputs/model_lab/champion_decision/champion_decision.csv,csv,true,1,9,selected_champion_model,,1,,,"Champion, Governance",tabular; governed/historical output
+outputs/model_lab/champion_decision/champion_candidate_evaluation.csv,csv,true,13,16,model_name x champion_candidate_status,sample eligible_c to ineligible,13,,,"Champion, Governance",tabular; governed/historical output
+outputs/model_lab/champion_decision/champion_decision_scorecard.csv,csv,true,13,12,model_name,,13,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/champion_decision/champion_decision_evidence_summary.csv,csv,true,9,7,artifact rows,,,,,"Champion, Governance",tabular; governed/historical output
+outputs/model_lab/champion_decision/champion_decision_risk_review.csv,csv,true,21,8,model_name,,6,,,"Champion, Governance",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_model_universe.csv,csv,true,15,8,model_name,,15,,,"Universe, Champion, Governance",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,csv,true,13,17,model_name,,13,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_preliminary_standings.csv,csv,true,13,13,model_name,,13,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,csv,true,78,16,artifact rows,,,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_model_evidence_summary.csv,csv,true,13,11,model_name,,13,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,csv,true,507,13,entity_key x model_name,,13,39,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_risk_register.csv,csv,true,14,8,model_name,,4,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/tournament_engine/tournament_summary.csv,csv,true,1,11,artifact rows,,,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/governance/6_2_decision_rules/governance_recommendations.csv,csv,true,15,13,model_name,,15,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,csv,true,7,13,model_name,,7,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,csv,true,5,11,selected_champion_model,,1,,,"Champion, Governance",tabular; governed/historical output
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,csv,true,13,8,artifact rows,,,,,"Champion, Governance",tabular; governed/historical output
+outputs/governance/6_4_dashboard_contract/dashboard_data_binding_contract.csv,csv,true,14,10,artifact rows,,,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/governance/6_4_dashboard_contract/dashboard_required_sections.csv,csv,true,13,9,artifact rows,,,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/governance/6_5_governance_closure_pack/governance_register.csv,csv,true,17,9,artifact rows,,,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/governance/audit_6/audit_6_summary.csv,csv,true,1,11,artifact rows,,,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/governance/audit_6/audit_6_findings.csv,csv,true,4,9,artifact rows,,,,,"Governance, Champion, Universe",tabular; governed/historical output
+outputs/model_lab/challenger_metrics/challenger_metrics_by_model_diagnostic.csv,csv,true,6,17,model_name,,6,,,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/model_lab/challenger_metrics/challenger_metrics_summary.csv,csv,true,1,17,horizon_days,,,,sample 30 to 30,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/model_lab/challenger_aggregation_significance/challenger_aggregation_by_model.csv,csv,true,6,15,model_name,,6,,,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/model_lab/aggregation_hierarchy/aggregation_by_model.csv,csv,true,7,16,model_name,,7,,,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/model_lab/aggregation_hierarchy/aggregation_by_entity_model.csv,csv,true,273,14,entity_key x model_name,,7,39,,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/model_lab/statistical_significance/pairwise_model_significance.csv,csv,true,21,21,artifact rows,,,,,"Tournament, Champion, Comparison",tabular; governed/historical output
+outputs/model_lab/mase/mase_by_model.csv,csv,true,7,7,model_name,,7,,,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/model_lab/rmsse/rmsse_by_model.csv,csv,true,7,8,model_name,,7,,,"Tournament metrics, diagnostics",tabular; governed/historical output
+outputs/shiny_mvp/7_3_universe/stage07_3_universe_data_binding_summary.csv,csv,true,10,4,artifact rows,,,,,reference,tabular; Stage 07 diagnostic/UI output
+outputs/shiny_mvp/7_11_forecast_viewer/stage07_11_forecast_data_schema.csv,csv,true,47,5,artifact rows,,,,,reference,tabular; Stage 07 diagnostic/UI output
+outputs/shiny_mvp/7_11_FULL_REBIND_forecast_viewer/stage07_11_FULL_REBIND_series_summary.csv,csv,true,45,6,series_key,,,45,,reference,tabular; Stage 07 diagnostic/UI output

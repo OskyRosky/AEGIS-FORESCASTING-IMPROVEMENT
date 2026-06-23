@@ -1,0 +1,10 @@
+area,massiveforecasting_pattern,tesseract_requirement,fit_status,gap,recommendation,priority
+layout shell,dashboardPage with separated header/sidebar/body,Governed read-only dashboard shell,fits_with_adaptation,Replace all domain labels and content.,Adapt layout pattern for Stage 07.,high
+sidebar navigation,sidebar menu and menu items,Required 6.4 dashboard sections,fits_with_adaptation,Reference sections are different.,Map menu items to governance-required sections.,high
+server logic,large server with reactive and runtime behavior,Read-only artifact loader only,does_not_fit,Server may cook data and run computations.,Do not reuse runtime server logic.,high
+forecast engine,forecast runner/engine scripts,No model execution or forecasts in Shiny,does_not_fit,Runtime model pipeline violates governance.,Exclude from Stage 07.,high
+dependency organization,central Librerias.R,Minimal display-only dependency loader,fits_with_adaptation,May include modeling packages.,Create lean dependency loader.,medium
+styling/assets,custom assets and possible CSS,TESSERACT-branded clear governance dashboard,manual_review,Reference assets may be CGR-specific.,Use only styling concept.,medium
+cards and tabs,boxes/value boxes/tabItems,KPI cards and evidence sections,fits_directly,Need governed labels.,Reuse pattern concept.,high
+language,income/CGR-specific text,TESSERACT governance language,does_not_fit,Reference copy is project-specific.,Write new copy from 6.3/6.4 artifacts.,high
+data loading,imports/precomputed bundles,Static governed artifact bindings,manual_review,Data loading may be runtime-cooked.,Implement fresh read-only loaders from 6.4 bindings.,high

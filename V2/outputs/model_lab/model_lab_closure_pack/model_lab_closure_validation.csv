@@ -1,0 +1,12 @@
+check_name,status,details,created_timestamp
+champion_decision_exists,pass,champion_decision.csv loaded,2026-06-13T20:36:01
+selected_champion_ets_explicit,pass,selected champion checked,2026-06-13T20:36:01
+final_model_universe_exists,pass,rows=15,2026-06-13T20:36:01
+dashboard_handoff_manifest_exists,pass,rows=14,2026-06-13T20:36:01
+risk_register_exists,pass,rows=7,2026-06-13T20:36:01
+deferred_models_documented,pass,NBEATS/NHITS documented,2026-06-13T20:36:01
+key_results_exists,pass,rows=11,2026-06-13T20:36:01
+artifact_manifest_exists,pass,rows=12,2026-06-13T20:36:01
+no_source_outputs_modified,pass,closure pack writes only closure directory,2026-06-13T20:36:01
+shiny_untouched,pass,Shiny path present,2026-06-13T20:36:01
+ready_for_final_audit,pass,closure pack ready for Audit #5,2026-06-13T20:36:01

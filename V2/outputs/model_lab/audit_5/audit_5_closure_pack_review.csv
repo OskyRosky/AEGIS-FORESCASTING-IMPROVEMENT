@@ -1,0 +1,14 @@
+artifact_name,artifact_path,exists,row_count_or_status,audit_status,notes,created_timestamp
+model_lab_closure_summary.csv,outputs/model_lab/model_lab_closure_pack/model_lab_closure_summary.csv,True,1 row,PASS,closure_status=completed_pending_final_audit; ready flags True,2026-06-14T12:00:00
+model_lab_stage_status_manifest.csv,outputs/model_lab/model_lab_closure_pack/model_lab_stage_status_manifest.csv,True,24 rows,PASS,All blocks 5.18..5.31B status=completed,2026-06-14T12:00:00
+model_lab_final_model_universe.csv,outputs/model_lab/model_lab_closure_pack/model_lab_final_model_universe.csv,True,15 rows,PASS,7 baseline + 6 active challengers + 2 deferred,2026-06-14T12:00:00
+model_lab_champion_summary.csv,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,True,1 row,PASS,ETS Explicit; MASE 6.9011; RMSSE 1.8562; 8/0 pairwise,2026-06-14T12:00:00
+model_lab_key_results.csv,outputs/model_lab/model_lab_closure_pack/model_lab_key_results.csv,True,11 rows,PASS,KPIs reconcile with source artifacts,2026-06-14T12:00:00
+model_lab_risk_register_final.csv,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,True,7 rows,PASS,R-001..R-007 carry-forwards all present,2026-06-14T12:00:00
+model_lab_dashboard_handoff_manifest.csv,outputs/model_lab/model_lab_closure_pack/model_lab_dashboard_handoff_manifest.csv,True,14 rows,PASS,12 distinct dashboard sections; all referenced files exist,2026-06-14T12:00:00
+model_lab_artifact_manifest.csv,outputs/model_lab/model_lab_closure_pack/model_lab_artifact_manifest.csv,True,12 rows,MINOR,closure_summary row marked artifact_exists=False though file exists (F-010),2026-06-14T12:00:00
+model_lab_deferred_models.csv,outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv,True,2 rows,PASS,NBEATS and NHITS documented with future resolution options,2026-06-14T12:00:00
+model_lab_next_steps.csv,outputs/model_lab/model_lab_closure_pack/model_lab_next_steps.csv,True,6 rows,PASS,NS-001 Audit #5 + dashboard build + investigations listed,2026-06-14T12:00:00
+model_lab_closure_validation.csv,outputs/model_lab/model_lab_closure_pack/model_lab_closure_validation.csv,True,11 rows,PASS,All rows status=pass; no fail rows,2026-06-14T12:00:00
+model_lab_closure_report.md,outputs/model_lab/model_lab_closure_pack/model_lab_closure_report.md,True,present,PASS,Closure narrative present,2026-06-14T12:00:00
+model_lab_executive_summary.md,outputs/model_lab/model_lab_closure_pack/model_lab_executive_summary.md,True,present,PASS,Accurate and consistent with closure pack,2026-06-14T12:00:00

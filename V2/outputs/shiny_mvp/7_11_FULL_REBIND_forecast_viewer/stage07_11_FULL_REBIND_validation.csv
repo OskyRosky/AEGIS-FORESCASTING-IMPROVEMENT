@@ -1,0 +1,29 @@
+check_name,status,details
+shiny_reads_backtest_artifact,pass,Forecast Viewer Backtest section reads data/processed/forecast_viewer_model_outputs.csv via fvp_data()->load_csv_artifact('forecast_viewer_full').
+shiny_reads_forward_forecasts,pass,Forecast Viewer Forward section reads data/processed/forecasts.csv via fvf_forecasts()->load_csv_artifact('forecasts').
+forward_reads_actuals,pass,Forward section reads data/processed/actuals.csv via fvf_actuals() for actual-history context.
+pilot_artifact_not_used_for_active_viewer,pass,forecast_viewer_pilot remains registered for provenance only; the active viewer no longer reads it (fvp_data repointed to full).
+data_artifacts_not_modified,pass,No write to any data/processed artifact. Emitter and Shiny app are read-only against CSVs.
+no_models_run,pass,No model fit/predict executed in this block.
+no_forecasts_generated,pass,No forecast values produced; viewer only reads existing artifacts.
+no_metrics_recalculated,pass,No scoring/ranking/metric recomputation performed.
+no_champion_changed,pass,Champion flags read as-is from artifact (is_selected_champion). Champions present: ETS Explicit.
+backtest_selector_exposes_series,pass,Backtest series selector exposes 39 series (expected 39).
+forward_selector_exposes_series,pass,Forward series selector exposes 45 series (expected 45).
+backtest_models_grouped_by_family,pass,"Backtest exposes 13 models across 4 families (growth_baseline, lightweight_neural, machine_learning, statistical)."
+horizon_selector_uses_available_horizons_only,pass,"Horizon radios = 5,10,15,20,25,30 (all within artifact horizons 1-30). 35/45 rendered as disabled chips."
+unavailable_horizons_not_enabled,pass,Horizons 35/45 absent from artifact (max horizon = 30); shown disabled with 'Not available in current artifact' note.
+both_analyze_buttons_gate_rendering,pass,fvp_chart gated on input$fvp_go==0; fvf_chart gated on input$fvf_go==0 (eventReactive + gated renderHighchart).
+no_chart_before_action_click,pass,"Before clicking, both charts show empty-state placeholders (fvp_empty_chart / fvf_empty_chart)."
+chart_containers_static,pass,highchartOutput('fvp_chart') and highchartOutput('fvf_chart') are static in tabs.R; both stay in DOM (stacked sections).
+blank_chart_regression_fixed,pass,Sections are stacked cards (not tabs); all 7 outputOptions have suspendWhenHidden=FALSE.
+backtest_actual_and_forecast_lines,pass,Live check: Backtest chart drew actual line + multiple model forecast lines (highcharts-graph paths > 0).
+forward_actual_history_future_line_boundary,pass,"Live check: Forward chart drew actual-history line, forward-forecast line, and a vertical 'Forecast start' boundary plotLine."
+data_notes_shown,pass,"Both sections render a Data notes card (series, models/model_version, horizon/forecast-start, point counts, date range, source)."
+backtest_vs_forward_semantics_clear,pass,Backtest labelled 'Historical backtest comparison' (actuals known); Forward labelled 'Forward production forecast' (future).
+app_launches,pass,App launched via scripts/launch_shiny_v1.ps1; HTTP 200 returned on http://127.0.0.1:3838.
+url_returned,pass,URL: http://127.0.0.1:3838
+http_status_checked,pass,"HTTP 200, content length 91249 bytes."
+pid_returned,pass,Process id returned by launch script (see report).
+logs_returned,pass,stdout/stderr logs under outputs/shiny_mvp/7_11_FULL_REBIND_forecast_viewer/.
+stop_command_returned,pass,Stop command: powershell -ExecutionPolicy Bypass -File scripts/stop_shiny_v1.ps1 -PidToStop <PID>.

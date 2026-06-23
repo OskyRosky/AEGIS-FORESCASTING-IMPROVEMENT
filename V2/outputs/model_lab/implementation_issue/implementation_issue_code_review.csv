@@ -1,0 +1,8 @@
+check_name,status,evidence
+no_future_leakage,pass,Forecast outputs contain only test-window dates; model training code slices actuals through train_end_date.
+no_index_shift,pass,horizon_day sequence checked against 1..30.
+no_horizon_misalignment,pass,"forecast_rows=30, actual_rows=30."
+no_date_mismatch,pass,forecast_date equals actual_date for all reconstructed rows.
+no_aggregation_mismatch,pass,matching metric rows=1.
+no_duplicated_rows,pass,Checked forecast_date/horizon_day duplicates.
+no_missing_rows,pass,matching forecast rows=30.

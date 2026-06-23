@@ -1,0 +1,2 @@
+run_id,challenger_models,canonical_rows,entity_model_rows,model_aggregation_rows,pairwise_comparisons,supported_pairwise_differences,inconclusive_pairwise_comparisons,outlier_risk_flags,aggregation_created,significance_created,rankings_created,tournament_created,champion_selected,created_timestamp
+challenger_aggregation_significance,6,2724,234,6,15,12,3,4,True,True,False,False,False,2026-06-13T17:27:28

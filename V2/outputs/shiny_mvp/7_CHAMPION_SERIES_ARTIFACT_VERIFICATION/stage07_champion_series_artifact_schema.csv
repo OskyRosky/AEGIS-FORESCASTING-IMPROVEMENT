@@ -1,0 +1,14 @@
+column_name,inferred_type,null_count,sample_values,required_for_block_b,notes
+run_id,text,0,tournament_engine,false,Available artifact column
+model_name,text,0,ARIMA_Fixed | ETS_Current | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4,true,Required source column
+model_origin,text,0,baseline | challenger,false,Available artifact column
+model_family,text,0,statistical | growth_baseline | machine_learning | lightweight_neural,false,Available artifact column
+entity_key,text,0,APC-Dedicated | APC-MSIT | APC-Multitenant | ARE-Go Local | AUS-Go Local,true,Required source column
+median_mase,numeric,0,3.2875262112854213 | 3.4543601462729034 | 2.699432193344133 | 6.99033711757601 | 9.31804376627905,true,Required source column
+median_rmsse,numeric,0,0.3390119024866116 | 0.3834239108157525 | 0.270540812452145 | 0.7107587468482364 | 1.006504917230264,true,Required source column
+median_wmape,numeric,273,0.1212683624652326 | 0.1421750304112459 | 0.7894275920273377 | 0.0339643198900707 | 0.0579208334929245,false,Available artifact column
+median_smape,numeric,273,0.148763916354267 | 0.1747794599104748 | 1.3108960577957072 | 0.0333904248229098 | 0.0564932445960938,false,Available artifact column
+median_bias,numeric,273,-4.732263831404096 | -15.27268273445445 | -692.3820763641017 | 7.0879135400055295 | 5.70290897796205,false,Available artifact column
+entity_weight,integer,0,1,false,Available artifact column
+audit_risk_flag,boolean,0,False | True,false,Available artifact column
+created_timestamp,datetime_or_date,0,2026-06-13T18:07:40,false,Available artifact column

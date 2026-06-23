@@ -1,0 +1,16 @@
+trace_id,dashboard_requirement,source_artifact,source_record_or_field,trace_rationale,created_timestamp
+DT-001,champion decision,outputs/model_lab/champion_decision/champion_decision.csv,decision=CHAMPION_SELECTED_WITH_CONDITIONS,Formal champion decision source.,2026-06-14T10:49:31
+DT-002,ETS Explicit,outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_model=ETS Explicit,Selected champion source.,2026-06-14T10:49:31
+DT-003,medium confidence,outputs/model_lab/champion_decision/champion_decision.csv,decision_confidence=medium,Confidence source.,2026-06-14T10:49:31
+DT-004,MASE/RMSSE,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,"official_median_mase, official_median_rmsse",Champion metric source.,2026-06-14T10:49:31
+DT-005,pairwise support,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,"supported_better_count=8, supported_worse_count=0",Pairwise support source.,2026-06-14T10:49:31
+DT-006,C-001,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,C-001,Medium-confidence condition.,2026-06-14T10:49:31
+DT-007,C-002,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,C-002,Conditional champion condition.,2026-06-14T10:49:31
+DT-008,C-003,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,C-003,Pairwise evidence scope condition.,2026-06-14T10:49:31
+DT-009,C-004,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,C-004,Risk carry-forward condition.,2026-06-14T10:49:31
+DT-010,C-005,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,C-005,No unconditional winner condition.,2026-06-14T10:49:31
+DT-011,prohibited language,outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,language_category=prohibited,Dashboard copy guardrail.,2026-06-14T10:49:31
+DT-012,FastNeuralAR_MLP risk,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,R-001,High-risk investigation source.,2026-06-14T10:49:31
+DT-013,NBEATS/NHITS deferral,outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv,"NBEATS,NHITS",Deferred future-work source.,2026-06-14T10:49:31
+DT-014,Audit #5 verdict,outputs/model_lab/audit_5/audit_5_summary.csv,final_audit_verdict,Audit status source.,2026-06-14T10:49:31
+DT-015,governance actions from 6.2,outputs/governance/6_2_decision_rules/decision_action_framework.csv,"KEEP_WITH_CONDITIONS, MONITOR, REVIEW_INVESTIGATE",Action contract source.,2026-06-14T10:49:31

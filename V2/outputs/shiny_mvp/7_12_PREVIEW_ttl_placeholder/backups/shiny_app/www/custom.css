@@ -1,0 +1,730 @@
+/* TESSERACT v2 | custom.css | minimal clean dashboard shell (Block 7.0C-RESET) */
+
+:root {
+  --tess-header-h: 56px;
+  --tess-footer-h: 34px;
+  --tess-sidebar-w: 260px;
+  --tess-navy: #102a43;
+  --tess-navy-2: #17324d;
+  --tess-blue: #1f3864;
+  --tess-accent: #2e75b6;
+  --tess-body-bg: #f1f4f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--tess-body-bg);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.tess-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--tess-body-bg);
+}
+
+/* ---------------- Header ---------------- */
+.app-header {
+  height: var(--tess-header-h);
+  min-height: var(--tess-header-h);
+  background: var(--tess-navy);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 22px;
+  box-shadow: 0 2px 10px rgba(16, 42, 67, 0.22);
+  z-index: 10;
+}
+
+.app-header-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+.app-header-title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.app-header-subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+  white-space: nowrap;
+}
+
+.app-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.hdr-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 11px;
+  line-height: 1;
+}
+
+.hdr-badge-version {
+  background: #dbeafe;
+  color: #1f3864;
+}
+
+.hdr-badge-stage {
+  background: #2e75b6;
+  color: #ffffff;
+}
+
+.hdr-badge-readonly {
+  background: rgba(255, 255, 255, 0.14);
+  color: #eaf2fb;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ---------------- Main layout ---------------- */
+.app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: var(--tess-sidebar-w) minmax(0, 1fr);
+  min-height: calc(100vh - var(--tess-header-h) - var(--tess-footer-h));
+}
+
+/* ---------------- Sidebar ---------------- */
+.app-sidebar {
+  background: linear-gradient(180deg, var(--tess-navy) 0%, var(--tess-navy-2) 60%, var(--tess-blue) 100%);
+  color: #eaf2fb;
+  padding: 16px 12px;
+  box-shadow: 4px 0 18px rgba(16, 42, 67, 0.12);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #d4e3f3;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 13px;
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link:focus {
+  background: rgba(255, 255, 255, 0.10);
+  color: #ffffff;
+}
+
+.sidebar-link.active {
+  background: #dbeafe;
+  color: #102a43;
+  box-shadow: inset 3px 0 0 var(--tess-accent);
+}
+
+.sidebar-link-icon {
+  width: 18px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.sidebar-link-label {
+  white-space: nowrap;
+}
+
+.sidebar-bullet {
+  font-weight: 800;
+}
+
+/* ---------------- Content ---------------- */
+.app-content {
+  min-width: 0;
+  background: var(--tess-body-bg);
+  padding: 26px 30px;
+  overflow: auto;
+}
+
+.content-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.content-head {
+  margin-bottom: 22px;
+}
+
+.content-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #102a43;
+  margin: 0 0 4px;
+}
+
+.content-subtitle {
+  font-size: 14px;
+  color: #5d6d7e;
+  margin: 0;
+}
+
+.shell-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.shell-card {
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+}
+
+.shell-card-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #edf2f7;
+  color: #1f3864;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  margin-bottom: 12px;
+}
+
+.shell-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #132238;
+  margin: 0 0 6px;
+}
+
+.shell-card-detail {
+  font-size: 13.5px;
+  color: #5d6d7e;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------------- Footer ---------------- */
+.app-footer {
+  height: var(--tess-footer-h);
+  min-height: var(--tess-footer-h);
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e5eaf0;
+  background: #ffffff;
+  color: #7a8aa0;
+  font-size: 12px;
+  padding: 0 22px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 860px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+
+  .app-sidebar {
+    padding: 12px;
+  }
+
+  .sidebar-nav {
+    display: block;
+  }
+
+  .app-header {
+    height: auto;
+    min-height: var(--tess-header-h);
+    padding: 8px 16px;
+  }
+}
+
+/* ===================== Block 7.0C : populated shell ===================== */
+
+/* Header logo + tools */
+.app-header-brand { gap: 10px; }
+.app-header-logo { color: #9fc5e8; font-size: 16px; display: inline-flex; }
+.app-header-actions { display: flex; align-items: center; gap: 16px; }
+.app-header-tools { display: flex; align-items: center; gap: 6px; }
+.hdr-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #eaf2fb;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 140ms ease;
+}
+.hdr-tool-btn:hover { background: rgba(255, 255, 255, 0.18); color: #ffffff; }
+
+/* Sidebar brand */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 10px 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebar-brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2e75b6;
+  box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.25);
+}
+.sidebar-brand-text {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9fc5e8;
+}
+
+/* Sidebar groups */
+.sidebar-group { margin-bottom: 2px; }
+.sidebar-group-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #cfe0f2;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 11px;
+  border-radius: 8px;
+  text-align: left;
+}
+.sidebar-group-header:hover { background: rgba(255, 255, 255, 0.07); color: #ffffff; }
+.sidebar-group-icon { width: 18px; text-align: center; opacity: 0.9; }
+.sidebar-group-label { flex: 1; }
+.sidebar-group-caret { font-size: 11px; opacity: 0.7; transition: transform 160ms ease; }
+.sidebar-group.expanded .sidebar-group-caret { transform: rotate(180deg); }
+
+.sidebar-sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+  padding-left: 6px;
+}
+.sidebar-group.expanded .sidebar-sub { max-height: 520px; }
+
+.sidebar-sublink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bcd2ea;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 550;
+  padding: 8px 11px 8px 14px;
+  border-radius: 7px;
+  margin: 2px 0;
+}
+.sidebar-sublink:hover { background: rgba(255, 255, 255, 0.10); color: #ffffff; }
+.sidebar-sublink.active {
+  background: #dbeafe;
+  color: #102a43;
+  box-shadow: inset 3px 0 0 #2e75b6;
+  font-weight: 700;
+}
+.sidebar-sublink-icon { width: 16px; text-align: center; font-size: 12px; opacity: 0.85; }
+
+/* Sections */
+.content-section { display: none; }
+.content-section.is-active { display: block; }
+
+.section-head { margin-bottom: 20px; }
+.section-title { font-size: 24px; font-weight: 800; color: #102a43; margin: 0 0 4px; }
+.section-subtitle { font-size: 14px; color: #5d6d7e; margin: 0; }
+.section-block-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #33455c;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 26px 0 12px;
+}
+
+/* KPI */
+.kpi-value { font-size: 26px; font-weight: 800; color: #102a43; margin-top: 8px; }
+.kpi-label { font-size: 13px; color: #5d6d7e; margin-top: 2px; }
+
+/* Info list */
+.info-list { list-style: none; padding: 0; margin: 0; background: #ffffff; border: 1px solid #e3eaf2; border-radius: 10px; padding: 6px 18px; box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06); }
+.info-list li { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid #eef2f7; font-size: 14px; color: #33455c; }
+.info-list li:last-child { border-bottom: 0; }
+.info-list .info-key { font-weight: 700; color: #102a43; min-width: 170px; }
+
+/* Pills */
+.pill { display: inline-flex; align-items: center; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 700; }
+.pill-green { background: #e3f4ea; color: #1f7a4d; }
+.pill-amber { background: #fdf0db; color: #b7791f; }
+.pill-blue { background: #dbeafe; color: #1f3864; }
+
+/* Preview controls */
+.preview-controls { background: #ffffff; border: 1px solid #e3eaf2; border-radius: 10px; padding: 18px; box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06); }
+.preview-controls-head { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #102a43; margin-bottom: 14px; }
+.preview-tag { margin-left: auto; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; background: #fdf0db; color: #b7791f; border-radius: 999px; padding: 3px 9px; }
+.preview-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.preview-row label { width: 140px; font-size: 13px; color: #5d6d7e; font-weight: 600; }
+.preview-range { flex: 1; }
+.preview-select { flex: 1; padding: 7px 10px; border: 1px solid #d6dfea; border-radius: 7px; background: #f7f9fc; color: #33455c; }
+.preview-actions { display: flex; gap: 10px; margin-top: 6px; }
+.preview-btn { border: 1px solid #d6dfea; background: #f1f4f8; color: #5d6d7e; border-radius: 8px; padding: 8px 18px; font-weight: 700; font-size: 13px; cursor: not-allowed; }
+.preview-btn-primary { background: #2e75b6; border-color: #2e75b6; color: #ffffff; opacity: 0.85; }
+.preview-note { margin: 12px 0 0; font-size: 12px; color: #8090a3; font-style: italic; }
+.text-muted-sm { color: #8090a3; font-size: 12.5px; }
+
+/* Help overlay */
+.tess-overlay { position: fixed; inset: 0; background: rgba(16, 42, 67, 0.5); display: none; align-items: center; justify-content: center; z-index: 50; padding: 20px; }
+.tess-overlay.open { display: flex; }
+.tess-overlay-card { background: #ffffff; border-radius: 12px; max-width: 460px; width: 100%; box-shadow: 0 20px 60px rgba(16, 42, 67, 0.35); overflow: hidden; }
+.tess-overlay-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #102a43; color: #ffffff; }
+.tess-overlay-head h2 { font-size: 17px; font-weight: 700; margin: 0; }
+.tess-overlay-close { background: transparent; border: 0; color: #cfe0f2; font-size: 22px; line-height: 1; cursor: pointer; }
+.tess-overlay-body { padding: 18px 20px; color: #33455c; font-size: 14px; }
+.tess-overlay-body ul { padding-left: 18px; margin: 10px 0; }
+.tess-overlay-body li { margin-bottom: 6px; }
+
+/* ---- Dark mode ---- */
+.tess-app.theme-dark { background: #0c1726; }
+.theme-dark .app-content { background: #0c1726; }
+.theme-dark .section-title { color: #e8eef6; }
+.theme-dark .section-subtitle { color: #9fb0c4; }
+.theme-dark .section-block-title { color: #9fb0c4; }
+.theme-dark .shell-card,
+.theme-dark .preview-controls,
+.theme-dark .info-list { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .shell-card-title { color: #e8eef6; }
+.theme-dark .shell-card-detail { color: #9fb0c4; }
+.theme-dark .shell-card-tag { background: #1f3350; color: #9fc5e8; }
+.theme-dark .kpi-value { color: #e8eef6; }
+.theme-dark .kpi-label { color: #9fb0c4; }
+.theme-dark .info-list li { border-color: #23374f; color: #c4d2e2; }
+.theme-dark .info-list .info-key { color: #e8eef6; }
+.theme-dark .preview-controls-head { color: #e8eef6; }
+.theme-dark .preview-select { background: #0f1d30; border-color: #2a425f; color: #c4d2e2; }
+.theme-dark .preview-btn { background: #1c2f47; border-color: #2a425f; color: #9fb0c4; }
+.theme-dark .app-footer { background: #0c1726; color: #7d8da0; border-color: #23374f; }
+
+/* ===================== Sidebar collapse (hamburger -> mini icon rail) ===================== */
+
+/* Header left cluster (hamburger + brand) */
+.app-header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.hdr-collapse-btn { font-size: 15px; }
+
+/* Smooth width transition when toggling */
+.app-main { transition: grid-template-columns 220ms ease; }
+.app-sidebar { transition: padding 220ms ease; overflow-x: hidden; }
+
+/* Collapsed (mini) state */
+.tess-app.sidebar-mini .app-main { grid-template-columns: 68px minmax(0, 1fr); }
+.tess-app.sidebar-mini .app-sidebar { padding: 16px 6px; overflow: visible; }
+.tess-app.sidebar-mini .sidebar-nav { overflow: visible; }
+
+/* Brand: keep dot, hide text */
+.tess-app.sidebar-mini .sidebar-brand { justify-content: center; padding: 2px 0 12px; }
+.tess-app.sidebar-mini .sidebar-brand-text { display: none; }
+
+/* Each group anchors its fly-out panel */
+.tess-app.sidebar-mini .sidebar-group { position: relative; margin-bottom: 2px; }
+
+/* Group header: show only the centered icon */
+.tess-app.sidebar-mini .sidebar-group-header { justify-content: center; padding: 11px 0; }
+.tess-app.sidebar-mini .sidebar-group-label,
+.tess-app.sidebar-mini .sidebar-group-caret { display: none; }
+.tess-app.sidebar-mini .sidebar-group-icon { width: auto; font-size: 16px; }
+
+/* Sub-menu becomes a floating fly-out panel, revealed on hover/focus */
+.tess-app.sidebar-mini .sidebar-sub {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 212px;
+  max-height: none !important;
+  overflow: visible;
+  margin-left: 10px;
+  padding: 7px;
+  background: var(--tess-navy-2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(8, 20, 35, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition: opacity 140ms ease, transform 140ms ease, visibility 140ms;
+  z-index: 60;
+}
+
+/* Invisible bridge so the gap between icon and panel keeps hover alive */
+.tess-app.sidebar-mini .sidebar-sub::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 12px;
+  height: 100%;
+}
+
+/* Little arrow pointing back to the icon */
+.tess-app.sidebar-mini .sidebar-sub::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 16px;
+  width: 12px;
+  height: 12px;
+  background: var(--tess-navy-2);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transform: rotate(45deg);
+}
+
+.tess-app.sidebar-mini .sidebar-group:hover .sidebar-sub,
+.tess-app.sidebar-mini .sidebar-group:focus-within .sidebar-sub {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Inside the fly-out, sub-links show their label again */
+.tess-app.sidebar-mini .sidebar-sublink {
+  justify-content: flex-start;
+  padding: 8px 12px;
+  margin: 2px 0;
+  white-space: nowrap;
+}
+.tess-app.sidebar-mini .sidebar-sublink-label { display: inline; }
+.tess-app.sidebar-mini .sidebar-sublink-icon { width: 16px; font-size: 12px; opacity: 0.9; }
+
+/* On narrow screens the sidebar stacks on top; disable mini there */
+@media (max-width: 860px) {
+  .tess-app.sidebar-mini .app-main { grid-template-columns: 1fr; }
+  .tess-app.sidebar-mini .sidebar-sub {
+    position: static;
+    margin-left: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .tess-app.sidebar-mini .sidebar-sub::after,
+  .tess-app.sidebar-mini .sidebar-sub::before { display: none; }
+}
+
+/* ===================== Central header guide button + section guide modal ===================== */
+/* Anchor the header so the central button can be perfectly centered */
+.app-header { position: relative; }
+.app-header-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.hdr-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #21a35a 0%, #15834a 100%);
+  box-shadow: 0 2px 10px rgba(21, 131, 74, 0.42);
+  transition: filter 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+  white-space: nowrap;
+}
+.hdr-guide-btn:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(21, 131, 74, 0.5);
+}
+.hdr-guide-btn:active { transform: translateY(0); }
+.hdr-guide-btn .fa, .hdr-guide-btn svg { font-size: 13px; }
+.hdr-guide-icon { display: inline-flex; align-items: center; }
+.hdr-guide-label { line-height: 1; }
+
+/* Section guide modal (reuses .tess-overlay mechanics, wider card) */
+.tess-guide-card { max-width: 660px; }
+.tess-guide-head { background: linear-gradient(135deg, #15834a 0%, #102a43 90%); }
+.tess-guide-head h2 { display: flex; align-items: center; gap: 10px; }
+.tess-guide-body { max-height: 70vh; overflow-y: auto; }
+.guide-entry { display: none; }
+
+/* ===================== PROJECT / Home narrative (Block 7.1-REV1) ===================== */
+/* One clean readable explanation card instead of many KPI cards. */
+.home-prose {
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 10px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+  max-width: 860px;
+}
+.home-prose p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #33455c;
+  margin: 0 0 12px;
+}
+.home-prose p:last-child { margin-bottom: 0; }
+
+/* Simple, minimal numbered methodology flow. */
+.home-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 860px;
+}
+.home-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 10px;
+  padding: 14px 18px;
+  box-shadow: 0 3px 10px rgba(16, 42, 67, 0.05);
+}
+.home-step-num {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--tess-accent);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-step-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #132238;
+  margin: 2px 0 4px;
+}
+.home-step-detail {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #5d6d7e;
+  margin: 0;
+}
+
+/* Dark theme variants */
+.theme-dark .home-prose { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .home-prose p { color: #c4d2e2; }
+.theme-dark .home-step { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .home-step-title { color: #e8eef6; }
+.theme-dark .home-step-detail { color: #9fb0c4; }
+.guide-entry.is-shown { display: block; }
+.guide-intro { font-size: 14px; line-height: 1.6; margin: 0 0 14px; color: #33455c; }
+.guide-list { padding-left: 20px; margin: 0 0 6px; }
+.guide-list li { margin-bottom: 9px; line-height: 1.55; }
+.guide-note {
+  margin-top: 14px;
+  padding: 11px 14px;
+  background: #ecf6f0;
+  border-left: 3px solid #21a35a;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #2a4b3a;
+}
+
+/* Hide the button label on very narrow screens (keep the icon) */
+@media (max-width: 720px) {
+  .hdr-guide-btn .hdr-guide-label { display: none; }
+  .hdr-guide-btn { padding: 7px 11px; }
+}
+
+/* ===================== Block 7.3 | Model Universe DT table ===================== */
+/* Wrap the read-only DataTable in a card surface consistent with .info-list.   */
+.tess-table-wrap {
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 10px;
+  padding: 10px 14px 14px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.tess-table-wrap table.dataTable {
+  border-collapse: collapse !important;
+  font-size: 13px;
+  width: 100% !important;
+}
+.tess-table-wrap table.dataTable thead th {
+  color: #102a43;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 2px solid #e3eaf2;
+  white-space: nowrap;
+}
+.tess-table-wrap table.dataTable tbody td {
+  color: #33455c;
+  border-top: 1px solid #eef2f7;
+  vertical-align: middle;
+}
+.tess-table-wrap table.dataTable tbody tr:hover td { background: #f6f9fd; }
+.tess-table-wrap .dataTables_filter { margin-bottom: 8px; text-align: left; }
+.tess-table-wrap .dataTables_filter label { font-size: 12px; color: #5a6b80; font-weight: 600; }
+.tess-table-wrap .dataTables_filter input {
+  border: 1px solid #d7e0ec;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-left: 8px;
+  font-size: 12px;
+}
+.tess-table-wrap .pill { font-size: 10px; padding: 2px 8px; }
+
+/* Dark theme variants */
+.theme-dark .tess-table-wrap { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .tess-table-wrap table.dataTable thead th { color: #e8eef6; border-bottom-color: #23374f; }
+.theme-dark .tess-table-wrap table.dataTable tbody td { color: #c4d2e2; border-top-color: #23374f; }
+.theme-dark .tess-table-wrap table.dataTable tbody tr:hover td { background: #1b2f48; }
+.theme-dark .tess-table-wrap .dataTables_filter label { color: #9fb0c4; }
+.theme-dark .tess-table-wrap .dataTables_filter input { background: #0f1d2e; border-color: #2a3f59; color: #e8eef6; }

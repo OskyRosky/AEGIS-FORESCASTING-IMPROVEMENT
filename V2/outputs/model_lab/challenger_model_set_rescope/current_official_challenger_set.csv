@@ -1,0 +1,9 @@
+model_name,model_family,model_type,backend,official_candidate,deferred,deferred_reason,included_in_final_official_execution,created_timestamp
+AutoARIMA,statistical,auto_arima,pmdarima,True,False,,True,2026-06-13T16:08:35
+Theta,statistical,theta,darts,True,False,,True,2026-06-13T16:08:35
+ETS Explicit,statistical,ets_explicit,statsmodels,True,False,,True,2026-06-13T16:08:35
+LightGBM,machine_learning,gradient_boosted_tree,lightgbm,True,False,,True,2026-06-13T16:08:35
+XGBoost,machine_learning,gradient_boosted_tree,xgboost,True,False,,True,2026-06-13T16:08:35
+FastNeuralAR_MLP,lightweight_neural,autoregressive_mlp,sklearn.neural_network.MLPRegressor,True,False,,True,2026-06-13T16:08:35
+NBEATS,deep_learning,nbeats,darts.torch,False,True,deferred_runtime_impractical: too slow for MVP/prototype automation profile in current Python/container execution context,False,2026-06-13T16:08:35
+NHITS,deep_learning,nhits,neuralforecast/ray,False,True,deferred_dependency_blocked: Python 3.14 / neuralforecast / ray incompatibility,False,2026-06-13T16:08:35

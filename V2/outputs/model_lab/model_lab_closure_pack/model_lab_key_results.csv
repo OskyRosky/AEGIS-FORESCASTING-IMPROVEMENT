@@ -1,0 +1,12 @@
+metric_name,metric_value,metric_context,dashboard_section,created_timestamp
+final_baseline_models,7,Official baseline models,Executive Summary,2026-06-13T20:36:01
+final_challenger_models,6,Final audited challengers,Executive Summary,2026-06-13T20:36:01
+tournament_models,13,Baseline + challenger tournament universe,Tournament Standings,2026-06-13T20:36:01
+official_challenger_forecast_rows,81720,Official challenger forecast rows,Challenger Metrics,2026-06-13T20:36:01
+challenger_metric_rows,2724,Challenger entity-window metric rows,Challenger Metrics,2026-06-13T20:36:01
+tournament_pairwise_comparisons,78,Tournament pairwise comparisons,Pairwise Evidence,2026-06-13T20:36:01
+champion_decision,CHAMPION_SELECTED_WITH_CONDITIONS,Final champion decision type,Champion Decision,2026-06-13T20:36:01
+selected_champion,ETS Explicit,Selected champion model,Champion Decision,2026-06-13T20:36:01
+audit_4_verdict,APPROVE_WITH_CONDITIONS_TO_PROCEED_TO_5.30_TOURNAMENT_ENGINE,Audit #4 readiness verdict,Audit Status,2026-06-13T20:36:01
+tournament_sanity_verdict,PROCEED_TO_5.31_CHAMPION_NO_CHAMPION_DECISION,5.30A sanity review verdict,Audit Status,2026-06-13T20:36:01
+model_lab_ready_for_dashboard,True,Closure pack dashboard handoff ready,Executive Summary,2026-06-13T20:36:01
