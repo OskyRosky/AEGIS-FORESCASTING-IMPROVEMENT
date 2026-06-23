@@ -1,0 +1,15 @@
+field,value
+block,Stage 07 - V2 Workspace Smoke Test
+active_project_root,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V2
+shiny_app,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V2\shiny_app
+host,127.0.0.1
+port,3838
+url,http://127.0.0.1:3838
+pid,36224
+http_status,200
+content_length,144554
+stdout_log,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V2\outputs\shiny_mvp\v2_init\logs\v2_init_stdout.log
+stderr_log,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V2\outputs\shiny_mvp\v2_init\logs\v2_init_stderr.log
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny_v1.ps1 -PidToStop 36224
+launch_script,scripts\launch_shiny_v1.ps1 (ProjectRoot resolved to V2 via PSScriptRoot)
+runtime_root_resolved,C:/Users/oscarau/OneDrive - Microsoft/Desktop/Forecast Generation Codebase Improvement/AEGIS-FORESCASTING-IMPROVEMENT/V2
