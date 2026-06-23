@@ -325,56 +325,6 @@ body {
 }
 .hdr-tool-btn:hover { background: rgba(255, 255, 255, 0.18); color: #ffffff; }
 
-/* Comments & suggestions contact dropdown */
-.hdr-contact { position: relative; display: inline-flex; }
-.hdr-contact-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  min-width: 260px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 35, 60, 0.12);
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(8, 20, 38, 0.22);
-  padding: 6px;
-  z-index: 1200;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4px);
-  transition: opacity 130ms ease, transform 130ms ease, visibility 130ms ease;
-}
-.hdr-contact.open .hdr-contact-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.hdr-contact-head {
-  padding: 6px 10px 8px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #6b7c90;
-  border-bottom: 1px solid rgba(15, 35, 60, 0.08);
-  margin-bottom: 4px;
-}
-.hdr-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #1f3349;
-  transition: background-color 120ms ease;
-}
-.hdr-contact-item:hover { background: rgba(31, 99, 161, 0.10); }
-.hdr-contact-item > .fa,
-.hdr-contact-item > svg { font-size: 13px; color: #1f63a1; flex-shrink: 0; }
-.hdr-contact-text { display: flex; flex-direction: column; line-height: 1.25; }
-.hdr-contact-name { font-size: 13px; font-weight: 600; color: #16243a; }
-.hdr-contact-mail { font-size: 12px; color: #5a6b80; }
-
 /* Sidebar brand */
 .sidebar-brand {
   display: flex;

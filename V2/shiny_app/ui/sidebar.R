@@ -61,11 +61,6 @@ sidebar_group <- function(g) {
 app_sidebar <- function() {
   tags$aside(
     class = "app-sidebar",
-    tags$div(
-      class = "sidebar-brand",
-      tags$span(class = "sidebar-brand-dot"),
-      tags$span(class = "sidebar-brand-text", "Navigation")
-    ),
     tags$nav(
       class = "sidebar-nav",
       lapply(stage07_menu(), sidebar_group)
