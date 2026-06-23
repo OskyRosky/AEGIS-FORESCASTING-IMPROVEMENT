@@ -120,7 +120,7 @@ section_home <- function() {
 
     # A. Hero ----------------------------------------------------------------
     section_head(
-      "TESSERACT v2 Forecast Improvement Platform",
+      "AEGIS Forecast Improvement Platform",
       "A dashboard for reviewing a broader, evidence-based forecasting methodology for TESSERACT v2."
     ),
 
@@ -226,7 +226,7 @@ section_overview <- function() {
     # A. Header --------------------------------------------------------------
     section_head(
       "Executive Overview",
-      "A read-only macro summary of the TESSERACT v2 forecast improvement review."
+      "A read-only macro summary of the AEGIS forecast improvement review."
     ),
 
     # B. Macro headline (real governed values) -------------------------------
@@ -1465,54 +1465,222 @@ section_audit <- function() {
 }
 
 section_artifacts <- function() {
+  vals <- artifact_catalog_values()
+
+  download_card <- function(spec) {
+    available <- artifact_is_available(spec$key)
+    tags$div(
+      class = "artifact-dl-card",
+      tags$div(class = "artifact-dl-meta",
+        tags$span(class = "artifact-dl-title", spec$label),
+        tags$span(class = "artifact-dl-desc", spec$desc)
+      ),
+      if (available) {
+        downloadButton(paste0("dl_", spec$key), "CSV",
+                       class = "artifact-dl-btn", icon = shiny::icon("download"))
+      } else {
+        tags$span(class = "pill pill-amber", "Unavailable")
+      }
+    )
+  }
+
   panel(
     "artifacts",
-    section_head("Source Artifacts",
-                 "Governed artifacts that feed the dashboard (placeholder)."),
-    info_list(
-      info_row("model_lab closure pack", "Key results, model universe, champion summary, risk register."),
-      info_row("tournament_engine", "Standings, scorecard and pairwise evidence."),
-      info_row("challenger_metrics", "Diagnostic metrics by model."),
-      info_row("config", "Governed YAML policies (read-only).")
+    section_head(
+      "Source Artifacts",
+      "The governed artifacts that feed this dashboard. Everything here is read-only: files are listed and served exactly as produced by the Model Lab, with no recomputation."
+    ),
+
+    # A. Catalog summary -----------------------------------------------------
+    card_grid(
+      kpi_card(as.character(vals$total), "Governed artifacts",
+               pill = "Registry", pill_class = "pill-blue"),
+      kpi_card(as.character(vals$available), "Available now",
+               pill = "Loaded", pill_class = "pill-green"),
+      kpi_card(as.character(vals$categories), "Artifact categories",
+               pill = "Domains", pill_class = "pill-blue"),
+      kpi_card(as.character(vals$roadmap), "Roadmap (not yet produced)",
+               pill = "Future work", pill_class = "pill-amber")
+    ),
+
+    # B. Governed downloads --------------------------------------------------
+    tags$h3(class = "section-block-title", "Governed downloads"),
+    tags$p(
+      class = "shell-card-detail",
+      "Download the key governed CSVs directly. Each file is served verbatim from its closure-pack / tournament-engine path."
+    ),
+    tags$div(
+      class = "artifact-dl-grid",
+      lapply(ARTIFACT_DOWNLOAD_SPECS, download_card)
+    ),
+
+    # C. Dashboard data lineage ---------------------------------------------
+    tags$h3(class = "section-block-title", "Dashboard data lineage"),
+    tags$p(
+      class = "shell-card-detail",
+      "Each dashboard section is backed by a governed artifact. This is the handoff manifest produced by the Model Lab closure pack."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("artifact_lineage_table")),
+
+    # D. Full artifact catalog ----------------------------------------------
+    tags$h3(class = "section-block-title", "Full artifact catalog"),
+    tags$p(
+      class = "shell-card-detail",
+      "The complete governed artifact registry resolved by the data loader, with availability status and source path. Required artifacts are all present."
+    ),
+    tags$div(class = "tess-table-wrap", DT::dataTableOutput("artifact_catalog_table")),
+
+    # E. Governance note -----------------------------------------------------
+    tags$div(
+      class = "shell-card",
+      tags$span(class = "pill pill-green", "Read-only"),
+      tags$h3(class = "shell-card-title", "Single source of truth"),
+      tags$p(
+        class = "shell-card-detail",
+        "The dashboard never edits, recomputes, or regenerates these artifacts. Downloads return the exact governed files on disk, so what you export matches what the dashboard renders."
+      )
     )
   )
 }
 
 section_methodology <- function() {
+  meta <- methodology_dataset_values()
   panel(
     "methodology",
-    section_head("Methodology",
-                 "Benchmark semantics and metric policy (read-only)."),
-    card_grid(
-      shell_card("Primary metric", "MASE", "Absolute benchmark score; cohort-stable, naive lag-1 denominator on training."),
-      shell_card("Guardrail", "RMSSE", "Severe-degradation guardrail alongside the primary metric."),
-      shell_card("Aggregation", "Median of medians", "Robust window \u2192 entity \u2192 global aggregation."),
-      shell_card("Significance", "Bootstrap / sign-test", "Pairwise support with adjusted p-values.")
-    )
-  )
-}
+    section_head(
+      "Methodology",
+      "How data reaches the dashboard, and how the dashboard is organized. The dashboard only reads governed data \u2014 it never recomputes, edits, or writes back."
+    ),
 
-section_downloads <- function() {
-  panel(
-    "downloads",
-    section_head("Downloads Center",
-                 "General and per-section artifact downloads \u2014 pending a governed export."),
+    # ---- Data pipeline ----------------------------------------------------
+    tags$h3(class = "section-block-title", "Data pipeline"),
     card_grid(
-      planned_card("Downloads", "Download handlers will be wired to governed closure-pack artifacts in a later block.")
-    )
+      shell_card(
+        "Stage 1 \u00b7 Ingestion", "TESSERACT v2 (SQL)",
+        "Enterprise HDD-region series are queried from TesseractEarthDW (forecast_substrateBE_hdd_region) by the Python ingestion layer and exported to data/raw/."
+      ),
+      shell_card(
+        "Stage 2 \u00b7 Processing", "Governed CSV contract",
+        "Raw exports are validated and reshaped into the read-only data contract in data/processed/ and the Model Lab closure pack \u2014 no shifted dates, no imputations, no recompute."
+      ),
+      shell_card(
+        "Stage 3 \u00b7 Consumption", "This dashboard",
+        "The Shiny app loads the governed CSVs through a read-only loader at startup and renders them as-is. It is a consumer, not a producer, of data."
+      )
+    ),
+
+    # ---- Current dataset (governed run_metadata) --------------------------
+    tags$h3(class = "section-block-title", "Current dataset"),
+    card_grid(
+      kpi_card(meta$entity_count, "Series (entities)"),
+      kpi_card(meta$model_count, "Models"),
+      kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
+      kpi_card(meta$run_date, "Data contract build")
+    ),
+    info_list(
+      info_row("Actuals", paste0(meta$actual_rows, " rows  \u00b7  ", meta$actual_range)),
+      info_row("Forecasts", paste0(meta$forecast_rows, " rows  \u00b7  ", meta$forecast_range)),
+      info_row("Source table", "TesseractEarthDW.dbo.forecast_substrateBE_hdd_region (Scenario = Enterprise, ValueType = Forecast-Mean)"),
+      info_row("Build note", meta$notes)
+    ),
+
+    # ---- What the dashboard consumes --------------------------------------
+    tags$h3(class = "section-block-title", "What the dashboard consumes"),
+    info_list(
+      info_row("Forecast data", "forecasts.csv, actuals.csv, entities.csv, run_metadata.csv (data/processed)"),
+      info_row("Backtest", "forecast_viewer_model_outputs.csv \u2014 per-model backtest used by the Viewer and Accuracy pages"),
+      info_row("Model Lab", "closure pack: key results, model universe, champion summary, risk register, next steps"),
+      info_row("Tournament", "preliminary standings, model scorecard, pairwise evidence"),
+      info_row("Governance", "audit findings, sanity review, champion conditions and dashboard language")
+    ),
+    tags$p(
+      class = "method-note",
+      "The full machine-readable list \u2014 with availability, row counts and paths \u2014 lives on the Artifacts page."
+    ),
+
+    # ---- Dashboard structure ----------------------------------------------
+    tags$h3(class = "section-block-title", "Dashboard structure"),
+    info_list(
+      info_row("Project", "Home, Overview \u2014 purpose, scope and the governed snapshot."),
+      info_row("Forecasting", "Viewer, Accuracy, Forecast, TTL \u2014 series-level views and diagnostics."),
+      info_row("Models", "Universe, Tournament, Champion \u2014 the model landscape and selection."),
+      info_row("Governance", "Risks, Audit \u2014 the risk register and the audit trail."),
+      info_row("Reference", "Artifacts, Methodology, Version \u2014 sources, data lineage and build metadata.")
+    ),
+
+    # ---- Architecture diagram placeholder ---------------------------------
+    tags$h3(class = "section-block-title", "Architecture diagram"),
+    tags$div(
+      class = "method-figure",
+      tags$div(class = "method-figure-icon", shiny::icon("diagram-project")),
+      tags$div(class = "method-figure-title", "Dashboard architecture diagram"),
+      tags$div(
+        class = "method-figure-text",
+        "A visual map of the ingestion \u2192 processing \u2192 consumption flow and the dashboard sections will be placed here."
+      ),
+      tags$span(class = "method-figure-tag", "Image coming soon")
+    ),
+
+    # ---- Project document placeholder -------------------------------------
+    tags$h3(class = "section-block-title", "Project document"),
+    tags$div(
+      class = "method-figure method-figure-doc",
+      tags$div(class = "method-figure-icon", shiny::icon("file-lines")),
+      tags$div(class = "method-figure-title", "Full project document"),
+      tags$div(
+        class = "method-figure-text",
+        "A complete write-up of the project \u2014 scope, methodology and governance \u2014 will be added here."
+      ),
+      tags$span(class = "method-figure-tag", "Document coming soon")
+    ),
+
+    tags$span(class = "shell-card-tag", "Read-only \u00b7 single source of truth")
   )
 }
 
 section_version <- function() {
+  meta <- methodology_dataset_values()
+  reg  <- artifact_registry_view()
+  cat  <- artifact_catalog_values(reg)
+  rt   <- version_runtime_values()
   panel(
     "version",
-    section_head("Version Info", "Build and policy metadata."),
+    section_head("Version Info", "Build, data and runtime metadata for this governed release."),
+
+    card_grid(
+      kpi_card(APP_VERSION, "App version"),
+      kpi_card(APP_STAGE, "Build stage"),
+      kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
+      kpi_card(paste0(cat$available, " / ", cat$total), "Artifacts available")
+    ),
+
+    tags$h3(class = "section-block-title", "Build & governance"),
     info_list(
-      info_row("Version", APP_VERSION),
-      info_row("Stage", APP_STAGE),
+      info_row("Stage", APP_STAGE_LABEL),
+      info_row("Audit state", version_audit_label()),
       info_row("Policy", APP_POLICY),
-      info_row("Audit state", "approved to Stage 07")
-    )
+      info_row("Champion", paste0(APP_CHAMPION, " \u2014 selected with conditions (confidence: ", APP_CHAMPION_CONFIDENCE, ")"))
+    ),
+
+    tags$h3(class = "section-block-title", "Data snapshot"),
+    info_list(
+      info_row("Forecast version", meta$forecast_version),
+      info_row("Series \u00d7 models", paste0(meta$entity_count, " series  \u00b7  ", meta$model_count, " models")),
+      info_row("Data contract build", meta$run_date),
+      info_row("Coverage", paste0("Actuals ", meta$actual_range, "   \u00b7   Forecasts ", meta$forecast_range))
+    ),
+
+    tags$h3(class = "section-block-title", "Runtime"),
+    info_list(
+      info_row("Artifacts loaded", paste0(cat$available, " available  \u00b7  ", cat$roadmap, " roadmap  \u00b7  ", cat$total, " registered")),
+      info_row("Data loaded at", rt$loaded_at),
+      info_row("R packages", paste0(rt$pkg_available, " / ", rt$pkg_total, " available",
+                                    if (!identical(rt$pkg_missing, "none") && !identical(rt$pkg_missing, "\u2014"))
+                                      paste0("   \u00b7   missing: ", rt$pkg_missing) else "")),
+      info_row("Project root", rt$root)
+    ),
+
+    tags$span(class = "shell-card-tag", "Read-only \u00b7 governed build")
   )
 }
 
@@ -1535,7 +1703,6 @@ app_sections <- function() {
     section_audit(),
     section_artifacts(),
     section_methodology(),
-    section_downloads(),
     section_version()
   )
 }

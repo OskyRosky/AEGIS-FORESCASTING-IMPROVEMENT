@@ -26,7 +26,6 @@ stage07_menu <- function() {
     list(group = "Reference", icon = "book", items = list(
       list(value = "artifacts",   label = "Artifacts",   title = "Source Artifacts", icon = "folder-open"),
       list(value = "methodology", label = "Methodology", title = "Methodology",      icon = "book-open"),
-      list(value = "downloads",   label = "Downloads",   title = "Downloads Center", icon = "download", planned = TRUE),
       list(value = "version",     label = "Version",     title = "Version Info",     icon = "circle-info")
     ))
   )

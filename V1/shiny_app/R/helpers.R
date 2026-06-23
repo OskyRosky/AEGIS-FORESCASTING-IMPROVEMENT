@@ -2655,3 +2655,263 @@ audit_next_steps_table <- function(df = audit_next_steps_artifact()) {
     )
   )
 }
+
+# ==========================================================================
+# Reference: Source Artifacts (Block 7.x)
+# Surfaces the governed artifact catalog + data lineage, read-only, and
+# offers downloads of the key governed CSVs straight from disk.
+#   - get_artifact_status()         -> loader registry (30 artifacts)
+#   - dashboard_handoff_manifest    -> section -> source artifact lineage
+# No artifact is recomputed; files are served verbatim from their governed
+# paths via the registry's absolute path.
+# ==========================================================================
+
+# Curated set of governed CSVs offered as downloads (key -> button label).
+# Order is preserved in the UI. Kept intentionally small ("sin exagerar").
+ARTIFACT_DOWNLOAD_SPECS <- list(
+  list(key = "key_results",                label = "Key results",
+       desc = "Executive KPI summary"),
+  list(key = "final_model_universe",       label = "Model universe",
+       desc = "Final model status table"),
+  list(key = "champion_summary",           label = "Champion summary",
+       desc = "Champion decision (with conditions)"),
+  list(key = "risk_register_final",        label = "Risk register",
+       desc = "Governed open risks + carry-forward"),
+  list(key = "tournament_standings",       label = "Tournament standings",
+       desc = "Preliminary standings"),
+  list(key = "tournament_scorecard",       label = "Tournament scorecard",
+       desc = "Composite tournament scores"),
+  list(key = "dashboard_handoff_manifest", label = "Handoff manifest",
+       desc = "Dashboard section -> source artifact"),
+  list(key = "artifact_manifest",          label = "Artifact manifest",
+       desc = "Model Lab artifact inventory")
+)
+
+# Registry row lookup helpers (depend on a loaded registry).
+artifact_registry_view <- function() {
+  reg <- tryCatch(get_artifact_status(), error = function(e) NULL)
+  if (is.data.frame(reg)) reg else data.frame()
+}
+
+artifact_abs_path <- function(key) {
+  reg <- artifact_registry_view()
+  if (!is.data.frame(reg) || !("artifact_key" %in% names(reg))) return(NA_character_)
+  row <- reg[reg$artifact_key == key, , drop = FALSE]
+  if (nrow(row) == 0 || !("abs_path" %in% names(row))) return(NA_character_)
+  as.character(row$abs_path[[1]])
+}
+
+artifact_download_filename <- function(key) {
+  reg <- artifact_registry_view()
+  if (is.data.frame(reg) && "rel_path" %in% names(reg)) {
+    row <- reg[reg$artifact_key == key, , drop = FALSE]
+    if (nrow(row) > 0) return(basename(as.character(row$rel_path[[1]])))
+  }
+  paste0(key, ".csv")
+}
+
+artifact_is_available <- function(key) {
+  reg <- artifact_registry_view()
+  if (!is.data.frame(reg) || !("artifact_key" %in% names(reg))) return(FALSE)
+  row <- reg[reg$artifact_key == key, , drop = FALSE]
+  nrow(row) > 0 && identical(as.character(row$presence[[1]]), "available")
+}
+
+# Pill colour for the registry status column.
+artifact_status_class <- function(status) {
+  s <- tolower(trimws(as.character(status)))
+  cls <- rep("pill-slate", length(s))
+  cls[grepl("available$", s)] <- "pill-green"
+  cls[grepl("^required_missing$", s)] <- "pill-red"
+  cls[grepl("^optional_missing$", s)] <- "pill-amber"
+  cls[s == "roadmap"] <- "pill-blue"
+  cls
+}
+
+artifact_requirement_class <- function(req) {
+  r <- tolower(trimws(as.character(req)))
+  cls <- rep("pill-slate", length(r))
+  cls[r == "required"] <- "pill-blue"
+  cls[r == "optional"] <- "pill-slate"
+  cls[r == "roadmap"]  <- "pill-amber"
+  cls
+}
+
+artifact_catalog_values <- function(reg = artifact_registry_view()) {
+  if (!is.data.frame(reg) || nrow(reg) == 0) {
+    return(list(total = 0L, available = 0L, missing = 0L, roadmap = 0L,
+                categories = 0L, downloads = length(ARTIFACT_DOWNLOAD_SPECS)))
+  }
+  pres <- tolower(trimws(as.character(reg$presence)))
+  req  <- tolower(trimws(as.character(reg$requirement)))
+  list(
+    total      = nrow(reg),
+    available  = sum(pres == "available"),
+    missing    = sum(pres == "missing" & req != "roadmap"),
+    roadmap    = sum(req == "roadmap"),
+    categories = length(unique(reg$category)),
+    downloads  = sum(vapply(ARTIFACT_DOWNLOAD_SPECS,
+                            function(s) artifact_is_available(s$key), logical(1)))
+  )
+}
+
+# Dashboard data-lineage table (section -> governed source artifact).
+artifact_lineage_table <- function(df = load_csv_artifact("dashboard_handoff_manifest")) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed dashboard handoff manifest is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  required_badge <- tournament_bool_badge(risk_is_true(df$required_for_mvp_dashboard),
+                                          "Required", "Optional",
+                                          true_class = "pill-green",
+                                          false_class = "pill-slate")
+  type_badge <- tournament_badge(toupper(as.character(df$artifact_type)), "pill-blue")
+  tbl <- data.frame(
+    `Dashboard section` = htmltools::htmlEscape(df$dashboard_section),
+    Artifact = htmltools::htmlEscape(basename(as.character(df$artifact_path))),
+    Type = type_badge,
+    `Recommended use` = htmltools::htmlEscape(df$recommended_use),
+    `MVP` = required_badge,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    escape = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      pageLength = 14,
+      paging = FALSE,
+      searching = TRUE,
+      info = FALSE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "ft",
+      columnDefs = list(list(className = "dt-left", targets = "_all"))
+    )
+  )
+}
+
+# Full governed artifact catalog (loader registry) with status badges.
+artifact_catalog_table <- function(reg = artifact_registry_view()) {
+  if (!is.data.frame(reg) || nrow(reg) == 0) {
+    return(DT::datatable(
+      data.frame(Message = "Governed artifact registry is unavailable."),
+      rownames = FALSE, options = list(dom = "t")))
+  }
+  # Order: available first, then by category.
+  pres_rank <- ifelse(tolower(trimws(as.character(reg$presence))) == "available", 1, 2)
+  reg <- reg[order(pres_rank, reg$category, reg$artifact_key), , drop = FALSE]
+
+  req_badge <- tournament_badge(toupper(as.character(reg$requirement)),
+                                artifact_requirement_class(reg$requirement))
+  status_label <- ifelse(grepl("available$", tolower(as.character(reg$status))),
+                         "AVAILABLE",
+                         ifelse(tolower(as.character(reg$status)) == "roadmap",
+                                "ROADMAP", "MISSING"))
+  status_badge <- tournament_badge(status_label, artifact_status_class(reg$status))
+  rows_txt <- ifelse(tolower(trimws(as.character(reg$presence))) == "available",
+                     as.character(reg$n_rows), "\u2014")
+  tbl <- data.frame(
+    Artifact = htmltools::htmlEscape(reg$artifact_key),
+    Category = htmltools::htmlEscape(gsub("_", " ", reg$category)),
+    Type = htmltools::htmlEscape(toupper(reg$type)),
+    Requirement = req_badge,
+    Status = status_badge,
+    Rows = rows_txt,
+    Path = htmltools::htmlEscape(reg$rel_path),
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+  DT::datatable(
+    tbl,
+    rownames = FALSE,
+    escape = FALSE,
+    class = "stripe hover row-border",
+    options = list(
+      pageLength = 10,
+      paging = TRUE,
+      searching = TRUE,
+      info = TRUE,
+      ordering = TRUE,
+      scrollX = TRUE,
+      dom = "ftip",
+      columnDefs = list(list(className = "dt-left", targets = "_all"))
+    )
+  )
+}
+
+# ---------------------------------------------------------------------------
+# Methodology page accessors (governed run_metadata)
+# ---------------------------------------------------------------------------
+
+methodology_run_metadata <- function() {
+  load_csv_artifact("run_metadata")
+}
+
+methodology_dataset_values <- function(df = methodology_run_metadata()) {
+  g <- function(col) cs_value(df, col, fallback = NA_character_)
+  dash <- "\u2014"
+  fmt_int <- function(x) {
+    n <- suppressWarnings(as.numeric(x))
+    if (is.na(n)) return(dash)
+    format(n, big.mark = ",", scientific = FALSE, trim = TRUE)
+  }
+  na_or <- function(x) if (is.na(x) || !nzchar(x)) dash else x
+  rng <- function(a, b) {
+    av <- g(a); bv <- g(b)
+    if (is.na(av) && is.na(bv)) return(dash)
+    paste0(na_or(av), " \u2192 ", na_or(bv))
+  }
+  ts <- g("run_timestamp")
+  list(
+    entity_count     = na_or(g("entity_count")),
+    model_count      = na_or(g("model_count")),
+    forecast_version = na_or(g("forecast_version")),
+    run_date         = if (!is.na(ts)) substr(ts, 1, 10) else dash,
+    actual_rows      = fmt_int(g("actual_rows")),
+    forecast_rows    = fmt_int(g("forecast_rows")),
+    actual_range     = rng("first_actual_date", "last_actual_date"),
+    forecast_range   = rng("first_forecast_date", "last_forecast_date"),
+    notes            = na_or(g("notes"))
+  )
+}
+
+# ---------------------------------------------------------------------------
+# Version page accessors (loader runtime + package availability)
+# ---------------------------------------------------------------------------
+
+version_runtime_values <- function() {
+  dash <- "\u2014"
+  g <- function(k) {
+    v <- tryCatch(get(k, envir = .tess_loader_env), error = function(e) NULL)
+    if (is.null(v) || length(v) == 0 || is.na(v[1])) dash else as.character(v[1])
+  }
+  pkgs <- tryCatch(get_package_availability(), error = function(e) NULL)
+  if (is.data.frame(pkgs) && nrow(pkgs) > 0) {
+    avail   <- as.logical(pkgs$available)
+    n_total <- nrow(pkgs)
+    n_avail <- sum(avail, na.rm = TRUE)
+    missing <- pkgs$package_name[!avail %in% TRUE]
+    pkg_missing <- if (length(missing)) paste(missing, collapse = ", ") else "none"
+  } else {
+    n_total <- dash; n_avail <- dash; pkg_missing <- dash
+  }
+  list(
+    loaded_at   = g("loaded_at"),
+    root        = g("root"),
+    pkg_available = n_avail,
+    pkg_total     = n_total,
+    pkg_missing   = pkg_missing
+  )
+}
+
+version_audit_label <- function(state = APP_AUDIT_STATE) {
+  if (is.null(state) || is.na(state) || !nzchar(state)) return("\u2014")
+  s <- toupper(state)
+  if (grepl("^APPROVE_WITH_CONDITIONS", s)) return("Approved with conditions")
+  if (grepl("^APPROVE", s)) return("Approved")
+  gsub("_", " ", state)
+}

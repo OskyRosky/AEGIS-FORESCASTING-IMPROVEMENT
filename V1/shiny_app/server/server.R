@@ -433,6 +433,34 @@ app_server <- function(input, output, session) {
     audit_next_steps_table()
   })
 
+  # Reference: Source Artifacts ----------------------------------------------
+  output$artifact_lineage_table <- DT::renderDataTable({
+    artifact_lineage_table()
+  })
+
+  output$artifact_catalog_table <- DT::renderDataTable({
+    artifact_catalog_table()
+  })
+
+  # One download handler per curated governed CSV. Files are served verbatim
+  # from their governed path on disk (read-only; no recomputation).
+  for (.spec in ARTIFACT_DOWNLOAD_SPECS) {
+    local({
+      key <- .spec$key
+      output[[paste0("dl_", key)]] <- downloadHandler(
+        filename = function() artifact_download_filename(key),
+        content = function(file) {
+          src <- artifact_abs_path(key)
+          if (!is.na(src) && file.exists(src)) {
+            file.copy(src, file, overwrite = TRUE)
+          } else {
+            writeLines("Governed artifact unavailable.", file)
+          }
+        }
+      )
+    })
+  }
+
   # The chart + model picker / count / notes live in a section that is hidden at
   # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
   # chart containers and controls are populated on first navigation. custom.js
@@ -464,6 +492,8 @@ app_server <- function(input, output, session) {
   outputOptions(output, "risk_deferred_models_table",      suspendWhenHidden = FALSE)
   outputOptions(output, "audit_findings_table",            suspendWhenHidden = FALSE)
   outputOptions(output, "audit_next_steps_table",          suspendWhenHidden = FALSE)
+  outputOptions(output, "artifact_lineage_table",          suspendWhenHidden = FALSE)
+  outputOptions(output, "artifact_catalog_table",          suspendWhenHidden = FALSE)
 
   invisible(NULL)
 }

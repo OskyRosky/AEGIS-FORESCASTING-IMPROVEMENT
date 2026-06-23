@@ -11,7 +11,7 @@ tess_help_overlay <- function() {
       class = "tess-overlay-card",
       tags$div(
         class = "tess-overlay-head",
-        tags$h2("About TESSERACT v2"),
+        tags$h2("About AEGIS"),
         tags$button(id = "tess-help-close", class = "tess-overlay-close", type = "button", "\u00D7")
       ),
       tags$div(
@@ -171,38 +171,34 @@ tess_guide_overlay <- function() {
 
         guide_entry(
           "artifacts", "Source Artifacts",
-          "Indicates the governed artifacts that feed the dashboard, giving transparency on the data origin.",
+          "The governed artifact catalog that feeds the dashboard, with data lineage and direct CSV downloads.",
           list(
-            "model_lab closure pack, tournament_engine and challenger_metrics outputs.",
-            "config: governed YAML policies (read-only)."
+            "Catalog summary: total governed artifacts, available now, categories and roadmap items.",
+            "Governed downloads: key closure-pack / tournament CSVs served verbatim from disk.",
+            "Data lineage: each dashboard section mapped to its source artifact (handoff manifest).",
+            "Read-only: files are never edited or recomputed by the dashboard."
           )
         ),
 
         guide_entry(
           "methodology", "Methodology",
-          "Explains the benchmark semantics and the metric policy applied.",
+          "Explains how data reaches the dashboard and how the dashboard is organized.",
           list(
-            "MASE as primary absolute benchmark; RMSSE as guardrail.",
-            "Robust median-of-medians aggregation (window \u2192 entity \u2192 global).",
-            "Pairwise significance with bootstrap and adjusted p-values."
-          )
-        ),
-
-        guide_entry(
-          "downloads", "Downloads Center",
-          "A general and per-section downloads center. It stays Planned until a governed export is wired.",
-          list(
-            "Download handlers will target governed closure-pack artifacts.",
-            "The section is marked Planned for now."
+            "Data pipeline: ingestion (SQL) \u2192 governed CSV contract \u2192 read-only consumption.",
+            "Current dataset: governed series, models, version and date coverage.",
+            "What the dashboard consumes: forecast, backtest, Model Lab, tournament and governance files.",
+            "Dashboard structure, plus placeholders for the architecture diagram and the project document."
           )
         ),
 
         guide_entry(
           "version", "Version Info",
-          "Summarizes the build and policy metadata for this dashboard version.",
+          "Summarizes the build, data and runtime metadata for this dashboard release.",
           list(
-            "Active version, stage and policy.",
-            "Audit state: approved to Stage 07."
+            "App version, build stage and governance policy.",
+            "Audit state and the selected champion with its conditions.",
+            "Data snapshot: forecast version, series, models and coverage.",
+            "Runtime: artifacts loaded, load timestamp and package availability."
           )
         )
       )

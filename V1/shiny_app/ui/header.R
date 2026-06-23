@@ -21,7 +21,7 @@ app_header <- function() {
       tags$div(
         class = "app-header-brand",
         tags$span(class = "app-header-logo", tess_icon("chart-line")),
-        tags$span(class = "app-header-title", "TESSERACT v2"),
+        tags$span(class = "app-header-title", "AEGIS"),
         tags$span(class = "app-header-subtitle", "Forecast Improvement Platform")
       )
     ),
