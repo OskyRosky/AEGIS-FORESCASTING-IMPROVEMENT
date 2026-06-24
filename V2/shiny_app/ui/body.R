@@ -16,12 +16,11 @@ tess_help_overlay <- function() {
       ),
       tags$div(
         class = "tess-overlay-body",
-        tags$p("Governed Shiny MVP for forecast improvement review (Stage 07)."),
+        tags$p("Read-only dashboard for the forecast improvement review."),
         tags$ul(
           tags$li("Read-only dashboard \u2014 no model rerun, no recomputation."),
           tags$li("Use the left sidebar groups to expand and browse sections."),
-          tags$li("Use the moon icon (top-right) to switch light / dark mode."),
-          tags$li("Sections are populated block by block.")
+          tags$li("Use the moon icon (top-right) to switch light / dark mode.")
         ),
         tags$p(class = "text-muted-sm", "Contact: oscarau@microsoft.com")
       )
@@ -66,9 +65,9 @@ tess_guide_overlay <- function() {
 
         guide_entry(
           "home", "Project Home",
-          "This is the landing page of the dashboard. It states the purpose, scope and how the platform relates to the codebase-ownership goal (Goal #3).",
+          "This is the landing page of the dashboard. It states the purpose and scope, and how it supports the goal of owning the forecasting codebase.",
           list(
-            "Purpose / Scope / Goal #3 cards summarize what the dashboard is for.",
+            "Purpose and scope cards summarize what the dashboard is for.",
             "Dashboard map: the four working areas (Forecasting, Models, Governance, Reference).",
             "Use the left sidebar to navigate; collapse it with the \u2630 button and hover an icon to reveal its subsections."
           ),
@@ -79,11 +78,11 @@ tess_guide_overlay <- function() {
           "overview", "Executive Overview",
           "Shows the high-level status of the forecast improvement review, designed for a quick read by decision makers.",
           list(
-            "Key indicators (KPIs): governance state, current champion, decision confidence and active version.",
-            "Each KPI includes a context tag (for example, 'Stage 07' or 'Conditions apply').",
-            "A summary of the review status is shown at the bottom."
+            "Models: the governed champion, its conditions and the supporting accuracy evidence.",
+            "Forecast: the evidence base the review was scored on (coverage, not a new metric).",
+            "Governance: the audited approval state and the conditions attached to it."
           ),
-          "Values shown are placeholders and will be bound to governed artifacts in later blocks."
+          "All values are read from governed artifacts; nothing is recomputed."
         ),
 
         guide_entry(
@@ -92,9 +91,9 @@ tess_guide_overlay <- function() {
           list(
             "Series: actual and forecast curves per entity.",
             "Filters: entity, model and backtest window (read-only).",
-            "Charting and data binding arrive in a later block."
+            "Charts and data are read directly from governed artifacts."
           ),
-          "Charting block: bound to governed forecasts/actuals; nothing is recomputed."
+          "Charts are bound to governed forecasts/actuals; nothing is recomputed."
         ),
 
         guide_entry(
@@ -187,7 +186,7 @@ tess_guide_overlay <- function() {
             "Data pipeline: ingestion (SQL) \u2192 governed CSV contract \u2192 read-only consumption.",
             "Current dataset: governed series, models, version and date coverage.",
             "What the dashboard consumes: forecast, backtest, Model Lab, tournament and governance files.",
-            "Dashboard structure, plus placeholders for the architecture diagram and the project document."
+            "Dashboard structure and supporting reference material."
           )
         ),
 
@@ -195,7 +194,7 @@ tess_guide_overlay <- function() {
           "version", "Version Info",
           "Summarizes the build, data and runtime metadata for this dashboard release.",
           list(
-            "App version, build stage and governance policy.",
+            "App version and governance policy.",
             "Audit state and the selected champion with its conditions.",
             "Data snapshot: forecast version, series, models and coverage.",
             "Runtime: artifacts loaded, load timestamp and package availability."
@@ -212,8 +211,8 @@ app_ui <- function() {
     fillable = FALSE,
     padding = 0,
     gap = 0,
-    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css"),
-    tags$script(src = "custom.js"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css?v=20260623b"),
+    tags$script(src = "custom.js?v=20260623b"),
     tags$div(
       class = "tess-app",
       app_header(),

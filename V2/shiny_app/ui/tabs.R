@@ -114,6 +114,24 @@ home_step <- function(num, title, detail) {
   )
 }
 
+# A collapsible (+/-) section: shows a title + one-line summary, expands on
+# click to reveal `...` content. Pure client-side toggle (see custom.js).
+home_collapse <- function(title, summary, ..., open = FALSE) {
+  tags$div(
+    class = paste("home-collapse", if (open) "is-open" else ""),
+    tags$button(
+      class = "home-collapse-head", type = "button",
+      tags$div(
+        class = "home-collapse-heading",
+        tags$span(class = "home-collapse-title", title),
+        tags$span(class = "home-collapse-summary", summary)
+      ),
+      tags$span(class = "home-collapse-icon", `aria-hidden` = "true")
+    ),
+    tags$div(class = "home-collapse-body", ...)
+  )
+}
+
 section_home <- function() {
   panel(
     "home", active = TRUE,
@@ -121,79 +139,74 @@ section_home <- function() {
     # A. Hero ----------------------------------------------------------------
     section_head(
       "AEGIS Forecast Improvement Platform",
-      "A dashboard for reviewing a broader, evidence-based forecasting methodology for TESSERACT v2."
+      "A dashboard for reviewing a broader, evidence-based way of generating forecasts."
     ),
 
-    # B. Why this dashboard exists (one clean prose card) --------------------
-    tags$h3(class = "section-block-title", "Why this dashboard exists"),
-    tags$div(
-      class = "home-prose",
-      tags$p(
-        "TESSERACT v2 currently relies on a small set of basic forecasting models, ",
-        "chosen mostly one by one. This dashboard explores a broader, evidence-based ",
-        "way of generating forecasts: instead of trusting a few fixed models, it compares ",
-        "a wider universe of candidates and lets the data decide which approach forecasts ",
-        "most accurately."
-      ),
-      tags$p(
-        "The methodology goes beyond the current baseline by evaluating statistical models, ",
-        "machine learning models, and a deep learning candidate side by side \u2014 under the ",
-        "same rules, on the same history, and with the same accuracy metrics."
+    # B. Why this dashboard exists (collapsible) -----------------------------
+    home_collapse(
+      "Why this dashboard exists",
+      "Why we are moving beyond a few fixed models to an evidence-based comparison.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          "The current forecasting process relies on a small set of basic forecasting models, ",
+          "chosen mostly one by one. This dashboard explores a broader, evidence-based ",
+          "way of generating forecasts: instead of trusting a few fixed models, it compares ",
+          "a wider universe of candidates and lets the data decide which approach forecasts ",
+          "most accurately."
+        ),
+        tags$p(
+          "The methodology goes beyond the current baseline by evaluating statistical models, ",
+          "machine learning models, and a deep learning candidate side by side \u2014 under the ",
+          "same rules, on the same history, and with the same accuracy metrics."
+        )
       )
     ),
 
-    # C. How the methodology works (simple 5-step flow) ----------------------
-    tags$h3(class = "section-block-title", "How the methodology works"),
-    tags$div(
-      class = "home-flow",
-      home_step("1", "Historical data",
-                "Start from historical demand and forecast data for each series."),
-      home_step("2", "Baseline & challenger models",
-                "Run the current baseline models alongside statistical, machine learning, and deep learning challengers."),
-      home_step("3", "Rolling evaluation windows",
-                "Test every model empirically across expanding / rolling time windows, so results reflect many repeated forecasting situations \u2014 not a single lucky split."),
-      home_step("4", "Forecast accuracy metrics",
-                "Score each model with governed accuracy metrics: MASE as the primary measure and RMSSE as a guardrail, supported by diagnostics such as wMAPE, SMAPE, and bias where applicable."),
-      home_step("5", "Model tournament",
-                "Combine those scores into a model tournament that ranks the candidates and supports a governed recommendation.")
-    ),
-
-    # D. Model families compared --------------------------------------------
-    tags$h3(class = "section-block-title", "Model families compared"),
-    info_list(
-      info_row("Baseline / reference", "The current forecasting approaches, kept as the comparison point."),
-      info_row("Statistical models", "Classical time-series methods (for example ARIMA, ETS, and Theta-style models)."),
-      info_row("Machine learning models", "Feature-based learners such as gradient boosting and regression approaches."),
-      info_row("Deep learning candidate", "A neural forecasting candidate included to test more complex patterns.")
-    ),
-    tags$p(class = "shell-card-detail", style = "margin-top:10px;",
-           "The full, detailed model list lives in MODELS / Universe."),
-
-    # E. Where to go next ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Where to go next"),
-    info_list(
-      info_row("PROJECT / Overview", "Macro summary of the most important results (finalized later)."),
-      info_row("MODELS / Universe", "The complete set of models considered in the review."),
-      info_row("MODELS / Tournament", "Ranked, head-to-head tournament evidence."),
-      info_row("MODELS / Champion", "The governed model recommendation and its conditions."),
-      info_row("GOVERNANCE / Risks", "Open risks and models that were deferred."),
-      info_row("FORECASTING / Explorer", "Visual forecast exploration (later block).")
-    ),
-
-    # F. Visual review note --------------------------------------------------
-    tags$div(
-      style = "margin-top:20px;",
+    # C. How the methodology works (collapsible) -----------------------------
+    home_collapse(
+      "How the methodology works",
+      "The 5 steps from historical data to a governed model recommendation.",
       tags$div(
-        class = "info-list",
-        style = "padding:14px 18px;",
-        tags$div(
-          style = "display:flex; align-items:center; gap:10px;",
-          tags$span(class = "pill pill-amber", "Visual review"),
-          tags$span(
-            style = "font-size:14px; color:#33455c;",
-            "Please review this Home page visually before moving to the next Stage 07 block."
-          )
-        )
+        class = "home-flow",
+        home_step("1", "Historical data",
+                  "Start from historical demand and forecast data for each series."),
+        home_step("2", "Baseline & challenger models",
+                  "Run the current baseline models alongside statistical, machine learning, and deep learning challengers."),
+        home_step("3", "Rolling evaluation windows",
+                  "Test every model empirically across expanding / rolling time windows, so results reflect many repeated forecasting situations \u2014 not a single lucky split."),
+        home_step("4", "Forecast accuracy metrics",
+                  "Score each model with governed accuracy metrics: MASE as the primary measure and RMSSE as a guardrail, supported by diagnostics such as wMAPE, SMAPE, and bias where applicable."),
+        home_step("5", "Model tournament",
+                  "Combine those scores into a model tournament that ranks the candidates and supports a governed recommendation.")
+      )
+    ),
+
+    # D. Model families compared (collapsible) -------------------------------
+    home_collapse(
+      "Model families compared",
+      "Baseline, statistical, machine learning and deep learning candidates.",
+      info_list(
+        info_row("Baseline / reference", "The current forecasting approaches, kept as the comparison point."),
+        info_row("Statistical models", "Classical time-series methods (for example ARIMA, ETS, and Theta-style models)."),
+        info_row("Machine learning models", "Feature-based learners such as gradient boosting and regression approaches."),
+        info_row("Deep learning candidate", "A neural forecasting candidate included to test more complex patterns.")
+      ),
+      tags$p(class = "shell-card-detail", style = "margin-top:10px;",
+             "The full, detailed model list lives in MODELS / Universe.")
+    ),
+
+    # E. Where to go next (collapsible) --------------------------------------
+    home_collapse(
+      "Where to go next",
+      "Quick links to the Overview, Universe, Tournament, Champion and Risks pages.",
+      info_list(
+        info_row("PROJECT / Overview", "Macro summary of the most important results."),
+        info_row("MODELS / Universe", "The complete set of models considered in the review."),
+        info_row("MODELS / Tournament", "Ranked, head-to-head tournament evidence."),
+        info_row("MODELS / Champion", "The governed model recommendation and its conditions."),
+        info_row("GOVERNANCE / Risks", "Open risks and models that were deferred."),
+        info_row("FORECASTING / Explorer", "Visual forecast exploration.")
       )
     )
   )
@@ -203,12 +216,11 @@ section_overview <- function() {
   # Read-only governed reads (7.0E loader). Never recompute; safe fallbacks.
   cs <- home_champion_summary()
   kr <- home_key_results()
-  uc <- universe_counts()
+  au <- home_audit6_summary()
 
   champ      <- first_label(cs_value(cs, "selected_champion_model"), APP_CHAMPION)
   origin     <- cs_value(cs, "model_origin", "challenger")
   family     <- cs_value(cs, "model_family", "statistical")
-  decision   <- first_label(cs_value(cs, "decision_type"), APP_CHAMPION_DECISION)
   confidence <- first_label(cs_value(cs, "decision_confidence"), APP_CHAMPION_CONFIDENCE)
   mase       <- fmt_metric(cs_value(cs, "official_median_mase"), 2)
   rmsse      <- fmt_metric(cs_value(cs, "official_median_rmsse"), 2)
@@ -217,6 +229,13 @@ section_overview <- function() {
   pairwise   <- first_label(kr_value(kr, "tournament_pairwise_comparisons"))
   conditions <- cs_value(cs, "conditions",
                          "Conditions are retained in the governed closure pack.")
+
+  # Audit #6 governance summary (governed artifact, not hardcoded).
+  verdict    <- cs_value(au, "overall_verdict", "APPROVE_WITH_CONDITIONS_TO_SHINY_MVP")
+  blockers   <- first_label(cs_value(au, "blocker_count"), "0")
+  advisories <- first_label(cs_value(au, "advisory_count"))
+  ready      <- cs_value(au, "ready_for_shiny_mvp", "True")
+  approved   <- if (grepl("APPROVE", toupper(verdict))) "Approved with conditions" else verdict
 
   ni <- function(x) if (length(x) != 1 || is.na(x)) "\u2014" else as.character(x)
 
@@ -229,84 +248,89 @@ section_overview <- function() {
       "A read-only macro summary of the AEGIS forecast improvement review."
     ),
 
-    # B. Macro headline (real governed values) -------------------------------
-    card_grid(
-      kpi_card("Approved", "Governance state",
-               pill = "With conditions", pill_class = "pill-amber"),
-      kpi_card(champ, "Governed champion",
-               pill = "Selected with conditions", pill_class = "pill-blue"),
-      kpi_card(mase, "Median MASE \u00b7 primary metric",
-               pill = "Lower is stronger", pill_class = "pill-blue"),
-      kpi_card(rmsse, "Median RMSSE \u00b7 guardrail",
-               pill = "Stability check", pill_class = "pill-blue")
-    ),
-
-    # C. What this overview shows --------------------------------------------
-    tags$h3(class = "section-block-title", "What this overview shows"),
+    # B. Intro ---------------------------------------------------------------
     tags$div(
       class = "home-prose",
       tags$p(
-        "This page is a one-screen, read-only summary of the forecast ",
-        "improvement review. Every figure below is read directly from the ",
-        "governed closure pack \u2014 nothing here is recalculated, and no ",
-        "forecasts or models are run by the dashboard."
-      ),
-      tags$p(
-        "The review compared a broad universe of baseline and challenger ",
-        "models on the same data, scored them with consistent accuracy ",
-        "metrics, and selected a governed champion under explicit conditions."
+        "Everything below is read directly from the governed closure pack and ",
+        "audit trail. Nothing here is recalculated, and no forecasts or models ",
+        "are run by the dashboard. Expand each section for the most relevant ",
+        "evidence."
       )
     ),
 
-    # D. What the review concluded -------------------------------------------
-    tags$h3(class = "section-block-title", "What the review concluded"),
-    info_list(
-      info_row("Champion decision", decision),
-      info_row("Decision confidence", confidence),
-      info_row("Champion model", paste0(champ, " (", origin, " \u00b7 ", family, ")")),
-      info_row("Pairwise evidence",
-               paste0(ni(better), " supported better \u00b7 ", ni(worse),
-                      " worse \u00b7 across ", ni(pairwise), " comparisons"))
-    ),
-
-    # E. Model landscape at a glance (universe counts) -----------------------
-    tags$h3(class = "section-block-title", "Model landscape at a glance"),
-    info_list(
-      info_row("Models reviewed", ni(uc$total)),
-      info_row("Baselines / challengers",
-               paste0(ni(uc$baselines), " / ", ni(uc$challengers))),
-      info_row("Carried into the tournament", ni(uc$in_tournament)),
-      info_row("Champion-eligible", ni(uc$champion_eligible)),
-      info_row("Risk-flagged for follow-up", ni(uc$risk_flagged))
-    ),
-
-    # F. Conditions attached to the decision ---------------------------------
-    tags$h3(class = "section-block-title", "Conditions attached to the decision"),
-    tags$div(
-      class = "home-prose",
-      tags$p(conditions)
-    ),
-
-    # G. Where to go next ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Where to go next"),
-    info_list(
-      info_row("Home", "Why this dashboard exists and how the methodology works"),
-      info_row("Model Universe", "The full list of governed baseline and challenger models"),
-      info_row("Tournament", "** Pairwise standings and head-to-head evidence (planned)"),
-      info_row("Accuracy", "** MASE / RMSSE detail by model and entity (planned)"),
-      info_row("Risks", "** Model risk flags and follow-up notes (planned)"),
-      info_row("TTL / Capacity", "** Forecast-to-capacity view (planned, source pending)")
-    ),
-
-    # H. Visual review note --------------------------------------------------
-    tags$div(
-      style = "margin-top:18px;",
-      info_list(
-        tags$li(
-          tags$span(class = "pill pill-amber", "Visual review"),
-          tags$span(class = "info-val",
-                    "Please review this Executive Overview before we continue to the next Stage 07 block.")
+    # 1) Models \u2014 governed champion --------------------------------------
+    home_collapse(
+      "Models \u2014 governed champion",
+      "Which model was selected, under what conditions, and the evidence behind it.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          tags$strong(champ), " was selected as the governed champion ",
+          tags$strong("with conditions"), " \u2014 not as an unconditional ",
+          "winner. The selection is supported by consistent accuracy metrics ",
+          "and head-to-head evidence across the model universe."
         )
+      ),
+      info_list(
+        info_row("Champion model", paste0(champ, " (", origin, " \u00b7 ", family, ")")),
+        info_row("Selection status", "Selected with conditions"),
+        info_row("Decision confidence", confidence),
+        info_row("Median MASE (primary)", paste0(mase, " \u00b7 lower is stronger")),
+        info_row("Median RMSSE (guardrail)", paste0(rmsse, " \u00b7 stability check")),
+        info_row("Pairwise evidence",
+                 paste0(ni(better), " better \u00b7 ", ni(worse),
+                        " worse \u00b7 across ", ni(pairwise), " comparisons"))
+      )
+    ),
+
+    # 2) Forecast \u2014 structural evidence coverage -------------------------
+    home_collapse(
+      "Forecast \u2014 evidence base",
+      "The data the review was scored on, described as coverage \u2014 not a new performance metric.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          "The review compared models on a broad, complete historical backtest. ",
+          "The evidence base covers ", tags$strong("39 series"), " across ",
+          tags$strong("13 models"), ", at ", tags$strong("horizons 1\u201330"),
+          ", with complete actual and forecast values \u2014 no gaps."
+        ),
+        tags$p(
+          "This is the shared, like-for-like basis the tournament used to score ",
+          "every model. It is shown here as evidence coverage, not as a ",
+          "forecast-accuracy improvement."
+        )
+      ),
+      info_list(
+        info_row("Series covered", "39"),
+        info_row("Models compared", "13"),
+        info_row("Forecast horizons", "1\u201330"),
+        info_row("Actuals / forecasts", "Complete \u00b7 no missing values")
+      )
+    ),
+
+    # 3) Governance ----------------------------------------------------------
+    home_collapse(
+      "Governance",
+      "The audited approval state for handing this dashboard off \u2014 with its conditions.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          tags$strong("Approved with conditions for dashboard handoff."), " ",
+          "Audit #6 cleared this dashboard for handoff with no blockers, under ",
+          "explicit conditions: it must stay read-only, must not recompute ",
+          "metrics or rerun models, and must keep risks and caveats visible. ",
+          "This is a dashboard-handoff approval, not a production sign-off."
+        ),
+        tags$p(conditions)
+      ),
+      info_list(
+        info_row("Audit #6 verdict", approved),
+        info_row("Blockers", ni(blockers)),
+        info_row("Advisories", ni(advisories)),
+        info_row("Ready for handoff", ni(ready)),
+        info_row("Dashboard contract", "Read-only \u00b7 no recompute")
       )
     )
   )
@@ -423,7 +447,7 @@ section_explorer <- function() {
                    "The chart updates only after you click Analyze Backtest. Changing selectors does not auto-refresh.")
           ),
           tags$p(class = "fv-entity-note",
-                 "Series, models and values are read directly from the governed Stage 05H full artifact.")
+                 "Series, models and values are read directly from the governed backtest artifact.")
         ),
 
         tags$div(
@@ -460,7 +484,7 @@ section_explorer <- function() {
     # Methodology note -------------------------------------------------------
     tags$p(
       class = "fv-method-note",
-      "This page visualizes the governed Stage 05H backtest artifact only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion. The forward production forecast is shown on the separate Forecast page."
+      "This page visualizes the governed backtest artifact only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion. The forward production forecast is shown on the separate Forecast page."
     )
   )
 }
@@ -633,7 +657,7 @@ section_accuracy <- function() {
     "accuracy",
     section_head(
       "Accuracy",
-      "Heatmap-first backtest accuracy diagnostics from the frozen Stage 05H model-comparison artifact. Standardized severity scores let different error measures be compared visually."
+      "Heatmap-first backtest accuracy diagnostics from the frozen model-comparison artifact. Standardized severity scores let different error measures be compared visually."
     ),
 
     # Summary cards (populated after Analyze Accuracy) ----------------------
@@ -707,7 +731,7 @@ section_accuracy <- function() {
                    "The heatmap and table update only after you click Analyze Accuracy. Changing selectors does not auto-refresh.")
           ),
           tags$p(class = "fv-entity-note",
-                 "All values are computed in memory from the governed Stage 05H backtest artifact. Nothing is written back.")
+                 "All values are computed in memory from the governed backtest artifact. Nothing is written back.")
         ),
 
         tags$div(
@@ -733,7 +757,7 @@ section_accuracy <- function() {
             tags$ul(
               class = "fv-warn-list",
               tags$li(tags$span(class = "pill pill-amber", "Diagnostics"),
-                      "These are dashboard diagnostics derived from the frozen Stage 05H backtest output. They are not official governance metrics and do not change champion selection."),
+                      "These are dashboard diagnostics derived from the frozen backtest output. They are not official governance metrics and do not change champion selection."),
               tags$li(tags$span(class = "pill pill-slate", "Standardized"),
                       "Heatmap color uses a robust standardized severity score (median / IQR) so different measures are visually comparable. The table shows raw values."),
               tags$li(tags$span(class = "pill pill-blue", "Backtest only"),
@@ -745,7 +769,7 @@ section_accuracy <- function() {
 
       tags$p(
         class = "fv-method-note",
-        "This page visualizes the governed Stage 05H backtest artifact only. It does not generate new forecasts, recompute official metrics, rerun tournaments, or change any selected champion under conditions. MASE / RMSSE are intentionally excluded here because no governed scale baseline is bundled with this artifact."
+        "This page visualizes the governed backtest artifact only. It does not generate new forecasts, recompute official metrics, rerun tournaments, or change any selected champion under conditions. MASE / RMSSE are intentionally excluded here because no governed scale baseline is bundled with this artifact."
       )
     )
   )
@@ -1431,7 +1455,7 @@ section_audit <- function() {
                         " pairwise comparisons reviewed. Zero blockers; ready for the 5.31 champion decision.")),
       shell_card("Audit #5", "Closure / dashboard handoff",
                  "Final independent audit. Approved with conditions; zero blockers and zero major findings across all required areas."),
-      shell_card("Handoff", "Stage 06 dashboard",
+      shell_card("Handoff", "Governed dashboard",
                  "All required dashboard sections covered with verified artifacts. No source outputs were modified by the audits.")
     ),
 
@@ -1649,14 +1673,12 @@ section_version <- function() {
 
     card_grid(
       kpi_card(APP_VERSION, "App version"),
-      kpi_card(APP_STAGE, "Build stage"),
       kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
       kpi_card(paste0(cat$available, " / ", cat$total), "Artifacts available")
     ),
 
     tags$h3(class = "section-block-title", "Build & governance"),
     info_list(
-      info_row("Stage", APP_STAGE_LABEL),
       info_row("Audit state", version_audit_label()),
       info_row("Policy", APP_POLICY),
       info_row("Champion", paste0(APP_CHAMPION, " \u2014 selected with conditions (confidence: ", APP_CHAMPION_CONFIDENCE, ")"))

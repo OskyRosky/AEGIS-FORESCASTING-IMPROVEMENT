@@ -3,6 +3,6 @@
 app_footer <- function() {
   tags$footer(
     class = "app-footer",
-    tags$span(class = "app-footer-text", "V1 \u00B7 Stage 07 \u00B7 Read-only dashboard")
+    tags$span(class = "app-footer-text", "AEGIS \u00B7 Read-only dashboard")
   )
 }

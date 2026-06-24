@@ -54,6 +54,14 @@ home_champion_summary <- function() {
   if (is.data.frame(df)) df else data.frame()
 }
 
+# Load the single-row Audit #6 governance summary artifact (read-only).
+# Used by the Executive Overview governance section so the approval state is
+# read from the governed audit artifact instead of being hardcoded.
+home_audit6_summary <- function() {
+  df <- tryCatch(load_csv_artifact("audit_6_summary"), error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
 # Pull a metric_value from key_results by metric_name (returns character).
 kr_value <- function(df, name, fallback = NA_character_) {
   if (!is.data.frame(df) || nrow(df) == 0 ||

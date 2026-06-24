@@ -135,6 +135,14 @@
       if (app) app.classList.toggle("theme-dark");
       return;
     }
+
+    // 6) Home collapsible (+/-) expander
+    var collapseHead = closest(target, ".home-collapse-head");
+    if (collapseHead) {
+      var collapseBox = closest(collapseHead, ".home-collapse");
+      if (collapseBox) collapseBox.classList.toggle("is-open");
+      return;
+    }
   });
 
   // Initialize the central guide button from the section active on load.

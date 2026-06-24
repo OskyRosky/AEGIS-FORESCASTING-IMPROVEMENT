@@ -8,16 +8,16 @@ stage07_menu <- function() {
       list(value = "home",     label = "Home",     title = "Project Home",       icon = "house", active = TRUE),
       list(value = "overview", label = "Overview", title = "Executive Overview", icon = "gauge-high")
     )),
+    list(group = "Models", icon = "trophy", items = list(
+      list(value = "universe",   label = "Universe",   title = "Model Universe",            icon = "layer-group"),
+      list(value = "tournament", label = "Tournament", title = "Tournament Standings",      icon = "chart-column"),
+      list(value = "champion",   label = "Champion",   title = "Champion Decision",         icon = "trophy")
+    )),
     list(group = "Forecasting", icon = "chart-line", items = list(
       list(value = "explorer", label = "Viewer", title = "Forecast Viewer",  icon = "chart-line"),
       list(value = "accuracy", label = "Accuracy", title = "Accuracy Overview",  icon = "bullseye"),
       list(value = "forecast", label = "Forecast", title = "Forward Forecast", icon = "arrow-trend-up"),
       list(value = "ttl",      label = "TTL",      title = "TTL / Capacity View", icon = "hourglass-half", planned = TRUE)
-    )),
-    list(group = "Models", icon = "trophy", items = list(
-      list(value = "universe",   label = "Universe",   title = "Model Universe",            icon = "layer-group"),
-      list(value = "tournament", label = "Tournament", title = "Tournament Standings",      icon = "chart-column"),
-      list(value = "champion",   label = "Champion",   title = "Champion Decision",         icon = "trophy")
     )),
     list(group = "Governance", icon = "scale-balanced", items = list(
       list(value = "risks",      label = "Risks",      title = "Risk Register",       icon = "triangle-exclamation"),

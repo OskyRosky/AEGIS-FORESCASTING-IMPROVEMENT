@@ -774,6 +774,64 @@ body {
 .theme-dark .home-step-title { color: #e8eef6; }
 .theme-dark .home-step-detail { color: #9fb0c4; }
 
+/* ---- Home collapsible sections (+/- expanders) ---- */
+.home-collapse {
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+  max-width: 860px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+.home-collapse-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 16px 20px;
+  font: inherit;
+}
+.home-collapse-heading { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.home-collapse-title { font-size: 15px; font-weight: 700; color: #102a43; letter-spacing: 0.01em; }
+.home-collapse-summary { font-size: 13px; color: #6b7a8d; line-height: 1.5; }
+.home-collapse-icon {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid #d6dfea;
+  color: #2e75b6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  transition: background 140ms ease;
+}
+.home-collapse-icon::before { content: "+"; }
+.home-collapse.is-open .home-collapse-icon::before { content: "\2212"; }
+.home-collapse-head:hover .home-collapse-icon { background: #eaf2fb; }
+.home-collapse-body { display: none; padding: 4px 20px 20px; border-top: 1px solid #eef2f7; }
+.home-collapse.is-open .home-collapse-body { display: block; }
+/* Inside a collapse, strip the inner card's own frame to avoid double-framing */
+.home-collapse-body .home-prose { box-shadow: none; border: 0; padding: 0; max-width: none; }
+.home-collapse-body .info-list { box-shadow: none; max-width: none; }
+.home-collapse-body .home-flow { max-width: none; }
+.home-collapse-body > p:first-child { margin-top: 8px; }
+
+.theme-dark .home-collapse { background: #15263b; border-color: #23374f; box-shadow: none; }
+.theme-dark .home-collapse-title { color: #e8eef6; }
+.theme-dark .home-collapse-summary { color: #9fb0c4; }
+.theme-dark .home-collapse-icon { border-color: #2a425f; color: #7fb2e6; }
+.theme-dark .home-collapse-head:hover .home-collapse-icon { background: #1d3047; }
+.theme-dark .home-collapse-body { border-color: #23374f; }
+
 /* ===================== FORECASTING / TTL placeholder (Block 7.12-PREVIEW) ===================== */
 /* Calm, planned-state callout (NOT a red error panel). */
 .ttl-callout {

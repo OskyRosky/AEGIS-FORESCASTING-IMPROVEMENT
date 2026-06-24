@@ -127,6 +127,8 @@ build_artifact_registry <- function() {
       "outputs/model_lab/audit_5/audit_5_findings.csv"),
     c("audit_5_report",             "audit",        "text", "optional",
       "outputs/model_lab/audit_5/audit_5_final_report.md"),
+    c("audit_6_summary",            "audit",        "csv",  "optional",
+      "outputs/governance/audit_6/audit_6_summary.csv"),
     c("tournament_sanity_summary",  "audit",        "csv",  "optional",
       "outputs/model_lab/tournament_sanity_review/tournament_sanity_summary.csv"),
 
