@@ -83,12 +83,12 @@ app_server <- function(input, output, session) {
   output$fvp_chart <- highcharter::renderHighchart({
     if (is.null(input$fvp_go) || input$fvp_go == 0) {
       return(fvp_empty_chart(
-        "Select a series, tick one or more models, choose a horizon, then click Analyze Forecast."))
+        "Select a series, tick one or more models, choose a horizon, then click Analyze Backtest."))
     }
     r <- fvp_request()
     if (length(r$models) == 0) {
       return(fvp_empty_chart(
-        "No models selected \u2014 tick at least one model and click Analyze Forecast again."))
+        "No models selected \u2014 tick at least one model and click Analyze Backtest again."))
     }
     fvp_chart(r$series, r$models, r$horizon, r$history, fvp_all)
   })
@@ -238,7 +238,7 @@ app_server <- function(input, output, session) {
     if (is.null(input$acc_go) || input$acc_go == 0) {
       return(tags$div(
         class = "acc-kpi-grid",
-        cell("Series covered", "\u2014"),
+        cell("Keys covered", "\u2014"),
         cell("Models covered", "\u2014"),
         cell("Selected horizon", "\u2014"),
         cell("Selected metric", "\u2014"),
@@ -250,7 +250,7 @@ app_server <- function(input, output, session) {
     s <- acc_summary(acc_result(), r$metric, r$horizon)
     tags$div(
       class = "acc-kpi-grid",
-      cell("Series covered", s$n_series),
+      cell("Keys covered", s$n_series),
       cell("Models covered", s$n_models),
       cell("Selected horizon", paste0(s$horizon, " days")),
       cell("Selected metric", s$metric),

@@ -1,0 +1,14 @@
+field,value
+stage,Stage 07 - V2 Forecast Viewer Exploratory Backtest Layout Cleanup
+page,Forecasting > Viewer (section_explorer)
+status,READY_FOR_OSCAR_VISUAL_REVIEW_V2_FORECAST_VIEWER_EXPLORATORY_LAYOUT_CLEANUP
+url,http://127.0.0.1:3839
+process_id,33852
+port,3839
+preferred_port_note,"3838 was busy (prior session PID still listening); launcher fell back to 3839"
+stdout_log,outputs/shiny_mvp/7_V2_FORECAST_VIEWER_EXPLORATORY_LAYOUT_CLEANUP/logs/viewer_exploratory_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_FORECAST_VIEWER_EXPLORATORY_LAYOUT_CLEANUP/logs/viewer_exploratory_stderr.log
+http_status,HTTP 200
+content_length,198237
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 33852
+files_modified,"shiny_app/ui/tabs.R; shiny_app/server/server.R; shiny_app/www/custom.css; shiny_app/ui/body.R"

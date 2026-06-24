@@ -1,0 +1,15 @@
+field,value
+stage,Stage 07 - V2 Forecast Viewer Final Layout Refinement
+page,Forecasting > Viewer (section_explorer)
+status,READY_FOR_OSCAR_VISUAL_REVIEW_V2_FORECAST_VIEWER_FINAL_LAYOUT_REFINEMENT
+url,http://127.0.0.1:3838
+process_id,6028
+port,3838
+http_status,HTTP 200
+content_length,199345
+prior_instance_stopped,PID 16284
+stdout_log,outputs/shiny_mvp/7_V2_FORECAST_VIEWER_FINAL_LAYOUT_REFINEMENT/logs/viewer_final_refinement_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_FORECAST_VIEWER_FINAL_LAYOUT_REFINEMENT/logs/viewer_final_refinement_stderr.log
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 6028
+files_modified,"shiny_app/ui/tabs.R; shiny_app/www/custom.css; shiny_app/ui/body.R"
+css_version,?v=20260624i

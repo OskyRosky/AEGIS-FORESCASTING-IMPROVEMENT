@@ -1,0 +1,13 @@
+stage,check,result
+sources,viewer_source_csv,forecast_viewer_model_outputs.csv
+sources,row_count,177060
+sources,unique_series,39
+sources,unique_models,13
+sources,horizons_in_artifact,1-30
+sources,horizons_exposed_in_viewer,5-30
+sources,date_min,2025-05-03
+sources,date_max,2026-04-27
+sources,series_key_column,series_key
+sources,sample_series,APC-Dedicated | APC-MSIT | APC-Multitenant | ARE-Go Local | AUS-Go Local | BRA-Go Local
+sources,hdd_specific,no_governed_AX_backtest_series
+sources,models_list,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | FastNeuralAR_MLP | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4 | FixedGrowth_6 | LightGBM | LinearRegression | Theta | XGBoost

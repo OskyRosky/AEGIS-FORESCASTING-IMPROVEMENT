@@ -337,12 +337,15 @@ section_overview <- function() {
 }
 
 section_explorer <- function() {
-  # Stage 07 Forecasting Sidebar Correction: the Viewer page hosts the historical
-  # Backtest Comparison ONLY. The forward production forecast was moved to its own
-  # Forecast page (section_forecast()).
+  # Stage 07 Forecast Viewer Exploratory Layout Cleanup: the Viewer page hosts the
+  # historical Backtest Comparison ONLY (forward production forecast lives on the
+  # separate Forecast page, section_forecast()).
   #   Source: data/processed/forecast_viewer_model_outputs.csv (39 series).
-  # The chart lives in a STATIC container (always in the DOM) to avoid blank-chart
-  # regressions, and never renders before the user clicks Analyze Backtest.
+  # The layout is horizontal/compact: a single setup card (series + horizon +
+  # history + Analyze on one row, model family cards wrapped below) over a
+  # full-width chart and data notes. The chart lives in a STATIC container
+  # (always in the DOM) to avoid blank-chart regressions, and never renders
+  # before the user clicks Analyze Backtest.
 
   # ---- Backtest section inputs ----
   bt_series      <- fvp_series_choices()                 # 39 eligible series
@@ -352,139 +355,157 @@ section_explorer <- function() {
                                     paste0(horizon_opts, " days"))
   horizon_unavail <- fvp_horizon_unavailable()           # 35, 45 (disabled)
 
-  # Numbered "step" wrapper so the controls read as a guided workflow.
-  fv_step <- function(num, title, control, hint = NULL, extra = NULL) {
-    tags$div(
-      class = "fv-step",
-      tags$div(
-        class = "fv-step-head",
-        tags$span(class = "fv-step-num", as.character(num)),
-        tags$span(class = "fv-step-title", title)
-      ),
-      control,
-      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
-      extra
-    )
-  }
-
   panel(
     "explorer",
     section_head(
       "Forecast Viewer",
-      "Historical multi-model Backtest Comparison. It renders only after you click Analyze Backtest. The forward production forecast now lives on the separate Forecast page."
+      "Exploratory historical backtest view. Select a key/series, models and horizon to visually compare historical model behavior against known actuals. This page does not generate future forecasts."
+    ),
+
+    # ---- How to use this viewer (collapsed by default) ---------------------
+    home_collapse(
+      "How to use this viewer",
+      "An exploratory sandbox to compare historical model fit against known actuals.",
+      tags$ul(
+        class = "fvb-how-list",
+        tags$li("This is an ", tags$b("exploratory"), " backtest viewer."),
+        tags$li("The ", tags$b("actual"), " values are already known \u2014 they are real history."),
+        tags$li("Each model line is a ", tags$b("historical backtest forecast"), ", not a future forecast."),
+        tags$li("Use it to visually compare how well each model fits a series at a chosen horizon, and to corroborate the governed results yourself."),
+        tags$li("It does ", tags$b("not"), " generate future forecasts, recalculate metrics, or change the champion."),
+        tags$li("The forward production forecast lives on the separate ", tags$b("Forecast"), " page.")
+      ),
+      open = FALSE
     ),
 
     # =====================================================================
-    # BACKTEST COMPARISON (full Stage 05H artifact)
+    # BOX 1 \u2014 SET UP THE BACKTEST VIEW (controls only, numbered steps).
+    # Analyze Backtest is the LAST step, at the bottom of this box.
     # =====================================================================
     tags$section(
-      class = "fvx-section fvx-backtest",
+      class = "fvx-section fvx-backtest fvb fvb-setup-section",
       tags$div(
-        class = "fvx-section-head",
+        class = "fvb-setup-head",
         tags$span(class = "fvx-section-kicker", "Backtest"),
-        tags$h3(class = "fvx-section-title", "Backtest Comparison"),
+        tags$h3(class = "fvx-section-title", "Set up the backtest view"),
         tags$span(class = "pill pill-blue", "Historical \u00b7 multi-model")
       ),
       tags$p(
-        class = "fvx-section-lead",
-        "Actual known values versus multiple model forecasts over historical dates. ",
-        "Source: ", tags$code("forecast_viewer_model_outputs.csv"),
-        " (39 eligible series, 13 models, horizons 5\u201330)."
+        class = "fvb-setup-lead",
+        "Choose what to compare, then run step 5. ",
+        "Source: ", tags$code("forecast_viewer_model_outputs.csv"), "."
       ),
 
+      # Steps 1-3: series / horizon / history -----------------------------
       tags$div(
-        class = "fv-setup",
+        class = "fvb-controls",
         tags$div(
-          class = "fv-setup-panel",
-          tags$div(class = "fv-setup-title", "Set up the backtest view"),
-
-          fv_step(
-            1, "Select series",
-            selectInput("fvp_series", NULL, choices = bt_series,
-                        selected = bt_default, width = "100%"),
-            "Choose one of the 39 eligible multi-model series."
-          ),
-          fv_step(
-            2, "Select models",
-            uiOutput("fvp_model_groups"),
-            "Tick one or more models. Grouped by family; \u2605 marks the selected challenger champion and \u26A0 marks higher-risk models (still selectable).",
-            extra = uiOutput("fvp_model_count")
-          ),
-          fv_step(
-            3, "Select horizon",
-            tagList(
-              radioButtons("fvp_horizon", NULL, choices = horizon_named,
-                           selected = "5", inline = TRUE),
-              tags$div(
-                class = "fv-horizon-unavail",
-                lapply(horizon_unavail, function(h)
-                  tags$span(class = "fv-horizon-chip is-disabled",
-                            title = "Not available in current artifact",
-                            paste0(h, " days"))),
-                tags$span(class = "fv-horizon-unavail-note",
-                          "Not available in current artifact")
-              )
-            ),
-            "The artifact covers 5\u201330 day horizons. 35 and 45 are shown disabled because they do not exist in the governed data."
-          ),
-          fv_step(
-            4, "Select history window",
-            selectInput("fvp_history", NULL,
-                        choices = c("Last 90 days" = 90, "Last 180 days" = 180,
-                                    "Full available window" = 0),
-                        selected = 0, width = "100%"),
-            "How much of the backtest date range to show."
-          ),
-          tags$div(
-            class = "fv-step fv-step-action",
-            tags$div(
-              class = "fv-step-head",
-              tags$span(class = "fv-step-num", "5"),
-              tags$span(class = "fv-step-title", "Analyze")
-            ),
-            actionButton("fvp_go", "Analyze Backtest", class = "fv-analyze-btn"),
-            tags$p(class = "fv-step-hint",
-                   "The chart updates only after you click Analyze Backtest. Changing selectors does not auto-refresh.")
-          ),
-          tags$p(class = "fv-entity-note",
-                 "Series, models and values are read directly from the governed backtest artifact.")
+          class = "fvb-field fvb-field-series",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "1"), "Select key / series"),
+          selectInput("fvp_series", NULL, choices = bt_series,
+                      selected = bt_default, width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "One of the 39 eligible multi-model keys/series.")
         ),
-
         tags$div(
-          class = "fv-result",
+          class = "fvb-field fvb-field-horizon",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "2"), "Horizon"),
+          radioButtons("fvp_horizon", NULL, choices = horizon_named,
+                       selected = "5", inline = TRUE),
           tags$div(
-            class = "fv-step-head",
-            tags$span(class = "fv-step-num", "6"),
-            tags$span(class = "fv-step-title", "Backtest chart")
-          ),
-          tags$div(
-            class = "fv-chart-wrap",
-            highcharter::highchartOutput("fvp_chart", height = "520px")
-          ),
-          tags$div(
-            class = "fv-notes-head",
-            tags$span(class = "fv-step-num", "7"),
-            tags$span(class = "fv-step-title", "Data notes")
-          ),
-          uiOutput("fvp_notes"),
-          tags$div(
-            class = "fv-warn-card",
-            tags$ul(
-              class = "fv-warn-list",
-              tags$li(tags$span(class = "pill pill-amber", "Backtest"),
-                      "This section uses historical backtest comparison data. Actual values are already known. This is for comparing model behavior, not future production forecast."),
-              tags$li(tags$span(class = "pill pill-slate", "No intervals"),
-                      "Prediction intervals are not available in this artifact, so only point forecasts are drawn.")
-            )
+            class = "fvb-horizon-unavail",
+            lapply(horizon_unavail, function(h)
+              tags$span(class = "fv-horizon-chip is-disabled",
+                        title = "Not available in current artifact",
+                        paste0(h, " days"))),
+            tags$span(class = "fvb-field-hint",
+                      "Artifact covers 5\u201330-day horizons.")
+          )
+        ),
+        tags$div(
+          class = "fvb-field fvb-field-history",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "3"), "History window"),
+          selectInput("fvp_history", NULL,
+                      choices = c("Last 90 days" = 90, "Last 180 days" = 180,
+                                  "Full available window" = 0),
+                      selected = 0, width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "How much of the date range to show.")
+        )
+      ),
+
+      # Step 4: model family cards (wrapped horizontally) -----------------
+      tags$div(
+        class = "fvb-models",
+        tags$div(
+          class = "fvb-models-head",
+          tags$span(class = "fvb-field-label",
+                    tags$span(class = "fvb-step-num", "4"), "Models"),
+          uiOutput("fvp_model_count", inline = TRUE)
+        ),
+        uiOutput("fvp_model_groups"),
+        tags$p(class = "fvb-field-hint",
+               "Tick one or more models. Grouped by family; \u2605 marks the selected challenger champion and \u26A0 marks higher-risk models (still selectable).")
+      ),
+
+      # Step 5: Analyze Backtest (bottom of the setup box) ----------------
+      tags$div(
+        class = "fvb-analyze-row",
+        tags$div(
+          class = "fvb-analyze-label",
+          tags$span(class = "fvb-step-num", "5"),
+          tags$span(class = "fvb-field-label", "Analyze Backtest")
+        ),
+        actionButton("fvp_go", "Analyze Backtest",
+                     class = "fv-analyze-btn fvb-analyze-btn"),
+        tags$p(class = "fvb-field-hint fvb-analyze-hint",
+               "Renders the chart and data notes below. Updates only on click \u2014 no auto-refresh.")
+      )
+    ),
+
+    # =====================================================================
+    # BOX 2 \u2014 BACKTEST COMPARISON (results only: chart + data notes).
+    # Separate, collapsible box. Action-gated: empty state until Analyze.
+    # =====================================================================
+    home_collapse(
+      "Backtest Comparison",
+      "Chart and data notes for the analyzed setup. Renders after Analyze Backtest.",
+      tags$div(
+        class = "fvb-result",
+        tags$div(
+          class = "fvb-result-head",
+          tags$span(class = "fvb-field-label", "Backtest chart")
+        ),
+        tags$div(
+          class = "fv-chart-wrap fvb-chart-wrap",
+          highcharter::highchartOutput("fvp_chart", height = "600px")
+        ),
+        tags$div(
+          class = "fvb-result-head fvb-notes-head",
+          tags$span(class = "fvb-field-label", "Data notes")
+        ),
+        uiOutput("fvp_notes"),
+        tags$div(
+          class = "fv-warn-card",
+          tags$ul(
+            class = "fv-warn-list",
+            tags$li(tags$span(class = "pill pill-amber", "Backtest"),
+                    "This section uses historical backtest comparison data. Actual values are already known. This is for comparing model behavior, not future production forecast."),
+            tags$li(tags$span(class = "pill pill-slate", "No intervals"),
+                    "Prediction intervals are not available in this artifact, so only point forecasts are drawn.")
           )
         )
-      )
+      ),
+      open = TRUE
     ),
 
     # Methodology note -------------------------------------------------------
     tags$p(
       class = "fv-method-note",
-      "This page visualizes the governed backtest artifact only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion. The forward production forecast is shown on the separate Forecast page."
+      "This page visualizes the governed backtest artifact only. It does not generate forecasts, recalculate metrics, rerun tournaments, or change any champion decision. The forward production forecast is shown on the separate Forecast page."
     )
   )
 }
@@ -639,138 +660,172 @@ section_accuracy <- function() {
   horizon_named <- stats::setNames(as.character(horizon_opts),
                                    paste0(horizon_opts, " days"))
 
-  acc_step <- function(num, title, control, hint = NULL, extra = NULL) {
-    tags$div(
-      class = "fv-step",
-      tags$div(
-        class = "fv-step-head",
-        tags$span(class = "fv-step-num", as.character(num)),
-        tags$span(class = "fv-step-title", title)
-      ),
-      control,
-      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
-      extra
-    )
-  }
-
   panel(
     "accuracy",
     section_head(
       "Accuracy",
-      "Heatmap-first backtest accuracy diagnostics from the frozen model-comparison artifact. Standardized severity scores let different error measures be compared visually."
+      "Exploratory backtest accuracy diagnostics from the frozen model-comparison artifact. Use this page to see where errors are highest or most stable across keys, models and horizons."
     ),
 
-    # Summary cards (populated after Analyze Accuracy) ----------------------
-    uiOutput("acc_summary_cards"),
+    # B. How to use this accuracy view (collapsed by default) --------------
+    home_collapse(
+      "How to use this accuracy view",
+      "An exploratory accuracy sandbox to see where backtest error is highest or most stable.",
+      tags$ul(
+        class = "fvb-how-list",
+        tags$li("This is an ", tags$b("exploratory"), " accuracy diagnostics view built from historical ", tags$b("backtest"), " outputs."),
+        tags$li("It helps you spot which ", tags$b("keys / series"), " and ", tags$b("models"), " have higher or lower error."),
+        tags$li("Heatmap color shows ", tags$b("relative severity"), " for the selected metric and horizon \u2014 red = higher error, blue = lower / more stable."),
+        tags$li(tags$b("Lower error is better"), " for every metric shown."),
+        tags$li("These are ", tags$b("dashboard diagnostics"), " from the frozen backtest artifact \u2014 not official governance metrics."),
+        tags$li("This page does ", tags$b("not"), " generate forecasts, rerun tournaments, change champion decisions, or compute official MASE / RMSSE.")
+      ),
+      open = FALSE
+    ),
 
+    # C. Accuracy summary (KPI cards inside a collapsible box) -------------
+    home_collapse(
+      "Accuracy summary",
+      "Headline coverage and the worst / most stable pockets for the analyzed setup.",
+      uiOutput("acc_summary_cards"),
+      open = TRUE
+    ),
+
+    # =====================================================================
+    # BOX 1 \u2014 SET UP THE ACCURACY VIEW (controls only, numbered steps).
+    # Analyze Accuracy is the LAST step, at the bottom of this box.
+    # =====================================================================
     tags$section(
-      class = "fvx-section acc-section",
+      class = "fvx-section fvx-backtest fvb fvb-setup-section acc-setup-section",
       tags$div(
-        class = "fvx-section-head",
+        class = "fvb-setup-head",
         tags$span(class = "fvx-section-kicker", "Accuracy"),
-        tags$h3(class = "fvx-section-title", "Standardized error heatmap"),
+        tags$h3(class = "fvx-section-title", "Set up the accuracy view"),
         tags$span(class = "pill pill-blue", "Backtest \u00b7 diagnostics")
       ),
       tags$p(
-        class = "fvx-section-lead",
-        "Per series \u00d7 model error severity at a chosen horizon. ",
-        "Source: ", tags$code("forecast_viewer_model_outputs.csv"),
-        " (39 series, 13 models, horizons 5\u201330). Red cells = higher error; ",
-        "blue cells = lower error / more stable."
+        class = "fvb-setup-lead",
+        "Choose a horizon, metric, models and filters, then run step 6. ",
+        "Source: ", tags$code("forecast_viewer_model_outputs.csv"), "."
       ),
 
+      # Steps 1, 2, 4, 5 -------------------------------------------------
       tags$div(
-        class = "fv-setup",
+        class = "fvb-controls",
         tags$div(
-          class = "fv-setup-panel",
-          tags$div(class = "fv-setup-title", "Set up the accuracy view"),
-
-          acc_step(
-            1, "Select horizon",
-            radioButtons("acc_horizon", NULL, choices = horizon_named,
-                         selected = "30", inline = TRUE),
-            "Backtest horizon (days) used to compute the diagnostics."
-          ),
-          acc_step(
-            2, "Select metric",
-            selectInput("acc_metric", NULL, choices = ACC_METRICS,
-                        selected = "MAE", width = "100%"),
-            "Drives both the heatmap color (standardized) and the headline severity ranking. All metrics: lower is better."
-          ),
-          acc_step(
-            3, "Select models",
-            selectizeInput("acc_models", NULL,
-                           choices = c("All models" = "__ALL__", acc_models),
-                           selected = "__ALL__", multiple = TRUE, width = "100%",
-                           options = list(placeholder = "All models")),
-            "Keep All models or restrict to one or several."
-          ),
-          acc_step(
-            4, "Filter series",
-            selectizeInput("acc_series", NULL, choices = acc_series,
-                           selected = NULL, multiple = TRUE, width = "100%",
-                           options = list(placeholder = "All eligible series")),
-            "Leave empty to include every eligible series."
-          ),
-          acc_step(
-            5, "Rows shown",
-            selectInput("acc_topn", NULL,
-                        choices = c("Top 10" = 10, "Top 20" = 20, "All (39)" = 39),
-                        selected = 20, width = "100%"),
-            "Heatmap keeps this many series, ranked worst-first by the selected metric."
-          ),
-          tags$div(
-            class = "fv-step fv-step-action",
-            tags$div(
-              class = "fv-step-head",
-              tags$span(class = "fv-step-num", "6"),
-              tags$span(class = "fv-step-title", "Analyze")
-            ),
-            actionButton("acc_go", "Analyze Accuracy", class = "fv-analyze-btn"),
-            tags$p(class = "fv-step-hint",
-                   "The heatmap and table update only after you click Analyze Accuracy. Changing selectors does not auto-refresh.")
-          ),
-          tags$p(class = "fv-entity-note",
-                 "All values are computed in memory from the governed backtest artifact. Nothing is written back.")
+          class = "fvb-field fvb-field-horizon",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "1"), "Select horizon"),
+          radioButtons("acc_horizon", NULL, choices = horizon_named,
+                       selected = "30", inline = TRUE),
+          tags$p(class = "fvb-field-hint",
+                 "Backtest horizon (days) used to compute the diagnostics.")
         ),
-
         tags$div(
-          class = "fv-result",
-          tags$div(
-            class = "fv-step-head",
-            tags$span(class = "fv-step-num", "7"),
-            tags$span(class = "fv-step-title", "Severity heatmap (standardized)")
-          ),
-          tags$div(
-            class = "fv-chart-wrap",
-            plotly::plotlyOutput("acc_heatmap", height = "560px")
-          ),
-          tags$div(
-            class = "fv-notes-head",
-            tags$span(class = "fv-step-num", "8"),
-            tags$span(class = "fv-step-title", "Metric values (raw + standardized)")
-          ),
-          tags$div(class = "tess-table-wrap",
-                   DT::dataTableOutput("acc_table")),
-          tags$div(
-            class = "fv-warn-card",
-            tags$ul(
-              class = "fv-warn-list",
-              tags$li(tags$span(class = "pill pill-amber", "Diagnostics"),
-                      "These are dashboard diagnostics derived from the frozen backtest output. They are not official governance metrics and do not change champion selection."),
-              tags$li(tags$span(class = "pill pill-slate", "Standardized"),
-                      "Heatmap color uses a robust standardized severity score (median / IQR) so different measures are visually comparable. The table shows raw values."),
-              tags$li(tags$span(class = "pill pill-blue", "Backtest only"),
-                      "Accuracy uses historical backtest data only (never the forward forecast / actuals files). It does not generate forecasts.")
-            )
-          )
+          class = "fvb-field fvb-field-history",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "2"), "Select metric"),
+          selectInput("acc_metric", NULL, choices = ACC_METRICS,
+                      selected = "MAE", width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "Drives the heatmap color (standardized) and the severity ranking. Lower is better.")
+        ),
+        tags$div(
+          class = "fvb-field fvb-field-series",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "4"), "Filter key / series"),
+          selectizeInput("acc_series", NULL, choices = acc_series,
+                         selected = NULL, multiple = TRUE, width = "100%",
+                         options = list(placeholder = "All eligible keys / series")),
+          tags$p(class = "fvb-field-hint",
+                 "Leave empty to include every eligible key / series.")
+        ),
+        tags$div(
+          class = "fvb-field fvb-field-history",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "5"), "Rows shown"),
+          selectInput("acc_topn", NULL,
+                      choices = c("Top 10" = 10, "Top 20" = 20, "All (39)" = 39),
+                      selected = 20, width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "Heatmap keeps this many keys, ranked worst-first by the selected metric.")
         )
       ),
 
-      tags$p(
-        class = "fv-method-note",
-        "This page visualizes the governed backtest artifact only. It does not generate new forecasts, recompute official metrics, rerun tournaments, or change any selected champion under conditions. MASE / RMSSE are intentionally excluded here because no governed scale baseline is bundled with this artifact."
+      # Step 3 \u2014 model selector -------------------------------------------
+      tags$div(
+        class = "fvb-models",
+        tags$div(
+          class = "fvb-models-head",
+          tags$span(class = "fvb-field-label",
+                    tags$span(class = "fvb-step-num", "3"), "Select models")
+        ),
+        selectizeInput("acc_models", NULL,
+                       choices = c("All models" = "__ALL__", acc_models),
+                       selected = "__ALL__", multiple = TRUE, width = "100%",
+                       options = list(placeholder = "All models")),
+        tags$p(class = "fvb-field-hint",
+               "Keep All models or restrict to one or several.")
+      ),
+
+      # Step 6 \u2014 Analyze Accuracy (bottom of the setup box) ----------------
+      tags$div(
+        class = "fvb-analyze-row",
+        tags$div(
+          class = "fvb-analyze-label",
+          tags$span(class = "fvb-step-num", "6"),
+          tags$span(class = "fvb-field-label", "Analyze Accuracy")
+        ),
+        actionButton("acc_go", "Analyze Accuracy",
+                     class = "fv-analyze-btn fvb-analyze-btn"),
+        tags$p(class = "fvb-field-hint fvb-analyze-hint",
+               "Renders the heatmap and metric table below. Updates only on click \u2014 no auto-refresh. All values are computed in memory from the governed backtest artifact; nothing is written back.")
       )
+    ),
+
+    # =====================================================================
+    # BOX 2 \u2014 HEATMAP (results only: heatmap + metric table).
+    # Separate, collapsible box. Action-gated: empty state until Analyze.
+    # =====================================================================
+    home_collapse(
+      "Heatmap",
+      "Severity by key / series and model. Color uses standardized relative severity for the selected metric and horizon; lower is better.",
+      tags$div(
+        class = "fvb-result",
+        tags$div(
+          class = "fvb-result-head",
+          tags$span(class = "fvb-field-label", "Severity heatmap")
+        ),
+        tags$div(
+          class = "fv-chart-wrap fvb-chart-wrap",
+          plotly::plotlyOutput("acc_heatmap", height = "560px")
+        ),
+        tags$div(
+          class = "fvb-result-head fvb-notes-head",
+          tags$span(class = "fvb-field-label", "Metric values (raw + standardized)")
+        ),
+        tags$div(class = "tess-table-wrap",
+                 DT::dataTableOutput("acc_table")),
+        tags$div(
+          class = "fv-warn-card",
+          tags$ul(
+            class = "fv-warn-list",
+            tags$li(tags$span(class = "pill pill-amber", "Diagnostics"),
+                    "These are dashboard diagnostics derived from the frozen backtest output. They are not official governance metrics and do not change champion selection."),
+            tags$li(tags$span(class = "pill pill-slate", "Standardized"),
+                    "Heatmap color uses a robust standardized severity score (median / IQR) so different measures are visually comparable. The table shows raw values."),
+            tags$li(tags$span(class = "pill pill-blue", "Backtest only"),
+                    "Accuracy uses historical backtest data only (never the forward forecast / actuals files). It does not generate forecasts.")
+          )
+        )
+      ),
+      open = TRUE
+    ),
+
+    # Footer note ----------------------------------------------------------
+    tags$p(
+      class = "fv-method-note",
+      "This page reads the governed backtest artifact and computes display diagnostics in memory. It does not generate forecasts, rerun tournaments, change champion decisions, or compute official MASE / RMSSE governance metrics."
     )
   )
 }
