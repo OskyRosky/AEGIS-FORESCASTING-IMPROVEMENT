@@ -1039,13 +1039,147 @@ universe_table_widget <- function(df = universe_normalized()) {
   )
 }
 
+# Visual family blocks for the Universe page: one card per model family with a
+# plain-language description and the models in it as labelled chips (read-only).
+universe_families_ui <- function(df = universe_normalized()) {
+  if (!is.data.frame(df) || nrow(df) == 0 || !("model_family" %in% names(df))) {
+    return(tags$p(class = "shell-card-detail", "The model universe is unavailable."))
+  }
+
+  fam_meta <- list(
+    statistical = list(
+      label = "Statistical",
+      desc  = "Classical time-series methods (ARIMA, ETS, Theta). Today's production approach lives here, alongside the selected champion."
+    ),
+    growth_baseline = list(
+      label = "Growth baselines",
+      desc  = "Simple fixed-growth anchors (for example +1.5% or +3% per period). Naive references that any serious model is expected to beat."
+    ),
+    machine_learning = list(
+      label = "Machine learning",
+      desc  = "Feature-based learners such as linear regression and gradient boosting. Flexible, but they need enough signal to shine."
+    ),
+    lightweight_neural = list(
+      label = "Lightweight neural",
+      desc  = "A small neural autoregressor \u2014 more capacity than classic machine learning, far lighter than full deep learning."
+    ),
+    deep_learning = list(
+      label = "Deep learning",
+      desc  = "Modern neural forecasters (NBEATS, NHITS). Highest capacity and cost \u2014 deferred for now on runtime and dependency grounds."
+    )
+  )
+
+  fam_order <- c("statistical", "growth_baseline", "machine_learning",
+                 "lightweight_neural", "deep_learning")
+  fams <- unique(df$model_family)
+  fams <- c(intersect(fam_order, fams), setdiff(fams, fam_order))
+
+  blocks <- lapply(fams, function(fam) {
+    sub   <- df[df$model_family == fam, , drop = FALSE]
+    meta  <- fam_meta[[fam]]
+    label <- if (!is.null(meta)) meta$label else gsub("_", " ", fam)
+    desc  <- if (!is.null(meta)) meta$desc else ""
+
+    chips <- lapply(seq_len(nrow(sub)), function(i) {
+      r        <- sub[i, ]
+      is_champ <- isTRUE(r$selected_champion %in% TRUE)
+      is_risk  <- isTRUE(r$risk_flag %in% TRUE)
+      is_base  <- identical(as.character(r$model_origin), "baseline")
+      tags$div(
+        class = paste("uni-chip",
+                      if (is_champ) "is-champion" else if (is_risk) "is-risk" else ""),
+        tags$span(class = "uni-chip-name", r$model_name),
+        tags$span(
+          class = paste("uni-chip-tag", if (is_base) "uni-tag-base" else "uni-tag-chall"),
+          if (is_base) "Baseline" else "Challenger"
+        ),
+        if (is_champ) tags$span(class = "uni-chip-tag uni-tag-champ", "\u2605 Champion"),
+        if (is_risk)  tags$span(class = "uni-chip-tag uni-tag-risk", "Risk flag")
+      )
+    })
+
+    tags$div(
+      class = "uni-family",
+      tags$div(
+        class = "uni-family-head",
+        tags$span(class = "uni-family-title", label),
+        tags$span(class = "uni-family-count",
+                  paste0(nrow(sub), if (nrow(sub) == 1) " model" else " models"))
+      ),
+      tags$p(class = "uni-family-desc", desc),
+      tags$div(class = "uni-chip-row", chips)
+    )
+  })
+
+  tags$div(class = "uni-family-grid", blocks)
+}
+
+# Static HTML table for the visible model set. Rendered as plain HTML (not a
+# DT widget) so it draws reliably even inside a collapsed section. Read-only;
+# excludes deferred models (caller passes the already-filtered frame).
+universe_static_table_ui <- function(df) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail", "No active models to display."))
+  }
+  fam_label <- function(x) ifelse(nzchar(x), gsub("_", " ", x), "\u2014")
+
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r        <- df[i, ]
+    is_champ <- isTRUE(r$selected_champion %in% TRUE)
+    is_base  <- identical(as.character(r$model_origin), "baseline")
+    elig     <- isTRUE(r$eligible_for_champion %in% TRUE)
+    is_risk  <- isTRUE(r$risk_flag %in% TRUE)
+    tags$tr(
+      class = if (is_champ) "uni-row-champ" else NULL,
+      tags$td(
+        tags$span(class = "uni-td-name", r$model_name),
+        if (is_champ) tags$span(class = "uni-chip-tag uni-tag-champ",
+                                style = "margin-left:8px;", "\u2605 Champion")
+      ),
+      tags$td(tags$span(
+        class = paste("uni-chip-tag", if (is_base) "uni-tag-base" else "uni-tag-chall"),
+        if (is_base) "Baseline" else "Challenger")),
+      tags$td(fam_label(r$model_family)),
+      tags$td(if (elig)
+                tags$span(class = "uni-chip-tag uni-tag-champ", "Eligible")
+              else
+                tags$span(class = "uni-chip-tag uni-tag-muted", "Not eligible")),
+      tags$td(if (is_risk)
+                tags$span(class = "uni-chip-tag uni-tag-risk", "Risk flag")
+              else
+                tags$span(class = "uni-td-dash", "\u2014"))
+    )
+  })
+
+  tags$table(
+    class = "uni-table",
+    tags$thead(tags$tr(
+      tags$th("Model"), tags$th("Origin"), tags$th("Family"),
+      tags$th("Champion eligible"), tags$th("Risk")
+    )),
+    tags$tbody(rows)
+  )
+}
+
 section_universe <- function() {
   # --- Governed data binding (read-only, from the 7.0E loader cache) ---
-  uni <- universe_normalized()
-  cnt <- universe_counts(uni)
+  uni   <- universe_normalized()
   champ <- first_label(universe_champion_name(uni), APP_CHAMPION)
 
-  n <- function(x) if (is.null(x) || is.na(x)) "\u2014" else as.character(x)
+  # Visible model set: active models that entered the governed tournament.
+  # Deferred deep-learning candidates (e.g. NBEATS, NHITS) are intentionally
+  # excluded from the visible Universe page. The underlying artifact is never
+  # modified.
+  vis <- if (is.data.frame(uni) && "included_in_tournament" %in% names(uni)) {
+    uni[uni$included_in_tournament %in% TRUE, , drop = FALSE]
+  } else uni
+
+  n_vis <- if (is.data.frame(vis)) nrow(vis) else 0L
+  n_fam <- if (is.data.frame(vis) && "model_family" %in% names(vis))
+             length(unique(vis$model_family)) else 0L
+  fam_intro <- sprintf(
+    "AEGIS compares %d active models across %d families. Some deep-learning candidates are deferred for runtime and dependency reasons and are not shown here.",
+    n_vis, n_fam)
 
   panel(
     "universe",
@@ -1053,43 +1187,46 @@ section_universe <- function() {
     # A. Header --------------------------------------------------------------
     section_head(
       "Model Universe",
-      "Final baseline, challenger, deferred, and champion-eligible model set for the governed Model Lab."
+      "The set of models AEGIS compares \u2014 baselines, challengers and the governed champion \u2014 explained from the ground up."
     ),
 
-    # B. Summary cards (counts read straight from the artifact) --------------
-    card_grid(
-      kpi_card(n(cnt$total), "Total models", pill = "Governed universe", pill_class = "pill-blue"),
-      kpi_card(n(cnt$baselines), "Baselines", pill = "Reference families", pill_class = "pill-blue"),
-      kpi_card(n(cnt$challengers), "Challengers", pill = "Candidate models", pill_class = "pill-amber"),
-      kpi_card(n(cnt$in_tournament), "Included in tournament", pill = "Ranked", pill_class = "pill-green")
-    ),
-    card_grid(
-      kpi_card(n(cnt$deferred), "Deferred models", pill = "Out of ranking", pill_class = "pill-amber"),
-      kpi_card(n(cnt$champion_eligible), "Champion eligible", pill = "Governed eligibility", pill_class = "pill-blue"),
-      kpi_card(n(cnt$selected_champion), "Selected champion (with conditions)", pill = champ, pill_class = "pill-green"),
-      kpi_card(n(cnt$risk_flagged), "Models with risk flags", pill = "Review", pill_class = "pill-amber")
+    # B. How to read this universe (FIRST, open by default) ------------------
+    home_collapse(
+      "How to read this universe",
+      "Start here: what baselines, challengers, the tournament and the champion actually mean.",
+      info_list(
+        info_row("Baseline (current & reference)",
+                 "Today's production approach plus simple reference models. They anchor the comparison \u2014 they are not improvement candidates themselves."),
+        info_row("Challenger (candidate)",
+                 "New candidate models proposed to improve on the baselines. Each one is evaluated head-to-head inside the governed tournament."),
+        info_row("Included in tournament",
+                 "The model entered the governed rolling-origin ranking that compares every candidate on the same history."),
+        info_row("Champion eligible",
+                 "A governed flag marking a model as allowed to be considered for champion. It does not, by itself, decide the champion."),
+        info_row("Risk flag",
+                 "The model carries a documented risk (for example stability or maturity) that must be read alongside its results."),
+        info_row("Selected champion (with conditions)",
+                 paste0("The governed choice (", champ,
+                        "). It is approved with conditions and must be read together with the documented risks and governance notes \u2014 never as an unconditional winner."))
+      ),
+      open = FALSE
     ),
 
-    # C. Main model universe table -------------------------------------------
-    tags$h3(class = "section-block-title", "Governed model universe"),
-    tags$div(class = "tess-table-wrap", universe_table_widget(uni)),
+    # C. Model families compared (collapsible, closed) -----------------------
+    home_collapse(
+      "Model families compared",
+      "The active model families in play, from simple growth baselines to lightweight neural models.",
+      tags$p(class = "uni-fam-intro", fam_intro),
+      universe_families_ui(vis),
+      open = FALSE
+    ),
 
-    # D. Governed interpretation notes ---------------------------------------
-    tags$h3(class = "section-block-title", "How to read this universe"),
-    info_list(
-      info_row("Baselines",
-               "Current and reference model families that anchor the comparison; they are not improvement candidates."),
-      info_row("Challengers",
-               "Candidate improvement models evaluated against the baselines inside the governed tournament."),
-      info_row("Included in tournament",
-               "Models that entered the governed rolling-origin ranking; deferred models did not."),
-      info_row("Deferred models",
-               "Excluded from the tournament ranking due to runtime or dependency constraints \u2014 not a quality verdict."),
-      info_row("Champion eligibility",
-               "A governed eligibility flag indicating a model could be considered for champion selection; it does not by itself decide the champion."),
-      info_row("Selected champion (with conditions)",
-               paste0("The governed champion selection (", champ,
-                      ") is conditional: it is approved with conditions and must be read alongside the documented risks and governance notes."))
+    # D. Governed model table (collapsible, closed) --------------------------
+    home_collapse(
+      "Governed model table",
+      "Every active model with its origin, family, champion eligibility and risk flag.",
+      universe_static_table_ui(vis),
+      open = FALSE
     )
   )
 }

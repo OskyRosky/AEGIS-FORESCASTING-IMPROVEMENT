@@ -832,6 +832,58 @@ body {
 .theme-dark .home-collapse-head:hover .home-collapse-icon { background: #1d3047; }
 .theme-dark .home-collapse-body { border-color: #23374f; }
 
+/* ===================== Model Universe: visual family blocks ===================== */
+.uni-family-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 960px) { .uni-family-grid { grid-template-columns: 1fr; } }
+.uni-family { background: #f7f9fc; border: 1px solid #e4eaf2; border-radius: 12px; padding: 16px 18px; }
+.uni-family-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.uni-family-title { font-size: 15px; font-weight: 700; color: #1f2d3d; }
+.uni-family-count { font-size: 12px; font-weight: 600; color: #6b7c93; white-space: nowrap; }
+.uni-family-desc { font-size: 13px; line-height: 1.5; color: #51627a; margin: 0 0 12px; }
+.uni-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.uni-chip { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #dbe3ee; border-radius: 999px; padding: 5px 10px 5px 12px; box-shadow: 0 1px 2px rgba(20,40,70,.04); }
+.uni-chip.is-champion { border-color: #1a9641; background: #f2fbf4; }
+.uni-chip.is-risk { border-color: #e0a93b; background: #fdf7ec; }
+.uni-chip-name { font-size: 13px; font-weight: 600; color: #25344a; }
+.uni-chip-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; border-radius: 999px; padding: 2px 7px; }
+.uni-tag-base { background: #e8f0fb; color: #2e6fb0; }
+.uni-tag-chall { background: #fdf0db; color: #b07415; }
+.uni-tag-champ { background: #def3e3; color: #1a7d3c; }
+.uni-tag-risk { background: #fbe3e3; color: #a32020; }
+.theme-dark .uni-family { background: #15263b; border-color: #23374f; }
+.theme-dark .uni-family-title { color: #e8eef6; }
+.theme-dark .uni-family-count { color: #8fa2b8; }
+.theme-dark .uni-family-desc { color: #9fb0c4; }
+.theme-dark .uni-chip { background: #1b2c43; border-color: #2a425f; box-shadow: none; }
+.theme-dark .uni-chip.is-champion { border-color: #2c7a4a; background: #16331f; }
+.theme-dark .uni-chip.is-risk { border-color: #8a6a2a; background: #2e2616; }
+.theme-dark .uni-chip-name { color: #dce6f2; }
+.theme-dark .uni-tag-base { background: #1d3047; color: #7fb2e6; }
+.theme-dark .uni-tag-chall { background: #33291425; color: #e0b366; }
+.theme-dark .uni-tag-champ { background: #16331f; color: #66c184; }
+.theme-dark .uni-tag-risk { background: #3a1c1c; color: #e08585; }
+
+/* Universe: intro line + static governed table */
+.uni-fam-intro { font-size: 13px; color: #51627a; margin: 2px 0 14px; line-height: 1.5; }
+.uni-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.uni-table thead th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: #6b7c93; font-weight: 700; padding: 8px 12px; border-bottom: 2px solid #e4eaf2; }
+.uni-table tbody td { padding: 10px 12px; border-bottom: 1px solid #eef2f7; color: #34465c; vertical-align: middle; }
+.uni-table tbody tr:last-child td { border-bottom: 0; }
+.uni-table tbody tr.uni-row-champ td { background: #f2fbf4; }
+.uni-table tbody tr:hover td { background: #f6f9fd; }
+.uni-table tbody tr.uni-row-champ:hover td { background: #eaf7ee; }
+.uni-td-name { font-weight: 600; color: #25344a; }
+.uni-td-dash { color: #aab6c6; }
+.uni-tag-muted { background: #eef1f5; color: #7a8aa0; }
+.theme-dark .uni-fam-intro { color: #9fb0c4; }
+.theme-dark .uni-table thead th { color: #8fa2b8; border-bottom-color: #2a425f; }
+.theme-dark .uni-table tbody td { color: #c4d0de; border-bottom-color: #23374f; }
+.theme-dark .uni-table tbody tr.uni-row-champ td { background: #16331f; }
+.theme-dark .uni-table tbody tr:hover td { background: #1b2c43; }
+.theme-dark .uni-table tbody tr.uni-row-champ:hover td { background: #1a3a25; }
+.theme-dark .uni-td-name { color: #dce6f2; }
+.theme-dark .uni-tag-muted { background: #243349; color: #8fa2b8; }
+
 /* ===================== FORECASTING / TTL placeholder (Block 7.12-PREVIEW) ===================== */
 /* Calm, planned-state callout (NOT a red error panel). */
 .ttl-callout {
