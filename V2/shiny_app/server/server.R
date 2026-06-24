@@ -415,6 +415,11 @@ app_server <- function(input, output, session) {
     champion_exceptions_table()
   })
 
+  # Champion diagnostic outputs live inside collapsible sections (some closed by
+  # default); render eagerly so DT/plotly do not blank when initially hidden.
+  outputOptions(output, "champion_leadership_count_chart", suspendWhenHidden = FALSE)
+  outputOptions(output, "champion_series_evidence_table",  suspendWhenHidden = FALSE)
+
   # Governance: Risk Register ------------------------------------------------
   output$risk_register_table <- DT::renderDataTable({
     risk_register_table()

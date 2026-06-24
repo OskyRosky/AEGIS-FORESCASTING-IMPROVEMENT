@@ -1,0 +1,11 @@
+field,value
+stage,07 - V2 Models Tournament Visual Simplification Follow-up
+url,http://127.0.0.1:3838
+pid,3312
+preferred_port,3838
+log_dir,outputs/shiny_mvp/7_V2_MODELS_TOURNAMENT_VISUAL_SIMPLIFICATION_FOLLOWUP/logs
+log_prefix,tournament_visual
+http_status,200
+http_content_length,179788
+css_version,20260624b
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 3312

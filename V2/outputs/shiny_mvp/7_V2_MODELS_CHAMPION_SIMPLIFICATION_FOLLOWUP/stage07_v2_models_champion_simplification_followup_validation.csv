@@ -1,0 +1,25 @@
+stage,check,status
+parse,Modified R files parse (server.R, tabs.R),PASS
+page,Champion page exists,PASS
+removed,Governance Conditions / Caveats removed from Champion,PASS
+removed,Approved Dashboard Language removed from Champion,PASS
+removed,Source / Lineage removed from Champion,PASS
+removed,Diagnostic Governance Note removed from Champion,PASS
+removed,Block A scope / Not implemented / No scoring layer removed,PASS
+removed,champion_conditions_table DT removed from UI,PASS
+removed,champion_sources_table DT removed from UI,PASS
+added,Champion at a glance section exists (compact strip),PASS
+added,Why ETS Explicit was selected section exists,PASS
+added,Series-level diagnostic evidence section exists,PASS
+added,Series leadership map visual exists (39 tiles grouped by leader),PASS
+added,Global vs local dual callout exists (ETS Explicit vs Theta),PASS
+added,Leadership count explanation clarifies local leaders do not decide global champion,PASS
+added,Series-level details collapsed by default,PASS
+added,Local exceptions review collapsed by default,PASS
+data,Series rows from governed artifact,39
+data,Most frequent series-level leader,Theta (8)
+governance,No data artifacts modified,PASS
+governance,No models / forecasts / tournaments run,PASS
+governance,No metrics recomputed,PASS
+governance,Champion decision unchanged (ETS Explicit under conditions),PASS
+render,section_champion smoke render ALL_GOOD,PASS

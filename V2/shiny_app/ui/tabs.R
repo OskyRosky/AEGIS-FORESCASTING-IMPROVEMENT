@@ -1231,84 +1231,458 @@ section_universe <- function() {
   )
 }
 
+# Static HTML "league table" for the tournament. Plain HTML (not a DT widget)
+# so it renders reliably inside a collapsible and reads like a sports standings
+# table. Read-only; the caller passes the joined scorecard + evidence frame
+# already ordered for readability. No composite score is computed here.
+tournament_league_table_ui <- function(df) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Governed tournament evidence is unavailable."))
+  }
+  fam_label <- function(x) ifelse(nzchar(x), gsub("_", " ", x), "\u2014")
+  num <- function(x, d = 2) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  int <- function(x) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else as.character(as.integer(round(x)))
+  }
+
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r        <- df[i, ]
+    is_champ <- isTRUE(r$selected_champion %in% TRUE)
+    elig     <- isTRUE(r$eligible_for_champion_consideration %in% TRUE)
+    risk     <- tolower(trimws(as.character(r$risk_status)))
+    net      <- suppressWarnings(as.numeric(r$net_supported_evidence))
+    net_cls  <- if (is.na(net)) "uni-tag-muted" else if (net > 0) "uni-tag-champ" else if (net < 0) "uni-tag-risk" else "uni-tag-muted"
+    net_txt  <- if (is.na(net)) "\u2014" else if (net > 0) paste0("+", int(net)) else int(net)
+    risk_cls <- if (risk %in% c("high", "high_risk")) "uni-tag-risk" else if (risk %in% c("medium", "med")) "uni-tag-base" else "uni-tag-muted"
+    risk_lbl <- if (nzchar(risk) && risk != "na") risk else "low"
+    tags$tr(
+      class = if (is_champ) "uni-row-champ" else NULL,
+      tags$td(as.character(i)),
+      tags$td(
+        tags$span(class = "uni-td-name", r$model_name),
+        if (is_champ) tags$span(class = "uni-chip-tag uni-tag-champ",
+                                style = "margin-left:8px;", "\u2605 Champion")
+      ),
+      tags$td(fam_label(r$model_family)),
+      tags$td(int(r$supported_better_count)),
+      tags$td(int(r$supported_worse_count)),
+      tags$td(int(r$inconclusive_count)),
+      tags$td(tags$span(class = paste("uni-chip-tag", net_cls), net_txt)),
+      tags$td(num(r$official_median_mase)),
+      tags$td(num(r$official_median_rmsse)),
+      tags$td(tags$span(class = paste("uni-chip-tag", risk_cls), risk_lbl)),
+      tags$td(if (elig)
+                tags$span(class = "uni-chip-tag uni-tag-champ", "Eligible")
+              else
+                tags$span(class = "uni-chip-tag uni-tag-muted", "Not eligible"))
+    )
+  })
+
+  tags$div(
+    style = "overflow-x:auto;",
+    tags$table(
+      class = "uni-table",
+      tags$thead(tags$tr(
+        tags$th("#"), tags$th("Model"), tags$th("Family"),
+        tags$th("Better"), tags$th("Worse"), tags$th("Inconclusive"),
+        tags$th("Net evidence"), tags$th("MASE"), tags$th("RMSSE"),
+        tags$th("Risk"), tags$th("Eligibility")
+      )),
+      tags$tbody(rows)
+    )
+  )
+}
+
+# Dendrogram-style "Tournament Evidence Tree". Pure HTML/CSS, built from the
+# governed league frame (scorecard + pairwise evidence summary). It is a VISUAL
+# GROUPING only: the 13 active models are branched by their governed net
+# head-to-head evidence so you can see how they cluster/separate. It does NOT
+# recompute metrics, invent scores, create weights, or replace the selected
+# champion under conditions.
+tournament_evidence_tree_ui <- function(df) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Governed tournament evidence is unavailable."))
+  }
+  num <- function(x, d = 2) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  int <- function(x) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else as.character(as.integer(round(x)))
+  }
+  net_vec <- suppressWarnings(as.numeric(df$net_supported_evidence))
+  n_all   <- nrow(df)
+  champ_idx <- which(df$selected_champion %in% TRUE)
+  champ     <- if (length(champ_idx) >= 1) df[champ_idx[1], , drop = FALSE] else df[1, , drop = FALSE]
+  champ_net <- suppressWarnings(as.numeric(champ$net_supported_evidence))
+  champ_net_txt <- if (length(champ_net) != 1 || is.na(champ_net)) "\u2014"
+                   else if (champ_net > 0) paste0("+", as.integer(round(champ_net)))
+                   else as.character(as.integer(round(champ_net)))
+
+  fam_class <- function(f) {
+    f <- tolower(as.character(f))
+    if (grepl("statistic", f)) "fam-stat"
+    else if (grepl("growth", f)) "fam-growth"
+    else if (grepl("machine", f)) "fam-ml"
+    else if (grepl("neural|deep", f)) "fam-neural"
+    else "fam-other"
+  }
+  fam_label <- function(f) {
+    f <- tolower(as.character(f))
+    if (grepl("statistic", f)) "Statistical"
+    else if (grepl("growth", f)) "Growth baseline"
+    else if (grepl("machine", f)) "Machine learning"
+    else if (grepl("neural|deep", f)) "Neural"
+    else gsub("_", " ", f)
+  }
+
+  leaf <- function(i) {
+    net   <- net_vec[i]
+    champ <- isTRUE(df$selected_champion[i] %in% TRUE)
+    risk  <- tolower(as.character(df$risk_status[i]))
+    elig  <- isTRUE(df$eligible_for_champion_consideration[i] %in% TRUE)
+    net_txt <- if (is.na(net)) "\u2014" else if (net > 0) paste0("+", as.integer(round(net))) else as.character(as.integer(round(net)))
+    net_cls <- if (is.na(net) || net == 0) "is-zero" else if (net > 0) "is-pos" else "is-neg"
+    flag <- if (!elig) tags$span(class = "tev-leaf-flag is-inelig", "Not eligible")
+            else if (risk %in% c("high", "high_risk")) tags$span(class = "tev-leaf-flag is-risk", "High risk")
+            else if (risk %in% c("medium", "medium_risk")) tags$span(class = "tev-leaf-flag is-warn", "Medium risk")
+            else NULL
+    tags$div(
+      class = paste("tev-leaf", fam_class(df$model_family[i]), if (champ) "is-champ" else NULL),
+      tags$div(
+        class = "tev-leaf-top",
+        if (champ) tags$span(class = "tev-leaf-star", "\u2605"),
+        tags$span(class = "tev-leaf-name", df$model_name[i]),
+        tags$span(class = paste("tev-leaf-net", net_cls), net_txt)
+      ),
+      tags$div(
+        class = "tev-leaf-meta",
+        tags$span(class = "tev-leaf-fam", fam_label(df$model_family[i])),
+        tags$span(class = "tev-leaf-mase", paste0("MASE ", num(df$official_median_mase[i]))),
+        flag
+      )
+    )
+  }
+
+  tier_def <- list(
+    list(key = "strong",   title = "Strong evidence", hint = "net \u2265 +5",     test = function(n) !is.na(n) & n >= 5),
+    list(key = "positive", title = "Positive evidence", hint = "net +1 to +4",  test = function(n) !is.na(n) & n >= 1 & n <= 4),
+    list(key = "even",     title = "Even record",     hint = "net = 0",         test = function(n) !is.na(n) & n == 0),
+    list(key = "behind",   title = "Net negative",    hint = "net < 0",         test = function(n) !is.na(n) & n < 0)
+  )
+
+  branches <- lapply(tier_def, function(t) {
+    idx <- which(t$test(net_vec))
+    if (length(idx) == 0) return(NULL)
+    tags$div(
+      class = paste0("tev-branch tev-branch-", t$key),
+      tags$div(
+        class = "tev-branch-head",
+        tags$div(
+          class = paste0("tev-tier tev-tier-", t$key),
+          tags$span(class = "tev-tier-title", t$title),
+          tags$span(class = "tev-tier-hint", t$hint),
+          tags$span(class = "tev-tier-count", paste0(length(idx), " model", if (length(idx) != 1) "s" else ""))
+        )
+      ),
+      tags$div(class = "tev-leaves", lapply(idx, leaf))
+    )
+  })
+  branches <- branches[!vapply(branches, is.null, logical(1))]
+
+  legend <- tags$div(
+    class = "tev-legend",
+    tags$span(class = "tev-leg-item", tags$span(class = "tev-leg-dot fam-stat"), "Statistical"),
+    tags$span(class = "tev-leg-item", tags$span(class = "tev-leg-dot fam-growth"), "Growth baseline"),
+    tags$span(class = "tev-leg-item", tags$span(class = "tev-leg-dot fam-ml"), "Machine learning"),
+    tags$span(class = "tev-leg-item", tags$span(class = "tev-leg-dot fam-neural"), "Neural"),
+    tags$span(class = "tev-leg-item", tags$span(class = "tev-leaf-star tev-leg-star", "\u2605"), "Selected champion (conditions)")
+  )
+
+  tags$div(
+    class = "tev",
+    tags$div(
+      class = "tev-outcome",
+      tags$div(
+        class = "tev-outcome-head",
+        tags$span(class = "tev-outcome-kicker", "Tournament outcome"),
+        tags$div(
+          class = "tev-outcome-name",
+          tags$span(class = "tev-outcome-star", "\u2605"),
+          champ$model_name
+        ),
+        tags$span(class = "tev-outcome-tag", "Selected champion under conditions")
+      ),
+      tags$div(
+        class = "tev-outcome-stats",
+        tags$div(class = "tev-outcome-stat",
+                 tags$span(class = "tev-outcome-stat-value",
+                           paste0(int(champ$supported_better_count), " / ",
+                                  int(champ$supported_worse_count), " / ",
+                                  int(champ$inconclusive_count))),
+                 tags$span(class = "tev-outcome-stat-label", "Better / Worse / Inconclusive")),
+        tags$div(class = "tev-outcome-stat",
+                 tags$span(class = "tev-outcome-stat-value tev-outcome-pos", champ_net_txt),
+                 tags$span(class = "tev-outcome-stat-label", "Net evidence")),
+        tags$div(class = "tev-outcome-stat",
+                 tags$span(class = "tev-outcome-stat-value", num(champ$official_median_mase)),
+                 tags$span(class = "tev-outcome-stat-label", "MASE (lowest)")),
+        tags$div(class = "tev-outcome-stat",
+                 tags$span(class = "tev-outcome-stat-value", num(champ$official_median_rmsse)),
+                 tags$span(class = "tev-outcome-stat-label", "RMSSE (guardrail)"))
+      )
+    ),
+    tags$p(
+      class = "tev-note",
+      "Visual grouping from governed tournament evidence. This tree does not recompute metrics or replace the selected champion under conditions. Models are branched by their net head-to-head evidence (supported better minus supported worse); the grouping is a reading aid, not an official score, weighting, or elimination."
+    ),
+    tags$div(
+      class = "tev-tree",
+      tags$div(
+        class = "tev-root",
+        tags$div(
+          class = "tev-node-root",
+          tags$span(class = "tev-root-big", as.character(n_all)),
+          tags$span(class = "tev-root-label", "models \u00b7 governed evidence")
+        )
+      ),
+      tags$div(class = "tev-branches", branches)
+    ),
+    legend
+  )
+}
+
 section_tournament <- function() {
   vals <- tournament_summary_values()
+  league <- tournament_league_data()
   n <- function(x) {
     if (length(x) != 1 || is.na(x) || !nzchar(as.character(x))) "\u2014" else as.character(x)
   }
   panel(
     "tournament",
-    section_head("Tournament Standings",
-                 "Governed tournament evidence from the Model Lab. Official MASE/RMSSE and pairwise evidence are shown without recomputing rankings or creating a composite score."),
-
-    # A. Executive summary cards --------------------------------------------
-    card_grid(
-      kpi_card(n(vals$models_ranked), "Models ranked",
-               pill = "Governed scorecard", pill_class = "pill-blue"),
-      kpi_card(vals$primary_metric, "Primary metric",
-               pill = "Lower is better", pill_class = "pill-blue"),
-      kpi_card(vals$guardrail_metric, "Guardrail metric",
-               pill = "Lower is better", pill_class = "pill-blue"),
-      kpi_card(vals$selected_champion, "Selected champion under conditions",
-               pill = "Governed", pill_class = "pill-green")
-    ),
-    card_grid(
-      kpi_card(vals$confidence, "Confidence",
-               pill = "Decision confidence", pill_class = "pill-amber"),
-      kpi_card(n(vals$pairwise_comparisons), "Pairwise comparisons",
-               pill = "Governed evidence", pill_class = "pill-blue"),
-      kpi_card(paste0(n(vals$supported_better), " / ", n(vals$supported_worse)),
-               "Champion support better / worse",
-               pill = "Evidence summary", pill_class = "pill-green"),
-      kpi_card("No formula", "Composite Tournament Score",
-               pill = "Not computed", pill_class = "pill-amber")
+    section_head(
+      "Tournament Standings",
+      "A round-robin review where 13 models are compared head-to-head using governed evidence. MASE is the primary metric, RMSSE is the guardrail, and ETS Explicit is selected under conditions."
     ),
 
-    # B. Standings table -----------------------------------------------------
-    tags$h3(class = "section-block-title", "Governed tournament standings"),
-    tags$p(
-      class = "shell-card-detail",
-      "Rows are ordered by official median MASE ascending for readability. This ordering is not a final composite score and does not by itself decide the selected champion under conditions."
+    # A. Tournament summary (collapsible, open) -----------------------------
+    home_collapse(
+      "Tournament summary",
+      "The tournament at a glance: how many models, how many comparisons, the metrics, and the selected champion.",
+      card_grid(
+        kpi_card(n(vals$models_ranked), "Models",
+                 pill = "Round-robin", pill_class = "pill-blue"),
+        kpi_card(n(vals$pairwise_comparisons), "Pairwise comparisons",
+                 pill = "All vs all", pill_class = "pill-blue"),
+        kpi_card(vals$primary_metric, "Primary metric",
+                 pill = "Lower is better", pill_class = "pill-blue"),
+        kpi_card(vals$guardrail_metric, "Guardrail",
+                 pill = "Lower is better", pill_class = "pill-blue"),
+        kpi_card(vals$selected_champion, "Champion under conditions",
+                 pill = "Governed", pill_class = "pill-green")
+      ),
+      open = FALSE
     ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("tournament_standings_table")),
 
-    # C. MASE / RMSSE tradeoff ----------------------------------------------
-    tags$h3(class = "section-block-title", "MASE vs RMSSE tradeoff"),
-    tags$p(
-      class = "shell-card-detail",
-      "Each point is one model from the governed tournament scorecard. Lower-left indicates lower error on both governed metrics; no new score is calculated from this chart."
+    # B. How to read this tournament (collapsed) ----------------------------
+    home_collapse(
+      "How to read this tournament",
+      "How the round-robin works and why ETS Explicit is selected under conditions.",
+      info_list(
+        info_row("Everyone plays everyone",
+                 "The tournament is a round-robin: each of the 13 models is compared head-to-head against every other model, for 78 governed pairwise comparisons in total."),
+        info_row("MASE is the primary metric",
+                 "MASE measures forecast error. Lower is better \u2014 think of it as the model's score."),
+        info_row("RMSSE is the guardrail",
+                 "RMSSE is a second error metric used as a guardrail, so a model cannot look good on one metric while failing on another."),
+        info_row("Pairwise evidence is the head-to-head record",
+                 "For each pair, the governed evidence says whether one model is supported as better, worse, or inconclusive. Counting these gives each model a better / worse / inconclusive record \u2014 like wins, losses, and draws."),
+        info_row("Risk and eligibility are the rules",
+                 "Risk status and champion eligibility act as governance rules. A model can be strong on error yet held back \u2014 for example FastNeuralAR_MLP is flagged high-risk and is not eligible for champion consideration."),
+        info_row("No single composite score",
+                 "There is no single governed composite score. The decision is based on MASE, RMSSE guardrail, pairwise evidence, risk, eligibility, and governance conditions."),
+        info_row("Selected champion under conditions",
+                 "ETS Explicit has the lowest MASE and the strongest head-to-head record (8 supported-better, 0 supported-worse, confidence medium), so it is the selected champion under conditions \u2014 not an unconditional winner.")
+      ),
+      open = FALSE
     ),
-    tags$div(class = "shell-card", plotly::plotlyOutput("tournament_mase_rmsse_plot", height = "520px")),
 
-    # D. Pairwise evidence ---------------------------------------------------
-    tags$h3(class = "section-block-title", "Pairwise evidence"),
-    tags$p(
-      class = "shell-card-detail",
-      "Pairwise comparisons come from the governed tournament evidence artifact. The table reports MASE deltas, bootstrap confidence intervals, p-values, adjusted p-values, practical threshold flags, and comparison status."
+    # C. Tournament Evidence Tree (collapsed) - MAIN VISUAL ----------------
+    home_collapse(
+      "Tournament Evidence Tree",
+      "A dendrogram-style grouping of the 13 active models by their governed net head-to-head evidence, with ETS Explicit highlighted as the selected champion under conditions.",
+      tournament_evidence_tree_ui(league),
+      open = FALSE
     ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("tournament_pairwise_table")),
 
-    # E. Composite score note ------------------------------------------------
-    tags$h3(class = "section-block-title", "Composite Tournament Score"),
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-amber", "No governed formula found"),
-      tags$h3(class = "shell-card-title", "No composite tournament score is computed here"),
+    # D. Tournament League View (collapsed) - SCOREBOARD --------------------
+    home_collapse(
+      "Tournament League View",
+      "League-style scoreboard per model: better / worse / inconclusive, net evidence, primary metric and guardrail.",
+      tags$p(
+        class = "uni-fam-intro",
+        "Each model plays every other model. \u201cBetter\u201d, \u201cWorse\u201d and \u201cInconclusive\u201d count the governed head-to-head outcomes; \u201cNet evidence\u201d is better minus worse. MASE and RMSSE are the governed error metrics (lower is better). Rows are ordered by net evidence, then MASE, for readability only."
+      ),
+      tournament_league_table_ui(league),
+      open = FALSE
+    ),
+
+    # E. Head-to-head evidence details (collapsed, technical) ---------------
+    home_collapse(
+      "Head-to-head evidence details",
+      "Technical pairwise comparisons behind the better / worse / inconclusive record.",
       tags$p(
         class = "shell-card-detail",
-        "No governed numeric Composite Tournament Score formula was found in the current artifacts. The current Tournament page displays governed MASE/RMSSE, guardrail, risk, eligibility, and pairwise evidence. A future proposed composite score could combine accuracy, pairwise support, coverage, risk, and confidence, but the formula and weights require Oscar approval before implementation."
-      )
+        "Each row is one model-vs-model comparison. The tournament has 78 rows because 13 models are compared against each other in a round-robin design. The table reports MASE deltas, bootstrap confidence intervals, p-values, adjusted p-values, practical threshold flags and comparison status."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("tournament_pairwise_table")),
+      open = FALSE
     ),
 
-    # F. Scope guard ---------------------------------------------------------
-    tags$div(
-      style = "margin-top:18px;",
-      info_list(
-        info_row("Source policy", "Tournament uses governed Model Lab artifacts only; it does not use forecast_viewer_model_outputs.csv as an official tournament source."),
-        info_row("No recompute", "The page does not recompute MASE, RMSSE, pairwise evidence, rankings, forecasts, or champion decisions."),
-        info_row("Language policy", "ETS Explicit is shown only as selected champion under conditions, never as an unconditional winner.")
-      )
+    # Footer note (single sentence, no policy table) ------------------------
+    tags$p(
+      class = "tess-foot-note",
+      "This page reads governed Model Lab artifacts and does not recompute metrics or change the champion decision."
     )
+  )
+}
+
+# Compact "Champion at a glance" strip: a clean horizontal summary of the
+# essential governed facts (NOT a wall of KPI cards).
+champion_glance_ui <- function(vals) {
+  item <- function(label, value, primary = FALSE) {
+    tags$div(
+      class = paste("champ-glance-item", if (primary) "is-primary" else ""),
+      tags$div(class = "champ-glance-label", label),
+      tags$div(class = "champ-glance-value", value)
+    )
+  }
+  tags$div(
+    class = "champ-glance",
+    item("Champion", vals$champion, primary = TRUE),
+    item("Decision", "Selected under conditions"),
+    item("Median MASE", vals$mase_display),
+    item("Median RMSSE", vals$rmsse_display),
+    item("Pairwise support", paste0(vals$supported_better, " better / ", vals$supported_worse, " worse")),
+    item("Confidence", vals$confidence)
+  )
+}
+
+# Dual callout explaining the two distinct ideas Oscar found confusing:
+# the GLOBAL governed champion (ETS Explicit) vs the most frequent
+# SERIES-LEVEL leader (e.g. Theta). Pure HTML/CSS, no recompute.
+champion_dual_ui <- function(vals, series_vals) {
+  tags$div(
+    class = "champ-dual",
+    tags$div(
+      class = "champ-dual-pane is-global",
+      tags$span(class = "champ-dual-kicker", "Global governed champion"),
+      tags$div(class = "champ-dual-model",
+               tags$span(class = "champ-dual-star", "\u2605"), vals$champion),
+      tags$p(class = "champ-dual-note",
+             "Selected under conditions from aggregate tournament evidence: median MASE, RMSSE guardrail, pairwise support, eligibility, risk and governance conditions.")
+    ),
+    tags$div(class = "champ-dual-vs", "vs"),
+    tags$div(
+      class = "champ-dual-pane is-local",
+      tags$span(class = "champ-dual-kicker", "Local series leaders"),
+      tags$div(class = "champ-dual-model", series_vals$most_frequent_leader),
+      tags$p(class = "champ-dual-note",
+             "Models that win individual series locally (lowest median MASE for that series). Diagnostic only \u2014 local series leadership does not decide or replace the global governed champion.")
+    )
+  )
+}
+
+# Compact diagnostic stat strip for the series-level section.
+champion_series_stat_ui <- function(series_vals) {
+  item <- function(label, value, tone = "") {
+    tags$div(
+      class = paste("champ-glance-item", tone),
+      tags$div(class = "champ-glance-label", label),
+      tags$div(class = "champ-glance-value", value)
+    )
+  }
+  tags$div(
+    class = "champ-glance",
+    item("Total series", series_vals$total_series),
+    item("ETS Explicit leads", series_vals$ets_leads, "is-good"),
+    item("Another model leads", series_vals$ets_not_leads, "is-warn"),
+    item("Largest ETS gap", series_vals$largest_ets_gap)
+  )
+}
+
+# "Series leadership map": a compact grid of one tile per series, grouped by
+# the local series-level leader. ETS Explicit-led series are highlighted green.
+# Pure HTML/CSS from governed entity x model scores; no recompute, no new score.
+champion_series_leadership_map_ui <- function(evidence = champion_series_evidence(),
+                                              champion = APP_CHAMPION) {
+  if (!is.data.frame(evidence) || nrow(evidence) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Series-level diagnostic evidence is unavailable."))
+  }
+  num <- function(x, d = 2) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  leaders_list <- strsplit(as.character(evidence$series_level_leader), ";\\s*")
+  primary <- vapply(seq_along(leaders_list), function(i) {
+    ls <- leaders_list[[i]]
+    if (champion %in% ls) champion else ls[[1]]
+  }, character(1))
+
+  uniq_leaders <- unique(primary)
+  grp_size <- vapply(uniq_leaders, function(l) sum(primary == l), integer(1))
+  is_ets_grp <- uniq_leaders == champion
+  uniq_leaders <- uniq_leaders[order(!is_ets_grp, -grp_size, uniq_leaders)]
+
+  groups <- lapply(uniq_leaders, function(l) {
+    idx <- which(primary == l)
+    is_ets <- identical(l, champion)
+    tiles <- lapply(idx, function(i) {
+      r <- evidence[i, ]
+      tile_ets <- isTRUE(r$status == "ETS leads")
+      ttl <- paste0(
+        r$entity_key, " \u2014 local leader: ", r$series_level_leader,
+        " (MASE ", num(r$leader_median_mase), ")",
+        if (!is.na(r$ets_median_mase))
+          paste0("; ETS Explicit MASE ", num(r$ets_median_mase),
+                 ", rank ", r$ets_rank_by_mase) else ""
+      )
+      tags$div(
+        class = paste("clead-tile", if (tile_ets) "is-ets" else ""),
+        title = ttl,
+        tags$span(class = "clead-tile-name", r$entity_key)
+      )
+    })
+    tags$div(
+      class = paste("clead-group", if (is_ets) "is-ets" else ""),
+      tags$div(
+        class = "clead-group-head",
+        if (is_ets) tags$span(class = "clead-star", "\u2605"),
+        tags$span(class = "clead-group-name", l),
+        tags$span(class = "clead-group-count", length(idx))
+      ),
+      tags$div(class = "clead-tiles", tiles)
+    )
+  })
+
+  tags$div(
+    class = "clead",
+    tags$div(
+      class = "clead-legend",
+      tags$span(class = "clead-leg-item",
+                tags$span(class = "clead-leg-dot is-ets"), "ETS Explicit leads this series"),
+      tags$span(class = "clead-leg-item",
+                tags$span(class = "clead-leg-dot"), "Another model leads locally")
+    ),
+    tags$div(class = "clead-groups", groups)
   )
 }
 
@@ -1319,156 +1693,94 @@ section_champion <- function() {
   panel(
     "champion",
     section_head(
-      "Champion Decision",
-      "Governed champion decision from Model Lab and Governance artifacts. This page explains the selected champion under conditions and does not recompute tournament results."
+      "Champion",
+      "ETS Explicit is the selected champion under conditions. This page separates the global governed decision from series-level diagnostic evidence."
     ),
 
-    # A. Champion decision summary cards ------------------------------------
-    card_grid(
-      kpi_card(vals$champion, "Selected champion under conditions",
-               pill = "Governed decision", pill_class = "pill-green"),
-      kpi_card(vals$decision_status, "Decision status",
-               pill = "Conditional", pill_class = "pill-amber"),
-      kpi_card(vals$confidence, "Confidence",
-               pill = "Governance confidence", pill_class = "pill-amber"),
-      kpi_card(vals$mase_display, "Official median MASE",
-               pill = "Primary metric", pill_class = "pill-blue")
-    ),
-    card_grid(
-      kpi_card(vals$rmsse_display, "Official median RMSSE",
-               pill = "Guardrail metric", pill_class = "pill-blue"),
-      kpi_card(paste0(vals$supported_better, " better / ", vals$supported_worse, " worse"),
-               "Pairwise support",
-               pill = "Tournament evidence", pill_class = "pill-green"),
-      kpi_card(vals$pairwise_total, "Total pairwise comparisons",
-               pill = "Governed evidence", pill_class = "pill-blue"),
-      kpi_card(paste0(vals$origin, " / ", vals$family), "Model origin / family",
-               pill = "Lineage", pill_class = "pill-blue")
+    # 1. Champion at a glance (open) ----------------------------------------
+    home_collapse(
+      "Champion at a glance",
+      "The essential governed facts: champion, decision, primary metric, guardrail, pairwise support and confidence.",
+      champion_glance_ui(vals),
+      open = TRUE
     ),
 
-    # B. Champion evidence panel --------------------------------------------
-    tags$h3(class = "section-block-title", "Champion evidence"),
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-green", "Selected under conditions"),
-      tags$h3(class = "shell-card-title", "Governed champion decision"),
-      tags$p(
-        class = "shell-card-detail",
-        vals$champion,
-        " is the selected champion under governed conditions. This decision is supported by official MASE/RMSSE results, pairwise tournament evidence, eligibility checks, and governance conditions. It does not imply dominance in every individual series."
+    # 2. Why ETS Explicit was selected (open) -------------------------------
+    home_collapse(
+      "Why ETS Explicit was selected",
+      "The global evidence behind the selected champion under conditions.",
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-green", "Selected under conditions"),
+        tags$h3(class = "shell-card-title", "Global governed champion decision"),
+        tags$p(
+          class = "shell-card-detail",
+          paste0(vals$champion, " was selected because it combines strong global evidence: the lowest official median MASE, strong pairwise support, acceptable guardrail behaviour, eligibility, and governance conditions. It is the selected champion under conditions \u2014 not an unconditional winner \u2014 and does not lead every individual series.")
+        ),
+        info_list(
+          info_row("Primary accuracy evidence", paste0("Official median MASE = ", vals$mase_display, " (lowest in the tournament)")),
+          info_row("Guardrail evidence", paste0("Official median RMSSE = ", vals$rmsse_display)),
+          info_row("Pairwise support", paste0(vals$supported_better, " supported better / ",
+                                              vals$supported_worse, " supported worse / ",
+                                              vals$pairwise_total, " comparisons")),
+          info_row("Decision confidence", vals$confidence),
+          info_row("Eligibility & conditions", "Eligible for champion consideration and selected under governed conditions.")
+        )
       ),
-      info_list(
-        info_row("Primary accuracy evidence", paste0("Official median MASE = ", vals$mase_display)),
-        info_row("Guardrail evidence", paste0("Official median RMSSE = ", vals$rmsse_display)),
-        info_row("Pairwise support", paste0(vals$supported_better, " supported better / ",
-                                            vals$supported_worse, " supported worse / ",
-                                            vals$pairwise_total, " total comparisons")),
-        info_row("Decision confidence", vals$confidence),
-        info_row("Governance conditions", vals$conditions)
-      )
+      open = TRUE
     ),
 
-    # C. Governance conditions / caveats -------------------------------------
-    tags$h3(class = "section-block-title", "Governance conditions / caveats"),
-    tags$p(
-      class = "shell-card-detail",
-      "Conditions are read from the governed Champion Conditions Protocol. They must remain visible downstream and are not removed or downgraded by this dashboard."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_conditions_table")),
-
-    # D. Approved dashboard language -----------------------------------------
-    tags$h3(class = "section-block-title", "Approved dashboard language"),
-    tags$p(
-      class = "shell-card-detail",
-      "This page uses governed language for stakeholder-safe communication. Prohibited or discouraged phrases are shown only as language-policy warnings."
-    ),
-    champion_language_policy_panel(),
-
-    # E. Source / lineage ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Source / lineage"),
-    tags$p(
-      class = "shell-card-detail",
-      "Shiny reads governed artifacts only. No champion decision, score, MASE, RMSSE, or tournament result is recomputed on this page."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_sources_table")),
-
-    # F. Block A scope guard -------------------------------------------------
-    tags$div(
-      style = "margin-top:18px;",
-      info_list(
-        info_row("Block A scope", "This page explains the governed champion decision only."),
-        info_row("Not implemented here", "No per-series leader table, no series-level diagnostic evidence, and no tournament_entity_model_scores visualization."),
-        info_row("No scoring layer", "No composite score is computed and no weights are introduced.")
-      )
-    ),
-
-    # G. Block B: Series-level diagnostic evidence ---------------------------
-    tags$h3(class = "section-block-title", "Series-Level Diagnostic Evidence"),
-    tags$p(
-      class = "shell-card-detail",
-      "Governed entity x model scores showing where ETS Explicit leads and where another model has the lowest median MASE. This section is diagnostic evidence and does not change the governed champion decision."
-    ),
-
-    # B1. Diagnostic summary cards ------------------------------------------
-    card_grid(
-      kpi_card(series_vals$total_series, "Total series",
-               pill = "Entity x model artifact", pill_class = "pill-blue"),
-      kpi_card(series_vals$models_per_series, "Models evaluated per series",
-               pill = "Governed scores", pill_class = "pill-blue"),
-      kpi_card(series_vals$ets_leads, "Series where ETS Explicit leads",
-               pill = "Lowest median MASE", pill_class = "pill-green"),
-      kpi_card(series_vals$ets_not_leads, "Series where ETS Explicit does not lead",
-               pill = "Local exceptions", pill_class = "pill-amber")
-    ),
-    card_grid(
-      kpi_card(series_vals$most_frequent_leader, "Most frequent series-level leader",
-               pill = "Tie-aware count", pill_class = "pill-blue"),
-      kpi_card(series_vals$largest_ets_gap, "Largest ETS gap vs local leader",
-               pill = "Median MASE gap", pill_class = "pill-amber"),
-      shell_card("Tie handling", "Exact ties retained",
-                 "If models have exactly the same lowest median MASE for a series, all tied leaders are counted and displayed."),
-      shell_card("Governance", "Diagnostic only",
-                 "Local series-level leadership does not replace the selected champion under conditions.")
-    ),
-
-    # B2. Leadership count chart --------------------------------------------
-    tags$h3(class = "section-block-title", "Leadership count by model"),
-    tags$p(
-      class = "shell-card-detail",
-      "Series-level leader means the model with the lowest governed median MASE for that series. ETS Explicit is highlighted when present."
-    ),
-    tags$div(class = "shell-card", plotly::plotlyOutput("champion_leadership_count_chart", height = "520px")),
-
-    # B3. Series-level evidence table ---------------------------------------
-    tags$h3(class = "section-block-title", "Series-level evidence table"),
-    tags$p(
-      class = "shell-card-detail",
-      "One row per series. Sorted to show local exceptions first, then larger ETS Explicit median MASE gaps."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_series_evidence_table")),
-
-    # B4. Exceptions review table -------------------------------------------
-    tags$h3(class = "section-block-title", "Exceptions review"),
-    tags$p(
-      class = "shell-card-detail",
-      "Focused view of series where ETS Explicit is not the local series-level leader, with the largest median MASE gaps first."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_exceptions_table")),
-
-    # B5. Governance note ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Diagnostic governance note"),
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-amber", "Diagnostic evidence"),
-      tags$h3(class = "shell-card-title", "Not the governed champion decision"),
+    # 3. Series-level diagnostic evidence (open) ----------------------------
+    home_collapse(
+      "Series-level diagnostic evidence",
+      "Global champion vs local series leaders: where ETS Explicit leads and where another model wins individual series.",
+      tags$h3(class = "section-block-title", "Global champion vs local series leaders"),
       tags$p(
-        class = "shell-card-detail",
-        "Diagnostic evidence - not the governed champion decision. Series-level leadership is based on governed entity x model scores and helps identify local exceptions. It does not replace the selected champion under conditions."
+        class = "uni-fam-intro",
+        "Across 39 series, the local best-performing model may differ. This diagnostic view shows where ETS Explicit leads and where another model has the lower median MASE. It does not replace the governed champion decision."
       ),
+      champion_dual_ui(vals, series_vals),
       tags$p(
         class = "shell-card-detail",
-        "ETS Explicit may be the governed champion overall while other models lead individual series."
-      )
+        "Theta leads more individual series, but ETS Explicit remains the global governed champion because the champion decision is based on aggregate tournament evidence: median MASE, RMSSE guardrail, pairwise support, eligibility, risk and governance conditions. Local series leadership is diagnostic only."
+      ),
+      champion_series_stat_ui(series_vals),
+      tags$p(
+        class = "shell-card-detail",
+        "Series leadership map: one tile per series, grouped by the local series-level leader. Green tiles are series where ETS Explicit has the lowest median MASE."
+      ),
+      champion_series_leadership_map_ui(),
+      open = TRUE
+    ),
+
+    # 4. Leadership count by model (collapsed) ------------------------------
+    home_collapse(
+      "Leadership count by model",
+      "How many individual series each model leads locally. This does not decide the global champion.",
+      tags$p(
+        class = "shell-card-detail",
+        "Leadership count by model shows how many individual series each model leads locally (lowest median MASE). This chart counts local series leaders only. It does not decide the global champion. Theta may lead more individual series, while ETS Explicit remains the global governed champion because the champion decision is based on overall tournament evidence, pairwise support, guardrails, risk, eligibility and conditions."
+      ),
+      tags$div(class = "shell-card", plotly::plotlyOutput("champion_leadership_count_chart", height = "520px")),
+      open = FALSE
+    ),
+
+    # 5. Series-level details (collapsed) -----------------------------------
+    home_collapse(
+      "Series-level details",
+      "Detailed per-series comparison between the local leader and ETS Explicit.",
+      tags$p(
+        class = "shell-card-detail",
+        "One row per series: the local series-level leader, the leader's median MASE, ETS Explicit's median MASE, the gap versus the local leader, and ETS Explicit's rank. Sorted to show local exceptions first."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("champion_series_evidence_table")),
+      open = FALSE
+    ),
+
+    # Footer note -----------------------------------------------------------
+    tags$p(
+      class = "tess-foot-note",
+      "This page reads governed Model Lab artifacts and does not recompute metrics or change the champion decision. Governance conditions, approved language and source lineage live on the Governance pages."
     )
   )
 }

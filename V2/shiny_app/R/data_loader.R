@@ -107,6 +107,8 @@ build_artifact_registry <- function() {
       "outputs/model_lab/tournament_engine/tournament_model_scorecard.csv"),
     c("tournament_pairwise",        "tournament",   "csv",  "optional",
       "outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv"),
+    c("tournament_evidence_summary", "tournament",   "csv",  "optional",
+      "outputs/model_lab/tournament_engine/tournament_model_evidence_summary.csv"),
 
     # --- Challenger diagnostics (optional, diagnostic-only metrics) ---
     c("challenger_metrics",         "challenger",   "csv",  "optional",

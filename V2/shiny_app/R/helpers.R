@@ -1668,6 +1668,39 @@ tournament_pairwise <- function() {
   if (is.data.frame(df)) df else data.frame()
 }
 
+# Per-model pairwise win/draw/loss record (governed evidence summary). Read-only.
+tournament_evidence_summary <- function() {
+  df <- tryCatch(load_csv_artifact("tournament_evidence_summary"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df)) df else data.frame()
+}
+
+# League-style view: joins the governed scorecard (MASE/RMSSE/risk/eligibility/
+# champion) with the governed pairwise evidence summary (better/worse/inconclusive/
+# net). No recompute, no composite score; ordering is for readability only
+# (net supported evidence descending, then official median MASE ascending).
+tournament_league_data <- function(scorecard = tournament_scorecard_normalized(),
+                                   evidence  = tournament_evidence_summary()) {
+  if (!is.data.frame(scorecard) || nrow(scorecard) == 0) return(data.frame())
+  out <- scorecard
+  ev_cols <- c("supported_better_count", "supported_worse_count",
+               "inconclusive_count", "net_supported_evidence", "comparisons_tested")
+  if (is.data.frame(evidence) && nrow(evidence) > 0 &&
+      "model_name" %in% names(evidence)) {
+    ev <- evidence[, intersect(c("model_name", ev_cols), names(evidence)), drop = FALSE]
+    for (col in intersect(ev_cols, names(ev))) {
+      ev[[col]] <- suppressWarnings(as.numeric(ev[[col]]))
+    }
+    out <- merge(out, ev, by = "model_name", all.x = TRUE, sort = FALSE)
+  } else {
+    for (col in ev_cols) out[[col]] <- NA_real_
+  }
+  net  <- if ("net_supported_evidence" %in% names(out)) out$net_supported_evidence else rep(NA_real_, nrow(out))
+  mase <- if ("official_median_mase" %in% names(out)) out$official_median_mase else rep(NA_real_, nrow(out))
+  ord  <- order(-ifelse(is.na(net), -Inf, net), ifelse(is.na(mase), Inf, mase))
+  out[ord, , drop = FALSE]
+}
+
 tournament_champion_summary <- function() {
   df <- tryCatch(load_csv_artifact("champion_summary"),
                  error = function(e) data.frame())
@@ -1756,15 +1789,8 @@ tournament_standings_table <- function(df = tournament_scorecard_normalized()) {
                      "pill-amber", "pill-blue")
   risk_badge <- tournament_badge(ifelse(nzchar(as.character(df$risk_status)),
                                         as.character(df$risk_status), "none"), risk_cls)
-  champion_badge <- ifelse(df$selected_champion %in% TRUE,
-                           tournament_badge("Selected champion (conditions)", "pill-green"),
-                           "\u2014")
   eligible_badge <- tournament_bool_badge(df$eligible_for_champion_consideration,
                                           "Eligible", "Not eligible")
-  audit_badge <- tournament_bool_badge(df$audit_risk_flag,
-                                       "Audit risk", "No audit risk",
-                                       true_class = "pill-amber",
-                                       false_class = "pill-blue")
 
   tbl <- data.frame(
     Model = htmltools::htmlEscape(df$model_name),
@@ -1774,11 +1800,8 @@ tournament_standings_table <- function(df = tournament_scorecard_normalized()) {
     `Median RMSSE` = round(df$official_median_rmsse, 3),
     `MASE guardrail` = htmltools::htmlEscape(df$mase_guardrail_status),
     `RMSSE guardrail` = htmltools::htmlEscape(df$rmsse_guardrail_status),
-    Coverage = df$entity_count,
-    Risk = risk_badge,
-    `Audit risk` = audit_badge,
     Eligibility = eligible_badge,
-    Champion = champion_badge,
+    Risk = risk_badge,
     check.names = FALSE,
     stringsAsFactors = FALSE
   )
@@ -1797,7 +1820,7 @@ tournament_standings_table <- function(df = tournament_scorecard_normalized()) {
       scrollX = TRUE,
       dom = "ft",
       order = list(list(3, "asc")),
-      columnDefs = list(list(className = "dt-left", targets = c(0, 1, 2, 8, 9, 10, 11)))
+      columnDefs = list(list(className = "dt-left", targets = c(0, 1, 2, 5, 6, 7, 8)))
     )
   )
 }

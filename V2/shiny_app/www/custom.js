@@ -140,7 +140,15 @@
     var collapseHead = closest(target, ".home-collapse-head");
     if (collapseHead) {
       var collapseBox = closest(collapseHead, ".home-collapse");
-      if (collapseBox) collapseBox.classList.toggle("is-open");
+      if (collapseBox) {
+        collapseBox.classList.toggle("is-open");
+        // Nudge any DataTables / widgets inside to recompute column widths now
+        // that the section is visible (they render hidden via suspendWhenHidden
+        // = FALSE but size to 0 while collapsed).
+        if (collapseBox.classList.contains("is-open")) {
+          window.dispatchEvent(new Event("resize"));
+        }
+      }
       return;
     }
   });

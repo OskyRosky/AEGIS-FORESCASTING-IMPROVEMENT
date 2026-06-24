@@ -211,7 +211,7 @@ app_ui <- function() {
     fillable = FALSE,
     padding = 0,
     gap = 0,
-    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css?v=20260624a"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css?v=20260624f"),
     tags$script(src = "custom.js?v=20260623b"),
     tags$div(
       class = "tess-app",

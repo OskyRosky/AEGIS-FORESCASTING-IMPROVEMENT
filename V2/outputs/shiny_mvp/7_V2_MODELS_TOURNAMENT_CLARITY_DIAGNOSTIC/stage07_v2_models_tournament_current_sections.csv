@@ -1,0 +1,10 @@
+section,type,verdict,reason
+8 KPI cards (2 rows),cards,simplify,Keep Models 13 / Pairwise 78 / Primary metric MASE / Guardrail RMSSE / Champion; remove Confidence / 8-0 / No-formula floating cards.
+Governed standings table (12 cols),DT table,collapse_and_slim,Useful but too wide; add win/draw/loss; reduce default columns; collapse by default.
+MASE vs RMSSE tradeoff scatter,plotly,remove,Correlated metrics; FastNeuralAR_MLP outlier squashes plot; shows no single score; Oscar does not understand it.
+Pairwise evidence table (12 cols),DT table,collapse,Valuable but very technical (CIs/p-values); collapse and add plain verdict column first.
+No composite tournament score card,shell card,remove,Reads as a missing feature; no governed formula exists; replace with one-sentence champion explainer.
+Scope guard / policy block,info list,collapse,Good governance content; move to bottom collapsible.
+How to read this tournament,(missing),add,No plain-language story today; add the football/league explanation.
+Head-to-head / league visual,(missing),add,No who-beat-whom view today; add governance-safe league standings (W-D-L) from evidence_summary.
+Win / draw / loss record,(missing),add,evidence_summary artifact exists but is unused; this is the score Oscar wants.
