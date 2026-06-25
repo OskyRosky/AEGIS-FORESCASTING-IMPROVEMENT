@@ -1,0 +1,2 @@
+ValueType,date_count,model_count,key_count,min_date,max_date,row_count,status
+,,,,,,,DB_ACCESS_NOT_AVAILABLE - run Query 2 from manual_queries.sql in SSMS/ADS and paste results here

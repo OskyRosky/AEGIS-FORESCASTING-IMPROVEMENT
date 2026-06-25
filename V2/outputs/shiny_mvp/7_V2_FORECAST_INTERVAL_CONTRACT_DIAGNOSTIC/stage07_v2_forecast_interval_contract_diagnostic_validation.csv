@@ -1,0 +1,28 @@
+check_name,status,details
+v2_root_exists,pass,V2 active root present and inspected
+forecasts_csv_inspected,pass,data/processed/forecasts.csv header + sample rows + distinct values inspected (65095 rows)
+actuals_csv_inspected,pass,data/processed/actuals.csv header + sample rows inspected
+run_metadata_inspected,pass,data/processed/run_metadata.csv read (forecast_version 2026-05-01, 65095 rows, 45 entities, 16 models)
+current_contract_documented,pass,9 columns documented; point-forecast-only confirmed
+value_type_inspected,pass,value_type has a single value 'Forecast-Mean' across all 65095 rows
+interval_columns_confirmed,pass,No lower/upper/quantile/interval columns in forecasts.csv (CONFIRMED MISSING)
+backtest_artifact_compared,pass,forecast_viewer_model_outputs.csv HAS lower_bound/upper_bound/interval_level columns but all values empty/NA (not the Forecast source)
+forecast_generation_lineage_searched,pass,Writer located: python/transform/build_data_contract.py _build_forecasts(); source python/ingestion/queries.py + export_hdd_region.py
+forecast_writer_identified,pass,build_data_contract.py writes forecasts.csv; raw from SQL forecast_substrateBE_hdd_region
+sql_value_type_filter_found,warning,"Both SQL query and transform filter ValueType='Forecast-Mean'. Source SQL table HAS a ValueType column -> DB MAY contain Lower/Upper rows; cannot verify without DB access."
+interval_related_code_searched,pass,Only unused NA assignment found (build_forecast_viewer_handoff_pilot.py:267-269); no active interval logic
+model_capability_assessed,pass,Production models upstream (SQL); repo backtest models deterministic/placeholder; no probabilistic libs in requirements.txt
+model_capability_classification,warning,"NOT_SUPPORTED_BY_CURRENT_CODE for repo python models; UNKNOWN for SQL source until DISTINCT ValueType is checked"
+recommended_contract_created,pass,Wide format recommended (forecast_lower_80/upper_80/lower_95/upper_95 + interval_method)
+required_changes_listed,pass,14 files/categories A-J documented in required_changes.csv
+oscar_decisions_listed,pass,10 open decisions documented in open_decisions.csv
+shiny_future_plan_created,pass,Loader + arearange band + Data notes plan documented
+no_data_artifacts_modified,pass,Read-only; no data/processed or governed artifact modified
+no_governed_artifacts_modified,pass,No governed artifact changed
+no_shiny_source_modified,pass,No shiny_app source file modified
+no_model_scripts_modified,pass,No python model script modified
+no_models_run,pass,No model executed
+no_forecasts_generated,pass,No forecast generated
+no_metrics_recomputed,pass,No metric recomputed
+champion_unchanged,pass,Champion decision untouched
+diagnostic_outputs_created,pass,7 diagnostic files written under outputs/shiny_mvp/7_V2_FORECAST_INTERVAL_CONTRACT_DIAGNOSTIC/

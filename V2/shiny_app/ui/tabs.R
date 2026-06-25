@@ -520,128 +520,146 @@ section_forecast <- function() {
 
   fw_series <- fvf_series_choices()                      # 45 series
 
-  fv_step <- function(num, title, control, hint = NULL, extra = NULL) {
-    tags$div(
-      class = "fv-step",
-      tags$div(
-        class = "fv-step-head",
-        tags$span(class = "fv-step-num", as.character(num)),
-        tags$span(class = "fv-step-title", title)
-      ),
-      control,
-      if (!is.null(hint)) tags$p(class = "fv-step-hint", hint),
-      extra
-    )
-  }
-
   panel(
     "forecast",
     section_head(
       "Forecast",
-      "Single-model Forward Forecast: actual history followed by the forward production forecast. It renders only after you click Analyze Forward Forecast."
+      "Single-model forward forecast. Select a key / series and forecast window to view actual history followed by the forward production forecast."
+    ),
+
+    # B. How to use this forecast view (collapsed by default) --------------
+    home_collapse(
+      "How to use this forecast view",
+      "A simple guide to the forward production forecast shown on this page.",
+      tags$ul(
+        class = "fvb-how-list",
+        tags$li("This page shows the ", tags$b("forward production forecast"), " for one ", tags$b("key / series"), " at a time."),
+        tags$li("The ", tags$b("solid line"), " is actual history up to the last actual date."),
+        tags$li("The ", tags$b("dashed line"), " is the future forecast read from ", tags$code("forecasts.csv"), "."),
+        tags$li("The ", tags$b("vertical boundary"), " marks the forecast start (the last actual date)."),
+        tags$li("Each key / series has ", tags$b("one selected production model / version"), "."),
+        tags$li("This page does ", tags$b("not"), " compare multiple models \u2014 historical multi-model backtest comparison lives in ", tags$b("Viewer"), ".")
+      ),
+      open = FALSE
     ),
 
     # =====================================================================
-    # FORWARD FORECAST (production forecast + actual history)
+    # BOX 1 \u2014 SET UP THE FORECAST VIEW (controls only, numbered steps).
+    # Comes FIRST: configure here, then the chart + data notes fill in below.
+    # Analyze Forward Forecast is the LAST step, at the bottom of this box.
     # =====================================================================
     tags$section(
-      class = "fvx-section fvx-forward",
+      class = "fvx-section fvx-forward fvb fvb-setup-section",
       tags$div(
-        class = "fvx-section-head",
+        class = "fvb-setup-head",
         tags$span(class = "fvx-section-kicker", "Forward"),
-        tags$h3(class = "fvx-section-title", "Forward Forecast"),
+        tags$h3(class = "fvx-section-title", "Set up the forecast view"),
         tags$span(class = "pill pill-teal", "Future \u00b7 single-model")
       ),
       tags$p(
-        class = "fvx-section-lead",
-        "Actual history up to the last actual date, then the forward production forecast after that point. ",
+        class = "fvb-setup-lead",
+        "Choose a key / series, a forecast window and an actual-history window, then run step 4. ",
         "Sources: ", tags$code("actuals.csv"), " + ", tags$code("forecasts.csv"),
         " (45 series, one selected model per series)."
       ),
 
+      # Steps 1, 2, 3 --------------------------------------------------
       tags$div(
-        class = "fv-setup",
+        class = "fvb-controls",
         tags$div(
-          class = "fv-setup-panel",
-          tags$div(class = "fv-setup-title", "Set up the forward view"),
-
-          fv_step(
-            1, "Select series",
-            selectInput("fvf_series", NULL, choices = fw_series,
-                        selected = if (length(fw_series)) fw_series[[1]] else NULL,
-                        width = "100%"),
-            "Choose one of the 45 production series."
-          ),
-          fv_step(
-            2, "Forecast window",
-            selectInput("fvf_window", NULL,
-                        choices = c("Next 30 days" = 30, "Next 90 days" = 90,
-                                    "Next 180 days" = 180,
-                                    "Full forecast window" = 0),
-                        selected = 90, width = "100%"),
-            "How far into the future to draw the forward forecast line."
-          ),
-          fv_step(
-            3, "Actual history window",
-            selectInput("fvf_history", NULL,
-                        choices = c("Last 90 actual days" = 90,
-                                    "Last 180 actual days" = 180,
-                                    "Last 365 actual days" = 365),
-                        selected = 180, width = "100%"),
-            "How much observed history to show before the forecast start boundary."
-          ),
-          tags$div(
-            class = "fv-step fv-step-action",
-            tags$div(
-              class = "fv-step-head",
-              tags$span(class = "fv-step-num", "4"),
-              tags$span(class = "fv-step-title", "Analyze")
-            ),
-            actionButton("fvf_go", "Analyze Forward Forecast",
-                         class = "fv-analyze-btn fv-analyze-btn-fwd"),
-            tags$p(class = "fv-step-hint",
-                   "The chart updates only after you click Analyze Forward Forecast. Changing selectors does not auto-refresh.")
-          ),
-          uiOutput("fvf_model_note"),
-          tags$p(class = "fv-entity-note",
-                 "Actual history and the forward production forecast are read directly from governed artifacts.")
+          class = "fvb-field fvb-field-series",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "1"), "Select key / series"),
+          selectInput("fvf_series", NULL, choices = fw_series,
+                      selected = if (length(fw_series)) fw_series[[1]] else NULL,
+                      width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "Choose one of the 45 production keys / series.")
         ),
-
         tags$div(
-          class = "fv-result",
-          tags$div(
-            class = "fv-step-head",
-            tags$span(class = "fv-step-num", "5"),
-            tags$span(class = "fv-step-title", "Forward chart")
-          ),
-          tags$div(
-            class = "fv-chart-wrap",
-            highcharter::highchartOutput("fvf_chart", height = "520px")
-          ),
-          tags$div(
-            class = "fv-notes-head",
-            tags$span(class = "fv-step-num", "6"),
-            tags$span(class = "fv-step-title", "Data notes")
-          ),
-          uiOutput("fvf_notes"),
-          tags$div(
-            class = "fv-warn-card fv-warn-card-fwd",
-            tags$ul(
-              class = "fv-warn-list",
-              tags$li(tags$span(class = "pill pill-teal", "Forward"),
-                      "This page uses the forward production forecast artifact. It is a single selected forecast per series, not a multi-model comparison."),
-              tags$li(tags$span(class = "pill pill-slate", "Boundary"),
-                      "The vertical \u201cForecast start\u201d line marks the last actual date; everything to its right is projected, not observed.")
-            )
-          )
+          class = "fvb-field fvb-field-history",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "2"), "Forecast window"),
+          selectInput("fvf_window", NULL,
+                      choices = c("Next 30 days" = 30, "Next 90 days" = 90,
+                                  "Next 180 days" = 180,
+                                  "Full forecast window" = 0),
+                      selected = 90, width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "How far into the future to draw the forward forecast line.")
+        ),
+        tags$div(
+          class = "fvb-field fvb-field-history",
+          tags$label(class = "fvb-field-label",
+                     tags$span(class = "fvb-step-num", "3"), "Actual history window"),
+          selectInput("fvf_history", NULL,
+                      choices = c("Last 90 actual days" = 90,
+                                  "Last 180 actual days" = 180,
+                                  "Last 365 actual days" = 365),
+                      selected = 180, width = "100%"),
+          tags$p(class = "fvb-field-hint",
+                 "How much observed history to show before the forecast start boundary.")
         )
-      )
+      ),
+
+      # Step 4 \u2014 Analyze Forward Forecast (bottom of the setup box) --------
+      tags$div(
+        class = "fvb-analyze-row",
+        tags$div(
+          class = "fvb-analyze-label",
+          tags$span(class = "fvb-step-num", "4"),
+          tags$span(class = "fvb-field-label", "Analyze Forward Forecast")
+        ),
+        actionButton("fvf_go", "Analyze Forward Forecast",
+                     class = "fv-analyze-btn fvb-analyze-btn"),
+        tags$p(class = "fvb-field-hint fvb-analyze-hint",
+               "Renders the forecast chart and data notes below. Click again any time you change the key / series, forecast window or history window to refresh. Changing selectors alone does not auto-refresh.")
+      ),
+
+      # Production model / version note (compact, below the controls).
+      uiOutput("fvf_model_note")
     ),
 
-    # Methodology note -------------------------------------------------------
+    # =====================================================================
+    # BOX 2 \u2014 FORECAST CHART (results: chart + data notes).
+    # Separate, collapsible box. Action-gated: empty state until Analyze.
+    # =====================================================================
+    home_collapse(
+      "Forecast Chart",
+      "Actual history, the forward production forecast and the forecast start boundary for the selected key / series.",
+      tags$div(
+        class = "fvb-result",
+        tags$div(
+          class = "fvb-result-head",
+          tags$span(class = "fvb-field-label", "Forecast chart")
+        ),
+        tags$div(
+          class = "fv-chart-wrap fvb-chart-wrap",
+          highcharter::highchartOutput("fvf_chart", height = "560px")
+        ),
+        tags$div(
+          class = "fvb-result-head",
+          tags$span(class = "fvb-field-label", "Data notes")
+        ),
+        uiOutput("fvf_notes"),
+        tags$div(
+          class = "fv-warn-card fv-warn-card-fwd",
+          tags$ul(
+            class = "fv-warn-list",
+            tags$li(tags$span(class = "pill pill-teal", "Forward"),
+                    "This page uses the forward production forecast artifact. It is a single selected forecast per key / series, not a multi-model comparison."),
+            tags$li(tags$span(class = "pill pill-slate", "Boundary"),
+                    "The vertical \u201cForecast start\u201d line marks the last actual date; everything to its right is projected, not observed.")
+          )
+        )
+      ),
+      open = TRUE
+    ),
+
+    # Footer note ------------------------------------------------------------
     tags$p(
       class = "fv-method-note",
-      "This page visualizes the governed forward production forecast only. It does not generate new forecasts, recalculate metrics, rerun tournaments, or change any champion."
+      "This page reads actuals.csv and forecasts.csv. It does not generate forecasts, compare models, rerun tournaments, recalculate metrics, or change champion decisions."
     )
   )
 }
@@ -683,16 +701,9 @@ section_accuracy <- function() {
       open = FALSE
     ),
 
-    # C. Accuracy summary (KPI cards inside a collapsible box) -------------
-    home_collapse(
-      "Accuracy summary",
-      "Headline coverage and the worst / most stable pockets for the analyzed setup.",
-      uiOutput("acc_summary_cards"),
-      open = TRUE
-    ),
-
     # =====================================================================
     # BOX 1 \u2014 SET UP THE ACCURACY VIEW (controls only, numbered steps).
+    # Comes FIRST: configure here, then the summary + results fill in below.
     # Analyze Accuracy is the LAST step, at the bottom of this box.
     # =====================================================================
     tags$section(
@@ -779,12 +790,20 @@ section_accuracy <- function() {
         actionButton("acc_go", "Analyze Accuracy",
                      class = "fv-analyze-btn fvb-analyze-btn"),
         tags$p(class = "fvb-field-hint fvb-analyze-hint",
-               "Renders the heatmap and metric table below. Updates only on click \u2014 no auto-refresh. All values are computed in memory from the governed backtest artifact; nothing is written back.")
+               "Renders the summary, heatmap and metric table below. Click again any time you change the horizon, metric or filters to refresh every result. All values are computed in memory from the governed backtest artifact; nothing is written back.")
       )
     ),
 
+    # C. Accuracy summary (auto-fills after Analyze, above the results) -----
+    home_collapse(
+      "Accuracy summary",
+      "Headline coverage and the worst / most stable pockets for the analyzed setup.",
+      uiOutput("acc_summary_cards"),
+      open = TRUE
+    ),
+
     # =====================================================================
-    # BOX 2 \u2014 HEATMAP (results only: heatmap + metric table).
+    # BOX 2 \u2014 HEATMAP (results: heatmap only).
     # Separate, collapsible box. Action-gated: empty state until Analyze.
     # =====================================================================
     home_collapse(
@@ -801,7 +820,30 @@ section_accuracy <- function() {
           plotly::plotlyOutput("acc_heatmap", height = "560px")
         ),
         tags$div(
-          class = "fvb-result-head fvb-notes-head",
+          class = "fv-warn-card",
+          tags$ul(
+            class = "fv-warn-list",
+            tags$li(tags$span(class = "pill pill-amber", "Diagnostics"),
+                    "These are dashboard diagnostics derived from the frozen backtest output. They are not official governance metrics and do not change champion selection."),
+            tags$li(tags$span(class = "pill pill-slate", "Standardized"),
+                    "Heatmap color uses a robust standardized severity score (median / IQR) so different measures are visually comparable.")
+          )
+        )
+      ),
+      open = TRUE
+    ),
+
+    # =====================================================================
+    # BOX 3 \u2014 METRIC VALUES TABLE (results: raw + standardized table).
+    # Separate, collapsible box. Same action-gated source as the heatmap.
+    # =====================================================================
+    home_collapse(
+      "Metric values (raw + standardized)",
+      "Per key / series and model values for the selected metric and horizon. Raw values plus the standardized severity score used by the heatmap; lower is better.",
+      tags$div(
+        class = "fvb-result",
+        tags$div(
+          class = "fvb-result-head",
           tags$span(class = "fvb-field-label", "Metric values (raw + standardized)")
         ),
         tags$div(class = "tess-table-wrap",
@@ -810,10 +852,8 @@ section_accuracy <- function() {
           class = "fv-warn-card",
           tags$ul(
             class = "fv-warn-list",
-            tags$li(tags$span(class = "pill pill-amber", "Diagnostics"),
-                    "These are dashboard diagnostics derived from the frozen backtest output. They are not official governance metrics and do not change champion selection."),
             tags$li(tags$span(class = "pill pill-slate", "Standardized"),
-                    "Heatmap color uses a robust standardized severity score (median / IQR) so different measures are visually comparable. The table shows raw values."),
+                    "The standardized column matches the heatmap color (robust median / IQR score). The other columns show raw measure values."),
             tags$li(tags$span(class = "pill pill-blue", "Backtest only"),
                     "Accuracy uses historical backtest data only (never the forward forecast / actuals files). It does not generate forecasts.")
           )

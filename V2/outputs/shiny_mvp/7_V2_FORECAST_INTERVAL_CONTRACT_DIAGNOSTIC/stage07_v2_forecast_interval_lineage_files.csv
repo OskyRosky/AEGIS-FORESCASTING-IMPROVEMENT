@@ -1,0 +1,18 @@
+stage,file_path,role,evidence,produces_intervals
+ingestion_sql,python/ingestion/queries.py,"SQL query constants. HDD_REGION_FORECASTS_QUERY selects from [TesseractEarthDW].[dbo].[forecast_substrateBE_hdd_region] and FILTERS [ValueType] = 'Forecast-Mean' (line ~36). Source table HAS a ValueType column.",NO (filters to Forecast-Mean only)
+ingestion_export,python/ingestion/export_hdd_region.py,"Runs the query and writes data/raw/hdd_region_forecasts.csv (the source_file value).",NO
+transform_writer,python/transform/build_data_contract.py,"_build_forecasts() (lines 158-200) renames raw columns and writes data/processed/forecasts.csv. SECOND filter: value_type == 'Forecast-Mean' (lines 171-173). FORECASTS_COLUMNS has no interval columns (lines 51-59).",NO (filters to Forecast-Mean only)
+raw_input,data/raw/hdd_region_forecasts.csv,"Upstream raw extract (Forecast-Mean rows only).",NO
+production_artifact,data/processed/forecasts.csv,"Forecast PAGE source. Point forecast only.",NO
+run_metadata,data/processed/run_metadata.csv,"Run manifest: run_timestamp 2026-06-10, forecast_version 2026-05-01, forecast_rows 65095, entity_count 45, model_count 16.",n/a
+backtest_models,python/model_lab/models/fixed_growth_model.py,"FixedGrowthModel.predict() returns deterministic point array last_value + step*increment (lines 34-44). No variance.",NO (deterministic)
+backtest_models,python/model_lab/models/arima_fixed_model.py,"ARIMA_Fixed deterministic drift; no state variance.",NO (deterministic)
+backtest_models,python/model_lab/models/ets_current_model.py,"ETS_Current deterministic level+trend; no variance.",NO (deterministic)
+backtest_placeholders,python/model_lab/models/theta_model.py,"Theta = NotImplementedError placeholder.",NO (not implemented)
+backtest_placeholders,python/model_lab/models/autoarima_model.py,"AutoARIMA = NotImplementedError placeholder.",NO (not implemented)
+backtest_placeholders,python/model_lab/models/ets_model.py,"ETS Explicit = NotImplementedError placeholder.",NO (not implemented)
+backtest_writer,python/model_lab/build_forecast_viewer_handoff_pilot.py,"Builds forecast_viewer_model_outputs.csv. EXPLICITLY sets df['lower_bound']=pd.NA, df['upper_bound']=pd.NA, df['interval_level']=pd.NA (lines 267-269) with comment 'intervals not available in any source'.",NO (hardcoded NA)
+backtest_artifact,data/processed/forecast_viewer_model_outputs.csv,"Has lower_bound, upper_bound, interval_level COLUMNS but all values empty/NA. Used by Accuracy/Viewer, NOT by Forecast.",NO (columns present, empty)
+requirements,python/requirements.txt,"Only pandas, pyodbc, python-dotenv. No statsmodels/statsforecast/darts/torch.",NO
+shiny_helpers,shiny_app/R/helpers.R,"fvf_forecasts()/fvf_actuals() read forecasts.csv/actuals.csv. Comment line ~439: 'Prediction intervals are NOT available in this artifact.'",n/a (visualization)
+evaluation_contract,python/evaluation/build_evaluation_dataset.py,"FORECAST_REQUIRED_COLUMNS has no interval columns (lines 34-40).",n/a
