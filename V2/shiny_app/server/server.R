@@ -193,8 +193,37 @@ app_server <- function(input, output, session) {
         cell("Date range", paste0(s$date_min, " \u2192 ", s$date_max))
       ),
       tags$p(class = "fv-avail-note",
-             paste0("View: forward production forecast  \u00b7  source: forecasts.csv + actuals.csv  \u00b7  forecast span: ",
+             paste0("View: forward production forecast  \u00b7  source: ",
+                    s$source_file, " + actuals.csv  \u00b7  forecast span: ",
                     s$fwd_first, " \u2192 ", s$fwd_last, ".")),
+      # ---- Governed prediction-interval metadata (read-only) ----
+      if (isTRUE(s$has_intervals) && s$n_interval > 0) {
+        tagList(
+          tags$div(
+            class = "fv-avail-grid",
+            cell("Interval method", s$iv_method),
+            cell("Interval source", s$iv_source),
+            cell("Interval levels shown", s$iv_levels),
+            cell("Calibrated horizon", s$iv_horizon),
+            cell("Calibration grain", s$iv_grain),
+            cell("Calibration sample size", s$iv_sample)
+          ),
+          if (isTRUE(s$point_anomaly))
+            tags$p(class = "fv-avail-note",
+                   tags$span(class = "pill pill-amber", "Point anomaly"),
+                   paste0(" forecast_point_scale_anomaly = TRUE for this key: the ",
+                          "production point forecast scale is inconsistent with ",
+                          "backtest/actuals. The interval is proportional to the ",
+                          "point but does NOT correct the point forecast.")),
+          if (!is.null(s$fwd_window) && !is.na(s$fwd_window) &&
+              (s$fwd_window == 0 || s$fwd_window > 30))
+            tags$p(class = "fv-avail-note",
+                   "Prediction intervals are shown only through forecast day 30; later forecast days are point forecast only.")
+        )
+      } else {
+        tags$p(class = "fv-avail-note",
+               "Prediction interval columns are not available for the selected rows; point forecast is shown only.")
+      },
       if (s$n_forecast == 0)
         tags$p(class = "fv-avail-note",
                "No forward forecast rows were found after the last actual date for this series.")

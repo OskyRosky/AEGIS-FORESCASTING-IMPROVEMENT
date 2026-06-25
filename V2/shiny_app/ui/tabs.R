@@ -562,6 +562,10 @@ section_forecast <- function() {
         "Sources: ", tags$code("actuals.csv"), " + ", tags$code("forecasts.csv"),
         " (45 series, one selected model per series)."
       ),
+      tags$p(
+        class = "fvb-setup-note",
+        "Prediction intervals are backtest-calibrated and currently available for the first 30 forecast days only. Longer windows continue as point forecast after day 30. Shiny only visualizes interval columns from the governed forecast artifact."
+      ),
 
       # Steps 1, 2, 3 --------------------------------------------------
       tags$div(

@@ -143,6 +143,12 @@ build_artifact_registry <- function() {
     # --- Forecasting data (optional, for explorer/accuracy later) ---
     c("forecasts",                  "forecasting",  "csv",  "optional",
       "data/processed/forecasts.csv"),
+    # Stage 07 Etapa 2B-v1.1b governed interval artifact: forecasts.csv columns
+    # PLUS empirical relative-residual prediction-interval columns (horizons
+    # 1-30 only). Read-only; the Forecast page PREFERS this when present and
+    # falls back to forecasts.csv otherwise. Never modified by the app.
+    c("forecasts_with_intervals",   "forecasting",  "csv",  "optional",
+      "data/processed/forecasts_with_intervals_relative.csv"),
     c("actuals",                    "forecasting",  "csv",  "optional",
       "data/processed/actuals.csv"),
     c("forecast_comparison",        "forecasting",  "csv",  "optional",

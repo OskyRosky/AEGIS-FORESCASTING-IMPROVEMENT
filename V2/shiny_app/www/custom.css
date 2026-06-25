@@ -1439,6 +1439,8 @@ body {
 }
 .fvb-setup-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .fvb-setup-lead { font-size: 12.5px; color: #627d98; margin: 6px 0 14px; line-height: 1.5; }
+.fvb-setup-note { font-size: 12px; color: #0f766e; background: #ecfdf5; border: 1px solid #b6e3d4;
+  border-radius: 8px; padding: 8px 11px; margin: 0 0 14px; line-height: 1.5; }
 .fvb-controls {
   display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start;
   padding-bottom: 14px; border-bottom: 1px dashed #e3e9f1; margin-bottom: 14px;
@@ -1501,6 +1503,7 @@ body {
 .theme-dark .fvb-source-note { background: #11253b; border-left-color: #2e75b6; color: #9fb0c4; }
 .theme-dark .fvb-setup { background: #15263b; border-color: #23374f; box-shadow: none; }
 .theme-dark .fvb-setup-lead { color: #8da4bd; }
+.theme-dark .fvb-setup-note { color: #5eead4; background: #0c2f29; border-color: #155e52; }
 .theme-dark .fvb-controls { border-bottom-color: #23374f; }
 .theme-dark .fvb-field-label,
 .theme-dark .fvb-result-head { color: #9fb0c4; }

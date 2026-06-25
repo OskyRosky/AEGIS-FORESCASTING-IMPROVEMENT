@@ -1,0 +1,10 @@
+metric,value
+available_rows,1350.0
+median_band95_width_ratio,5.4133
+p95_band95_width_ratio,26.2205
+median_band80_width_ratio,0.1605
+rows_band95_gt_2x,925.0
+pct_band95_gt_2x,68.52
+rows_band95_gt_5x,745.0
+pct_band95_gt_5x,55.19
+monotonicity_clamped_rows,0.0

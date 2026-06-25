@@ -1,0 +1,15 @@
+decision,recommendation,rationale,status
+interval_method,Empirical / backtest-calibrated residual-quantile prediction intervals,SQL source has no intervals; production models have no native intervals and several are deterministic; backtest residuals are the only error evidence,PROPOSED
+naive_2sigma,REJECTED,Assumes normality + symmetry not justified; empirical quantiles allow asymmetric honest bands,DECIDED
+interval_levels,Generate 80% and 95%; dashboard shows 95% by default,Compute both at once (marginal cost ~0); show wider band first for conservatism,PROPOSED
+contract_format,Wide (forecast_lower_80/upper_80/lower_95/upper_95 + metadata),Fixed level set; additive and NA-safe; simplest for Shiny consumption,PROPOSED
+calibration_grain,key/series x horizon-bucket (NOT per production model),Per-model mapping is NOT reliable (0 clean matches; 10 ensembles absent from backtest),PROPOSED
+horizon_treatment,Horizon-aware via buckets; NA beyond backtest evidence (>30 days),"Backtest only covers horizon_days 1-30; production needs up to ~1450 days. Beyond 30d there is NO empirical evidence",PROPOSED_NEEDS_OSCAR
+residual_source,backtest artifact (forecast_viewer_model_outputs.csv) actual_value - forecast_value,Production forecasts.csv is future-only with zero overlap to actuals.csv -> no native residuals computable,CONFIRMED_CONSTRAINT
+deterministic_models,May receive EMPIRICAL bands (labeled empirical, not native),Deterministic point forecast still has backtest error; band is empirical proxy only,PROPOSED
+non_negative_cap,lower bounds capped at 0 (HDD cannot be negative),Resource is HDD capacity; document that capping distorts nominal coverage,PROPOSED
+monotonicity,Enforce lower_95<=lower_80<=forecast<=upper_80<=upper_95,Prevents nonsensical crossing bands,PROPOSED
+coverage_validation,Empirical coverage check on backtest (80% ~contains 80%; 95% ~95%),Without coverage check the word 'calibrated' is unjustified,PROPOSED
+dashboard_label,Prediction interval (backtest-calibrated),Honest; avoids 'confidence interval' (not statistically derived) and vague 'uncertainty band',PROPOSED
+shiny_role,Visualize only; never compute,Golden rule: never cook data in the dashboard,DECIDED
+model_population_caveat,Document that band residuals come from a DIFFERENT model population than production,Backtest models != production models; band is a portfolio proxy, not model-specific,MUST_DOCUMENT

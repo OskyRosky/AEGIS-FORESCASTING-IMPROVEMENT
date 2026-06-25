@@ -1,0 +1,24 @@
+check_id,check_name,status,details
+1,row_count_preserved,pass,65095 in == 65095 out
+2,original_columns_preserved,pass,9 original forecasts.csv columns retained in order
+3,forecast_value_unchanged,pass,point forecast untouched (bands multiplicative only)
+4,keys_dates_models_unchanged,pass,entity_key/date/model_version unchanged
+5,new_interval_columns_added,pass,forecast_horizon_day + 19 interval/metadata columns added
+6,intervals_only_horizon_1_30,pass,bands present only for forecast_horizon_day 1-30 (1350 rows)
+7,intervals_na_beyond_30,pass,63745 rows horizon>30 have NA bands + reason outside_calibrated_horizon_1_30
+8,interval_extrapolated_always_false,pass,interval_extrapolated=False on all rows
+9,no_lower_below_zero,pass,lower bounds capped at 0; none negative
+10,monotonicity_holds,pass,lower_95<=lower_80<=forecast<=upper_80<=upper_95; 0 clamps required
+11,available_true_only_with_4_bounds,pass,interval_available=TRUE only with all 4 bounds (1350 rows)
+12,available_false_when_missing,pass,interval_available=FALSE when bounds missing (63745 rows)
+13,unavailable_reason_populated,pass,every unavailable row has a reason
+14,near_zero_exclusions_documented,pass,4148 backtest rows excluded (1041 forecast<=0; 3107 |f|<1% of key median); recorded in interval_near_zero_excluded_count
+15,relative_error_clipping_documented,pass,clip [-0.95, p99=26.1787]; recorded in interval_relative_error_clip_lower/upper
+16,holdout_coverage_calculated,pass,out-of-sample temporal holdout (last 3 cutoffs): 80%=0.809, 95%=0.922 (both within targets)
+17,band_width_credibility_checked,warning,"95% band wide: median width/forecast=5.41, p95=26.2; 925/1350 (68.5%) >2x, 745/1350 (55.2%) >5x. Honest (coverage-validated) but wide upper tail; 80% band tight (median 0.16)."
+18,calibration_grain_distribution,pass,1170 entity_key x bucket; 180 resource x bucket fallback (6 keys absent from backtest)
+19,apc_dedicated_now_proportional,pass,APC-Dedicated point 29.1 -> 95% [15.8, 85.3] (vs absolute method 29->902); flagged forecast_point_scale_anomaly=TRUE
+20,no_shiny_files_modified,pass,shiny_app untouched
+21,no_models_run,pass,no models executed/retrained
+22,champion_unchanged,pass,no champion decision changed
+23,forecasts_csv_not_overwritten,pass,new artifact forecasts_with_intervals_relative.csv; forecasts.csv intact

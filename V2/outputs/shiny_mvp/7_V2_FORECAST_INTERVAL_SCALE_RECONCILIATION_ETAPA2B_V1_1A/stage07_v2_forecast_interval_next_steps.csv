@@ -1,0 +1,9 @@
+step_id,priority,action,owner,blocking
+NS1,1,"PROCEED to Etapa 2B-v1.1b: build relative-residual intervals. relative_error computed WITHIN backtest = (bt_actual - bt_forecast)/bt_forecast; band = production_forecast * (1 + rel_quantile). Scale-invariant -> bt-vs-prod absolute scale mismatch does NOT propagate.",Agent,no
+NS2,1,"GUARDRAIL: winsorize/cap relative_error (e.g. clip to [-0.95, +cap_p99]) to avoid blowups when bt_forecast near zero; protect production_forecast near zero.",Agent,no
+NS3,1,"GUARDRAIL: 6 keys missing from backtest (AUT/CHL/DNK/EUR/IDN/MYS-Go Local) -> use resource(HDD)/global relative-error fallback; mark interval_calibration_grain accordingly.",Agent,no
+NS4,2,"FLAG (separate from intervals): APC-Dedicated production forecast median 35.9 is ~36x below BOTH backtest actual (1295.9) AND actuals.csv (977). The production point itself looks scale-anomalous for this key. Relative bands will be proportional/sane, but the point forecast quality should be reviewed by Oscar independently.",Oscar,no
+NS5,2,"INVESTIGATE directional scale spread: actuals/prod_fc median ratio is 0.30 globally (forecasts ~3x historical actuals) while APC-Dedicated is the inverse. Confirm whether this is legitimate growth over 2026-2030 or unit/aggregation drift. Does not block relative intervals.",Oscar+Agent,no
+NS6,1,"VALIDATE in 1.1b: band-width/forecast ratio credibility (target most rows < ~1) AND out-of-sample coverage via backtest holdout (not in-sample).",Agent,no
+NS7,3,"Etapa 3 (Shiny) remains BLOCKED until 1.1b produces credible + coverage-validated bands.",Agent,YES
+NS8,note,"Absolute-residual artifact forecasts_with_intervals.csv stays as diagnostic evidence only; do NOT visualize; do NOT overwrite forecasts.csv.",Agent,YES

@@ -1,0 +1,121 @@
+grain,entity_key,horizon_bucket,n,q025,q10,q90,q975
+entity_key_x_horizon_bucket,APC-Dedicated,15_30,2337,-0.906,-0.4585,0.0109,3.6628
+entity_key_x_horizon_bucket,APC-Dedicated,1_7,1040,-0.4577,-0.0689,0.0087,1.9292
+entity_key_x_horizon_bucket,APC-Dedicated,8_14,1029,-0.5417,-0.1668,0.0147,8.4052
+entity_key_x_horizon_bucket,APC-MSIT,15_30,2496,-0.1204,-0.069,0.0801,0.5824
+entity_key_x_horizon_bucket,APC-MSIT,1_7,1092,-0.0574,-0.018,0.0432,5.4504
+entity_key_x_horizon_bucket,APC-MSIT,8_14,1092,-0.0699,-0.0466,0.0695,1.7706
+entity_key_x_horizon_bucket,APC-Multitenant,15_30,2272,-0.0534,-0.0235,0.0329,0.593
+entity_key_x_horizon_bucket,APC-Multitenant,1_7,1003,-0.0091,-0.0048,0.0148,0.3875
+entity_key_x_horizon_bucket,APC-Multitenant,8_14,1000,-0.0182,-0.011,0.024,0.5893
+entity_key_x_horizon_bucket,ARE-Go Local,15_30,2483,-0.2053,-0.0532,0.1001,26.1494
+entity_key_x_horizon_bucket,ARE-Go Local,1_7,1092,-0.0237,-0.0086,0.0307,4.053
+entity_key_x_horizon_bucket,ARE-Go Local,8_14,1092,-0.0464,-0.0201,0.0655,7.0024
+entity_key_x_horizon_bucket,AUS-Go Local,15_30,2423,-0.0438,-0.0272,9.6677,26.1787
+entity_key_x_horizon_bucket,AUS-Go Local,1_7,1077,-0.0116,-0.0061,1.9363,26.1787
+entity_key_x_horizon_bucket,AUS-Go Local,8_14,1048,-0.0204,-0.0128,0.6705,26.1787
+entity_key_x_horizon_bucket,BRA-Go Local,15_30,2474,-0.0423,-0.0269,0.0311,26.1787
+entity_key_x_horizon_bucket,BRA-Go Local,1_7,1092,-0.0097,-0.0052,0.0113,9.3169
+entity_key_x_horizon_bucket,BRA-Go Local,8_14,1092,-0.0221,-0.014,0.0215,21.684
+entity_key_x_horizon_bucket,CAN-Go Local,15_30,2437,-0.0399,-0.0241,0.1022,26.1787
+entity_key_x_horizon_bucket,CAN-Go Local,1_7,1092,-0.0104,-0.0053,0.0917,22.5154
+entity_key_x_horizon_bucket,CAN-Go Local,8_14,1076,-0.02,-0.0128,0.1105,26.1787
+entity_key_x_horizon_bucket,CHE-Go Local,15_30,2484,-0.0375,-0.0209,0.0621,26.1787
+entity_key_x_horizon_bucket,CHE-Go Local,1_7,1092,-0.0075,-0.0033,0.0227,3.1178
+entity_key_x_horizon_bucket,CHE-Go Local,8_14,1092,-0.0174,-0.0091,0.0425,5.4721
+entity_key_x_horizon_bucket,DEU-Go Local,15_30,2439,-0.0313,-0.0149,0.0744,26.1787
+entity_key_x_horizon_bucket,DEU-Go Local,1_7,1092,-0.0077,-0.0038,0.0708,10.1316
+entity_key_x_horizon_bucket,DEU-Go Local,8_14,1091,-0.0158,-0.0079,0.083,18.4771
+entity_key_x_horizon_bucket,ESP-Go Local,15_30,2478,-0.29,-0.0903,1.0201,13.7773
+entity_key_x_horizon_bucket,ESP-Go Local,1_7,1092,-0.0544,-0.0177,0.2839,5.0882
+entity_key_x_horizon_bucket,ESP-Go Local,8_14,1092,-0.125,-0.0572,0.6096,7.1379
+entity_key_x_horizon_bucket,EUR-Dedicated,15_30,2471,-0.1607,-0.1123,0.2898,2.1683
+entity_key_x_horizon_bucket,EUR-Dedicated,1_7,1092,-0.0517,-0.0132,0.1163,18.5508
+entity_key_x_horizon_bucket,EUR-Dedicated,8_14,1089,-0.1015,-0.0614,0.2583,6.447
+entity_key_x_horizon_bucket,EUR-MSIT,15_30,2496,-0.0798,-0.0508,0.058,1.047
+entity_key_x_horizon_bucket,EUR-MSIT,1_7,1092,-0.0241,-0.0115,0.0278,6.5013
+entity_key_x_horizon_bucket,EUR-MSIT,8_14,1092,-0.0404,-0.0252,0.0518,4.962
+entity_key_x_horizon_bucket,EUR-Multitenant,15_30,2274,-0.043,-0.0263,0.0744,0.5324
+entity_key_x_horizon_bucket,EUR-Multitenant,1_7,1004,-0.0134,-0.0071,0.0414,0.281
+entity_key_x_horizon_bucket,EUR-Multitenant,8_14,1001,-0.0211,-0.0136,0.0813,0.4569
+entity_key_x_horizon_bucket,FRA-Go Local,15_30,2459,-0.051,-0.0329,0.0605,26.1787
+entity_key_x_horizon_bucket,FRA-Go Local,1_7,1092,-0.0142,-0.0085,0.0168,13.0399
+entity_key_x_horizon_bucket,FRA-Go Local,8_14,1092,-0.0267,-0.0185,0.0352,26.1787
+entity_key_x_horizon_bucket,GBR-Dedicated,15_30,2464,-0.8322,-0.6074,0.1596,0.6483
+entity_key_x_horizon_bucket,GBR-Dedicated,1_7,1086,-0.3255,-0.0942,0.1734,0.6813
+entity_key_x_horizon_bucket,GBR-Dedicated,8_14,1081,-0.5182,-0.3084,0.1687,0.6514
+entity_key_x_horizon_bucket,GBR-Go Local,15_30,2328,-0.0462,-0.0259,0.0688,0.4831
+entity_key_x_horizon_bucket,GBR-Go Local,1_7,1022,-0.0116,-0.007,0.0316,0.0908
+entity_key_x_horizon_bucket,GBR-Go Local,8_14,1017,-0.0292,-0.0183,0.0406,0.1757
+entity_key_x_horizon_bucket,IND-Go Local,15_30,2294,-0.0359,-0.0206,0.0309,0.075
+entity_key_x_horizon_bucket,IND-Go Local,1_7,1008,-0.0172,-0.0045,0.0111,0.0469
+entity_key_x_horizon_bucket,IND-Go Local,8_14,1008,-0.017,-0.0097,0.0203,0.0658
+entity_key_x_horizon_bucket,ISR-Go Local,15_30,2480,-0.2758,-0.0291,0.11,0.4484
+entity_key_x_horizon_bucket,ISR-Go Local,1_7,1092,-0.1003,-0.0068,0.0573,0.1614
+entity_key_x_horizon_bucket,ISR-Go Local,8_14,1089,-0.1605,-0.0157,0.0929,0.255
+entity_key_x_horizon_bucket,ITA-Go Local,15_30,2431,-0.1325,-0.0396,0.7072,14.7444
+entity_key_x_horizon_bucket,ITA-Go Local,1_7,1081,-0.0201,-0.0086,0.3004,5.0686
+entity_key_x_horizon_bucket,ITA-Go Local,8_14,1064,-0.0498,-0.0214,0.3784,7.0198
+entity_key_x_horizon_bucket,JPN-Go Local,15_30,2299,-0.0404,-0.0258,0.0243,0.0517
+entity_key_x_horizon_bucket,JPN-Go Local,1_7,1008,-0.0123,-0.0064,0.0104,0.0377
+entity_key_x_horizon_bucket,JPN-Go Local,8_14,1008,-0.0227,-0.0143,0.0176,0.0556
+entity_key_x_horizon_bucket,KOR-Go Local,15_30,2496,-0.0863,-0.0354,0.1717,13.3191
+entity_key_x_horizon_bucket,KOR-Go Local,1_7,1092,-0.0187,-0.0072,0.0383,1.3249
+entity_key_x_horizon_bucket,KOR-Go Local,8_14,1092,-0.0479,-0.0183,0.0789,2.1773
+entity_key_x_horizon_bucket,LAM-Multitenant,15_30,2444,-0.041,-0.0215,0.203,26.1787
+entity_key_x_horizon_bucket,LAM-Multitenant,1_7,1092,-0.0082,-0.0034,0.1714,24.0288
+entity_key_x_horizon_bucket,LAM-Multitenant,8_14,1071,-0.0177,-0.01,0.2058,26.1787
+entity_key_x_horizon_bucket,MEX-Go Local,15_30,2480,-0.2893,-0.0382,0.1808,0.2776
+entity_key_x_horizon_bucket,MEX-Go Local,1_7,1091,-0.1405,-0.0124,0.0458,0.1615
+entity_key_x_horizon_bucket,MEX-Go Local,8_14,1085,-0.1759,-0.0175,0.1458,0.2092
+entity_key_x_horizon_bucket,NAM-Dedicated,15_30,2472,-0.068,-0.0478,0.1635,11.3841
+entity_key_x_horizon_bucket,NAM-Dedicated,1_7,1092,-0.0199,-0.0133,0.0994,26.0588
+entity_key_x_horizon_bucket,NAM-Dedicated,8_14,1063,-0.0351,-0.0256,0.1146,26.1787
+entity_key_x_horizon_bucket,NAM-GCC Low,15_30,2442,-0.037,-0.0204,0.0412,26.1787
+entity_key_x_horizon_bucket,NAM-GCC Low,1_7,1092,-0.0083,-0.0038,0.038,26.1787
+entity_key_x_horizon_bucket,NAM-GCC Low,8_14,1074,-0.018,-0.0099,0.0499,26.1787
+entity_key_x_horizon_bucket,NAM-ITAR DoD,15_30,2347,-0.6676,-0.0364,0.8481,21.3351
+entity_key_x_horizon_bucket,NAM-ITAR DoD,1_7,1029,-0.0258,-0.0062,0.1978,2.4598
+entity_key_x_horizon_bucket,NAM-ITAR DoD,8_14,1029,-0.0195,-0.0124,1.495,5.3895
+entity_key_x_horizon_bucket,NAM-ITAR GCCH,15_30,2299,-0.8645,-0.4792,5.5792,9.3658
+entity_key_x_horizon_bucket,NAM-ITAR GCCH,1_7,1016,-0.015,-0.005,0.8664,2.1771
+entity_key_x_horizon_bucket,NAM-ITAR GCCH,8_14,1014,-0.226,-0.0131,2.999,7.007
+entity_key_x_horizon_bucket,NAM-MSIT,15_30,2496,-0.1574,-0.0949,0.0843,4.7768
+entity_key_x_horizon_bucket,NAM-MSIT,1_7,1092,-0.0322,-0.0063,0.0355,0.8059
+entity_key_x_horizon_bucket,NAM-MSIT,8_14,1092,-0.0811,-0.0201,0.0574,2.1207
+entity_key_x_horizon_bucket,NAM-Multitenant,15_30,2272,-0.0658,-0.0259,0.051,0.6494
+entity_key_x_horizon_bucket,NAM-Multitenant,1_7,1003,-0.0205,-0.0094,0.0277,0.3562
+entity_key_x_horizon_bucket,NAM-Multitenant,8_14,999,-0.0269,-0.014,0.0418,0.622
+entity_key_x_horizon_bucket,NAM-SDF,15_30,2472,-0.8125,-0.2158,0.5289,2.0424
+entity_key_x_horizon_bucket,NAM-SDF,1_7,1092,-0.95,-0.3396,0.1266,0.5112
+entity_key_x_horizon_bucket,NAM-SDF,8_14,1083,-0.9066,-0.3158,0.2924,1.3261
+entity_key_x_horizon_bucket,NAM-TDF,15_30,2482,-0.8008,-0.0989,0.5529,1.7731
+entity_key_x_horizon_bucket,NAM-TDF,1_7,1092,-0.95,-0.135,0.1249,0.5962
+entity_key_x_horizon_bucket,NAM-TDF,8_14,1092,-0.8971,-0.1097,0.2627,0.9816
+entity_key_x_horizon_bucket,NOR-Go Local,15_30,2482,-0.0747,-0.0325,0.6345,9.1734
+entity_key_x_horizon_bucket,NOR-Go Local,1_7,1092,-0.0127,-0.006,0.0508,1.422
+entity_key_x_horizon_bucket,NOR-Go Local,8_14,1092,-0.0313,-0.0151,0.2899,2.6522
+entity_key_x_horizon_bucket,NZL-Go Local,15_30,1456,-0.3635,-0.0577,0.593,0.6836
+entity_key_x_horizon_bucket,NZL-Go Local,1_7,637,-0.1205,-0.0136,0.0735,0.2317
+entity_key_x_horizon_bucket,NZL-Go Local,8_14,637,-0.1799,-0.0279,0.3805,0.5523
+entity_key_x_horizon_bucket,POL-Go Local,15_30,2493,-0.2586,-0.0628,0.871,5.1589
+entity_key_x_horizon_bucket,POL-Go Local,1_7,1092,-0.0474,-0.011,0.1995,2.1409
+entity_key_x_horizon_bucket,POL-Go Local,8_14,1092,-0.1148,-0.0259,0.3728,2.8645
+entity_key_x_horizon_bucket,QAT-Go Local,15_30,2414,-0.1531,-0.0677,0.1289,24.3511
+entity_key_x_horizon_bucket,QAT-Go Local,1_7,1092,-0.0328,-0.0107,0.1498,2.4267
+entity_key_x_horizon_bucket,QAT-Go Local,8_14,1086,-0.0719,-0.0262,0.2349,5.5143
+entity_key_x_horizon_bucket,SGP-Go Local,15_30,2080,-0.2529,-0.053,0.0723,0.1088
+entity_key_x_horizon_bucket,SGP-Go Local,1_7,910,-0.12,-0.0145,0.0181,0.0498
+entity_key_x_horizon_bucket,SGP-Go Local,8_14,910,-0.1631,-0.0272,0.0375,0.0697
+entity_key_x_horizon_bucket,SWE-Go Local,15_30,2469,-0.1379,-0.0549,0.2545,25.8143
+entity_key_x_horizon_bucket,SWE-Go Local,1_7,1092,-0.05,-0.0136,0.0975,6.6885
+entity_key_x_horizon_bucket,SWE-Go Local,8_14,1087,-0.1136,-0.0272,0.131,11.3333
+entity_key_x_horizon_bucket,TWN-Go Local,15_30,1456,-0.3394,-0.1231,1.226,2.1902
+entity_key_x_horizon_bucket,TWN-Go Local,1_7,637,-0.0941,-0.0259,0.2927,0.748
+entity_key_x_horizon_bucket,TWN-Go Local,8_14,637,-0.1959,-0.1042,0.5626,1.0161
+entity_key_x_horizon_bucket,ZAF-Go Local,15_30,2065,-0.0418,-0.0274,0.029,26.1787
+entity_key_x_horizon_bucket,ZAF-Go Local,1_7,910,-0.0107,-0.0061,0.0188,5.6923
+entity_key_x_horizon_bucket,ZAF-Go Local,8_14,910,-0.0251,-0.0149,0.0219,11.48
+resource_x_horizon_bucket,HDD,15_30,91936,-0.2682,-0.0468,0.3041,12.0706
+resource_x_horizon_bucket,HDD,1_7,40586,-0.0589,-0.0097,0.0769,5.0107
+resource_x_horizon_bucket,HDD,8_14,40390,-0.1083,-0.0215,0.1828,7.064

@@ -1,0 +1,5 @@
+entity_key,artifact,value_col,row_count,min_date,max_date,min_value,p05_value,median_value,mean_value,p95_value,max_value,zero_count,negative_count
+APC-Dedicated,backtest_actual,actual_value,4680,2025-05-03,2026-04-27,28.2759,28.3657,1295.8535,1093.7026,2239.5444,2428.8772,0,0
+APC-Dedicated,backtest_forecast,forecast_value,4680,2025-05-03,2026-04-27,-4387.3058,-18.5479,1307.8852,1080.6891,2446.2857,6993.7648,0,252
+APC-Dedicated,production_forecast,forecast_value,1447,2026-04-28,2030-04-13,29.104,29.7866,35.9298,35.9298,42.073,42.7556,0,0
+APC-Dedicated,actuals,actual_value,2491,2019-07-01,2026-04-27,28.2759,138.901,976.989,1038.8865,2226.1575,2428.8772,0,0

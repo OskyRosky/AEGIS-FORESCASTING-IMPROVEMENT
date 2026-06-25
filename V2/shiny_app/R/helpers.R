@@ -741,13 +741,31 @@ fvp_summary <- function(series, models, horizon_days = 5, hist_days = 0,
 # date. It is NOT a multi-model comparison and has NO horizon_days column.
 # ===========================================================================
 
-# Cached governed read of the forward production forecast (forecasts.csv).
+# Cached governed read of the forward production forecast. PREFERS the Stage 07
+# interval artifact (forecasts_with_intervals_relative.csv = forecasts.csv +
+# governed prediction-interval columns) and falls back to forecasts.csv when the
+# interval artifact is missing/empty. The app NEVER computes intervals: it only
+# reads the interval columns already present in the governed artifact. The chosen
+# source and whether interval columns exist are recorded as attributes so the UI
+# can show an honest data-source note.
 fvf_forecasts <- function() {
-  df <- tryCatch(load_csv_artifact("forecasts"), error = function(e) data.frame())
+  df <- tryCatch(load_csv_artifact("forecasts_with_intervals"),
+                 error = function(e) data.frame())
+  src <- "forecasts_with_intervals_relative.csv"
+  has_iv <- is.data.frame(df) && nrow(df) > 0 &&
+    all(c("forecast_lower_80", "forecast_upper_80",
+          "forecast_lower_95", "forecast_upper_95") %in% names(df))
+  if (!is.data.frame(df) || nrow(df) == 0 || !has_iv) {
+    df <- tryCatch(load_csv_artifact("forecasts"), error = function(e) data.frame())
+    src <- "forecasts.csv"
+    has_iv <- FALSE
+  }
   if (!is.data.frame(df) || nrow(df) == 0) return(data.frame())
   for (col in c("entity_key", "model_version", "value_type")) {
     if (col %in% names(df)) df[[col]] <- trimws(as.character(df[[col]]))
   }
+  attr(df, "fvf_source") <- src
+  attr(df, "fvf_has_intervals") <- isTRUE(has_iv)
   df
 }
 
@@ -811,9 +829,15 @@ fvf_actual_history <- function(series, hist_days = 180, adf = fvf_actuals()) {
 
 # Forward forecast line for a series, limited to the next N days after the last
 # actual. Aggregated to one point per date (mean). window_days <= 0 = full.
+# NA-safe: also carries the governed prediction-interval columns (80% / 95%
+# bounds, interval_available, forecast_horizon_day) when they exist in fdf. The
+# app does NOT compute these - it only forwards the already-stored columns.
 fvf_forecast_series <- function(series, window_days = 90, fdf = fvf_forecasts(),
                                 adf = fvf_actuals()) {
-  empty <- data.frame(date = as.Date(character(0)), value = numeric(0))
+  empty <- data.frame(date = as.Date(character(0)), value = numeric(0),
+                      lower_80 = numeric(0), upper_80 = numeric(0),
+                      lower_95 = numeric(0), upper_95 = numeric(0),
+                      interval_available = logical(0), horizon_day = numeric(0))
   if (is.null(series) || !nzchar(series) || !is.data.frame(fdf) || nrow(fdf) == 0 ||
       !all(c("entity_key", "date", "forecast_value") %in% names(fdf))) return(empty)
   g <- fdf[fdf$entity_key == series, , drop = FALSE]
@@ -822,7 +846,24 @@ fvf_forecast_series <- function(series, window_days = 90, fdf = fvf_forecasts(),
   v <- suppressWarnings(as.numeric(g$forecast_value))
   keep <- !is.na(d) & !is.na(v)
   if (!any(keep)) return(empty)
-  agg <- stats::aggregate(list(value = v[keep]), list(date = d[keep]), FUN = mean)
+  getcol <- function(nm) if (nm %in% names(g))
+    suppressWarnings(as.numeric(g[[nm]])) else rep(NA_real_, nrow(g))
+  iav <- if ("interval_available" %in% names(g))
+    tolower(trimws(as.character(g$interval_available))) %in% c("true", "1", "yes") else
+      rep(FALSE, nrow(g))
+  base <- data.frame(
+    date = d, value = v,
+    lower_80 = getcol("forecast_lower_80"), upper_80 = getcol("forecast_upper_80"),
+    lower_95 = getcol("forecast_lower_95"), upper_95 = getcol("forecast_upper_95"),
+    interval_available = iav, horizon_day = getcol("forecast_horizon_day")
+  )[keep, , drop = FALSE]
+  # Value aggregated by date (mean); interval columns deduped to one row/date
+  # (one production model per series -> dates are unique in practice).
+  agg_val <- stats::aggregate(list(value = base$value), list(date = base$date), FUN = mean)
+  base_u <- base[!duplicated(base$date),
+                 c("date", "lower_80", "upper_80", "lower_95", "upper_95",
+                   "interval_available", "horizon_day"), drop = FALSE]
+  agg <- merge(agg_val, base_u, by = "date", all.x = TRUE)
   agg <- agg[order(agg$date), , drop = FALSE]
   # Keep only future rows (strictly after the last actual date), if known.
   bnd <- fvf_boundary_date(series, adf)
@@ -831,6 +872,8 @@ fvf_forecast_series <- function(series, window_days = 90, fdf = fvf_forecasts(),
     start <- min(agg$date)
     agg <- agg[agg$date <= start + as.integer(window_days), , drop = FALSE]
   }
+  agg$interval_available[is.na(agg$interval_available)] <- FALSE
+  rownames(agg) <- NULL
   agg
 }
 
@@ -926,6 +969,31 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
                        "<b>Forward forecast</b><br/>{point.x:%Y-%m-%d}<br/>",
                        "Value: <b>{point.y:.2f}</b><br/>",
                        "Model: ", htmltools::htmlEscape(mver))))
+
+    # Governed prediction-interval bounds as DASHED / DOTTED lines (NO shaded
+    # band). Each line renders ONLY for rows where interval_available is TRUE and
+    # the bound is not NA, so the lines naturally stop after forecast day 30
+    # (later horizons are NA by design). The app does NOT compute these values.
+    add_iv_line <- function(hc, col, nm, color, dash) {
+      if (!col %in% names(f)) return(hc)
+      ok <- (f$interval_available %in% TRUE) & !is.na(f[[col]])
+      if (!any(ok)) return(hc)
+      iv_df <- data.frame(x = highcharter::datetime_to_timestamp(f$date[ok]),
+                          y = round(f[[col]][ok], 3))
+      hc |> highcharter::hc_add_series(
+        name = nm, type = "line", color = color, dashStyle = dash,
+        lineWidth = 1.5, marker = list(enabled = FALSE),
+        data = highcharter::list_parse2(iv_df),
+        tooltip = list(headerFormat = "",
+                       pointFormat = paste0("<b>", nm,
+                                            "</b><br/>{point.x:%Y-%m-%d}<br/>",
+                                            "Value: <b>{point.y:.2f}</b>")))
+    }
+    hc <- hc |>
+      add_iv_line("upper_95", "Upper 95%", "#b91c1c", "Dot") |>
+      add_iv_line("upper_80", "Upper 80%", "#d97706", "Dash") |>
+      add_iv_line("lower_80", "Lower 80%", "#d97706", "Dash") |>
+      add_iv_line("lower_95", "Lower 95%", "#b91c1c", "Dot")
   }
   hc
 }
@@ -937,6 +1005,37 @@ fvf_summary <- function(series, fwd_window = 90, hist_window = 180,
   f <- fvf_forecast_series(series, fwd_window, fdf, adf)
   bnd <- fvf_boundary_date(series, adf)
   dr <- c(a$date, f$date); dr <- dr[!is.na(dr)]
+
+  # ---- governed interval metadata (read-only; never computed here) ----
+  src        <- attr(fdf, "fvf_source")
+  if (is.null(src)) src <- "forecasts.csv"
+  has_iv_cols <- isTRUE(attr(fdf, "fvf_has_intervals"))
+  # forward interval rows actually drawable within the selected window
+  n_iv <- if (is.data.frame(f) && "interval_available" %in% names(f))
+    sum((f$interval_available %in% TRUE) & !is.na(f$lower_95)) else 0L
+  # per-series governed metadata pulled from the available rows
+  gi <- if (is.data.frame(fdf) && "entity_key" %in% names(fdf))
+    fdf[fdf$entity_key == series, , drop = FALSE] else fdf[0, , drop = FALSE]
+  first_avail <- function(nm) {
+    if (!nm %in% names(gi) || nrow(gi) == 0) return(NA_character_)
+    av <- if ("interval_available" %in% names(gi))
+      tolower(trimws(as.character(gi$interval_available))) %in% c("true", "1", "yes") else
+        rep(TRUE, nrow(gi))
+    vals <- as.character(gi[[nm]])[av]
+    vals <- vals[!is.na(vals) & nzchar(vals) & vals != "NA"]
+    if (length(vals) == 0) return(NA_character_)
+    vals[[1]]
+  }
+  iv_method <- first_avail("interval_method")
+  iv_source <- first_avail("interval_source")
+  iv_grain  <- first_avail("interval_calibration_grain")
+  iv_sample <- first_avail("interval_calibration_sample_size")
+  anomaly <- FALSE
+  if ("forecast_point_scale_anomaly" %in% names(gi) && nrow(gi) > 0) {
+    anomaly <- any(tolower(trimws(as.character(gi$forecast_point_scale_anomaly)))
+                   %in% c("true", "1", "yes"), na.rm = TRUE)
+  }
+
   list(
     series        = if (is.null(series) || !nzchar(series)) "\u2014" else series,
     model_version = fvf_model_version(series, fdf),
@@ -946,7 +1045,18 @@ fvf_summary <- function(series, fwd_window = 90, hist_window = 180,
     date_min      = if (length(dr)) format(min(dr), "%Y-%m-%d") else "\u2014",
     date_max      = if (length(dr)) format(max(dr), "%Y-%m-%d") else "\u2014",
     fwd_first     = if (nrow(f)) format(min(f$date), "%Y-%m-%d") else "\u2014",
-    fwd_last      = if (nrow(f)) format(max(f$date), "%Y-%m-%d") else "\u2014"
+    fwd_last      = if (nrow(f)) format(max(f$date), "%Y-%m-%d") else "\u2014",
+    fwd_window    = fwd_window,
+    source_file   = src,
+    has_intervals = has_iv_cols,
+    n_interval    = as.integer(n_iv),
+    iv_method     = if (is.na(iv_method)) "\u2014" else iv_method,
+    iv_source     = if (is.na(iv_source)) "\u2014" else iv_source,
+    iv_levels     = "80%, 95%",
+    iv_horizon    = "1\u201330 days",
+    iv_grain      = if (is.na(iv_grain)) "\u2014" else iv_grain,
+    iv_sample     = if (is.na(iv_sample)) "\u2014" else iv_sample,
+    point_anomaly = isTRUE(anomaly)
   )
 }
 
