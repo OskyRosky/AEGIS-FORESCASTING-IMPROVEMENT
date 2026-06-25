@@ -1,0 +1,4 @@
+file_path,change_type,backup_path,notes
+shiny_app/ui/tabs.R,modified,outputs/shiny_mvp/7_1_REV1_home_narrative_reset/backups/shiny_app/ui/tabs.R,"Rewrote section_home() as a simple narrative landing page; added home_step() UI helper"
+shiny_app/www/custom.css,modified,outputs/shiny_mvp/7_1_REV1_home_narrative_reset/backups/shiny_app/www/custom.css,"Appended .home-prose / .home-flow / .home-step styles (+ dark variants) for clean Home layout"
+shiny_app/R/helpers.R,unchanged,outputs/shiny_mvp/7_1_REV1_home_narrative_reset/backups/shiny_app/R/helpers.R,"Backed up only; not modified (Home no longer needs loader accessors)"

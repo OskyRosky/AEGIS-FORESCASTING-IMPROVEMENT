@@ -1,0 +1,19 @@
+check_name,status,details
+active_root_is_v2,pass,Diagnostic scoped to V2 only; V1 untouched.
+no_shiny_source_modified,pass,No files under shiny_app/ edited in this block.
+no_artifacts_modified,pass,All tournament/champion artifacts read-only; only diagnostic outputs written.
+no_models_run,pass,No forecasts or tournaments executed; metrics read from existing governed CSVs.
+champion_unchanged,pass,ETS Explicit remains selected champion under conditions.
+scorecard_artifact_present,pass,tournament_model_scorecard.csv found with 13 models (7 baselines + 6 challengers).
+evidence_summary_artifact_present,pass,tournament_model_evidence_summary.csv found with win/draw/loss record per model (currently UNUSED on page).
+pairwise_artifact_present,pass,tournament_pairwise_evidence.csv found; round-robin all-vs-all comparisons.
+entity_scores_artifact_present,pass,tournament_entity_model_scores.csv found (39 entities x 13 models).
+tournament_is_round_robin,warning,Method is all-play-all (78 = C(13,2)) not single-elimination; literal knockout bracket would misrepresent the data.
+win_loss_record_not_shown,warning,supported_better/worse/inconclusive/net_supported_evidence exist but are not surfaced on the page.
+mase_rmsse_scatter_confusing,warning,Two correlated metrics; FastNeuralAR_MLP outlier (MASE 739 RMSSE 164) squashes the plot; no single score shown.
+composite_score_card_confusing,warning,No governed composite-score formula exists; a card announcing the absence reads as a missing feature.
+percentage_metrics_partial_coverage,warning,median_wmape and median_smape populated for challengers only (blank for 7 baselines).
+median_bias_unnormalized,warning,median_bias values un-normalized (e.g. -17656); confusing without context; recommend hidden.
+top_card_strip_overloaded,warning,8 KPI cards; Confidence / 8-0 / No-formula cards are disconnected from surrounding explanation.
+standings_table_too_wide,warning,12 columns by default; no win/loss record; recommend slimmer default + W-D-L.
+bracket_view_feasible_governance_safe,pass,League standings + head-to-head grid derivable from existing artifacts without recompute; literal scored knockout bracket is not.

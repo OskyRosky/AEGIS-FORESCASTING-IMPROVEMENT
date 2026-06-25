@@ -1,0 +1,16 @@
+model_name,model_origin,model_family,final_status,included_in_tournament,eligible_for_champion,selected_champion,deferred_reason,risk_flag,audit_status,notes,created_timestamp
+ARIMA_Fixed,baseline,statistical,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 11.79),2026-06-14T12:00:00
+ETS_Current,baseline,statistical,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 8.65),2026-06-14T12:00:00
+LinearRegression,baseline,machine_learning,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 9.50),2026-06-14T12:00:00
+FixedGrowth_1_5,baseline,growth_baseline,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 8.65),2026-06-14T12:00:00
+FixedGrowth_3,baseline,growth_baseline,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 12.99),2026-06-14T12:00:00
+FixedGrowth_4,baseline,growth_baseline,active_tournament_model,True,True,False,,False,PASS,Ineligible_due_to_evidence in champion scorecard (pairwise 2/5); not selected,2026-06-14T12:00:00
+FixedGrowth_6,baseline,growth_baseline,active_tournament_model,True,True,False,,False,PASS,Medium risk / manual review required; ineligible_due_to_evidence; not selected,2026-06-14T12:00:00
+AutoARIMA,challenger,statistical,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 8.09; limited support),2026-06-14T12:00:00
+Theta,challenger,statistical,active_tournament_model,True,True,False,,False,PASS,Eligible; not selected (MASE 10.64),2026-06-14T12:00:00
+ETS Explicit,challenger,statistical,selected_champion,True,True,True,,False,PASS,CHAMPION: lowest MASE 6.9011; RMSSE 1.8562; 8 supported-better/0 worse,2026-06-14T12:00:00
+LightGBM,challenger,machine_learning,active_tournament_model,True,True,False,,False,PASS,Ineligible_due_to_evidence (pairwise 1/9); not selected,2026-06-14T12:00:00
+XGBoost,challenger,machine_learning,active_tournament_model,True,True,False,,False,PASS,Eligible but weak evidence; not selected (MASE 14.55),2026-06-14T12:00:00
+FastNeuralAR_MLP,challenger,lightweight_neural,active_tournament_model,True,False,False,,True,PASS,Risk-flagged high; ineligible_due_to_risk; MASE 739.92/RMSSE 164.62; investigate,2026-06-14T12:00:00
+NBEATS,challenger,deep_learning,deferred_runtime_impractical,False,False,False,deferred_runtime_impractical,True,PASS,Deferred; not scored; history preserved,2026-06-14T12:00:00
+NHITS,challenger,deep_learning,deferred_dependency_blocked,False,False,False,deferred_dependency_blocked,True,PASS,Deferred; not scored; Python 3.14/ray dependency block,2026-06-14T12:00:00

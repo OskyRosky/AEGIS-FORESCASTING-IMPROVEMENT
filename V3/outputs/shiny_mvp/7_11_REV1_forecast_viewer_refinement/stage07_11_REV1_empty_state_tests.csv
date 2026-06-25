@@ -1,0 +1,9 @@
+scenario,inputs,expected_behavior,observed,status
+before_click,fresh page load,no chart, empty-state card visible,fv-empty-card rendered; eventReactive not fired,pass
+valid_after_click,APC-Dedicated / FixedGrowth1% / 30 / 90,chart with actual+forecast + availability panel,nForecastTotal=1447 history=90 shown=30,pass
+single_model_entity,any of 45 entities,"only one model available" note shown,n_models_entity=1 for all 45,pass
+horizon_min,horizon=5,5 forecast points displayed,fv_forecast_series trims to 5,pass
+horizon_max,horizon=60,60 forecast points (1447 available),clipped=FALSE,pass
+all_history,history=0,full actual history,hist_days<=0 returns all,pass
+unknown_combo,entity/model with no rows,calm empty chart + availability note,fv_empty_chart + no-data note,pass
+multi_model_option,check if any entity has >1 model,not offered (no fake option),0 of 45 entities multi-model -> option intentionally omitted,pass

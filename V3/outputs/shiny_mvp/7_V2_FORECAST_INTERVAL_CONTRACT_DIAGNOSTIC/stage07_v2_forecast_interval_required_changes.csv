@@ -1,0 +1,15 @@
+category,file_path,why_change,risk_level,required_or_optional,touches_model_generation_or_visualization
+A_contract_schema,python/transform/build_data_contract.py,"Add interval columns to FORECASTS_COLUMNS and stop filtering value_type=='Forecast-Mean' (or pivot Lower/Upper/Mean into wide columns).",high,required,model_generation/contract
+A_contract_schema,python/evaluation/build_evaluation_dataset.py,"Extend FORECAST_REQUIRED_COLUMNS only if evaluation must consume intervals (optional).",low,optional,contract
+B_forecast_generation,python/ingestion/queries.py,"HDD_REGION_FORECASTS_QUERY must stop filtering [ValueType]='Forecast-Mean' IF the SQL table already holds Forecast-Lower/Upper or quantile rows; otherwise upstream system must first emit them.",high,required,model_generation
+B_forecast_generation,python/ingestion/export_hdd_region.py,"Pass through additional ValueType rows / new columns to data/raw/hdd_region_forecasts.csv.",medium,required,model_generation
+C_model_output_writer,python/model_lab/build_forecast_viewer_handoff_pilot.py,"Lines 267-269 hardcode lower/upper/interval_level to NA; would need real values IF intervals are wanted in the backtest artifact too (separate from Forecast page).",medium,optional,model_generation
+C_model_output_writer,python/model_lab/models/*.py,"Deterministic/placeholder models would need probabilistic predict() (e.g. statsmodels get_forecast(level=...), quantile regression, or residual bootstrap) to emit intervals natively.",high,optional,model_generation
+D_validation,"(new) schema/contract validation for forecasts.csv","Add validation that interval columns exist, are numeric, lower<=mean<=upper, interval_level in allowed set.",medium,required,contract
+E_data_quality,python/transform/build_data_contract.py (dq checks),"Add data-quality checks: no negative bounds if values cannot be negative; non-crossing bounds; coverage of interval_level.",medium,required,contract
+F_shiny_loader,shiny_app/R/helpers.R,"fvf_forecasts() must read and type-coerce new interval columns; update comment that says intervals not available.",low,required,visualization
+G_shiny_server,shiny_app/server/server.R,"fvf_chart render + fvf_summary/fvf_notes to pass lower/upper to the chart builder and show interval level/method in Data notes.",low,required,visualization
+H_shiny_ui_chart,shiny_app/R/helpers.R (fvf_chart),"Add a shaded uncertainty band (highcharter arearange) between lower and upper; keep mean line; fallback to point-only with a note if columns are NA.",medium,required,visualization
+H_shiny_ui,shiny_app/ui/tabs.R,"Optional: How-to bullet + Data-notes label describing the interval; small legend.",low,optional,visualization
+I_docs_methodology,docs/ (forecast methodology),"Document interval method, level, calibration and governance status.",low,required,documentation
+J_reports_manifests,outputs/shiny_mvp/.../*,"Stage report + validation manifests for the interval implementation block.",low,required,documentation

@@ -1,0 +1,4 @@
+run_id,model_family,models_in_family,model_count,median_official_mase,median_official_rmsse,median_wmape,median_smape,notes,created_timestamp
+challenger_aggregation_significance,lightweight_neural,FastNeuralAR_MLP,1,739.9218881736479,164.62241686434226,0.8613412527614438,1.480670366533463,Diagnostic family summary only; no ranking or champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,machine_learning,"LightGBM, XGBoost",2,15.294335005875704,3.971088190050567,0.018111912200862453,0.018263442473797277,Diagnostic family summary only; no ranking or champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,statistical,"AutoARIMA, Theta, ETS Explicit",3,8.088530320808188,1.8590126984374988,0.0099110042459386,0.00991333596139675,Diagnostic family summary only; no ranking or champion decision.,2026-06-13T17:27:28

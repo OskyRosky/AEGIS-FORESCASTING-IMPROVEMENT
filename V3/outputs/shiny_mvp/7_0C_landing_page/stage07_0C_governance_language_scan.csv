@@ -1,0 +1,19 @@
+scan_area,file_path_or_url,pattern,detected,status,classification,notes
+rendered_ui,http://127.0.0.1:3838,TESSERACT v2 Forecast Improvement Platform,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,ETS Explicit,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,CHAMPION_SELECTED_WITH_CONDITIONS,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,Confidence,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,medium,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,Read-only dashboard,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,No forecast recomputation,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui,http://127.0.0.1:3838,No metric recalculation,true,PASS,required_governed_language,Required landing-page wording.
+rendered_ui_and_active_shell_source,shiny_app active shell files,AutoARIMA,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,Best Candidate,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,best candidate,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,ETS Explicit won,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,absolute best,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,sample data active,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,Sample data active,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,sample data loaded,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,Sample data loaded,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.
+rendered_ui_and_active_shell_source,shiny_app active shell files,replace all models,false,PASS,prohibited_or_legacy_language,Legacy/sample or prohibited wording must not be visible in 7.0C.

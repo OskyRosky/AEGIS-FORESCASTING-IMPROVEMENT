@@ -1,0 +1,22 @@
+check_name,status,details
+VERSION_INFO.md exists,pass,V1 root marker
+ACTIVE_PROJECT_ROOT.md exists,pass,active root marker
+docs/V1_ACTIVE_ROOT_POLICY.md exists,pass,root policy doc
+config/project_root_policy.json exists and is valid JSON,pass,valid JSON with expected root policy
+diagnostic inputs exist,pass,outputs/versioning_diagnostics/v1_path_migration_diagnostic.csv; outputs/versioning_diagnostics/v1_runtime_file_inventory.csv; outputs/versioning_diagnostics/v1_sensitive_file_inventory.csv; outputs/versioning_diagnostics/v1_recommended_migration_actions.csv; outputs/versioning_diagnostics/v1_stage_readiness_check.csv; outputs/versioning_diagnostics/v1_path_migration_diagnostic_report.md
+no forbidden historical files modified,pass,Forbidden historical files still exist and were not targeted by this script.
+no Stage 05 artifacts modified,pass,Stage 05 output area exists; validation is read-only.
+no Stage 06 artifacts modified,pass,Stage 06 output area exists; validation is read-only.
+no Audit #6 artifacts modified,pass,Audit #6 output area exists; validation is read-only.
+V1 outputs/model_lab exists,pass,outputs/model_lab
+V1 outputs/governance exists,pass,outputs/governance
+V1 outputs/governance/audit_6 exists,pass,outputs/governance/audit_6
+V1 shiny_app exists,pass,shiny_app
+V1 is ready for Claude Opus 4.8 migration audit,pass,Controlled formalization files are present.
+V1 is ready for Stage 07 only after Claude audit approval,pass,Stage 07 must wait for migration audit approval.
+V1 is formally declared as active project root,pass,VERSION_INFO.md
+Parent root is documented as container only,pass,ACTIVE_PROJECT_ROOT.md
+No runtime rewrite required from diagnostic,pass,decision_area=runtime_paths
+Stage 07 is not started yet,pass,No Shiny scaffold or loader created by this task.
+Shiny remains unchanged,pass,No shiny_app writes performed.
+Only allowed formalization files are targeted,pass,Allowed file set exists; validation output is refreshed by this script.

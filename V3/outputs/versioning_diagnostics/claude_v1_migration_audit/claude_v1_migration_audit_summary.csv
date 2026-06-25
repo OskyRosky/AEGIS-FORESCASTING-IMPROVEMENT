@@ -1,0 +1,13 @@
+audit_question_id,audit_question,verified,severity,status,notes
+AQ-01,Is V1 clearly and correctly declared as the active project root,yes,none,pass,Declared in VERSION_INFO.md ACTIVE_PROJECT_ROOT.md docs/V1_ACTIVE_ROOT_POLICY.md and config/project_root_policy.json with identical absolute path.
+AQ-02,Is the parent folder clearly documented as container/version root only,yes,none,pass,All four root markers state the parent is container/version root only and must not be the active working root.
+AQ-03,Are Codex and Claude future instructions required to operate inside V1,yes,none,pass,docs/V1_ACTIVE_ROOT_POLICY.md defines Codex Instruction Policy and Claude Audit Instruction Policy; VERSION_INFO.md mandates all active work inside V1.
+AQ-04,Were historical artifacts preserved correctly,yes,none,pass,Both old-root historical files still exist and still contain original old-root text; no historical edits detected.
+AQ-05,Was it correct not to rewrite the old-root references in historical files,yes,none,pass,Old-root references are audit/closure evidence classified historical_do_not_edit; rewriting would corrupt traceability. Correct decision.
+AQ-06,Were Stage 05 Stage 06 and Audit #6 artifacts protected,yes,advisory,pass,Directories present and unmodified; validation is existence-based not hash-based but the formalization touched only allowed files.
+AQ-07,Were Shiny files protected before Stage 07,yes,advisory,pass,shiny_app present and unchanged; note shiny_app already contains substantial pre-existing modules to reconcile in Block 7.0.
+AQ-08,Is config/project_root_policy.json valid and aligned with the root policy,yes,none,pass,Valid JSON; active_project_root project_container_root active_version=V1 and shiny_policy match policy docs and validation script expectations.
+AQ-09,Are the migration decisions complete and traceable,yes,none,pass,Seven decisions CMD-001..CMD-007 with rationale files_affected and status=completed; map cleanly to created/preserved artifacts.
+AQ-10,Are the validation checks sufficient,yes,advisory,pass,21 checks pass 0 fail and re-runnable via validate_v1_controlled_migration.py; protection checks confirm existence/read-only intent rather than cryptographic non-modification.
+AQ-11,Is there any remaining blocker before Stage 07 Block 7.0,no,none,pass,No blocker identified; only advisory recommendations remain.
+AQ-12,Is V1 safe to use as the active root for Stage 07,yes,none,pass,Root markers consistent runtime files clean historical evidence preserved environment risks documented.

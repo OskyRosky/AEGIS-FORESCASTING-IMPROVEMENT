@@ -1,0 +1,9 @@
+metric,value
+avail_rows_current,2700.0
+avail_rows_calibrated,2700.0
+median_width_current,0.2039
+median_width_calibrated,0.3058
+p95_width_current,3.315
+p95_width_calibrated,4.9726
+holdout_cov80_current,0.7314
+holdout_cov80_calibrated,0.7979

@@ -1,0 +1,12 @@
+field_name,type,role,data_origin,real_aegis_field,description
+entity_key,string,key,real_series,Environment+Region,"Our series key e.g. APC-Dedicated; maps to Region+Environment in AEGIS."
+region,string,key,derived,Region,"Region code parsed from entity_key prefix (APC, EUR, NAM, LAM, ARE, ...)."
+environment,string,key,derived,Environment,"Environment parsed from entity_key suffix (Dedicated, MSIT, Multitenant, Go Local, GCC Low, ITAR DoD, ITAR GCCH, SDF, TDF)."
+resource,string,key,real_series,DbType,"Resource/metric. Currently HDD only (matches our forecasts.csv resource column)."
+month_date,date,grain,derived,DataDate,"Month bucket (YYYY-MM-01). Monthly time series for the Supply-vs-Demand line chart."
+demand,double,measure,real_forecast,demand,"REAL. Monthly aggregate of our forecast_value (the demand line, red)."
+supply,double,measure,SIMULATED,supply,"SIMULATED step series (the supply line, blue). Rises in blocks to mimic provisioning GoliveETA."
+utilization_pct,double,measure,derived,utilization,"demand / supply * 100. Drives Utilization % shown around the gauge."
+growth_factor,double,measure,derived,growth_factor,"Month-over-month demand growth ratio."
+is_crossover_month,boolean,flag,derived,(computed),"TRUE on the first month where demand >= supply (the X / Crossover Date)."
+data_origin,string,governance,label,(n/a),"Provenance label, always 'demand=forecast_real;supply=simulated' for the prototype."

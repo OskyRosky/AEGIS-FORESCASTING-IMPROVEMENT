@@ -1,0 +1,12 @@
+path,sensitive_type,exists,migration_risk,recommendation,notes
+.venv,virtual_environment,True,high,Do not migrate manually; recreate or reinstall if needed.,directory
+.env,environment_file,False,low,Not present.,not_found
+.Renviron,r_environment_file,False,low,Not present.,not_found
+.Rprofile,r_profile,False,low,Not present.,not_found
+.git,git_metadata,False,low,Not present.,not_found
+shiny_app,shiny_directory,True,medium,Read-only for this diagnostic; Stage 07 target later.,directory
+outputs/model_lab,historical_model_lab_outputs,True,medium,Do not rewrite; historical artifacts.,directory
+outputs/governance,governance_outputs,True,medium,Do not rewrite prior governance artifacts.,directory
+outputs/governance/audit_6,audit_6_outputs,True,medium,Audit #6 artifacts should remain unchanged.,directory
+data,large_data_directory,True,medium,Inventory only; avoid copying blindly.,directory
+outputs,large_outputs_directory,True,medium,Inventory only; do not rewrite historical outputs.,directory

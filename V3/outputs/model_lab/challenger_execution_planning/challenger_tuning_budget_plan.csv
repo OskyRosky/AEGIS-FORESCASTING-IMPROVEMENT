@@ -1,0 +1,8 @@
+model_name,tuning_allowed,tuning_mode,max_trials,max_runtime_minutes,random_seed_required,inner_validation_required,official_results_may_tune_model,notes,created_timestamp
+AutoARIMA,True,library_auto_search_bounded,limited_by_library_auto_search,20,True,True,False,AutoARIMA internal stepwise search; bounded by library auto-search.,2026-06-12T15:22:45
+Theta,False,fixed_default,1,10,True,True,False,Minimal/no tuning; use library default theta configuration.,2026-06-12T15:22:45
+ETS Explicit,True,bounded_grid,10,20,True,True,False,Bounded ETS component selection via inner validation only.,2026-06-12T15:22:45
+LightGBM,True,bounded_random_search,20,45,True,True,False,Bounded random search over training-only inner validation folds.,2026-06-12T15:22:45
+XGBoost,True,bounded_random_search,20,45,True,True,False,Bounded random search over training-only inner validation folds.,2026-06-12T15:22:45
+NBEATS,True,bounded_config_search,5,90,True,True,False,"Very limited config search; heavy runtime, fixed deterministic seed.",2026-06-12T15:22:45
+NHITS,True,bounded_config_search,5,90,True,True,False,"Very limited config search; heavy runtime, fixed deterministic seed.",2026-06-12T15:22:45

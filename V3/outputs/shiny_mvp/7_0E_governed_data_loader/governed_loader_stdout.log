@@ -1,0 +1,34 @@
+==== Stage 07.0E governed loader run ====
+project_root: C:/Users/oscarau/OneDrive - Microsoft/Desktop/Forecast Generation Codebase Improvement/AEGIS-FORESCASTING-IMPROVEMENT/V1 
+[loader] available : key_results                  (outputs/model_lab/model_lab_closure_pack/model_lab_key_results.csv)
+[loader] available : champion_summary             (outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv)
+[loader] available : final_model_universe         (outputs/model_lab/model_lab_closure_pack/model_lab_final_model_universe.csv)
+[loader] available : risk_register_final          (outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv)
+[loader] available : deferred_models              (outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv)
+[loader] available : next_steps                   (outputs/model_lab/model_lab_closure_pack/model_lab_next_steps.csv)
+[loader] available : dashboard_handoff_manifest   (outputs/model_lab/model_lab_closure_pack/model_lab_dashboard_handoff_manifest.csv)
+[loader] available : artifact_manifest            (outputs/model_lab/model_lab_closure_pack/model_lab_artifact_manifest.csv)
+[loader] available : tournament_standings         (outputs/model_lab/tournament_engine/tournament_preliminary_standings.csv)
+[loader] available : tournament_scorecard         (outputs/model_lab/tournament_engine/tournament_model_scorecard.csv)
+[loader] available : tournament_pairwise          (outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv)
+[loader] available : challenger_metrics           (outputs/model_lab/challenger_metrics/challenger_metrics_by_model_diagnostic.csv)
+[loader] available : challenger_aggregation       (outputs/model_lab/challenger_aggregation_significance/challenger_aggregation_by_model.csv)
+[loader] available : champion_conditions          (outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv)
+[loader] available : champion_dashboard_language  (outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv)
+[loader] available : audit_4_summary              (outputs/model_lab/audit_4/audit_4_summary.csv)
+[loader] available : audit_5_findings             (outputs/model_lab/audit_5/audit_5_findings.csv)
+[loader] available : audit_5_report               (outputs/model_lab/audit_5/audit_5_final_report.md)
+[loader] available : tournament_sanity_summary    (outputs/model_lab/tournament_sanity_review/tournament_sanity_summary.csv)
+[loader] available : benchmark_semantics          (docs/benchmark_semantics/benchmark_semantics_v1.md)
+[loader] available : champion_decision_report     (outputs/model_lab/champion_decision/champion_decision_report.md)
+[loader] available : forecasts                    (data/processed/forecasts.csv)
+[loader] available : actuals                      (data/processed/actuals.csv)
+[loader] available : forecast_comparison          (data/processed/forecast_comparison.csv)
+[loader] available : entities                     (data/processed/entities.csv)
+[loader] available : run_metadata                 (data/processed/run_metadata.csv)
+[loader] missing : ttl_capacity                 (outputs/model_lab/ttl/ttl_capacity_view.csv)
+loaded_at: 2026-06-16T10:22:33 
+
+==== Stage 07.0E emit complete ====
+available: 26 / 27 
+required_missing: none 

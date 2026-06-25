@@ -1,0 +1,26 @@
+section,attribute,value
+backtest_section,source_csv,data/processed/forecast_viewer_model_outputs.csv
+backtest_section,series_count,39
+backtest_section,model_count,13
+backtest_section,family_count,4
+backtest_section,families,growth_baseline; lightweight_neural; machine_learning; statistical
+backtest_section,models,ARIMA_Fixed; AutoARIMA; ETS Explicit; ETS_Current; FastNeuralAR_MLP; FixedGrowth_1_5; FixedGrowth_3; FixedGrowth_4; FixedGrowth_6; LightGBM; LinearRegression; Theta; XGBoost
+backtest_section,horizons_in_artifact,1-30
+backtest_section,horizon_choices_exposed,"5,10,15,20,25,30"
+backtest_section,horizon_chips_disabled,"35,45"
+backtest_section,forecast_type,backtest
+backtest_section,date_min,2025-05-03
+backtest_section,date_max,2026-04-27
+backtest_section,selected_champion,ETS Explicit
+backtest_section,high_risk_models,ETS Explicit; FastNeuralAR_MLP; FixedGrowth_6
+forward_section,source_csv,data/processed/forecasts.csv (+ actuals.csv)
+forward_section,series_count,45
+forward_section,forecast_only_series,45
+forward_section,actual_only_or_shared_series,45
+forward_section,model_versions,ARIMA; ExponentialSmoothing; ExponentialSmoothing_ARIMA_Ensemble; FixedGrowth1%; FixedGrowth2%; FixedGrowth2%_ARIMA_Ensemble; FixedGrowth2%_FixedGrowth1%_Ensemble; FixedGrowth3%; FixedGrowth3%_ARIMA_Ensemble; FixedGrowth3%_ExponentialSmoothing_Ensemble; FixedGrowth3%_FixedGrowth1%_Ensemble; FixedGrowth4%_ARIMA_Ensemble; FixedGrowth4%_ExponentialSmoothing_Ensemble; FixedGrowth5%; FixedGrowth5%_ARIMA_Ensemble; FixedGrowth5%_ExponentialSmoothing_Ensemble
+forward_section,value_types,Forecast-Mean
+forward_section,forecast_date_min,2026-04-28
+forward_section,forecast_date_max,2030-04-25
+forward_section,actual_date_min,2019-07-01
+forward_section,actual_date_max,2026-04-27
+forward_section,backtest_series_subset_of_forward,True

@@ -1,0 +1,43 @@
+check_name,status,details
+v2_root_exists,pass,V2 root folder present at AEGIS-FORESCASTING-IMPROVEMENT\V2
+v2_shiny_app_exists,pass,V2\shiny_app present with ui/ server/ R/ www/ modules/
+key_shiny_app_R,pass,shiny_app/app.R exists
+key_shiny_global_R,pass,shiny_app/global.R exists
+key_shiny_helpers_R,pass,shiny_app/R/helpers.R exists
+key_shiny_sidebar_R,pass,shiny_app/ui/sidebar.R exists
+key_shiny_tabs_R,pass,shiny_app/ui/tabs.R exists
+key_shiny_server_R,pass,shiny_app/server/server.R exists
+key_shiny_models_server_R,pass,shiny_app/server/models_server.R exists
+key_shiny_custom_css,pass,shiny_app/www/custom.css exists
+artifact_forecast_viewer_model_outputs,pass,177060 data rows x 21 cols readable
+artifact_forecasts,pass,65095 data rows x 9 cols readable
+artifact_actuals,pass,84537 data rows x 7 cols readable
+artifact_tournament_model_scorecard,pass,13 data rows x 17 cols readable
+artifact_tournament_pairwise_evidence,pass,78 data rows x 16 cols readable
+artifact_tournament_entity_model_scores,pass,507 data rows x 13 cols readable
+artifact_champion_decision,pass,1 data row x 9 cols readable
+artifact_champion_summary,pass,1 data row x 11 cols readable
+artifact_champion_conditions_protocol,pass,5 data rows x 11 cols readable
+artifact_champion_dashboard_language,pass,13 data rows x 8 cols readable
+no_v1_hardcoded_path_in_shiny_source,pass,Only /api/v1/calculate-ttl API-version URLs in ttl_provider.R; no V1 filesystem path in live app source
+no_v1_hardcoded_path_in_config,pass,config/project_root_policy.json points to V2; based_on_version=V1 is provenance metadata only
+v1_references_in_historical_outputs,warning,V1 paths present only in copied historical docs/diagnostics/build-logs under outputs/ and docs/V1_ACTIVE_ROOT_POLICY.md; benign per do-not-rewrite-historical policy
+runtime_root_resolves_to_v2,pass,find_project_root() resolves getwd()=V2 (outputs/model_lab + shiny_app present); loader root = ...\V2
+shiny_launches_from_v2,pass,Launched via V2 scripts\launch_shiny_v1.ps1 (ProjectRoot=PSScriptRoot=V2)
+http_status_checked,pass,HTTP 200 LEN 144554
+pid_returned,pass,Listening PID 36224 on port 3838
+logs_returned,pass,stdout/stderr under V2\outputs\shiny_mvp\v2_init\logs
+stop_command_returned,pass,scripts\stop_shiny_v1.ps1 -PidToStop 36224
+forecasting_pages_exist,pass,explorer(Viewer)/accuracy/forecast/ttl all present in DOM
+models_pages_exist,pass,universe/tournament/champion present; comparison intentionally removed in V1
+governance_section_exists,pass,risks + audit present in DOM
+reference_section_exists,pass,artifacts + methodology + version present in DOM
+comparison_page_status,not_applicable,Comparison page was removed in V1 (redundant); absence is expected
+v1_not_modified,pass,No write operations performed against V1 during this smoke test
+no_data_artifacts_modified,pass,All CSV reads were read-only; no data/processed or outputs artifact written except this smoke-test report folder
+no_shiny_source_modified,pass,No edits to shiny_app source files in this block
+no_models_run,pass,No model execution performed
+no_forecasts_generated,pass,No forecast generation performed
+no_tournaments_rerun,pass,No tournament recomputation performed
+no_metrics_recalculated,pass,No MASE/RMSSE or metric recompute performed
+champion_decision_not_changed,pass,champion_decision.csv read-only; ETS Explicit unchanged

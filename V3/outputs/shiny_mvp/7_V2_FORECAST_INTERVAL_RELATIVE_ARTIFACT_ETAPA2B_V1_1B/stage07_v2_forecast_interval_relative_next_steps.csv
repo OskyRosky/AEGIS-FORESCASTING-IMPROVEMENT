@@ -1,0 +1,8 @@
+step_id,priority,action,owner,blocking
+NS1,1,"DECISION FOR OSCAR: the 80% band is tight, useful and out-of-sample coverage-validated (0.809). The 95% band is honest and coverage-validated (0.922) but WIDE (median 5.4x, 68.5% rows >2x). Choose the default band level for Shiny: recommended DEFAULT = 80%, with 95% available as an explicit 'wide/honest' option.",Oscar,YES
+NS2,2,"Root-cause the fat upper tail: relative-error q975 pooled ~8.9 is driven by specific volatile keys/horizons where backtest models under-predict. Inspect top_widest_rows.csv + calibration_table.csv to see which keys dominate; consider per-key 95% reporting or a documented tighter upper cap if Oscar wants narrower 95%.",Agent+Oscar,no
+NS3,2,"APC-Dedicated: interval is now proportional (29 -> [15.8, 85.3]) but the POINT forecast is still ~36x below backtest/actuals. forecast_point_scale_anomaly=TRUE. Review the point forecast quality separately; the interval does not correct it.",Oscar,no
+NS4,1,"If Oscar accepts 80% default (or 95% as-is), Etapa 3 (Shiny) is UNBLOCKED: render arearange band from forecasts_with_intervals_relative.csv, NA-safe, horizons 1-30 only, point-only beyond day 30, label 'Prediction interval (backtest-calibrated)'.",Agent,no
+NS5,3,"Etapa 2B-v2: extend evidence to long horizons (>30 days) — backtest only covers 1-30. Until then rows beyond 30 stay NA by design.",Agent,no
+NS6,note,"Absolute-residual artifact forecasts_with_intervals.csv remains diagnostic-only (rejected). This relative artifact forecasts_with_intervals_relative.csv supersedes it for visualization once Oscar approves a band level.",Agent,no
+NS7,note,"Reproducible builder: python/model_lab/build_interval_calibration_relative.py. forecasts.csv NOT overwritten.",Agent,no

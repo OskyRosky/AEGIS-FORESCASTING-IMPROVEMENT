@@ -1,0 +1,11 @@
+reference_pattern,reference_source,adaptation_decision,tesseract_target,why_useful,why_not_direct_copy,planned_block,notes
+sidebar pattern,MassiveForecasting-V3/sider.R,adapt_pattern,shiny_app sidebar/navigation,Proven menu organization,Reference labels are project-specific,7.0C,Map to governance sections
+header pattern,MassiveForecasting-V3/header.R,adapt_pattern,shiny_app header,Provides status/title region,Reference branding not applicable,7.0C,Show V1 and audit status
+body/tab pattern,MassiveForecasting-V3/body.R,adapt_pattern,shiny_app body/tabs,Supports multi-section dashboard,Reference content includes runtime/domain logic,7.0C,Use read-only sections
+cards/boxes,MassiveForecasting-V3/body.R,adapt_pattern,landing and executive cards,Good for KPIs and warnings,Reference metrics not TESSERACT metrics,7.0C-7.0D,Use governed artifacts only
+dark mode,MassiveForecasting-V3/body.R,manual_review,optional UI setting,May improve UX,Not required and can distract,7.0D,Only if simple display feature
+footer/version info,MassiveForecasting-V3 body/footer concept,adapt_pattern,footer/version area,Useful for V1 and governance status,Reference footer text not applicable,7.0C,Show active root/version
+dependency loader,MassiveForecasting-V3/Librerias.R,adapt_pattern,R/libraries.R,Central package organization,Reference may include runtime/model packages,7.0D,Display-only dependencies
+runner/launch pattern,MassiveForecasting-V3/AI_SAF.R and run_dashboard.R,manual_review,app.R/run command,Shows launch organization,May source runtime pipeline,7.0C,Use simple Shiny run only
+runtime forecast engine,MassiveForecasting-V3/_20_forecast_runner.R; _30_engine.R,do_not_reuse,none,Not useful for read-only dashboard,Violates no models/no forecasts,not_applicable,Exclude
+project-specific text,MassiveForecasting-V3 body/server text,do_not_reuse,none,N/A,CGR/income labels not TESSERACT governance,not_applicable,Write new copy from 6.3/6.4

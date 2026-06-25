@@ -1,0 +1,5 @@
+data_section,sidebar_label,page_title,ui_function,chart_output,data_source,page_purpose
+explorer,Viewer,Forecast Viewer,section_explorer,fvp_chart,forecast_viewer_model_outputs.csv,"Backtest Comparison (multi-model, historical)"
+accuracy,Accuracy,Accuracy Overview,section_accuracy,(static cards),n/a,Accuracy placeholder (unchanged)
+forecast,Forecast,Forward Forecast,section_forecast,fvf_chart,forecasts.csv + actuals.csv,"Forward Forecast (single-model, future)"
+ttl,TTL,TTL / Capacity View,section_ttl,(roadmap),n/a,TTL roadmap (unchanged)

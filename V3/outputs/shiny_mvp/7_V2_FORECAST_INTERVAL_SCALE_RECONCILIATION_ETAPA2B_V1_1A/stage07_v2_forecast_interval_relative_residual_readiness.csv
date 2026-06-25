@@ -1,0 +1,46 @@
+entity_key,in_backtest,backtest_rel_err_n,median_abs_relative_error,p95_abs_relative_error,readiness
+APC-Dedicated,True,4680,0.0244,1.8141,ready_relative_residual
+APC-MSIT,True,4680,0.0181,0.5594,ready_relative_residual
+APC-Multitenant,True,4680,0.0094,19607.6867,ready_relative_residual
+ARE-Go Local,True,4680,0.0118,6.179,ready_relative_residual
+AUS-Go Local,True,4680,0.0083,31.6899,ready_relative_residual
+AUT-Go Local,False,0,,,fallback_needed_no_backtest
+BRA-Go Local,True,4680,0.0086,12.1889,ready_relative_residual
+CAN-Go Local,True,4680,0.0082,23.8112,ready_relative_residual
+CHE-Go Local,True,4680,0.0087,4.9016,ready_relative_residual
+CHL-Go Local,False,0,,,fallback_needed_no_backtest
+DEU-Go Local,True,4680,0.0076,16.7485,ready_relative_residual
+DNK-Go Local,False,0,,,fallback_needed_no_backtest
+ESP-Go Local,True,4680,0.0452,3.8548,ready_relative_residual
+EUR-Dedicated,True,4680,0.0133,2.4697,ready_relative_residual
+EUR-Go Local,False,0,,,fallback_needed_no_backtest
+EUR-MSIT,True,4680,0.0127,0.9393,ready_relative_residual
+EUR-Multitenant,True,4680,0.0147,68983.5833,ready_relative_residual
+FRA-Go Local,True,4680,0.0099,17.0712,ready_relative_residual
+GBR-Dedicated,True,4680,0.0387,0.7524,ready_relative_residual
+GBR-Go Local,True,4680,0.0129,9251.873,ready_relative_residual
+IDN-Go Local,False,0,,,fallback_needed_no_backtest
+IND-Go Local,True,4680,0.0084,14438.6282,ready_relative_residual
+ISR-Go Local,True,4680,0.0151,0.241,ready_relative_residual
+ITA-Go Local,True,4680,0.0254,4.3797,ready_relative_residual
+JPN-Go Local,True,4680,0.0086,12738.4738,ready_relative_residual
+KOR-Go Local,True,4680,0.0143,1.8375,ready_relative_residual
+LAM-Multitenant,True,4680,0.0067,24.5382,ready_relative_residual
+MEX-Go Local,True,4680,0.0261,0.2491,ready_relative_residual
+MYS-Go Local,False,0,,,fallback_needed_no_backtest
+NAM-Dedicated,True,4680,0.0169,11.4461,ready_relative_residual
+NAM-GCC Low,True,4680,0.0057,27.6257,ready_relative_residual
+NAM-ITAR DoD,True,4680,0.0124,30.4693,ready_relative_residual
+NAM-ITAR GCCH,True,4680,0.0192,69.1445,ready_relative_residual
+NAM-MSIT,True,4680,0.0203,1.0819,ready_relative_residual
+NAM-Multitenant,True,4680,0.0131,86200.9621,ready_relative_residual
+NAM-SDF,True,4680,0.0647,0.9964,ready_relative_residual
+NAM-TDF,True,4680,0.0426,0.9697,ready_relative_residual
+NOR-Go Local,True,4680,0.0082,1.5966,ready_relative_residual
+NZL-Go Local,True,2730,0.0223,0.6108,ready_relative_residual
+POL-Go Local,True,4680,0.0347,1.2372,ready_relative_residual
+QAT-Go Local,True,4680,0.0119,4.7301,ready_relative_residual
+SGP-Go Local,True,3900,0.017,0.1521,ready_relative_residual
+SWE-Go Local,True,4680,0.0216,9.4376,ready_relative_residual
+TWN-Go Local,True,2730,0.0461,1.4081,ready_relative_residual
+ZAF-Go Local,True,3900,0.0091,9.589,ready_relative_residual

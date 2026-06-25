@@ -1,0 +1,10 @@
+file,change_type,etapa,description,risk
+python/model_lab/build_interval_calibration.py,CREATE,2B,New reproducible builder: reads backtest residuals, computes residual quantiles per chosen grain x horizon-bucket, outputs calibration table,medium
+python/transform/build_data_contract.py,MODIFY,2B,Join calibration table onto forecasts to add forecast_lower/upper_80/95 + metadata; keep additive and NA-safe,high
+python/transform/build_data_contract.py (FORECASTS_COLUMNS),MODIFY,2B,Extend column list with the new interval + metadata columns,medium
+data/processed/forecasts.csv,REGENERATE,2B,Rebuilt with additive interval columns (never edited by hand; produced by pipeline),high
+outputs/governance/ (new interval governance doc + coverage report),CREATE,4,Document method, source, model-population caveat, horizon limit, coverage results,low
+data/processed/forecast_interval_calibration.csv,CREATE,2B,Persisted calibration lookup (grain x horizon-bucket x level -> residual quantiles + sample size),low
+shiny_app/R/helpers.R (fvf_chart / fvf_forecasts),MODIFY,3,Read new columns NA-safe; build arearange series only when bounds present,medium
+shiny_app/ui or server (band toggle + label),MODIFY,3,Add 80/95 toggle (default 95) and label 'Prediction interval (backtest-calibrated)',low
+tests/ (contract + monotonicity + coverage tests),CREATE,2B/4,Automated checks for VR1-VR15,low

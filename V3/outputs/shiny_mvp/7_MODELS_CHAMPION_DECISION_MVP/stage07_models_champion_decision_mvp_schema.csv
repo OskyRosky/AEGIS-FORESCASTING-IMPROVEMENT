@@ -1,0 +1,73 @@
+source_file,column_name,sample_value,notes
+outputs/model_lab/champion_decision/champion_decision.csv,run_id,champion_decision,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,decision,CHAMPION_SELECTED_WITH_CONDITIONS,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_model,ETS Explicit,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_origin,challenger,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_family,statistical,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,decision_confidence,medium,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,conditions,Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as ,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,no_champion_reason,,Source schema captured for Champion Block A lineage.
+outputs/model_lab/champion_decision/champion_decision.csv,created_timestamp,2026-06-13T20:05:35,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,selected_champion_model,ETS Explicit,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,model_origin,challenger,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,model_family,statistical,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,decision_type,CHAMPION_SELECTED_WITH_CONDITIONS,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,decision_confidence,medium,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,official_median_mase,6.901143533373399,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,official_median_rmsse,1.856193218184295,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,supported_better_count,8,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,supported_worse_count,0,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,conditions,Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as ,Source schema captured for Champion Block A lineage.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,created_timestamp,2026-06-13T20:36:01,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,condition_id,C-001,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,selected_champion_model,ETS Explicit,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,condition_type,medium_confidence,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,condition_description,"Champion selected with medium confidence, not high confidence.",Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,source_artifact,outputs/model_lab/champion_decision/champion_decision.csv,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,severity,condition,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,governance_action,MONITOR,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,dashboard_display_required,True,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,review_trigger,"Confidence changes through future audit, monitoring, or new evidence.",Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,expiration_or_reassessment_rule,Reassess before any high-confidence or unconditional champion language is used.,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,created_timestamp,2026-06-14T10:40:38,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,language_id,L-001,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,language_category,approved,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,audience,executive,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,statement_text,ETS Explicit was selected as champion with conditions.,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,allowed_status,allowed,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,reason,Matches official champion decision.,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,replacement_statement,ETS Explicit was selected as champion with conditions under the Model Lab governance framework.,Source schema captured for Champion Block A lineage.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,created_timestamp,2026-06-14T10:40:38,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,run_id,tournament_engine,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,model_name,ARIMA_Fixed,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,model_origin,baseline,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,model_family,statistical,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,entity_count,39,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,official_median_mase,11.789916350319965,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,official_median_rmsse,3.49334506602668,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,median_wmape,,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,median_smape,,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,median_bias,,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,mase_guardrail_status,pass,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,rmsse_guardrail_status,pass,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,risk_status,low,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,audit_risk_flag,False,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,eligible_for_champion_consideration,True,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,champion_exclusion_reason,,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,created_timestamp,2026-06-13T18:07:40,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,run_id,tournament_engine,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_a,ARIMA_Fixed,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_b,ETS_Current,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_a_origin,baseline,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_b_origin,baseline,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,paired_entity_count,39,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,median_delta_mase,3.4917490250170395,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,bootstrap_ci_low,0.6140442369948076,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,bootstrap_ci_high,4.764950425683111,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,sign_test_p_value,0.009475304279476404,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,bh_adjusted_p_value,0.019449308784188407,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,practical_threshold,0.02,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,practically_meaningful,True,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,statistically_supported,True,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,comparison_status,supported_difference,Source schema captured for Champion Block A lineage.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,created_timestamp,2026-06-13T18:07:40,Source schema captured for Champion Block A lineage.

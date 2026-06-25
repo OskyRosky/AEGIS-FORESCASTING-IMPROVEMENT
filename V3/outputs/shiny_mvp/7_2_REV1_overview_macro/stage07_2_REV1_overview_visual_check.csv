@@ -1,0 +1,12 @@
+element,present,details
+section_head_executive_overview,True,Title + read-only macro subtitle
+kpi_governance_state,True,Approved / With conditions (amber)
+kpi_governed_champion,True,ETS Explicit / Selected with conditions
+kpi_median_mase,True,6.90 / primary metric
+kpi_median_rmsse,True,1.86 / guardrail
+prose_what_this_overview_shows,True,Two-paragraph read-only explanation
+list_what_the_review_concluded,True,Decision / confidence / champion / pairwise evidence
+list_model_landscape,True,Reviewed / baselines-challengers / tournament / eligible / risk-flagged
+prose_conditions,True,Governed conditions text
+list_where_to_go_next,True,6 nav rows, planned ones marked **
+visual_review_note,True,Amber pill review prompt at bottom

@@ -1,0 +1,2 @@
+run_id,entities,models,windows_total,forecast_rows,model_jobs,model_jobs_failed,horizon_days,n_windows_config,min_train,min_test,runtime_seconds,created_timestamp
+backtest_60d_20260625_110556,39,13,434,338520,5642,0,60,12,365,60,620.2,2026-06-25T11:05:56

@@ -1,0 +1,14 @@
+model_name,model_origin,model_family,risk_status,is_selected_champion,series_covered,rows,forecast_value_coverage_pct
+FixedGrowth_1_5,baseline,growth_baseline,ok,False,3,1080,100.0
+FixedGrowth_3,baseline,growth_baseline,ok,False,3,1080,100.0
+FixedGrowth_4,baseline,growth_baseline,ok,False,3,1080,100.0
+FixedGrowth_6,baseline,growth_baseline,high_risk,False,3,1080,100.0
+FastNeuralAR_MLP,challenger,lightweight_neural,high_risk,False,3,1080,100.0
+LightGBM,challenger,machine_learning,ok,False,3,1080,100.0
+LinearRegression,baseline,machine_learning,ok,False,3,1080,100.0
+XGBoost,challenger,machine_learning,ok,False,3,1080,100.0
+ARIMA_Fixed,baseline,statistical,ok,False,3,1080,100.0
+AutoARIMA,challenger,statistical,ok,False,3,1080,100.0
+ETS Explicit,challenger,statistical,high_risk,True,3,1080,100.0
+ETS_Current,baseline,statistical,ok,False,3,1080,100.0
+Theta,challenger,statistical,ok,False,3,1080,100.0

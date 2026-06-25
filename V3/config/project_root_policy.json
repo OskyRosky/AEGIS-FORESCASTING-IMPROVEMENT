@@ -1,0 +1,13 @@
+{
+  "project_container_root": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT",
+  "active_project_root": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V3",
+  "active_version": "V3",
+  "based_on_version": "V2",
+  "stage_05_status": "closed",
+  "stage_06_status": "closed_approved",
+  "audit_6_verdict": "APPROVE_WITH_CONDITIONS_TO_SHINY_MVP",
+  "next_stage": "Stage 07 - Shiny MVP Implementation",
+  "next_block": "7.0 - Shiny Project Scaffold + Read-Only Data Loader",
+  "historical_artifacts_rewrite_policy": "do_not_rewrite_for_path_only",
+  "shiny_policy": "read_only_no_recompute"
+}

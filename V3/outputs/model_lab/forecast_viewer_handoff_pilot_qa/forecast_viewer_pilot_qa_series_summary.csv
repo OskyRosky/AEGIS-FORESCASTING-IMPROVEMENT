@@ -1,0 +1,4 @@
+series_key,model_count,models_available,date_min,date_max,row_count,actual_value_coverage_pct,forecast_value_coverage_pct,horizon_min,horizon_max,status
+APC-Dedicated,13,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | FastNeuralAR_MLP | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4 | FixedGrowth_6 | LightGBM | LinearRegression | Theta | XGBoost,2025-05-03,2026-04-27,4680,100.0,100.0,1,30,usable
+APC-MSIT,13,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | FastNeuralAR_MLP | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4 | FixedGrowth_6 | LightGBM | LinearRegression | Theta | XGBoost,2025-05-03,2026-04-27,4680,100.0,100.0,1,30,usable
+APC-Multitenant,13,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | FastNeuralAR_MLP | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4 | FixedGrowth_6 | LightGBM | LinearRegression | Theta | XGBoost,2025-05-03,2026-04-27,4680,100.0,100.0,1,30,usable

@@ -1,0 +1,11 @@
+check_id,area,what_to_verify,expected
+1,Navigation,Open Governance -> Risks,Page loads with new collapsible layout.
+2,About box,About the Risk Register,Collapsed by default; expands to read-only register explanation.
+3,Overview box,Risk Register Overview,Open by default; shows all 8 summary cards in one structured box.
+4,Card values,Severity + carry-forward counts,Identical numbers to the previous register (no value change).
+5,Governed Risk Register box,Risk register table,Own expandable box; table renders with all governed risk rows.
+6,Table behavior,Search / sort / pagination,Works the same as before.
+7,Deferred Models box,Deferred models table,Own expandable box; deferred model rows render unchanged.
+8,Conditional context box,Conditional Decision Context,Collapsed by default; expands to the carry-forward governance note.
+9,Collapse/expand,All five boxes,Each toggles independently; default open = Overview/Governed Risk Register/Deferred Models.
+10,No regressions,Forecasting / Models / Reference / Audit,Untouched and still working.

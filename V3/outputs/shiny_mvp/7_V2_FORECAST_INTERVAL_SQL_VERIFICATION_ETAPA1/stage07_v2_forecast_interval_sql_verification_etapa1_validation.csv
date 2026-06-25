@@ -1,0 +1,21 @@
+check_name,status,details
+read_only_guarantee,pass,All Etapa 1 SQL is SELECT-only; no INSERT/UPDATE/DELETE/DDL produced or executed
+source_table_identified,pass,[TesseractEarthDW].[dbo].[forecast_substrateBE_hdd_region] confirmed as the Forecast page upstream
+real_columns_mapped,pass,Real SQL columns = [Key] [DateTime] [Value] [ModelVersion] [ForecastVersion] [Scenario] [Resource] [ValueType]
+prompt_column_names_corrected,warning,Prompt queries referenced [Date]/[EntityKey] which do NOT exist; manual_queries.sql corrected to real names [DateTime]/[Key]
+valuetype_column_exists,pass,Ingestion query (python/ingestion/queries.py) and transform (build_data_contract.py) both reference [ValueType]; column exists upstream
+double_mean_filter_confirmed,pass,Forecast-Mean is filtered TWICE: SQL WHERE ValueType='Forecast-Mean' AND transform value_type=='Forecast-Mean'
+db_tooling_present,pass,python 3.14.6 + pyodbc 5.3.0 + 'ODBC Driver 18 for SQL Server' + az CLI all available
+db_auth_method,warning,config.py uses Microsoft Entra ID ActiveDirectoryInteractive (interactive browser sign-in); no service principal/token configured
+az_login_state,fail,'az account show' returned 'Please run az login'; no cached Azure identity for non-interactive token
+non_interactive_db_access,fail,No non-interactive path available; interactive auth not triggered to avoid hanging terminal / unexpected browser prompt
+query1_distinct_valuetype_executed,not_applicable,DB_ACCESS_NOT_AVAILABLE - provided as manual Query 1
+query2_coverage_by_valuetype_executed,not_applicable,DB_ACCESS_NOT_AVAILABLE - provided as manual Query 2
+query3_sample_non_mean_executed,not_applicable,DB_ACCESS_NOT_AVAILABLE - provided as manual Query 3
+query4_resource_by_valuetype_executed,not_applicable,DB_ACCESS_NOT_AVAILABLE - provided as manual Query 4
+output_folder_created,pass,outputs/shiny_mvp/7_V2_FORECAST_INTERVAL_SQL_VERIFICATION_ETAPA1 created with all 7 required files
+no_code_or_data_modified,pass,No python/R/CSV/Shiny/SQL source files modified; only outputs written under outputs/shiny_mvp
+v2_scope_respected,pass,Only V2 inspected; V1 untouched
+champion_metrics_untouched,pass,No models run, no metrics recomputed, no champion decision changed
+secrets_not_printed,pass,No credentials/tokens printed; connection facts (server/db/driver) are non-secret values already in code
+branch_decision_pending,warning,2A vs 2B cannot be decided until Query 1/2/3 results are returned by Oscar

@@ -1,0 +1,5 @@
+aggregation_level,input,method,output
+entity_window_model,normalized metric scores for one entity/window/model,weighted_mean,model_score_within_entity_window
+entity_model,model_score_within_entity_window across windows,median,model_score_within_entity
+cross_entity_model,model_score_within_entity across entities,equal_weighted_mean,model_score_across_entities
+global_model,model_score_across_entities,identity,global_model_score

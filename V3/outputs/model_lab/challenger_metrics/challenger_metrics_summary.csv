@@ -1,0 +1,2 @@
+run_id,official_models,forecast_rows,joined_actual_rows,metric_rows,entity_windows,horizon_days,mase_denominator_source,rmsse_denominator_source,negative_forecast_rows,metrics_created,aggregation_created,significance_created,rankings_created,tournament_created,champion_selected,created_timestamp
+challenger_metrics_scoring,6,81720,81720,2724,454,30,training_only_lag1_naive_mae,training_only_lag1_naive_mse,306,True,False,False,False,False,False,2026-06-13T16:26:53

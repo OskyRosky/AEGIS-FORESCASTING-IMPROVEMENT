@@ -1,0 +1,35 @@
+check_name,status,details
+Tournament page exists,pass,section_tournament function checked
+Tournament page no longer shows placeholder-only content,pass,Tournament placeholder text removed
+Tournament page reads tournament_model_scorecard.csv,pass,Uses 7.0E governed loader key tournament_scorecard
+Tournament page reads tournament_pairwise_evidence.csv if present,pass,Uses 7.0E governed loader key tournament_pairwise
+Tournament page does not read forecast_viewer_model_outputs.csv as official tournament source,pass,Checked Tournament helper/server read code only; UI contains a scope note but no read path.
+Tournament page does not read forecasts.csv,pass,Tournament-specific code inspected
+Tournament page does not read actuals.csv,pass,Tournament-specific code inspected
+Executive summary cards exist,pass,Cards text checked
+Standings table exists,pass,DT output and renderer checked
+Standings table includes official MASE,pass,Table helper checked
+Standings table includes official RMSSE,pass,Table helper checked
+Standings table includes risk/eligibility if available,pass,Risk/eligibility fields checked
+Selected champion under conditions is shown if available,pass,Champion flag and card checked
+MASE vs RMSSE chart exists,pass,Plot output/helper checked
+Pairwise evidence table or heatmap exists,pass,Pairwise DT checked
+Composite Score note exists,pass,Composite note checked
+No composite score is computed,pass,Tournament-specific code checked for score assignment
+No weights are invented,pass,Tournament-specific code checked for weight assignment
+No Stage 05 artifacts modified,pass,Only Shiny source and Stage 07 audit outputs were written
+No Stage 06 artifacts modified,pass,No outputs/governance files were written
+No processed data artifacts modified,pass,No data/processed files were written
+No models run,pass,No model execution commands run
+No forecasts generated,pass,No forecast outputs generated
+No tournaments rerun,pass,No tournament scripts run
+No metrics recalculated,pass,Only reads governed metrics; no MASE/RMSSE recompute
+No champion decision changed,pass,Champion artifacts untouched
+Universe page still exists,pass,Universe function checked
+Champion page still exists,pass,Champion function checked
+Comparison page still exists,pass,Comparison function checked
+App launches successfully,pass,render_success=True
+HTTP status checked,pass,http_status=200
+PID returned,pass,pid=30084
+logs returned,pass,stdout/stderr log paths captured
+stop command returned,pass,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny_v1.ps1 -PidToStop 30084

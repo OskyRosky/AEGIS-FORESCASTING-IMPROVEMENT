@@ -1,0 +1,16 @@
+stage_block,file_path,change_type,description,reason,risk_level,requires_visual_validation,requires_claude_audit,notes
+7.0B,shiny_app,do_not_touch,No Shiny changes in planning block,baseline launch only,low,false,false,current app launched unchanged
+7.0C,shiny_app/app.R,modify_later,Create or reconcile shell and landing route,first visible caratula,medium,true,true,after Oscar baseline inspection
+7.0C,shiny_app/global.R,modify_later,Ensure V1 root and governance constants source safely,active root policy,medium,true,true,no recompute
+7.0D,shiny_app/R/libraries.R,modify_later,Restrict to display-only dependencies,governance no runtime modeling,medium,true,true,manual package review
+7.0D,shiny_app/R/constants.R,modify_later,Centralize governed artifact paths,V1-relative paths,medium,true,true,use project_root_policy
+7.0E,shiny_app/R/data_loader.R,modify_later,Build read-only artifact loaders,6.4 binding contract,high,true,true,no metric calculations
+7.0D,shiny_app/R/llm_client.R,modify_later,Correct prohibited language such as AutoARIMA best candidate,champion governance conflict,high,true,true,must not imply winner/best
+7.0C,shiny_app/ui/header.R,create_later,Header shell if not present,reference header pattern,low,true,true,or keep in app.R
+7.0C,shiny_app/ui/body.R,create_later,Body shell if not present,reference body/tab pattern,medium,true,true,read-only sections
+7.0C,shiny_app/ui/tabs,create_later,Landing and section tab files,modular UI,medium,true,true,if chosen
+7.0E,shiny_app/server.R,modify_later,Read-only render orchestration,avoid recalculation,high,true,true,or app.R server section
+7.0E,shiny_app/modules,manual_review,Review modules for recompute/ranking wording,existing populated modules,high,true,true,preserve until plan
+7.0C,shiny_app/www/custom.css,modify_later,Style landing shell and governance warnings,visual polish,low,true,false,no data logic
+7.0D,shiny_app/www/custom.js,manual_review,Use only display behavior if needed,no hidden filtering,medium,true,true,avoid computation
+7.0B,MassiveForecasting-V3,do_not_touch,Reference app remains unchanged,reference only,low,false,false,no copy

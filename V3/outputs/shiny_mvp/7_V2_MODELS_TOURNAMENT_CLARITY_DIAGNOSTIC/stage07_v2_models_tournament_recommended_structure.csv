@@ -1,0 +1,9 @@
+order,section,default_state,purpose,data_source,visible_fields,user_question_answered
+1,Header + plain subtitle,always_visible,Frame the page,static,Title + one-line story,What is this page?
+2,Compact cards (5),always_visible,Headline facts,scorecard + pairwise + champion_summary,Models 13 / Pairwise 78 / Primary metric MASE / Guardrail RMSSE / Champion under conditions ETS Explicit,What happened at a glance?
+3,How to read this tournament,collapsible_open,Plain-language story,static,Football/league analogy: lower MASE = goals; RMSSE guardrail; win/draw/loss; risk rulebook,Why does a model win?
+4,Head-to-head / league visual,collapsible_open,Main story,tournament_model_evidence_summary.csv + tournament_pairwise_evidence.csv,League standings W-D-L + net evidence + median MASE; optional labeled illustrative bracket,Who beat whom and who leads?
+5,Standings table,collapsible_closed,Detail per model,tournament_model_scorecard.csv + evidence_summary,Model / Family / Median MASE / Median RMSSE / W-D-L / Risk / Eligibility / Champion,How does each model rank?
+6,Goodness-of-fit metrics,collapsible_closed,Extra error metrics,tournament_model_scorecard.csv,Model / wMAPE / sMAPE / MASE guardrail / RMSSE guardrail (challengers-only note),How accurate beyond MASE?
+7,Pairwise evidence,collapsible_closed,Technical evidence,tournament_pairwise_evidence.csv,Verdict (supported/inconclusive) + delta MASE + CIs + p-values,What is the statistical proof?
+8,How champion is decided + policy,collapsible_closed,Governance,champion_summary + static policy,Multi-factor decision (MASE + guardrail + pairwise + risk/eligibility); source/no-recompute/language policy,How was the champion chosen and is it governed?

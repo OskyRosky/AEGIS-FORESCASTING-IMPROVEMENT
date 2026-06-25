@@ -1,0 +1,2 @@
+run_id,model_name,execution_mode,sandbox_status,entities_attempted,windows_attempted,forecast_rows,error_message,created_timestamp
+block_5_29d_recovery,FastNeuralAR_MLP,sandbox,sandbox_passed,1,6,180,,2026-06-13T16:11:28
