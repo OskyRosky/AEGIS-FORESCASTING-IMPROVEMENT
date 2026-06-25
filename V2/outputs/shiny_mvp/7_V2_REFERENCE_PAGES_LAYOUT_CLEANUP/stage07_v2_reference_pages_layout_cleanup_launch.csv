@@ -1,0 +1,15 @@
+field,value
+stage,Stage 07 - V2 Reference Pages Layout Cleanup
+launch_script,scripts\start_shiny.ps1
+preferred_port,3838
+bound_port,3838
+process_id,17304
+host,127.0.0.1
+url,http://127.0.0.1:3838
+http_status,200
+single_listener_on_3838,true
+pages_refactored,Reference Artifacts + Reference Methodology + Reference Version
+stdout_log,outputs\shiny_mvp\7_V2_REFERENCE_PAGES_LAYOUT_CLEANUP\logs\stage07_v2_reference_pages_layout_cleanup_stdout.log
+stderr_log,outputs\shiny_mvp\7_V2_REFERENCE_PAGES_LAYOUT_CLEANUP\logs\stage07_v2_reference_pages_layout_cleanup_stderr.log
+previous_pid_stopped,5268
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 17304

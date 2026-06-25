@@ -1,0 +1,29 @@
+requirement_id,requirement,status,evidence
+1,Forecast page loads without error,PASS,App boots; HTTP 200 on 127.0.0.1:3838; section_forecast renders.
+2,Forecast page prefers calibrated 60d artifact,PASS,fvf_forecasts() loads forecasts_with_intervals_relative_60d_calibrated.csv; fvf_source attr = calibrated filename; HAS_IV=TRUE.
+3,Safe fallback to forecasts.csv if calibrated artifact missing,PASS,fvf_forecasts() falls back to forecasts key (point only) and sets has_intervals=FALSE; UI shows missing-artifact note. No silent fallback to 30d artifact.
+4,Window options exactly Next 30 / Next 60 / Next 180 days,PASS,tabs.R fvf_window choices = c(30,60,180); Full forecast window removed.
+5,Default window = Next 30 days,PASS,selectInput fvf_window selected = 30.
+6,Full forecast window option removed,PASS,No 'Full' option present in fvf_window.
+7,Actual history label = 'Actual history shown before forecast',PASS,tabs.R step-3 label updated.
+8,Actual history options Last 90 / 180 / 365 days,PASS,fvf_history choices = c(90,180,365).
+9,Default actual history = Last 180 days,PASS,selectInput fvf_history selected = 180.
+10,Actual history is visual-only and does not affect forecast/intervals,PASS,fvf_actual_history() only trims observed history window; forecast/interval rows unaffected.
+11,Reads actuals.csv for history,PASS,fvf_actuals()/fvf_actual_history() read actuals.csv.
+12,Forecast mean renders,PASS,fvf_chart 'Forward forecast' dashed series renders for all windows.
+13,80% lower and upper render,PASS,Chart series 'Upper 80%' and 'Lower 80%' present.
+14,80% interval shown through forecast day 60 when available,PASS,Smoke: win=60 iv_rows=60 max_iv_horizon=60.
+15,80% interval stops after day 60 in 180-day window,PASS,Smoke: win=180 fwd_rows=181 but iv_rows=60 max_iv_horizon=60; point forecast after day 60.
+16,No 95% lines rendered,PASS,Smoke: chart series = Actual history | Forward forecast | Upper 80% | Lower 80% only.
+17,No 95% legend/tooltip item,PASS,No 95% series exist so no legend/tooltip entry.
+18,No shaded band/arearange/ribbon,PASS,Smoke: HAS_AREARANGE=FALSE; bounds drawn as dashed lines only.
+19,Shiny does not compute intervals,PASS,fvf_* only read interval columns from governed artifact; no quantile/residual math.
+20,Shiny does not compute residuals,PASS,No residual computation in helpers.R/server.R forecast path.
+21,Shiny does not compute quantiles,PASS,No quantile computation; values read as-is.
+22,Shiny does not modify forecast_value,PASS,forecast_value read-only; not reassigned.
+23,forecasts.csv not modified,PASS,No write operations to forecasts.csv; mtime unchanged.
+24,Calibrated 60d artifact not modified,PASS,No write operations to forecasts_with_intervals_relative_60d_calibrated.csv; read-only.
+25,No models/forecasts/tournaments run,PASS,No engine/tournament/model code invoked; UI wiring only.
+26,Champion decision unchanged,PASS,No governance/champion artifact touched.
+27,App launches,PASS,start_shiny.ps1 launched PID 20096 on 3838.
+28,App returns HTTP 200,PASS,Invoke-WebRequest 127.0.0.1:3838 -> HTTP 200.

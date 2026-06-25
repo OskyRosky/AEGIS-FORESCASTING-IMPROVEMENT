@@ -1,0 +1,12 @@
+field,value
+process_id,22096
+host,127.0.0.1
+port,3838
+url,http://127.0.0.1:3838
+http_status,200
+content_length,205794
+log_dir,outputs/shiny_mvp/7_V2_FORECAST_INTERVAL_80_ONLY_VISUAL_CLEANUP/logs
+log_prefix,stage07_v2_fcst_iv80
+stdout_log,outputs/shiny_mvp/7_V2_FORECAST_INTERVAL_80_ONLY_VISUAL_CLEANUP/logs/stage07_v2_fcst_iv80_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_FORECAST_INTERVAL_80_ONLY_VISUAL_CLEANUP/logs/stage07_v2_fcst_iv80_stderr.log
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 22096

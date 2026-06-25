@@ -1,0 +1,12 @@
+check_id,area,what_to_verify,expected
+1,Navigation,Open Governance -> Audit,Page loads with new collapsible layout.
+2,About box,About the Audit View,Collapsed by default; expands to read-only audit-view explanation.
+3,Overview box,Audit Trail Overview,Open by default; shows all audit KPI cards in one structured box.
+4,KPI values,Audit #4 / Sanity / Audit #5 cards,Identical values/labels to the previous audit page (no change).
+5,Timeline box,Governance Timeline,Open by default; shows the four governance-gate shell cards in order.
+6,Findings box,Audit Findings,Own expandable box; audit findings table renders with all rows.
+7,Next Steps box,Governance Next Steps,Collapsed by default; expands to the next-steps table.
+8,Verification box,Independent Verification,Collapsed by default; expands to the verification note.
+9,Collapse/expand,All six boxes,Each toggles independently; default open = Overview/Timeline/Findings.
+10,Table behavior,Findings + Next Steps search/sort/pagination,Works the same as before.
+11,No regressions,Forecasting / Models / Reference / Risks,Untouched and still working.

@@ -535,7 +535,7 @@ section_forecast <- function() {
         class = "fvb-how-list",
         tags$li("This page shows the ", tags$b("forward production forecast"), " for one ", tags$b("key / series"), " at a time."),
         tags$li("The ", tags$b("solid line"), " is actual history up to the last actual date."),
-        tags$li("The ", tags$b("dashed line"), " is the future forecast read from ", tags$code("forecasts.csv"), "."),
+        tags$li("The ", tags$b("dashed line"), " is the future forecast read from the governed calibrated forecast artifact (", tags$code("forecasts_with_intervals_relative_60d_calibrated.csv"), ", with a point-only fallback to ", tags$code("forecasts.csv"), ")."),
         tags$li("The ", tags$b("vertical boundary"), " marks the forecast start (the last actual date)."),
         tags$li("Each key / series has ", tags$b("one selected production model / version"), "."),
         tags$li("This page does ", tags$b("not"), " compare multiple models \u2014 historical multi-model backtest comparison lives in ", tags$b("Viewer"), ".")
@@ -564,7 +564,7 @@ section_forecast <- function() {
       ),
       tags$p(
         class = "fvb-setup-note",
-        "Prediction intervals are backtest-calibrated and currently available for the first 30 forecast days only. Longer windows continue as point forecast after day 30. Shiny only visualizes interval columns from the governed forecast artifact."
+        "Prediction intervals are backtest-calibrated from relative residuals and shown at the 80% level for operational clarity. The calibrated interval artifact currently supports forecast days 1\u201360. For longer windows, the forecast continues as a point estimate after day 60. Shiny only visualizes interval columns from the governed artifact."
       ),
 
       # Steps 1, 2, 3 --------------------------------------------------
@@ -585,21 +585,20 @@ section_forecast <- function() {
           tags$label(class = "fvb-field-label",
                      tags$span(class = "fvb-step-num", "2"), "Forecast window"),
           selectInput("fvf_window", NULL,
-                      choices = c("Next 30 days" = 30, "Next 90 days" = 90,
-                                  "Next 180 days" = 180,
-                                  "Full forecast window" = 0),
-                      selected = 90, width = "100%"),
+                      choices = c("Next 30 days" = 30, "Next 60 days" = 60,
+                                  "Next 180 days" = 180),
+                      selected = 30, width = "100%"),
           tags$p(class = "fvb-field-hint",
                  "How far into the future to draw the forward forecast line.")
         ),
         tags$div(
           class = "fvb-field fvb-field-history",
           tags$label(class = "fvb-field-label",
-                     tags$span(class = "fvb-step-num", "3"), "Actual history window"),
+                     tags$span(class = "fvb-step-num", "3"), "Actual history shown before forecast"),
           selectInput("fvf_history", NULL,
-                      choices = c("Last 90 actual days" = 90,
-                                  "Last 180 actual days" = 180,
-                                  "Last 365 actual days" = 365),
+                      choices = c("Last 90 days" = 90,
+                                  "Last 180 days" = 180,
+                                  "Last 365 days" = 365),
                       selected = 180, width = "100%"),
           tags$p(class = "fvb-field-hint",
                  "How much observed history to show before the forecast start boundary.")
@@ -663,7 +662,7 @@ section_forecast <- function() {
     # Footer note ------------------------------------------------------------
     tags$p(
       class = "fv-method-note",
-      "This page reads actuals.csv and forecasts.csv. It does not generate forecasts, compare models, rerun tournaments, recalculate metrics, or change champion decisions."
+      "This page reads actuals.csv and the governed calibrated forecast artifact (forecasts_with_intervals_relative_60d_calibrated.csv, point-only fallback to forecasts.csv). It only visualizes interval columns already present in the governed artifact \u2014 it does not generate forecasts, compute or recalibrate intervals, residuals or quantiles, compare models, rerun tournaments, recalculate metrics, or change champion decisions."
     )
   )
 }
@@ -908,122 +907,127 @@ section_ttl <- function() {
       "Time-to-Live (Months to Live): how long until forecast demand reaches supply, so capacity can be added before a shortage. Prototype example built on our forecasts."
     ),
 
-    # B. Prototype / governance banner --------------------------------------
-    tags$div(
-      class = "ttl-callout ttl-callout-proto",
-      tags$span(class = "pill pill-amber", "Prototype \u00b7 simulated supply"),
-      tags$h3(class = "ttl-callout-title",
-              "Demand is real (our forecast) \u00b7 Supply & TTL are simulated"),
-      tags$p(
-        class = "ttl-callout-text",
-        "This page shows how forecasting improvements feed a Time-To-Live view. ",
-        "The demand line comes from our real forecasts; supply and the derived ",
-        "Months-to-Live are simulated for illustration. Real AEGIS sources ",
-        "(", tags$code("vw_SubstrateBE_MonthsToLive_*"), ", ",
-        tags$code("HLC_BE_Future_Supply_TimeSeries_*"),
-        ") are identified but not yet validated as governed artifacts."
-      )
+    # B. How to use this TTL / Capacity View (collapsed by default) ---------
+    home_collapse(
+      "How to use this TTL / Capacity View",
+      "A quick guide to reading Months-to-Live, the supply-vs-demand crossover and the utilization heatmap.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          "This view explains how long each series has before forecast demand reaches ",
+          "available supply. Select a series, click Analyze TTL, and review the ",
+          "Months-to-Live gauge, the supply-vs-demand crossover chart, and the projected ",
+          "utilization heatmap. Demand is based on the forecast artifact; supply and TTL ",
+          "are currently simulated/prototype inputs until validated supply artifacts are ",
+          "available."
+        )
+      ),
+      open = FALSE
     ),
 
-    # C. Summary KPIs (band counts) -----------------------------------------
-    uiOutput("ttl_summary_cards"),
-
-    # D. Per-series gauge + supply/demand line ------------------------------
-    tags$section(
-      class = "fvx-section ttl-section",
+    # C. TTL Capacity Overview (open) --- prototype note + fleet KPI cards ---
+    home_collapse(
+      "TTL Capacity Overview",
+      "Prototype status and the fleet-wide TTL band summary across all series.",
       tags$div(
-        class = "fvx-section-head",
-        tags$span(class = "fvx-section-kicker", "Per series"),
-        tags$h3(class = "fvx-section-title", "Months to Live \u00b7 Supply vs Demand"),
-        tags$span(class = "pill pill-blue", "Gauge + crossover")
+        class = "ttl-callout ttl-callout-proto",
+        tags$span(class = "pill pill-amber", "Prototype \u00b7 simulated supply"),
+        tags$h3(class = "ttl-callout-title",
+                "Demand is real (our forecast) \u00b7 Supply & TTL are simulated"),
+        tags$p(
+          class = "ttl-callout-text",
+          "This page shows how forecasting improvements feed a Time-To-Live view. ",
+          "The demand line comes from our real forecasts; supply and the derived ",
+          "Months-to-Live are simulated for illustration. Real AEGIS sources ",
+          "(", tags$code("vw_SubstrateBE_MonthsToLive_*"), ", ",
+          tags$code("HLC_BE_Future_Supply_TimeSeries_*"),
+          ") are identified but not yet validated as governed artifacts."
+        )
       ),
-      tags$p(
-        class = "fvx-section-lead",
-        "Pick a series to see its Months-to-Live gauge and the supply-vs-demand ",
-        "crossover (where demand reaches supply). ", as.character(n_series),
-        " series available, ordered most-urgent first."
-      ),
+      uiOutput("ttl_summary_cards"),
+      open = TRUE
+    ),
 
+    # D. Set up the TTL view (open) --- controls only -----------------------
+    home_collapse(
+      "Set up the TTL view",
+      "Choose a series and run Analyze TTL to populate the selected-series results below.",
       tags$div(
-        class = "fv-setup",
-        tags$div(
-          class = "fv-setup-panel",
-          tags$div(class = "fv-setup-title", "Set up the TTL view"),
-          ttl_step(
-            1, "Select series",
-            selectInput("ttl_series", NULL, choices = ttl_series,
-                        selected = if (n_series) ttl_series[[1]] else NULL,
-                        width = "100%"),
-            "Series are sorted shortest Time-to-Live first (most urgent at the top)."
-          ),
-          tags$div(
-            class = "fv-step fv-step-action",
-            tags$div(
-              class = "fv-step-head",
-              tags$span(class = "fv-step-num", "2"),
-              tags$span(class = "fv-step-title", "Analyze")
-            ),
-            actionButton("ttl_go", "Analyze TTL", class = "fv-analyze-btn"),
-            tags$p(class = "fv-step-hint",
-                   "The gauge and chart update only after you click Analyze TTL.")
-          ),
-          tags$p(class = "fv-entity-note",
-                 "Demand = real forecast. Supply & TTL = simulated. Nothing is written back.")
+        class = "fv-setup-panel",
+        ttl_step(
+          1, "Select series",
+          selectInput("ttl_series", NULL, choices = ttl_series,
+                      selected = if (n_series) ttl_series[[1]] else NULL,
+                      width = "100%"),
+          "Series are sorted shortest Time-to-Live first (most urgent at the top)."
         ),
-
         tags$div(
-          class = "fv-result",
-          uiOutput("ttl_series_kpis"),
+          class = "fv-step fv-step-action",
           tags$div(
             class = "fv-step-head",
-            tags$span(class = "fv-step-num", "3"),
-            tags$span(class = "fv-step-title", "Months to Live")
+            tags$span(class = "fv-step-num", "2"),
+            tags$span(class = "fv-step-title", "Analyze")
           ),
-          tags$div(
-            class = "ttl-gauge-wrap",
-            highcharter::highchartOutput("ttl_gauge", height = "300px")
-          ),
-          tags$div(
-            class = "fv-notes-head",
-            tags$span(class = "fv-step-num", "4"),
-            tags$span(class = "fv-step-title", "Supply vs Demand (crossover)")
-          ),
-          tags$div(
-            class = "fv-chart-wrap",
-            highcharter::highchartOutput("ttl_line", height = "380px")
-          )
-        )
-      )
+          actionButton("ttl_go", "Analyze TTL", class = "fv-analyze-btn"),
+          tags$p(class = "fv-step-hint",
+                 "The gauge and chart update only after you click Analyze TTL.")
+        ),
+        tags$p(class = "fv-entity-note",
+               "Demand = real forecast. Supply & TTL = simulated. Nothing is written back.")
+      ),
+      open = TRUE
     ),
 
-    # E. Fleet heatmap (all series) -----------------------------------------
-    tags$section(
-      class = "fvx-section ttl-section",
+    # E. TTL Results -- Selected Series (open) --- KPI cards + gauge + line --
+    home_collapse(
+      "TTL Results \u2014 Selected Series",
+      "Result metrics, the Months-to-Live gauge and the supply-vs-demand crossover for the selected series.",
       tags$div(
-        class = "fvx-section-head",
-        tags$span(class = "fvx-section-kicker", "All series"),
-        tags$h3(class = "fvx-section-title", "Projected utilization heatmap"),
-        tags$span(class = "pill pill-blue", "Fleet view")
+        class = "fv-result",
+        uiOutput("ttl_series_kpis"),
+        tags$div(
+          class = "fv-step-head ttl-result-subhead",
+          tags$span(class = "fv-step-title", "Months to Live")
+        ),
+        tags$div(
+          class = "ttl-gauge-wrap",
+          highcharter::highchartOutput("ttl_gauge", height = "300px")
+        ),
+        tags$div(
+          class = "fv-notes-head ttl-result-subhead",
+          tags$span(class = "fv-step-title", "Supply vs Demand (crossover)")
+        ),
+        tags$div(
+          class = "fv-chart-wrap",
+          highcharter::highchartOutput("ttl_line", height = "380px")
+        )
       ),
+      open = TRUE
+    ),
+
+    # F. Projected Utilization Heatmap (open) --- fleet view ----------------
+    home_collapse(
+      "Projected Utilization Heatmap",
+      "Fleet-wide projected monthly utilization, most-urgent series first.",
       tags$p(
         class = "fvx-section-lead",
-        "Projected monthly utilization for every series (rows), most-urgent first. ",
-        "Blue = healthy headroom, yellow = tightening, red = at/over capacity."
+        "Projected monthly utilization across all series. Red indicates series ",
+        "approaching or exceeding capacity; cooler colors indicate more headroom."
       ),
       tags$div(
         class = "fv-chart-wrap",
         plotly::plotlyOutput("ttl_heatmap", height = "640px")
-      )
+      ),
+      open = TRUE
     ),
 
-    # F. Snapshot table -----------------------------------------------------
-    tags$section(
-      class = "fvx-section ttl-section",
-      tags$div(
-        class = "fvx-section-head",
-        tags$span(class = "fvx-section-kicker", "Snapshot"),
-        tags$h3(class = "fvx-section-title", "Time-to-Live snapshot table"),
-        tags$span(class = "pill pill-blue", "All series")
+    # G. Time-to-Live Snapshot Table (collapsed; long table) ----------------
+    home_collapse(
+      "Time-to-Live Snapshot Table",
+      "Per-series TTL status, sorted by most urgent capacity risk first.",
+      tags$p(
+        class = "fvx-section-lead",
+        "Snapshot of TTL status by series, sorted by most urgent capacity risk first."
       ),
       tags$div(class = "tess-table-wrap",
                DT::dataTableOutput("ttl_table")),
@@ -1047,7 +1051,8 @@ section_ttl <- function() {
         "generate new forecasts, recompute governed metrics, or change any ",
         "selected champion. It will be repointed to governed AEGIS capacity ",
         "sources once those are validated."
-      )
+      ),
+      open = FALSE
     )
   )
 }
@@ -1894,53 +1899,89 @@ section_risks <- function() {
       "Governed risk register from the Model Lab closure pack. These are the open risks and deferred models carried forward from the review. No risk is computed on this page."
     ),
 
-    # A. Risk level summary cards -------------------------------------------
-    card_grid(
-      kpi_card(vals$total, "Registered risks",
-               pill = "Governed register", pill_class = "pill-blue"),
-      kpi_card(vals$high, "High",
-               pill = "Highest severity", pill_class = "pill-red"),
-      kpi_card(vals$medium, "Medium",
-               pill = "Carry-forward", pill_class = "pill-amber"),
-      kpi_card(paste0(vals$advisory, " / ", vals$minor), "Advisory / Minor",
-               pill = "Non-blocking", pill_class = "pill-blue")
-    ),
-    card_grid(
-      kpi_card(vals$carry_forward_dashboard, "Carried forward to dashboard",
-               pill = "Must stay visible", pill_class = "pill-green"),
-      kpi_card(vals$carry_forward_future, "Carried forward to future work",
-               pill = "Future investigation", pill_class = "pill-blue"),
-      kpi_card(vals$deferred, "Deferred models",
-               pill = "Not in final tournament", pill_class = "pill-amber"),
-      shell_card("Governance", "Read-only register",
-                 "Risks are read from the governed closure pack. This page does not add, remove, or downgrade any risk.")
+    # A. About the Risk Register (collapsed by default) ---------------------
+    home_collapse(
+      "About the Risk Register",
+      "What this governed, read-only register shows \u2014 and what it does not do.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          "This page summarizes governed risks carried forward from the Model Lab ",
+          "closure pack. It is a read-only register: risks are displayed for ",
+          "transparency, auditability, and future follow-up. This page does not ",
+          "add, remove, downgrade, recompute, or resolve any risk."
+        )
+      ),
+      open = FALSE
     ),
 
-    # B. Risk register table -------------------------------------------------
-    tags$h3(class = "section-block-title", "Risk register"),
-    tags$p(
-      class = "shell-card-detail",
-      "One row per governed risk. Ordered by severity (high first). Carry-forward flags show which risks must remain visible on the dashboard and which feed future work."
+    # B. Risk Register Overview (open) --- all summary cards together -------
+    home_collapse(
+      "Risk Register Overview",
+      "Severity counts and carry-forward summary across the governed register.",
+      card_grid(
+        kpi_card(vals$total, "Registered risks",
+                 pill = "Governed register", pill_class = "pill-blue"),
+        kpi_card(vals$high, "High",
+                 pill = "Highest severity", pill_class = "pill-red"),
+        kpi_card(vals$medium, "Medium",
+                 pill = "Carry-forward", pill_class = "pill-amber"),
+        kpi_card(paste0(vals$advisory, " / ", vals$minor), "Advisory / Minor",
+                 pill = "Non-blocking", pill_class = "pill-blue")
+      ),
+      card_grid(
+        kpi_card(vals$carry_forward_dashboard, "Carried forward to dashboard",
+                 pill = "Must stay visible", pill_class = "pill-green"),
+        kpi_card(vals$carry_forward_future, "Carried forward to future work",
+                 pill = "Future investigation", pill_class = "pill-blue"),
+        kpi_card(vals$deferred, "Deferred models",
+                 pill = "Not in final tournament", pill_class = "pill-amber"),
+        shell_card("Governance", "Read-only register",
+                   "Risks are read from the governed closure pack. This page does not add, remove, or downgrade any risk.")
+      ),
+      open = TRUE
     ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("risk_register_table")),
 
-    # C. Deferred models -----------------------------------------------------
-    tags$h3(class = "section-block-title", "Deferred models"),
-    tags$p(
-      class = "shell-card-detail",
-      "Models that were deferred from the final tournament for runtime or dependency reasons. They are documented as future-work candidates and are not rejected."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("risk_deferred_models_table")),
-
-    # D. Governance note -----------------------------------------------------
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-amber", "Carry-forward"),
-      tags$h3(class = "shell-card-title", "Conditional decision context"),
+    # C. Governed Risk Register table (open) --------------------------------
+    home_collapse(
+      "Governed Risk Register",
+      "One row per governed risk, ordered by severity (high first).",
       tags$p(
         class = "shell-card-detail",
-        "These risks are the monitoring side of the conditional champion decision. They include the high-risk model under investigation, the deferred deep-learning models retained for future work, and the audit and sanity conditions carried into closure."
-      )
+        "One row per governed risk, ordered by severity. Carry-forward flags show ",
+        "which risks remain visible on the dashboard and which require future follow-up."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("risk_register_table")),
+      open = TRUE
+    ),
+
+    # D. Deferred Models table (open; short table) --------------------------
+    home_collapse(
+      "Deferred Models",
+      "Models deferred from the final tournament, documented as future-work candidates.",
+      tags$p(
+        class = "shell-card-detail",
+        "Models deferred from the final tournament for runtime, dependency, or ",
+        "environment reasons. These are documented as future-work candidates and are not rejected."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("risk_deferred_models_table")),
+      open = TRUE
+    ),
+
+    # E. Conditional Decision Context (collapsed) ---------------------------
+    home_collapse(
+      "Conditional Decision Context",
+      "How these risks map to the conditional champion decision.",
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-amber", "Carry-forward"),
+        tags$h3(class = "shell-card-title", "Conditional decision context"),
+        tags$p(
+          class = "shell-card-detail",
+          "These risks are the monitoring side of the conditional champion decision. They include the high-risk model under investigation, the deferred deep-learning models retained for future work, and the audit and sanity conditions carried into closure."
+        )
+      ),
+      open = FALSE
     )
   )
 }
@@ -1957,81 +1998,122 @@ section_audit <- function() {
       "Independent governance audits that supported the conditional champion decision. These verdicts are read from governed artifacts and are not recomputed on this page."
     ),
 
-    # A. Verdict summary cards ----------------------------------------------
-    card_grid(
-      kpi_card(vals$a4_verdict, "Audit #4 verdict",
-               pill = "Challenger readiness", pill_class = "pill-green"),
-      kpi_card(paste0(fmt_count(vals$a4_blockers), " / ", fmt_count(vals$a4_major),
-                      " / ", fmt_count(vals$a4_minor), " / ", fmt_count(vals$a4_advisory)),
-               "Audit #4 blockers / major / minor / advisory",
-               pill = "Findings", pill_class = "pill-blue"),
-      kpi_card(paste0(fmt_count(vals$sanity_models), " models \u00b7 ",
-                      fmt_count(vals$sanity_pairwise), " pairwise"),
-               "Sanity review scope",
-               pill = "5.30A review", pill_class = "pill-blue"),
-      kpi_card(paste0(fmt_count(vals$sanity_blockers), " blockers"),
-               "Sanity review result",
-               pill = if (isTRUE(vals$sanity_ready)) "Ready for 5.31" else "Pending",
-               pill_class = "pill-green")
-    ),
-    card_grid(
-      kpi_card(vals$a5_verdict, "Audit #5 verdict",
-               pill = "Closure / handoff", pill_class = "pill-green"),
-      kpi_card(fmt_count(vals$a5_total), "Audit #5 findings reviewed",
-               pill = "Independent audit", pill_class = "pill-blue"),
-      kpi_card(fmt_count(vals$a5_pass), "Findings passed",
-               pill = "No action required", pill_class = "pill-green"),
-      kpi_card(paste0(fmt_count(vals$a5_minor), " minor / ",
-                      fmt_count(vals$a5_advisory), " advisory"),
-               "Non-blocking conditions",
-               pill = paste0(fmt_count(vals$a5_blocking_closure), " blocking"),
-               pill_class = "pill-amber")
+    # A. About the Audit View (collapsed by default) ------------------------
+    home_collapse(
+      "About the Audit View",
+      "What this governed, read-only audit view shows \u2014 and what it does not do.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          paste0(
+            "This page summarizes the governed audit trail for the forecasting ",
+            "improvement work. It explains what was reviewed, what evidence was ",
+            "carried forward, which findings remain visible, and what next steps ",
+            "were identified. This page is read-only: it does not recompute models, ",
+            "change governance decisions, or modify audit evidence."
+          )
+        )
+      ),
+      open = FALSE
     ),
 
-    # B. Governance timeline -------------------------------------------------
-    tags$h3(class = "section-block-title", "Governance timeline"),
-    tags$p(
-      class = "shell-card-detail",
-      "The conditional champion decision passed through three independent governance gates before the dashboard handoff. Each gate approved with conditions and zero blockers."
-    ),
-    card_grid(
-      shell_card("Audit #4", "Challenger results readiness",
-                 "Approved with conditions to proceed to the 5.30 tournament engine. Zero blockers; conditions carried forward."),
-      shell_card("Sanity review (5.30A)", "Tournament sanity",
-                 paste0(fmt_count(vals$sanity_models), " models and ",
-                        fmt_count(vals$sanity_pairwise),
-                        " pairwise comparisons reviewed. Zero blockers; ready for the 5.31 champion decision.")),
-      shell_card("Audit #5", "Closure / dashboard handoff",
-                 "Final independent audit. Approved with conditions; zero blockers and zero major findings across all required areas."),
-      shell_card("Handoff", "Governed dashboard",
-                 "All required dashboard sections covered with verified artifacts. No source outputs were modified by the audits.")
+    # B. Audit Trail Overview (open) --- all KPI cards together -------------
+    home_collapse(
+      "Audit Trail Overview",
+      "Verdicts and finding counts across the independent governance audits.",
+      card_grid(
+        kpi_card(vals$a4_verdict, "Audit #4 verdict",
+                 pill = "Challenger readiness", pill_class = "pill-green"),
+        kpi_card(paste0(fmt_count(vals$a4_blockers), " / ", fmt_count(vals$a4_major),
+                        " / ", fmt_count(vals$a4_minor), " / ", fmt_count(vals$a4_advisory)),
+                 "Audit #4 blockers / major / minor / advisory",
+                 pill = "Findings", pill_class = "pill-blue"),
+        kpi_card(paste0(fmt_count(vals$sanity_models), " models \u00b7 ",
+                        fmt_count(vals$sanity_pairwise), " pairwise"),
+                 "Sanity review scope",
+                 pill = "5.30A review", pill_class = "pill-blue"),
+        kpi_card(paste0(fmt_count(vals$sanity_blockers), " blockers"),
+                 "Sanity review result",
+                 pill = if (isTRUE(vals$sanity_ready)) "Ready for 5.31" else "Pending",
+                 pill_class = "pill-green")
+      ),
+      card_grid(
+        kpi_card(vals$a5_verdict, "Audit #5 verdict",
+                 pill = "Closure / handoff", pill_class = "pill-green"),
+        kpi_card(fmt_count(vals$a5_total), "Audit #5 findings reviewed",
+                 pill = "Independent audit", pill_class = "pill-blue"),
+        kpi_card(fmt_count(vals$a5_pass), "Findings passed",
+                 pill = "No action required", pill_class = "pill-green"),
+        kpi_card(paste0(fmt_count(vals$a5_minor), " minor / ",
+                        fmt_count(vals$a5_advisory), " advisory"),
+                 "Non-blocking conditions",
+                 pill = paste0(fmt_count(vals$a5_blocking_closure), " blocking"),
+                 pill_class = "pill-amber")
+      ),
+      open = TRUE
     ),
 
-    # C. Audit #5 findings ---------------------------------------------------
-    tags$h3(class = "section-block-title", "Audit #5 findings"),
-    tags$p(
-      class = "shell-card-detail",
-      "One row per governed finding, ordered by severity. Closure and handoff flags show whether a finding blocks Model Lab closure or the dashboard handoff. There are no blocking findings."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("audit_findings_table")),
-
-    # D. Next steps ----------------------------------------------------------
-    tags$h3(class = "section-block-title", "Governed next steps"),
-    tags$p(
-      class = "shell-card-detail",
-      "Next steps recorded in the Model Lab closure pack, carried forward to the dashboard and future work."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("audit_next_steps_table")),
-
-    # E. Governance note -----------------------------------------------------
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-green", "Approve with conditions"),
-      tags$h3(class = "shell-card-title", "Independent verification"),
+    # C. Governance Timeline (open) -----------------------------------------
+    home_collapse(
+      "Governance Timeline",
+      "Chronological view of key governance, review, and closure events carried forward from the audit trail.",
       tags$p(
         class = "shell-card-detail",
-        "These audits verified closure-pack completeness, champion-decision consistency, risk carry-forward, and dashboard-handoff readiness. They are read-only checks: no models were rerun, no metrics recomputed, and no source outputs altered. The conditional, medium-confidence champion status must be surfaced on the dashboard rather than presented as an unconditional outcome."
-      )
+        "The conditional champion decision passed through three independent governance gates before the dashboard handoff. Each gate approved with conditions and zero blockers."
+      ),
+      card_grid(
+        shell_card("Audit #4", "Challenger results readiness",
+                   "Approved with conditions to proceed to the 5.30 tournament engine. Zero blockers; conditions carried forward."),
+        shell_card("Sanity review (5.30A)", "Tournament sanity",
+                   paste0(fmt_count(vals$sanity_models), " models and ",
+                          fmt_count(vals$sanity_pairwise),
+                          " pairwise comparisons reviewed. Zero blockers; ready for the 5.31 champion decision.")),
+        shell_card("Audit #5", "Closure / dashboard handoff",
+                   "Final independent audit. Approved with conditions; zero blockers and zero major findings across all required areas."),
+        shell_card("Handoff", "Governed dashboard",
+                   "All required dashboard sections covered with verified artifacts. No source outputs were modified by the audits.")
+      ),
+      open = TRUE
+    ),
+
+    # D. Audit Findings (open) ----------------------------------------------
+    home_collapse(
+      "Audit Findings",
+      "Governed audit findings and conditions carried forward for transparency, follow-up, and closure tracking.",
+      tags$p(
+        class = "shell-card-detail",
+        "One row per governed finding, ordered by severity. Closure and handoff flags show whether a finding blocks Model Lab closure or the dashboard handoff. There are no blocking findings."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("audit_findings_table")),
+      open = TRUE
+    ),
+
+    # E. Governance Next Steps (collapsed) ----------------------------------
+    home_collapse(
+      "Governance Next Steps",
+      "Next actions identified by the audit trail. These items guide follow-up work but are not recomputed on this page.",
+      tags$p(
+        class = "shell-card-detail",
+        "Next steps recorded in the Model Lab closure pack, carried forward to the dashboard and future work."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("audit_next_steps_table")),
+      open = FALSE
+    ),
+
+    # F. Independent Verification (collapsed) -------------------------------
+    home_collapse(
+      "Independent Verification",
+      "Independent verification evidence and audit references used to support the governed closure status.",
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-green", "Approve with conditions"),
+        tags$h3(class = "shell-card-title", "Independent verification"),
+        tags$p(
+          class = "shell-card-detail",
+          "These audits verified closure-pack completeness, champion-decision consistency, risk carry-forward, and dashboard-handoff readiness. They are read-only checks: no models were rerun, no metrics recomputed, and no source outputs altered. The conditional, medium-confidence champion status must be surfaced on the dashboard rather than presented as an unconditional outcome."
+        )
+      ),
+      open = FALSE
     )
   )
 }
@@ -2063,54 +2145,83 @@ section_artifacts <- function() {
       "The governed artifacts that feed this dashboard. Everything here is read-only: files are listed and served exactly as produced by the Model Lab, with no recomputation."
     ),
 
-    # A. Catalog summary -----------------------------------------------------
-    card_grid(
-      kpi_card(as.character(vals$total), "Governed artifacts",
-               pill = "Registry", pill_class = "pill-blue"),
-      kpi_card(as.character(vals$available), "Available now",
-               pill = "Loaded", pill_class = "pill-green"),
-      kpi_card(as.character(vals$categories), "Artifact categories",
-               pill = "Domains", pill_class = "pill-blue"),
-      kpi_card(as.character(vals$roadmap), "Roadmap (not yet produced)",
-               pill = "Future work", pill_class = "pill-amber")
+    # A. About the Artifacts Reference (collapsed) --------------------------
+    home_collapse(
+      "About the Artifacts Reference",
+      "What this read-only reference lists \u2014 and what it does not change.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          paste0(
+            "This page lists the governed artifacts used by the dashboard. It ",
+            "helps reviewers understand which files support the views, where the ",
+            "evidence comes from, and whether each artifact is available for ",
+            "dashboard consumption. This page is read-only and does not modify artifacts."
+          )
+        )
+      ),
+      open = FALSE
     ),
 
-    # B. Governed downloads --------------------------------------------------
-    tags$h3(class = "section-block-title", "Governed downloads"),
-    tags$p(
-      class = "shell-card-detail",
-      "Download the key governed CSVs directly. Each file is served verbatim from its closure-pack / tournament-engine path."
-    ),
-    tags$div(
-      class = "artifact-dl-grid",
-      lapply(ARTIFACT_DOWNLOAD_SPECS, download_card)
+    # B. Artifact Overview (open) -------------------------------------------
+    home_collapse(
+      "Artifact Overview",
+      "Registry totals and current availability across the governed artifacts.",
+      card_grid(
+        kpi_card(as.character(vals$total), "Governed artifacts",
+                 pill = "Registry", pill_class = "pill-blue"),
+        kpi_card(as.character(vals$available), "Available now",
+                 pill = "Loaded", pill_class = "pill-green"),
+        kpi_card(as.character(vals$categories), "Artifact categories",
+                 pill = "Domains", pill_class = "pill-blue"),
+        kpi_card(as.character(vals$roadmap), "Roadmap (not yet produced)",
+                 pill = "Future work", pill_class = "pill-amber")
+      ),
+      open = TRUE
     ),
 
-    # C. Dashboard data lineage ---------------------------------------------
-    tags$h3(class = "section-block-title", "Dashboard data lineage"),
-    tags$p(
-      class = "shell-card-detail",
-      "Each dashboard section is backed by a governed artifact. This is the handoff manifest produced by the Model Lab closure pack."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("artifact_lineage_table")),
-
-    # D. Full artifact catalog ----------------------------------------------
-    tags$h3(class = "section-block-title", "Full artifact catalog"),
-    tags$p(
-      class = "shell-card-detail",
-      "The complete governed artifact registry resolved by the data loader, with availability status and source path. Required artifacts are all present."
-    ),
-    tags$div(class = "tess-table-wrap", DT::dataTableOutput("artifact_catalog_table")),
-
-    # E. Governance note -----------------------------------------------------
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-green", "Read-only"),
-      tags$h3(class = "shell-card-title", "Single source of truth"),
+    # C. Governed Artifact Inventory (open) ---------------------------------
+    home_collapse(
+      "Governed Artifact Inventory",
+      "Inventory of dashboard artifacts, their purpose, and their current availability status.",
+      tags$h3(class = "section-block-title", "Governed downloads"),
       tags$p(
         class = "shell-card-detail",
-        "The dashboard never edits, recomputes, or regenerates these artifacts. Downloads return the exact governed files on disk, so what you export matches what the dashboard renders."
-      )
+        "Download the key governed CSVs directly. Each file is served verbatim from its closure-pack / tournament-engine path."
+      ),
+      tags$div(
+        class = "artifact-dl-grid",
+        lapply(ARTIFACT_DOWNLOAD_SPECS, download_card)
+      ),
+      tags$h3(class = "section-block-title", "Full artifact catalog"),
+      tags$p(
+        class = "shell-card-detail",
+        "The complete governed artifact registry resolved by the data loader, with availability status and source path. Required artifacts are all present."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("artifact_catalog_table")),
+      open = TRUE
+    ),
+
+    # D. Artifact Notes / Lineage / Evidence (collapsed) --------------------
+    home_collapse(
+      "Artifact Notes / Lineage / Evidence",
+      "Data lineage and the read-only governance note for the dashboard artifacts.",
+      tags$h3(class = "section-block-title", "Dashboard data lineage"),
+      tags$p(
+        class = "shell-card-detail",
+        "Each dashboard section is backed by a governed artifact. This is the handoff manifest produced by the Model Lab closure pack."
+      ),
+      tags$div(class = "tess-table-wrap", DT::dataTableOutput("artifact_lineage_table")),
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-green", "Read-only"),
+        tags$h3(class = "shell-card-title", "Single source of truth"),
+        tags$p(
+          class = "shell-card-detail",
+          "The dashboard never edits, recomputes, or regenerates these artifacts. Downloads return the exact governed files on disk, so what you export matches what the dashboard renders."
+        )
+      ),
+      open = FALSE
     )
   )
 }
@@ -2124,89 +2235,121 @@ section_methodology <- function() {
       "How data reaches the dashboard, and how the dashboard is organized. The dashboard only reads governed data \u2014 it never recomputes, edits, or writes back."
     ),
 
-    # ---- Data pipeline ----------------------------------------------------
-    tags$h3(class = "section-block-title", "Data pipeline"),
-    card_grid(
-      shell_card(
-        "Stage 1 \u00b7 Ingestion", "TESSERACT v2 (SQL)",
-        "Enterprise HDD-region series are queried from TesseractEarthDW (forecast_substrateBE_hdd_region) by the Python ingestion layer and exported to data/raw/."
-      ),
-      shell_card(
-        "Stage 2 \u00b7 Processing", "Governed CSV contract",
-        "Raw exports are validated and reshaped into the read-only data contract in data/processed/ and the Model Lab closure pack \u2014 no shifted dates, no imputations, no recompute."
-      ),
-      shell_card(
-        "Stage 3 \u00b7 Consumption", "This dashboard",
-        "The Shiny app loads the governed CSVs through a read-only loader at startup and renders them as-is. It is a consumer, not a producer, of data."
-      )
-    ),
-
-    # ---- Current dataset (governed run_metadata) --------------------------
-    tags$h3(class = "section-block-title", "Current dataset"),
-    card_grid(
-      kpi_card(meta$entity_count, "Series (entities)"),
-      kpi_card(meta$model_count, "Models"),
-      kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
-      kpi_card(meta$run_date, "Data contract build")
-    ),
-    info_list(
-      info_row("Actuals", paste0(meta$actual_rows, " rows  \u00b7  ", meta$actual_range)),
-      info_row("Forecasts", paste0(meta$forecast_rows, " rows  \u00b7  ", meta$forecast_range)),
-      info_row("Source table", "TesseractEarthDW.dbo.forecast_substrateBE_hdd_region (Scenario = Enterprise, ValueType = Forecast-Mean)"),
-      info_row("Build note", meta$notes)
-    ),
-
-    # ---- What the dashboard consumes --------------------------------------
-    tags$h3(class = "section-block-title", "What the dashboard consumes"),
-    info_list(
-      info_row("Forecast data", "forecasts.csv, actuals.csv, entities.csv, run_metadata.csv (data/processed)"),
-      info_row("Backtest", "forecast_viewer_model_outputs.csv \u2014 per-model backtest used by the Viewer and Accuracy pages"),
-      info_row("Model Lab", "closure pack: key results, model universe, champion summary, risk register, next steps"),
-      info_row("Tournament", "preliminary standings, model scorecard, pairwise evidence"),
-      info_row("Governance", "audit findings, sanity review, champion conditions and dashboard language")
-    ),
-    tags$p(
-      class = "method-note",
-      "The full machine-readable list \u2014 with availability, row counts and paths \u2014 lives on the Artifacts page."
-    ),
-
-    # ---- Dashboard structure ----------------------------------------------
-    tags$h3(class = "section-block-title", "Dashboard structure"),
-    info_list(
-      info_row("Project", "Home, Overview \u2014 purpose, scope and the governed snapshot."),
-      info_row("Forecasting", "Viewer, Accuracy, Forecast, TTL \u2014 series-level views and diagnostics."),
-      info_row("Models", "Universe, Tournament, Champion \u2014 the model landscape and selection."),
-      info_row("Governance", "Risks, Audit \u2014 the risk register and the audit trail."),
-      info_row("Reference", "Artifacts, Methodology, Version \u2014 sources, data lineage and build metadata.")
-    ),
-
-    # ---- Architecture diagram placeholder ---------------------------------
-    tags$h3(class = "section-block-title", "Architecture diagram"),
-    tags$div(
-      class = "method-figure",
-      tags$div(class = "method-figure-icon", shiny::icon("diagram-project")),
-      tags$div(class = "method-figure-title", "Dashboard architecture diagram"),
+    # A. About the Methodology Reference (collapsed) ------------------------
+    home_collapse(
+      "About the Methodology Reference",
+      "What this read-only reference documents \u2014 and what it does not compute.",
       tags$div(
-        class = "method-figure-text",
-        "A visual map of the ingestion \u2192 processing \u2192 consumption flow and the dashboard sections will be placed here."
+        class = "home-prose",
+        tags$p(
+          paste0(
+            "This page explains the methodology behind the dashboard views, ",
+            "including how forecasting evidence, model comparison, intervals, TTL, ",
+            "and governance references are organized. This page is read-only and ",
+            "documents the approach; it does not compute forecasts, intervals, or ",
+            "governance decisions."
+          )
+        )
       ),
-      tags$span(class = "method-figure-tag", "Image coming soon")
+      open = FALSE
     ),
 
-    # ---- Project document placeholder -------------------------------------
-    tags$h3(class = "section-block-title", "Project document"),
-    tags$div(
-      class = "method-figure method-figure-doc",
-      tags$div(class = "method-figure-icon", shiny::icon("file-lines")),
-      tags$div(class = "method-figure-title", "Full project document"),
+    # B. Methodology Overview (open) ----------------------------------------
+    home_collapse(
+      "Methodology Overview",
+      "How data reaches the dashboard, what it consumes, and how the views are organized.",
+      tags$h3(class = "section-block-title", "Data pipeline"),
+      card_grid(
+        shell_card(
+          "Stage 1 \u00b7 Ingestion", "TESSERACT v2 (SQL)",
+          "Enterprise HDD-region series are queried from TesseractEarthDW (forecast_substrateBE_hdd_region) by the Python ingestion layer and exported to data/raw/."
+        ),
+        shell_card(
+          "Stage 2 \u00b7 Processing", "Governed CSV contract",
+          "Raw exports are validated and reshaped into the read-only data contract in data/processed/ and the Model Lab closure pack \u2014 no shifted dates, no imputations, no recompute."
+        ),
+        shell_card(
+          "Stage 3 \u00b7 Consumption", "This dashboard",
+          "The Shiny app loads the governed CSVs through a read-only loader at startup and renders them as-is. It is a consumer, not a producer, of data."
+        )
+      ),
+      tags$h3(class = "section-block-title", "Current dataset"),
+      card_grid(
+        kpi_card(meta$entity_count, "Series (entities)"),
+        kpi_card(meta$model_count, "Models"),
+        kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
+        kpi_card(meta$run_date, "Data contract build")
+      ),
+      info_list(
+        info_row("Actuals", paste0(meta$actual_rows, " rows  \u00b7  ", meta$actual_range)),
+        info_row("Forecasts", paste0(meta$forecast_rows, " rows  \u00b7  ", meta$forecast_range)),
+        info_row("Source table", "TesseractEarthDW.dbo.forecast_substrateBE_hdd_region (Scenario = Enterprise, ValueType = Forecast-Mean)"),
+        info_row("Build note", meta$notes)
+      ),
+      tags$h3(class = "section-block-title", "What the dashboard consumes"),
+      info_list(
+        info_row("Forecast data", "forecasts.csv, actuals.csv, entities.csv, run_metadata.csv (data/processed)"),
+        info_row("Backtest", "forecast_viewer_model_outputs.csv \u2014 per-model backtest used by the Viewer and Accuracy pages"),
+        info_row("Model Lab", "closure pack: key results, model universe, champion summary, risk register, next steps"),
+        info_row("Tournament", "preliminary standings, model scorecard, pairwise evidence"),
+        info_row("Governance", "audit findings, sanity review, champion conditions and dashboard language")
+      ),
+      tags$h3(class = "section-block-title", "Dashboard structure"),
+      info_list(
+        info_row("Project", "Home, Overview \u2014 purpose, scope and the governed snapshot."),
+        info_row("Forecasting", "Viewer, Accuracy, Forecast, TTL \u2014 series-level views and diagnostics."),
+        info_row("Models", "Universe, Tournament, Champion \u2014 the model landscape and selection."),
+        info_row("Governance", "Risks, Audit \u2014 the risk register and the audit trail."),
+        info_row("Reference", "Artifacts, Methodology, Version \u2014 sources, data lineage and build metadata.")
+      ),
+      open = TRUE
+    ),
+
+    # C. Architecture Diagram (open placeholder) ----------------------------
+    home_collapse(
+      "Architecture Diagram",
+      "Visual map of the ingestion \u2192 processing \u2192 consumption flow.",
       tags$div(
-        class = "method-figure-text",
-        "A complete write-up of the project \u2014 scope, methodology and governance \u2014 will be added here."
+        class = "method-figure",
+        tags$div(class = "method-figure-icon", shiny::icon("diagram-project")),
+        tags$div(class = "method-figure-title", "Dashboard architecture diagram"),
+        tags$div(
+          class = "method-figure-text",
+          "Architecture diagram will be added here once the approved image is available."
+        ),
+        tags$span(class = "method-figure-tag", "Placeholder")
       ),
-      tags$span(class = "method-figure-tag", "Document coming soon")
+      open = TRUE
     ),
 
-    tags$span(class = "shell-card-tag", "Read-only \u00b7 single source of truth")
+    # D. Project Documentation (collapsed placeholder) ----------------------
+    home_collapse(
+      "Project Documentation",
+      "Full project write-up \u2014 scope, methodology and governance.",
+      tags$div(
+        class = "method-figure method-figure-doc",
+        tags$div(class = "method-figure-icon", shiny::icon("file-lines")),
+        tags$div(class = "method-figure-title", "Full project document"),
+        tags$div(
+          class = "method-figure-text",
+          "Project documentation will be linked or embedded here once the approved document is available."
+        ),
+        tags$span(class = "method-figure-tag", "Placeholder")
+      ),
+      open = FALSE
+    ),
+
+    # E. Methodology Notes (collapsed) --------------------------------------
+    home_collapse(
+      "Methodology Notes",
+      "Read-only behavior and where to find the full machine-readable artifact list.",
+      tags$p(
+        class = "method-note",
+        "The full machine-readable list \u2014 with availability, row counts and paths \u2014 lives on the Artifacts page."
+      ),
+      tags$span(class = "shell-card-tag", "Read-only \u00b7 single source of truth"),
+      open = FALSE
+    )
   )
 }
 
@@ -2219,38 +2362,77 @@ section_version <- function() {
     "version",
     section_head("Version Info", "Build, data and runtime metadata for this governed release."),
 
-    card_grid(
-      kpi_card(APP_VERSION, "App version"),
-      kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
-      kpi_card(paste0(cat$available, " / ", cat$total), "Artifacts available")
+    # A. About the Version Reference (collapsed) ----------------------------
+    home_collapse(
+      "About the Version Reference",
+      "What this read-only reference confirms about the build you are viewing.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          paste0(
+            "This page summarizes dashboard version metadata, build context, ",
+            "artifact freshness, and read-only status. It helps reviewers confirm ",
+            "what version of the dashboard and governed artifacts they are viewing."
+          )
+        )
+      ),
+      open = FALSE
     ),
 
-    tags$h3(class = "section-block-title", "Build & governance"),
-    info_list(
-      info_row("Audit state", version_audit_label()),
-      info_row("Policy", APP_POLICY),
-      info_row("Champion", paste0(APP_CHAMPION, " \u2014 selected with conditions (confidence: ", APP_CHAMPION_CONFIDENCE, ")"))
+    # B. Version Overview (open) --------------------------------------------
+    home_collapse(
+      "Version Overview",
+      "Dashboard and forecast version with current artifact availability.",
+      card_grid(
+        kpi_card(APP_VERSION, "App version"),
+        kpi_card(meta$forecast_version, "Forecast version", pill = "Enterprise", pill_class = "pill-blue"),
+        kpi_card(paste0(cat$available, " / ", cat$total), "Artifacts available")
+      ),
+      open = TRUE
     ),
 
-    tags$h3(class = "section-block-title", "Data snapshot"),
-    info_list(
-      info_row("Forecast version", meta$forecast_version),
-      info_row("Series \u00d7 models", paste0(meta$entity_count, " series  \u00b7  ", meta$model_count, " models")),
-      info_row("Data contract build", meta$run_date),
-      info_row("Coverage", paste0("Actuals ", meta$actual_range, "   \u00b7   Forecasts ", meta$forecast_range))
+    # C. Build / Runtime Metadata (open) ------------------------------------
+    home_collapse(
+      "Build / Runtime Metadata",
+      "Governance build context and the current R runtime environment.",
+      tags$h3(class = "section-block-title", "Build & governance"),
+      info_list(
+        info_row("Audit state", version_audit_label()),
+        info_row("Policy", APP_POLICY),
+        info_row("Champion", paste0(APP_CHAMPION, " \u2014 selected with conditions (confidence: ", APP_CHAMPION_CONFIDENCE, ")"))
+      ),
+      tags$h3(class = "section-block-title", "Runtime"),
+      info_list(
+        info_row("Artifacts loaded", paste0(cat$available, " available  \u00b7  ", cat$roadmap, " roadmap  \u00b7  ", cat$total, " registered")),
+        info_row("Data loaded at", rt$loaded_at),
+        info_row("R packages", paste0(rt$pkg_available, " / ", rt$pkg_total, " available",
+                                      if (!identical(rt$pkg_missing, "none") && !identical(rt$pkg_missing, "\u2014"))
+                                        paste0("   \u00b7   missing: ", rt$pkg_missing) else "")),
+        info_row("Project root", rt$root)
+      ),
+      open = TRUE
     ),
 
-    tags$h3(class = "section-block-title", "Runtime"),
-    info_list(
-      info_row("Artifacts loaded", paste0(cat$available, " available  \u00b7  ", cat$roadmap, " roadmap  \u00b7  ", cat$total, " registered")),
-      info_row("Data loaded at", rt$loaded_at),
-      info_row("R packages", paste0(rt$pkg_available, " / ", rt$pkg_total, " available",
-                                    if (!identical(rt$pkg_missing, "none") && !identical(rt$pkg_missing, "\u2014"))
-                                      paste0("   \u00b7   missing: ", rt$pkg_missing) else "")),
-      info_row("Project root", rt$root)
+    # D. Artifact Freshness / Last Update (open) ----------------------------
+    home_collapse(
+      "Artifact Freshness / Last Update",
+      "The governed data snapshot currently loaded by the dashboard.",
+      info_list(
+        info_row("Forecast version", meta$forecast_version),
+        info_row("Series \u00d7 models", paste0(meta$entity_count, " series  \u00b7  ", meta$model_count, " models")),
+        info_row("Data contract build", meta$run_date),
+        info_row("Coverage", paste0("Actuals ", meta$actual_range, "   \u00b7   Forecasts ", meta$forecast_range))
+      ),
+      open = TRUE
     ),
 
-    tags$span(class = "shell-card-tag", "Read-only \u00b7 governed build")
+    # E. Version Notes (collapsed) ------------------------------------------
+    home_collapse(
+      "Version Notes",
+      "Read-only status for this governed build.",
+      tags$span(class = "shell-card-tag", "Read-only \u00b7 governed build"),
+      open = FALSE
+    )
   )
 }
 

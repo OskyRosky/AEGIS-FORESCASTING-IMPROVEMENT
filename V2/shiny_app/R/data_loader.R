@@ -149,6 +149,13 @@ build_artifact_registry <- function() {
     # falls back to forecasts.csv otherwise. Never modified by the app.
     c("forecasts_with_intervals",   "forecasting",  "csv",  "optional",
       "data/processed/forecasts_with_intervals_relative.csv"),
+    # Stage 07 V2 60-day CALIBRATED interval artifact: forecasts.csv columns
+    # PLUS backtest-calibrated 80% relative-residual prediction-interval columns
+    # (horizons 1-60, 80% ONLY, no 95%). The Forecast page PREFERS this when
+    # present and falls back to forecasts.csv (point forecast only) otherwise.
+    # Read-only; never modified by the app.
+    c("forecasts_with_intervals_60d_calibrated", "forecasting", "csv", "optional",
+      "data/processed/forecasts_with_intervals_relative_60d_calibrated.csv"),
     c("actuals",                    "forecasting",  "csv",  "optional",
       "data/processed/actuals.csv"),
     c("forecast_comparison",        "forecasting",  "csv",  "optional",

@@ -637,7 +637,7 @@ fvp_chart <- function(series, models, horizon_days = 5, hist_days = 0,
 
   hc <- highcharter::highchart() |>
     highcharter::hc_chart(
-      type = "line", zoomType = "x",
+      type = "line", zoomType = "xy",
       panning = list(enabled = TRUE), panKey = "shift",
       style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
     highcharter::hc_title(
@@ -645,11 +645,14 @@ fvp_chart <- function(series, models, horizon_days = 5, hist_days = 0,
       style = list(fontSize = "15px", fontWeight = "600", color = "#102a43")) |>
     highcharter::hc_subtitle(
       text = sub, style = list(fontSize = "12px", color = "#627d98")) |>
-    highcharter::hc_xAxis(type = "datetime", title = list(text = NULL)) |>
-    highcharter::hc_yAxis(title = list(text = "Value"), opposite = FALSE) |>
+    highcharter::hc_xAxis(type = "datetime", title = list(text = NULL),
+                          crosshair = TRUE) |>
+    highcharter::hc_yAxis(title = list(text = "Value"), opposite = FALSE,
+                          crosshair = TRUE) |>
     highcharter::hc_legend(enabled = TRUE) |>
     highcharter::hc_tooltip(shared = FALSE, xDateFormat = "%Y-%m-%d",
                             valueDecimals = 2) |>
+    highcharter::hc_exporting(enabled = TRUE) |>
     highcharter::hc_credits(enabled = FALSE) |>
     highcharter::hc_plotOptions(
       line = list(marker = list(enabled = TRUE, radius = 3), lineWidth = 2))
@@ -748,14 +751,26 @@ fvp_summary <- function(series, models, horizon_days = 5, hist_days = 0,
 # reads the interval columns already present in the governed artifact. The chosen
 # source and whether interval columns exist are recorded as attributes so the UI
 # can show an honest data-source note.
+# Cached governed read of the forward production forecast. PREFERS the Stage 07
+# V2 60-day CALIBRATED interval artifact
+# (forecasts_with_intervals_relative_60d_calibrated.csv = forecasts.csv +
+# governed 80% prediction-interval columns calibrated for forecast days 1-60)
+# and falls back to forecasts.csv (point forecast ONLY) when that calibrated
+# artifact is missing/empty. It does NOT silently fall back to an older interval
+# artifact. The app NEVER computes intervals: it only reads the interval columns
+# already present in the governed artifact. The chosen source and whether
+# interval columns exist are recorded as attributes so the UI can show an honest
+# data-source note.
 fvf_forecasts <- function() {
-  df <- tryCatch(load_csv_artifact("forecasts_with_intervals"),
+  df <- tryCatch(load_csv_artifact("forecasts_with_intervals_60d_calibrated"),
                  error = function(e) data.frame())
-  src <- "forecasts_with_intervals_relative.csv"
+  src <- "forecasts_with_intervals_relative_60d_calibrated.csv"
+  # The calibrated 60-day artifact carries ONLY 80% interval columns (no 95%).
   has_iv <- is.data.frame(df) && nrow(df) > 0 &&
-    all(c("forecast_lower_80", "forecast_upper_80",
-          "forecast_lower_95", "forecast_upper_95") %in% names(df))
+    all(c("forecast_lower_80", "forecast_upper_80") %in% names(df))
   if (!is.data.frame(df) || nrow(df) == 0 || !has_iv) {
+    # Fall back to the point-forecast file ONLY (never an older interval
+    # artifact). The UI states clearly that intervals are not shown.
     df <- tryCatch(load_csv_artifact("forecasts"), error = function(e) data.frame())
     src <- "forecasts.csv"
     has_iv <- FALSE
@@ -917,7 +932,7 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
 
   hc <- highcharter::highchart() |>
     highcharter::hc_chart(
-      type = "line", zoomType = "x",
+      type = "line", zoomType = "xy",
       panning = list(enabled = TRUE), panKey = "shift",
       style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
     highcharter::hc_title(
@@ -925,10 +940,12 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
       style = list(fontSize = "15px", fontWeight = "600", color = "#0b3d2e")) |>
     highcharter::hc_subtitle(
       text = sub, style = list(fontSize = "12px", color = "#3f7d6c")) |>
-    highcharter::hc_yAxis(title = list(text = "Value"), opposite = FALSE) |>
+    highcharter::hc_yAxis(title = list(text = "Value"), opposite = FALSE,
+                          crosshair = TRUE) |>
     highcharter::hc_legend(enabled = TRUE) |>
     highcharter::hc_tooltip(shared = FALSE, xDateFormat = "%Y-%m-%d",
                             valueDecimals = 2) |>
+    highcharter::hc_exporting(enabled = TRUE) |>
     highcharter::hc_credits(enabled = FALSE) |>
     highcharter::hc_plotOptions(
       line = list(marker = list(enabled = FALSE), lineWidth = 2))
@@ -936,7 +953,7 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
   # X axis with the "Forecast start" boundary plotLine.
   if (!is.null(bnd_ts)) {
     hc <- hc |> highcharter::hc_xAxis(
-      type = "datetime", title = list(text = NULL),
+      type = "datetime", title = list(text = NULL), crosshair = TRUE,
       plotLines = list(list(
         value = bnd_ts, color = "#0f766e", width = 2, dashStyle = "Dash",
         zIndex = 5,
@@ -944,7 +961,8 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
                      style = list(color = "#0f766e", fontWeight = "600",
                                   fontSize = "11px")))))
   } else {
-    hc <- hc |> highcharter::hc_xAxis(type = "datetime", title = list(text = NULL))
+    hc <- hc |> highcharter::hc_xAxis(type = "datetime", title = list(text = NULL),
+                                      crosshair = TRUE)
   }
 
   if (nrow(a) > 0) {
@@ -970,10 +988,11 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
                        "Value: <b>{point.y:.2f}</b><br/>",
                        "Model: ", htmltools::htmlEscape(mver))))
 
-    # Governed prediction-interval bounds as DASHED / DOTTED lines (NO shaded
-    # band). Each line renders ONLY for rows where interval_available is TRUE and
-    # the bound is not NA, so the lines naturally stop after forecast day 30
-    # (later horizons are NA by design). The app does NOT compute these values.
+    # Governed prediction-interval bounds as DASHED lines (NO shaded band). Each
+    # line renders ONLY for rows where interval_available is TRUE and the bound
+    # is not NA, so the lines naturally stop after forecast day 60 (later
+    # horizons are NA by design in the calibrated 60-day artifact). The app does
+    # NOT compute these values.
     add_iv_line <- function(hc, col, nm, color, dash) {
       if (!col %in% names(f)) return(hc)
       ok <- (f$interval_available %in% TRUE) & !is.na(f[[col]])
@@ -989,11 +1008,13 @@ fvf_chart <- function(series, fwd_window = 90, hist_window = 180,
                                             "</b><br/>{point.x:%Y-%m-%d}<br/>",
                                             "Value: <b>{point.y:.2f}</b>")))
     }
+    # Governance (Oscar 2026-06-25): display ONLY the 80% interval lines for
+    # visual clarity. The 95% columns remain in the governed artifact but are
+    # NOT drawn here. The app still only READS interval columns; it never
+    # computes intervals, residuals or quantiles.
     hc <- hc |>
-      add_iv_line("upper_95", "Upper 95%", "#b91c1c", "Dot") |>
       add_iv_line("upper_80", "Upper 80%", "#d97706", "Dash") |>
-      add_iv_line("lower_80", "Lower 80%", "#d97706", "Dash") |>
-      add_iv_line("lower_95", "Lower 95%", "#b91c1c", "Dot")
+      add_iv_line("lower_80", "Lower 80%", "#d97706", "Dash")
   }
   hc
 }
@@ -1012,7 +1033,7 @@ fvf_summary <- function(series, fwd_window = 90, hist_window = 180,
   has_iv_cols <- isTRUE(attr(fdf, "fvf_has_intervals"))
   # forward interval rows actually drawable within the selected window
   n_iv <- if (is.data.frame(f) && "interval_available" %in% names(f))
-    sum((f$interval_available %in% TRUE) & !is.na(f$lower_95)) else 0L
+    sum((f$interval_available %in% TRUE) & !is.na(f$lower_80)) else 0L
   # per-series governed metadata pulled from the available rows
   gi <- if (is.data.frame(fdf) && "entity_key" %in% names(fdf))
     fdf[fdf$entity_key == series, , drop = FALSE] else fdf[0, , drop = FALSE]
@@ -1030,6 +1051,11 @@ fvf_summary <- function(series, fwd_window = 90, hist_window = 180,
   iv_source <- first_avail("interval_source")
   iv_grain  <- first_avail("interval_calibration_grain")
   iv_sample <- first_avail("interval_calibration_sample_size")
+  iv_cal_method <- first_avail("interval_calibration_method")
+  iv_holdout    <- first_avail("interval_holdout_coverage_80")
+  iv_hmax       <- first_avail("interval_calibrated_horizon_max")
+  iv_horizon_txt <- if (!is.na(iv_hmax) && nzchar(iv_hmax))
+    paste0("1\u2013", iv_hmax, " days") else "1\u201360 days"
   anomaly <- FALSE
   if ("forecast_point_scale_anomaly" %in% names(gi) && nrow(gi) > 0) {
     anomaly <- any(tolower(trimws(as.character(gi$forecast_point_scale_anomaly)))
@@ -1052,10 +1078,12 @@ fvf_summary <- function(series, fwd_window = 90, hist_window = 180,
     n_interval    = as.integer(n_iv),
     iv_method     = if (is.na(iv_method)) "\u2014" else iv_method,
     iv_source     = if (is.na(iv_source)) "\u2014" else iv_source,
-    iv_levels     = "80%, 95%",
-    iv_horizon    = "1\u201330 days",
+    iv_levels     = "80%",
+    iv_horizon    = iv_horizon_txt,
     iv_grain      = if (is.na(iv_grain)) "\u2014" else iv_grain,
     iv_sample     = if (is.na(iv_sample)) "\u2014" else iv_sample,
+    iv_cal_method = if (is.na(iv_cal_method)) "\u2014" else iv_cal_method,
+    iv_holdout    = if (is.na(iv_holdout)) "\u2014" else iv_holdout,
     point_anomaly = isTRUE(anomaly)
   )
 }
@@ -1547,7 +1575,7 @@ ttl_line_chart <- function(series, ts = ttl_timeseries(), snap = ttl_snapshot())
   title_mtl <- round(if (is.na(mtl)) TTL_GAUGE_MAX else mtl, 1)
   hc <- highcharter::highchart() |>
     highcharter::hc_chart(
-      type = "line", zoomType = "x",
+      type = "line", zoomType = "xy",
       style = list(fontFamily = "Inter, system-ui, sans-serif")) |>
     highcharter::hc_title(
       text = paste0(title_mtl, " months TTL based on HDD for ", series),
@@ -1557,10 +1585,13 @@ ttl_line_chart <- function(series, ts = ttl_timeseries(), snap = ttl_snapshot())
                     status, "  \u00b7  method: ", method, "  \u00b7  TTL: ", mtl_txt),
       style = list(fontSize = "11px", color = "#627d98")) |>
     highcharter::hc_xAxis(type = "datetime", title = list(text = NULL),
+                          crosshair = TRUE,
                           plotLines = x_plotlines, plotBands = x_plotbands) |>
-    highcharter::hc_yAxis(title = list(text = "HDD (TB)"), opposite = FALSE) |>
+    highcharter::hc_yAxis(title = list(text = "HDD (TB)"), opposite = FALSE,
+                          crosshair = TRUE) |>
     highcharter::hc_legend(enabled = TRUE) |>
     highcharter::hc_tooltip(shared = TRUE, xDateFormat = "%Y-%m", valueDecimals = 1) |>
+    highcharter::hc_exporting(enabled = TRUE) |>
     highcharter::hc_credits(enabled = FALSE) |>
     highcharter::hc_plotOptions(line = list(marker = list(enabled = FALSE)))
 

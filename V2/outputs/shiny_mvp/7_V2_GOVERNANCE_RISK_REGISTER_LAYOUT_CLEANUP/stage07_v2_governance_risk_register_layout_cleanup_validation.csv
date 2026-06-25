@@ -1,0 +1,22 @@
+requirement_id,requirement,status,evidence
+1,Governance Risks page loads,PASS,App boots; HTTP 200 on 127.0.0.1:3838; section_risks renders.
+2,About the Risk Register exists and collapsed by default,PASS,First home_collapse open=FALSE; no is-open class.
+3,Risk Register Overview contains all top summary cards,PASS,Box holds both card_grid rows (Governed register/Highest severity/Carry-forward/Non-blocking/Must stay visible/Future investigation/Not in final tournament/Read-only register).
+4,Summary card values unchanged,PASS,Same risk_register_values() bindings (vals$total/high/medium/advisory/minor/carry_forward_dashboard/carry_forward_future/deferred); no value edits.
+5,Risk Register table inside its own collapsible box,PASS,home_collapse 'Governed Risk Register' with risk_register_table; open=TRUE.
+6,Deferred Models table inside its own collapsible box,PASS,home_collapse 'Deferred Models' with risk_deferred_models_table; open=TRUE.
+7,Conditional Decision Context inside its own collapsible box,PASS,home_collapse 'Conditional Decision Context'; open=FALSE.
+8,All required sections collapsible/expandable,PASS,5 home_collapse boxes (About/Overview/Governed Risk Register/Deferred Models/Conditional Decision Context).
+9,Risk Register table still renders,PASS,risk_register_table output preserved; suspendWhenHidden=FALSE added.
+10,Deferred Models table still renders,PASS,risk_deferred_models_table output preserved; suspendWhenHidden=FALSE added.
+11,Search/sort behavior unchanged,PASS,No change to risk_register_table()/risk_deferred_models_table() render functions in helpers.
+12,Risk counts unchanged,PASS,Cards still read from risk_register_values(); no recompute.
+13,No risks added/removed/downgraded/reclassified,PASS,Layout-only; no governance data touched.
+14,No deferred model rows changed,PASS,Deferred table render function unchanged.
+15,No governance/champion decision changed,PASS,No governance/champion artifact or logic touched.
+16,No data artifacts modified,PASS,No writes to any data artifact.
+17,No models/forecasts/backtests run,PASS,No engine/tournament/model code invoked.
+18,Forecasting/Models/Reference/other pages untouched,PASS,Only section_risks() in tabs.R + risk-table outputOptions in server.R edited.
+19,Modified R files parse cleanly,PASS,Rscript parse(tabs.R)=OK; parse(server.R)=OK.
+20,Shiny launches successfully,PASS,start_shiny.ps1 launched PID 13432 on 3838.
+21,HTTP 200 confirmed,PASS,Invoke-WebRequest 127.0.0.1:3838 -> HTTP 200.

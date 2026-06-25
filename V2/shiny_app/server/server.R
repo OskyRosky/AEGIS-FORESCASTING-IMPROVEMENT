@@ -201,10 +201,12 @@ app_server <- function(input, output, session) {
         tagList(
           tags$div(
             class = "fv-avail-grid",
+            cell("Forecast artifact", s$source_file),
+            cell("Interval shown", s$iv_levels),
             cell("Interval method", s$iv_method),
-            cell("Interval source", s$iv_source),
-            cell("Interval levels shown", s$iv_levels),
             cell("Calibrated horizon", s$iv_horizon),
+            cell("Holdout coverage (80%)", s$iv_holdout),
+            cell("Calibration method", s$iv_cal_method),
             cell("Calibration grain", s$iv_grain),
             cell("Calibration sample size", s$iv_sample)
           ),
@@ -215,14 +217,18 @@ app_server <- function(input, output, session) {
                           "production point forecast scale is inconsistent with ",
                           "backtest/actuals. The interval is proportional to the ",
                           "point but does NOT correct the point forecast.")),
-          if (!is.null(s$fwd_window) && !is.na(s$fwd_window) &&
-              (s$fwd_window == 0 || s$fwd_window > 30))
+          if (!is.null(s$fwd_window) && !is.na(s$fwd_window) && s$fwd_window > 60)
             tags$p(class = "fv-avail-note",
-                   "Prediction intervals are shown only through forecast day 30; later forecast days are point forecast only.")
+                   "Prediction intervals are shown through forecast day 60; later forecast days are point forecast only."),
+          tags$p(class = "fv-avail-note",
+                 "Only the 80% prediction interval is displayed. Wider 95% intervals are intentionally not shown because heavy upper-tail historical residuals can make them visually excessive for operational review. Shiny only visualizes interval columns from the governed artifact; it does not compute intervals, residuals or quantiles.")
         )
       } else {
         tags$p(class = "fv-avail-note",
-               "Prediction interval columns are not available for the selected rows; point forecast is shown only.")
+               if (identical(s$source_file, "forecasts.csv"))
+                 "60-day calibrated interval artifact is not available; point forecast is shown only."
+               else
+                 "Prediction interval columns are not available for the selected rows; point forecast is shown only.")
       },
       if (s$n_forecast == 0)
         tags$p(class = "fv-avail-note",
@@ -457,6 +463,11 @@ app_server <- function(input, output, session) {
   output$risk_deferred_models_table <- DT::renderDataTable({
     risk_deferred_models_table()
   })
+
+  # Risk tables live inside collapsible sections; render eagerly so DT does not
+  # blank when a box is initially collapsed.
+  outputOptions(output, "risk_register_table",         suspendWhenHidden = FALSE)
+  outputOptions(output, "risk_deferred_models_table",  suspendWhenHidden = FALSE)
 
   # Governance: Audit Trail --------------------------------------------------
   output$audit_findings_table <- DT::renderDataTable({

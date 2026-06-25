@@ -1,0 +1,11 @@
+field,value
+process_id,14564
+host,127.0.0.1
+port,3838
+url,http://127.0.0.1:3838
+http_status,200
+listening,TRUE
+single_instance,TRUE
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 14564
+stdout_log,outputs\shiny_mvp\7_V2_TTL_CAPACITY_VIEW_LAYOUT_CLEANUP\logs\stage07_v2_ttl_capacity_view_layout_cleanup_stdout.log
+stderr_log,outputs\shiny_mvp\7_V2_TTL_CAPACITY_VIEW_LAYOUT_CLEANUP\logs\stage07_v2_ttl_capacity_view_layout_cleanup_stderr.log
