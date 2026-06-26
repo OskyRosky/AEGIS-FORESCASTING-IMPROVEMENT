@@ -3103,3 +3103,234 @@ version_audit_label <- function(state = APP_AUDIT_STATE) {
   if (grepl("^APPROVE", s)) return("Approved")
   gsub("_", " ", state)
 }
+
+# ---------------------------------------------------------------------------
+# V3.2F | Model Evaluation accessors (read-only)
+# Read the governed-compact V3.2D/V3.2E candidate-decision summaries from
+# data/processed (via the 7.0E loader). These NEVER recompute metrics, run
+# models, run backtests, generate forecasts, or change the champion. They are
+# backtest EVALUATION results, not production forecasts.
+# ---------------------------------------------------------------------------
+model_eval_summary <- function() {
+  df <- tryCatch(load_csv_artifact("model_evaluation_summary"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df)) data.frame() else df
+}
+
+model_eval_ranking <- function() {
+  df <- tryCatch(load_csv_artifact("model_evaluation_ranking"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df)) data.frame() else df
+}
+
+model_eval_champion_comparison <- function() {
+  df <- tryCatch(load_csv_artifact("model_champion_comparison"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df)) data.frame() else df
+}
+
+model_eval_runtime_guardrails <- function() {
+  df <- tryCatch(load_csv_artifact("model_runtime_guardrails"),
+                 error = function(e) data.frame())
+  if (!is.data.frame(df)) data.frame() else df
+}
+
+# Single-row dashboard summary -> named list for cards. Falls back to the
+# governed constants so the cards never render empty.
+model_eval_dashboard_values <- function(df = load_csv_artifact("model_dashboard_summary")) {
+  g <- function(col, fallback = "\u2014") cs_value(df, col, fallback)
+  list(
+    champion_name        = first_label(g("champion_name"), APP_CHAMPION),
+    champion_mase        = fmt_metric(g("champion_mase"), 3, "Unavailable"),
+    champion_rmsse       = fmt_metric(g("champion_rmsse"), 3, "Unavailable"),
+    best_dl_challenger   = g("best_dl_challenger"),
+    best_dl_mase         = fmt_metric(g("best_dl_mase"), 3, "Unavailable"),
+    best_ml_challenger   = g("best_ml_challenger"),
+    best_ml_mase         = fmt_metric(g("best_ml_mase"), 3, "Unavailable"),
+    total_models         = g("total_models_evaluated"),
+    total_promoted       = first_label(g("total_candidates_promoted"), fallback = "0"),
+    final_decision       = g("final_decision"),
+    status_message       = g("dashboard_status_message")
+  )
+}
+
+# A clean role label for display.
+.model_eval_role_label <- function(role) {
+  r <- tolower(trimws(as.character(role)))
+  out <- gsub("_", " ", r)
+  out[r == "champion_reference"]  <- "Champion (reference)"
+  out[r == "best_dl_challenger"]  <- "Best DL challenger"
+  out[r == "best_ml_challenger"]  <- "Best ML challenger"
+  out[r == "challenger"]          <- "Challenger"
+  out
+}
+
+# Ranking table (static HTML, no DT/server). Champion reference row highlighted.
+model_eval_ranking_table_ui <- function(df = model_eval_ranking()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Model evaluation ranking is not available in V3.2E artifacts."))
+  }
+  num <- function(x, d = 3) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  fam_label <- function(x) ifelse(nzchar(as.character(x)), gsub("_", " ", as.character(x)), "\u2014")
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r       <- df[i, ]
+    is_ref  <- tolower(as.character(r$role)) == "champion_reference"
+    is_dl   <- tolower(as.character(r$role)) == "best_dl_challenger"
+    is_ml   <- tolower(as.character(r$role)) == "best_ml_challenger"
+    rank_txt <- if (is_ref) "\u2014" else as.character(r$rank)
+    role_tag <- if (is_ref) tags$span(class = "uni-chip-tag uni-tag-champ", "\u2605 Champion")
+                else if (is_dl) tags$span(class = "uni-chip-tag uni-tag-base", "Best DL")
+                else if (is_ml) tags$span(class = "uni-chip-tag uni-tag-base", "Best ML")
+                else tags$span(class = "uni-chip-tag uni-tag-muted", "Challenger")
+    tags$tr(
+      class = if (is_ref) "uni-row-champ" else NULL,
+      tags$td(rank_txt),
+      tags$td(tags$span(class = "uni-td-name", r$model)),
+      tags$td(fam_label(r$family)),
+      tags$td(role_tag),
+      tags$td(num(r$median_mase)),
+      tags$td(num(r$median_rmsse)),
+      tags$td(num(r$vs_champion_mase_ratio, 2))
+    )
+  })
+  tags$div(
+    style = "overflow-x:auto;",
+    tags$table(
+      class = "uni-table",
+      tags$thead(tags$tr(
+        tags$th("#"), tags$th("Model"), tags$th("Family"), tags$th("Role"),
+        tags$th("Median MASE"), tags$th("Median RMSSE"), tags$th("vs Champion")
+      )),
+      tags$tbody(rows)
+    )
+  )
+}
+
+# Evaluation summary table (decision per model).
+model_eval_summary_table_ui <- function(df = model_eval_summary()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Model evaluation summary is not available in V3.2E artifacts."))
+  }
+  num <- function(x, d = 3) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  fam_label <- function(x) ifelse(nzchar(as.character(x)), gsub("_", " ", as.character(x)), "\u2014")
+  pretty <- function(x) gsub("_", " ", as.character(x))
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r      <- df[i, ]
+    is_ref <- tolower(as.character(r$role)) == "champion_reference"
+    tags$tr(
+      class = if (is_ref) "uni-row-champ" else NULL,
+      tags$td(tags$span(class = "uni-td-name", r$model)),
+      tags$td(fam_label(r$family)),
+      tags$td(.model_eval_role_label(r$role)),
+      tags$td(num(r$median_mase)),
+      tags$td(num(r$vs_champion_mase_ratio, 2)),
+      tags$td(as.character(r$raw_neg)),
+      tags$td(pretty(r$completion_status)),
+      tags$td(pretty(r$runtime_status)),
+      tags$td(pretty(r$final_decision))
+    )
+  })
+  tags$div(
+    style = "overflow-x:auto;",
+    tags$table(
+      class = "uni-table",
+      tags$thead(tags$tr(
+        tags$th("Model"), tags$th("Family"), tags$th("Role"),
+        tags$th("Median MASE"), tags$th("vs Champion"), tags$th("Raw neg"),
+        tags$th("Completion"), tags$th("Runtime"), tags$th("Decision")
+      )),
+      tags$tbody(rows)
+    )
+  )
+}
+
+# Champion comparison table (gap + promotion eligibility per candidate).
+model_eval_champion_table_ui <- function(df = model_eval_champion_comparison()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Champion comparison is not available in V3.2E artifacts."))
+  }
+  num <- function(x, d = 3) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  fam_label <- function(x) ifelse(nzchar(as.character(x)), gsub("_", " ", as.character(x)), "\u2014")
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r        <- df[i, ]
+    elig     <- tolower(trimws(as.character(r$promotion_eligible))) %in% c("yes", "true", "1")
+    elig_tag <- if (elig) tags$span(class = "uni-chip-tag uni-tag-champ", "Eligible")
+                else tags$span(class = "uni-chip-tag uni-tag-muted", "Not eligible")
+    tags$tr(
+      tags$td(tags$span(class = "uni-td-name", r$model)),
+      tags$td(fam_label(r$family)),
+      tags$td(num(r$champion_mase)),
+      tags$td(num(r$model_mase)),
+      tags$td(num(r$model_vs_champion_ratio, 2)),
+      tags$td(num(r$model_gap, 2)),
+      tags$td(elig_tag),
+      tags$td(tags$span(class = "shell-card-detail", as.character(r$reason)))
+    )
+  })
+  tags$div(
+    style = "overflow-x:auto;",
+    tags$table(
+      class = "uni-table",
+      tags$thead(tags$tr(
+        tags$th("Model"), tags$th("Family"), tags$th("Champion MASE"),
+        tags$th("Model MASE"), tags$th("vs Champion"), tags$th("Gap"),
+        tags$th("Promotion"), tags$th("Reason")
+      )),
+      tags$tbody(rows)
+    )
+  )
+}
+
+# Runtime / guardrails table.
+model_eval_runtime_table_ui <- function(df = model_eval_runtime_guardrails()) {
+  if (!is.data.frame(df) || nrow(df) == 0) {
+    return(tags$p(class = "shell-card-detail",
+                  "Runtime / guardrail summary is not available in V3.2E artifacts."))
+  }
+  num <- function(x, d = 2) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  fam_label <- function(x) ifelse(nzchar(as.character(x)), gsub("_", " ", as.character(x)), "\u2014")
+  pretty <- function(x) gsub("_", " ", as.character(x))
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r       <- df[i, ]
+    pass    <- tolower(trimws(as.character(r$guardrail_status))) == "pass"
+    g_tag   <- if (pass) tags$span(class = "uni-chip-tag uni-tag-champ", "Pass")
+               else tags$span(class = "uni-chip-tag uni-tag-risk", "Fail")
+    tags$tr(
+      tags$td(tags$span(class = "uni-td-name", r$model)),
+      tags$td(fam_label(r$family)),
+      tags$td(num(r$runtime_seconds, 1)),
+      tags$td(num(r$runtime_minutes, 2)),
+      tags$td(pretty(r$runtime_status)),
+      tags$td(paste0(r$windows_completed, " / ", r$total_windows)),
+      tags$td(as.character(r$raw_neg)),
+      tags$td(g_tag)
+    )
+  })
+  tags$div(
+    style = "overflow-x:auto;",
+    tags$table(
+      class = "uni-table",
+      tags$thead(tags$tr(
+        tags$th("Model"), tags$th("Family"), tags$th("Runtime (s)"),
+        tags$th("Runtime (min)"), tags$th("Runtime status"),
+        tags$th("Windows"), tags$th("Raw neg"), tags$th("Guardrail")
+      )),
+      tags$tbody(rows)
+    )
+  )
+}

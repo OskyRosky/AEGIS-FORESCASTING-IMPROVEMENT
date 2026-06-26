@@ -193,7 +193,26 @@ build_artifact_registry <- function() {
     c("ttl_supply_demand_timeseries", "ttl",        "csv",  "optional",
       "data/processed/ttl_supply_demand_timeseries.csv"),
     c("ttl_months_to_live_snapshot",  "ttl",        "csv",  "optional",
-      "data/processed/ttl_months_to_live_snapshot.csv")
+      "data/processed/ttl_months_to_live_snapshot.csv"),
+
+    # --- V3.2F model evaluation summaries (read-only, governed-compact).
+    #     Derived from the CLOSED V3.2D/V3.2E candidate decision package.
+    #     These surface the FULL evaluated model universe (base/statistical
+    #     champion reference + ML + DL challengers) on the Models pages. They
+    #     are backtest EVALUATION results, NOT production forecasts, and do
+    #     NOT change the champion, forecasts, intervals or governance. The app
+    #     only reads them; they are never modified by the dashboard. See
+    #     outputs/v3_2e_candidate_decision_package/ for the source package.
+    c("model_evaluation_summary",   "model_eval",   "csv",  "optional",
+      "data/processed/model_evaluation_summary.csv"),
+    c("model_evaluation_ranking",   "model_eval",   "csv",  "optional",
+      "data/processed/model_evaluation_ranking.csv"),
+    c("model_champion_comparison",  "model_eval",   "csv",  "optional",
+      "data/processed/model_champion_comparison.csv"),
+    c("model_runtime_guardrails",   "model_eval",   "csv",  "optional",
+      "data/processed/model_runtime_guardrails.csv"),
+    c("model_dashboard_summary",    "model_eval",   "csv",  "optional",
+      "data/processed/model_dashboard_summary.csv")
   )
 
   reg <- do.call(rbind, lapply(rows, function(r) {

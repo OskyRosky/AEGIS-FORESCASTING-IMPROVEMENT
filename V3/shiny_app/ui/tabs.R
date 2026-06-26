@@ -1890,7 +1890,6 @@ section_champion <- function() {
 }
 
 section_risks <- function() {
-  vals <- risk_register_values()
 
   panel(
     "risks",
