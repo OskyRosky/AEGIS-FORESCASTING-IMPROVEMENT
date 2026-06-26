@@ -1,0 +1,23 @@
+metric,fastneuralar_mlp,champion_ets_explicit,best_baseline,source_artifact,grain,status,notes
+official_median_mase,739.9218881736479,6.901143533373399,8.088530320808188 (AutoARIMA),tournament_model_scorecard.csv,39-entity aggregate,fail,~107x worse than champion
+official_median_rmsse,164.62241686434226,1.856193218184295,1.856193218184295 (ETS Explicit),tournament_model_scorecard.csv,39-entity aggregate,fail,~89x worse than champion
+median_wmape,0.8613412527614438,0.0087554067132253,na,tournament_model_scorecard.csv,39-entity aggregate,fail,
+median_smape,1.480670366533463,0.008735093329671,na,tournament_model_scorecard.csv,39-entity aggregate,fail,
+median_bias,-17656.878866153904,-10.802205663621589,na,tournament_model_scorecard.csv,39-entity aggregate,fail,Strong systematic negative bias
+mase_guardrail_status,fail,pass,pass,tournament_model_scorecard.csv,39-entity aggregate,fail,
+rmsse_guardrail_status,fail,pass,pass,tournament_model_scorecard.csv,39-entity aggregate,fail,
+risk_status,high,low,low,tournament_model_scorecard.csv,39-entity aggregate,fail,
+audit_risk_flag,True,False,False,tournament_model_scorecard.csv,39-entity aggregate,fail,
+eligible_for_champion_consideration,False,True,True,tournament_model_scorecard.csv,39-entity aggregate,fail,Excluded by Audit #4 high-risk flag
+overall_rank_by_mase,13 of 13,1 of 13,2 of 13 (AutoARIMA),tournament_model_scorecard.csv,39-entity aggregate,fail,Last place
+comparisons_tested,12,12,na,tournament_model_evidence_summary.csv,head-to-head,fail,
+supported_better_count,0,8,na,tournament_model_evidence_summary.csv,head-to-head,fail,Lost to every competitor
+supported_worse_count,12,0,na,tournament_model_evidence_summary.csv,head-to-head,fail,
+inconclusive_count,0,4,na,tournament_model_evidence_summary.csv,head-to-head,fail,
+net_supported_evidence,-12,8,na,tournament_model_evidence_summary.csv,head-to-head,fail,
+diagnostic_median_mase,790.9590773129247,6.81777377891848,na,challenger_metrics_by_model_diagnostic.csv,454 entity-window rows,fail,Different grain than scorecard
+diagnostic_median_rmsse,171.4422929400729,na,na,challenger_metrics_by_model_diagnostic.csv,454 entity-window rows,fail,
+diagnostic_mean_bias,-191606.88492859693,na,na,challenger_metrics_by_model_diagnostic.csv,454 entity-window rows,fail,Mean dragged by series-level explosions
+negative_forecast_rows,55,133,0 (Theta/LightGBM),challenger_metrics_by_model_diagnostic.csv,454 entity-window rows,fail,Negative demand invalid; not clamped
+per_horizon_mase,not_available,not_available,not_available,none,h1-h30,not_available,No per-horizon residual artifact exists
+runtime_seconds,not_available,not_available,not_available,none,execution,not_available,No timing column; execution completed without timeout

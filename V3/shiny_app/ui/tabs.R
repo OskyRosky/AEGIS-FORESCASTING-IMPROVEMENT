@@ -2305,19 +2305,29 @@ section_methodology <- function() {
       open = TRUE
     ),
 
-    # C. Architecture Diagram (open placeholder) ----------------------------
+    # C. Architecture Diagram (open) ----------------------------------------
     home_collapse(
       "Architecture Diagram",
       "Visual map of the ingestion \u2192 processing \u2192 consumption flow.",
       tags$div(
         class = "method-figure",
-        tags$div(class = "method-figure-icon", shiny::icon("diagram-project")),
         tags$div(class = "method-figure-title", "Dashboard architecture diagram"),
+        tags$img(
+          src = "reference/aegis_v3_architecture_diagram_visual_v3.png",
+          alt = "AEGIS V3 architecture diagram: upstream producer pipeline versus read-only Shiny consumer",
+          style = "max-width: 100%; height: auto; border-radius: 8px; margin: 8px 0;"
+        ),
         tags$div(
           class = "method-figure-text",
-          "Architecture diagram will be added here once the approved image is available."
+          paste0(
+            "The upstream pipeline (Tesseract / SQL to ingestion to raw and processed ",
+            "to Model Lab to forecast, interval and governance artifacts) produces and ",
+            "governs all data. The Shiny dashboard is a read-only consumer and never ",
+            "downloads, cleans, trains, recalculates, or writes artifacts. Dashed ",
+            "components (daily refresh, AI/LLM layer) are V3 planned / optional."
+          )
         ),
-        tags$span(class = "method-figure-tag", "Placeholder")
+        tags$span(class = "method-figure-tag", "V3 architecture")
       ),
       open = TRUE
     ),
@@ -2332,9 +2342,30 @@ section_methodology <- function() {
         tags$div(class = "method-figure-title", "Full project document"),
         tags$div(
           class = "method-figure-text",
-          "Project documentation will be linked or embedded here once the approved document is available."
+          "This document is generated from the governed Markdown source and is provided as read-only project documentation."
         ),
-        tags$span(class = "method-figure-tag", "Placeholder")
+        tags$div(
+          class = "method-doc-actions",
+          tags$a(
+            class = "btn btn-default",
+            href = "reference/aegis_v3_project_documentation.pdf",
+            target = "_blank", rel = "noopener",
+            shiny::icon("arrow-up-right-from-square"), " Open in new tab"
+          ),
+          tags$a(
+            class = "btn btn-default",
+            href = "reference/aegis_v3_project_documentation.pdf",
+            download = "aegis_v3_project_documentation.pdf",
+            shiny::icon("download"), " Download PDF"
+          )
+        ),
+        tags$iframe(
+          src = "reference/aegis_v3_project_documentation.pdf",
+          class = "method-doc-frame",
+          title = "AEGIS V3 Project Documentation",
+          style = "width: 100%; height: 720px; border: 1px solid #c8d6c4; border-radius: 8px; margin-top: 10px;"
+        ),
+        tags$span(class = "method-figure-tag", "V3 documentation")
       ),
       open = FALSE
     ),

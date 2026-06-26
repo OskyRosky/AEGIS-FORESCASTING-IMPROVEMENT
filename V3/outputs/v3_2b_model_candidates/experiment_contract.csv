@@ -1,0 +1,22 @@
+column_name,dtype,required,allowed_values_or_unit,description
+candidate_id,string,yes,registry candidate_id,Foreign key to candidate_registry.csv candidate_id
+model_name,string,yes,,Human-readable model name
+model_family,string,yes,lightweight_neural|linear_dl|gradient_boosting|linear_ml,Model family grouping
+series_key,string,yes,entity_key,Series/key being forecast (e.g. APC-Dedicated)
+forecast_origin,date,yes,YYYY-MM-DD,Train cutoff / forecast start (last observed date used for training)
+horizon,integer,yes,1..30,Forecast step ahead (h1..h30)
+forecast_date,date,yes,YYYY-MM-DD,Target date being forecast (forecast_origin + horizon days)
+forecast_value,float,yes,>=0 expected,Point forecast produced by the candidate
+actual_value,float,no,,Observed actual on forecast_date (NA if outside actuals window)
+error,float,no,,forecast_value - actual_value (signed)
+abs_error,float,no,>=0,Absolute error |error|
+squared_error,float,no,>=0,error^2
+mase,float,no,>=0,Mean Absolute Scaled Error vs seasonal-naive in-sample scale (per series/window)
+rmsse,float,no,>=0,Root Mean Squared Scaled Error (guardrail metric)
+smape_or_mae_if_available,float,no,,sMAPE (0..2) or MAE fallback when scale baseline unavailable
+runtime_seconds,float,yes,>=0 seconds,Wall-clock runtime attributed to this candidate at the recorded stage
+status,string,yes,ok|failed|skipped|deferred|excluded,Execution status for this row/candidate
+failure_reason,string,no,,Reason when status!=ok (e.g. runtime_exceeded|dependency_missing|fit_error|negative_collapse)
+guardrail_pass,boolean,no,True|False,Whether MASE/RMSSE guardrails passed for this candidate/series
+negative_forecast_count,integer,no,>=0,Count of negative forecast rows produced (should be 0 after clamp)
+notes,string,no,,Free-text notes (transform used, clamp applied, epoch cap, etc.)

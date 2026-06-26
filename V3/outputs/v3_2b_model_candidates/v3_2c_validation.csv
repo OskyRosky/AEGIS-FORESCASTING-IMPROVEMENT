@@ -1,0 +1,26 @@
+check_id,check_name,status,detail
+V01,harness_script_created,pass,python/model_lab/run_v3_2c_subset_dry_run.py created and imports cleanly (no errors)
+V02,inputs_read_only_governed,pass,Reads official_execution_scope.csv + evaluation_dataset.csv (same governed sources as recovery script); no writes to inputs
+V03,outputs_confined_to_experiment_dir,pass,All 6 outputs written only under outputs/v3_2b_model_candidates/ (runtime_checks/candidate_outputs/metrics/logs + 2 report files)
+V04,no_data_processed_write,pass,Script never opens data/processed/ for writing; verified by path constants
+V05,subset_deterministic_5_series,pass,SUBSET_SERIES fixed: NAM-Multitenant,EUR-Multitenant,LAM-Multitenant,APC-Dedicated,NAM-TDF
+V06,subset_windows_last_3,pass,3 most-recent windows per series => 15 entity-windows (5x3)
+V07,all_6_candidates_executed,pass,FNAR-V2,NLIN-DLIN,SMLP-TCN,LGBM-IMP,XGB-IMP,ENET-RIDGE all ran status=ok
+V08,no_candidate_crash,pass,0 failed rows; all candidates completed the subset
+V09,contract_row_count,pass,subset_candidate_outputs.csv = 2700 rows = 6 candidates x 5 series x 3 windows x 30 horizons
+V10,contract_columns_match,pass,21 columns identical to experiment_contract.csv schema
+V11,horizons_1_to_30,pass,Each (candidate,series,origin) emits horizons 1..30 (direct multi-horizon, no recursion)
+V12,non_negativity_after_clamp,pass,0 forecast_value < 0 across all 2700 rows (clamp applied)
+V13,raw_negative_logged,pass,Raw pre-clamp negatives recorded; NLIN-DLIN flagged with 27 raw negatives (guardrail_pass False)
+V14,actuals_present,pass,0 missing actual_value in subset windows (full 30-day test windows available)
+V15,runtime_recorded_per_candidate,pass,subset_runtime_results.csv has runtime_seconds + runtime_per_entity_window for all 6
+V16,projected_full_runtime_recorded,pass,projected_full_runtime_(seconds|minutes) computed via 454 governed entity-windows
+V17,runtime_gate_applied,pass,Gate threshold 30min; NOT_VIABLE if projected >= 25min (approaching ~30)
+V18,gate_decisions,pass,VIABLE: FNAR-V2/NLIN-DLIN/SMLP-TCN/ENET-RIDGE; NOT_VIABLE: LGBM-IMP(32.8min) XGB-IMP(77.5min)
+V19,metrics_summary_written,pass,subset_metrics_summary.csv has median MASE/RMSSE,sMAPE,bias,neg,runtime,gate,guardrail per candidate
+V20,run_log_written,pass,subset_run_log.csv has per (candidate,series,window) event rows with runtime+message
+V21,determinism_seed,pass,RANDOM_SEED=42 + PYTHONHASHSEED=42 across sklearn/lightgbm/xgboost/numpy
+V22,no_full_backtest_run,pass,Only subset dry-run executed; full 39-series backtest NOT run (awaits authorization)
+V23,champion_baseline_untouched,pass,No anchor re-fit; ETS Explicit and baselines not invoked or modified
+V24,no_promotion,pass,No model promoted; outputs are experimental candidate diagnostics only
+V25,scale_disclaimer_recorded,pass,MASE/RMSSE use seasonal-naive m=7 in-sample scale; flagged as not 1:1 with V3.2A governed scale (ranking indicative, full backtest is authoritative)

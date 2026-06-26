@@ -1,0 +1,21 @@
+check_id,check,result,evidence
+V01,Stage is read-only (no model trained),pass,No training/fit executed in this stage; only existing artifacts read
+V02,Champion unchanged,pass,model_lab_champion_summary.csv not modified; champion remains ETS Explicit
+V03,Forecasts unchanged,pass,data/processed/forecasts.csv not written
+V04,Intervals unchanged,pass,forecasts_with_intervals_relative_60d_calibrated.csv not written
+V05,Viewer/Accuracy source unchanged,pass,data/processed/forecast_viewer_model_outputs.csv not written
+V06,Model registry unchanged,pass,forecast_models_registry.R not modified
+V07,V1 and V2 untouched,pass,No file outside V3 accessed for write
+V08,Only new files created under outputs/v3_2a_fastneuralar_diagnostic/,pass,5 new files; no existing artifact overwritten
+V09,FastNeuralAR_MLP implementation located,pass,run_challenger_official_execution_recovery.py lines 185-245 (_fit_fast_neural/_forecast_fast_neural)
+V10,Model is real not a stub,pass,sklearn MLPRegressor(32) pipeline executes; no NotImplementedError
+V11,Recursive multi-step confirmed,pass,_forecast_fast_neural appends pred to history each step (lines 221-232)
+V12,Official metrics captured verbatim,pass,tournament_model_scorecard.csv FastNeuralAR_MLP row read directly
+V13,Head-to-head evidence captured,pass,tournament_model_evidence_summary.csv 0/12/0 net -12
+V14,Diagnostic 454-row aggregate captured,pass,challenger_metrics_by_model_diagnostic.csv median_mase 790.96
+V15,Negative-forecast count captured,pass,negative_forecast_rows=55 in challenger_metrics_by_model_diagnostic.csv
+V16,Per-horizon breakdown availability,not_available,No per-horizon residual artifact exists; would require new backtest decomposition
+V17,Runtime/timing availability,not_available,No timing column in governed artifacts; execution_summary reports completion only
+V18,Root cause documented by governance,pass,closure_pack R-001 / NS-003 and audit_5_findings reference scale/recursive-collapse
+V19,Shiny consumption mapping verified,pass,shiny_app/R/data_loader.R registry read for all pages
+V20,No promotion performed,pass,No candidate created; champion frozen

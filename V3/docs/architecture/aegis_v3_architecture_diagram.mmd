@@ -1,0 +1,56 @@
+%% AEGIS Forecasting Improvement / Tesseract V3 — Architecture Diagram
+%% Versionable Mermaid source. Render to PNG with:
+%%   npx -y @mermaid-js/mermaid-cli -i aegis_v3_architecture_diagram.mmd -o aegis_v3_architecture_diagram.png
+%% Rule: the Shiny dashboard is a read-only CONSUMER. It never downloads,
+%% cleans, trains, recalculates, or writes artifacts. The upstream pipeline
+%% produces and governs everything. Planned/optional components are dashed.
+flowchart TD
+    %% ===================== UPSTREAM PRODUCER PIPELINE =====================
+    subgraph UP["UPSTREAM PIPELINE  -  produces and governs all artifacts (NOT Shiny)"]
+        direction TB
+        TES["Tesseract v2 / SQL<br/>TesseractEarthDW<br/>forecast_substrateBE_hdd_region"]
+        ING["Ingestion layer (Python)<br/>query + export"]
+        RAW["data/raw/<br/>raw exports"]
+        PROC["Processing + validation (Python)<br/>governed CSV contract"]
+        PRD["data/processed/<br/>forecasts.csv - actuals.csv<br/>entities.csv - run_metadata.csv"]
+        LAB["Model Lab<br/>training - backtest - tournament - champion selection"]
+        FC["Forecast artifacts<br/>forecasts + per-model backtest outputs"]
+        IV["Interval artifacts<br/>80% calibrated up to 60 days"]
+        GOV["Governance + Reference artifacts<br/>risk register - audit - sanity - champion conditions - catalog"]
+        TES --> ING --> RAW --> PROC --> PRD
+        PRD --> LAB
+        LAB --> FC
+        LAB --> IV
+        LAB --> GOV
+    end
+
+    %% ===================== READ-ONLY BOUNDARY =====================
+    PRD -. read-only load .-> LOADER
+    FC  -. read-only load .-> LOADER
+    IV  -. read-only load .-> LOADER
+    GOV -. read-only load .-> LOADER
+
+    %% ===================== SHINY READ-ONLY CONSUMER =====================
+    subgraph SH["SHINY DASHBOARD  -  read-only consumer (does NOT download, clean, train, recalc, or write)"]
+        direction TB
+        LOADER["Read-only data loader<br/>loads governed CSVs at startup"]
+        FCST["Forecasting<br/>Viewer - Accuracy - Forecast - TTL"]
+        MOD["Models<br/>Universe - Tournament - Champion"]
+        GOVUI["Governance<br/>Risks - Audit"]
+        REF["Reference<br/>Artifacts - Methodology - Version"]
+        LOADER --> FCST
+        LOADER --> MOD
+        LOADER --> GOVUI
+        LOADER --> REF
+    end
+
+    %% ===================== PLANNED / OPTIONAL (V3) =====================
+    AI["AI / LLM explanation layer<br/>summaries for Tournament - Champion - Forecasting<br/>explains artifacts only, never computes"]
+    JOB["Daily refresh orchestrator<br/>~10:00 - re-run ingest, process, recalc"]
+
+    JOB -. V3 planned / optional .-> TES
+    GOV -. read-only summaries .-> AI
+    AI  -. V3 planned / optional .-> REF
+
+    classDef planned fill:#fff8e6,stroke:#b8860b,stroke-width:2px,stroke-dasharray:6 4,color:#7a5a00;
+    class AI,JOB planned;
