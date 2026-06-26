@@ -1,0 +1,16 @@
+check,result,detail
+v3_2d_complete,PASS,_v3_2d_run_summary.json overall_status=COMPLETE; v3_2d_validation.csv overall_status=COMPLETE; v3_2d_closed=True
+all_candidates_complete,PASS,All 6 candidates completed 454/454 windows (status=ok)
+full_candidate_outputs_row_count_valid,PASS,81720 rows = 6 candidates x 13620 (454 entity-windows x 30 horizons); 12 unique forecast_origin per candidate
+xgb_complete,PASS,XGB-IMP-v2 454/454 median_mase=27.950413 completed in 22.354 min within 60-min budget
+no_raw_negatives,PASS,raw_neg=0 for all 6 candidates across all 81720 rows
+no_budget_events,PASS,_v3_2d_run_summary.json budget_events=[]
+no_champion_change,PASS,Champion remains ETS Explicit (median MASE 6.901144) unchanged
+no_data_processed_change,PASS,No writes to data/processed in V3.2E
+no_forecast_change,PASS,No future forecasts generated or modified
+no_interval_change,PASS,No prediction intervals generated or modified
+no_governance_change,PASS,No governance decisions or registry entries modified
+no_v3_3_started,PASS,V3.3 not started
+no_v4_started,PASS,V4 not started
+decision_report_created,PASS,outputs/v3_2e_candidate_decision_package/v3_2e_decision_report.md created
+dashboard_handoff_contract_created,PASS,outputs/v3_2e_candidate_decision_package/v3_2f_shiny_handoff_contract.csv created (not copied to data/processed)
