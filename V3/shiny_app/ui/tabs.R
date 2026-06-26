@@ -1889,7 +1889,117 @@ section_champion <- function() {
   )
 }
 
+# ---------------------------------------------------------------------------
+# Models -> Evaluation Results (V3.2F)
+# Surfaces the FULL evaluated model universe from the CLOSED V3.2D/V3.2E
+# candidate decision package: champion reference + base/statistical, ML and DL
+# challengers. These are backtest EVALUATION results, NOT production forecasts.
+# Read-only: no model runs, no backtests, no forecast generation, no champion
+# change. All data comes from governed-compact data/processed summaries.
+# ---------------------------------------------------------------------------
+section_evaluation <- function() {
+  dv <- model_eval_dashboard_values()
+
+  panel(
+    "evaluation",
+
+    section_head(
+      "Evaluation Results",
+      "The full set of models evaluated for the forecasting codebase \u2014 the governed champion plus statistical, machine-learning and deep-learning challengers \u2014 compared on the same governed backtest."
+    ),
+
+    # Banner / scope note ---------------------------------------------------
+    tags$div(
+      class = "shell-card",
+      tags$span(class = "pill pill-blue", "Backtest evaluation \u00b7 not production"),
+      tags$p(
+        class = "shell-card-detail",
+        dv$status_message
+      )
+    ),
+
+    # A. Evaluation at a glance (open) --------------------------------------
+    home_collapse(
+      "Evaluation at a glance",
+      "Champion, best deep-learning challenger, best machine-learning challenger and the promotion outcome.",
+      card_grid(
+        kpi_card(dv$champion_name, "Champion (unchanged)",
+                 pill = paste0("MASE ", dv$champion_mase), pill_class = "pill-green"),
+        kpi_card(dv$best_dl_challenger, "Best DL challenger",
+                 pill = paste0("MASE ", dv$best_dl_mase), pill_class = "pill-blue"),
+        kpi_card(dv$best_ml_challenger, "Best ML challenger",
+                 pill = paste0("MASE ", dv$best_ml_mase), pill_class = "pill-blue"),
+        kpi_card(dv$total_models, "Candidates evaluated",
+                 pill = "Governed backtest", pill_class = "pill-blue"),
+        kpi_card(dv$total_promoted, "Candidates promoted",
+                 pill = "Champion unchanged", pill_class = "pill-green")
+      ),
+      open = TRUE
+    ),
+
+    # B. How to read these results (collapsed) ------------------------------
+    home_collapse(
+      "How to read these results",
+      "What was evaluated, on which metric, and why no challenger was promoted.",
+      info_list(
+        info_row("Full evaluated universe",
+                 "The comparison covers the governed champion (ETS Explicit, statistical) plus six challengers across machine-learning (Ridge / LightGBM / XGBoost) and lightweight deep-learning (NLinear / SmallMLP / FastNeuralAR-v2) families."),
+        info_row("Governed metric",
+                 "Median MASE is the primary score (lower is better), with median RMSSE as guardrail, computed on the same governed walk-forward backtest used for the champion. ETS Explicit is the reference."),
+        info_row("Best challengers",
+                 paste0("Best deep-learning challenger is ", dv$best_dl_challenger,
+                        "; best machine-learning challenger is ", dv$best_ml_challenger,
+                        ". Both are far from the champion.")),
+        info_row("No promotion",
+                 "No challenger reached the champion or even the top baseline band, so none was promoted. ETS Explicit remains the selected champion under conditions."),
+        info_row("Evaluation, not production",
+                 "These are backtest evaluation results. They do not replace production forecasts, intervals or governance decisions, and challengers are never shown as production forecasts.")
+      ),
+      open = FALSE
+    ),
+
+    # C. Final ranking (open) - MAIN TABLE ----------------------------------
+    home_collapse(
+      "Final ranking",
+      "Every evaluated model ranked by governed median MASE, with the champion shown as the reference row.",
+      model_eval_ranking_table_ui(),
+      open = TRUE
+    ),
+
+    # D. Evaluation summary & decision (collapsed) --------------------------
+    home_collapse(
+      "Evaluation summary & decision",
+      "Per-model family, role, accuracy, guardrails and the documented decision.",
+      model_eval_summary_table_ui(),
+      open = FALSE
+    ),
+
+    # E. Champion comparison (collapsed) ------------------------------------
+    home_collapse(
+      "Champion comparison",
+      "Each challenger against ETS Explicit: ratio, gap and promotion eligibility.",
+      model_eval_champion_table_ui(),
+      open = FALSE
+    ),
+
+    # F. Runtime & guardrails (collapsed) -----------------------------------
+    home_collapse(
+      "Runtime & guardrails",
+      "Runtime viability, window completeness and non-negativity guardrail per challenger.",
+      model_eval_runtime_table_ui(),
+      open = FALSE
+    ),
+
+    # Footer note -----------------------------------------------------------
+    tags$p(
+      class = "tess-foot-note",
+      "Backtest evaluation results from the closed V3.2D/V3.2E candidate decision package. This page reads governed-compact summaries and does not recompute metrics, run models, generate forecasts, or change the champion. ETS Explicit remains the selected champion."
+    )
+  )
+}
+
 section_risks <- function() {
+  vals <- risk_register_values()
 
   panel(
     "risks",
@@ -2481,6 +2591,7 @@ app_sections <- function() {
     section_universe(),
     section_tournament(),
     section_champion(),
+    section_evaluation(),
     section_risks(),
     section_audit(),
     section_artifacts(),
