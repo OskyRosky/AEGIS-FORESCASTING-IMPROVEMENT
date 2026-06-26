@@ -1,0 +1,144 @@
+[NLIN fix] raw_neg before=27 after=0 => PASS
+[GBM re-gate LGBM-IMP-v2] runtime=23.47s proj_full=11.84min => VIABLE
+[GBM re-gate XGB-IMP-v2] runtime=47.93s proj_full=24.18min => VIABLE
+
+========== V3.2D RUNTIME BUDGET ==========
+  start_time: 2026-06-26T08:26:24
+  candidates_to_run: ['FNAR-V2', 'NLIN-DLIN_FIXED', 'SMLP-TCN', 'ENET-RIDGE', 'LGBM-IMP-v2', 'XGB-IMP-v2']
+  number_of_series: 39
+  number_of_windows: 454
+  horizons: 30
+  total_jobs: 81720
+  estimated_runtime_by_candidate_min: {'FNAR-V2': 3.81, 'NLIN-DLIN_FIXED': 0.03, 'SMLP-TCN': 0.43, 'ENET-RIDGE': 0.04, 'LGBM-IMP-v2': 11.84, 'XGB-IMP-v2': 24.18}
+  estimated_total_runtime_min: 40.33
+  max_wall_clock_budget_minutes: 30.0
+==========================================
+
+[full backtest] FNAR-V2 starting (454 entity-windows; est=3.8min budget=7.6min)...
+   [progress] FNAR-V2              25/454  (  5.5%) elapsed=0.2min eta=3.8min status=RUNNING
+   [progress] FNAR-V2              50/454  ( 11.0%) elapsed=0.5min eta=3.7min status=RUNNING
+   [progress] FNAR-V2              75/454  ( 16.5%) elapsed=0.7min eta=3.3min status=RUNNING
+   [progress] FNAR-V2             100/454  ( 22.0%) elapsed=0.8min eta=3.0min status=RUNNING
+   [progress] FNAR-V2             125/454  ( 27.5%) elapsed=1.0min eta=2.6min status=RUNNING
+   [progress] FNAR-V2             150/454  ( 33.0%) elapsed=1.2min eta=2.4min status=RUNNING
+   [progress] FNAR-V2             175/454  ( 38.5%) elapsed=1.4min eta=2.3min status=RUNNING
+   [progress] FNAR-V2             200/454  ( 44.1%) elapsed=1.6min eta=2.1min status=RUNNING
+   [progress] FNAR-V2             225/454  ( 49.6%) elapsed=1.7min eta=1.8min status=RUNNING
+   [progress] FNAR-V2             250/454  ( 55.1%) elapsed=1.9min eta=1.6min status=RUNNING
+   [progress] FNAR-V2             275/454  ( 60.6%) elapsed=2.1min eta=1.4min status=RUNNING
+   [progress] FNAR-V2             300/454  ( 66.1%) elapsed=2.3min eta=1.2min status=RUNNING
+   [progress] FNAR-V2             325/454  ( 71.6%) elapsed=2.5min eta=1.0min status=RUNNING
+   [progress] FNAR-V2             350/454  ( 77.1%) elapsed=2.8min eta=0.8min status=RUNNING
+   [progress] FNAR-V2             375/454  ( 82.6%) elapsed=2.9min eta=0.6min status=RUNNING
+   [progress] FNAR-V2             400/454  ( 88.1%) elapsed=3.0min eta=0.4min status=RUNNING
+   [progress] FNAR-V2             425/454  ( 93.6%) elapsed=3.1min eta=0.2min status=RUNNING
+   [progress] FNAR-V2             450/454  ( 99.1%) elapsed=3.2min eta=0.0min status=RUNNING
+   [progress] FNAR-V2             454/454  (100.0%) elapsed=3.3min eta=0.0min status=DONE
+   FNAR-V2: median_MASE=81.668 median_RMSSE=22.405 raw_neg=0 runtime=195.7s n=454 status=ok
+[full backtest] NLIN-DLIN_FIXED starting (454 entity-windows; est=0.0min budget=2.0min)...
+   [progress] NLIN-DLIN_FIXED      25/454  (  5.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED      50/454  ( 11.0%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED      75/454  ( 16.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     100/454  ( 22.0%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     125/454  ( 27.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     150/454  ( 33.0%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     175/454  ( 38.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     200/454  ( 44.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     225/454  ( 49.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     250/454  ( 55.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     275/454  ( 60.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     300/454  ( 66.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     325/454  ( 71.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     350/454  ( 77.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     375/454  ( 82.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     400/454  ( 88.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     425/454  ( 93.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     450/454  ( 99.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] NLIN-DLIN_FIXED     454/454  (100.0%) elapsed=0.0min eta=0.0min status=DONE
+   NLIN-DLIN_FIXED: median_MASE=24.816 median_RMSSE=6.641 raw_neg=0 runtime=1.0s n=454 status=ok
+[full backtest] SMLP-TCN starting (454 entity-windows; est=0.4min budget=2.0min)...
+   [progress] SMLP-TCN             25/454  (  5.5%) elapsed=0.5min eta=8.3min status=RUNNING
+   [progress] SMLP-TCN             50/454  ( 11.0%) elapsed=0.5min eta=3.9min status=RUNNING
+   [progress] SMLP-TCN             75/454  ( 16.5%) elapsed=0.5min eta=2.4min status=RUNNING
+   [progress] SMLP-TCN            100/454  ( 22.0%) elapsed=0.5min eta=1.7min status=RUNNING
+   [progress] SMLP-TCN            125/454  ( 27.5%) elapsed=0.5min eta=1.3min status=RUNNING
+   [progress] SMLP-TCN            150/454  ( 33.0%) elapsed=0.5min eta=1.0min status=RUNNING
+   [progress] SMLP-TCN            175/454  ( 38.5%) elapsed=0.5min eta=0.8min status=RUNNING
+   [progress] SMLP-TCN            200/454  ( 44.1%) elapsed=0.5min eta=0.6min status=RUNNING
+   [progress] SMLP-TCN            225/454  ( 49.6%) elapsed=0.5min eta=0.5min status=RUNNING
+   [progress] SMLP-TCN            250/454  ( 55.1%) elapsed=0.5min eta=0.4min status=RUNNING
+   [progress] SMLP-TCN            275/454  ( 60.6%) elapsed=0.5min eta=0.3min status=RUNNING
+   [progress] SMLP-TCN            300/454  ( 66.1%) elapsed=0.5min eta=0.3min status=RUNNING
+   [progress] SMLP-TCN            325/454  ( 71.6%) elapsed=0.5min eta=0.2min status=RUNNING
+   [progress] SMLP-TCN            350/454  ( 77.1%) elapsed=0.5min eta=0.1min status=RUNNING
+   [progress] SMLP-TCN            375/454  ( 82.6%) elapsed=0.5min eta=0.1min status=RUNNING
+   [progress] SMLP-TCN            400/454  ( 88.1%) elapsed=0.5min eta=0.1min status=RUNNING
+   [progress] SMLP-TCN            425/454  ( 93.6%) elapsed=0.5min eta=0.0min status=RUNNING
+   [progress] SMLP-TCN            450/454  ( 99.1%) elapsed=0.5min eta=0.0min status=RUNNING
+   [progress] SMLP-TCN            454/454  (100.0%) elapsed=0.5min eta=0.0min status=DONE
+   SMLP-TCN: median_MASE=18.783 median_RMSSE=4.790 raw_neg=0 runtime=29.2s n=454 status=ok
+[full backtest] ENET-RIDGE starting (454 entity-windows; est=0.0min budget=2.0min)...
+   [progress] ENET-RIDGE           25/454  (  5.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE           50/454  ( 11.0%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE           75/454  ( 16.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          100/454  ( 22.0%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          125/454  ( 27.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          150/454  ( 33.0%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          175/454  ( 38.5%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          200/454  ( 44.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          225/454  ( 49.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          250/454  ( 55.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          275/454  ( 60.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          300/454  ( 66.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          325/454  ( 71.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          350/454  ( 77.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          375/454  ( 82.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          400/454  ( 88.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          425/454  ( 93.6%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          450/454  ( 99.1%) elapsed=0.0min eta=0.0min status=RUNNING
+   [progress] ENET-RIDGE          454/454  (100.0%) elapsed=0.0min eta=0.0min status=DONE
+   ENET-RIDGE: median_MASE=19.331 median_RMSSE=5.028 raw_neg=0 runtime=1.4s n=454 status=ok
+[full backtest] LGBM-IMP-v2 starting (454 entity-windows; est=11.8min budget=23.7min)...
+   [progress] LGBM-IMP-v2          25/454  (  5.5%) elapsed=0.5min eta=8.4min status=RUNNING
+   [progress] LGBM-IMP-v2          50/454  ( 11.0%) elapsed=1.0min eta=7.8min status=RUNNING
+   [progress] LGBM-IMP-v2          75/454  ( 16.5%) elapsed=1.4min eta=7.2min status=RUNNING
+   [progress] LGBM-IMP-v2         100/454  ( 22.0%) elapsed=1.8min eta=6.5min status=RUNNING
+   [progress] LGBM-IMP-v2         125/454  ( 27.5%) elapsed=2.2min eta=5.8min status=RUNNING
+   [progress] LGBM-IMP-v2         150/454  ( 33.0%) elapsed=2.7min eta=5.4min status=RUNNING
+   [progress] LGBM-IMP-v2         175/454  ( 38.5%) elapsed=3.1min eta=5.0min status=RUNNING
+   [progress] LGBM-IMP-v2         200/454  ( 44.1%) elapsed=3.6min eta=4.6min status=RUNNING
+   [progress] LGBM-IMP-v2         225/454  ( 49.6%) elapsed=3.9min eta=4.0min status=RUNNING
+   [progress] LGBM-IMP-v2         250/454  ( 55.1%) elapsed=4.4min eta=3.6min status=RUNNING
+   [progress] LGBM-IMP-v2         275/454  ( 60.6%) elapsed=4.8min eta=3.1min status=RUNNING
+   [progress] LGBM-IMP-v2         300/454  ( 66.1%) elapsed=5.3min eta=2.7min status=RUNNING
+   [progress] LGBM-IMP-v2         325/454  ( 71.6%) elapsed=5.7min eta=2.3min status=RUNNING
+   [progress] LGBM-IMP-v2         350/454  ( 77.1%) elapsed=6.2min eta=1.8min status=RUNNING
+   [progress] LGBM-IMP-v2         375/454  ( 82.6%) elapsed=6.6min eta=1.4min status=RUNNING
+   [progress] LGBM-IMP-v2         400/454  ( 88.1%) elapsed=6.9min eta=0.9min status=RUNNING
+   [progress] LGBM-IMP-v2         425/454  ( 93.6%) elapsed=7.3min eta=0.5min status=RUNNING
+   [progress] LGBM-IMP-v2         450/454  ( 99.1%) elapsed=7.7min eta=0.1min status=RUNNING
+   [progress] LGBM-IMP-v2         454/454  (100.0%) elapsed=7.7min eta=0.0min status=DONE
+   LGBM-IMP-v2: median_MASE=26.747 median_RMSSE=6.328 raw_neg=0 runtime=462.9s n=454 status=ok
+[full backtest] XGB-IMP-v2 starting (454 entity-windows; est=24.2min budget=48.4min)...
+   [progress] XGB-IMP-v2           25/454  (  5.5%) elapsed=1.2min eta=20.3min status=RUNNING
+   [progress] XGB-IMP-v2           50/454  ( 11.0%) elapsed=2.5min eta=20.2min status=RUNNING
+   [progress] XGB-IMP-v2           75/454  ( 16.5%) elapsed=3.7min eta=18.5min status=RUNNING
+   [progress] XGB-IMP-v2          100/454  ( 22.0%) elapsed=4.8min eta=17.1min status=RUNNING
+   [progress] XGB-IMP-v2          125/454  ( 27.5%) elapsed=5.7min eta=15.1min status=RUNNING
+   [progress] XGB-IMP-v2          150/454  ( 33.0%) elapsed=6.9min eta=14.0min status=RUNNING
+   [progress] XGB-IMP-v2          175/454  ( 38.5%) elapsed=8.2min eta=13.2min status=RUNNING
+   [progress] XGB-IMP-v2          200/454  ( 44.1%) elapsed=9.7min eta=12.3min status=RUNNING
+   [progress] XGB-IMP-v2          225/454  ( 49.6%) elapsed=10.5min eta=10.7min status=RUNNING
+   [progress] XGB-IMP-v2          250/454  ( 55.1%) elapsed=11.8min eta=9.7min status=RUNNING
+   [progress] XGB-IMP-v2          275/454  ( 60.6%) elapsed=12.9min eta=8.4min status=RUNNING
+   [progress] XGB-IMP-v2          300/454  ( 66.1%) elapsed=14.2min eta=7.3min status=RUNNING
+   [progress] XGB-IMP-v2          325/454  ( 71.6%) elapsed=15.4min eta=6.1min status=RUNNING
+   [progress] XGB-IMP-v2          350/454  ( 77.1%) elapsed=16.4min eta=4.9min status=RUNNING
+   [progress] XGB-IMP-v2          375/454  ( 82.6%) elapsed=17.2min eta=3.6min status=RUNNING
+   [progress] XGB-IMP-v2          400/454  ( 88.1%) elapsed=17.9min eta=2.4min status=RUNNING
+   [progress] XGB-IMP-v2          417/454  ( 91.9%) elapsed=18.4min eta=1.6min status=RUNNING
+   XGB-IMP-v2: median_MASE=27.454 median_RMSSE=6.276 raw_neg=0 runtime=1105.4s n=417 status=TIME_BUDGET_EXCEEDED
+
+[budget result] overall_status=TIME_BUDGET_EXCEEDED wall=30.0min completed=['FNAR-V2', 'NLIN-DLIN_FIXED', 'SMLP-TCN', 'ENET-RIDGE', 'LGBM-IMP-v2'] incomplete=['XGB-IMP-v2'] not_started=[]
+
+V3.2D TIME_BUDGET_EXCEEDED. Partial outputs written -> C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\v3_2b_model_candidates

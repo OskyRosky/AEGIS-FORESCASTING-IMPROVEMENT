@@ -1,0 +1,27 @@
+[xgb completion] start 2026-06-26T09:23:34 windows=454 budget=60.0min
+   [progress] XGB-IMP-v2           25/454  (  5.5%) elapsed=1.3min eta=22.6min status=RUNNING
+   [progress] XGB-IMP-v2           50/454  ( 11.0%) elapsed=2.9min eta=23.2min status=RUNNING
+   [progress] XGB-IMP-v2           75/454  ( 16.5%) elapsed=4.2min eta=21.4min status=RUNNING
+   [progress] XGB-IMP-v2          100/454  ( 22.0%) elapsed=5.5min eta=19.4min status=RUNNING
+   [progress] XGB-IMP-v2          125/454  ( 27.5%) elapsed=6.4min eta=16.9min status=RUNNING
+   [progress] XGB-IMP-v2          150/454  ( 33.0%) elapsed=7.6min eta=15.3min status=RUNNING
+   [progress] XGB-IMP-v2          175/454  ( 38.5%) elapsed=8.8min eta=14.1min status=RUNNING
+   [progress] XGB-IMP-v2          200/454  ( 44.1%) elapsed=10.4min eta=13.2min status=RUNNING
+   [progress] XGB-IMP-v2          225/454  ( 49.6%) elapsed=11.3min eta=11.5min status=RUNNING
+   [progress] XGB-IMP-v2          250/454  ( 55.1%) elapsed=12.8min eta=10.4min status=RUNNING
+   [progress] XGB-IMP-v2          275/454  ( 60.6%) elapsed=14.1min eta=9.2min status=RUNNING
+   [progress] XGB-IMP-v2          300/454  ( 66.1%) elapsed=15.6min eta=8.0min status=RUNNING
+   [progress] XGB-IMP-v2          325/454  ( 71.6%) elapsed=17.0min eta=6.7min status=RUNNING
+   [progress] XGB-IMP-v2          350/454  ( 77.1%) elapsed=18.1min eta=5.4min status=RUNNING
+   [progress] XGB-IMP-v2          375/454  ( 82.6%) elapsed=19.1min eta=4.0min status=RUNNING
+   [progress] XGB-IMP-v2          400/454  ( 88.1%) elapsed=20.0min eta=2.7min status=RUNNING
+   [progress] XGB-IMP-v2          425/454  ( 93.6%) elapsed=21.2min eta=1.4min status=RUNNING
+   [progress] XGB-IMP-v2          450/454  ( 99.1%) elapsed=22.1min eta=0.2min status=RUNNING
+   [progress] XGB-IMP-v2          454/454  (100.0%) elapsed=22.4min eta=0.0min status=DONE
+[xgb completion] stop=ok n=454 median_MASE=27.9504 median_RMSSE=6.4268 raw_neg=0 runtime=1339.3s wall=22.4min
+[merge] candidate_outputs: replaced 12510 partial XGB rows with 13620 complete rows (total now 81720)
+[merge] metrics_summary: XGB candidate row updated to complete (n=454).
+[merge] runtime_results: XGB full_backtest row updated to complete.
+[merge] recommendations: XGB -> keep as challenger
+
+[xgb completion] DONE. overall_status=COMPLETE median_MASE=27.9504 vs champion 6.901 (ratio 4.05x)
