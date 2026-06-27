@@ -118,8 +118,13 @@ first_label <- function(..., fallback = "\u2014") {
   out
 }
 
-# Load the final model universe artifact (one row per governed model).
+# Load the canonical model universe (V3.2H single source of truth: 15 active
+# models / 4 families). Falls back to the legacy 13-model governed artifact only
+# if the canonical artifact is unavailable.
 universe_models <- function() {
+  df <- tryCatch(load_csv_artifact("model_universe_canonical"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df) && nrow(df) > 0) return(df)
   df <- tryCatch(load_csv_artifact("final_model_universe"),
                  error = function(e) data.frame())
   if (!is.data.frame(df)) return(data.frame())
@@ -135,7 +140,8 @@ universe_normalized <- function(df = universe_models()) {
     if (col %in% names(df)) df[[col]] <- .tess_as_logical(df[[col]])
   }
   text_cols <- c("model_name", "model_origin", "model_family",
-                 "final_status", "deferred_reason")
+                 "final_status", "deferred_reason", "family_label",
+                 "evidence_source")
   for (col in text_cols) {
     if (col %in% names(df)) {
       v <- as.character(df[[col]])
@@ -143,6 +149,10 @@ universe_normalized <- function(df = universe_models()) {
       v[is.na(v)] <- ""
       df[[col]] <- v
     }
+  }
+  num_cols <- c("median_mase", "median_rmsse")
+  for (col in num_cols) {
+    if (col %in% names(df)) df[[col]] <- suppressWarnings(as.numeric(df[[col]]))
   }
   df
 }
@@ -437,17 +447,21 @@ fv_chart <- function(entity, model, horizon_days = 30, hist_days = 90) {
 # Artifact semantics: historical / BACKTEST model comparison (NOT the forward
 # production forecast). One row per series x model x date x horizon_days.
 # Prediction intervals are NOT available in this artifact. 39 eligible series,
-# 13 models each, horizons 1-30.
+# 15 models each (4 families incl. 3 deep-learning challengers), horizons 1-30.
 # ===========================================================================
 
-# Fixed family order for grouped model checkboxes.
+# Fixed family order for grouped model checkboxes. Four governed families only.
+# The "Deep Learning" family (artifact key lightweight_neural) exposes the three
+# final deep-learning challengers selected during the codebase review
+# (V3.2D/V3.2E): SMLP-TCN, NLIN-DLIN_FIXED, FNAR-V2. They are HISTORICAL BACKTEST
+# lines only and never change the champion, forecasts, intervals, or governance.
 FVP_FAMILY_ORDER <- c("growth_baseline", "statistical",
                       "machine_learning", "lightweight_neural")
 FVP_FAMILY_LABELS <- c(
   growth_baseline    = "Growth baseline",
   statistical        = "Statistical",
   machine_learning   = "Machine learning",
-  lightweight_neural = "Lightweight neural"
+  lightweight_neural = "Deep Learning"
 )
 
 # Horizon options exposed in the UI (artifact covers 1..30; the UI offers this
@@ -459,7 +473,7 @@ fvp_horizon_unavailable <- function() c(35, 45)
 # Recommended default model selection (omitted safely if unavailable).
 fvp_default_models <- function() {
   c("ETS Explicit", "ARIMA_Fixed", "FixedGrowth_3",
-    "LightGBM", "XGBoost", "FastNeuralAR_MLP")
+    "LightGBM", "XGBoost", "SMLP-TCN")
 }
 
 # Cached governed read of the FULL backtest artifact (parsed at loader init).
@@ -519,13 +533,11 @@ fvp_models_for_series <- function(series, df = fvp_data()) {
   meta$model_name
 }
 
-# A friendly checkbox label for a model row (adds champion / risk badges).
+# A friendly checkbox label for a model row (adds the champion badge only;
+# high-risk badges are intentionally not shown in the Viewer).
 fvp_model_label <- function(model_name, is_champion, risk_status) {
   lbl <- model_name
   if (isTRUE(is_champion)) lbl <- paste0(lbl, "  \u2605 champion")
-  if (identical(tolower(trimws(as.character(risk_status))), "high_risk")) {
-    lbl <- paste0(lbl, "  \u26A0 high risk")
-  }
   lbl
 }
 
@@ -685,7 +697,7 @@ fvp_chart <- function(series, models, horizon_days = 5, hist_days = 0,
     champ <- if (nrow(mrow)) isTRUE(mrow$is_selected_champion[[1]]) else FALSE
     series_name <- fvp_model_label(m, champ, risk)
     col <- .fvp_palette[[((i - 1) %% length(.fvp_palette)) + 1]]
-    dash <- if (identical(tolower(risk), "high_risk")) "ShortDash" else "Solid"
+    dash <- "Solid"
     f_df <- data.frame(x = highcharter::datetime_to_timestamp(f$date),
                        y = round(f$value, 3))
     hc <- hc |> highcharter::hc_add_series(

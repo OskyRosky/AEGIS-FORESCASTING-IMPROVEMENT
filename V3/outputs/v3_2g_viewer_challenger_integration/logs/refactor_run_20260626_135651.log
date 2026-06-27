@@ -1,0 +1,19 @@
+[13:56:51] V3.2G final refactor starting. v3_root = C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3
+[13:56:53] Viewer artifact columns: series_key, series_label, date, actual_value, model_name, model_origin, model_family, forecast_value, forecast_type, horizon_days, forecast_start_date, run_id, source_artifact, is_baseline, is_challenger, is_deferred, is_selected_champion, risk_status, lower_bound, upper_bound, interval_level
+[13:56:53] Viewer rows (incoming): 258780
+[13:56:53] Candidate rows (raw): 81720
+[13:56:53] Backup written: C:/Users/oscarau/OneDrive - Microsoft/Desktop/Forecast Generation Codebase Improvement/AEGIS-FORESCASTING-IMPROVEMENT/V3/outputs/v3_2g_viewer_challenger_integration/logs/forecast_viewer_model_outputs_BACKUP_20260626_135651.csv
+[13:56:53] Stripped 95340 rows (prior eval/challenger rows + FastNeuralAR_MLP).
+[13:56:53] DL candidate rows kept (valid): 40860
+[13:56:53] DL candidate models kept: FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN
+[13:56:53] Mapped Deep Learning rows: 40860
+[13:56:53] Deep Learning series count: 39
+[13:56:54] Combined total rows: 204300
+[13:56:54] Wrote updated artifact: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3/data/processed/forecast_viewer_model_outputs.csv
+[13:56:54] Post-write family counts:
+[13:56:54]   growth_baseline = 54480
+[13:56:54]   lightweight_neural = 40860
+[13:56:54]   machine_learning = 40860
+[13:56:54]   statistical = 68100
+[13:56:54] Deep Learning family models: FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN
+[13:56:54] Champion rows untouched (is_selected_champion=True count): 13620

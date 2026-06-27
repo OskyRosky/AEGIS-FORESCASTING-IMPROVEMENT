@@ -1,0 +1,8 @@
+S00 START 2026-06-26T18:14:37.0725682-06:00
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\test_connection.py", line 11, in <module>
+    from config import build_connection_string
+ModuleNotFoundError: No module named 'config'
+S00 END 2026-06-26T18:14:37.4221976-06:00 elapsed_seconds=0.4 exit_code=1

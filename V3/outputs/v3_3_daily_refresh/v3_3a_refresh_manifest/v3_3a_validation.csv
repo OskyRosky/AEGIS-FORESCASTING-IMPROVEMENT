@@ -1,0 +1,30 @@
+check_id,description,result,detail
+all_required_stages_inventory_present,All 15 minimum stages S00-S14 inventoried in refresh_manifest.csv,PASS,15 stages present
+auth_vpn_stage_present,Auth / VPN / SQL gate stage documented,PASS,S00
+ingestion_stage_present,Ingestion stage documented,PASS,S01
+transform_stage_present,Transform stage documented,PASS,S02
+model_execution_stage_present,Model execution stage documented,PASS,S03
+forecast_outputs_stage_present,Forecast outputs stage documented,PASS,S04
+tournament_champion_stage_present,Tournament / champion stage documented,PASS,S05
+evaluation_stage_present,Evaluation stage documented,PASS,S07
+governance_stage_present,Governance stage documented,PASS,S08
+reference_stage_present,Reference stage documented,PASS,S09 (entrypoint TBD - flagged open question)
+last_update_stage_present,Last Update / run metadata stage documented,PASS,S11
+pipeline_status_stage_present,Pipeline status stage documented,PASS,S12
+champion_audit_stage_present,Champion audit stage documented,PASS,S13
+staging_policy_documented,Staging to promote policy documented,PASS,report section 8 + staging_required column
+failure_behavior_documented,Failure behavior documented,PASS,report section 9 + failure_behavior column
+daily_full_path_documented,Daily full refresh path documented,PASS,report section 3
+optional_light_heavy_path_documented,Optional light/heavy path documented,PASS,report section 4 + is_light_stage/is_heavy_stage columns
+runtime_estimates_captured,Runtime estimates captured,PASS,report section 10 + estimated_runtime_min column
+dashboard_mapping_captured,Dashboard area mapping captured,PASS,report section 7 + updates_dashboard_area column
+no_scheduler_created,No scheduler created,PASS,documentation only
+no_models_executed,No models executed,PASS,no model runs performed
+no_backtests_executed,No backtests executed,PASS,no backtests performed
+no_data_processed_modified,No data/processed productive artifact modified,PASS,only outputs/v3_3_daily_refresh/v3_3a_refresh_manifest/ written
+no_champion_change,No champion change,PASS,champion ETS Explicit unchanged
+no_forecast_change,No forecast change,PASS,no forecast artifact touched
+no_interval_change,No interval change,PASS,no interval artifact touched
+V1_V2_untouched,V1 and V2 untouched,PASS,no writes outside V3
+V3_3B_not_started,V3.3B benchmark not started,PASS,no pipeline run
+V4_not_started,V4 not started,PASS,scope limited to V3.3A

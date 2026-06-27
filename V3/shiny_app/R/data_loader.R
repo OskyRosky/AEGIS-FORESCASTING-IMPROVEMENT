@@ -167,7 +167,8 @@ build_artifact_registry <- function() {
 
     # --- Stage 05H FULL multi-model handoff (Forecast Viewer - ACTIVE) ---
     # Long/tidy historical BACKTEST comparison artifact: 39 eligible series,
-    # 13 models each, horizons 1-30. Read-only; the ACTIVE full Forecast Viewer
+    # 15 models each (4 families incl. 3 deep-learning challengers), horizons
+    # 1-30. Read-only; the ACTIVE full Forecast Viewer
     # Backtest Comparison section consumes ONLY this artifact (Block
     # 7.11-FULL-REBIND). It is never modified by the app.
     c("forecast_viewer_full",           "forecasting", "csv", "optional",
@@ -212,7 +213,21 @@ build_artifact_registry <- function() {
     c("model_runtime_guardrails",   "model_eval",   "csv",  "optional",
       "data/processed/model_runtime_guardrails.csv"),
     c("model_dashboard_summary",    "model_eval",   "csv",  "optional",
-      "data/processed/model_dashboard_summary.csv")
+      "data/processed/model_dashboard_summary.csv"),
+
+    # --- V3.2H canonical model universe (single source of truth).
+    #     15 active models / 4 families (Growth baseline, Statistical, Machine
+    #     learning, Deep Learning). Aggregates already-computed medians from the
+    #     governed tournament scorecard (12 models) and the closed V3.2D/V3.2E
+    #     candidate evaluation (3 deep-learning challengers). The original
+    #     high-risk FastNeuralAR_MLP is retired; the champion (ETS Explicit,
+    #     MASE 6.901) is unchanged. Read-only; built by
+    #     outputs/v3_2h_model_consistency_fix/build_canonical_universe.R. The
+    #     Universe / Tournament / Champion pages read THIS for the current
+    #     universe definition; the 13-model bootstrap tournament remains as
+    #     clearly-labelled legacy governed evidence.
+    c("model_universe_canonical",   "model_eval",   "csv",  "optional",
+      "data/processed/model_universe_canonical.csv")
   )
 
   reg <- do.call(rbind, lapply(rows, function(r) {

@@ -1,0 +1,19 @@
+[12:25:39] V3.2G append starting. v3_root = C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3
+[12:25:41] Viewer artifact columns: series_key, series_label, date, actual_value, model_name, model_origin, model_family, forecast_value, forecast_type, horizon_days, forecast_start_date, run_id, source_artifact, is_baseline, is_challenger, is_deferred, is_selected_champion, risk_status, lower_bound, upper_bound, interval_level
+[12:25:41] Viewer rows (original): 177060
+[12:25:41] Candidate rows (raw): 81720
+[12:25:41] Backup written: C:/Users/oscarau/OneDrive - Microsoft/Desktop/Forecast Generation Codebase Improvement/AEGIS-FORESCASTING-IMPROVEMENT/V3/outputs/v3_2g_viewer_challenger_integration/logs/forecast_viewer_model_outputs_BACKUP_20260626_122539.csv
+[12:25:41] Candidate rows kept (valid): 81720
+[12:25:41] Mapped challenger rows: 81720
+[12:25:41] Challenger models: ENET-RIDGE, FNAR-V2, LGBM-IMP-v2, NLIN-DLIN_FIXED, SMLP-TCN, XGB-IMP-v2
+[12:25:41] Challenger series count: 39
+[12:25:41] Combined total rows: 258780
+[12:25:41] Wrote updated artifact: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3/data/processed/forecast_viewer_model_outputs.csv
+[12:25:42] Post-write family counts:
+[12:25:42]   evaluation_challenger = 81720
+[12:25:42]   growth_baseline = 54480
+[12:25:42]   lightweight_neural = 13620
+[12:25:42]   machine_learning = 40860
+[12:25:42]   statistical = 68100
+[12:25:42] Challenger rows in artifact: 81720
+[12:25:42] Champion rows untouched (is_selected_champion=True count): 13620

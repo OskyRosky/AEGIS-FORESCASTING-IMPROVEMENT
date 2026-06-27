@@ -292,8 +292,8 @@ section_overview <- function() {
         class = "home-prose",
         tags$p(
           "The review compared models on a broad, complete historical backtest. ",
-          "The evidence base covers ", tags$strong("39 series"), " across ",
-          tags$strong("13 models"), ", at ", tags$strong("horizons 1\u201330"),
+          "The governed tournament evidence base covers ", tags$strong("39 series"), " across ",
+          tags$strong("13 governed tournament models"), ", at ", tags$strong("horizons 1\u201330"),
           ", with complete actual and forecast values \u2014 no gaps."
         ),
         tags$p(
@@ -372,6 +372,7 @@ section_explorer <- function() {
         tags$li("The ", tags$b("actual"), " values are already known \u2014 they are real history."),
         tags$li("Each model line is a ", tags$b("historical backtest forecast"), ", not a future forecast."),
         tags$li("Use it to visually compare how well each model fits a series at a chosen horizon, and to corroborate the governed results yourself."),
+        tags$li("The ", tags$b("Deep Learning"), " family shows the three final deep-learning challengers selected during the codebase review (V3.2D/V3.2E) as historical backtest lines \u2014 they are ", tags$b("not"), " production forecasts and do ", tags$b("not"), " change the champion."),
         tags$li("It does ", tags$b("not"), " generate future forecasts, recalculate metrics, or change the champion."),
         tags$li("The forward production forecast lives on the separate ", tags$b("Forecast"), " page.")
       ),
@@ -448,7 +449,7 @@ section_explorer <- function() {
         ),
         uiOutput("fvp_model_groups"),
         tags$p(class = "fvb-field-hint",
-               "Tick one or more models. Grouped by family; \u2605 marks the selected challenger champion and \u26A0 marks higher-risk models (still selectable).")
+               "Tick one or more models. Grouped by family; \u2605 marks the governed champion.")
       ),
 
       # Step 5: Analyze Backtest (bottom of the setup box) ----------------
@@ -1163,18 +1164,14 @@ universe_families_ui <- function(df = universe_normalized()) {
       label = "Machine learning",
       desc  = "Feature-based learners such as linear regression and gradient boosting. Flexible, but they need enough signal to shine."
     ),
-    lightweight_neural = list(
-      label = "Lightweight neural",
-      desc  = "A small neural autoregressor \u2014 more capacity than classic machine learning, far lighter than full deep learning."
-    ),
     deep_learning = list(
-      label = "Deep learning",
-      desc  = "Modern neural forecasters (NBEATS, NHITS). Highest capacity and cost \u2014 deferred for now on runtime and dependency grounds."
+      label = "Deep Learning",
+      desc  = "Three lightweight deep-learning challengers (SMLP-TCN, NLIN-DLIN_FIXED, FNAR-V2) evaluated in the closed V3.2D/V3.2E candidate study. They carry more capacity than classic machine learning but, on this data, stay well above the statistical leaders."
     )
   )
 
   fam_order <- c("statistical", "growth_baseline", "machine_learning",
-                 "lightweight_neural", "deep_learning")
+                 "deep_learning")
   fams <- unique(df$model_family)
   fams <- c(intersect(fam_order, fams), setdiff(fams, fam_order))
 
@@ -1225,14 +1222,25 @@ universe_static_table_ui <- function(df) {
   if (!is.data.frame(df) || nrow(df) == 0) {
     return(tags$p(class = "shell-card-detail", "No active models to display."))
   }
-  fam_label <- function(x) ifelse(nzchar(x), gsub("_", " ", x), "\u2014")
+  fam_label <- function(r) {
+    if (!is.null(r$family_label) && nzchar(r$family_label)) return(r$family_label)
+    x <- as.character(r$model_family)
+    ifelse(nzchar(x), gsub("_", " ", x), "\u2014")
+  }
+  has_mase <- "median_mase" %in% names(df)
+  has_src  <- "evidence_source" %in% names(df)
+  src_label <- function(x) {
+    switch(as.character(x),
+           governed_tournament  = "Governed tournament",
+           candidate_evaluation = "Candidate evaluation",
+           if (nzchar(as.character(x))) gsub("_", " ", as.character(x)) else "\u2014")
+  }
 
   rows <- lapply(seq_len(nrow(df)), function(i) {
     r        <- df[i, ]
     is_champ <- isTRUE(r$selected_champion %in% TRUE)
     is_base  <- identical(as.character(r$model_origin), "baseline")
     elig     <- isTRUE(r$eligible_for_champion %in% TRUE)
-    is_risk  <- isTRUE(r$risk_flag %in% TRUE)
     tags$tr(
       class = if (is_champ) "uni-row-champ" else NULL,
       tags$td(
@@ -1243,15 +1251,14 @@ universe_static_table_ui <- function(df) {
       tags$td(tags$span(
         class = paste("uni-chip-tag", if (is_base) "uni-tag-base" else "uni-tag-chall"),
         if (is_base) "Baseline" else "Challenger")),
-      tags$td(fam_label(r$model_family)),
+      tags$td(fam_label(r)),
+      if (has_mase) tags$td(fmt_metric(r$median_mase, 2)),
       tags$td(if (elig)
                 tags$span(class = "uni-chip-tag uni-tag-champ", "Eligible")
               else
                 tags$span(class = "uni-chip-tag uni-tag-muted", "Not eligible")),
-      tags$td(if (is_risk)
-                tags$span(class = "uni-chip-tag uni-tag-risk", "Risk flag")
-              else
-                tags$span(class = "uni-td-dash", "\u2014"))
+      if (has_src) tags$td(tags$span(class = "shell-card-detail",
+                                     style = "font-size:12px;", src_label(r$evidence_source)))
     )
   })
 
@@ -1259,7 +1266,9 @@ universe_static_table_ui <- function(df) {
     class = "uni-table",
     tags$thead(tags$tr(
       tags$th("Model"), tags$th("Origin"), tags$th("Family"),
-      tags$th("Champion eligible"), tags$th("Risk")
+      if (has_mase) tags$th("Median MASE"),
+      tags$th("Champion eligible"),
+      if (has_src) tags$th("Evidence")
     )),
     tags$tbody(rows)
   )
@@ -1282,7 +1291,7 @@ section_universe <- function() {
   n_fam <- if (is.data.frame(vis) && "model_family" %in% names(vis))
              length(unique(vis$model_family)) else 0L
   fam_intro <- sprintf(
-    "AEGIS compares %d active models across %d families. Some deep-learning candidates are deferred for runtime and dependency reasons and are not shown here.",
+    "AEGIS compares %d models across %d families \u2014 growth baselines, statistical methods, machine learning and deep learning. ETS Explicit is the governed champion under conditions.",
     n_vis, n_fam)
 
   panel(
@@ -1307,8 +1316,8 @@ section_universe <- function() {
                  "The model entered the governed rolling-origin ranking that compares every candidate on the same history."),
         info_row("Champion eligible",
                  "A governed flag marking a model as allowed to be considered for champion. It does not, by itself, decide the champion."),
-        info_row("Risk flag",
-                 "The model carries a documented risk (for example stability or maturity) that must be read alongside its results."),
+        info_row("Evidence source",
+                 "Where each model's accuracy comes from: the governed rolling-origin tournament (12 models) or the closed V3.2D/V3.2E candidate evaluation (the 3 deep-learning challengers). Both are read on the same governed backtest history."),
         info_row("Selected champion (with conditions)",
                  paste0("The governed choice (", champ,
                         "). It is approved with conditions and must be read together with the documented risks and governance notes \u2014 never as an unconditional winner."))
@@ -1319,16 +1328,16 @@ section_universe <- function() {
     # C. Model families compared (collapsible, closed) -----------------------
     home_collapse(
       "Model families compared",
-      "The active model families in play, from simple growth baselines to lightweight neural models.",
+      "The four active model families in play, from simple growth baselines to deep-learning challengers.",
       tags$p(class = "uni-fam-intro", fam_intro),
       universe_families_ui(vis),
       open = FALSE
     ),
 
-    # D. Governed model table (collapsible, closed) --------------------------
+    # D. Current model universe table (collapsible, closed) ------------------
     home_collapse(
-      "Governed model table",
-      "Every active model with its origin, family, champion eligibility and risk flag.",
+      "Current model universe (15 models)",
+      "Every active model with its origin, family, median MASE, champion eligibility and evidence source.",
       universe_static_table_ui(vis),
       open = FALSE
     )
@@ -1563,9 +1572,74 @@ tournament_evidence_tree_ui <- function(df) {
   )
 }
 
+# Current 15-model ranking table from the canonical universe artifact. Pure
+# HTML (not a DT widget) so it renders inside a collapsible. Read-only; ordered
+# by median MASE. Shows the evidence source (governed tournament vs candidate
+# evaluation) so the two populations are never silently merged.
+universe_canonical_ranking_table_ui <- function(df = universe_normalized()) {
+  if (!is.data.frame(df) || nrow(df) == 0 || !("median_mase" %in% names(df))) {
+    return(tags$p(class = "shell-card-detail",
+                  "The current model ranking is unavailable."))
+  }
+  df <- df[order(suppressWarnings(as.numeric(df$median_mase))), , drop = FALSE]
+  fam_label <- function(r) {
+    if (!is.null(r$family_label) && nzchar(r$family_label)) return(r$family_label)
+    x <- as.character(r$model_family)
+    ifelse(nzchar(x), gsub("_", " ", x), "\u2014")
+  }
+  src_label <- function(x) {
+    switch(as.character(x),
+           governed_tournament  = tags$span(class = "uni-chip-tag uni-tag-base", "Governed tournament"),
+           candidate_evaluation = tags$span(class = "uni-chip-tag uni-tag-chall", "Candidate evaluation"),
+           tags$span(class = "uni-td-dash", "\u2014"))
+  }
+  num <- function(x, d = 2) {
+    x <- suppressWarnings(as.numeric(x))
+    if (length(x) != 1 || is.na(x)) "\u2014" else formatC(x, format = "f", digits = d)
+  }
+  rows <- lapply(seq_len(nrow(df)), function(i) {
+    r        <- df[i, ]
+    is_champ <- isTRUE(r$selected_champion %in% TRUE)
+    is_base  <- identical(as.character(r$model_origin), "baseline")
+    tags$tr(
+      class = if (is_champ) "uni-row-champ" else NULL,
+      tags$td(as.character(i)),
+      tags$td(
+        tags$span(class = "uni-td-name", r$model_name),
+        if (is_champ) tags$span(class = "uni-chip-tag uni-tag-champ",
+                                style = "margin-left:8px;", "\u2605 Champion")
+      ),
+      tags$td(fam_label(r)),
+      tags$td(tags$span(
+        class = paste("uni-chip-tag", if (is_base) "uni-tag-base" else "uni-tag-chall"),
+        if (is_base) "Baseline" else "Challenger")),
+      tags$td(num(r$median_mase)),
+      tags$td(num(r$median_rmsse)),
+      tags$td(src_label(r$evidence_source))
+    )
+  })
+  tags$div(
+    style = "overflow-x:auto;",
+    tags$table(
+      class = "uni-table",
+      tags$thead(tags$tr(
+        tags$th("#"), tags$th("Model"), tags$th("Family"), tags$th("Origin"),
+        tags$th("Median MASE"), tags$th("Median RMSSE"), tags$th("Evidence source")
+      )),
+      tags$tbody(rows)
+    )
+  )
+}
+
 section_tournament <- function() {
   vals <- tournament_summary_values()
   league <- tournament_league_data()
+  dv <- model_eval_dashboard_values()
+  canon <- universe_normalized()
+  n_models <- if (is.data.frame(canon)) nrow(canon) else 0L
+  n_fam <- if (is.data.frame(canon) && "model_family" %in% names(canon))
+             length(unique(canon$model_family)) else 0L
+  champ_name <- first_label(universe_champion_name(canon), APP_CHAMPION)
   n <- function(x) {
     if (length(x) != 1 || is.na(x) || !nzchar(as.character(x))) "\u2014" else as.character(x)
   }
@@ -1573,78 +1647,157 @@ section_tournament <- function() {
     "tournament",
     section_head(
       "Tournament Standings",
-      "A round-robin review where 13 models are compared head-to-head using governed evidence. MASE is the primary metric, RMSSE is the guardrail, and ETS Explicit is selected under conditions."
+      sprintf("AEGIS compares %d models across %d families. Median MASE is the primary metric, RMSSE is the guardrail, and ETS Explicit is selected under conditions.",
+              n_models, n_fam)
     ),
 
-    # A. Tournament summary (collapsible, open) -----------------------------
+    # A. How to read this tournament (FIRST, open) --------------------------
     home_collapse(
-      "Tournament summary",
-      "The tournament at a glance: how many models, how many comparisons, the metrics, and the selected champion.",
+      "How to read this tournament",
+      "Start here: what the tournament compares, the metrics, and why ETS Explicit is selected under conditions.",
+      info_list(
+        info_row("What is being compared",
+                 paste0("The current universe is ", n_models, " models across ", n_fam,
+                        " families (growth baselines, statistical, machine learning, deep learning). Each is scored on the same governed walk-forward backtest history.")),
+        info_row("MASE is the primary metric",
+                 "MASE measures forecast error. Lower is better \u2014 think of it as the model's score."),
+        info_row("RMSSE is the guardrail",
+                 "RMSSE is a second error metric used as a guardrail, so a model cannot look good on one metric while failing on another."),
+        info_row("Two evidence sources",
+                 "12 models were ranked inside the governed bootstrap pairwise tournament. The 3 deep-learning challengers were evaluated separately in the closed V3.2D/V3.2E candidate study and did not enter the pairwise bootstrap \u2014 their median MASE/RMSSE are shown for the same backtest, but they have no pairwise record."),
+        info_row("Pairwise evidence (governed 12)",
+                 "Inside the governed tournament, each pair of models has a head-to-head outcome (supported better, worse, or inconclusive). This record is shown in the legacy tournament evidence below."),
+        info_row("Selected champion under conditions",
+                 paste0(champ_name, " has the lowest median MASE and the strongest head-to-head record (8 supported-better, 0 supported-worse, confidence medium), so it is the selected champion under conditions \u2014 not an unconditional winner."))
+      ),
+      open = TRUE
+    ),
+
+    # B. Current model universe summary (collapsible, open) -----------------
+    home_collapse(
+      "Current model universe",
+      "The current universe at a glance: how many models and families, the metrics, and the selected champion.",
       card_grid(
-        kpi_card(n(vals$models_ranked), "Models",
-                 pill = "Round-robin", pill_class = "pill-blue"),
-        kpi_card(n(vals$pairwise_comparisons), "Pairwise comparisons",
-                 pill = "All vs all", pill_class = "pill-blue"),
+        kpi_card(as.character(n_models), "Models",
+                 pill = "Current universe", pill_class = "pill-blue"),
+        kpi_card(as.character(n_fam), "Families",
+                 pill = "Growth / Stat / ML / DL", pill_class = "pill-blue"),
         kpi_card(vals$primary_metric, "Primary metric",
                  pill = "Lower is better", pill_class = "pill-blue"),
         kpi_card(vals$guardrail_metric, "Guardrail",
                  pill = "Lower is better", pill_class = "pill-blue"),
-        kpi_card(vals$selected_champion, "Champion under conditions",
+        kpi_card(champ_name, "Champion under conditions",
                  pill = "Governed", pill_class = "pill-green")
       ),
       open = FALSE
     ),
 
-    # B. How to read this tournament (collapsed) ----------------------------
+    # C. Current model ranking (15 models) ----------------------------------
     home_collapse(
-      "How to read this tournament",
-      "How the round-robin works and why ETS Explicit is selected under conditions.",
-      info_list(
-        info_row("Everyone plays everyone",
-                 "The tournament is a round-robin: each of the 13 models is compared head-to-head against every other model, for 78 governed pairwise comparisons in total."),
-        info_row("MASE is the primary metric",
-                 "MASE measures forecast error. Lower is better \u2014 think of it as the model's score."),
-        info_row("RMSSE is the guardrail",
-                 "RMSSE is a second error metric used as a guardrail, so a model cannot look good on one metric while failing on another."),
-        info_row("Pairwise evidence is the head-to-head record",
-                 "For each pair, the governed evidence says whether one model is supported as better, worse, or inconclusive. Counting these gives each model a better / worse / inconclusive record \u2014 like wins, losses, and draws."),
-        info_row("Risk and eligibility are the rules",
-                 "Risk status and champion eligibility act as governance rules. A model can be strong on error yet held back \u2014 for example FastNeuralAR_MLP is flagged high-risk and is not eligible for champion consideration."),
-        info_row("No single composite score",
-                 "There is no single governed composite score. The decision is based on MASE, RMSSE guardrail, pairwise evidence, risk, eligibility, and governance conditions."),
-        info_row("Selected champion under conditions",
-                 "ETS Explicit has the lowest MASE and the strongest head-to-head record (8 supported-better, 0 supported-worse, confidence medium), so it is the selected champion under conditions \u2014 not an unconditional winner.")
+      "Current model ranking (15 models)",
+      "All current models ranked by median MASE, with median RMSSE guardrail and the evidence source for each.",
+      tags$p(
+        class = "shell-card-detail",
+        "Median MASE is the primary score (lower is better); median RMSSE is the guardrail. \u201cGoverned tournament\u201d models were ranked in the bootstrap pairwise tournament; \u201cCandidate evaluation\u201d models (the deep-learning challengers) were scored on the same backtest in the closed V3.2D/V3.2E study. No challenger beat the champion or the top baseline band, so the champion is unchanged."
+      ),
+      universe_canonical_ranking_table_ui(canon),
+      open = FALSE
+    ),
+
+    # D. Challenger evaluation at a glance (collapsed) ----------------------
+    home_collapse(
+      "Challenger evaluation at a glance",
+      "Machine-learning and deep-learning challengers evaluated during the codebase review (V3.2D/V3.2E), compared to ETS Explicit on the same governed backtest.",
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-blue", "Backtest evaluation \u00b7 not production"),
+        tags$p(class = "shell-card-detail", dv$status_message)
+      ),
+      card_grid(
+        kpi_card(dv$champion_name, "Champion (unchanged)",
+                 pill = paste0("MASE ", dv$champion_mase), pill_class = "pill-green"),
+        kpi_card(dv$best_dl_challenger, "Best DL challenger",
+                 pill = paste0("MASE ", dv$best_dl_mase), pill_class = "pill-blue"),
+        kpi_card(dv$best_ml_challenger, "Best ML challenger",
+                 pill = paste0("MASE ", dv$best_ml_mase), pill_class = "pill-blue"),
+        kpi_card(dv$total_models, "Candidates evaluated",
+                 pill = "Governed backtest", pill_class = "pill-blue"),
+        kpi_card(dv$total_promoted, "Candidates promoted",
+                 pill = "Champion unchanged", pill_class = "pill-green")
       ),
       open = FALSE
     ),
 
-    # C. Tournament Evidence Tree (collapsed) - MAIN VISUAL ----------------
+    # E. Challenger ranking (collapsed) - EVALUATION TABLE ------------------
     home_collapse(
-      "Tournament Evidence Tree",
-      "A dendrogram-style grouping of the 13 active models by their governed net head-to-head evidence, with ETS Explicit highlighted as the selected champion under conditions.",
+      "Challenger evaluation detail (V3.2D/V3.2E)",
+      "Every evaluated candidate ranked by governed median MASE, with the champion shown as the reference row.",
+      tags$p(
+        class = "shell-card-detail",
+        "Median MASE is the primary score (lower is better), with median RMSSE as guardrail, computed on the same governed walk-forward backtest used for the champion. No challenger reached the champion or the top baseline band, so none was promoted."
+      ),
+      model_eval_ranking_table_ui(),
+      open = FALSE
+    ),
+
+    # F. Evaluation summary & decision (collapsed) --------------------------
+    home_collapse(
+      "Evaluation summary & decision",
+      "Per-model family, role, accuracy, guardrails and the documented decision for each evaluated candidate.",
+      model_eval_summary_table_ui(),
+      open = FALSE
+    ),
+
+    # G. Runtime & guardrails (collapsed) -----------------------------------
+    home_collapse(
+      "Runtime & guardrails",
+      "Runtime viability, window completeness and non-negativity guardrail per challenger.",
+      model_eval_runtime_table_ui(),
+      open = FALSE
+    ),
+
+    # H. Legacy governed tournament evidence (13 models) --------------------
+    home_collapse(
+      "About the legacy 13-model tournament",
+      "Why the head-to-head evidence below covers 13 models, not 15.",
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-amber", "Legacy governed evidence"),
+        tags$p(
+          class = "shell-card-detail",
+          "The governed bootstrap pairwise tournament was run on 13 models (78 pairwise comparisons) and is a CLOSED artifact. It included an earlier high-risk neural model (FastNeuralAR_MLP) that has since been retired, and it predates the 3 deep-learning challengers, which were evaluated separately and never entered the pairwise bootstrap. The evidence tree, league view and head-to-head details below are preserved exactly as governed, and are LABELLED legacy. The current 15-model ranking above is the authoritative view of today's universe."
+        )
+      ),
+      open = FALSE
+    ),
+
+    # H.1 Legacy Tournament Evidence Tree -----------------------------------
+    home_collapse(
+      "Legacy tournament evidence tree (13 models)",
+      "A dendrogram-style grouping of the 13 governed tournament models by net head-to-head evidence, with ETS Explicit highlighted as the selected champion under conditions.",
       tournament_evidence_tree_ui(league),
       open = FALSE
     ),
 
-    # D. Tournament League View (collapsed) - SCOREBOARD --------------------
+    # H.2 Legacy Tournament League View -------------------------------------
     home_collapse(
-      "Tournament League View",
-      "League-style scoreboard per model: better / worse / inconclusive, net evidence, primary metric and guardrail.",
+      "Legacy tournament league view (13 models)",
+      "League-style scoreboard for the 13 governed tournament models: better / worse / inconclusive, net evidence, primary metric and guardrail.",
       tags$p(
         class = "uni-fam-intro",
-        "Each model plays every other model. \u201cBetter\u201d, \u201cWorse\u201d and \u201cInconclusive\u201d count the governed head-to-head outcomes; \u201cNet evidence\u201d is better minus worse. MASE and RMSSE are the governed error metrics (lower is better). Rows are ordered by net evidence, then MASE, for readability only."
+        "Each model plays every other model. \u201cBetter\u201d, \u201cWorse\u201d and \u201cInconclusive\u201d count the governed head-to-head outcomes; \u201cNet evidence\u201d is better minus worse. MASE and RMSSE are the governed error metrics (lower is better). Rows are ordered by net evidence, then MASE, for readability only. This reflects the 13-model governed tournament (legacy)."
       ),
       tournament_league_table_ui(league),
       open = FALSE
     ),
 
-    # E. Head-to-head evidence details (collapsed, technical) ---------------
+    # H.3 Legacy Head-to-head evidence details ------------------------------
     home_collapse(
-      "Head-to-head evidence details",
-      "Technical pairwise comparisons behind the better / worse / inconclusive record.",
+      "Legacy head-to-head evidence details (78 comparisons)",
+      "Technical pairwise comparisons behind the 13-model governed better / worse / inconclusive record.",
       tags$p(
         class = "shell-card-detail",
-        "Each row is one model-vs-model comparison. The tournament has 78 rows because 13 models are compared against each other in a round-robin design. The table reports MASE deltas, bootstrap confidence intervals, p-values, adjusted p-values, practical threshold flags and comparison status."
+        "Each row is one model-vs-model comparison. The governed tournament has 78 rows because 13 models are compared against each other in a round-robin design. The table reports MASE deltas, bootstrap confidence intervals, p-values, adjusted p-values, practical threshold flags and comparison status. This is legacy governed evidence."
       ),
       tags$div(class = "tess-table-wrap", DT::dataTableOutput("tournament_pairwise_table")),
       open = FALSE
@@ -1653,7 +1806,7 @@ section_tournament <- function() {
     # Footer note (single sentence, no policy table) ------------------------
     tags$p(
       class = "tess-foot-note",
-      "This page reads governed Model Lab artifacts and does not recompute metrics or change the champion decision."
+      "This page reads governed Model Lab and candidate-evaluation artifacts and does not recompute metrics or change the champion decision. The current 15-model ranking aggregates already-computed medians; the 13-model pairwise tournament is preserved as labelled legacy evidence. None of the challengers was promoted."
     )
   )
 }
@@ -1801,6 +1954,23 @@ section_champion <- function() {
       "ETS Explicit is the selected champion under conditions. This page separates the global governed decision from series-level diagnostic evidence."
     ),
 
+    # 0. What is the Champion (open, plain-language explainer) --------------
+    home_collapse(
+      "What is the Champion",
+      "Read this first: what \u201cchampion\u201d means here, and what it does not mean.",
+      info_list(
+        info_row("The selected governed model",
+                 paste0("The champion (", vals$champion, ") is the single model AEGIS selected to represent the current universe of 15 models. It is chosen on aggregate evidence across all series, not on any one series.")),
+        info_row("Chosen on aggregate evidence",
+                 "Selection combines the lowest median MASE, the RMSSE guardrail, pairwise support, champion eligibility, risk and governance conditions — there is no single composite score."),
+        info_row("Selected under conditions",
+                 "The champion is approved with documented conditions, not as an unconditional winner. It must be read together with the governance notes."),
+        info_row("Not best in every series",
+                 "A different model can have the lowest error on some individual series. That is expected and diagnostic only — it does not change or replace the governed champion.")
+      ),
+      open = TRUE
+    ),
+
     # 1. Champion at a glance (open) ----------------------------------------
     home_collapse(
       "Champion at a glance",
@@ -1854,10 +2024,42 @@ section_champion <- function() {
         "Series leadership map: one tile per series, grouped by the local series-level leader. Green tiles are series where ETS Explicit has the lowest median MASE."
       ),
       champion_series_leadership_map_ui(),
+      tags$p(
+        class = "shell-card-detail",
+        "Scope: this diagnostic is computed over the governed tournament models. The three Deep Learning challengers (SMLP-TCN, NLIN-DLIN_FIXED, FNAR-V2) have median MASE of roughly 18–80, far above the local leaders (MASE ≈ 6–11), so they lead 0 individual series and do not change any leader shown here."
+      ),
       open = TRUE
     ),
 
     # 4. Leadership count by model (collapsed) ------------------------------
+    home_collapse(
+      "Challenger evaluation (V3.2D/V3.2E)",
+      "How the evaluated machine-learning and deep-learning challengers compare to ETS Explicit — and why none was promoted.",
+      tags$div(
+        class = "shell-card",
+        tags$span(class = "pill pill-green", "Champion unchanged"),
+        tags$h3(class = "shell-card-title", "No challenger was promoted"),
+        tags$p(
+          class = "shell-card-detail",
+          "The codebase review evaluated six challengers across statistical, machine-learning and deep-learning families on the same governed backtest. The best deep-learning challenger (SMLP-TCN) and the best machine-learning challenger (ENET-RIDGE) both land far above ETS Explicit on median MASE and do not reach even the top baseline band. No challenger was promoted, and no production forecast was replaced."
+        ),
+        info_list(
+          info_row("Champion (reference)", paste0(vals$champion, " \u2014 median MASE ", vals$mase_display)),
+          info_row("Best DL challenger", "SMLP-TCN \u2014 median MASE 18.783 (2.72x champion)"),
+          info_row("Best ML challenger", "ENET-RIDGE \u2014 median MASE 19.331 (2.80x champion)"),
+          info_row("Promotion outcome", "0 challengers promoted; ETS Explicit remains the selected champion under conditions."),
+          info_row("Full detail", "The complete challenger ranking, evaluation summary and runtime/guardrails live on the Tournament page (backtest evaluation, not production forecasts).")
+        )
+      ),
+      tags$p(
+        class = "shell-card-detail",
+        "Champion comparison: each challenger against ETS Explicit \u2014 ratio, gap and promotion eligibility."
+      ),
+      model_eval_champion_table_ui(),
+      open = FALSE
+    ),
+
+    # 5. Leadership count by model (collapsed) ------------------------------
     home_collapse(
       "Leadership count by model",
       "How many individual series each model leads locally. This does not decide the global champion.",
@@ -1869,7 +2071,7 @@ section_champion <- function() {
       open = FALSE
     ),
 
-    # 5. Series-level details (collapsed) -----------------------------------
+    # 6. Series-level details (collapsed) -----------------------------------
     home_collapse(
       "Series-level details",
       "Detailed per-series comparison between the local leader and ETS Explicit.",
@@ -1885,115 +2087,6 @@ section_champion <- function() {
     tags$p(
       class = "tess-foot-note",
       "This page reads governed Model Lab artifacts and does not recompute metrics or change the champion decision. Governance conditions, approved language and source lineage live on the Governance pages."
-    )
-  )
-}
-
-# ---------------------------------------------------------------------------
-# Models -> Evaluation Results (V3.2F)
-# Surfaces the FULL evaluated model universe from the CLOSED V3.2D/V3.2E
-# candidate decision package: champion reference + base/statistical, ML and DL
-# challengers. These are backtest EVALUATION results, NOT production forecasts.
-# Read-only: no model runs, no backtests, no forecast generation, no champion
-# change. All data comes from governed-compact data/processed summaries.
-# ---------------------------------------------------------------------------
-section_evaluation <- function() {
-  dv <- model_eval_dashboard_values()
-
-  panel(
-    "evaluation",
-
-    section_head(
-      "Evaluation Results",
-      "The full set of models evaluated for the forecasting codebase \u2014 the governed champion plus statistical, machine-learning and deep-learning challengers \u2014 compared on the same governed backtest."
-    ),
-
-    # Banner / scope note ---------------------------------------------------
-    tags$div(
-      class = "shell-card",
-      tags$span(class = "pill pill-blue", "Backtest evaluation \u00b7 not production"),
-      tags$p(
-        class = "shell-card-detail",
-        dv$status_message
-      )
-    ),
-
-    # A. Evaluation at a glance (open) --------------------------------------
-    home_collapse(
-      "Evaluation at a glance",
-      "Champion, best deep-learning challenger, best machine-learning challenger and the promotion outcome.",
-      card_grid(
-        kpi_card(dv$champion_name, "Champion (unchanged)",
-                 pill = paste0("MASE ", dv$champion_mase), pill_class = "pill-green"),
-        kpi_card(dv$best_dl_challenger, "Best DL challenger",
-                 pill = paste0("MASE ", dv$best_dl_mase), pill_class = "pill-blue"),
-        kpi_card(dv$best_ml_challenger, "Best ML challenger",
-                 pill = paste0("MASE ", dv$best_ml_mase), pill_class = "pill-blue"),
-        kpi_card(dv$total_models, "Candidates evaluated",
-                 pill = "Governed backtest", pill_class = "pill-blue"),
-        kpi_card(dv$total_promoted, "Candidates promoted",
-                 pill = "Champion unchanged", pill_class = "pill-green")
-      ),
-      open = TRUE
-    ),
-
-    # B. How to read these results (collapsed) ------------------------------
-    home_collapse(
-      "How to read these results",
-      "What was evaluated, on which metric, and why no challenger was promoted.",
-      info_list(
-        info_row("Full evaluated universe",
-                 "The comparison covers the governed champion (ETS Explicit, statistical) plus six challengers across machine-learning (Ridge / LightGBM / XGBoost) and lightweight deep-learning (NLinear / SmallMLP / FastNeuralAR-v2) families."),
-        info_row("Governed metric",
-                 "Median MASE is the primary score (lower is better), with median RMSSE as guardrail, computed on the same governed walk-forward backtest used for the champion. ETS Explicit is the reference."),
-        info_row("Best challengers",
-                 paste0("Best deep-learning challenger is ", dv$best_dl_challenger,
-                        "; best machine-learning challenger is ", dv$best_ml_challenger,
-                        ". Both are far from the champion.")),
-        info_row("No promotion",
-                 "No challenger reached the champion or even the top baseline band, so none was promoted. ETS Explicit remains the selected champion under conditions."),
-        info_row("Evaluation, not production",
-                 "These are backtest evaluation results. They do not replace production forecasts, intervals or governance decisions, and challengers are never shown as production forecasts.")
-      ),
-      open = FALSE
-    ),
-
-    # C. Final ranking (open) - MAIN TABLE ----------------------------------
-    home_collapse(
-      "Final ranking",
-      "Every evaluated model ranked by governed median MASE, with the champion shown as the reference row.",
-      model_eval_ranking_table_ui(),
-      open = TRUE
-    ),
-
-    # D. Evaluation summary & decision (collapsed) --------------------------
-    home_collapse(
-      "Evaluation summary & decision",
-      "Per-model family, role, accuracy, guardrails and the documented decision.",
-      model_eval_summary_table_ui(),
-      open = FALSE
-    ),
-
-    # E. Champion comparison (collapsed) ------------------------------------
-    home_collapse(
-      "Champion comparison",
-      "Each challenger against ETS Explicit: ratio, gap and promotion eligibility.",
-      model_eval_champion_table_ui(),
-      open = FALSE
-    ),
-
-    # F. Runtime & guardrails (collapsed) -----------------------------------
-    home_collapse(
-      "Runtime & guardrails",
-      "Runtime viability, window completeness and non-negativity guardrail per challenger.",
-      model_eval_runtime_table_ui(),
-      open = FALSE
-    ),
-
-    # Footer note -----------------------------------------------------------
-    tags$p(
-      class = "tess-foot-note",
-      "Backtest evaluation results from the closed V3.2D/V3.2E candidate decision package. This page reads governed-compact summaries and does not recompute metrics, run models, generate forecasts, or change the champion. ETS Explicit remains the selected champion."
     )
   )
 }
@@ -2591,7 +2684,6 @@ app_sections <- function() {
     section_universe(),
     section_tournament(),
     section_champion(),
-    section_evaluation(),
     section_risks(),
     section_audit(),
     section_artifacts(),

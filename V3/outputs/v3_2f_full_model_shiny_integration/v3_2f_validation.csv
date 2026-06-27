@@ -1,0 +1,27 @@
+check,result,detail
+v3_2e_complete,PASS,V3.2E Candidate Decision Package closed (V3_2E_DECISION_PACKAGE_COMPLETED) before starting V3.2F.
+v3_2e_validation_all_pass,PASS,outputs/v3_2e_candidate_decision_package/v3_2e_validation.csv had 15/15 checks PASS.
+source_files_exist,PASS,V3.2D/V3.2E governed summaries and closed decision package used as the only inputs.
+model_evaluation_summary_created,PASS,data/processed/model_evaluation_summary.csv created (7 rows x 12 cols).
+model_evaluation_ranking_created,PASS,data/processed/model_evaluation_ranking.csv created (7 rows x 8 cols).
+model_champion_comparison_created,PASS,data/processed/model_champion_comparison.csv created (6 rows x 8 cols).
+model_runtime_guardrails_created,PASS,data/processed/model_runtime_guardrails.csv created (6 rows x 10 cols).
+model_dashboard_summary_created,PASS,data/processed/model_dashboard_summary.csv created (1 row x 11 cols).
+no_full_candidate_outputs_copied_without_justification,PASS,full_candidate_outputs.csv NOT copied; only compact governed summaries surfaced.
+models_universe_updated,PASS,section_universe enriched with "Full evaluated model universe (challengers)" collapse.
+models_tournament_updated,PASS,section_tournament footer cross-references the integrated Evaluation Results.
+models_champion_updated,PASS,section_champion enriched with "Challenger evaluation (V3.2D/V3.2E)" collapse.
+evaluation_results_view_added_or_integrated,PASS,section_evaluation() added under Models group and registered in app_sections().
+shiny_loads_model_artifacts,PASS,load_csv_artifact returned 7/7/6/6/1 rows for the five new artifacts.
+shiny_runs_locally,PASS,App launched on port 3838 (pid 17292), single listener.
+http_200,PASS,Invoke-WebRequest http://127.0.0.1:3838 returned HTTP 200.
+no_champion_change,PASS,APP_CHAMPION="ETS Explicit" unchanged; champion_name=ETS Explicit in dashboard summary.
+no_forecast_change,PASS,forecasts.csv untouched; no production forecast regenerated.
+no_interval_change,PASS,prediction intervals untouched; no interval recomputed.
+no_governance_change,PASS,No promotion/decision changed; total_candidates_promoted=0.
+no_model_execution,PASS,No model fitted or scored; only pre-computed V3.2D/V3.2E summaries surfaced.
+no_backtest_execution,PASS,No backtest re-run; runtime/guardrail values copied from closed evaluation.
+v1_untouched,PASS,No file under V1/ modified.
+v2_untouched,PASS,No file under V2/ modified.
+v3_3_not_started,PASS,No V3.3 work initiated; awaiting explicit authorization.
+v4_not_started,PASS,No V4 work initiated.
