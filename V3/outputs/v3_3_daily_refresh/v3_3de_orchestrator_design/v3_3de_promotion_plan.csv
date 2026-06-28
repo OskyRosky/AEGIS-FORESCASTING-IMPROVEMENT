@@ -1,0 +1,16 @@
+step,source,target,method,retries,rollback_source,notes
+1_backup,data/processed,run/backup_pre_promote/data__processed,robocopy /MIR /R:4 /W:2,4,n/a,snapshot prod before any write
+2_backup,outputs/model_lab/forecast_viewer_handoff,run/backup_pre_promote/fvh,robocopy /MIR,4,n/a,snapshot
+3_backup,outputs/model_lab/tournament_engine,run/backup_pre_promote/tourn,robocopy /MIR,4,n/a,snapshot
+4_backup,outputs/model_lab/champion_decision,run/backup_pre_promote/champ,robocopy /MIR,4,n/a,snapshot
+5_backup,outputs/evaluation,run/backup_pre_promote/eval,robocopy /MIR,4,n/a,snapshot
+6_backup,outputs/governance,run/backup_pre_promote/gov,robocopy /MIR,4,n/a,snapshot
+7_promote,run/staging/processed,data/processed,robocopy /MIR /R:4 /W:2,4,backup_pre_promote,run_metadata held to last
+8_promote,run/staging/forecast_viewer_handoff,outputs/model_lab/forecast_viewer_handoff,robocopy /MIR,4,backup_pre_promote,
+9_promote,run/staging/tournament_engine,outputs/model_lab/tournament_engine,robocopy /MIR,4,backup_pre_promote,
+10_promote,run/staging/champion_decision,outputs/model_lab/champion_decision,robocopy /MIR,4,backup_pre_promote,candidate only champion frozen
+11_promote,run/staging/evaluation,outputs/evaluation,robocopy /MIR,4,backup_pre_promote,
+12_promote,run/staging/governance,outputs/governance,robocopy /MIR,4,backup_pre_promote,
+13_validate,data/processed,n/a,post-promote checks,0,backup_pre_promote,verify rows+champion+files
+14_lastupdate,run/staging/run_metadata.csv,data/processed/run_metadata.csv,robocopy /MIR,4,backup_pre_promote,only after 13 PASS
+15_rollback,run/backup_pre_promote,each P1 target,robocopy /MIR,4,n/a,only if 13 FAIL

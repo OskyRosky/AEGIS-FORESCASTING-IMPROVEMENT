@@ -1,0 +1,18 @@
+stage_id,stage_name,status,runtime_min,exit_code,output_produced,notes
+S00,Auth / VPN / SQL gate,COMPLETED,1.88,0,status/auth_sql_precheck_result.csv,SQL=PASS (113s); dir+sleep+orphans verified
+S01,Ingestion,COMPLETED,7.06,0,see logs/S01.log,[2026-06-27 19:44:48] INFO export_hdd_region - Export completed
+S02,Transform,COMPLETED,0.02,0,see logs/S02.log,[2026-06-27 19:44:50] INFO build_data_contract - Stage 4.1 data contract build completed
+S03a,Baseline/growth/stat/ML generation,COMPLETED,0.16,0,baseline_forecasts.csv (95340 rows),jobs=3178 failed=0 rows=95340 prohibited_seen=none
+S03b,Clean challenger live-fit,COMPLETED,10.71,0,clean_challenger_forecasts.csv (68100 rows),jobs=2270 rows=68100 failed_jobs=0
+S03c,DL frozen reuse,COMPLETED,0.01,0,dl_reuse_frozen_forecasts.csv (40860 frozen rows),"DL reuse {'FNAR-V2': 13620, 'NLIN-DLIN_FIXED': 13620, 'SMLP-TCN': 13620}"
+S03,Daily 15-model runner,COMPLETED,10.88,0,S03a+S03b+S03c,umbrella of S03a/S03b/S03c
+S04,Forecast outputs / viewer artifacts,COMPLETED,0.07,0,see logs/S04.log,[19:55:48] Stage 05H FULL builder done
+S05,Tournament + champion,COMPLETED,0.04,0,tournament_engine + champion_decision,tournament=COMPLETED; champion=COMPLETED
+S06,Canonical universe,COMPLETED,0.03,0,see logs/S06.log,[v3.2h] ALL DATA CHECKS PASSED
+S07,Evaluation exports,COMPLETED,0.02,0,see logs/S07.log,[2026-06-27 19:55:53] INFO build_evaluation_dataset - Stage 4.6 evaluation dataset build completed
+S08,Governance exports,COMPLETED,0.01,0,see logs/S08.log,[2026-06-27 19:55:54] INFO build_governance_6_0_6_1 - Governance 6.0/6.1 complete: validation_failures=0
+S09,Reference refresh,COMPLETED,0.02,0,see logs/S09.log,         C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\processed\ttl_months_to_live_snapshot.csv
+S10,Dashboard consolidation,COMPLETED,0.01,0,see logs/S10.log,[2026-06-27 19:55:56] INFO build_dashboard_exports - Stage 4.5 dashboard export build completed
+S11,Last Update observation,COMPLETED,0.0,0,status/last_update_observation.csv,newest artifact recorded
+S12,Pipeline status observation,COMPLETED,0.0,0,runtime/stage_runtime_summary.csv,stages_recorded=15
+S13,Champion audit observation,COMPLETED,0.0,0,status/champion_behavior_observation.csv,champion=ETS Explicit; unchanged

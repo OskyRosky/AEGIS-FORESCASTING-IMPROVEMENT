@@ -1,0 +1,15 @@
+S02 START 2026-06-26T18:21:53.5385021-06:00
+[2026-06-26 18:21:54] INFO build_data_contract - Stage 4.1 data contract build started
+[2026-06-26 18:21:54] INFO build_data_contract - Actuals duplicate rows before cleanup: 0
+[2026-06-26 18:21:54] INFO build_data_contract - Actuals duplicate rows after cleanup: 0
+[2026-06-26 18:21:54] INFO build_data_contract - Forecast duplicate rows before cleanup: 0
+[2026-06-26 18:21:54] INFO build_data_contract - Forecast duplicate rows after cleanup: 0
+[2026-06-26 18:21:54] WARNING build_data_contract - forecast_comparison.csv has zero rows after same-date join. This can happen when actuals end before the latest forecast run starts.
+[2026-06-26 18:21:54] INFO build_data_contract - Created actuals.csv with 84537 rows
+[2026-06-26 18:21:55] INFO build_data_contract - Created forecasts.csv with 65095 rows
+[2026-06-26 18:21:55] INFO build_data_contract - Created forecast_comparison.csv with 0 rows
+[2026-06-26 18:21:55] INFO build_data_contract - Created entities.csv with 45 rows
+[2026-06-26 18:21:55] INFO build_data_contract - Created run_metadata.csv with 1 rows
+[2026-06-26 18:21:55] INFO build_data_contract - Comparison row count: 0
+[2026-06-26 18:21:55] INFO build_data_contract - Stage 4.1 data contract build completed
+S02 END 2026-06-26T18:21:55.1709670-06:00 elapsed_seconds=1.6 exit_code=0

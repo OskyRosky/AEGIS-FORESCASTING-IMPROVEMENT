@@ -1,0 +1,18 @@
+[2026-06-27 19:55:52] INFO build_evaluation_dataset - Stage 4.6 evaluation dataset build started
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Duplicate rows before cleanup: 0
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Duplicate rows after cleanup: 0
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\evaluation\evaluation_dataset.csv with 149632 rows
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\evaluation\evaluation_dataset_metadata.csv with 1 rows
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Duplicate rows before cleanup: 0
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Duplicate rows after cleanup: 0
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Null entity_key count: 0
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Null date count: 0
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Actual rows: 84537
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Forecast rows: 65095
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Entities: 45
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Model versions: 16
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Forecast versions: 1
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Horizon distribution: {'actual': 84537, 'strategic': 32245, 'long': 16425, 'medium': 12375, 'short': 4050}
+[2026-06-27 19:55:53] INFO build_evaluation_dataset - Stage 4.6 evaluation dataset build completed
+
+--- STDERR ---

@@ -1,0 +1,13 @@
+status_name,status_category,description,terminal_or_transitional,review_trigger,example_from_model_lab,dashboard_display_requirement,created_timestamp
+champion_selected_with_conditions,decision,Champion selected with explicit caveats.,transitional,closure/audit/dashboard review,ETS Explicit,Show conditions and medium confidence.,2026-06-14T10:24:31
+champion_selected,decision,Champion selected without unresolved conditions.,terminal,new evidence or governance change,Not used in Stage 05,Can display as selected champion.,2026-06-14T10:24:31
+no_champion_selected,decision,No model selected as champion.,terminal,future model evidence,Allowed decision path,Display no champion clearly.,2026-06-14T10:24:31
+eligible_candidate,candidate,Candidate eligible for 5.31 review.,transitional,champion decision,AutoARIMA,Show as eligible.,2026-06-14T10:24:31
+ineligible_due_to_risk,candidate,Candidate blocked from champion consideration by risk.,transitional,risk resolution,FastNeuralAR_MLP,Show risk reason.,2026-06-14T10:24:31
+ineligible_due_to_evidence,candidate,Candidate not supported by evidence.,transitional,new evidence,LightGBM,Show evidence reason.,2026-06-14T10:24:31
+deferred_runtime_impractical,deferred,Model deferred due to runtime impracticality.,transitional,stronger runtime or optimized execution,NBEATS,"Show as deferred, not discarded.",2026-06-14T10:24:31
+deferred_dependency_blocked,deferred,Model deferred due to dependency incompatibility.,transitional,compatible environment,NHITS,Show dependency blocker.,2026-06-14T10:24:31
+manual_review_required,review,Human review required before promotion.,transitional,manual review completion,FixedGrowth_6,Show review flag.,2026-06-14T10:24:31
+monitor,action,Continue observing condition.,transitional,material change,Conditional champion,Show monitor status.,2026-06-14T10:24:31
+review_investigate,action,Investigate root cause or risk.,transitional,investigation result,FastNeuralAR_MLP,Show investigation action.,2026-06-14T10:24:31
+test_later,action,Retest model later under improved conditions.,transitional,future environment available,NBEATS/NHITS,Show future-test plan.,2026-06-14T10:24:31

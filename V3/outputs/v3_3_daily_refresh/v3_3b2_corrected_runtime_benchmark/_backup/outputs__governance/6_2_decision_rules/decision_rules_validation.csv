@@ -1,0 +1,21 @@
+check_name,status,details,created_timestamp
+output directory exists,pass,outputs/governance/6_2_decision_rules,2026-06-14T10:32:59
+decision_action_framework.csv exists,pass,outputs/governance/6_2_decision_rules/decision_action_framework.csv,2026-06-14T10:32:59
+risk_to_action_mapping.csv exists,pass,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,2026-06-14T10:32:59
+model_recommendation_rules.csv exists,pass,outputs/governance/6_2_decision_rules/model_recommendation_rules.csv,2026-06-14T10:32:59
+governance_recommendations.csv exists,pass,outputs/governance/6_2_decision_rules/governance_recommendations.csv,2026-06-14T10:32:59
+decision_rule_traceability.csv exists,pass,outputs/governance/6_2_decision_rules/decision_rule_traceability.csv,2026-06-14T10:32:59
+decision_rules_report.md exists,pass,outputs/governance/6_2_decision_rules/decision_rules_report.md,2026-06-14T10:32:59
+required actions present,pass,"actions=['BENCHMARK_REFERENCE', 'DEFER', 'DO_NOT_PRESENT_AS_UNCONDITIONAL_WINNER', 'EXCLUDE_FROM_CHAMPION_CONSIDERATION', 'KEEP', 'KEEP_WITH_CONDITIONS', 'MODEL_POOL_REFERENCE', 'MONITOR', 'REVIEW', 'REVIEW_INVESTIGATE', 'SURFACE_ON_DASHBOARD', 'TEST_LATER']",2026-06-14T10:32:59
+risk mappings R-001 through R-007,pass,"risk_ids=['R-001', 'R-002', 'R-003', 'R-004', 'R-005', 'R-006', 'R-007']",2026-06-14T10:32:59
+governance recommendations include 15 models,pass,rows=15,2026-06-14T10:32:59
+ETS Explicit action mapping,pass,ETS Explicit must remain conditional champion.,2026-06-14T10:32:59
+FastNeuralAR_MLP action mapping,pass,FastNeuralAR_MLP must be review/investigate and not champion-eligible.,2026-06-14T10:32:59
+NBEATS action mapping,pass,NBEATS must be test later/defer.,2026-06-14T10:32:59
+NHITS action mapping,pass,NHITS must be test later/defer.,2026-06-14T10:32:59
+FixedGrowth_6 action mapping,pass,FixedGrowth_6 must be review/monitor.,2026-06-14T10:32:59
+all risk mappings dashboard carry-forward,pass,All R-001 through R-007 risks must carry forward.,2026-06-14T10:32:59
+traceability file populated,pass,trace_rows=10,2026-06-14T10:32:59
+Stage 05 outputs not modified,pass,Script writes only to outputs/governance/6_2_decision_rules/.,2026-06-14T10:32:59
+Shiny not modified,pass,Script does not write to shiny_app/.,2026-06-14T10:32:59
+all new outputs under 6_2,pass,outputs/governance/6_2_decision_rules,2026-06-14T10:32:59

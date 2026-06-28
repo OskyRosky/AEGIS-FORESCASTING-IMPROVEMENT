@@ -1,0 +1,2 @@
+vpn_required,sql_connection_test_attempted,sql_connection_status,auth_mode_observed,interactive_prompt_required,token_cache_behavior,can_run_unattended_locally,measured_seconds,notes
+YES,YES,SUCCESS,ActiveDirectoryInteractive,NO,token_cached_no_browser_prompt,YES,30.8,S00 precheck connected in 30.8s with no interactive prompt over VPN. SELECT 1 returned 1. Unattended local execution confirmed.

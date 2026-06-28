@@ -1,0 +1,2 @@
+run_id,baseline_models,challenger_models,total_tournament_models,entity_model_rows,pairwise_comparisons,preliminary_standings_created,champion_selected,winner_selected,ready_for_5_30A_sanity_review,created_timestamp
+tournament_engine,7,6,13,507,78,True,False,False,True,2026-06-13T18:07:40

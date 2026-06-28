@@ -1,0 +1,15 @@
+test_id,scenario,command,expected
+T01,dry-run no fit,--dry-run,prints S00-S14 plan no writes
+T02,staging success no promote,--execute --allow-execute --no-promote,29 gates PASS prod untouched
+T03,validate only,--validate-only --run-dir R,gate report regenerated
+T04,prohibited guard,inject NBEATS marker,G03-G06 FAIL abort
+T05,champion guard,force diff champion,G20/G21 FAIL CHAMPION_GUARD_FAIL
+T06,ingestion fail,kill VPN,INGEST_FAIL prod intact
+T07,promote happy path,--promote --allow-promote,P1 promoted run_metadata last
+T08,post-promote fail,corrupt staged rows,rollback from backup rc=0
+T09,robocopy lock,onedrive lock retry,/R:4 succeeds no partial
+T10,no auth flag,--promote only,refuses requires --allow-promote
+T11,scope check,remove 1 DL,G02 FAIL no promote
+T12,v1_v2 untouched,after full run,G29 PASS mtimes unchanged
+T13,partial state,abort mid-promote sim,prod consistent rollback
+T14,last update timing,fail before promote,run_metadata not moved badge stale

@@ -1,0 +1,6 @@
+model,family,fit_attempted,fit_status,rows_generated,output_artifact,error_or_blocker,notes
+AutoARIMA,Statistical,TRUE,SMOKE_PASS,30,outputs/v3_3_daily_refresh/v3_3c_fit_clean_challengers/staging/clean_challenger_fit_outputs.csv,,Fitted via pmdarima (torch-free clean path).
+ETS Explicit,Statistical,TRUE,SMOKE_PASS,30,outputs/v3_3_daily_refresh/v3_3c_fit_clean_challengers/staging/clean_challenger_fit_outputs.csv,,Fitted via statsmodels (torch-free clean path).
+Theta,Statistical,TRUE,SMOKE_PASS,30,outputs/v3_3_daily_refresh/v3_3c_fit_clean_challengers/staging/clean_challenger_fit_outputs.csv,,Fitted via statsmodels (torch-free clean path).
+LightGBM,Machine learning,TRUE,SMOKE_PASS,30,outputs/v3_3_daily_refresh/v3_3c_fit_clean_challengers/staging/clean_challenger_fit_outputs.csv,,Fitted via lightgbm (torch-free clean path).
+XGBoost,Machine learning,TRUE,SMOKE_PASS,30,outputs/v3_3_daily_refresh/v3_3c_fit_clean_challengers/staging/clean_challenger_fit_outputs.csv,,Fitted via xgboost (torch-free clean path).

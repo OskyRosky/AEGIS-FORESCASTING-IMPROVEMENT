@@ -1,0 +1,6 @@
+model,family,challenger_type,action,entrypoint,daily_scope_status,prohibited_model_check,expected_output_artifact,notes
+AutoARIMA,Statistical,statistical_challenger,train,python/model_lab/run_daily_clean_challengers.py,active_train,CLEAN,outputs/model_lab/daily_clean_challengers/clean_challenger_forecasts.csv,Auto-order ARIMA; statistical challenger.
+ETS Explicit,Statistical,statistical_challenger,train,python/model_lab/run_daily_clean_challengers.py,active_train,CLEAN,outputs/model_lab/daily_clean_challengers/clean_challenger_forecasts.csv,CURRENT CHAMPION (MASE 6.901144); statistical challenger.
+Theta,Statistical,statistical_challenger,train,python/model_lab/run_daily_clean_challengers.py,active_train,CLEAN,outputs/model_lab/daily_clean_challengers/clean_challenger_forecasts.csv,Theta method; statistical challenger.
+LightGBM,Machine learning,ml_challenger,train,python/model_lab/run_daily_clean_challengers.py,active_train,CLEAN,outputs/model_lab/daily_clean_challengers/clean_challenger_forecasts.csv,Gradient boosting; ML challenger.
+XGBoost,Machine learning,ml_challenger,train,python/model_lab/run_daily_clean_challengers.py,active_train,CLEAN,outputs/model_lab/daily_clean_challengers/clean_challenger_forecasts.csv,Gradient boosting; ML challenger.

@@ -1,0 +1,18 @@
+model_name,model_family,model_origin,daily_scope,evidence_source,has_dedicated_daily_entrypoint,notes
+FixedGrowth_1_5,growth_baseline,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+FixedGrowth_3,growth_baseline,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+FixedGrowth_4,growth_baseline,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+FixedGrowth_6,growth_baseline,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+ARIMA_Fixed,statistical,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+ETS_Current,statistical,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+AutoARIMA,statistical,challenger,IN_SCOPE,governed_tournament,PARTIAL,In legacy challenger official execution (APPROVED_MODELS) - mixed with NBEATS
+ETS Explicit,statistical,challenger,IN_SCOPE,governed_tournament,PARTIAL,Current champion; in legacy challenger official execution
+Theta,statistical,challenger,IN_SCOPE,governed_tournament,PARTIAL,In legacy challenger official execution
+LinearRegression,machine_learning,baseline,IN_SCOPE,governed_tournament,YES,Produced by run_full_baseline_execution.py (S03)
+LightGBM,machine_learning,challenger,IN_SCOPE,governed_tournament,PARTIAL,In legacy challenger official execution (APPROVED_MODELS)
+XGBoost,machine_learning,challenger,IN_SCOPE,governed_tournament,PARTIAL,In legacy challenger official execution (APPROVED_MODELS)
+FNAR-V2,deep_learning,challenger,IN_SCOPE,candidate_evaluation,NO,Active DL model; sourced from candidate_evaluation path - NO unified daily entrypoint
+NLIN-DLIN_FIXED,deep_learning,challenger,IN_SCOPE,candidate_evaluation,NO,Active DL model; sourced from candidate_evaluation path - NO unified daily entrypoint
+SMLP-TCN,deep_learning,challenger,IN_SCOPE,candidate_evaluation,NO,Active DL model; sourced from candidate_evaluation path - NO unified daily entrypoint
+NBEATS,deep_learning,challenger,NOT_IN_SCOPE,legacy_heavy,LEGACY,Too expensive for daily refresh; in legacy run_challenger_official_execution.py APPROVED_MODELS - EXCLUDE from daily scope
+NHITS,deep_learning,challenger,NOT_IN_SCOPE,legacy_heavy,LEGACY,Deferred model (DEFERRED_MODEL in legacy script); too expensive for daily refresh - EXCLUDE from daily scope

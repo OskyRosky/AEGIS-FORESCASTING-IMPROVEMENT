@@ -1,0 +1,26 @@
+check,result,evidence
+execution_wiring_created,PASS,run_daily_15_model_refresh.py run_execute() rewritten to real staging wiring; 8 artifacts written under outputs/v3_3_daily_refresh/v3_3c_exec_execution_wiring/
+allow_execute_flag_required,PASS,--execute without --allow-execute prints EXECUTE_BLOCKED_REQUIRES_ALLOW_EXECUTE and returns 3 (both runners)
+staging_path_used,PASS,all outputs written under .../v3_3c_exec_execution_wiring/ and staging/ subdir
+no_data_processed_promotion,PASS,data/processed scan after run shows zero files with LastWriteTime > 2026-06-27 (no new/changed productive file)
+clean_challenger_entrypoint_used,PASS,master execute imports and calls run_daily_clean_challengers.execute_clean_challengers(); wrote staging/clean_challenger_execution_status.csv
+legacy_challenger_runner_not_used,PASS,run_challenger_official_execution.py never imported/invoked; marked EXCLUDED in execution_wiring_status.csv
+nbeats_excluded,PASS,prohibited_model_guard CLEAN; NBEATS absent from active scope (prohibited_model_guard_result.csv)
+nhits_excluded,PASS,prohibited_model_guard CLEAN; NHITS absent from active scope
+fastneuralar_original_excluded,PASS,FastNeuralAR_MLP (original) absent from active scope; DL reuse uses FastNeuralAR_MLP_v2_direct (remediated) only
+prohibited_model_guard_passes,PASS,guard returned no violations; CLEAN before any staging work
+dl_reuse_wiring_executed_or_ready,PASS,execute_dl_reuse() executed; 40860 frozen rows re-staged (no training)
+fnar_v2_reuse_ready,PASS,FNAR-V2 -> FastNeuralAR_MLP_v2_direct, 13620 rows, EXECUTED_REUSE_FROZEN
+nlin_dlin_fixed_reuse_ready,PASS,NLIN-DLIN_FIXED -> NLinear_log_space_fixed, 13620 rows, EXECUTED_REUSE_FROZEN
+smlp_tcn_reuse_ready,PASS,SMLP-TCN -> SmallMLPGlobal, 13620 rows, EXECUTED_REUSE_FROZEN
+daily_15_model_outputs_staging_created_or_status_reported,PASS,staging/daily_15_model_outputs.csv created with 15 rows (3 EXECUTED_REUSE_FROZEN, 7 READY_FOR_BENCHMARK_AUTHORIZATION, 5 EXECUTION_PATH_NOT_READY)
+no_champion_change,PASS,no write to champion_decision or model_universe_canonical; champion remains ETS Explicit
+no_forecast_productive_change,PASS,no write to data/processed forecast* artifacts; staging only
+no_interval_change,PASS,no write to forecasts_with_intervals* artifacts
+no_governance_change,PASS,no write to outputs/governance/* ; guard result is staging-only audit
+no_scheduler_created,PASS,no scheduler/cron/task file created; --execute is one-shot staging only
+no_v3_3d_started,PASS,no V3.3D artifacts created; benchmark/backtest not run
+no_v3_3e_started,PASS,no V3.3E artifacts created
+no_v3_3f_started,PASS,no V3.3F artifacts created
+no_v4_started,PASS,no V4 work; scope limited to V3 execution wiring
+v1_v2_untouched,PASS,only V3/python/model_lab/*.py and V3/outputs/v3_3_daily_refresh/* touched; V1 and V2 trees untouched

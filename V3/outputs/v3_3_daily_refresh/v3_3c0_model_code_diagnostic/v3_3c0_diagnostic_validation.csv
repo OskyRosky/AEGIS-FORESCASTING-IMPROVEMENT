@@ -1,0 +1,25 @@
+check,result,detail
+model_lab_scanned,PASS,python/model_lab/ runners + models/ + builders inspected
+evaluation_scanned,PASS,outputs/evaluation/evaluation_dataset.csv path + candidate evaluation references reviewed
+forecasting_scanned,PASS,multistep_forecasting.yaml + forecast viewer handoff reviewed (no separate python/forecasting model trainer found)
+transform_scanned,PASS,feature/transform references reviewed (build_feature_dataset.py); no prohibited model training found
+governance_scanned,PASS,build_governance_6_0/6_1/6_2/6_4/6_5 reviewed for NBEATS/NHITS deferred refs
+scripts_scanned,PASS,model_lab runner + planner scripts enumerated and key ones read
+shiny_references_scanned,PASS,shiny_app/ui/tabs.R DL challenger display references identified
+canonical_15_models_checked,PASS,build_canonical_universe.R confirms 12 governed + 3 DL = 15
+prohibited_models_checked,PASS,NBEATS/NHITS/FastNeuralAR_MLP references located with file+line
+model_to_code_map_created,PASS,model_to_code_map.csv written (18 rows incl prohibited/retired)
+script_to_models_map_created,PASS,script_to_models_map.csv written (13 rows)
+prohibited_model_references_created,PASS,prohibited_model_references.csv written (25 rows)
+runner_diagnostic_created,PASS,runner_diagnostic.csv written (11 questions answered)
+diagnostic_report_created,PASS,v3_3c0_diagnostic_report.md written (14 sections)
+no_code_modified,PASS,no source/config files edited
+no_models_executed,PASS,no model fit/train invoked
+no_backtests_executed,PASS,no backtest run
+no_data_processed_modified,PASS,data/processed untouched
+no_champion_change,PASS,champion remains ETS Explicit (MASE 6.901144)
+no_forecast_change,PASS,no forecast outputs modified
+no_interval_change,PASS,no interval outputs modified
+no_scheduler_created,PASS,no scheduler/task created
+V1_V2_untouched,PASS,only V3 inspected/written
+V3_3C_runner_fix_not_started,PASS,no runner fix code written; awaiting authorization

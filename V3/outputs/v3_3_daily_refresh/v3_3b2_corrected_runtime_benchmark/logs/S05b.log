@@ -1,0 +1,4 @@
+[2026-06-27 19:55:50] INFO build_champion_decision - === Block 5.31 - Champion / No-Champion Decision ===
+[2026-06-27 19:55:50] INFO build_champion_decision - Champion decision complete: decision=CHAMPION_SELECTED_WITH_CONDITIONS selected=ETS Explicit validation_failures=0
+
+--- STDERR ---
