@@ -1,0 +1,2 @@
+run_id,decision,selected_champion_model,selected_champion_origin,models_evaluated,eligible_candidates,conditionally_eligible_candidates,ineligible_candidates,risk_flags_reviewed,ready_for_model_lab_closure_pack,created_timestamp
+champion_decision,CHAMPION_SELECTED_WITH_CONDITIONS,ETS Explicit,challenger,13,9,0,4,21,True,2026-06-26T18:23:29

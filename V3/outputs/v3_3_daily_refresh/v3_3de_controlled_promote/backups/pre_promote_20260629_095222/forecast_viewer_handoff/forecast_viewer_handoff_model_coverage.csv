@@ -1,0 +1,508 @@
+series_key,model_name,model_origin,model_family,is_selected_champion,risk_status,row_count,actual_points,date_min,date_max,horizon_min,horizon_max
+APC-Dedicated,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Dedicated,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-MSIT,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+APC-Multitenant,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ARE-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+AUS-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+BRA-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CAN-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+CHE-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+DEU-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ESP-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Dedicated,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-MSIT,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+EUR-Multitenant,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+FRA-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Dedicated,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+GBR-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+IND-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ISR-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+ITA-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+JPN-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+KOR-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+LAM-Multitenant,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+MEX-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Dedicated,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-GCC Low,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR DoD,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-ITAR GCCH,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-MSIT,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-Multitenant,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-SDF,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NAM-TDF,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NOR-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+NZL-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,LightGBM,challenger,machine_learning,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,LinearRegression,baseline,machine_learning,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,XGBoost,challenger,machine_learning,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,AutoARIMA,challenger,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,ETS Explicit,challenger,statistical,True,high_risk,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,ETS_Current,baseline,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+NZL-Go Local,Theta,challenger,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+POL-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+POL-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+QAT-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SGP-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,LightGBM,challenger,machine_learning,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,LinearRegression,baseline,machine_learning,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,XGBoost,challenger,machine_learning,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,AutoARIMA,challenger,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,ETS Explicit,challenger,statistical,True,high_risk,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,ETS_Current,baseline,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SGP-Go Local,Theta,challenger,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+SWE-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+SWE-Go Local,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27,1,30
+TWN-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,LightGBM,challenger,machine_learning,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,LinearRegression,baseline,machine_learning,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,XGBoost,challenger,machine_learning,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,AutoARIMA,challenger,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,ETS Explicit,challenger,statistical,True,high_risk,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,ETS_Current,baseline,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+TWN-Go Local,Theta,challenger,statistical,False,ok,210,210,2025-09-30,2026-04-27,1,30
+ZAF-Go Local,FixedGrowth_1_5,baseline,growth_baseline,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,FixedGrowth_3,baseline,growth_baseline,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,FixedGrowth_4,baseline,growth_baseline,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,FixedGrowth_6,baseline,growth_baseline,False,high_risk,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,LightGBM,challenger,machine_learning,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,LinearRegression,baseline,machine_learning,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,XGBoost,challenger,machine_learning,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,ARIMA_Fixed,baseline,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,AutoARIMA,challenger,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,ETS Explicit,challenger,statistical,True,high_risk,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,ETS_Current,baseline,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
+ZAF-Go Local,Theta,challenger,statistical,False,ok,300,300,2025-05-03,2026-04-27,1,30
