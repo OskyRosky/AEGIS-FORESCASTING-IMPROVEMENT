@@ -28,3 +28,6 @@ G26,last_update_written_only_on_success,YES,S11
 G27,pipeline_status_written,NO,S12
 G28,rollback_available,YES,promote
 G29,v1_v2_untouched,YES,S14
+G30,run_metadata_dashboard_fields_complete,YES,S11
+G31,raw_snapshot_retained_for_traceability,YES,S01
+G32,data_raw_prod_not_mutated,YES,S14

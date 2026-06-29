@@ -1,0 +1,6 @@
+check,result,detail
+nbeats_executed,0,never imported/executed
+nhits_executed,0,never imported/executed
+fastneuralar_original_executed,0,original excluded
+prohibited_in_staging_outputs,0,text-scan baseline+challenger clean
+prohibited_models_executed_total,0,PASS

@@ -95,17 +95,23 @@ Pre-promote backup is taken with the identical `/MIR` mechanism into `backup_pre
 - **forecasts / viewer / intervals** drive Forecasting (Viewer, Forecast, Accuracy).
 - **tournament_engine + champion_decision** drive Models (Universe, Tournament, Champion).
 - **governance/evaluation** drive Governance.
-- **run_metadata.csv** drives the header **Last update** badge — only this file moving makes
-  the dashboard report a new refresh. It is written **last** and only after promote success.
+- **run_metadata.csv** drives the header **Last update** badge AND the refresh-status panel
+  (last successful refresh, status, duration, scope, champion, validation). It is the single
+  promoted dashboard status artifact (P1), written **last** and only after promote success.
+  Required columns: last_successful_refresh_timestamp, pipeline_status, total_runtime_minutes,
+  model_scope_count, champion_model, validation_status, promoted_run_id, source_data_date, notes.
 
 ## 4. What stays as audit artifact only
 Everything in Tier A1 §2. The dashboard never reads `v3_3d_run_<ts>/`; production is the
-single source of truth. Pipeline status + run report are audit, not consumed by Shiny.
+single source of truth. `pipeline_status.csv` (full history) + run report are audit only; the
+dashboard reads only the minimal status fields promoted via `run_metadata.csv`. The raw SQL
+snapshot used by the run is retained as audit (`v3_3d_run_<ts>/data_raw/`); `data/raw`
+production stays audit-only and is not mutated unless explicitly tiered P1.
 
 ---
 
 ## 5. Validation gates before promote (all must PASS)
-Reuses the 29 V3.3B-2 checks + extends. Full list in `v3_3de_validation_plan.csv`. Hard gates:
+Reuses the 29 V3.3B-2 checks + extends to 32. Full list in `v3_3de_validation_plan.csv`. Hard gates:
 1. S00 SQL/auth PASS.
 2. 15-model canonical scope present (4 growth + 5 stat + 3 ML + 3 DL).
 3. Prohibited guard: NBEATS / NHITS / FastNeuralAR_MLP absent from every staged output.
@@ -129,14 +135,25 @@ Update. If post-promote validation fails, restore each P1 dir from `backup_pre_p
 via `robocopy /MIR` (lock-tolerant, OneDrive-safe per V3.3B-2 lesson). Verify mirror rc=0.
 Never rmtree+copytree. Last Update only written after rollback decision = no-rollback.
 
-## 8. Last Update only after full success
-`run_metadata.csv` (run_timestamp) is promoted last; pipeline_status set REFRESH_COMPLETED.
-If anything failed, run_metadata is not promoted; dashboard keeps the previous timestamp.
+## 8. Last Update + dashboard status only after full success
+`run_metadata.csv` is promoted last, after every gate passes and all other P1 dirs are
+promoted. It carries both the Last-update timestamp and the dashboard status fields
+(last_successful_refresh_timestamp, pipeline_status, total_runtime_minutes, model_scope_count,
+champion_model, validation_status, promoted_run_id, source_data_date, notes). If anything
+failed, run_metadata is not promoted; dashboard keeps the previous timestamp and status.
 
-## 9. pipeline_status.csv
-Columns: run_id, started_at, finished_at, duration_min, stages_passed, stages_failed,
-validation_result, champion_before, champion_after, champion_changed, promoted(bool),
-rolled_back(bool), final_status. Audit only.
+## 9. pipeline_status.csv (audit history) + run_metadata (dashboard status)
+pipeline_status.csv (audit, never promoted) columns: run_id, started_at, finished_at,
+duration_min, stages_passed, stages_failed, validation_result, champion_before,
+champion_after, champion_changed, promoted(bool), rolled_back(bool), final_status. The
+dashboard-facing subset lives in promoted run_metadata.csv (§3). Two layers, one source per
+use: full audit history in pipeline_status.csv, minimal live status in run_metadata.csv.
+
+### 9b. Raw data traceability
+S01 SQL pull lands in `v3_3d_run_<ts>/data_raw/` (audit). That raw snapshot is the
+reproducibility record for the promoted processed: source_data_date + promoted_run_id in
+run_metadata.csv let you trace which raw snapshot produced each processed promote. Production
+`data/raw` is audit-only (not mutated) unless explicitly tiered P1 in the contract.
 
 ## 10. Champion frozen confirmation
 S05 produces candidate decision; S13 compares staging vs prod canonical; gate fails if

@@ -12,5 +12,6 @@ step,source,target,method,retries,rollback_source,notes
 11_promote,run/staging/evaluation,outputs/evaluation,robocopy /MIR,4,backup_pre_promote,
 12_promote,run/staging/governance,outputs/governance,robocopy /MIR,4,backup_pre_promote,
 13_validate,data/processed,n/a,post-promote checks,0,backup_pre_promote,verify rows+champion+files
-14_lastupdate,run/staging/run_metadata.csv,data/processed/run_metadata.csv,robocopy /MIR,4,backup_pre_promote,only after 13 PASS
+14_lastupdate,run/staging/run_metadata.csv,data/processed/run_metadata.csv,robocopy /MIR,4,backup_pre_promote,extended dashboard status+last update; only after 13 PASS
 15_rollback,run/backup_pre_promote,each P1 target,robocopy /MIR,4,n/a,only if 13 FAIL
+16_rawkeep,run/staging/data_raw,run/data_raw,robocopy /MIR,4,n/a,audit-only raw snapshot retained; data/raw prod NOT mutated

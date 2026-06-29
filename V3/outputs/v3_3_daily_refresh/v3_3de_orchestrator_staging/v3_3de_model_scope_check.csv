@@ -1,0 +1,19 @@
+family,model,executed,prohibited,notes
+Growth baseline,FixedGrowth_1_5,YES,NO,staging
+Growth baseline,FixedGrowth_3,YES,NO,staging
+Growth baseline,FixedGrowth_4,YES,NO,staging
+Growth baseline,FixedGrowth_6,YES,NO,staging
+Statistical,ARIMA_Fixed,YES,NO,staging
+Statistical,AutoARIMA,YES,NO,staging
+Statistical,ETS Explicit,YES,NO,champion frozen
+Statistical,ETS_Current,YES,NO,staging
+Statistical,Theta,YES,NO,staging
+Machine learning,LightGBM,YES,NO,staging
+Machine learning,LinearRegression,YES,NO,staging
+Machine learning,XGBoost,YES,NO,staging
+Deep Learning,FNAR-V2,REUSE,NO,frozen reuse no training
+Deep Learning,NLIN-DLIN_FIXED,REUSE,NO,frozen reuse no training
+Deep Learning,SMLP-TCN,REUSE,NO,frozen reuse no training
+NBEATS,NBEATS,NO,YES,never executed
+NHITS,NHITS,NO,YES,never executed
+FastNeuralAR_MLP,FastNeuralAR_MLP,NO,YES,original excluded

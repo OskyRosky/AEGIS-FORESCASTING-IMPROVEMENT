@@ -2,7 +2,7 @@ artifact,tier,location,consumed_by,role,written_by_stage,promoted
 forecasts.csv,P1_promote,data/processed,Forecast page,production,S02/S04,YES
 actuals.csv,P1_promote,data/processed,Viewer/Forecast,production,S02,YES
 entities.csv,P1_promote,data/processed,all pages,production,S02,YES
-run_metadata.csv,P1_promote,data/processed,header Last update,production,S11,YES_last
+run_metadata.csv,P1_promote,data/processed,header Last update + dashboard status panel,production,S11,YES_last
 forecast_viewer_model_outputs.csv,P1_promote,data/processed,Viewer/Accuracy,production,S04,YES
 forecasts_with_intervals_relative_60d_calibrated.csv,P1_promote,data/processed,Forecast,production,S04,YES
 model_universe_canonical.csv,P1_promote,data/processed,Universe/Champion,production,S06,YES
@@ -21,3 +21,5 @@ backup_pre_promote,A1_audit,run/backup_pre_promote,rollback,audit,promote,NO
 pipeline_status.csv,A1_audit,run/status,none,audit,S12,NO
 last_update_observation.csv,A1_audit,run/status,none,audit,S11,NO
 champion_behavior_observation.csv,A1_audit,run/status,none,audit,S13,NO
+run_raw_snapshot,A1_audit,run/data_raw,reproducibility,audit,S01,NO
+data_raw_production,A1_audit,data/raw,ingestion input,audit,n/a,NO
