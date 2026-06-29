@@ -1,0 +1,7 @@
+check,detail,result,status
+stderr_log_present,v4_6r_shiny_stderr.log written,yes,PASS
+stderr_line_count,Lines in stderr log,48,INFO
+critical_errors,"Matches for Error/cannot/could not find/object not found/unused argument",0,PASS
+startup_confirmation,"Shiny listening on http://127.0.0.1:3839",yes,PASS
+known_warning,"readr/vroom parsing warning (pre-existing, unrelated to V4.6R)",present,INFO
+new_errors_from_v4_6r,Errors attributable to V4.6R changes,0,PASS

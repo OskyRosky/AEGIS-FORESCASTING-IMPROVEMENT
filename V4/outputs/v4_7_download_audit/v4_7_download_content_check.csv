@@ -1,0 +1,18 @@
+check,section,expected,observed,result
+md_status,Tournament,HTTP 200 attachment,"200; filename AEGIS_Explanation_Tournament_2026-06-29.md",PASS
+has_title,Tournament,"# AEGIS Explanation — ...",present,PASS
+has_question,Tournament,"echoes the asked question","**Question asked:** How does SMLP-TCN compare to the champion?",PASS
+has_executive_summary,Tournament,"## Executive summary",present,PASS
+has_evidence,Tournament,"## What the evidence says",present,PASS
+has_why,Tournament,"## Why it matters",present,PASS
+has_limitations,Tournament,"## Limitations",present,PASS
+has_confidence,Tournament,"**Confidence:** ...",present,PASS
+has_governance_footer,Tournament,"no model or champion changes",present,PASS
+no_sources_traceability,Tournament,"NOT present in download","Sources used / Technical traceability absent",PASS
+reflects_latest_content,Tournament,"contains the composed answer","SMLP-TCN at 2.72x present",PASS
+md_status,Champion,attachment .md,"filename AEGIS_Explanation_Champion_2026-06-29.md",PASS
+bounded_answer_in_md,Champion,"governed bounded response","I can only answer using the governed evidence ... present",PASS
+champion_name_preserved,Champion,"ETS Explicit","ETS Explicit present",PASS
+no_decision_language_recommended,Champion,"LLM does not decide","answer restates evidence only; no promotion recommended",PASS
+no_sources_traceability,Champion,"NOT present in download","absent",PASS
+sample_export_file,Tournament,"on-disk sample","AEGIS_Explanation_Tournament_2026-06-29.md written (1371 bytes class)",PASS

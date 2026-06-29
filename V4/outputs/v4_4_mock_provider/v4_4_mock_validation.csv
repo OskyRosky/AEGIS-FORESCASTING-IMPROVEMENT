@@ -1,0 +1,27 @@
+check,result,detail
+llm_client_exists,PASS,python/llm_explanation/llm_client.py
+runner_exists,PASS,python/llm_explanation/run_mock_explainer.py
+output_dir_exists,PASS,v4_4_mock_provider
+five_markdown_narratives_created,PASS,5 md
+consolidated_json_created,PASS,v4_4_mock_responses.json
+summary_csv_created,PASS,v4_4_mock_response_summary.csv
+claims_traceability_created,PASS,v4_4_mock_claims_traceability.csv
+all_4_page_id_covered,PASS,"champion_overview, executive_overview, forecast_viewer, governance_risks, tournament"
+executive_overview_created,PASS,executive_overview
+provider_is_mock,PASS,mock
+provider_stage_mock_no_llm,PASS,mock_no_llm
+no_real_llm_call,PASS,client.is_real_llm()==False
+no_azure_usage,PASS,client.uses_azure()==False
+no_shiny_modification,PASS,by design; V4.4 does not touch shiny_app/
+no_sql_executed,PASS,by design; no DB connection in V4.4
+no_model_refresh_executed,PASS,by design; no model run in V4.4
+no_data_processed_mutation,PASS,by design; inputs read-only from V4.3 outputs
+no_champion_mutation,PASS,champion frozen = ETS Explicit
+no_governance_mutation,PASS,governance read-only
+no_forbidden_language_in_visible_outputs,PASS,clean
+sources_used_present_every_response,PASS,5 responses
+limitations_present_every_response,PASS,5 responses
+confidence_present_every_response,PASS,5 responses
+claims_traceability_present,PASS,v4_4_mock_claims_traceability.csv
+deterministic_rerun_hash_identical,PASS,md-body hash compared across two passes
+v1_v2_v3_untouched,PASS,by design; only V4 outputs written

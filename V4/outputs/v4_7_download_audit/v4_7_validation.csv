@@ -1,0 +1,21 @@
+id,requirement,result
+V47-01,Dashboard HTTP 200,PASS
+V47-02,4 panels still work,PASS
+V47-03,'Download explanation' button appears in the 4 panels,PASS
+V47-04,Modal opens correctly,PASS
+V47-05,Modal shows the document name,PASS
+V47-06,.md download works for at least Champion and Tournament,PASS
+V47-07,PDF/DOCX work if deps available; else clearly marked unavailable without breaking,PASS (unavailable + disabled with note)
+V47-08,Downloaded content corresponds to the latest visible explanation,PASS
+V47-09,'Sources used' not shown as main downloaded content,PASS
+V47-10,Collapsed traceability in dashboard not broken,PASS
+V47-11,No critical errors in logs,PASS
+V47-12,No SQL,PASS
+V47-13,No models,PASS
+V47-14,No Azure,PASS
+V47-15,No real LLM,PASS
+V47-16,No data/processed mutation,PASS
+V47-17,No data/raw mutation,PASS
+V47-18,No champion mutation,PASS
+V47-19,No governance mutation,PASS
+V47-20,V1/V2/V3 intact,PASS

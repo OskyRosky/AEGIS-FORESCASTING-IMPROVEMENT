@@ -1678,3 +1678,427 @@ body {
 .theme-dark .acc-kpi-bad .acc-kpi-value { color: #f3a99e; }
 .theme-dark .acc-kpi-good .acc-kpi-value { color: #87e0b4; }
 
+
+/* ===================================================================== */
+/* V4.6 | Shiny Local On-Demand LLM explanation panel (mock, read-only)  */
+/* ===================================================================== */
+.llm-explain {
+  margin: 18px 0 6px 0;
+  border: 1px solid #d8e0ea;
+  border-radius: 10px;
+  background: #fbfcfe;
+  padding: 14px 16px;
+}
+.llm-explain-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.llm-explain-kicker {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #6b7a8d;
+  font-weight: 600;
+}
+.llm-explain-title {
+  margin: 2px 0 0 0;
+  font-size: 16px;
+  color: #102a43;
+}
+.llm-explain-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.llm-explain-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7a5a12;
+  background: #fdf3da;
+  border: 1px solid #e9d39a;
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+.llm-explain-btn {
+  background: #2e75b6;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 14px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.llm-explain-btn:hover { background: #265f93; color: #fff; }
+.llm-explain-status { margin: 10px 0 0 0; }
+.llm-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+.llm-status-ready    { color: #1f7a4d; background: #e7f6ee; }
+.llm-status-building { color: #245a8d; background: #e6f0fa; }
+.llm-status-warn     { color: #8a6212; background: #fdf3da; }
+.llm-status-invalid  { color: #9b2c2c; background: #fbe9e7; }
+
+.llm-panel {
+  margin-top: 12px;
+  border-top: 1px dashed #d8e0ea;
+  padding-top: 12px;
+}
+.llm-panel-banner {
+  font-size: 11px;
+  color: #6b7a8d;
+  background: #f1f4f8;
+  border: 1px solid #e1e7ef;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+}
+.llm-panel-title { margin: 4px 0 10px 0; font-size: 15px; color: #102a43; }
+.llm-block { margin: 10px 0; }
+.llm-block-h {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #44566b;
+  margin-bottom: 4px;
+}
+.llm-block p { margin: 0; color: #1f2d3d; line-height: 1.5; }
+.llm-bullets { margin: 4px 0 0 18px; padding: 0; }
+.llm-bullets li { margin: 3px 0; color: #1f2d3d; line-height: 1.45; }
+.llm-block-insufficient { background: #fdf7e8; border: 1px solid #ecdcae; border-radius: 7px; padding: 8px 12px; }
+.llm-muted { color: #8a98a8; font-style: italic; }
+
+.llm-collapse { margin: 8px 0; }
+.llm-collapse > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2e75b6;
+  padding: 4px 0;
+}
+.llm-trace-table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 12px; }
+.llm-trace-table th, .llm-trace-table td {
+  border: 1px solid #e1e7ef;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.llm-trace-table th { background: #f1f4f8; color: #44566b; }
+.llm-trace-claim { color: #1f2d3d; width: 55%; }
+.llm-trace-src { color: #5d6d7e; font-size: 11px; }
+
+.llm-confwrap { margin: 10px 0; }
+.llm-conf {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+.llm-conf-high         { color: #1f7a4d; background: #e7f6ee; }
+.llm-conf-medium       { color: #8a6212; background: #fdf3da; }
+.llm-conf-low          { color: #9b2c2c; background: #fbe9e7; }
+.llm-conf-insufficient { color: #5d6d7e; background: #eef1f5; }
+
+.llm-download { margin: 10px 0; }
+.llm-download-btn {
+  background: #eef1f5;
+  color: #8a98a8;
+  border: 1px solid #d8e0ea;
+  border-radius: 7px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+.llm-gov-footer {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #6b7a8d;
+  border-top: 1px solid #e1e7ef;
+  padding-top: 8px;
+}
+
+.theme-dark .llm-explain { background: #15293f; border-color: #29405c; }
+.theme-dark .llm-explain-title, .theme-dark .llm-panel-title { color: #e8eef6; }
+.theme-dark .llm-panel-banner { background: #1c324a; color: #aab8c8; border-color: #29405c; }
+.theme-dark .llm-trace-table th { background: #1c324a; color: #aab8c8; }
+.theme-dark .llm-trace-claim { color: #cdd8e4; }
+
+/* ===================================================================== */
+/* V4.6R | closing-support explanation panel refinements                 */
+/* ===================================================================== */
+.llm-explain { margin: 26px 0 6px 0; }
+.llm-explain-sub {
+  margin: 3px 0 0 0;
+  font-size: 12px;
+  color: #6b7a8d;
+}
+/* Badge moved to a low-prominence footer chip (transparency, not focus) */
+.llm-explain-foot-badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: .03em;
+  color: #95a3b3;
+  background: transparent;
+  border: 1px solid #e1e7ef;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+/* Optional evidence-bounded question box */
+.llm-explain-ask { margin: 12px 0 4px 0; }
+.llm-ask-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #44566b;
+  margin-bottom: 4px;
+}
+.llm-ask-input {
+  width: 100%;
+  font-size: 13px;
+  border: 1px solid #d8e0ea;
+  border-radius: 7px;
+  padding: 7px 10px;
+  resize: vertical;
+}
+.llm-ask-note {
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  color: #8a98a8;
+  font-style: italic;
+}
+.llm-asked {
+  background: #eef4fb;
+  border: 1px solid #d4e2f2;
+  border-radius: 7px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+.llm-asked-label { font-weight: 700; color: #245a8d; font-size: 12px; }
+.llm-asked-text { color: #1f2d3d; font-size: 13px; }
+.llm-asked-note { margin-top: 4px; font-size: 11px; color: #6b7a8d; font-style: italic; }
+
+.theme-dark .llm-explain-sub { color: #9fb0c2; }
+.theme-dark .llm-explain-foot-badge { color: #7e8ea0; border-color: #29405c; }
+.theme-dark .llm-ask-input { background: #15293f; border-color: #29405c; color: #e8eef6; }
+.theme-dark .llm-asked { background: #18304a; border-color: #29405c; }
+.theme-dark .llm-asked-text { color: #cdd8e4; }
+
+/* ===================================================================== */
+/* V4.6R2 | LLM assistant UX + interaction rework                        */
+/* Conversational layout, quick prompts, visible thinking, paragraphs,   */
+/* collapsed technical traceability, enabled .md download.               */
+/* ===================================================================== */
+
+/* Quick prompts row */
+.llm-quickrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 2px 0;
+}
+.llm-quick-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7a8d;
+  margin-right: 2px;
+}
+.llm-qp {
+  background: #eef4fb;
+  color: #245a8d;
+  border: 1px solid #d4e2f2;
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+.llm-qp:hover { background: #dceaf8; border-color: #b9d2ec; color: #1d4e7c; }
+
+/* Primary CTA row */
+.llm-cta-row { margin-top: 12px; }
+
+/* Adaptive answer lead (question-driven first paragraph) */
+.llm-answer-lead {
+  background: #eaf5ef;
+  border-left: 3px solid #46a173;
+  border-radius: 7px;
+  padding: 10px 14px;
+  margin: 6px 0 12px 0;
+}
+.llm-answer-lead p { margin: 0; color: #173d2a; font-size: 13.5px; line-height: 1.55; }
+.llm-answer-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #2f9e69;
+  margin-bottom: 4px;
+}
+.llm-answer-bounded {
+  background: #fdf7e8;
+  border-left-color: #d8b65a;
+}
+.llm-answer-bounded p { color: #6a531a; }
+.llm-answer-bounded .llm-answer-tag { color: #b8902f; }
+
+/* Paragraph blocks read as prose, not technical lists */
+.llm-block p { font-size: 13.5px; }
+.llm-limits { margin-top: 4px; }
+
+/* Visible "thinking" card */
+.llm-thinking { }
+.llm-think-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #245a8d;
+  margin-bottom: 8px;
+}
+.llm-think-list { list-style: none; margin: 0; padding: 0; }
+.llm-think-step {
+  position: relative;
+  padding: 4px 0 4px 22px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.llm-think-step::before {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 14px;
+  text-align: center;
+}
+.llm-think-pending { color: #9aa8b8; }
+.llm-think-pending::before { content: "\25CB"; color: #c2cdd9; }
+.llm-think-active  { color: #245a8d; font-weight: 600; }
+.llm-think-active::before  { content: "\25CF"; color: #2e75b6; }
+.llm-think-done    { color: #1f7a4d; }
+.llm-think-done::before    { content: "\2713"; color: #2f9e69; }
+.llm-think-note { margin: 8px 0 0 0; font-size: 11px; color: #8a98a8; font-style: italic; }
+
+/* Spinner */
+.llm-spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #c5d8ec;
+  border-top-color: #2e75b6;
+  border-radius: 50%;
+  animation: llm-spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes llm-spin { to { transform: rotate(360deg); } }
+
+/* Technical traceability (collapsed by default) */
+.llm-technical > summary { color: #6b7a8d; font-size: 12px; }
+.llm-trace-sub { margin: 8px 0; }
+.llm-trace-sub-h {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #6b7a8d;
+  margin-bottom: 4px;
+}
+.llm-trace-meta { margin-top: 8px; font-size: 11px; color: #95a3b3; font-style: italic; }
+
+/* Download is now enabled (basic .md export of the visible explanation) */
+.llm-download-btn {
+  background: #2e75b6 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 7px !important;
+  padding: 7px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+.llm-download-btn:hover { background: #265f93 !important; color: #fff !important; }
+.llm-download-btn .fa, .llm-download-btn .glyphicon { margin-right: 5px; }
+
+/* Footer note - kept discrete */
+.llm-gov-footer { font-size: 10.5px; }
+
+/* Dark theme */
+.theme-dark .llm-qp { background: #18304a; color: #9fc4ea; border-color: #29405c; }
+.theme-dark .llm-qp:hover { background: #1f3c5a; border-color: #34557a; }
+.theme-dark .llm-answer-lead { background: #14302255; border-left-color: #46a173; }
+.theme-dark .llm-answer-lead p { color: #cfe8db; }
+.theme-dark .llm-answer-bounded { background: #2e271155; border-left-color: #d8b65a; }
+.theme-dark .llm-answer-bounded p { color: #e8d9a8; }
+.theme-dark .llm-think-head { color: #9fc4ea; }
+.theme-dark .llm-think-pending { color: #7e8ea0; }
+.theme-dark .llm-think-active { color: #9fc4ea; }
+.theme-dark .llm-think-done { color: #6fcf9b; }
+.theme-dark .llm-trace-meta, .theme-dark .llm-trace-sub-h { color: #7e8ea0; }
+
+/* =====================================================================
+   V4.7 | Download explanation modal (MD / PDF / DOCX)
+   ===================================================================== */
+.llm-dl-modal { padding: 2px 2px 0; }
+.llm-dl-ready { margin: 0 0 4px; font-size: 13px; color: #46566a; }
+.llm-dl-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f3a57;
+  background: #eef4fb;
+  border: 1px solid #d6e4f2;
+  border-radius: 6px;
+  padding: 7px 10px;
+  margin-bottom: 14px;
+  word-break: break-all;
+}
+.llm-dl-select { margin: 0 0 8px; font-size: 12.5px; font-weight: 600; color: #46566a; }
+.llm-dl-formats { display: flex; flex-direction: column; gap: 9px; }
+.llm-dl-format {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  background: #2e75b6 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 7px !important;
+  padding: 9px 14px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+.llm-dl-format:hover { background: #265f93 !important; color: #fff !important; }
+.llm-dl-format .fa, .llm-dl-format .glyphicon { margin-right: 6px; }
+.llm-dl-unavail { display: flex; flex-direction: column; gap: 3px; }
+.llm-dl-disabled {
+  background: #e8ecf1 !important;
+  color: #9aa6b4 !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+.llm-dl-disabled:hover { background: #e8ecf1 !important; color: #9aa6b4 !important; }
+.llm-dl-note { font-size: 11px; color: #b06a3a; font-style: italic; padding-left: 2px; }
+.llm-dl-foot { margin: 16px 0 2px; font-size: 10.5px; color: #95a3b3; }
+
+/* Dark theme - download modal */
+.theme-dark .llm-dl-ready, .theme-dark .llm-dl-select { color: #9fc4ea; }
+.theme-dark .llm-dl-name { background: #14233a; border-color: #29405c; color: #cfe2f5; }
+.theme-dark .llm-dl-disabled { background: #2a3240 !important; color: #6f7d8d !important; }
+.theme-dark .llm-dl-disabled:hover { background: #2a3240 !important; color: #6f7d8d !important; }
+.theme-dark .llm-dl-note { color: #d39a6e; }
+.theme-dark .llm-dl-foot { color: #7e8ea0; }

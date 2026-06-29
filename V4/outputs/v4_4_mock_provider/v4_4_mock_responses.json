@@ -1,0 +1,678 @@
+{
+  "provider": "mock",
+  "provider_stage": "mock_no_llm",
+  "generated_at": "2026-06-29T19:47:53Z",
+  "is_real_llm": false,
+  "uses_azure": false,
+  "source_phase": "v4_3_deterministic_insights",
+  "source_files": [
+    "v4_3_insight_cards.csv",
+    "v4_3_page_summaries.md",
+    "v4_3_deterministic_insights.json",
+    "v4_3_claims_traceability.csv",
+    "v4_3_risk_flags.csv",
+    "v4_3_sanitization_log.csv",
+    "v4_3_validation.csv"
+  ],
+  "responses": [
+    {
+      "page_id": "executive_overview",
+      "title": "Executive Overview",
+      "summary": "This is a governed, evidence-only read across the AEGIS V4 layer, produced by a local deterministic mock provider (no real LLM is active). It draws only on the V4.3 deterministic insights: the champion under governed conditions, the documented challengers, the filtered forecast evidence and the governance footprint. It is a controlled summary for human review and changes nothing.",
+      "what_the_evidence_says": [
+        "Champion Overview: Champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4.",
+        "Tournament: Evidence indicates 7 models ranked for review under stated conditions.",
+        "Forecast Viewer: Forecast Viewer evidence is filtered, summarized, and capped before explanation; full forecasts and actuals are never embedded.",
+        "Governance & Risks: Governance and risk explanation is limited to the artifacts available in the evidence pack; no risks are inferred beyond recorded data."
+      ],
+      "why_it_matters": "This overview matters because it gives reviewers a single governed read across the champion, the documented challengers, the forecast evidence and the governance footprint. It is a controlled summary for human review; it does not advance, change, or decide anything.",
+      "sources_used": [
+        "model_dashboard_summary.csv",
+        "model_universe_canonical.csv",
+        "v4_2_evidence_pack_champion_overview.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv",
+        "v4_3_risk_flags.csv",
+        "model_evaluation_ranking.csv",
+        "model_evaluation_summary.csv",
+        "v4_2_evidence_pack_tournament.json",
+        "forecasts_with_intervals.csv",
+        "v4_2_evidence_pack_forecast_viewer.json",
+        "run_metadata.csv",
+        "ttl_months_to_live_snapshot.csv",
+        "model_runtime_guardrails.csv",
+        "v4_2_evidence_pack_governance_risks.json",
+        "v4_3_insight_cards.csv",
+        "v4_3_page_summaries.md",
+        "v4_3_sanitization_log.csv",
+        "v4_3_validation.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Rankings are descriptive only; no decision is implied.",
+        "'Closest' is by recorded ratio only and implies no promotion.",
+        "Risk flag: Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "champion_overview_01",
+          "claim": "Champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_dashboard_summary.csv",
+          "evidence_fields": "champion.champion_name | champion.final_decision"
+        },
+        {
+          "claim_id": "champion_overview_02",
+          "claim": "Champion accuracy on record: median MASE 6.90, median RMSSE 1.86.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_dashboard_summary.csv",
+          "evidence_fields": "champion.champion_mase | champion.champion_rmsse"
+        },
+        {
+          "claim_id": "champion_overview_03",
+          "claim": "Governed model scope contains 15 models.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "governed_model_scope_rows"
+        },
+        {
+          "claim_id": "champion_overview_04",
+          "claim": "0 candidates were advanced; the champion is retained for review.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_dashboard_summary.csv",
+          "evidence_fields": "champion.total_candidates_advanced | champion.final_decision"
+        },
+        {
+          "claim_id": "champion_overview_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "champion_overview_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "champion_overview_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "champion_overview_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "candidate_claims"
+        },
+        {
+          "claim_id": "tournament_01",
+          "claim": "Evidence indicates 7 models ranked for review under stated conditions.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_ranking.csv",
+          "evidence_fields": "ranking"
+        },
+        {
+          "claim_id": "tournament_02",
+          "claim": "The closest challenger by MASE ratio is SMLP-TCN at 2.72x the champion; it remains a documented challenger.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_ranking.csv",
+          "evidence_fields": "ranking[].model | ranking[].ratio_vs_champion_mase"
+        },
+        {
+          "claim_id": "tournament_03",
+          "claim": "All challengers remain documented challengers; none advanced over the champion.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_summary.csv",
+          "evidence_fields": "evaluation_summary[].final_decision"
+        },
+        {
+          "claim_id": "tournament_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "tournament_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "tournament_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "tournament_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "candidate_claims"
+        },
+        {
+          "claim_id": "forecast_viewer_01",
+          "claim": "Forecast Viewer evidence is filtered, summarized, and capped before explanation; full forecasts and actuals are never embedded.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.what_not_passed | forecast_subset.sample_rows_capped_at"
+        },
+        {
+          "claim_id": "forecast_viewer_02",
+          "claim": "The current selection covers 65095 forecast rows out of 65095 total; only 5 rows are embedded as a sample.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.rows_after_filter | forecast_subset.rows_total_in_artifact | forecast_subset.rows_in_sample"
+        },
+        {
+          "claim_id": "forecast_viewer_03",
+          "claim": "Forecast dates in the selection span 2026-04-28 to 2030-04-25.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.date_min | forecast_subset.date_max"
+        },
+        {
+          "claim_id": "forecast_viewer_04",
+          "claim": "Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.distinct_models | filters.model"
+        },
+        {
+          "claim_id": "forecast_viewer_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecast_viewer_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "forecast_viewer_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecast_viewer_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "candidate_claims"
+        },
+        {
+          "claim_id": "governance_risks_01",
+          "claim": "Governance and risk explanation is limited to the artifacts available in the evidence pack; no risks are inferred beyond recorded data.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "run_metadata.csv | ttl_months_to_live_snapshot.csv | model_runtime_guardrails.csv",
+          "evidence_fields": "run_metadata | ttl_snapshot | runtime_guardrails"
+        },
+        {
+          "claim_id": "governance_risks_02",
+          "claim": "The governance snapshot covers 45 entities; months-to-live recorded min 5.23, median 18.60.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "ttl_months_to_live_snapshot.csv",
+          "evidence_fields": "ttl_snapshot.entities_in_snapshot | ttl_snapshot.months_to_live_min | ttl_snapshot.months_to_live_median"
+        },
+        {
+          "claim_id": "governance_risks_03",
+          "claim": "Governed model scope is 15 with 0 model(s) carrying a recorded risk flag.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "governance_scope.governed_model_rows | governance_scope.models_with_risk_flag"
+        },
+        {
+          "claim_id": "governance_risks_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "governance_risks_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "governance_risks_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "governance_risks_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "executive_overview",
+        "format_options": [
+          "md",
+          "json"
+        ],
+        "available_in_phase": "V4.7",
+        "card_count": 0,
+        "source_files": [
+          "v4_3_insight_cards.csv",
+          "v4_3_page_summaries.md",
+          "v4_3_deterministic_insights.json",
+          "v4_3_claims_traceability.csv",
+          "v4_3_risk_flags.csv",
+          "v4_3_sanitization_log.csv",
+          "v4_3_validation.csv"
+        ],
+        "note": "Download UI is deferred to V4.7; the payload structure is shown here for traceability only."
+      }
+    },
+    {
+      "page_id": "champion_overview",
+      "title": "Champion Overview",
+      "summary": "Under governed, evidence-only conditions, champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4. Champion accuracy on record: median MASE 6.90, median RMSSE 1.86. Governed model scope contains 15 models. 0 candidates were advanced; the champion is retained for review.",
+      "what_the_evidence_says": [
+        "Champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4.",
+        "Champion accuracy on record: median MASE 6.90, median RMSSE 1.86.",
+        "Governed model scope contains 15 models.",
+        "0 candidates were advanced; the champion is retained for review."
+      ],
+      "why_it_matters": "These figures describe the champion under governed conditions only. They are presented so reviewers can see the current accuracy of record and the size of the governed scope. Nothing here advances or changes the champion; the numbers support human review, not a documented decision.",
+      "sources_used": [
+        "model_dashboard_summary.csv",
+        "model_universe_canonical.csv",
+        "v4_2_evidence_pack_champion_overview.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv",
+        "v4_3_risk_flags.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "champion_overview_01",
+          "claim": "Champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_dashboard_summary.csv",
+          "evidence_fields": "champion.champion_name | champion.final_decision"
+        },
+        {
+          "claim_id": "champion_overview_02",
+          "claim": "Champion accuracy on record: median MASE 6.90, median RMSSE 1.86.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_dashboard_summary.csv",
+          "evidence_fields": "champion.champion_mase | champion.champion_rmsse"
+        },
+        {
+          "claim_id": "champion_overview_03",
+          "claim": "Governed model scope contains 15 models.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "governed_model_scope_rows"
+        },
+        {
+          "claim_id": "champion_overview_04",
+          "claim": "0 candidates were advanced; the champion is retained for review.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_dashboard_summary.csv",
+          "evidence_fields": "champion.total_candidates_advanced | champion.final_decision"
+        },
+        {
+          "claim_id": "champion_overview_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "champion_overview_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "champion_overview_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "champion_overview_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "champion_overview",
+        "format_options": [
+          "md",
+          "json"
+        ],
+        "available_in_phase": "V4.7",
+        "card_count": 8,
+        "source_files": [
+          "v4_3_deterministic_insights.json",
+          "v4_3_claims_traceability.csv",
+          "v4_3_risk_flags.csv"
+        ],
+        "note": "Download UI is deferred to V4.7; the payload structure is shown here for traceability only."
+      }
+    },
+    {
+      "page_id": "tournament",
+      "title": "Tournament",
+      "summary": "Under governed, evidence-only conditions, evidence indicates 7 models ranked for review under stated conditions. The closest challenger by MASE ratio is SMLP-TCN at 2.72x the champion; it remains a documented challenger. All challengers remain documented challengers; none advanced over the champion.",
+      "what_the_evidence_says": [
+        "Evidence indicates 7 models ranked for review under stated conditions.",
+        "The closest challenger by MASE ratio is SMLP-TCN at 2.72x the champion; it remains a documented challenger.",
+        "All challengers remain documented challengers; none advanced over the champion."
+      ],
+      "why_it_matters": "The ranking matters because it makes the recorded distance between the champion and its documented challengers explicit and reviewable. It is shown so reviewers can read the comparison directly, without implying any change of standing.",
+      "sources_used": [
+        "model_evaluation_ranking.csv",
+        "model_evaluation_summary.csv",
+        "v4_2_evidence_pack_tournament.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv",
+        "v4_3_risk_flags.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Rankings are descriptive only; no decision is implied.",
+        "'Closest' is by recorded ratio only and implies no promotion."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "tournament_01",
+          "claim": "Evidence indicates 7 models ranked for review under stated conditions.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_ranking.csv",
+          "evidence_fields": "ranking"
+        },
+        {
+          "claim_id": "tournament_02",
+          "claim": "The closest challenger by MASE ratio is SMLP-TCN at 2.72x the champion; it remains a documented challenger.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_ranking.csv",
+          "evidence_fields": "ranking[].model | ranking[].ratio_vs_champion_mase"
+        },
+        {
+          "claim_id": "tournament_03",
+          "claim": "All challengers remain documented challengers; none advanced over the champion.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_summary.csv",
+          "evidence_fields": "evaluation_summary[].final_decision"
+        },
+        {
+          "claim_id": "tournament_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "tournament_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "tournament_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "tournament_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "tournament",
+        "format_options": [
+          "md",
+          "json"
+        ],
+        "available_in_phase": "V4.7",
+        "card_count": 7,
+        "source_files": [
+          "v4_3_deterministic_insights.json",
+          "v4_3_claims_traceability.csv",
+          "v4_3_risk_flags.csv"
+        ],
+        "note": "Download UI is deferred to V4.7; the payload structure is shown here for traceability only."
+      }
+    },
+    {
+      "page_id": "forecast_viewer",
+      "title": "Forecast Viewer",
+      "summary": "Under governed, evidence-only conditions, forecast Viewer evidence is filtered, summarized, and capped before explanation; full forecasts and actuals are never embedded. The current selection covers 65095 forecast rows out of 65095 total; only 5 rows are embedded as a sample. Forecast dates in the selection span 2026-04-28 to 2030-04-25. Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated.",
+      "what_the_evidence_says": [
+        "Forecast Viewer evidence is filtered, summarized, and capped before explanation; full forecasts and actuals are never embedded.",
+        "The current selection covers 65095 forecast rows out of 65095 total; only 5 rows are embedded as a sample.",
+        "Forecast dates in the selection span 2026-04-28 to 2030-04-25.",
+        "Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated."
+      ],
+      "why_it_matters": "This view matters because the forecast evidence is deliberately filtered, summarized, and capped before any explanation, and because the model labels here belong to a different namespace than the tournament names. Showing both protects reviewers from conflating productive labels with governed model names.",
+      "sources_used": [
+        "forecasts_with_intervals.csv",
+        "v4_2_evidence_pack_forecast_viewer.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv",
+        "v4_3_risk_flags.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Risk flag: Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "forecast_viewer_01",
+          "claim": "Forecast Viewer evidence is filtered, summarized, and capped before explanation; full forecasts and actuals are never embedded.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.what_not_passed | forecast_subset.sample_rows_capped_at"
+        },
+        {
+          "claim_id": "forecast_viewer_02",
+          "claim": "The current selection covers 65095 forecast rows out of 65095 total; only 5 rows are embedded as a sample.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.rows_after_filter | forecast_subset.rows_total_in_artifact | forecast_subset.rows_in_sample"
+        },
+        {
+          "claim_id": "forecast_viewer_03",
+          "claim": "Forecast dates in the selection span 2026-04-28 to 2030-04-25.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.date_min | forecast_subset.date_max"
+        },
+        {
+          "claim_id": "forecast_viewer_04",
+          "claim": "Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_subset.distinct_models | filters.model"
+        },
+        {
+          "claim_id": "forecast_viewer_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecast_viewer_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "forecast_viewer_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecast_viewer_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "forecast_viewer",
+        "format_options": [
+          "md",
+          "json"
+        ],
+        "available_in_phase": "V4.7",
+        "card_count": 8,
+        "source_files": [
+          "v4_3_deterministic_insights.json",
+          "v4_3_claims_traceability.csv",
+          "v4_3_risk_flags.csv"
+        ],
+        "note": "Download UI is deferred to V4.7; the payload structure is shown here for traceability only."
+      }
+    },
+    {
+      "page_id": "governance_risks",
+      "title": "Governance & Risks",
+      "summary": "Under governed, evidence-only conditions, governance and risk explanation is limited to the artifacts available in the evidence pack; no risks are inferred beyond recorded data. The governance snapshot covers 45 entities; months-to-live recorded min 5.23, median 18.60. Governed model scope is 15 with 0 model(s) carrying a recorded risk flag.",
+      "what_the_evidence_says": [
+        "Governance and risk explanation is limited to the artifacts available in the evidence pack; no risks are inferred beyond recorded data.",
+        "The governance snapshot covers 45 entities; months-to-live recorded min 5.23, median 18.60.",
+        "Governed model scope is 15 with 0 model(s) carrying a recorded risk flag."
+      ],
+      "why_it_matters": "Governance matters because the explanation is bounded strictly by the recorded evidence pack. The time-to-live coverage and the count of models carrying a recorded risk flag are surfaced so reviewers can see the governed footprint without inferring risks beyond the data.",
+      "sources_used": [
+        "run_metadata.csv",
+        "ttl_months_to_live_snapshot.csv",
+        "model_runtime_guardrails.csv",
+        "model_universe_canonical.csv",
+        "v4_2_evidence_pack_governance_risks.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv",
+        "v4_3_risk_flags.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "governance_risks_01",
+          "claim": "Governance and risk explanation is limited to the artifacts available in the evidence pack; no risks are inferred beyond recorded data.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "run_metadata.csv | ttl_months_to_live_snapshot.csv | model_runtime_guardrails.csv",
+          "evidence_fields": "run_metadata | ttl_snapshot | runtime_guardrails"
+        },
+        {
+          "claim_id": "governance_risks_02",
+          "claim": "The governance snapshot covers 45 entities; months-to-live recorded min 5.23, median 18.60.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "ttl_months_to_live_snapshot.csv",
+          "evidence_fields": "ttl_snapshot.entities_in_snapshot | ttl_snapshot.months_to_live_min | ttl_snapshot.months_to_live_median"
+        },
+        {
+          "claim_id": "governance_risks_03",
+          "claim": "Governed model scope is 15 with 0 model(s) carrying a recorded risk flag.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "governance_scope.governed_model_rows | governance_scope.models_with_risk_flag"
+        },
+        {
+          "claim_id": "governance_risks_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "governance_risks_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "governance_risks_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "governance_risks_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "governance_risks",
+        "format_options": [
+          "md",
+          "json"
+        ],
+        "available_in_phase": "V4.7",
+        "card_count": 7,
+        "source_files": [
+          "v4_3_deterministic_insights.json",
+          "v4_3_claims_traceability.csv",
+          "v4_3_risk_flags.csv"
+        ],
+        "note": "Download UI is deferred to V4.7; the payload structure is shown here for traceability only."
+      }
+    }
+  ],
+  "validation": {
+    "checks_total": 26,
+    "checks_passed": 26,
+    "all_passed": true,
+    "forbidden_language_hits": [],
+    "deterministic_rerun_identical": true
+  }
+}

@@ -1,0 +1,5 @@
+file,change_type,purpose,rollback_note
+shiny_app/R/llm_explain.R,modified,"Panel retitled 'Ask AEGIS to explain this section'; added optional evidence-bounded question box; added outputOptions(suspendWhenHidden=FALSE) on status+panel (root-cause fix for button not showing output); badge moved to low-prominence footer chip; .llm_render_panel now accepts optional question and shows governed-evidence note","Revert to V4.6 version (git/local history): remove question box, suspendWhenHidden lines, restore header badge"
+shiny_app/ui/tabs.R,modified,"Moved the 4 llm_explain_ui() calls from the TOP (after section_head) to the END (after footer note) of section_champion/section_tournament/section_forecast/section_risks","Move llm_explain_ui() calls back to just after section_head in each section"
+shiny_app/www/custom.css,modified,"Appended V4.6R refinements: low-prominence footer badge, question box, asked block, panel spacing","Remove the '/* V4.6R | closing-support explanation panel refinements */' block"
+shiny_app/ui/body.R,modified,"CSS cache-buster bumped custom.css?v=20260629a -> v=20260629b","Restore previous cache-buster value"

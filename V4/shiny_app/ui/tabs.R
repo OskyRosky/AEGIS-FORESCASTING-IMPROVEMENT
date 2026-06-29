@@ -664,7 +664,11 @@ section_forecast <- function() {
     tags$p(
       class = "fv-method-note",
       "This page reads actuals.csv and the governed calibrated forecast artifact (forecasts_with_intervals_relative_60d_calibrated.csv, point-only fallback to forecasts.csv). It only visualizes interval columns already present in the governed artifact \u2014 it does not generate forecasts, compute or recalibrate intervals, residuals or quantiles, compare models, rerun tournaments, recalculate metrics, or change champion decisions."
-    )
+    ),
+
+    # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_forecast_viewer", "Forecast Viewer",
+                   button_label = "Explain forecast view")
   )
 }
 
@@ -1807,7 +1811,11 @@ section_tournament <- function() {
     tags$p(
       class = "tess-foot-note",
       "This page reads governed Model Lab and candidate-evaluation artifacts and does not recompute metrics or change the champion decision. The current 15-model ranking aggregates already-computed medians; the 13-model pairwise tournament is preserved as labelled legacy evidence. None of the challengers was promoted."
-    )
+    ),
+
+    # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_tournament", "Tournament",
+                   button_label = "Explain tournament")
   )
 }
 
@@ -2087,7 +2095,11 @@ section_champion <- function() {
     tags$p(
       class = "tess-foot-note",
       "This page reads governed Model Lab artifacts and does not recompute metrics or change the champion decision. Governance conditions, approved language and source lineage live on the Governance pages."
-    )
+    ),
+
+    # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_champion_overview", "Champion Overview",
+                   button_label = "Explain champion")
   )
 }
 
@@ -2184,7 +2196,11 @@ section_risks <- function() {
         )
       ),
       open = FALSE
-    )
+    ),
+
+    # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_governance_risks", "Governance & Risks",
+                   button_label = "Explain governance & risks")
   )
 }
 

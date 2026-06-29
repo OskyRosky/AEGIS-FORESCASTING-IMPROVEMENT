@@ -1,0 +1,26 @@
+field_path,type,required,description,validation_rule,rendered_as
+response_metadata.page_id,string,yes,One of the 4 MVP pages,enum: champion_overview|tournament|forecast_viewer|governance_risks,not rendered (routing key)
+response_metadata.provider,string,yes,Active provider,enum: mock|azure_openai|local; MVP must be mock,provider badge
+response_metadata.provider_stage,string,yes,Provider stage,enum: mock_no_llm|local_live|azure_live; MVP must be mock_no_llm,provider badge + mock disclaimer
+response_metadata.generated_at,string,yes,ISO-8601 UTC timestamp,format date-time,not rendered (audit)
+response_metadata.project_version,string,yes,Project version,must equal V4,not rendered
+response_metadata.local_first,boolean,yes,Local-first flag,must be true in MVP,not rendered
+display.title,string,yes,Panel title,non-empty,panel header
+display.executive_summary,string,yes,2-4 sentence summary,non-empty; may be Insufficient evidence,executive summary paragraph
+display.what_the_evidence_says,array[string],yes,Traceable bullet facts,minItems 1; each maps to evidence,bulleted list
+display.why_it_matters,string,yes,Neutral executive framing,non-empty,why-it-matters paragraph
+display.sources_used,array[string],yes,Governed artifact filenames read,minItems 1,bulleted list (always shown)
+display.limitations,array[string],yes,Caveats,minItems 1; must include explain-not-decide + snapshot caveat,bulleted list (always shown)
+display.confidence,string,yes,Confidence level,enum: high|medium|low|insufficient_evidence,confidence badge
+traceability.claims,array[object],yes,claim->maps_to pairs,minItems 1; each has claim + maps_to,collapsible traceability rows
+traceability.source_artifacts,array[string],yes,Artifacts backing the claims,minItems 1,traceability area
+traceability.evidence_pack_refs,array[string],yes,Evidence pack files referenced,minItems 1,traceability area
+governance.champion_policy,string,yes,Champion policy,must equal 'frozen / governed / no auto-change',governance footer
+governance.llm_policy,string,yes,LLM policy,must equal 'explain_only',governance footer
+governance.data_policy,string,yes,Data policy,must equal 'read_only_evidence_pack',governance footer
+download_payload.markdown,string|null,yes,Markdown export,key must exist; populated in V4.7,disabled download control (MVP)
+download_payload.json,object|null,yes,JSON export,key must exist; populated in V4.7,read-only payload preview
+download_payload.csv_rows,array[object],yes,CSV export rows,key must exist; may be empty in MVP,read-only payload preview
+validation.is_valid,boolean,yes,Whether response passed validation,true to render panel,blocking notice if false
+validation.checks_passed,array[string],yes,Passed checks,present,not rendered (audit)
+validation.checks_failed,array[string],yes,Failed checks,empty when is_valid true,shown if is_valid false

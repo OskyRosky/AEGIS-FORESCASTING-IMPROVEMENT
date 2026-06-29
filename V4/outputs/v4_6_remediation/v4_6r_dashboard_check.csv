@@ -1,0 +1,13 @@
+check,detail,result,status
+http_status,GET http://127.0.0.1:3839,HTTP 200,PASS
+page_size,Rendered HTML length,281565 chars,PASS
+process_id,Running Shiny process,51440,PASS
+listening_port,Single instance on 127.0.0.1:3839,yes,PASS
+panel_champion_present,id llm_champion_overview present + button 'Explain champion',yes,PASS
+panel_tournament_present,id llm_tournament present + button 'Explain tournament',yes,PASS
+panel_forecast_present,id llm_forecast_viewer present + button 'Explain forecast view',yes,PASS
+panel_risks_present,id llm_governance_risks present + button 'Explain governance & risks',yes,PASS
+panels_at_end,All 4 panel indices appear after their section header index,4/4,PASS
+title_updated,Panel heading 'Ask AEGIS to explain this section',yes,PASS
+question_box,Optional 'What would you like explained?' box present,yes,PASS
+badge_low_prominence,Badge rendered as small footer chip (.llm-explain-foot-badge),yes,PASS

@@ -1,0 +1,14 @@
+forbidden_term,category,why_forbidden,neutral_alternative
+winner,absolute-ranking,implies an absolute victor and a decision,documented challenger / currently selected under governed conditions
+best,absolute-ranking,implies an absolute superlative ranking,leading / closest documented challenger
+unconditional champion,champion-change,implies the champion is beyond review,governed champion / retained under current governance
+promote,governance-change,implies an automatic promotion action,retain for review / requires human review
+promoted champion,governance-change,implies a champion was auto-promoted,documented challenger
+production approved,governance-change,implies a production decision was made,review stage / for review
+automatic decision,governance-change,implies the layer decided automatically,documented decision / requires human review
+champion changed,champion-change,implies V4 changed the champion,champion retained under governed conditions
+governance changed,governance-change,implies V4 changed governance,governance read-only under current evidence pack
+azure openai active,provider-misrepresentation,implies Azure is connected when it is not,local mock provider (no Azure connected)
+real llm active,provider-misrepresentation,implies a real LLM ran during mock mode,deterministic local mock (no real LLM)
+guaranteed,overclaim,implies certainty beyond the evidence,evidence indicates / based on governed artifacts
+optimal,absolute-ranking,implies an absolute optimum,leading under the current evidence pack

@@ -1,0 +1,30 @@
+check,result,detail
+output_dir_exists,PASS,v4_5_prompt_contract
+prompt_contract_exists,PASS,v4_5_prompt_contract.md
+system_prompt_exists,PASS,v4_5_system_prompt.md
+page_templates_exist,PASS,v4_5_page_prompt_templates.md
+output_schema_valid_json,PASS,v4_5_output_schema.json
+response_contract_exists,PASS,v4_5_response_contract.csv
+forbidden_language_policy_exists,PASS,csv
+prompt_validation_rules_exist,PASS,csv
+example_payloads_valid_json,PASS,v4_5_example_payloads.json
+rendering_contract_exists,PASS,v4_5_rendering_contract.md
+all_4_page_id_covered,PASS,"champion_overview, tournament, forecast_viewer, governance_risks"
+required_fields_defined,PASS,6 top-level blocks
+sources_used_required,PASS,all examples
+limitations_required,PASS,all examples
+confidence_required,PASS,all examples
+claims_traceability_required,PASS,all examples
+download_payload_defined,PASS,keys present
+no_forbidden_language_in_examples,PASS,clean
+local_first_policy_stated,PASS,local_first=true
+no_azure_activated,PASS,"by design; no azure_openai provider, no connection"
+no_real_llm_activated,PASS,by design; provider_stage=mock_no_llm only
+no_shiny_modified,PASS,by design; V4.5 writes only outputs + prompts
+no_sql_executed,PASS,by design
+no_model_refresh,PASS,by design
+no_data_processed_mutation,PASS,by design; read-only V4.x outputs
+no_champion_mutation,PASS,champion frozen = ETS Explicit
+no_governance_mutation,PASS,governance read-only
+v1_v2_v3_untouched,PASS,by design; only V4 outputs written
+every_example_is_valid,PASS,4/4

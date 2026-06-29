@@ -1,0 +1,38 @@
+check,scope,result,detail
+script_exists,build_evidence_pack.py,PASS,build_evidence_pack.py
+output_dir_exists,v4_2_evidence_pack,PASS,created
+4_json_packs_created,all,PASS,4 packs
+no_sql_executed,all,PASS,builder reads CSV only
+no_model_refresh,all,PASS,no model code invoked
+no_data_processed_mutation,all,PASS,read-only access
+no_shiny_modification,all,PASS,no shiny_app files touched
+v1_v2_v3_untouched,all,PASS,only V4 outputs written
+required_fields_present,champion_overview,PASS,true
+sources_used_present,champion_overview,PASS,true
+limitations_present,champion_overview,PASS,true
+allowed_artifacts_only,champion_overview,PASS,true
+champion_unchanged,champion_overview,PASS,true
+model_scope_15,champion_overview,PASS,true
+no_forbidden_language,champion_overview,PASS,true
+required_fields_present,tournament,PASS,true
+sources_used_present,tournament,PASS,true
+limitations_present,tournament,PASS,true
+allowed_artifacts_only,tournament,PASS,true
+champion_unchanged,tournament,PASS,true
+model_scope_15,tournament,PASS,true
+no_forbidden_language,tournament,PASS,true
+required_fields_present,forecast_viewer,PASS,true
+sources_used_present,forecast_viewer,PASS,true
+limitations_present,forecast_viewer,PASS,true
+allowed_artifacts_only,forecast_viewer,PASS,true
+champion_unchanged,forecast_viewer,PASS,true
+model_scope_15,forecast_viewer,PASS,true
+no_raw_full_series_embedded,forecast_viewer,PASS,true
+no_forbidden_language,forecast_viewer,PASS,true
+required_fields_present,governance_risks,PASS,true
+sources_used_present,governance_risks,PASS,true
+limitations_present,governance_risks,PASS,true
+allowed_artifacts_only,governance_risks,PASS,true
+champion_unchanged,governance_risks,PASS,true
+model_scope_15,governance_risks,PASS,true
+no_forbidden_language,governance_risks,PASS,true

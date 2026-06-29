@@ -1,0 +1,10 @@
+check,detail,result,status
+http_status,GET http://127.0.0.1:3839 returned HTTP 200,200,PASS
+page_size,Rendered HTML length,279109 chars,PASS
+panel_marker_llm_explain,Count of '.llm-explain' occurrences in HTML,36,PASS
+panel_champion_present,Button 'Explain champion' + id llm_champion_overview present,yes,PASS
+panel_tournament_present,Button 'Explain tournament' + id llm_tournament present,yes,PASS
+panel_forecast_present,Button 'Explain forecast view' + id llm_forecast_viewer present,yes,PASS
+panel_risks_present,Button 'Explain governance & risks' + id llm_governance_risks present,yes,PASS
+listening_port,Shiny listening on 127.0.0.1:3839 (single instance),yes,PASS
+process_id,Running Rscript Shiny process,17868,PASS

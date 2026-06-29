@@ -1,0 +1,8 @@
+question,page_id,detected_intent,bounded,answer_lead_excerpt,differs_from_stored_summary,status
+What is the main takeaway?,tournament,takeaway,FALSE,"The main takeaway is that evidence indicates 7 models ranked for review under stated conditions.",yes,PASS
+Explain the process behind this section,tournament,process,FALSE,"Here is how this section is produced. V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",yes,PASS
+What changed?,tournament,changed,FALSE,"On what changed: all challengers remain documented challengers; none advanced over the champion.",yes,PASS
+Explain the main risk,tournament,risk,FALSE,"The point to be careful about is data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",yes,PASS
+How does SMLP-TCN compare to the champion?,tournament,compare,FALSE,"On the comparison, evidence indicates 7 models ranked for review under stated conditions (closest challenger SMLP-TCN at 2.72x).",yes,PASS
+Should we promote the challenger to replace the champion?,champion_overview,bounded,TRUE,"I can only answer using the governed evidence available for this section. Based on that evidence, champion remains ETS Explicit under governed conditions.",yes,PASS
+What changed?,champion_overview,changed,FALSE,"On what changed: champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4.",yes,PASS

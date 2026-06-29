@@ -1,0 +1,7 @@
+file,purpose,section_affected,change_type,rollback_note
+shiny_app/R/llm_explain.R,New module: reads precomputed V4.4 mock responses (read-only) and renders on-demand explanation panel; no LLM/Azure/compute,All 4 MVP sections,added,Delete this file and remove its source() in global.R to fully revert.
+shiny_app/global.R,Source new R/llm_explain.R after governed data loader,Startup,modified,Remove the two added lines (comment + source('R/llm_explain.R')).
+shiny_app/ui/tabs.R,Insert llm_explain_ui() after section_head in section_champion / section_tournament / section_forecast / section_risks,champion / tournament / forecast / risks,modified,Remove the 4 inserted llm_explain_ui(...) blocks (each tagged '# V4.6').
+shiny_app/server/server.R,Add 4 llm_explain_server() calls at end of app_server,champion / tournament / forecast / risks,modified,Remove the 4 llm_explain_server(...) lines before invisible(NULL).
+shiny_app/ui/body.R,Bump custom.css cache-buster v=20260624l -> v=20260629a,Global head,modified,Restore previous version string.
+shiny_app/www/custom.css,Append V4.6 LLM panel styles (.llm-explain* etc.),Global stylesheet,modified,Remove the appended '/* V4.6 | Shiny Local On-Demand */' block at end of file.

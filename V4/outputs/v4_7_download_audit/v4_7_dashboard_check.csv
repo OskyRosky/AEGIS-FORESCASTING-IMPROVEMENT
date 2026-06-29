@@ -1,0 +1,8 @@
+check,expected,observed,result
+http_status,200,200,PASS
+content_length,"~284k",284644,PASS
+process_running,"PID listening on 3839","PID 34456 :3839",PASS
+panels_present,"4 MVP panels render","champion/tournament/forecast/risks llm panels present",PASS
+download_button_label,"'Download explanation' on each panel","present (Tournament + Champion verified live)",PASS
+generate_then_download,"generate -> Ready -> Download explanation -> modal","verified Tournament + Champion",PASS
+traceability_collapsed,"Technical traceability stays collapsed in dashboard","<details> collapsed, not in download",PASS

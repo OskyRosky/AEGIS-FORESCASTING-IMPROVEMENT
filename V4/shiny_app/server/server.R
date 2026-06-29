@@ -540,5 +540,13 @@ app_server <- function(input, output, session) {
   outputOptions(output, "artifact_lineage_table",          suspendWhenHidden = FALSE)
   outputOptions(output, "artifact_catalog_table",          suspendWhenHidden = FALSE)
 
+  # V4.6 | On-demand local LLM explanation panels (mock, read-only).
+  # Each renders a precomputed V4.4 mock response when the user clicks.
+  # No compute, no LLM, no Azure, no champion/governance change.
+  llm_explain_server("llm_champion_overview", "champion_overview")
+  llm_explain_server("llm_tournament",        "tournament")
+  llm_explain_server("llm_forecast_viewer",   "forecast_viewer")
+  llm_explain_server("llm_governance_risks",  "governance_risks")
+
   invisible(NULL)
 }

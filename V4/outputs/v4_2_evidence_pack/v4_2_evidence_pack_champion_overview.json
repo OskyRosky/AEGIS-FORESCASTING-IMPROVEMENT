@@ -1,0 +1,118 @@
+{
+  "pack_metadata": {
+    "page_id": "champion_overview",
+    "generated_at": "2026-06-29T16:51:17Z",
+    "project_version": "V4",
+    "provider_stage": "evidence_only_no_llm",
+    "snapshot_caveat": "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "filters": {}
+  },
+  "governance_context": {
+    "champion": "ETS Explicit",
+    "champion_policy": "frozen / governed / no auto-advance",
+    "model_scope": 15,
+    "llm_decision_policy": "explain_only"
+  },
+  "evidence": {
+    "champion": {
+      "champion_name": "ETS Explicit",
+      "champion_mase": 6.901144,
+      "champion_rmsse": 1.856193,
+      "total_models_evaluated": 6.0,
+      "total_candidates_advanced": 0.0,
+      "dl_challenger_reference": "SMLP-TCN",
+      "dl_challenger_median_mase": 18.782572,
+      "ml_challenger_reference": "ENET-RIDGE",
+      "ml_challenger_median_mase": 19.330846,
+      "final_decision": "Champion unchanged (ETS Explicit); 0 candidates retained; all 6 retained as documented challengers",
+      "status_message": "Model evaluation results include base/statistical, machine learning, and deep learning challengers evaluated during V3.2D/V3.2E. ETS Explicit remains the selected champion. No production forecasts, intervals, or governance decisions were changed.",
+      "text_sanitized": true
+    },
+    "champion_universe": {
+      "model_name": "ETS Explicit",
+      "final_status": "selected_champion",
+      "eligible_for_champion": "TRUE",
+      "selected_champion": "TRUE",
+      "median_mase": 6.9011435333734,
+      "median_rmsse": 1.8561932181843,
+      "risk_flag": "FALSE"
+    },
+    "governed_model_scope_rows": 15,
+    "challengers_vs_champion": [
+      {
+        "model": "SMLP-TCN",
+        "family": "lightweight_neural",
+        "model_median_mase": 18.782572,
+        "ratio_vs_champion": 2.721
+      },
+      {
+        "model": "ENET-RIDGE",
+        "family": "linear_ml",
+        "model_median_mase": 19.330846,
+        "ratio_vs_champion": 2.801
+      },
+      {
+        "model": "NLIN-DLIN_FIXED",
+        "family": "linear_dl",
+        "model_median_mase": 24.816041,
+        "ratio_vs_champion": 3.596
+      },
+      {
+        "model": "LGBM-IMP-v2",
+        "family": "gradient_boosting",
+        "model_median_mase": 26.747444,
+        "ratio_vs_champion": 3.876
+      },
+      {
+        "model": "XGB-IMP-v2",
+        "family": "gradient_boosting",
+        "model_median_mase": 27.950413,
+        "ratio_vs_champion": 4.05
+      },
+      {
+        "model": "FNAR-V2",
+        "family": "lightweight_neural",
+        "model_median_mase": 81.668413,
+        "ratio_vs_champion": 11.834
+      }
+    ]
+  },
+  "sources_used": [
+    "model_champion_comparison.csv",
+    "model_dashboard_summary.csv",
+    "model_universe_canonical.csv"
+  ],
+  "limitations": [
+    "LLM explains; it does not decide, advance, or change the champion or governance.",
+    "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "Only governed artifacts under data/processed were read; no SQL, no model runs."
+  ],
+  "insufficient_evidence": false,
+  "candidate_claims": [
+    {
+      "claim": "The currently selected champion under governed conditions is ETS Explicit.",
+      "maps_to": "model_dashboard_summary.csv:champion_name"
+    },
+    {
+      "claim": "Champion median MASE is 6.901144 and median RMSSE is 1.856193.",
+      "maps_to": "model_dashboard_summary.csv:champion_mase|champion_rmsse"
+    },
+    {
+      "claim": "Governed model scope contains 15 models.",
+      "maps_to": "model_universe_canonical.csv:rows"
+    },
+    {
+      "claim": "No candidates were advanced; champion remains unchanged for review.",
+      "maps_to": "model_dashboard_summary.csv:total_candidates_promoted|final_decision"
+    }
+  ],
+  "validation": {
+    "required_fields_present": true,
+    "sources_used_present": true,
+    "limitations_present": true,
+    "allowed_artifacts_only": true,
+    "champion_unchanged": true,
+    "model_scope_15": true,
+    "no_forbidden_language": true
+  }
+}
