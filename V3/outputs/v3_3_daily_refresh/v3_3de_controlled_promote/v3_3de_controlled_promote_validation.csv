@@ -1,0 +1,5 @@
+check,value,result
+source_run,v3_3de_run_20260628_172644,PASS
+source_full_staging,yes,PASS
+source_32_gates,32/32,PASS
+champion_frozen,ETS Explicit,PASS

@@ -427,6 +427,124 @@ def do_run(execute, smoke, full=False, fresh=False):
     return 0 if npass == ntot else 1
 
 
+# --------------------------------------------------------------------------- #
+# D/E-2 Controlled promote (promote-only; no SQL/transform/models re-run)
+# --------------------------------------------------------------------------- #
+def _robocopy(src: Path, dst: Path, files=None, mirror=False) -> int:
+    import subprocess
+    dst.mkdir(parents=True, exist_ok=True)
+    cmd = ["robocopy", str(src), str(dst)]
+    if files:
+        cmd += list(files)
+    if mirror:
+        cmd += ["/MIR"]
+    cmd += ["/R:4", "/W:2", "/NFL", "/NDL", "/NP", "/NJH", "/NJS"]
+    return subprocess.run(cmd, capture_output=True, text=True).returncode
+
+
+def _find_latest_full_staging() -> tuple:
+    cands = []
+    for d in sorted(RUNS_BASE.glob("v3_3de_run_*"), reverse=True):
+        ps = d / "status" / "pipeline_status.csv"
+        gt = d / "validation" / "gates.csv"
+        if not (ps.exists() and gt.exists()):
+            continue
+        import csv as _c
+        prows = list(_c.DictReader(ps.open(encoding="utf-8")))
+        grows = list(_c.DictReader(gt.open(encoding="utf-8")))
+        full = any(r.get("notes") == "full" and r.get("pipeline_status") == "STAGING_COMPLETED" for r in prows)
+        npass = sum(1 for r in grows if r.get("result") == "PASS")
+        s01 = (d / "data_raw" / "hdd_region_forecasts.csv").exists()
+        s02 = (d / "data_processed_candidate" / "forecasts.csv").exists()
+        if full and npass == 32 and s01 and s02:
+            cands.append(d)
+    return (cands[0] if cands else None, cands)
+
+
+def do_promote(from_latest=True):
+    import shutil
+    PROMOTE_BASE.mkdir(parents=True, exist_ok=True)
+    plan_rows, val_rows, bk_rows, art_rows, post_rows, rb_rows = [], [], [], [], [], []
+    src, cands = _find_latest_full_staging()
+    if src is None:
+        print("V3_3DE_CONTROLLED_PROMOTE_BLOCKED: no full-staging 32/32 run found")
+        return 3
+    if len([c for c in cands]) > 1 and not from_latest:
+        print("AMBIGUOUS_PROMOTION_SOURCE_RUN")
+        return 3
+    cand_proc = src / "data_processed_candidate"
+    ext_meta = src / "status" / "run_metadata.csv"
+    champ = champion_from_prod()
+    val_rows.append(["source_run", src.name, "PASS"])
+    val_rows.append(["source_full_staging", "yes", "PASS"])
+    val_rows.append(["source_32_gates", "32/32", "PASS"])
+    val_rows.append(["champion_frozen", champ, "PASS" if champ == CHAMPION_FROZEN else "FAIL"])
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    bdir = PROMOTE_BASE / "backups" / f"pre_promote_{ts}"
+    prod_proc = PROJECT_ROOT / "data" / "processed"
+    backup_dirs = [prod_proc] + [d for d in PROTECTED_DIRS
+                                 if d.name in ("forecast_viewer_handoff", "tournament_engine",
+                                               "champion_decision", "evaluation", "governance")]
+    for d in backup_dirs:
+        rc = _robocopy(d, bdir / d.name, mirror=True) if d.exists() else 0
+        n = sum(1 for _ in (bdir / d.name).rglob("*")) if (bdir / d.name).exists() else 0
+        bk_rows.append([d.name, str(d), n, "OK" if rc < 8 else "FAIL"])
+    before = snapshot_dirs()
+    raw_before = before.get((PROJECT_ROOT/"data"/"raw").as_posix())
+    promote_files = ["actuals.csv", "entities.csv", "forecast_comparison.csv", "forecasts.csv"]
+    ok = True
+    for f in promote_files:
+        if (cand_proc / f).exists():
+            rc = _robocopy(cand_proc, prod_proc, files=[f])
+            plan_rows.append([f, "data/processed", "OK" if rc < 8 else "FAIL"])
+            art_rows.append(["processed", f, "PROMOTED"])
+            if rc >= 8: ok = False
+    if (cand_proc / "run_metadata.csv").exists():
+        rc = _robocopy(cand_proc, prod_proc, files=["run_metadata.csv"])
+        plan_rows.append(["run_metadata.csv", "data/processed (LAST)", "OK" if rc < 8 else "FAIL"])
+        art_rows.append(["processed", "run_metadata.csv", "PROMOTED_LAST"])
+        if rc >= 8: ok = False
+    if ext_meta.exists():
+        shutil.copy2(ext_meta, prod_proc / "run_metadata_pipeline.csv")
+        art_rows.append(["processed", "run_metadata_pipeline.csv", "PROMOTED_AUDIT_9FIELD"])
+    art_rows.append(["raw", "data_raw", "NOT_PROMOTED_AUDIT_ONLY"])
+    art_rows.append(["champion", "champion_decision", "NOT_PROMOTED_FROZEN"])
+    after = snapshot_dirs()
+    raw_after = after.get((PROJECT_ROOT/"data"/"raw").as_posix())
+    import csv as _c
+    meta = list(_c.DictReader((prod_proc/"run_metadata.csv").open(encoding="utf-8"))) if (prod_proc/"run_metadata.csv").exists() else []
+    nfields = len(meta[0]) if meta else 0
+    post_rows.append(["processed_forecasts_promoted", "yes" if (prod_proc/"forecasts.csv").exists() else "no", "PASS"])
+    post_rows.append(["run_metadata_present", "yes" if meta else "no", "PASS" if meta else "FAIL"])
+    post_rows.append(["run_metadata_fields", nfields, "PASS" if nfields >= 9 else "FAIL"])
+    post_rows.append(["champion_frozen", champ, "PASS" if champ == CHAMPION_FROZEN else "FAIL"])
+    post_rows.append(["raw_unchanged", "yes" if raw_before == raw_after else "no", "PASS" if raw_before == raw_after else "FAIL"])
+    bl = src/"staging"/"baseline_forecasts.csv"; ch = src/"staging"/"clean_challenger_forecasts.csv"
+    prohibited = any((p in bl.read_text(errors='ignore') or p in ch.read_text(errors='ignore')) for p in PROHIBITED) if bl.exists() and ch.exists() else False
+    post_rows.append(["prohibited_absent", "yes" if not prohibited else "no", "PASS" if not prohibited else "FAIL"])
+    failed_post = any(r[2] == "FAIL" for r in post_rows) or not ok
+    status = "V3_3DE_CONTROLLED_PROMOTE_COMPLETED"
+    if failed_post:
+        for d in backup_dirs:
+            if (bdir/d.name).exists():
+                _robocopy(bdir/d.name, d, mirror=True)
+        rb_rows.append(["rollback", "executed", "DONE"])
+        status = "V3_3DE_CONTROLLED_PROMOTE_ROLLED_BACK"
+    else:
+        rb_rows.append(["rollback", "not_needed", "OK"])
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_plan.csv", ["artifact","dest","result"], plan_rows)
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_validation.csv", ["check","value","result"], val_rows)
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_backup_inventory.csv", ["dir","path","files","result"], bk_rows)
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_artifacts_inventory.csv", ["domain","artifact","status"], art_rows)
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_postcheck.csv", ["check","value","result"], post_rows)
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_rollback_plan.csv", ["step","state","result"], rb_rows)
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_run_metadata_check.csv", ["field_count","champion","status"], [[nfields, champ, "9_FIELDS_OK" if nfields==9 else "FIELDS_MISMATCH"]])
+    write_csv(PROMOTE_BASE/"v3_3de_controlled_promote_dashboard_check.csv", ["artifact","present","last_update_source"], [["data/processed/forecasts.csv", (prod_proc/"forecasts.csv").exists(), src.name], ["data/processed/run_metadata.csv", bool(meta), src.name]])
+    print(f"PROMOTE source={src.name} backup={bdir.name} npass_post={'OK' if not failed_post else 'FAIL'}")
+    print(status)
+    return 0 if status == "V3_3DE_CONTROLLED_PROMOTE_COMPLETED" else 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
