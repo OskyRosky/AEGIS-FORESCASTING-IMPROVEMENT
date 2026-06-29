@@ -1,0 +1,2 @@
+audit_id,audit_name,audit_scope,overall_verdict,blocker_count,major_count,minor_count,advisory_count,ready_for_shiny_mvp,conditions_required_before_shiny,created_timestamp
+AUDIT-6,Governance Pre-Shiny Audit,Independent review of Stage 06 governance package (blocks 6.0-6.5) to determine readiness for Shiny MVP under the governance contract,APPROVE_WITH_CONDITIONS_TO_SHINY_MVP,0,0,0,4,True,True,2026-06-14T11:10:00

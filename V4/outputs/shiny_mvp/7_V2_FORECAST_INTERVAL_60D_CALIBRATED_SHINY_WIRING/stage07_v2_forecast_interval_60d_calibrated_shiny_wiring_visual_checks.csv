@@ -1,0 +1,17 @@
+check,window,expectation,smoke_result,status
+calibrated_source_loaded,all,fvf_source = forecasts_with_intervals_relative_60d_calibrated.csv,SOURCE=forecasts_with_intervals_relative_60d_calibrated.csv HAS_IV=TRUE,PASS
+mean_renders_30d,Next 30 days,Forward forecast dashed line drawn,fwd_rows=31,PASS
+interval_80_30d,Next 30 days,80% upper/lower through forecast day 30,iv_rows=31 max_iv_horizon=31,PASS
+mean_renders_60d,Next 60 days,Forward forecast dashed line drawn,fwd_rows=61,PASS
+interval_80_60d,Next 60 days,80% upper/lower through forecast day 60,iv_rows=60 max_iv_horizon=60,PASS
+mean_renders_180d,Next 180 days,Forward forecast dashed line drawn to day 180,fwd_rows=181,PASS
+interval_80_stops_60_in_180d,Next 180 days,80% lines stop at day 60; point forecast after,iv_rows=60 max_iv_horizon=60,PASS
+no_95_series,all,No 95% upper/lower series rendered,SERIES_NAMES=Actual history | Forward forecast | Upper 80% | Lower 80%,PASS
+all_95_columns_NA,all,forecast_lower_95/upper_95 all NA in calibrated artifact,all95NA=TRUE,PASS
+no_arearange_band,all,No shaded band/arearange/ribbon,HAS_AREARANGE=FALSE,PASS
+summary_iv_horizon,all,Calibrated horizon shows 1-60 days,iv_horizon=1-60 days,PASS
+summary_holdout_coverage,all,Holdout coverage (80%) shown,holdout=0.7979,PASS
+summary_calibration_method,all,Calibration method shown,cal_method=global_inflation,PASS
+summary_calibration_grain,all,Calibration grain shown,grain=entity_key_x_horizon_bucket,PASS
+summary_sample_size,all,Calibration sample size shown,sample=987,PASS
+summary_levels,all,Interval shown = 80%,levels=80%,PASS

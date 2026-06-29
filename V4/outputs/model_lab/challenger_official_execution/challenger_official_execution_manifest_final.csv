@@ -1,0 +1,9 @@
+run_id,model_name,execution_mode,entity_window_count,horizon_days,expected_forecast_rows,actual_forecast_rows,official_execution_status,created_timestamp
+challenger_official_execution,AutoARIMA,official,454,30,13620,13620,official_model_passed,2026-06-13T16:11:28
+challenger_official_execution,Theta,official,454,30,13620,13620,official_model_passed,2026-06-13T16:11:28
+challenger_official_execution,ETS Explicit,official,454,30,13620,13620,official_model_passed,2026-06-13T16:11:28
+challenger_official_execution,LightGBM,official,454,30,13620,13620,official_model_passed,2026-06-13T16:11:28
+challenger_official_execution,XGBoost,official,454,30,13620,13620,official_model_passed,2026-06-13T16:11:28
+challenger_official_execution,FastNeuralAR_MLP,official,454,30,13620,13620,official_model_passed,2026-06-13T16:11:28
+challenger_official_execution,NBEATS,official,454,30,0,0,deferred_runtime_impractical,2026-06-13T16:11:28
+challenger_official_execution,NHITS,official,454,30,0,0,deferred_dependency_blocked,2026-06-13T16:11:28

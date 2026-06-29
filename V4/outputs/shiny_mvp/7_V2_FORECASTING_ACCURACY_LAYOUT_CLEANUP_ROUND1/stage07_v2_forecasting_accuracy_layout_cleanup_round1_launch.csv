@@ -1,0 +1,22 @@
+field,value
+stage,Stage 07 - V2 Forecasting Accuracy Layout Cleanup Round 1
+active_root,V2
+app_dir,V2/shiny_app
+launch_script,scripts/start_shiny.ps1
+preferred_port,3838
+bound_port,3838
+process_id,50244
+prior_process_stopped,14680
+url,http://127.0.0.1:3838
+http_status,200
+content_length,201722
+stdout_log,outputs/shiny_mvp/7_V2_FORECASTING_ACCURACY_LAYOUT_CLEANUP_ROUND1/logs/accuracy_round1_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_FORECASTING_ACCURACY_LAYOUT_CLEANUP_ROUND1/logs/accuracy_round1_stderr.log
+stderr_errors,none
+css_version,20260624k
+single_clean_instance,true
+data_modified,false
+models_run,false
+official_metrics_recomputed,false
+champion_changed,false
+data_source,data/processed/forecast_viewer_model_outputs.csv

@@ -1,0 +1,4 @@
+file,exists,size_bytes,kind,notes
+outputs/v3_3_daily_refresh/v3_3c_exec_execution_wiring/staging/clean_challenger_execution_status.csv,YES,2075,staging_output,Staged under execution-wiring; never promoted to data/processed.
+outputs/v3_3_daily_refresh/v3_3c_exec_execution_wiring/staging/daily_15_model_outputs.csv,YES,4590,staging_output,Staged under execution-wiring; never promoted to data/processed.
+outputs/v3_3_daily_refresh/v3_3c_exec_execution_wiring/staging/dl_reuse_frozen_forecasts.csv,YES,13549234,staging_output,Staged under execution-wiring; never promoted to data/processed.

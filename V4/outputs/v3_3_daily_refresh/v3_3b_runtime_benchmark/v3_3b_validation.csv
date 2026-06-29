@@ -1,0 +1,28 @@
+check_id,check_description,result,detail
+V01,S00 auth/VPN/SQL precheck passed,PASS,30.8s exit 0 no interactive prompt
+V02,Unattended local execution confirmed,PASS,auth_mode ActiveDirectoryInteractive token cached
+V03,S01 ingestion executed and measured,PASS,85.2s exit 0
+V04,S02 transform executed and measured,PASS,1.6s exit 0
+V05,S03 orchestrator+baseline executed and measured,PASS,12.0s exit 0; baseline assert 3178 held
+V06,S04 forecast viewer handoff executed and measured,PASS,5.0s exit 0
+V07,S05 tournament+champion executed and measured,PASS,2.9s exit 0
+V08,S06 canonical universe (R) executed and measured,PASS,1.3s exit 0; 12/12 checks
+V09,S07 evaluation executed and measured,PASS,1.0s exit 0
+V10,S08 governance executed and measured,PASS,5.8s exit 0; 5/5 validation_failures=0
+V11,Daily-scope total runtime computed,PASS,145.6s = 2.43 min (S00-S08)
+V12,S03b legacy heavy probe measured,PASS,17.0 min incomplete; stopped safely
+V13,S03b marked LEGACY_HEAVY_CHALLENGER_PROBE / NOT_IN_DAILY_SCOPE,PASS,recorded in stage_runtime_summary + daily_scope_alignment
+V14,NBEATS/NHITS excluded from daily scope,PASS,daily_scope_alignment.csv flags both NOT_IN_SCOPE
+V15,Active DL models identified (FNAR-V2 NLIN-DLIN_FIXED SMLP-TCN),PASS,evidence_source candidate_evaluation
+V16,Champion unchanged after benchmark rerun,PASS,ETS Explicit MASE 6.901144
+V17,forecast_comparison=0 classified,PASS,expected data drift not transform bug
+V18,State backup created before mutation,PASS,95 files 169.2 MB + challenger dirs
+V19,Productive state restored from backup,PASS,key files back to 6/10 and 6/26 V3.2H timestamps
+V20,No orphaned python processes after stop,PASS,python.exe count = 0
+V21,No V1/V2 files modified,PASS,all work under V3
+V22,No scheduler created,PASS,measurement only
+V23,No pipeline scripts modified,PASS,only logging wrappers used
+V24,Single-entrypoint for 15-model universe exists,FAIL,No unified daily entrypoint - requirement for V3.3C
+V25,Last Update seal reflects full pipeline,FAIL,Currently reflects Transform only - build S11 in V3.3E
+V26,Champion auto-apply guardrails exist,FAIL,None - build S13 in V3.3F
+V27,Within 150-minute hard budget,PASS,total wall clock ~23 min

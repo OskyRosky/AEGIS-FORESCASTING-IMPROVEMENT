@@ -1,0 +1,11 @@
+{
+  "active_project_root": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V1",
+  "target_shiny_app": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V1\\shiny_app",
+  "rscript_path": "C:\\Program Files\\R\\R-4.6.0\\bin\\x64\\Rscript.exe",
+  "default_host": "127.0.0.1",
+  "default_port": 3838,
+  "launch_script": "scripts\\launch_shiny_v1.ps1",
+  "stop_script": "scripts\\stop_shiny_v1.ps1",
+  "visual_validation_required": true,
+  "no_recompute_policy": true
+}

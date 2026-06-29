@@ -1,0 +1,15 @@
+check_name,status,details
+Rscript discovery completed,pass,rows=6
+Rscript.exe found,pass,C:\Program Files\R\R-4.6.0\bin\x64\Rscript.exe
+shiny_runtime_config.json created,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1\outputs\shiny_mvp\7_0B_runtime_fix\shiny_runtime_config.json
+launch_shiny_v1.ps1 created,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1\scripts\launch_shiny_v1.ps1
+stop_shiny_v1.ps1 created,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1\scripts\stop_shiny_v1.ps1
+baseline launch attempted,pass,rows=1
+URL captured,pass,http://127.0.0.1:3838
+port captured,pass,3838
+HTTP status captured,pass,200
+ready for 7.0C visual work if HTTP 200,pass,http_status=200
+blocked pending R/Rscript/package/app fix if launch failed,pass,
+shiny_app files unchanged,pass,No shiny_app writes performed by runtime fix scripts.
+MassiveForecasting-V3 files unchanged,pass,Reference app untouched.
+Stage 05/06/Audit #6 artifacts unchanged,pass,Historical/governance artifacts untouched.

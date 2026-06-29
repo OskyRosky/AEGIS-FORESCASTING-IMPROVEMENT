@@ -1,0 +1,26 @@
+check_name,status,details
+v2_root_exists,pass,"...\AEGIS-FORESCASTING-IMPROVEMENT\V2 exists and is the active workspace"
+old_launch_script_found,pass,scripts\launch_shiny_v1.ps1 located under V2\scripts
+old_stop_script_found,pass,scripts\stop_shiny_v1.ps1 located under V2\scripts
+start_shiny_created,pass,scripts\start_shiny.ps1 present (renamed from launch_shiny_v1.ps1, content preserved)
+stop_shiny_created,pass,scripts\stop_shiny.ps1 present (renamed from stop_shiny_v1.ps1, content preserved)
+old_launch_script_removed,pass,launch_shiny_v1.ps1 no longer present in V2\scripts (moved/renamed)
+old_stop_script_removed,pass,stop_shiny_v1.ps1 no longer present in V2\scripts (moved/renamed)
+active_reference_updated,pass,Internal $StopCommand string in start_shiny.ps1 updated stop_shiny_v1.ps1 -> stop_shiny.ps1
+readme_reference_check,not_applicable,README.md launches via shiny::runApp(\"shiny_app\") directly; no .ps1 script reference to update
+historical_references_untouched,pass,Historical references left as records in V2\outputs\shiny_mvp\*\*.md/*.csv and V2\python\shiny_mvp\emit_*/validate_* scripts
+shiny_launches_with_start_shiny,pass,Launched via scripts\start_shiny.ps1; JSON returned process_id 19644
+http_status_checked,pass,HTTP 200 LEN 144554 on http://127.0.0.1:3838
+pid_returned,pass,process_id 19644 returned by start_shiny.ps1 JSON
+logs_returned,pass,stdout + stderr logs written under outputs\shiny_mvp\7_V2_NEUTRAL_LAUNCH_SCRIPT_CLEANUP\logs
+stop_command_self_consistent,pass,start_shiny.ps1 JSON stop_command now reads scripts\stop_shiny.ps1 -PidToStop 19644
+shiny_stops_with_stop_shiny,pass,stop_shiny.ps1 -PidToStop 19644 ran; port 3838 no longer listening; 0 Rscript processes
+v1_not_modified,pass,V1\scripts still named launch_shiny_v1.ps1 / stop_shiny_v1.ps1 (LastWriteTime 6/15/2026, unchanged)
+no_data_artifacts_modified,pass,No data/processed or governed artifact files written or altered
+no_shiny_page_logic_modified,pass,No edits to shiny_app ui/server/R sources; only scripts\start_shiny.ps1 internal string changed
+no_models_run,pass,No model training executed
+no_forecasts_generated,pass,No forecast generation executed
+no_tournaments_rerun,pass,No tournament recomputation executed
+no_metrics_recalculated,pass,No MASE/RMSSE or metric recomputation executed
+champion_decision_not_changed,pass,champion_decision.csv untouched; ETS Explicit unchanged
+stderr_warnings,warning,stderr contains only benign package-masking notices and 1 vroom parsing warning (preexisting, non-error)

@@ -1,0 +1,15 @@
+component,source_file,pattern_detected,description,reusable_for_tesseract,reuse_type,reason,notes
+app runner,AI_SAF.R,source-based Shiny app bootstrap,"Main runner sources libraries, UI fragments, and server.",True,adapt_pattern,Use app orchestration concept but not project-specific text.,reference only; no copy performed
+library loader,Librerias.R,centralized package loading,Dependencies are centralized.,True,adapt_pattern,Use minimal display-only dependency loader for TESSERACT.,reference only; no copy performed
+ui assembly,ui.R,dashboardPage assembly,UI assembled from header/sidebar/body.,True,reuse_pattern,Useful modular shell pattern.,reference only; no copy performed
+header,header.R,dashboardHeader,Separate header fragment.,True,reuse_pattern,Reusable layout pattern.,reference only; no copy performed
+sidebar,sider.R,dashboardSidebar/sidebarMenu,Sidebar separated into file.,True,adapt_pattern,Use with TESSERACT sections.,reference only; no copy performed
+body,body.R,dashboardBody/tabItems/boxes,Body contains tabbed dashboard content.,True,adapt_pattern,"Useful layout, must replace domain content.",reference only; no copy performed
+server,server.R,large server function,Server contains interactive and runtime behavior.,False,manual_review,Read-only TESSERACT server must avoid recomputation.,reference only; no copy performed
+modules,modules/,optional modular R files,Module directory not prominent if absent.,False,manual_review,Stage 07 can introduce modules cautiously.,reference only; no copy performed
+footer,body.R,footer-like layout if present,Footer concept may be embedded in body.,True,adapt_pattern,Use for version/governance info.,reference only; no copy performed
+styling,www/ or CSS,custom CSS/assets,Assets can inform styling if present.,True,adapt_pattern,No direct copy; create TESSERACT styling.,reference only; no copy performed
+dark mode,body.R,switch/dark mode tokens,Dark-mode switch pattern may exist.,True,manual_review,Use only if simple display feature.,reference only; no copy performed
+data loading,importacion.R,data import/cooking,Reference app contains import/data logic.,False,do_not_reuse,TESSERACT Shiny must consume governed artifacts only.,reference only; no copy performed
+runtime pipeline,_30_engine.R,forecast engine/pipeline,Reference includes modeling pipeline scripts.,False,do_not_reuse,Violates no-model/no-recompute governance.,reference only; no copy performed
+assets,ingresos.png,static image asset,Static assets exist.,True,manual_review,Do not reuse CGR/domain assets directly.,reference only; no copy performed

@@ -1,0 +1,20 @@
+check_id,page,what_to_verify,expected
+1,Artifacts,Open Reference -> Artifacts,Page loads with new collapsible layout.
+2,Artifacts,About the Artifacts Reference,Collapsed by default; expands to read-only artifacts explanation.
+3,Artifacts,Artifact Overview,Open by default; shows the 4 registry/availability KPI cards.
+4,Artifacts,Governed Artifact Inventory,Open by default; governed downloads grid + full artifact catalog table render.
+5,Artifacts,Artifact Notes / Lineage / Evidence,Collapsed by default; data lineage table + single-source-of-truth note render.
+6,Methodology,Open Reference -> Methodology,Page loads with new collapsible layout.
+7,Methodology,About the Methodology Reference,Collapsed by default; expands to read-only methodology explanation.
+8,Methodology,Methodology Overview,Open by default; data pipeline + current dataset + consumes + structure all present.
+9,Methodology,Architecture Diagram,Open placeholder box; text 'will be added here once the approved image is available'; NO image yet.
+10,Methodology,Project Documentation,Collapsed placeholder box; text 'will be linked or embedded here once the approved document is available'; NO document yet.
+11,Methodology,Methodology Notes,Collapsed; artifacts-page pointer note + read-only tag.
+12,Version,Open Reference -> Version,Page loads with new collapsible layout.
+13,Version,About the Version Reference,Collapsed by default; expands to version-metadata explanation.
+14,Version,Version Overview,Open by default; App version / Forecast version / Artifacts available cards unchanged.
+15,Version,Build / Runtime Metadata,Open; Build & governance + Runtime info lists with unchanged values.
+16,Version,Artifact Freshness / Last Update,Open; data contract build date and coverage unchanged.
+17,Version,Version Notes,Collapsed; read-only governed build tag.
+18,All,Collapse/expand behavior,Every box toggles independently.
+19,No regressions,Forecasting / Models / Governance pages,Untouched and still working.

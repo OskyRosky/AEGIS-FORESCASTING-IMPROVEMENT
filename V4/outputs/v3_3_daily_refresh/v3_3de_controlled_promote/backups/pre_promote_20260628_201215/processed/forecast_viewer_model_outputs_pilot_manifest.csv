@@ -1,0 +1,29 @@
+key,value
+artifact_name,forecast_viewer_model_outputs_pilot.csv
+artifact_format,csv_fallback
+build_timestamp,2026-06-18 11:42:19
+pilot_series,APC-Dedicated | APC-MSIT | APC-Multitenant
+series_count,3
+model_count,13
+row_count,14040
+date_min,2025-05-03
+date_max,2026-04-27
+forecast_type,backtest_historical_comparison
+interval_availability,none_point_forecasts_only
+deferred_models_excluded,NBEATS | NHITS
+no_model_rerun,TRUE
+no_synthetic_forecasts,TRUE
+no_metric_recalculation,TRUE
+no_champion_change,TRUE
+source__baseline,outputs\model_lab\full_baseline\full_baseline_forecasts.csv
+source_rows__baseline,95340
+source_sha256_16__baseline,168e9d9229917356
+source__challenger,outputs\model_lab\challenger_metrics\challenger_actual_forecast_join.csv
+source_rows__challenger,81720
+source_sha256_16__challenger,a83888ecc204cd03
+source__actuals,data\processed\actuals.csv
+source_rows__actuals,84537
+source_sha256_16__actuals,427a153bffdad54b
+source__universe,outputs\model_lab\model_lab_closure_pack\model_lab_final_model_universe.csv
+source_rows__universe,15
+source_sha256_16__universe,5c63ecd981253ce3

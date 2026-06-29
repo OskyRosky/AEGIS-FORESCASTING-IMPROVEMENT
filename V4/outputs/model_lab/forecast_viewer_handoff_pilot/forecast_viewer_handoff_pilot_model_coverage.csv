@@ -1,0 +1,40 @@
+series_key,model_name,model_origin,model_family,is_selected_champion,risk_status,rows,actual_points,min_date,max_date
+APC-Dedicated,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27
+APC-Dedicated,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27
+APC-Dedicated,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27
+APC-Dedicated,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Dedicated,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27
+APC-MSIT,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27
+APC-MSIT,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27
+APC-MSIT,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-MSIT,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,FixedGrowth_1_5,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,FixedGrowth_3,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,FixedGrowth_4,baseline,growth_baseline,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,FixedGrowth_6,baseline,growth_baseline,False,high_risk,360,360,2025-05-03,2026-04-27
+APC-Multitenant,FastNeuralAR_MLP,challenger,lightweight_neural,False,high_risk,360,360,2025-05-03,2026-04-27
+APC-Multitenant,LightGBM,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,LinearRegression,baseline,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,XGBoost,challenger,machine_learning,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,ARIMA_Fixed,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,AutoARIMA,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,ETS Explicit,challenger,statistical,True,high_risk,360,360,2025-05-03,2026-04-27
+APC-Multitenant,ETS_Current,baseline,statistical,False,ok,360,360,2025-05-03,2026-04-27
+APC-Multitenant,Theta,challenger,statistical,False,ok,360,360,2025-05-03,2026-04-27

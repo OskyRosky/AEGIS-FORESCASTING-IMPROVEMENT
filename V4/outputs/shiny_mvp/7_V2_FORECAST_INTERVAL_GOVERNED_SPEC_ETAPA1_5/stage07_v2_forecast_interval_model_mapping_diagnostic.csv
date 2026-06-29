@@ -1,0 +1,19 @@
+production_model_version,prod_row_count,candidate_backtest_model_name,match_type,confidence,notes
+ARIMA,11596,ARIMA_Fixed | AutoARIMA,AMBIGUOUS,low,Two plausible backtest counterparts; cannot pick one reliably
+ExponentialSmoothing,7221,ETS Explicit | ETS_Current,AMBIGUOUS,low,Two plausible ETS counterparts; ambiguous
+FixedGrowth1%,7235,FixedGrowth_1_5 (?),NO_RELIABLE_MATCH,very_low,Rate scheme differs (1.0% vs 1_5); not a clean match
+FixedGrowth2%,2894,none,NO_MATCH,none,Backtest growth rates are 1_5/3/4/6; no 2% equivalent
+FixedGrowth3%,1447,FixedGrowth_3 (?),WEAK_MATCH,low,Only if _3 denotes 3%; unverified naming convention
+FixedGrowth5%,2885,none,NO_MATCH,none,No 5% growth model in backtest
+FixedGrowth2%_ARIMA_Ensemble,5788,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth5%_ARIMA_Ensemble,5781,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth5%_ExponentialSmoothing_Ensemble,5778,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth4%_ARIMA_Ensemble,2894,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth3%_ARIMA_Ensemble,2894,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth2%_FixedGrowth1%_Ensemble,2894,none,NO_MATCH,none,Ensemble not present in backtest artifact
+ExponentialSmoothing_ARIMA_Ensemble,1447,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth3%_FixedGrowth1%_Ensemble,1447,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth4%_ExponentialSmoothing_Ensemble,1447,none,NO_MATCH,none,Ensemble not present in backtest artifact
+FixedGrowth3%_ExponentialSmoothing_Ensemble,1447,none,NO_MATCH,none,Ensemble not present in backtest artifact
+__SUMMARY__,65095,n/a,NOT_RELIABLE,n/a,"0 clean 1:1 matches; 1 weak; 2 ambiguous; 13 none. Per-model calibration INFEASIBLE -> use key x horizon-bucket fallback"
+__BACKTEST_ONLY_MODELS__,n/a,AutoARIMA;ETS_Current;Theta;LightGBM;XGBoost;LinearRegression;FastNeuralAR_MLP;FixedGrowth_4;FixedGrowth_6,N/A,n/a,Present in backtest but NOT in production forecasts

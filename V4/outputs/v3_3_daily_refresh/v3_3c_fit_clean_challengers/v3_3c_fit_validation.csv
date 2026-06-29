@@ -1,0 +1,32 @@
+check,result,detail
+canonical_15_model_scope_preserved,PASS,15 models across 4 families; no additions/removals
+growth_baseline_count_4,PASS,FixedGrowth_1_5/3/4/6
+statistical_count_5,PASS,ARIMA_Fixed/AutoARIMA/ETS Explicit/ETS_Current/Theta
+machine_learning_count_3,PASS,LightGBM/LinearRegression/XGBoost
+deep_learning_count_3,PASS,FNAR-V2/NLIN-DLIN_FIXED/SMLP-TCN
+clean_challenger_fit_created,PASS,clean_challenger_fit_outputs.csv with 150 rows (smoke)
+autoarima_fit_path_ready,PASS,SMOKE_PASS via pmdarima; 30 rows; 0 NaN
+ets_explicit_fit_path_ready,PASS,SMOKE_PASS via statsmodels ExponentialSmoothing; 30 rows; 0 NaN
+theta_fit_path_ready,PASS,SMOKE_PASS via statsmodels ThetaModel (torch-free); 30 rows; 0 NaN
+lightgbm_fit_path_ready,PASS,SMOKE_PASS via lightgbm recursive; 30 rows; 0 NaN
+xgboost_fit_path_ready,PASS,SMOKE_PASS via xgboost recursive; 30 rows; 0 NaN
+nbeats_excluded,PASS,not imported; not in active daily scope; legacy presence documented
+nhits_excluded,PASS,not imported; not in active daily scope; legacy presence documented
+fastneuralar_original_excluded,PASS,retired original not used; only frozen DL reuse for FNAR-V2
+prohibited_model_guard_passes,PASS,guard CLEAN; 0 violations in active daily scope
+dl_reuse_preserved,PASS,3 DL models wired reuse_frozen_artifact (FROZEN_REUSE)
+fnar_v2_reuse_preserved,PASS,reuse closed V3.2B candidate output; no training
+nlin_dlin_fixed_reuse_preserved,PASS,reuse closed V3.2B candidate output; no training
+smlp_tcn_reuse_preserved,PASS,reuse closed V3.2B candidate output; no training
+staging_only,PASS,all output under outputs/v3_3_daily_refresh/v3_3c_fit_clean_challengers
+no_data_processed_promotion,PASS,no data/processed files modified after 2026-06-27
+no_champion_change,PASS,champion untouched
+no_forecast_productive_change,PASS,no productive forecast artifact modified
+no_interval_change,PASS,no prediction-interval change
+no_governance_change,PASS,no governance artifact modified
+no_scheduler_created,PASS,no scheduler/cron created
+no_v3_3d_started,PASS,V3.3D not started
+no_v3_3e_started,PASS,V3.3E not started
+no_v3_3f_started,PASS,V3.3F not started
+no_v4_started,PASS,V4 not started
+v1_v2_untouched,PASS,V1 and V2 trees not modified

@@ -1,0 +1,17 @@
+field,value
+process_id,39380
+host,127.0.0.1
+port,3839
+url,http://127.0.0.1:3839
+http_status,200
+preferred_port,3838
+port_note,3838 was busy; launcher auto-selected 3839
+launch_script,scripts\start_shiny.ps1
+launch_command,powershell -ExecutionPolicy Bypass -File scripts\start_shiny.ps1 -PreferredPort 3838 -LogDir "outputs\shiny_mvp\7_V2_FORECAST_INTERVAL_SHINY_VISUALIZATION_ETAPA3\logs" -LogPrefix "etapa3_intervals"
+stdout_log,outputs\shiny_mvp\7_V2_FORECAST_INTERVAL_SHINY_VISUALIZATION_ETAPA3\logs\etapa3_intervals_stdout.log
+stderr_log,outputs\shiny_mvp\7_V2_FORECAST_INTERVAL_SHINY_VISUALIZATION_ETAPA3\logs\etapa3_intervals_stderr.log
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 39380
+data_source_used,data/processed/forecasts_with_intervals_relative.csv
+fallback_source,data/processed/forecasts.csv
+working_directory,V2 (active root)
+rscript_path,C:\Program Files\R\R-4.6.0\bin\x64\Rscript.exe

@@ -1,0 +1,10 @@
+key,value
+url,http://127.0.0.1:3838
+process_id,10644
+port,3838
+http_status,200
+content_length,155825
+stdout_log,outputs/shiny_mvp/7_V2_MODELS_UNIVERSE_CLEANUP_FOLLOWUP/logs/universe2_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_MODELS_UNIVERSE_CLEANUP_FOLLOWUP/logs/universe2_stderr.log
+stop_command,scripts\stop_shiny.ps1 -PidToStop 10644
+launch_command,scripts\start_shiny.ps1 -PreferredPort 3838 -LogDir "outputs\shiny_mvp\7_V2_MODELS_UNIVERSE_CLEANUP_FOLLOWUP\logs" -LogPrefix "universe2"

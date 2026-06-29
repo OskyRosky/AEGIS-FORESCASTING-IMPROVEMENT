@@ -1,0 +1,16 @@
+check_name,status,details
+ACTIVE VERSION ROOT exists,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1
+outputs/model_lab exists inside V1,pass,outputs/model_lab
+outputs/governance exists inside V1,pass,outputs/governance
+outputs/governance/audit_6 exists inside V1,pass,outputs/governance/audit_6
+python exists inside V1,pass,python
+shiny_app exists inside V1,pass,shiny_app
+Stage 06 closure summary exists inside V1,pass,governance_closure_summary.csv
+Audit #6 summary exists inside V1,pass,audit_6_summary.csv
+dashboard governance contract exists inside V1,pass,dashboard_governance_contract.csv
+champion conditions protocol exists inside V1,pass,champion_conditions_protocol.csv
+governance recommendations exist inside V1,pass,governance_recommendations.csv
+no modifications performed,pass,Only diagnostic script and diagnostic outputs were created.
+diagnostic outputs created under V1 only,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1\outputs\versioning_diagnostics
+V1 is usable as active root after controlled migration,pass,runtime old-root files needing review=0
+Stage 07 can proceed only after reviewed path migration actions are resolved or waived,pass,warning if runtime actions remain

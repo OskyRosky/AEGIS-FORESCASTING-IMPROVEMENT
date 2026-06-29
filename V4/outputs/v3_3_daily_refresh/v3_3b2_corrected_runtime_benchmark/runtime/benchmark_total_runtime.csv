@@ -1,0 +1,9 @@
+metric,value
+sum_of_stage_runtimes_minutes,20.04
+wall_clock_minutes_observed,18.2
+target_runtime_minutes,105.0
+warning_runtime_minutes,120.0
+hard_budget_minutes,150.0
+budget_status,OK
+final_status,V3_3B2_CORRECTED_RUNTIME_BENCHMARK_COMPLETED
+note,restore completed via robocopy after transient OneDrive lock

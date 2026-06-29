@@ -1,0 +1,7 @@
+artifact_key,file_path,exists,row_count,column_count,source_role,tournament_use,notes
+tournament_model_scorecard,outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,true,13,17,primary governed scorecard,Tournament standings table and MASE/RMSSE chart,read-only governed artifact
+tournament_pairwise_evidence,outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,true,78,16,governed pairwise evidence,Pairwise evidence table,read-only governed artifact
+model_lab_champion_summary,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,true,1,11,governed champion summary,"Executive cards: champion, confidence, support counts",read-only governed artifact
+champion_decision,outputs/model_lab/champion_decision/champion_decision.csv,true,1,9,governed champion decision,"Champion context, not recomputed",read-only governed artifact
+champion_conditions_protocol,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,true,5,11,governed champion conditions,Context for champion-under-conditions language,read-only governed artifact
+champion_dashboard_language,outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,true,13,8,governed dashboard language,Language guardrails,read-only governed artifact

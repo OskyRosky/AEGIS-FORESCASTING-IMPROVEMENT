@@ -1,0 +1,23 @@
+file_path,file_type,role_detected,size_bytes,line_count,is_runtime_file,is_ui_file,is_server_file,is_dependency_file,is_asset_file,notes
+_00_engine_contract.R,r_script,forecast/model runtime,2399,69,True,False,False,False,False,content inspected
+_10_series_builders.R,r_script,forecast/model runtime,13161,394,True,False,False,False,False,content inspected
+_20_forecast_runner.R,r_script,forecast/model runtime,2745,82,True,False,False,False,False,content inspected
+_30_engine.R,r_script,forecast/model runtime,8549,294,True,False,False,False,False,content inspected
+AI_SAF.R,r_script,app runner / ui assembly,5261,178,True,True,False,False,False,content inspected
+backtest_airpassengers_demo_h12.rds,data_binary,support file,15215,,False,False,False,False,True,binary or non-text inventory only
+body.R,r_script,dashboard body,40940,1202,False,True,False,False,False,content inspected
+forecast_helpers.R,r_script,forecast/model runtime,5045,160,True,False,False,False,False,content inspected
+forecast_models_registry.R,r_script,forecast/model runtime,15422,480,True,False,False,False,False,content inspected
+header.R,r_script,header,1137,46,False,True,False,False,False,content inspected
+importacion.R,r_script,support file,5495,137,True,False,False,False,False,content inspected
+ingresos.png,image_asset,support file,57829,,False,False,False,False,True,binary or non-text inventory only
+Librerias.R,r_script,library loader,2915,92,True,False,False,True,False,content inspected
+Parametros.R,r_script,support file,1876,56,True,False,False,False,False,content inspected
+precompute_bundles.R,r_script,forecast/model runtime,10364,293,True,False,False,False,False,content inspected
+run_dashboard.R,r_script,support file,1497,47,True,False,False,True,False,content inspected
+server.R,r_script,server,98588,2663,True,False,True,False,False,content inspected
+sider.R,r_script,sidebar,3164,58,False,True,False,False,False,content inspected
+Tablas_Dashboard_Ingresos.R,r_script,support file,35861,936,True,False,False,True,False,content inspected
+test_backtesting_registry.R,r_script,forecast/model runtime,3523,109,True,False,False,False,False,content inspected
+test_registry_modelos.R,r_script,forecast/model runtime,3793,116,True,False,False,False,False,content inspected
+ui.R,r_script,app runner / ui assembly,1456,48,False,True,False,True,False,content inspected

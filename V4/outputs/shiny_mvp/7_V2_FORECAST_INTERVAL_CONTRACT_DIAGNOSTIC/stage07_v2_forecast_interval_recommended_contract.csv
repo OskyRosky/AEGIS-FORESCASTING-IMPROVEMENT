@@ -1,0 +1,17 @@
+column_name,type,required,description
+entity_key,string,yes,Key / series identifier (unchanged)
+date,date,yes,Forward date (unchanged)
+forecast_value,float,yes,Point forecast / mean (unchanged)
+forecast_lower_80,float,optional,Lower bound at 80% interval (NA if not produced)
+forecast_upper_80,float,optional,Upper bound at 80% interval (NA if not produced)
+forecast_lower_95,float,optional,Lower bound at 95% interval (NA if not produced)
+forecast_upper_95,float,optional,Upper bound at 95% interval (NA if not produced)
+interval_method,string,optional,"How bounds were produced: model_native / residual_bootstrap / empirical_backtest / quantile_model / none"
+interval_level_available,string,optional,"Comma list of levels populated, e.g. '80,95' or '' if none"
+model_version,string,yes,Selected production model (unchanged)
+forecast_version,date,yes,Production run tag (unchanged)
+scenario,string,yes,Scenario (unchanged)
+resource,string,yes,Resource (unchanged)
+source_file,string,yes,Upstream raw filename (unchanged)
+run_timestamp,timestamp,recommended,Generation run timestamp for traceability
+recommendation_notes,,,"RECOMMENDED = Wide format (above). Pros: trivial for Shiny (one row per entity_key x date, direct columns for arearange; no pivot; backward compatible since new columns are additive and NA-safe). Cons: more columns; one column pair per level. Long format (value_type = Forecast-Mean/Lower/Upper + interval_level) is more normalized and matches the SQL source ValueType discriminator, but forces a pivot in Shiny and risks row-count x3 and join bugs. KEEP value_type column for upstream lineage even in wide format (it stays 'Forecast-Mean' for the mean row source); intervals live in dedicated numeric columns. Capping at zero (non-negative) should be a generation-side rule, not Shiny."

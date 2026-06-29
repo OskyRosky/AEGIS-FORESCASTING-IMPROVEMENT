@@ -1,0 +1,4 @@
+observation,value
+newest_artifact,outputs/v3_3_daily_refresh/v3_3b2_corrected_runtime_benchmark/runtime/stage_runtime_summary.csv
+newest_artifact_mtime,2026-06-27T19:55:56
+observed_at,2026-06-27T19:55:56

@@ -1,0 +1,34 @@
+check,result,evidence
+dashboard_launch_passed,PASS,Shiny started PID 17492 on 127.0.0.1:3838 HTTP 200 LEN 274820; no critical stderr
+last_update_visible_2026_06_28,PASS,served HTML contains Last update label and date 2026-06-28
+run_metadata_exists,PASS,data/processed/run_metadata.csv present
+run_metadata_contract_valid,PASS,12 fields run_timestamp..notes; run_timestamp 2026-06-28T17:27:14; 45 entities; 84537 actual rows; 65095 forecast rows
+forecasts_exists,PASS,data/processed/forecasts.csv present
+actuals_exists,PASS,data/processed/actuals.csv present
+entities_exists,PASS,data/processed/entities.csv present
+forecast_comparison_exists,PASS,data/processed/forecast_comparison.csv present (same-date comparison; comparison_rows=0 by contract)
+data_processed_promoted,PASS,run_metadata run_timestamp 2026-06-28T17:27 (was 6/10); pipeline audit PROMOTED run v3_3de_run_20260628_172644
+data_raw_unchanged,PASS,V3 data/raw 6 files all LastWrite 2026-06-10; 0 files modified on/after 2026-06-28
+champion_ets_explicit,PASS,run_metadata_pipeline champion_model=ETS Explicit; promote postcheck champion_frozen=ETS Explicit; gate G24
+no_champion_auto_promotion,PASS,staging gate G25_champion_not_promoted PASS; champion frozen
+governance_valid,PASS,governance candidate created (G26); no undue governance change; promote did not alter champion/governance decisions
+canonical_15_model_scope_valid,PASS,gate G05_canonical_15_model_scope PASS; model_scope_check 15 entries
+growth_count_4,PASS,FixedGrowth_1_5/3/4/6 (gate G06)
+statistical_count_5,PASS,ARIMA_Fixed/AutoARIMA/ETS Explicit/ETS_Current/Theta (gate G07)
+machine_learning_count_3,PASS,LightGBM/LinearRegression/XGBoost (gate G08)
+deep_learning_count_3,PASS,FNAR-V2/NLIN-DLIN_FIXED/SMLP-TCN frozen reuse (gate G09)
+nbeats_not_executed,PASS,prohibited guard nbeats_executed=0; gate G10
+nhits_not_executed,PASS,prohibited guard nhits_executed=0; gate G11
+fastneuralar_original_not_executed,PASS,prohibited guard fastneuralar_original_executed=0; gate G12
+v1_untouched,PASS,V1 run_metadata LastWrite 2026-06-10 09:58; 0 files modified on/after 2026-06-28; gate G32
+v2_untouched,PASS,V2 run_metadata LastWrite 2026-06-10 09:58; 0 files modified on/after 2026-06-28; gate G32
+v4_not_started,PASS,no V4 work initiated; AI/LLM layer deferred to future Azure phase
+scheduler_not_started,PASS,gate G30_no_scheduler_created PASS; G-1/G-2/G-3 deferred to backlog/Azure
+vpn_automation_not_started,PASS,no VPN auto-login implemented; deferred out of MVP
+email_mfa_automation_not_started,PASS,no email/MFA automation implemented; deferred out of MVP
+backup_pre_promote_exists,PASS,v3_3de_controlled_promote/backups/pre_promote_20260628_201215/ retained
+rollback_plan_exists,PASS,v3_3de_controlled_promote_rollback_plan.csv present (rollback not_needed=OK)
+de1b_full_staging_evidence_exists,PASS,run-dir v3_3de_run_20260628_172644 with validation/gates.csv 32/32 PASS + status/runtime/staging/dashboard_candidate
+de2_controlled_promote_evidence_exists,PASS,v3_3de_controlled_promote report+postcheck(6/6)+validation+plan+inventories present
+dashboard_tabs_basic_load_check,PASS,served HTML contains nav sections home/overview/universe/explorer/risks/artifacts (all 6 groups)
+final_closure_report_created,PASS,outputs/v3_final_validation/ created with report + checklist + inventories + closure summary

@@ -1,0 +1,38 @@
+artifact_group,artifact_path,artifact_exists,artifact_role,required_for_audit_6,required_for_shiny_handoff,created_timestamp
+6_0,outputs/governance/6_0_audit5_finding_resolution/audit5_finding_resolution.csv,True,Audit #5 finding resolution and governed correction.,True,False,2026-06-14T10:56:50
+6_0,outputs/governance/6_0_audit5_finding_resolution/governed_manifest_correction.csv,True,Audit #5 finding resolution and governed correction.,True,False,2026-06-14T10:56:50
+6_0,outputs/governance/6_0_audit5_finding_resolution/audit5_finding_resolution_report.md,True,Audit #5 finding resolution and governed correction.,True,False,2026-06-14T10:56:50
+6_1,outputs/governance/6_1_governance_foundation/governance_definitions.csv,True,"Governance definitions, taxonomy, foundation, and validation.",True,False,2026-06-14T10:56:50
+6_1,outputs/governance/6_1_governance_foundation/governance_status_taxonomy.csv,True,"Governance definitions, taxonomy, foundation, and validation.",True,False,2026-06-14T10:56:50
+6_1,outputs/governance/6_1_governance_foundation/governance_foundation_report.md,True,"Governance definitions, taxonomy, foundation, and validation.",True,False,2026-06-14T10:56:50
+6_1,outputs/governance/6_1_governance_foundation/governance_6_0_6_1_validation.csv,True,"Governance definitions, taxonomy, foundation, and validation.",True,False,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/decision_action_framework.csv,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/model_recommendation_rules.csv,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/governance_recommendations.csv,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/decision_rule_traceability.csv,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/decision_rules_validation.csv,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_2,outputs/governance/6_2_decision_rules/decision_rules_report.md,True,"Decision actions, risk mappings, recommendations, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_3,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,True,"Champion conditions, language protocol, display requirements, and validation.",True,True,2026-06-14T10:56:50
+6_3,outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,True,"Champion conditions, language protocol, display requirements, and validation.",True,True,2026-06-14T10:56:50
+6_3,outputs/governance/6_3_champion_conditions/champion_condition_traceability.csv,True,"Champion conditions, language protocol, display requirements, and validation.",True,True,2026-06-14T10:56:50
+6_3,outputs/governance/6_3_champion_conditions/champion_dashboard_display_requirements.csv,True,"Champion conditions, language protocol, display requirements, and validation.",True,True,2026-06-14T10:56:50
+6_3,outputs/governance/6_3_champion_conditions/champion_conditions_validation.csv,True,"Champion conditions, language protocol, display requirements, and validation.",True,True,2026-06-14T10:56:50
+6_3,outputs/governance/6_3_champion_conditions/champion_conditions_report.md,True,"Champion conditions, language protocol, display requirements, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_governance_contract.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_required_sections.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_data_binding_contract.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_do_dont_rules.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_warning_labels.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_governance_traceability.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_contract_validation.csv,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_4,outputs/governance/6_4_dashboard_contract/dashboard_governance_contract_report.md,True,"Dashboard contract, sections, bindings, labels, traceability, and validation.",True,True,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_closure_summary.csv,True,Governance closure pack artifacts.,True,True,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_stage_status_manifest.csv,True,Governance closure pack artifacts.,True,False,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_artifact_manifest.csv,True,Governance closure pack artifacts.,True,False,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_register.csv,True,Governance closure pack artifacts.,True,True,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_dashboard_handoff_manifest.csv,True,Governance closure pack artifacts.,True,True,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_next_steps.csv,True,Governance closure pack artifacts.,True,False,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_closure_validation.csv,True,Governance closure pack artifacts.,True,False,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_closure_report.md,True,Governance closure pack artifacts.,True,False,2026-06-14T10:56:50
+6_5,outputs/governance/6_5_governance_closure_pack/governance_executive_summary.md,True,Governance closure pack artifacts.,True,False,2026-06-14T10:56:50

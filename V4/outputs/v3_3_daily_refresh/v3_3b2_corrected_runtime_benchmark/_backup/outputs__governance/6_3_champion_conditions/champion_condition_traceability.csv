@@ -1,0 +1,11 @@
+trace_id,condition_or_language_id,source_artifact,source_field_or_record,trace_rationale,created_timestamp
+T-001,C-002,outputs/model_lab/champion_decision/champion_decision.csv,decision=CHAMPION_SELECTED_WITH_CONDITIONS,Conditional champion status traces to official champion decision.,2026-06-14T10:40:38
+T-002,C-002,outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_model=ETS Explicit,Selected champion model traces to official champion decision.,2026-06-14T10:40:38
+T-003,C-001,outputs/model_lab/champion_decision/champion_decision.csv,decision_confidence=medium,Medium confidence traces to champion decision.,2026-06-14T10:40:38
+T-004,C-001,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,decision_confidence=medium,Medium confidence also traces to closure pack champion summary.,2026-06-14T10:40:38
+T-005,D-004,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,"official_median_mase, official_median_rmsse",Dashboard metric display traces to closure pack champion summary.,2026-06-14T10:40:38
+T-006,C-003,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,"supported_better_count=8, supported_worse_count=0",Pairwise support traces to closure pack champion summary.,2026-06-14T10:40:38
+T-007,C-004,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-001 FastNeuralAR_MLP,FastNeuralAR_MLP risk traces to final risk register.,2026-06-14T10:40:38
+T-008,C-004,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-002/R-003 NBEATS/NHITS,Deferred model conditions trace to final risk register.,2026-06-14T10:40:38
+T-009,C-002,outputs/governance/6_2_decision_rules/governance_recommendations.csv,ETS Explicit KEEP_WITH_CONDITIONS,Conditional champion action traces to 6.2 recommendations.,2026-06-14T10:40:38
+T-010,C-005,outputs/governance/6_2_decision_rules/decision_action_framework.csv,DO_NOT_PRESENT_AS_UNCONDITIONAL_WINNER,Communication guardrail traces to 6.2 action framework.,2026-06-14T10:40:38

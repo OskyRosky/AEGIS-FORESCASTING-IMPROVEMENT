@@ -1,0 +1,9 @@
+check,result,evidence
+champion_model,PASS,ETS Explicit (run_metadata_pipeline champion_model; promote postcheck champion_frozen)
+champion_frozen,PASS,no change vs prior governed champion; gate G24
+no_champion_auto_promotion,PASS,gate G25_champion_not_promoted PASS
+champion_selection_unchanged,PASS,CHAMPION_SELECTED_WITH_CONDITIONS retained (no re-decision in H)
+governance_outputs_candidate_created,PASS,gate G26_governance_outputs_candidate_created PASS
+governance_no_undue_change,PASS,promote was data refresh only; governance artifacts not altered by H validation
+no_model_re_run_in_H,PASS,H is validation-only; no SQL/model/transform/promote executed
+prohibited_model_guard_total,PASS,prohibited_models_executed_total=0

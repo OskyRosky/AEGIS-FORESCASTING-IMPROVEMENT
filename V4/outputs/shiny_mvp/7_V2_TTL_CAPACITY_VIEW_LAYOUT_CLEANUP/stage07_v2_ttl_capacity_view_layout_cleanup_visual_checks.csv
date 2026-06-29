@@ -1,0 +1,15 @@
+check,box,expectation,default_state,status
+how_to_section,How to use this TTL / Capacity View,Collapsible compact guide near top,collapsed,PASS
+capacity_overview,TTL Capacity Overview,Prototype note + Series/Alert/Warning/Healthy/Cool/Soonest-crossover KPI cards in one box,open,PASS
+setup_box,Set up the TTL view,Only Select series + Analyze TTL + demand/supply note,open,PASS
+results_box,TTL Results — Selected Series,Result KPIs (TTL binding/resource/utilization/method) + Months-to-Live gauge + Supply vs Demand crossover,open,PASS
+heatmap_box,Projected Utilization Heatmap,Description line + fleet utilization heatmap,open,PASS
+snapshot_box,Time-to-Live Snapshot Table,Description line + snapshot table + legend,collapsed,PASS
+collapsible_count,all,Six independent collapsible boxes,n/a,PASS
+open_count,all,Four boxes open by default (Overview/Setup/Results/Heatmap),n/a,PASS
+collapsed_count,all,Two boxes collapsed by default (How-to/Snapshot),n/a,PASS
+action_gating,Set up + Results,Gauge/line/KPIs update only after Analyze TTL (ttl_go),n/a,PASS
+output_ids_preserved,all,ttl_summary_cards/ttl_series_kpis/ttl_gauge/ttl_line/ttl_heatmap/ttl_table unchanged,n/a,PASS
+chart_interactivity,Results + Heatmap,Existing highchart/plotly interactivity (crosshair/zoom/export) preserved,n/a,PASS
+no_setup_results_mix,Set up the TTL view,Setup box has no result KPIs/gauge/chart/table,n/a,PASS
+prototype_wording,Capacity Overview,Uses 'Prototype · simulated supply'; no stage07/Shiny-MVP labels,n/a,PASS

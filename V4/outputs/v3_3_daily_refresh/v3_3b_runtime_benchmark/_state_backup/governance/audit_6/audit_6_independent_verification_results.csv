@@ -1,0 +1,30 @@
+check_name,status,evidence,created_timestamp
+6_0_directory_exists,PASS,6_0_audit5_finding_resolution,2026-06-14T11:04:28
+6_1_directory_exists,PASS,6_1_governance_foundation,2026-06-14T11:04:28
+6_2_directory_exists,PASS,6_2_decision_rules,2026-06-14T11:04:28
+6_3_directory_exists,PASS,6_3_champion_conditions,2026-06-14T11:04:28
+6_4_directory_exists,PASS,6_4_dashboard_contract,2026-06-14T11:04:28
+6_5_directory_exists,PASS,6_5_governance_closure_pack,2026-06-14T11:04:28
+f010_authoritative_value_true,PASS,True,2026-06-14T11:04:28
+f010_applied_to_original_false,PASS,False,2026-06-14T11:04:28
+ets_explicit_keep_with_conditions,PASS,KEEP_WITH_CONDITIONS,2026-06-14T11:04:28
+champion_conditions_c001_c005_present,PASS,"['C-001', 'C-002', 'C-003', 'C-004', 'C-005']",2026-06-14T11:04:28
+unconditional_winner_language_prohibited,PASS,prohibited_count=7,2026-06-14T11:04:28
+risk_ids_r001_r007_present,PASS,"['R-001', 'R-002', 'R-003', 'R-004', 'R-005', 'R-006', 'R-007']",2026-06-14T11:04:28
+fastneural_review_investigate,PASS,REVIEW_INVESTIGATE,2026-06-14T11:04:28
+nbeats_test_later,PASS,TEST_LATER,2026-06-14T11:04:28
+nhits_test_later,PASS,TEST_LATER,2026-06-14T11:04:28
+fixedgrowth6_review,PASS,REVIEW,2026-06-14T11:04:28
+all_risks_dashboard_carry_forward,PASS,rows=7,2026-06-14T11:04:28
+dashboard_read_only_rule,PASS,True,2026-06-14T11:04:28
+dashboard_no_recompute_rule,PASS,True,2026-06-14T11:04:28
+dashboard_no_unconditional_winner_rule,PASS,True,2026-06-14T11:04:28
+dashboard_tournament_vs_champion_rule,PASS,True,2026-06-14T11:04:28
+closure_status_completed_pending_audit_6,PASS,completed_pending_audit_6,2026-06-14T11:04:28
+ready_for_audit_6_true,PASS,True,2026-06-14T11:04:28
+all_blocks_completed,PASS,rows=6; statuses=['completed'],2026-06-14T11:04:28
+handoff_sections_complete,PASS,missing=[],2026-06-14T11:04:28
+artifact_manifest_files_exist,PASS,missing=[] (n=0),2026-06-14T11:04:28
+stage05_champion_decision_intact,PASS,CHAMPION_SELECTED_WITH_CONDITIONS,2026-06-14T11:04:28
+shiny_app_present,PASS,shiny_app/ dir present,2026-06-14T11:04:28
+pairwise_binding_columns_exist,PASS,"has_cols={'comparison_status', 'model_a', 'bh_adjusted_p_value', 'model_b', 'median_delta_mase'}",2026-06-14T11:04:28

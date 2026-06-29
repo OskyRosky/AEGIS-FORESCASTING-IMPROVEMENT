@@ -1,0 +1,12 @@
+file,action,type,backup_path,notes
+shiny_app/ui/header.R,modified,ui,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/ui/header.R,Compact header: TESSERACT v2 title + subtitle + V1/Stage 07/Read-only badges
+shiny_app/ui/sidebar.R,modified,ui,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/ui/sidebar.R,Vertical dark sidebar with 11 menu items and safe icon fallback
+shiny_app/ui/body.R,modified,ui,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/ui/body.R,Clean body; removed hidden tabsetPanel; three minimal placeholder cards
+shiny_app/ui/footer.R,modified,ui,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/ui/footer.R,Minimal footer: V1 . Stage 07 . Read-only dashboard
+shiny_app/ui/tabs.R,modified,ui,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/ui/tabs.R,Retired/stubbed; old crowded cards and horizontal tabset removed
+shiny_app/server/server.R,modified,server,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/server/server.R,Layout-only server; removed tabset observer; no recompute
+shiny_app/www/custom.css,modified,asset,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/www/custom.css,Rewrote shell CSS: 56px header / 260px sidebar / light body / cards
+shiny_app/www/custom.js,modified,asset,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/www/custom.js,Simplified to active-state toggle only; no Shiny tabset switching
+shiny_app/app.R,unchanged,entrypoint,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/app.R,Backed up; no change needed (sources header/body/server)
+shiny_app/global.R,unchanged,startup,outputs/shiny_mvp/7_0C_RESET_minimal_shell/backups/shiny_app/global.R,Backed up; no change needed
+python/shiny_mvp/validate_stage07_0C_RESET_minimal_shell.py,created,validator,,Layout-only validator; writes layout/visual/safety CSVs

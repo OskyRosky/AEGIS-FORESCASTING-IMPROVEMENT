@@ -1,0 +1,2 @@
+stage_id,stage_name,closure_status,prior_stage_status,champion_governance_status,dashboard_contract_status,ready_for_audit_6,ready_for_shiny_mvp_after_audit,conditions_present,created_timestamp
+06,Validation & Governance,completed_pending_audit_6,Stage 05 Model Lab closed with Audit #5 approval with conditions,ETS Explicit governed as champion with conditions,complete_read_only_no_recompute_contract,True,True,True,2026-06-14T10:56:50

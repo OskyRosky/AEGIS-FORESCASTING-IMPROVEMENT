@@ -1,0 +1,32 @@
+check,result,detail
+clean_challenger_entrypoint_created,PASS,python/model_lab/run_daily_clean_challengers.py
+clean_challenger_scope_has_only_allowed_models,PASS,exactly 5: AutoARIMA | ETS Explicit | Theta | LightGBM | XGBoost
+autoarima_included,PASS,present in clean challenger scope
+ets_explicit_included,PASS,present (current champion)
+theta_included,PASS,present
+lightgbm_included,PASS,present
+xgboost_included,PASS,present
+nbeats_excluded_from_active_scope,PASS,absent; guard verified
+nhits_excluded_from_active_scope,PASS,absent; guard verified
+fastneuralar_original_excluded_from_active_scope,PASS,absent; retired by build_canonical_universe.R
+prohibited_model_guard_still_passes,PASS,guard CLEAN on clean challenger scope and on canonical 15
+dl_reuse_wiring_created,PASS,dl_reuse_wiring.csv with 3 DL rows
+fnar_v2_reuse_documented,PASS,reuse_frozen_artifact; source full_candidate_outputs.csv (V3.2B)
+nlin_dlin_fixed_reuse_documented,PASS,reuse_frozen_artifact; source full_candidate_outputs.csv (V3.2B)
+smlp_tcn_reuse_documented,PASS,reuse_frozen_artifact; source full_candidate_outputs.csv (V3.2B)
+daily_runner_plan_updated,PASS,daily_runner_plan_updated.csv emitted (6 stages)
+run_daily_15_model_refresh_plan_updated,PASS,main runner plan routes 5 challengers to clean entrypoint; clean-entrypoint gaps=0
+dry_run_passes,PASS,clean challenger --dry-run exit 0 (DAILY_CLEAN_CHALLENGER_SCOPE_VALIDATED); main --dry-run exit 0
+validate_scope_passes,PASS,clean challenger --validate-scope exit 0; main --validate-scope exit 0
+plan_mode_passes,PASS,clean challenger --plan exit 0; main --plan exit 0
+no_models_executed,PASS,no model fit/train invoked; --execute blocked on both scripts
+no_backtests_executed,PASS,no backtest run
+no_scheduler_created,PASS,no scheduler/task created
+no_champion_change,PASS,champion remains ETS Explicit (MASE 6.901144)
+no_forecast_change,PASS,no forecast outputs modified
+no_interval_change,PASS,no interval outputs modified
+no_v3_3d_started,PASS,V3.3D not started
+no_v3_3e_started,PASS,V3.3E not started
+no_v3_3f_started,PASS,V3.3F not started
+no_v4_started,PASS,V4 not started
+v1_v2_untouched,PASS,only V3 paths created/modified

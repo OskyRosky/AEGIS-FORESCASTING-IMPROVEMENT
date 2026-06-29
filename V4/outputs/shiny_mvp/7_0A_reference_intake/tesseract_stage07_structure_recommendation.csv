@@ -1,0 +1,15 @@
+section_id,section_name,dashboard_location,source_governance_requirement,reference_pattern_to_use,initial_stage07_block,priority,notes
+S07-001,Cover / Landing Page,landing/overview tab,Executive Summary + warning labels,dashboard header/body card pattern,7.0 shell,high,Show active root/version and governance status.
+S07-002,Executive Overview,main dashboard tab,6.4 Executive Summary section,value boxes/cards,7.0 shell,high,Read from key results and closure/governance summaries.
+S07-003,Champion Decision,champion tab,Display CHAMPION_SELECTED_WITH_CONDITIONS,cards/value boxes,7.0 shell,high,Never use winner language.
+S07-004,Champion Conditions,champion tab,C-001 through C-005,tabItems/boxes,7.0 shell,high,Surface medium confidence and conditions.
+S07-005,Model Universe,models tab,model universe visibility,table box,7.0 shell,high,Include deferred/risk flags.
+S07-006,Tournament Evidence,evidence tab,tournament not champion distinction,data table and cards,7.0 shell,high,Preliminary standing as evidence only.
+S07-007,Pairwise Evidence,evidence tab,pairwise evidence visibility,data table,7.0 shell,medium,No significance recomputation.
+S07-008,Risk Register,risk tab,risk carry-forward,table and warning cards,7.0 shell,high,FastNeuralAR_MLP visible.
+S07-009,Deferred Models,risk/deferred tab,NBEATS/NHITS deferred,table box,7.0 shell,high,"Future work, not rejected."
+S07-010,Governance Actions,governance tab,6.2 recommendations,table box,7.0 shell,medium,Show action mappings.
+S07-011,Audit Trail,audit tab,Audit #5/#6 status,timeline/table,7.0 shell,medium,Show approve-with-conditions.
+S07-012,Source Artifacts,governance tab,source artifact traceability,data table,7.0 shell,medium,Support auditability.
+S07-013,Methodology / Metric Policy,methodology tab,read-only/no-recompute,markdown/info boxes,7.0 shell,high,Explain sourced metrics.
+S07-014,Footer / Version Info,footer,V1 active-root policy,footer pattern,7.0 shell,medium,Show V1/version/status.

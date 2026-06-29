@@ -1,0 +1,7 @@
+step_id,depends_on_result,action,owner,blocking
+NS1,always,"Run az login (Entra ID) so the agent can obtain a non-interactive SQL token, OR run the 5 queries in manual_queries.sql directly in SSMS/Azure Data Studio",Oscar,yes
+NS2,always,"Paste Query 1 results into stage07_..._value_type_counts.csv and Query 2 into ..._coverage_by_valuetype.csv (and Query 3 samples into ..._sample_non_mean_rows.csv)",Oscar,yes
+NS3,"Query 1 shows ValueType values beyond Forecast-Mean (e.g. Forecast-Lower/Forecast-Upper/P10/P90/quantiles)","BRANCH 2A: intervals exist upstream - plan removing the double Forecast-Mean filter and bringing lower/upper through ingestion->transform->contract (additive, NA-safe)",Agent,no
+NS4,"Query 1 shows ONLY Forecast-Mean for Enterprise","BRANCH 2B: intervals do NOT exist upstream - design a generation/calibration method (and remember FixedGrowth models are deterministic = no honest interval)",Agent,no
+NS5,"Branch decided","Etapa 1.5 governed decision: confirm 80 vs 95 level, method, wide vs long shape, and the dashboard label (use 'intervalos de prediccion')",Oscar+Agent,yes
+NS6,"After 2A or 2B","Etapa 3: render shaded band in the Shiny Forecast Chart using lower/upper; Etapa 4: governance, docs, validation",Agent,no

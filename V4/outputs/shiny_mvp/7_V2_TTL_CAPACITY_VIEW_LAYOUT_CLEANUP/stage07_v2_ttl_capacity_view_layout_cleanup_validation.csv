@@ -1,0 +1,20 @@
+requirement_id,requirement,status,evidence
+1,TTL page loads,PASS,App boots; HTTP 200 on 127.0.0.1:3838; section_ttl renders.
+2,All major TTL sections are collapsible/expandable,PASS,6 home_collapse boxes (How to use / Capacity Overview / Set up / Results / Heatmap / Snapshot).
+3,How to use this TTL / Capacity View exists and collapsed by default,PASS,First home_collapse open=FALSE; no is-open class on it.
+4,TTL Capacity Overview contains prototype note and main KPI cards,PASS,Box holds ttl-callout-proto note + uiOutput(ttl_summary_cards); open=TRUE.
+5,Set up the TTL view contains only controls and Analyze TTL,PASS,Box holds ttl_series select + ttl_go button + note only; no result KPIs/gauge/chart/table.
+6,Result KPI cards no longer mixed with setup controls,PASS,ttl_series_kpis moved out of setup box into TTL Results box.
+7,TTL Results contains binding/resource/utilization/method/gauge/crossover,PASS,Box holds ttl_series_kpis (TTL binding/resource/utilization/method) + ttl_gauge + ttl_line.
+8,Projected Utilization Heatmap in its own collapsible box,PASS,home_collapse 'Projected Utilization Heatmap' with ttl_heatmap; open=TRUE.
+9,Time-to-Live Snapshot Table in its own collapsible box with short description,PASS,home_collapse 'Time-to-Live Snapshot Table' + description line + ttl_table + legend; open=FALSE.
+10,Existing TTL data logic unchanged,PASS,No server.R/helpers.R logic changes; only ui/tabs.R layout refactor; same output IDs.
+11,Existing charts still render,PASS,ttl_gauge/ttl_line/ttl_heatmap output IDs preserved; suspendWhenHidden=FALSE already set.
+12,Existing table still renders,PASS,ttl_table output ID preserved.
+13,No data artifacts modified,PASS,No writes to any data artifact; layout-only change.
+14,No models/forecasts/backtests run,PASS,No engine/tournament/model code invoked.
+15,No champion/governance decision changed,PASS,No governance/champion artifact touched.
+16,Viewer/Accuracy/Forecast/Models/Governance/Reference untouched,PASS,Only section_ttl() in tabs.R edited.
+17,Modified R files parse cleanly,PASS,Rscript parse(tabs.R) = PARSE_OK.
+18,Shiny launches successfully,PASS,start_shiny.ps1 launched PID 14564 on 3838.
+19,HTTP 200 confirmed,PASS,Invoke-WebRequest 127.0.0.1:3838 -> HTTP 200.

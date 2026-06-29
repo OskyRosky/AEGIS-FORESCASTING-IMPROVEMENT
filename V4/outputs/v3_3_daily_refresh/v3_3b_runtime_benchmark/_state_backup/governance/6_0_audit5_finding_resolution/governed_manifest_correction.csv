@@ -1,0 +1,2 @@
+correction_id,artifact_group,artifact_path,original_manifest_value,verified_exists_on_disk,authoritative_governed_value,source_of_truth,applied_to_original_file,downstream_use,created_timestamp
+F010_manifest_artifact_exists_governed_true,closure_pack,outputs/model_lab/model_lab_closure_pack/model_lab_closure_summary.csv,False,True,True,Audit #5 + disk verification,False,dashboard_handoff_and_governance_manifest_interpretation,2026-06-14T10:24:31

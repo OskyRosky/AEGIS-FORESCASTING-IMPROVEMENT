@@ -1,0 +1,11 @@
+trace_id,output_artifact,record_key,source_artifact,source_record_or_field,trace_rationale,created_timestamp
+TRACE-001,governance_recommendations.csv,ETS Explicit,outputs/model_lab/champion_decision/champion_decision.csv,"decision, selected_champion_model, conditions",Champion treatment traces to official conditional champion decision.,2026-06-14T10:32:59
+TRACE-002,risk_to_action_mapping.csv,R-001,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-001,FastNeuralAR_MLP high-risk treatment traces to final risk register.,2026-06-14T10:32:59
+TRACE-003,risk_to_action_mapping.csv,R-002,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-002,NBEATS deferral traces to final risk register.,2026-06-14T10:32:59
+TRACE-004,risk_to_action_mapping.csv,R-003,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-003,NHITS deferral traces to final risk register.,2026-06-14T10:32:59
+TRACE-005,governance_recommendations.csv,FixedGrowth_6,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-007,FixedGrowth_6 manual review traces to final risk register.,2026-06-14T10:32:59
+TRACE-006,risk_to_action_mapping.csv,R-005,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-005,Audit #4 carry-forward traces to final risk register.,2026-06-14T10:32:59
+TRACE-007,risk_to_action_mapping.csv,R-006,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,R-006,5.30A sanity carry-forward traces to final risk register.,2026-06-14T10:32:59
+TRACE-008,decision_action_framework.csv,F-010,outputs/governance/6_0_audit5_finding_resolution/audit5_finding_resolution.csv,source_finding_id=F-010,Additive correction policy traces to 6.0 finding resolution.,2026-06-14T10:32:59
+TRACE-009,decision_action_framework.csv,governance_terms,outputs/governance/6_1_governance_foundation/governance_definitions.csv,required terms,Decision language traces to 6.1 governance definitions.,2026-06-14T10:32:59
+TRACE-010,decision_action_framework.csv,governance_statuses,outputs/governance/6_1_governance_foundation/governance_status_taxonomy.csv,required statuses,Action/status treatment traces to 6.1 taxonomy.,2026-06-14T10:32:59

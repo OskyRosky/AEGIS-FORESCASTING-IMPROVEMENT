@@ -1,0 +1,18 @@
+component,target_file_or_area,current_status,planned_role,reference_pattern,governance_requirement,planned_block,notes
+app runner,shiny_app/app.R,exists,main read-only dashboard runner,MassiveForecasting runner pattern,launch Shiny without recompute,7.0C-7.0E,preserve now; modify later only after visual baseline
+hglobal setup,shiny_app/global.R,exists,shared setup and source orchestration,source-based app bootstrap,derive V1 root and source display-only helpers,7.0E,preserve now; review for old behavior
+libraries,shiny_app/R/libraries.R,exists,display-only package loader,Librerias.R central loader,minimal UI/display dependencies only,7.0D,remove modeling package need only if present later
+constants,shiny_app/R/constants.R,exists,governance constants and file paths,Parametros pattern,V1-relative governed artifact paths,7.0D,use config/project_root_policy.json concepts
+data loader,shiny_app/R/data_loader.R,exists,read-only governed artifact loader,reference import pattern but read-only only,no recalculation/no model execution,7.0E,consume 6.4 binding contract
+header,shiny_app/ui/header.R or app.R,manual_review,top title/status bar,dashboardHeader,display V1 and governance status,7.0C,adapt pattern not copy
+sidebar/navigation,shiny_app/ui/sidebar.R or app.R,manual_review,governance section navigation,sidebarMenu/menuItem,show required dashboard sections,7.0C,map to 6.4 sections
+body layout,shiny_app/ui/body.R or app.R,manual_review,tabItems/body shell,dashboardBody/tabItems,show read-only sections,7.0C,no data computation
+landing page,shiny_app/ui/tabs/landing.R,create_later,first visible caratula/landing page,cards/boxes,show conditional champion and audit status,7.0C,first user-visible artifact
+cards,shiny_app/modules/metric_cards,exists,read-only KPI cards,valueBox/box,display sourced metrics only,7.0D-7.0F,no recompute
+ tables,shiny_app/modules/*,exists,read-only governed tables,DT/table boxes,display artifacts only,7.0E-7.0G,no new rankings
+plots,shiny_app/modules/forecast_chart,exists,optional read-only plots,plot panels,display sourced evidence only,7.0G,manual review for forecast wording
+footer/version info,shiny_app/ui/footer.R,create_later,version and governance footer,footer/version concept,show V1 active root and no-recompute policy,7.0C,include stop/no recompute note if useful
+CSS,shiny_app/www/custom.css,exists,visual polish/custom layout,custom CSS,display-only styling,7.0C-7.0D,preserve then adapt
+JS,shiny_app/www/custom.js,exists,minor UI behavior only,custom JS,no computation/no hidden filters,7.0D,manual review
+server orchestration,shiny_app/server.R or app.R,manual_review,read-only render orchestration,server pattern but simplified,no metrics recompute/no model execution,7.0E,replace unsafe logic later if needed
+modules,shiny_app/modules,exists,modular UI/server units,reference modular structure,read-only modules only,7.0D-7.0G,forecast/ranking names require governance review

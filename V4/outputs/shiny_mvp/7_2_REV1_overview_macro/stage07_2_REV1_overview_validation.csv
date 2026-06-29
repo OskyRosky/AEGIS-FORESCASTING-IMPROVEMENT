@@ -1,0 +1,22 @@
+check_name,status,details
+overview_page_populated,pass,Executive Overview section rebuilt with real governed content (not placeholder)
+values_from_governed_artifacts,pass,Champion summary and key_results read via 7.0E loader; no recompute
+champion_unchanged,pass,ETS Explicit / CHAMPION_SELECTED_WITH_CONDITIONS / confidence medium displayed as-is
+mase_real,pass,Median MASE 6.90 read from champion_summary official_median_mase
+rmsse_real,pass,Median RMSSE 1.86 read from champion_summary official_median_rmsse
+pairwise_evidence_real,pass,8 supported better / 0 worse across 78 comparisons from governed artifacts
+universe_counts_real,pass,Model landscape counts read from final_model_universe (15 models)
+no_fake_values,pass,No synthetic or invented metrics; all figures sourced or safe fallback
+no_metrics_recalculated,pass,No metric recomputation in section_overview
+no_forecasts_generated,pass,No forecasting executed
+no_models_run,pass,No model execution
+future_items_marked,pass,Planned nav items marked with ** (Tournament/Accuracy/Risks/TTL)
+no_forbidden_language,pass,No winner / best / absolute best / unconditional champion in rendered HTML
+home_unchanged,pass,Home (REV1) still renders 'Why this dashboard exists'
+universe_unchanged,pass,Universe still renders 'Governed model universe'
+ttl_unchanged,pass,TTL placeholder still renders 'TTL source not available yet'
+tournament_unpopulated,pass,Tournament section not modified
+sidebar_structure_unchanged,pass,Navigation/sidebar not modified
+visual_shell_intact,pass,Header/body/footer shell unchanged
+app_launch,pass,Shiny launched, PID 45036
+http_status_200,pass,HTTP 200 LEN 71491 at http://127.0.0.1:3838

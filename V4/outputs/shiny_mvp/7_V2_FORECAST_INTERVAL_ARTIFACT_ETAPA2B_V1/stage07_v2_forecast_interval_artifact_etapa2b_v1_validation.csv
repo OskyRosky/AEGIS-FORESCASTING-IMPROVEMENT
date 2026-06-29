@@ -1,0 +1,23 @@
+check_id,check_name,status,details
+1,existing_row_count_preserved,pass,65095 rows in == 65095 rows out
+2,existing_columns_preserved,pass,All 9 original forecasts.csv columns retained in original order
+3,no_forecast_value_changed,pass,forecast_value untouched (intervals additive only)
+4,no_key_date_model_changed,pass,entity_key/date/model_version unchanged
+5,new_interval_columns_added,pass,forecast_horizon_day + 13 interval/metadata columns added
+6,intervals_only_horizon_1_30,pass,Bands present only for forecast_horizon_day 1-30 (1350 rows)
+7,intervals_na_beyond_30,pass,63745 rows with horizon>30 have NA bands + reason outside_calibrated_horizon_1_30
+8,interval_extrapolated_always_false,pass,interval_extrapolated=False on all rows (no extrapolation)
+9,no_lower_below_zero,pass,Lower bounds capped at 0; none negative
+10,monotonicity_holds,pass,lower_95<=lower_80<=forecast<=upper_80<=upper_95 enforced; 0 violations
+11,available_true_only_with_4_bounds,pass,interval_available=TRUE only when all 4 bounds set (1350 rows)
+12,available_false_when_missing,pass,interval_available=FALSE when bounds missing (63745 rows)
+13,unavailable_reason_populated,pass,reason populated on every unavailable row
+14,calibration_sample_sizes_populated,pass,interval_calibration_sample_size set on all available rows (min 637 max 94432)
+15,coverage_backtest_check_created,pass,coverage_report.csv created; in-sample 80% 0.798-0.805, 95% 0.949-0.950
+16,no_shiny_files_modified,pass,No shiny_app files touched
+17,no_models_run,pass,No models executed/retrained
+18,champion_unchanged,pass,No champion decision changed
+19,calibration_grain_distribution,pass,1170 rows entity_key x bucket; 180 rows resource x bucket fallback (6 keys not in backtest)
+20,SCALE_MISMATCH_BANDS_NOT_CREDIBLE,fail,"BLOCKING: backtest series scale differs from production forecast scale per key (ratio 0.30x to 36x). Absolute residual offsets produce non-credible bands; 240/1350 rows have 95% band width > 2x forecast. Artifact NOT approved for Shiny."
+21,coverage_is_in_sample_only,warning,Coverage is in-sample (tautological ~nominal); true out-of-sample coverage needs a holdout
+22,data_artifact_is_candidate_only,pass,Written to forecasts_with_intervals.csv; forecasts.csv NOT overwritten

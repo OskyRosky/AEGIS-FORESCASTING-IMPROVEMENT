@@ -1,0 +1,15 @@
+{
+  "project_container_root": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT",
+  "active_project_root": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V4",
+  "active_version": "V4",
+  "based_on_version": "V3",
+  "stage_05_status": "closed",
+  "stage_06_status": "closed_approved",
+  "audit_6_verdict": "APPROVE_WITH_CONDITIONS_TO_SHINY_MVP",
+  "v3_mvp_status": "V3_MVP_CLOSED",
+  "next_stage": "V4 Phase 0 - baseline clone parity validation",
+  "next_block": "V4 Phase 1 - LLM explanation layer (evidence pack + provider seam)",
+  "historical_artifacts_rewrite_policy": "do_not_rewrite_for_path_only",
+  "shiny_policy": "read_only_no_recompute",
+  "llm_policy": "read_only_over_governed_evidence_pack_never_compute_never_change_champion"
+}

@@ -1,0 +1,16 @@
+group,page_label,data_section,status
+Project,Home,home,present
+Project,Overview,overview,present
+Forecasting,Viewer,explorer,present
+Forecasting,Accuracy,accuracy,present
+Forecasting,Forecast,forecast,present
+Forecasting,TTL,ttl,present
+Models,Universe,universe,present
+Models,Tournament,tournament,present
+Models,Champion,champion,present
+Models,Comparison,comparison,absent_removed_in_v1
+Governance,Risks,risks,present
+Governance,Audit,audit,present
+Reference,Artifacts,artifacts,present
+Reference,Methodology,methodology,present
+Reference,Version,version,present

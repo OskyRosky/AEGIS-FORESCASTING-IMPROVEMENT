@@ -1,0 +1,14 @@
+check,result,evidence
+shiny_app_starts,PASS,start_shiny.ps1 launched Rscript PID 17492 on 127.0.0.1:3838
+http_200,PASS,Invoke-WebRequest returned HTTP 200 LEN 274820
+no_critical_stderr,PASS,stderr 48 lines benign only (vroom/readr parse warnings); no Error/Fatal/halt
+header_last_update_label,PASS,served HTML contains 'Last update' label
+header_last_update_date,PASS,served HTML contains '2026-06-28'
+brand_aegis,PASS,served HTML contains 'AEGIS'
+section_home,PASS,data-section=home present (PROJECT)
+section_overview,PASS,data-section=overview present (PROJECT)
+section_models_universe,PASS,data-section=universe present (MODELS)
+section_forecasting_viewer,PASS,data-section=explorer present (FORECASTING)
+section_governance_risks,PASS,data-section=risks present (GOVERNANCE)
+section_reference_artifacts,PASS,data-section=artifacts present (REFERENCE)
+all_six_groups_loadable,PASS,Project/Forecasting/Models/Governance/Reference nav all present without critical error

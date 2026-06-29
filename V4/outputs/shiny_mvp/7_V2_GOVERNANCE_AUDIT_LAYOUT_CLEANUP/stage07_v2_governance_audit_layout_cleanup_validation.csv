@@ -1,0 +1,21 @@
+requirement_id,requirement,status,evidence
+1,Governance Audit page loads,PASS,App boots; HTTP 200 on 127.0.0.1:3838; section_audit renders.
+2,About the Audit View exists and collapsed by default,PASS,First home_collapse open=FALSE; no is-open class.
+3,Audit Trail Overview contains existing audit KPI cards,PASS,Box holds both card_grid rows (Audit #4 verdict / blockers-major-minor-advisory / Sanity review scope / Sanity review result / Audit #5 verdict / findings reviewed / passed / non-blocking).
+4,Audit KPI values unchanged,PASS,Same audit_summary_values() bindings (a4_verdict/a4_blockers/a4_major/a4_minor/a4_advisory/sanity_*/a5_*); no value edits.
+5,Governance Timeline inside its own collapsible box,PASS,home_collapse 'Governance Timeline' with the 4 shell_cards; open=TRUE.
+6,Audit Findings inside its own collapsible box,PASS,home_collapse 'Audit Findings' with audit_findings_table; open=TRUE.
+7,Governance Next Steps inside its own collapsible box,PASS,home_collapse 'Governance Next Steps' with audit_next_steps_table; open=FALSE.
+8,Independent Verification inside its own collapsible box,PASS,home_collapse 'Independent Verification' with the verification shell-card; open=FALSE.
+9,All required sections collapsible/expandable,PASS,6 home_collapse boxes (About/Audit Trail Overview/Governance Timeline/Audit Findings/Governance Next Steps/Independent Verification).
+10,Existing audit data logic unchanged,PASS,No change to audit_summary_values()/audit_findings_table()/audit_next_steps_table().
+11,Existing tables/cards/timeline render correctly,PASS,Smoke test confirms all KPI cards, timeline shell_cards, and both table outputs present.
+12,No audit source values changed,PASS,Layout-only; all card values/timeline text/finding rows read from existing sources.
+13,No governance/champion decision changed,PASS,No governance/champion artifact or logic touched; verification text unchanged.
+14,No data artifacts modified,PASS,No writes to any data artifact.
+15,No models/forecasts/backtests/recalibrations run,PASS,No engine/tournament/model code invoked.
+16,Governance Risks untouched,PASS,section_risks() not edited in this stage.
+17,Forecasting/Models/Reference/other pages untouched,PASS,Only section_audit() in tabs.R edited; audit table outputOptions already existed in server.R.
+18,Modified R files parse cleanly,PASS,Rscript parse(tabs.R)=OK.
+19,Shiny launches successfully,PASS,start_shiny.ps1 launched PID 5268 on 3838.
+20,HTTP 200 confirmed,PASS,Invoke-WebRequest 127.0.0.1:3838 -> HTTP 200.

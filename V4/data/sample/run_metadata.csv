@@ -1,0 +1,2 @@
+run_id,run_timestamp,resource,scenario,granularity,forecast_version,entities_evaluated,horizon_days,step_size,run_type,notes
+baseline_HDD_Enterprise_20260529,2026-05-29T14:00:00Z,HDD,Enterprise,Region,2026-05-29,12,1460,30,baseline,Stage 3: TESSERACT v2 baseline replication

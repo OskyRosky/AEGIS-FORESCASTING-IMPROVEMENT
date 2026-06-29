@@ -1,0 +1,53 @@
+series_key,date,actual_value,model_name,model_family,forecast_value,horizon_days,risk_status,is_selected_champion
+APC-Dedicated,2025-05-03,2427.007518,FixedGrowth_1_5,growth_baseline,2428.13071863,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,FixedGrowth_3,growth_baseline,2429.3441772600004,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,FixedGrowth_4,growth_baseline,2430.1531496800003,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,FixedGrowth_6,growth_baseline,2431.77109452,1,high_risk,False
+APC-Dedicated,2025-05-03,2427.007518,FastNeuralAR_MLP,lightweight_neural,3002.397724496418,1,high_risk,False
+APC-Dedicated,2025-05-03,2427.007518,LightGBM,machine_learning,2406.1651421988663,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,LinearRegression,machine_learning,2425.41135206566,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,XGBoost,machine_learning,2418.581298828125,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,ARIMA_Fixed,statistical,2428.601522,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,AutoARIMA,statistical,2421.414728369362,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,ETS Explicit,statistical,2425.3617450529896,1,high_risk,True
+APC-Dedicated,2025-05-03,2427.007518,ETS_Current,statistical,2429.006645520248,1,ok,False
+APC-Dedicated,2025-05-03,2427.007518,Theta,statistical,2423.1472878123527,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,FixedGrowth_1_5,growth_baseline,2188.1161363125,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,FixedGrowth_3,growth_baseline,2189.209647625,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,FixedGrowth_4,growth_baseline,2189.938655166666,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,FixedGrowth_6,growth_baseline,2191.39667025,1,high_risk,False
+APC-Dedicated,2025-06-02,2184.020518,FastNeuralAR_MLP,lightweight_neural,2692.231981342424,1,high_risk,False
+APC-Dedicated,2025-06-02,2184.020518,LightGBM,machine_learning,2192.5171476200967,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,LinearRegression,machine_learning,2202.8863865315184,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,XGBoost,machine_learning,2195.992431640625,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,ARIMA_Fixed,statistical,2182.374441,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,AutoARIMA,statistical,2210.090964343419,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,ETS Explicit,statistical,2210.5662191554666,1,high_risk,True
+APC-Dedicated,2025-06-02,2184.020518,ETS_Current,statistical,2180.1070699802112,1,ok,False
+APC-Dedicated,2025-06-02,2184.020518,Theta,statistical,2203.768061469916,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,FixedGrowth_1_5,growth_baseline,1317.9164579145,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,FixedGrowth_3,growth_baseline,1318.575086829,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,FixedGrowth_4,growth_baseline,1319.014172772,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,FixedGrowth_6,growth_baseline,1319.892344658,1,high_risk,False
+APC-Dedicated,2025-07-02,1304.021445,FastNeuralAR_MLP,lightweight_neural,1593.277444199501,1,high_risk,False
+APC-Dedicated,2025-07-02,1304.021445,LightGBM,machine_learning,1315.5063281372625,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,LinearRegression,machine_learning,1264.516784173591,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,XGBoost,machine_learning,1309.5128173828125,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,ARIMA_Fixed,statistical,1301.6462639999995,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,AutoARIMA,statistical,1280.7222960407091,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,ETS Explicit,statistical,1279.2525879446462,1,high_risk,True
+APC-Dedicated,2025-07-02,1304.021445,ETS_Current,statistical,1298.0048813953058,1,ok,False
+APC-Dedicated,2025-07-02,1304.021445,Theta,statistical,1329.5481116664655,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,FixedGrowth_1_5,growth_baseline,1281.0005631915,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,FixedGrowth_3,growth_baseline,1281.6407433830002,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,FixedGrowth_4,growth_baseline,1282.0675301773335,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,FixedGrowth_6,growth_baseline,1282.9211037660002,1,high_risk,False
+APC-Dedicated,2025-08-01,1280.843396,FastNeuralAR_MLP,lightweight_neural,527.9432398017332,1,high_risk,False
+APC-Dedicated,2025-08-01,1280.843396,LightGBM,machine_learning,1279.7648090034745,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,LinearRegression,machine_learning,1280.0791712689506,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,XGBoost,machine_learning,1289.3204345703125,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,ARIMA_Fixed,statistical,1281.1120790000004,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,AutoARIMA,statistical,1279.4349860014036,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,ETS Explicit,statistical,1262.4848287176164,1,high_risk,True
+APC-Dedicated,2025-08-01,1280.843396,ETS_Current,statistical,1280.726727522577,1,ok,False
+APC-Dedicated,2025-08-01,1280.843396,Theta,statistical,1280.7648969558106,1,ok,False

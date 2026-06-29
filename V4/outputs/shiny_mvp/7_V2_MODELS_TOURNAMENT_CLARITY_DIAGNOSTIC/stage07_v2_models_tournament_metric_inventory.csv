@@ -1,0 +1,31 @@
+metric,source_artifact,coverage,classification,notes
+model_name,tournament_model_scorecard.csv,all 13,standings,Identity column.
+model_origin,tournament_model_scorecard.csv,all 13,standings_secondary,Baseline vs challenger; could be a tooltip.
+model_family,tournament_model_scorecard.csv,all 13,standings,statistical/growth_baseline/machine_learning/lightweight_neural/deep_learning.
+official_median_mase,tournament_model_scorecard.csv,all 13,executive_and_standings,Primary error metric. Lower is better. The 'goals'.
+official_median_rmsse,tournament_model_scorecard.csv,all 13,standings,Guardrail error metric. Lower is better.
+median_wmape,tournament_model_scorecard.csv,challengers only (6/13),detailed_diagnostic,Percentage error; blank for baselines; show gap honestly.
+median_smape,tournament_model_scorecard.csv,challengers only (6/13),detailed_diagnostic,Percentage error; blank for baselines.
+median_bias,tournament_model_scorecard.csv,challengers only (6/13),hidden,Un-normalized (e.g. -17656); confusing; keep hidden.
+mase_guardrail_status,tournament_model_scorecard.csv,all 13,standings_or_detail,pass/warning/fail.
+rmsse_guardrail_status,tournament_model_scorecard.csv,all 13,standings_or_detail,pass/warning/fail.
+risk_status,tournament_model_scorecard.csv,all 13,standings,low/medium/high.
+audit_risk_flag,tournament_model_scorecard.csv,all 13,governance,True only for FastNeuralAR_MLP.
+eligible_for_champion_consideration,tournament_model_scorecard.csv,all 13,standings,False only for FastNeuralAR_MLP.
+champion_exclusion_reason,tournament_model_scorecard.csv,1 model,detail,Extreme MASE/RMSSE audit flag (FastNeuralAR_MLP).
+entity_count,tournament_model_scorecard.csv,all 13 (=39),collapse_low_value,Constant 39; little information as a column.
+comparisons_tested,tournament_model_evidence_summary.csv,all 13 (=12),standings_win_record,Matches played per model.
+supported_better_count,tournament_model_evidence_summary.csv,all 13,executive_and_standings,WINS (head-to-head supported in favor). KEY, currently unused.
+supported_worse_count,tournament_model_evidence_summary.csv,all 13,standings_win_record,LOSSES. KEY, currently unused.
+inconclusive_count,tournament_model_evidence_summary.csv,all 13,standings_win_record,DRAWS. KEY, currently unused.
+net_supported_evidence,tournament_model_evidence_summary.csv,all 13,executive_and_standings,Wins minus losses; the 'goal difference'. KEY, currently unused.
+median_delta_mase,tournament_pairwise_evidence.csv,78 pairs,detailed_diagnostic,Head-to-head MASE gap.
+comparison_status,tournament_pairwise_evidence.csv,78 pairs,head_to_head_verdict,supported_difference vs inconclusive; powers league/bracket edges.
+statistically_supported,tournament_pairwise_evidence.csv,78 pairs,detailed_diagnostic,Boolean.
+practically_meaningful,tournament_pairwise_evidence.csv,78 pairs,detailed_diagnostic,Boolean vs practical_threshold 0.02.
+bootstrap_ci_low,tournament_pairwise_evidence.csv,78 pairs,too_technical_collapse,Confidence interval bound.
+bootstrap_ci_high,tournament_pairwise_evidence.csv,78 pairs,too_technical_collapse,Confidence interval bound.
+sign_test_p_value,tournament_pairwise_evidence.csv,78 pairs,too_technical_collapse,Significance test.
+bh_adjusted_p_value,tournament_pairwise_evidence.csv,78 pairs,too_technical_collapse,Multiple-comparison adjusted p-value.
+practical_threshold,tournament_pairwise_evidence.csv,78 pairs,too_technical_collapse,Constant 0.02.
+entity_median_mase,tournament_entity_model_scores.csv,507 rows,future_per_series_drilldown,Per-series; too granular for default view.

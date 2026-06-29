@@ -1,0 +1,14 @@
+run_id,model_name,model_origin,model_family,eligible_for_5_31_review,not_eligible_reason,requires_manual_review,manual_review_reason,created_timestamp
+tournament_sanity_review,ARIMA_Fixed,baseline,statistical,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,ETS_Current,baseline,statistical,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,FixedGrowth_1_5,baseline,growth_baseline,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,FixedGrowth_3,baseline,growth_baseline,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,FixedGrowth_4,baseline,growth_baseline,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,FixedGrowth_6,baseline,growth_baseline,True,,True,Risk status requires review: medium.,2026-06-13T19:46:36
+tournament_sanity_review,LinearRegression,baseline,machine_learning,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,AutoARIMA,challenger,statistical,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,Theta,challenger,statistical,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,ETS Explicit,challenger,statistical,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,LightGBM,challenger,machine_learning,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,XGBoost,challenger,machine_learning,True,,False,,2026-06-13T19:46:36
+tournament_sanity_review,FastNeuralAR_MLP,challenger,lightweight_neural,True,,True,High-risk flag: extreme MASE/RMSSE and possible scale or recursive-collapse issue.,2026-06-13T19:46:36

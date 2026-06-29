@@ -1,0 +1,4 @@
+"file","change_type","summary"
+"shiny_app/ui/tabs.R","modified","Rewrote section_universe() with header, summary KPI cards, governed DT table and interpretation notes; added universe_table_widget() and .tess_badge() helpers."
+"shiny_app/R/helpers.R","modified","Added read-only Model Universe accessors (universe_models/normalized/counts, champion name, status label, logical coercion)."
+"shiny_app/www/custom.css","modified","Added scoped .tess-table-wrap DataTable styling (light + dark theme) to match the shell."

@@ -1,0 +1,14 @@
+model_name,dependency_name,dependency_role,available,availability_status,notes,created_timestamp
+AutoARIMA,statsforecast,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+AutoARIMA,pmdarima,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+Theta,statsforecast,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+Theta,darts,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+ETS Explicit,statsmodels,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+ETS Explicit,statsforecast,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+LightGBM,lightgbm,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+XGBoost,xgboost,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+NBEATS,neuralforecast,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+NBEATS,torch,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+NBEATS,darts,fallback,False,missing,module not found in environment,2026-06-12T15:07:26
+NHITS,neuralforecast,preferred,False,missing,module not found in environment,2026-06-12T15:07:26
+NHITS,torch,preferred,False,missing,module not found in environment,2026-06-12T15:07:26

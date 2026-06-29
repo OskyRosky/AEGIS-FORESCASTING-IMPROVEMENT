@@ -1,0 +1,1 @@
+staging-only: SQL ingestion NOT run; productive data/raw reused read-only

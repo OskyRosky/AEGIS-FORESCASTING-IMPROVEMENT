@@ -1,0 +1,2 @@
+run_id,metric_rows,entities,windows,models,avg_wmape,avg_mape,avg_rmse,avg_smape,avg_bias,created_timestamp
+full_baseline_20260611_103953,3178,39,454,7,0.10604192976674247,0.38909329634628487,18774.46716876618,0.07831832244708857,-12511.0224271487,2026-06-11T10:47:24

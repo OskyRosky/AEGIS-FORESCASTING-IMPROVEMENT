@@ -1,0 +1,7 @@
+candidate,family,median_mase,median_rmsse,vs_champion_mase_ratio,raw_neg,completion_status,runtime_status,final_decision,decision_reason,dashboard_visibility_recommendation
+SMLP-TCN,lightweight_neural,18.782572,4.79041,2.721,0,complete_454_of_454,viable,keep_as_documented_challenger,Best DL and best overall candidate but 2.72x the champion (6.901),show_as_best_dl_challenger
+ENET-RIDGE,linear_ml,19.330846,5.027895,2.801,0,complete_454_of_454,viable,keep_as_documented_challenger,Best ML candidate and fastest viable but 2.80x the champion,show_as_best_ml_challenger
+NLIN-DLIN_FIXED,linear_dl,24.816041,6.64135,3.596,0,complete_454_of_454,viable,keep_as_documented_challenger,Non-negativity fix validated (27 to 0) but 3.60x the champion,show_in_full_challenger_table
+LGBM-IMP-v2,gradient_boosting,26.747444,6.328078,3.876,0,complete_454_of_454,viable,keep_as_documented_challenger,Runtime viable (7.7 min) but 3.88x the champion,show_in_full_challenger_table
+XGB-IMP-v2,gradient_boosting,27.950413,6.426824,4.050,0,complete_454_of_454,viable,keep_as_documented_challenger,Completed 454/454 via isolated 60-min run but 4.05x the champion and slowest (22.3 min),show_in_full_challenger_table
+FNAR-V2,lightweight_neural,81.668413,22.405331,11.834,0,complete_454_of_454,viable,keep_as_documented_challenger,Huge improvement vs original FastNeuralAR (~739.9 to 81.7) but still 11.83x the champion,show_as_remediation_evidence

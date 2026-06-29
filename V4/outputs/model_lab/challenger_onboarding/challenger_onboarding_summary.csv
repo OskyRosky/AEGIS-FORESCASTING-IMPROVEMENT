@@ -1,0 +1,2 @@
+run_id,planned_challengers,registered_challengers,statistical_challengers,ml_challengers,deep_learning_challengers,sandbox_ready_count,official_execution_ready_count,dependency_missing_count,blocking_models_count,ready_for_challenger_execution_block,created_timestamp
+challenger_onboarding_20260612_150726,7,7,3,2,2,0,0,7,0,True,2026-06-12T15:07:26

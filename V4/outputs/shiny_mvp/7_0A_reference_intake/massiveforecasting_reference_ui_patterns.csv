@@ -1,0 +1,13 @@
+ui_pattern,source_file,description,tesseract_relevance,recommended_tesseract_usage,governance_risk,notes
+sidebar menu,sider.R,Reference contains sidebar menu.,high,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+menu items,sider.R,Reference contains menu items.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+nested menu items,sider.R,Reference contains nested menu items.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+dashboard header,header.R,Reference contains dashboard header.,high,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+help button,AI_SAF.R; _00_engine_contract.R; _10_series_builders.R; body.R; forecast_helpers.R; forecast_models_registry.R; header.R; importacion.R; precompute_bundles.R; server.R,Reference contains help button.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,medium,Do not reuse project-specific text or runtime logic.
+comment dropdown,header.R,Reference contains comment dropdown.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,medium,Do not reuse project-specific text or runtime logic.
+dark mode switch,body.R; header.R; server.R,Reference contains dark mode switch.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,medium,Do not reuse project-specific text or runtime logic.
+dashboard body,body.R,Reference contains dashboard body.,high,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+custom CSS,body.R,Reference contains custom CSS.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+cards / value boxes,body.R; server.R,Reference contains cards / value boxes.,high,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+tabs / tabItems,body.R,Reference contains tabs / tabItems.,high,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.
+footer,_00_engine_contract.R; body.R; server.R,Reference contains footer.,medium,Adapt pattern with governed TESSERACT labels and read-only data.,low,Do not reuse project-specific text or runtime logic.

@@ -1,0 +1,22 @@
+run_id,job_id,entity_key,window_id,model_name,status,message,created_timestamp
+broader_smoke_20260611_101755,job_000155,APC-Dedicated,12,ARIMA_Fixed,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000158,APC-Dedicated,12,ETS_Current,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000164,APC-Dedicated,12,LinearRegression,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000159,APC-Dedicated,12,FixedGrowth_1_5,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000160,APC-Dedicated,12,FixedGrowth_3,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000161,APC-Dedicated,12,FixedGrowth_4,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000162,APC-Dedicated,12,FixedGrowth_6,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000323,APC-MSIT,12,ARIMA_Fixed,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000326,APC-MSIT,12,ETS_Current,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000332,APC-MSIT,12,LinearRegression,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000327,APC-MSIT,12,FixedGrowth_1_5,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000328,APC-MSIT,12,FixedGrowth_3,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000329,APC-MSIT,12,FixedGrowth_4,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000330,APC-MSIT,12,FixedGrowth_6,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000491,APC-Multitenant,12,ARIMA_Fixed,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000494,APC-Multitenant,12,ETS_Current,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000500,APC-Multitenant,12,LinearRegression,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000495,APC-Multitenant,12,FixedGrowth_1_5,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000496,APC-Multitenant,12,FixedGrowth_3,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000497,APC-Multitenant,12,FixedGrowth_4,completed,Broader smoke test job completed.,2026-06-11T10:17:55
+broader_smoke_20260611_101755,job_000498,APC-Multitenant,12,FixedGrowth_6,completed,Broader smoke test job completed.,2026-06-11T10:17:55

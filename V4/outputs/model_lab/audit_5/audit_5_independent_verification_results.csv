@@ -1,0 +1,22 @@
+check_name,status,evidence,created_timestamp
+closure_summary_one_row,PASS,rows=1,2026-06-14T09:54:48
+closure_status_completed_pending_final_audit,PASS,completed_pending_final_audit,2026-06-14T09:54:48
+ready_for_dashboard_handoff_true,PASS,True,2026-06-14T09:54:48
+champion_decision_one_row,PASS,rows=1,2026-06-14T09:54:48
+champion_is_ets_explicit_with_conditions,PASS,CHAMPION_SELECTED_WITH_CONDITIONS|ETS Explicit,2026-06-14T09:54:48
+champion_metrics_match,PASS,mase=6.901143533373399;rmsse=1.856193218184295,2026-06-14T09:54:48
+universe_15_models,PASS,rows=15,2026-06-14T09:54:48
+universe_7_baseline,PASS,baseline=7,2026-06-14T09:54:48
+universe_6_final_challengers,PASS,active_challengers=6,2026-06-14T09:54:48
+universe_2_deferred,PASS,deferred=2,2026-06-14T09:54:48
+single_champion_ets_explicit,PASS,champions=['ETS Explicit'],2026-06-14T09:54:48
+fastneuralar_risk_flagged,PASS,True,2026-06-14T09:54:48
+deferred_file_nbeats_nhits,PASS,"['NBEATS', 'NHITS']",2026-06-14T09:54:48
+risk_register_carryforwards,PASS,"models=['5.30A', 'Audit #4', 'ETS Explicit', 'FastNeuralAR_MLP', 'FixedGrowth_6', 'NBEATS', 'NHITS']",2026-06-14T09:54:48
+dashboard_all_sections,PASS,missing=[],2026-06-14T09:54:48
+dashboard_referenced_files_exist,PASS,all referenced dashboard files present,2026-06-14T09:54:48
+closure_validation_no_fail,PASS,rows=11,2026-06-14T09:54:48
+champion_validation_no_fail,PASS,rows=10,2026-06-14T09:54:48
+audit_4_no_blockers,PASS,blockers=0,2026-06-14T09:54:48
+sanity_no_blockers,PASS,blockers=0,2026-06-14T09:54:48
+shiny_app_present,PASS,shiny_app/ dir present,2026-06-14T09:54:48

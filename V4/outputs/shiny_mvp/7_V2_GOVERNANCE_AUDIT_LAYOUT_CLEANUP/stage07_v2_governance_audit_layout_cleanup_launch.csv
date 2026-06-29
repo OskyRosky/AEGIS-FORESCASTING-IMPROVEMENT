@@ -1,0 +1,14 @@
+field,value
+stage,Stage 07 - V2 Governance Audit Layout Cleanup
+launch_script,scripts\start_shiny.ps1
+preferred_port,3838
+bound_port,3838
+process_id,5268
+host,127.0.0.1
+url,http://127.0.0.1:3838
+http_status,200
+single_listener_on_3838,true
+stdout_log,outputs\shiny_mvp\7_V2_GOVERNANCE_AUDIT_LAYOUT_CLEANUP\logs\stage07_v2_governance_audit_layout_cleanup_stdout.log
+stderr_log,outputs\shiny_mvp\7_V2_GOVERNANCE_AUDIT_LAYOUT_CLEANUP\logs\stage07_v2_governance_audit_layout_cleanup_stderr.log
+previous_pid_stopped,13432
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 5268

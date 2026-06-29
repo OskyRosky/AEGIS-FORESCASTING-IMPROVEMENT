@@ -1,0 +1,17 @@
+check,result,detail
+parse_tabs_R,PASS,Rscript parse OK
+parse_body_R,PASS,Rscript parse OK
+universe_section_exists,PASS,section_universe renders
+at_a_glance_cards_removed,PASS,"'At a glance' not present in Universe panel"
+nbeats_not_visible_on_universe,PASS,grepl NBEATS == FALSE in Universe panel
+nhits_not_visible_on_universe,PASS,grepl NHITS == FALSE in Universe panel
+how_to_read_exists,PASS,collapsible present and open
+model_families_exists,PASS,collapsible present and open
+governed_table_renders,PASS,"static uni-table present, 14 <tr> (1 header + 13 models)"
+no_empty_collapsible,PASS,table now renders 13 rows (was blank DT)
+no_visual_review_placeholder,PASS,not present
+data_artifacts_unmodified,PASS,read-only; no CSV writes
+no_models_or_tournaments_run,PASS,no compute invoked
+champion_unchanged,PASS,ETS Explicit under conditions
+css_cache_busted,PASS,custom.css?v=20260624a
+http_200,PASS,LEN 155825

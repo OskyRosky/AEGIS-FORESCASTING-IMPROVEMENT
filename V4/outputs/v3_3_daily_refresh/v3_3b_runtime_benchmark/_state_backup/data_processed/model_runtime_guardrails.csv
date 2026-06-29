@@ -1,0 +1,7 @@
+model,family,runtime_seconds,runtime_minutes,runtime_status,completion_status,windows_completed,total_windows,raw_neg,guardrail_status
+SMLP-TCN,lightweight_neural,29.196,0.487,viable,complete_454_of_454,454,454,0,pass
+ENET-RIDGE,linear_ml,1.36,0.023,viable,complete_454_of_454,454,454,0,pass
+NLIN-DLIN_FIXED,linear_dl,0.9863,0.016,viable,complete_454_of_454,454,454,0,pass
+FNAR-V2,lightweight_neural,195.6613,3.261,viable,complete_454_of_454,454,454,0,pass
+LGBM-IMP-v2,gradient_boosting,462.9279,7.715,viable,complete_454_of_454,454,454,0,pass
+XGB-IMP-v2,gradient_boosting,1339.3481,22.322,viable,complete_454_of_454,454,454,0,pass

@@ -1,0 +1,33 @@
+check_id,category,check,expected,observed,status
+V01,parse,R/data_loader.R parses without syntax error,parse OK,parse OK,PASS
+V02,parse,R/helpers.R parses without syntax error,parse OK,parse OK,PASS
+V03,parse,server/server.R parses without syntax error,parse OK,parse OK,PASS
+V04,parse,ui/tabs.R parses without syntax error,parse OK,parse OK,PASS
+V05,parse,ui/body.R parses without syntax error,parse OK,parse OK,PASS
+V06,data_source,Forecast page prefers governed interval artifact,attr fvf_source == forecasts_with_intervals_relative.csv,forecasts_with_intervals_relative.csv,PASS
+V07,data_source,Interval bound columns detected,all 4 bound cols present and fvf_has_intervals TRUE,TRUE,PASS
+V08,data_source,Safe fallback to forecasts.csv when artifact missing,code-level fallback in fvf_forecasts() reads forecasts on missing/empty,fallback branch present (load_csv_artifact 'forecasts'),PASS
+V09,no_compute,Shiny never computes intervals,no quantile/residual/sd/qnorm interval math in Forecast code,only reads forecast_lower/upper columns,PASS
+V10,no_compute,Shiny never computes residuals,no residual computation,none,PASS
+V11,no_compute,Shiny never computes quantiles,no quantile() over forecast errors,none,PASS
+V12,data_source,actuals.csv still read for history,fvf_actuals reads actuals,actuals.csv read (n_actual > 0),PASS
+V13,chart,Forecast mean renders,forward mean dashed line present,mean series present,PASS
+V14,chart,Actual history solid line present,solid actual series,present,PASS
+V15,chart,80% interval lines render as dashed,lower_80 & upper_80 dashed lines,2 dashed lines (Dash),PASS
+V16,chart,95% interval lines render as dotted,lower_95 & upper_95 dotted lines,2 dotted lines (Dot),PASS
+V17,chart,No shaded band / arearange used,no arearange series,no arearange in fvf_chart,PASS
+V18,horizon,Interval lines stop after forecast day 30,drawable iv rows <= 30 and NA afterwards,window30=30 drawable; window90=30 drawable then NA,PASS
+V19,horizon,90/180-day windows keep point forecast after day 30,point continues past day 30 without interval lines,window90=91 rows point continues; intervals only first 30,PASS
+V20,ui,Setup note present in Forecast setup box,exact governed note text rendered,fvb-setup-note added in section_forecast,PASS
+V21,ui,Data notes surface interval metadata,method/source/levels/horizon/grain/sample cells,6 interval cells rendered when has_intervals,PASS
+V22,ui,Point anomaly surfaced in data notes,anomaly pill when forecast_point_scale_anomaly TRUE,APC-Dedicated point_anomaly TRUE surfaced,PASS
+V23,ui,Fallback note when no intervals,point-forecast-only note path present,else branch note present,PASS
+V24,ui,30-day note shown for 90/180/full windows,note rendered when fwd_window 0 or >30,note branch present,PASS
+V25,behavior,Forecast chart action-gated on Run,renders only after input fvf_go,eventReactive/req(input$fvf_go) preserved,PASS
+V26,scope,No data artifacts modified,forecasts.csv / intervals csv / actuals.csv unchanged,read-only; no writes,PASS
+V27,scope,No models / forecasts run,no model training / forecasting executed,none,PASS
+V28,scope,Champion decision unchanged,champion artifacts untouched,no governance/champion edits,PASS
+V29,scope,V1 untouched,no V1 file modified,only V2 files edited,PASS
+V30,scope,Other pages untouched,Viewer/Accuracy/TTL/Models/Governance/Reference unchanged,only Forecast page code edited,PASS
+V31,runtime,App launches and returns HTTP 200,HTTP 200 on listening port,HTTP 200 on 127.0.0.1:3839,PASS
+V32,runtime,Chart builds without runtime error,fvf_chart returns highchart,OK (headless build),PASS

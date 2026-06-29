@@ -1,0 +1,2 @@
+source_file,purpose,exists,row_count,column_count,series_count,model_count,selected_source,notes
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,Series-level diagnostic evidence at entity x model grain,true,507,13,39,13,true,Governed tournament engine artifact; read only. Local leadership is based on lowest existing median_mase.

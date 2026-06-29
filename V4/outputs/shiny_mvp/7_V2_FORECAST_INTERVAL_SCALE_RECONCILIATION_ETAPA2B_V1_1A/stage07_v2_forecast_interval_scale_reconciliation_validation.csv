@@ -1,0 +1,17 @@
+check,status,details
+v2_root_exists,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V2
+backtest_inspected,pass,"39 keys, 177060 rows"
+production_forecast_inspected,pass,"45 keys, 65095 rows"
+actuals_inspected,pass,"45 keys, 84537 rows"
+key_overlap_computed,pass,39 keys in all three
+scale_by_key_computed,pass,168 key-artifact rows
+ratio_diagnostic_computed,pass,45 keys
+apc_dedicated_diagnosed,pass,4 artifact rows for APC-Dedicated
+severe_mismatch_flags_created,pass,1 keys >=10x bt_actual vs prod
+relative_residual_readiness_classified,pass,"{'ready_relative_residual': 39, 'fallback_needed_no_backtest': 6}"
+no_code_modified,pass,diagnostic only
+no_data_modified,pass,read-only
+no_shiny_modified,pass,untouched
+no_models_run,pass,none
+no_forecasts_generated,pass,none
+champion_unchanged,pass,untouched

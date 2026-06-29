@@ -1,0 +1,29 @@
+check,result,detail
+canonical_scope_has_15_models,PASS,runner MODELS table has exactly 15 entries; cross-check vs model_universe_canonical.csv 15/15
+growth_baseline_count_4,PASS,FixedGrowth_1_5/3/4/6
+statistical_count_5,PASS,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | Theta
+machine_learning_count_3,PASS,LightGBM | LinearRegression | XGBoost
+deep_learning_count_3,PASS,FNAR-V2 | NLIN-DLIN_FIXED | SMLP-TCN
+deep_learning_models_correct,PASS,DL set equals {FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN}
+nbeats_excluded_from_active_scope,PASS,absent from active scope; guard verified
+nhits_excluded_from_active_scope,PASS,absent from active scope; guard verified
+fastneuralar_original_excluded_from_active_scope,PASS,absent; retired by build_canonical_universe.R
+no_legacy_challenger_runner_used_as_daily_runner,PASS,run_challenger_official_execution.py excluded from daily path (entrypoint_status=legacy_contaminated_needs_clean_variant)
+prohibited_model_guard_created,PASS,prohibited_model_guard() reusable; unit test injected NBEATS/NHITS -> PROHIBITED_MODEL_IN_DAILY_SCOPE
+dry_run_mode_created,PASS,--dry-run exit 0 -> DAILY_15_MODEL_SCOPE_VALIDATED
+validate_scope_mode_created,PASS,--validate-scope exit 0 -> all checks PASS
+plan_mode_created,PASS,--plan exit 0 -> DAILY_15_MODEL_PLAN_EMITTED
+dry_run_outputs_15_models,PASS,dry-run printed 15 models; active model count=15
+dry_run_has_no_prohibited_models,PASS,dry-run prohibited check=CLEAN
+model_training_scope_created,PASS,outputs/v3_3_daily_refresh/v3_3c_15_model_runner_fix/model_training_scope.csv
+daily_15_model_runner_plan_created,PASS,outputs/v3_3_daily_refresh/v3_3c_15_model_runner_fix/daily_15_model_runner_plan.csv
+dl_execution_status_documented,PASS,3 DL marked reuse_frozen_artifact (frozen_artifact_no_live_training)
+missing_execution_paths_documented,PASS,clean challenger entrypoint gap (5 models) + DL daily-training gap documented
+no_models_executed,PASS,no model fit/train invoked; --execute blocked
+no_backtests_executed,PASS,no backtest run
+no_scheduler_created,PASS,no scheduler/task created
+no_v3_3d_started,PASS,V3.3D not started
+no_v3_3e_started,PASS,V3.3E not started
+no_v3_3f_started,PASS,V3.3F not started
+no_v4_started,PASS,V4 not started
+v1_v2_untouched,PASS,only V3 paths created/inspected

@@ -1,0 +1,2 @@
+run_id,metric_rows,entities,windows,models,global_median_mase,global_mean_mase,pct_rows_beating_naive,created_timestamp
+mase_20260612_144117,3178,39,454,7,11.434868860671397,54.54853406445861,0.0446821900566394,2026-06-12T14:41:17

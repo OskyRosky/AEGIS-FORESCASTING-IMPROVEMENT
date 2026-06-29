@@ -1,0 +1,75 @@
+check_id,area,check_name,status,evidence,blocking_for_5_30,created_timestamp
+A1,Model Set Re-scope,Exactly 6 final official challenger models,PASS,current_official_challenger_set.csv + forecasts show AutoARIMA/Theta/ETS Explicit/LightGBM/XGBoost/FastNeuralAR_MLP,No,2026-06-13T18:00:00
+A2,Model Set Re-scope,NBEATS = deferred_runtime_impractical,PASS,model_set_rescope_decision.csv / current_official_challenger_set.csv,No,2026-06-13T18:00:00
+A3,Model Set Re-scope,NHITS = deferred_dependency_blocked,PASS,model_set_rescope_decision.csv / current_official_challenger_set.csv,No,2026-06-13T18:00:00
+A4,Model Set Re-scope,FastNeuralAR_MLP documented as lightweight neural replacement,PASS,fast_neural_policy.md,No,2026-06-13T18:00:00
+A5,Model Set Re-scope,No silent deletion/rewriting of NBEATS/NHITS history,PASS,Deferred rows + reasons preserved across all rescope addenda,No,2026-06-13T18:00:00
+A6,Model Set Re-scope,Re-scope justified for MVP/container/Azure profile,PASS,fast_neural_policy.md + model_set_rescope_report.md rationale,No,2026-06-13T18:00:00
+B1,Forecast Integrity,challenger_official_forecasts.csv exists,PASS,File present and read,No,2026-06-13T18:00:00
+B2,Forecast Integrity,Total forecast rows = 81720,PASS,Independent count = 81720,No,2026-06-13T18:00:00
+B3,Forecast Integrity,Each final model has 13620 rows,PASS,Independent value_counts = 13620 per model,No,2026-06-13T18:00:00
+B4,Forecast Integrity,Only the 6 final models present,PASS,Independent unique model list,No,2026-06-13T18:00:00
+B5,Forecast Integrity,No NBEATS rows,PASS,Independent NBEATS count = 0,No,2026-06-13T18:00:00
+B6,Forecast Integrity,No NHITS rows,PASS,Independent NHITS count = 0,No,2026-06-13T18:00:00
+B7,Forecast Integrity,execution_mode = official,PASS,Independent unique = ['official'],No,2026-06-13T18:00:00
+B8,Forecast Integrity,horizon_day values are 1..30,PASS,min=1 max=30 distinct=30,No,2026-06-13T18:00:00
+B9,Forecast Integrity,forecast_value finite and non-null,PASS,nulls=0 inf=0,No,2026-06-13T18:00:00
+B10,Forecast Integrity,No duplicate run/model/entity/window/horizon rows,PASS,duplicate count = 0,No,2026-06-13T18:00:00
+B11,Forecast Integrity,forecast_date aligns with official test windows (post train_end),PASS,0 rows with forecast_date<=train_end_date,No,2026-06-13T18:00:00
+B12,Forecast Integrity,Raw forecasts preserved,PASS,306 raw negatives retained in forecast_value,No,2026-06-13T18:00:00
+C1,Metrics Integrity,Actual join = 81720 rows,PASS,Independent count = 81720,No,2026-06-13T18:00:00
+C2,Metrics Integrity,Missing actuals = 0,PASS,actual_value nulls = 0,No,2026-06-13T18:00:00
+C3,Metrics Integrity,Metric table = 2724 rows,PASS,Independent count = 2724,No,2026-06-13T18:00:00
+C4,Metrics Integrity,Each final model has 454 metric rows,PASS,Independent value_counts = 454 per model,No,2026-06-13T18:00:00
+C5,Metrics Integrity,All metrics present (MASE/RMSSE/wMAPE/MAPE/SMAPE/RMSE/Bias),PASS,All columns present in challenger_metrics_entity_window.csv,No,2026-06-13T18:00:00
+C6,Metrics Integrity,No NaN/Inf in MASE/RMSSE,PASS,mase/rmsse nan=0 inf=0,No,2026-06-13T18:00:00
+C7,Metrics Integrity,No NBEATS/NHITS in metrics,PASS,Independent model list = 6 final models,No,2026-06-13T18:00:00
+C8,Metrics Integrity,Metrics based on adjusted_forecast_value,PASS,Independent MASE/RMSSE spot-checks on adjusted values matched stored exactly,No,2026-06-13T18:00:00
+D1,Denominator Policy,MASE denominator source = training_only_lag1_naive_mae,PASS,scoring_definitions.yaml + metrics_summary mase_denominator_source,No,2026-06-13T18:00:00
+D2,Denominator Policy,RMSSE denominator source = training_only_lag1_naive_mse,PASS,scoring_definitions.yaml + metrics_summary rmsse_denominator_source,No,2026-06-13T18:00:00
+D3,Denominator Policy,Denominators loaded from training_only_denominators.csv,PASS,metrics_validation denominator_source_training_only pass,No,2026-06-13T18:00:00
+D4,Denominator Policy,Denominators are training-only (no test actuals),PASS,denominator_observations = training_observations - 1 (lag1) on training slice,No,2026-06-13T18:00:00
+D5,Denominator Policy,5.19 naive forecast not used as denominator,PASS,block_519_naive_forecasts_allowed_as_denominator=false,No,2026-06-13T18:00:00
+D6,Denominator Policy,Seasonal naive not used as denominator,PASS,seasonal_naive_allowed_as_denominator=false,No,2026-06-13T18:00:00
+D7,Denominator Policy,Corrected 5.27A/5.27B denominator policy respected,PASS,Config + reconciliation outputs consistent with training-only lag1,No,2026-06-13T18:00:00
+E1,Non-Negative Scoring,Raw official forecasts preserved,PASS,forecast_value column unchanged in scoring file,No,2026-06-13T18:00:00
+E2,Non-Negative Scoring,adjusted_forecast_value equals max(forecast_value;0),PASS,0 rows where adjusted differs from clip-at-zero,No,2026-06-13T18:00:00
+E3,Non-Negative Scoring,negative_forecast_flag identifies raw negatives,PASS,flag true=306 matches raw<0 exactly,No,2026-06-13T18:00:00
+E4,Non-Negative Scoring,Negative forecast rows = 306,PASS,Independent raw negatives = 306,No,2026-06-13T18:00:00
+E5,Non-Negative Scoring,Negative adjustment documented,PASS,challenger_negative_forecast_impact.csv + report,No,2026-06-13T18:00:00
+E6,Non-Negative Scoring,No raw forecast file overwritten,PASS,Raw retained in both forecasts and scoring files,No,2026-06-13T18:00:00
+F1,Aggregation Integrity,Canonical rows = 2724,PASS,Independent count = 2724,No,2026-06-13T18:00:00
+F2,Aggregation Integrity,Entity/model aggregation rows = 234,PASS,Independent count = 234 (39 x 6),No,2026-06-13T18:00:00
+F3,Aggregation Integrity,Model aggregation rows = 6,PASS,Independent count = 6,No,2026-06-13T18:00:00
+F4,Aggregation Integrity,Median across windows per entity then median across entities,PASS,Two-stage reproduction matched all 6 stored official_median_mase,No,2026-06-13T18:00:00
+F5,Aggregation Integrity,Equal entity weighting preserved (no window-count dominance),PASS,Stage-1 entity medians give each entity equal weight; verified,No,2026-06-13T18:00:00
+F6,Aggregation Integrity,No ranking columns,PASS,Column scan = none,No,2026-06-13T18:00:00
+F7,Aggregation Integrity,No best-model/winner/champion language,PASS,Report explicitly diagnostic-only,No,2026-06-13T18:00:00
+G1,Significance Integrity,Pairwise comparisons = 15,PASS,Independent count = 15,No,2026-06-13T18:00:00
+G2,Significance Integrity,Comparisons use entity-level median MASE,PASS,Report method + matches entity aggregation,No,2026-06-13T18:00:00
+G3,Significance Integrity,Comparisons paired by entity_key,PASS,paired_entity_count = 39 for all,No,2026-06-13T18:00:00
+G4,Significance Integrity,Bootstrap iterations = 10000,PASS,Report narrative,No,2026-06-13T18:00:00
+G5,Significance Integrity,Seed = 20260612,PASS,Report narrative,No,2026-06-13T18:00:00
+G6,Significance Integrity,Sign test applied,PASS,sign_test_p_value column + report,No,2026-06-13T18:00:00
+G7,Significance Integrity,Benjamini-Hochberg correction across 15 comparisons,PASS,bh_adjusted_p_value column; BH adj p >= raw p verified,No,2026-06-13T18:00:00
+G8,Significance Integrity,Practical threshold = 0.02,PASS,practical_threshold unique = [0.02],No,2026-06-13T18:00:00
+G9,Significance Integrity,supported/inconclusive are evidence labels not rankings,PASS,12 supported / 3 inconclusive; no ordering,No,2026-06-13T18:00:00
+G10,Significance Integrity,No champion/tournament decision made,PASS,summary flags tournament/champion = False,No,2026-06-13T18:00:00
+H1,FastNeuralAR_MLP Risk,FastNeuralAR_MLP remains included,PASS,Present in forecasts/metrics/aggregation/significance,No,2026-06-13T18:00:00
+H2,FastNeuralAR_MLP Risk,High MASE/RMSSE behavior flagged not hidden,WARNING,challenger_outlier_risk_review.csv flags extremely_high_mase/rmsse (high); see F-014,No,2026-06-13T18:00:00
+H3,FastNeuralAR_MLP Risk,Risk review does not silently exclude it,PASS,Retained with eligible_for_tournament_consideration=True,No,2026-06-13T18:00:00
+H4,FastNeuralAR_MLP Risk,Error characterized (valid vs implementation vs scale),WARNING,Pattern (huge negative bias / SMAPE~1.48) indicates probable scale/implementation issue; investigate per F-014,No,2026-06-13T18:00:00
+I1,Tournament Readiness,challenger_tournament_input_manifest.csv exists,PASS,File present,No,2026-06-13T18:00:00
+I2,Tournament Readiness,Manifest contains metadata only,PASS,No score columns,No,2026-06-13T18:00:00
+I3,Tournament Readiness,Manifest does not contain tournament scores,PASS,Column scan = none,No,2026-06-13T18:00:00
+I4,Tournament Readiness,Manifest does not rank models,PASS,No numeric ordering / rank column,No,2026-06-13T18:00:00
+I5,Tournament Readiness,Manifest includes the 6 final challengers,PASS,6 challenger rows,No,2026-06-13T18:00:00
+I6,Tournament Readiness,Suitable as 5.30 input after audit approval,PASS,Metadata-only eligibility manifest,No,2026-06-13T18:00:00
+J1,Scope / Safety,No rankings created,PASS,rankings_created=False across summaries,No,2026-06-13T18:00:00
+J2,Scope / Safety,No tournament outputs created,PASS,tournament_created=False; no tournament files,No,2026-06-13T18:00:00
+J3,Scope / Safety,No winners created,PASS,No winner artifacts/columns,No,2026-06-13T18:00:00
+J4,Scope / Safety,No champions selected,PASS,champion_selected=False across summaries,No,2026-06-13T18:00:00
+J5,Scope / Safety,Baseline outputs untouched,PASS,No writes to baseline dirs; audit confined to audit_4,No,2026-06-13T18:00:00
+J6,Scope / Safety,Shiny untouched,PASS,No shiny_app modifications,No,2026-06-13T18:00:00
+J7,Scope / Safety,Metrics not written outside challenger_metrics,PASS,Metric artifacts only under challenger_metrics,No,2026-06-13T18:00:00
+J8,Scope / Safety,Aggregation/significance not written outside its dir,PASS,Artifacts only under challenger_aggregation_significance,No,2026-06-13T18:00:00

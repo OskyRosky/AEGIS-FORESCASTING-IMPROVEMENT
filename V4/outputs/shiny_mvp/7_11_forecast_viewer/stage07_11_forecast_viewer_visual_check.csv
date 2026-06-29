@@ -1,0 +1,11 @@
+element,expected,observed,status
+Section title,"Forecast Viewer",present,PASS
+Control panel,4 selectors in a row,fv_entity/fv_model/fv_horizon/fv_history rendered,PASS
+Summary cards,5 cards above chart,fv_summary_cards uiOutput present,PASS
+Chart,Highcharts line chart,fv_chart highchart container present,PASS
+Actual line color,blue #2e75b6,configured in fv_chart,VISUAL_REVIEW
+Forecast line color,amber #d97706 dashed,configured in fv_chart,VISUAL_REVIEW
+Forecast start marker,dashed vertical plotLine,configured at min forecast date,VISUAL_REVIEW
+Method note,italic muted footer,fv-method-note present,PASS
+Sidebar label,"Viewer" under FORECASTING,present,PASS
+Dark theme,consistent calm styling,fv-* dark variants added,VISUAL_REVIEW

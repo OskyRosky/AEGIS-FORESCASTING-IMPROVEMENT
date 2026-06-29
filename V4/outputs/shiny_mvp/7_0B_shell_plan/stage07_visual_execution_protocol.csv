@@ -1,0 +1,14 @@
+protocol_step,requirement,applies_from_block,mandatory,validation_method,notes
+1,Start app after code change,7.0C,true,process launch,Launch from V1 active root
+2,Provide local URL,7.0C,true,final response and launch csv,Use 127.0.0.1
+3,Provide port,7.0C,true,launch csv,Use 3838 unless occupied
+4,Provide HTTP status,7.0C,true,Invoke-WebRequest,Report failure if unreachable
+5,Provide PID,7.0C,true,process info,Leave running if possible
+6,Provide logs,7.0C,true,stdout/stderr files,Store under block output dir
+7,Leave running for Oscar,7.0C,true,PID running,Unless app fails
+8,Provide stop command,7.0C,true,final response,Stop-Process -Id PID -Force
+9,Wait for Oscar visual confirmation,7.0C,true,user confirmation,Do not advance silently
+10,Screenshots only if requested,7.0C,true,user request,No automatic screenshot requirement
+11,No recompute,7.0C,true,code review/no server compute,No MASE/RMSSE recompute
+12,No models/forecasts/tournament,7.0C,true,code review,Read-only dashboard
+13,No historical artifact edits,7.0C,true,file change summary,Stage 05/06/Audit #6 preserved

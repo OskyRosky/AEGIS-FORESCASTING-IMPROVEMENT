@@ -1,0 +1,18 @@
+check_name,status,details,created_timestamp
+6_0_output_directory_exists,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\outputs\governance\6_0_audit5_finding_resolution,2026-06-14T10:24:31
+6_1_output_directory_exists,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\outputs\governance\6_1_governance_foundation,2026-06-14T10:24:31
+audit5_finding_resolution.csv_exists,pass,outputs/governance/6_0_audit5_finding_resolution/audit5_finding_resolution.csv,2026-06-14T10:24:31
+governed_manifest_correction.csv_exists,pass,outputs/governance/6_0_audit5_finding_resolution/governed_manifest_correction.csv,2026-06-14T10:24:31
+audit5_finding_resolution_report.md_exists,pass,outputs/governance/6_0_audit5_finding_resolution/audit5_finding_resolution_report.md,2026-06-14T10:24:31
+governance_definitions.csv_exists,pass,outputs/governance/6_1_governance_foundation/governance_definitions.csv,2026-06-14T10:24:31
+governance_status_taxonomy.csv_exists,pass,outputs/governance/6_1_governance_foundation/governance_status_taxonomy.csv,2026-06-14T10:24:31
+governance_foundation_report.md_exists,pass,outputs/governance/6_1_governance_foundation/governance_foundation_report.md,2026-06-14T10:24:31
+f010_non_blocking,pass,F-010 blocking status,2026-06-14T10:24:31
+governed_correction_true,pass,artifact_exists=True,2026-06-14T10:24:31
+applied_to_original_file_false,pass,original file untouched,2026-06-14T10:24:31
+stage_05_file_edited_false,pass,Stage 05 file untouched,2026-06-14T10:24:31
+required_terms_present,pass,governance terms,2026-06-14T10:24:31
+required_statuses_present,pass,taxonomy statuses,2026-06-14T10:24:31
+no_stage05_files_modified,pass,Stage 05 inputs remain present,2026-06-14T10:24:31
+no_shiny_files_modified,pass,Shiny path present,2026-06-14T10:24:31
+all_outputs_under_governance,pass,outputs/governance,2026-06-14T10:24:31

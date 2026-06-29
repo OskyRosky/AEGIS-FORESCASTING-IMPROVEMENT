@@ -1,0 +1,15 @@
+check,result,evidence
+data_processed_updated_by_de2,PASS,run_metadata run_timestamp 2026-06-28T17:27:14 (was 2026-06-10); LastWrite 2026-06-28 17:27
+data_raw_unchanged,PASS,V3/data/raw 6 files all LastWrite 2026-06-10; 0 modified on/after 2026-06-28
+dashboard_productive_updated,PASS,Last Update header shows 2026-06-28; HTTP 200
+champion_unchanged,PASS,ETS Explicit frozen
+governance_unchanged,PASS,no undue governance change
+v1_untouched,PASS,V1 run_metadata 2026-06-10 09:58; 0 files modified on/after 2026-06-28
+v2_untouched,PASS,V2 run_metadata 2026-06-10 09:58; 0 files modified on/after 2026-06-28
+v4_not_started,PASS,AI/LLM layer deferred to future Azure phase; no V4 code
+scheduler_not_started,PASS,G-1/G-2/G-3 deferred; gate G30_no_scheduler_created PASS
+vpn_automation_not_started,PASS,deferred out of MVP
+email_mfa_automation_not_started,PASS,deferred out of MVP
+v3_3f_not_started,PASS,gate G31_no_v3_3f_started PASS
+backups_retained,PASS,pre_promote_20260628_201215 retained; not cleaned
+last_update_points_to_promoted_run,PASS,run_metadata_pipeline promoted_run_id=v3_3de_run_20260628_172644 source_data_date 2026-06-28

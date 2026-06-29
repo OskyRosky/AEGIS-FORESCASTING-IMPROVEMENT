@@ -1,0 +1,11 @@
+S07 START 2026-06-26T18:23:49.2822198-06:00
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Stage 4.5 dashboard export build started
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\dashboard\metric_summary.csv with 4 rows
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\dashboard\horizon_summary.csv with 1 rows
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\dashboard\top_entities.csv with 50 rows
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\dashboard\executive_summary.csv with 1 rows
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\dashboard\dashboard_metadata.csv with 1 rows
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Unique entities: 200
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Unique forecast versions: 7
+[2026-06-26 18:23:50] INFO build_dashboard_exports - Stage 4.5 dashboard export build completed
+S07 END 2026-06-26T18:23:50.2937586-06:00 elapsed_seconds=1 exit_code=0

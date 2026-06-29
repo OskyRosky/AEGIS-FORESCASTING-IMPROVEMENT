@@ -1,0 +1,12 @@
+field,value
+url,http://127.0.0.1:3838
+host,127.0.0.1
+port,3838
+process_id,30112
+http_status,200
+content_length,205258
+stdout_log,outputs/shiny_mvp/7_V2_FORECAST_PAGE_LAYOUT_CLEANUP/logs/forecast_layout_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_FORECAST_PAGE_LAYOUT_CLEANUP/logs/forecast_layout_stderr.log
+stderr_status,clean
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 30112
+log_prefix,forecast_layout

@@ -1,0 +1,8 @@
+rank,candidate,role,family,dl_or_ml,median_mase,median_rmsse,vs_champion_mase_ratio,raw_neg,completion_status
+0,ETS Explicit,anchor_champion_reference,statistical,existing_governed,6.901144,1.856193,1.000,,reference_not_refit
+1,SMLP-TCN,candidate,lightweight_neural,deep_learning,18.782572,4.79041,2.721,0,complete_454_of_454
+2,ENET-RIDGE,candidate,linear_ml,machine_learning,19.330846,5.027895,2.801,0,complete_454_of_454
+3,NLIN-DLIN_FIXED,candidate,linear_dl,deep_learning,24.816041,6.64135,3.596,0,complete_454_of_454
+4,LGBM-IMP-v2,candidate,gradient_boosting,machine_learning,26.747444,6.328078,3.876,0,complete_454_of_454
+5,XGB-IMP-v2,candidate,gradient_boosting,machine_learning,27.950413,6.426824,4.050,0,complete_454_of_454
+6,FNAR-V2,candidate,lightweight_neural,deep_learning,81.668413,22.405331,11.834,0,complete_454_of_454

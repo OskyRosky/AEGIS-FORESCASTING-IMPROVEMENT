@@ -1,0 +1,15 @@
+[11:42:19] Stage 05H-PILOT builder start | ROOT=C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1
+[11:42:19] loaded baseline: 95,340 rows <- outputs\model_lab\full_baseline\full_baseline_forecasts.csv
+[11:42:19] loaded challenger: 81,720 rows <- outputs\model_lab\challenger_metrics\challenger_actual_forecast_join.csv
+[11:42:19] loaded actuals: 84,537 rows <- data\processed\actuals.csv
+[11:42:19] loaded entities: 45 rows <- data\processed\entities.csv
+[11:42:19] loaded universe: 15 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_final_model_universe.csv
+[11:42:19] loaded deferred: 2 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_deferred_models.csv
+[11:42:19] loaded risk: 7 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_risk_register_final.csv
+[11:42:19] loaded champion: 1 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_champion_summary.csv
+[11:42:19] deferred models (excluded from rows): ['NBEATS', 'NHITS']
+[11:42:20] pilot series chosen: ['APC-Dedicated', 'APC-MSIT', 'APC-Multitenant']
+[11:42:20] built pilot artifact rows: 14,040
+[11:42:20] parquet engine unavailable (ModuleNotFoundError); CSV fallback -> data\processed\forecast_viewer_model_outputs_pilot.csv
+[11:42:20] wrote sample CSV: data\processed\forecast_viewer_model_outputs_pilot_sample.csv (<=200 rows)
+[11:42:20] wrote manifest: data\processed\forecast_viewer_model_outputs_pilot_manifest.csv

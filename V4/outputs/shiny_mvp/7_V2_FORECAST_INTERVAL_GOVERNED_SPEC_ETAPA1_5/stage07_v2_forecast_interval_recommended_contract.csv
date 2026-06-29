@@ -1,0 +1,21 @@
+column_name,dtype,nullable,description,example
+entity_key,string,no,Existing key (unchanged),APC-Dedicated
+date,date,no,Existing forecast date (unchanged),2026-04-28
+forecast_value,float,no,Existing point forecast / Forecast-Mean (unchanged),29.104
+model_version,string,no,Existing production model name (unchanged),FixedGrowth1%
+forecast_version,string,no,Existing version (unchanged),2026-05-01
+scenario,string,no,Existing scenario (unchanged),Enterprise
+resource,string,no,Existing resource (unchanged),HDD
+value_type,string,no,Existing value type (unchanged),Forecast-Mean
+source_file,string,no,Existing provenance (unchanged),hdd_region_forecasts.csv
+forecast_lower_80,float,yes,Lower bound of 80% empirical interval; NA when no calibration evidence,28.6
+forecast_upper_80,float,yes,Upper bound of 80% empirical interval; NA when unavailable,29.6
+forecast_lower_95,float,yes,Lower bound of 95% empirical interval; NA when unavailable,28.2
+forecast_upper_95,float,yes,Upper bound of 95% empirical interval; NA when unavailable,30.0
+interval_method,string,yes,Method tag e.g. empirical_backtest_residual_quantile,empirical_backtest_residual_quantile
+interval_source,string,yes,Residual evidence source artifact,forecast_viewer_model_outputs.csv
+interval_level_available,string,yes,Which levels are populated for this row,80;95
+interval_calibration_grain,string,yes,Grain used to compute this row's band,key_x_horizon_bucket
+interval_calibration_sample_size,int,yes,Number of backtest residuals used for this bucket,42
+interval_horizon_bucket,string,yes,Horizon bucket label used,1-7
+interval_extrapolated,bool,yes,TRUE when horizon exceeds backtest evidence (>30d),TRUE
