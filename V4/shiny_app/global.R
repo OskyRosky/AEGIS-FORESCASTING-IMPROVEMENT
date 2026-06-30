@@ -16,6 +16,10 @@ source("R/llm_explain.R")
 # the governed evidence by question intent; no real LLM, no Azure).
 source("R/llm_compose.R")
 
+# V4.7C | Governed multi-format artifact downloads (CSV verbatim + rendered
+# MD/TXT/HTML/PDF/DOCX). Read-only; reuses the local export tooling.
+source("R/artifact_export.R")
+
 # V4.7 | Make a locally-installed pandoc / TinyTeX discoverable so the
 # explanation download modal can export PDF / Word. No network, no Azure;
 # purely points rmarkdown at the local binaries. Safe no-op if absent.

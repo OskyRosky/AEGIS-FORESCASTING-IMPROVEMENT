@@ -1,0 +1,10 @@
+check,expected,observed,status
+app_starts_locally,running,"Shiny app process up; relaunched via scripts/start_shiny.ps1",PASS
+http_status,200,"HTTP 200 (Invoke-WebRequest /), content length 299466",PASS
+port_documented,3839,3839,PASS
+pid_documented,documented,"PID 39484 (listener on 127.0.0.1:3839)",PASS
+cache_buster_documented,documented,"custom.css?v=20260629h (shiny_app/ui/body.R)",PASS
+log_no_critical_errors,none,"NO_CRITICAL_ERRORS (stderr scan: no Error/cannot open/not found/unexpected/Execution halted)",PASS
+log_benign_warnings_only,benign,"only pre-existing readr parsing warning + plotly 'No trace type specified' info",PASS
+export_tooling_active,pandoc+latex,"pandoc 3.10 + TinyTeX auto-activated at startup; md/html/txt/pdf/docx all render",PASS
+url,documented,http://127.0.0.1:3839/,PASS

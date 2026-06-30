@@ -487,24 +487,11 @@ app_server <- function(input, output, session) {
     artifact_catalog_table()
   })
 
-  # One download handler per curated governed CSV. Files are served verbatim
-  # from their governed path on disk (read-only; no recomputation).
-  for (.spec in ARTIFACT_DOWNLOAD_SPECS) {
-    local({
-      key <- .spec$key
-      output[[paste0("dl_", key)]] <- downloadHandler(
-        filename = function() artifact_download_filename(key),
-        content = function(file) {
-          src <- artifact_abs_path(key)
-          if (!is.na(src) && file.exists(src)) {
-            file.copy(src, file, overwrite = TRUE)
-          } else {
-            writeLines("Governed artifact unavailable.", file)
-          }
-        }
-      )
-    })
-  }
+  # V4.7C | Governed artifact downloads. Each curated CSV opens a
+  # multi-format modal: CSV is served VERBATIM from its governed path
+  # (read-only, no recomputation); MD/TXT/HTML/PDF/DOCX are rendered,
+  # human-readable copies of the same governed data.
+  register_artifact_downloads(input, output, session)
 
   # The chart + model picker / count / notes live in a section that is hidden at
   # page load; render them eagerly (suspendWhenHidden = FALSE) so the static
@@ -543,10 +530,23 @@ app_server <- function(input, output, session) {
   # V4.6 | On-demand local LLM explanation panels (mock, read-only).
   # Each renders a precomputed V4.4 mock response when the user clicks.
   # No compute, no LLM, no Azure, no champion/governance change.
-  llm_explain_server("llm_champion_overview", "champion_overview")
-  llm_explain_server("llm_tournament",        "tournament")
-  llm_explain_server("llm_forecast_viewer",   "forecast_viewer")
-  llm_explain_server("llm_governance_risks",  "governance_risks")
+  # V4.7B expands coverage to the 9 governed MVP modules (Models, Forecasting,
+  # Governance). The Viewer (explorer) reuses the forecast_viewer response.
+  llm_explain_server("llm_models_universe",     "models_universe")
+  llm_explain_server("llm_tournament",          "tournament")
+  llm_explain_server("llm_champion_overview",   "champion_overview")
+  llm_explain_server("llm_forecast_viewer",     "forecast_viewer")
+  llm_explain_server("llm_forecasting_accuracy", "forecasting_accuracy")
+  llm_explain_server("llm_forecasting_forecast", "forecasting_forecast")
+  llm_explain_server("llm_forecasting_ttl",     "forecasting_ttl")
+  llm_explain_server("llm_governance_risks",    "governance_risks")
+  llm_explain_server("llm_governance_audit",    "governance_audit")
+
+  # V4.7C | Reference / Artifacts assistant (explains the governed
+  # artifacts, their relationships and how to interpret them). Uses a
+  # custom 5-prompt set; read-only, never decides.
+  llm_explain_server("llm_reference_artifacts", "reference_artifacts",
+                     quick_prompts = .LLM_REFERENCE_ARTIFACTS_PROMPTS)
 
   invisible(NULL)
 }

@@ -2102,3 +2102,6 @@ body {
 .theme-dark .llm-dl-disabled:hover { background: #2a3240 !important; color: #6f7d8d !important; }
 .theme-dark .llm-dl-note { color: #d39a6e; }
 .theme-dark .llm-dl-foot { color: #7e8ea0; }
+
+/* ===== V4.7C | Reference / Artifacts download modal ===== */
+.artifact-dl-modal .artifact-dl-modal-desc { margin: .15rem 0 .65rem; color: #4b5563; font-size: .9rem; }

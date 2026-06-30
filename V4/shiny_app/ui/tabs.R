@@ -292,8 +292,8 @@ section_overview <- function() {
         class = "home-prose",
         tags$p(
           "The review compared models on a broad, complete historical backtest. ",
-          "The governed tournament evidence base covers ", tags$strong("39 series"), " across ",
-          tags$strong("13 governed tournament models"), ", at ", tags$strong("horizons 1\u201330"),
+          "The governed model universe covers ", tags$strong("39 series"), " across ",
+          tags$strong("15 governed models"), ", at ", tags$strong("forecast horizons of 30 / 60 / 180 days"),
           ", with complete actual and forecast values \u2014 no gaps."
         ),
         tags$p(
@@ -304,8 +304,8 @@ section_overview <- function() {
       ),
       info_list(
         info_row("Series covered", "39"),
-        info_row("Models compared", "13"),
-        info_row("Forecast horizons", "1\u201330"),
+        info_row("Models compared", "15"),
+        info_row("Forecast horizons", "30 / 60 / 180 days"),
         info_row("Actuals / forecasts", "Complete \u00b7 no missing values")
       )
     ),
@@ -507,7 +507,10 @@ section_explorer <- function() {
     tags$p(
       class = "fv-method-note",
       "This page visualizes the governed backtest artifact only. It does not generate forecasts, recalculate metrics, rerun tournaments, or change any champion decision. The forward production forecast is shown on the separate Forecast page."
-    )
+    ),
+
+    # V4.7B | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_forecast_viewer", "Forecast Viewer")
   )
 }
 
@@ -666,9 +669,8 @@ section_forecast <- function() {
       "This page reads actuals.csv and the governed calibrated forecast artifact (forecasts_with_intervals_relative_60d_calibrated.csv, point-only fallback to forecasts.csv). It only visualizes interval columns already present in the governed artifact \u2014 it does not generate forecasts, compute or recalibrate intervals, residuals or quantiles, compare models, rerun tournaments, recalculate metrics, or change champion decisions."
     ),
 
-    # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
-    llm_explain_ui("llm_forecast_viewer", "Forecast Viewer",
-                   button_label = "Explain forecast view")
+    # V4.7B | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_forecasting_forecast", "Forward Forecast")
   )
 }
 
@@ -874,7 +876,10 @@ section_accuracy <- function() {
     tags$p(
       class = "fv-method-note",
       "This page reads the governed backtest artifact and computes display diagnostics in memory. It does not generate forecasts, rerun tournaments, change champion decisions, or compute official MASE / RMSSE governance metrics."
-    )
+    ),
+
+    # V4.7B | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_forecasting_accuracy", "Accuracy Overview")
   )
 }
 
@@ -1058,7 +1063,10 @@ section_ttl <- function() {
         "sources once those are validated."
       ),
       open = FALSE
-    )
+    ),
+
+    # V4.7B | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_forecasting_ttl", "TTL / Capacity View")
   )
 }
 
@@ -1344,7 +1352,10 @@ section_universe <- function() {
       "Every active model with its origin, family, median MASE, champion eligibility and evidence source.",
       universe_static_table_ui(vis),
       open = FALSE
-    )
+    ),
+
+    # V4.7B | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_models_universe", "Model Universe")
   )
 }
 
@@ -1814,8 +1825,7 @@ section_tournament <- function() {
     ),
 
     # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
-    llm_explain_ui("llm_tournament", "Tournament",
-                   button_label = "Explain tournament")
+    llm_explain_ui("llm_tournament", "Tournament")
   )
 }
 
@@ -2098,8 +2108,7 @@ section_champion <- function() {
     ),
 
     # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
-    llm_explain_ui("llm_champion_overview", "Champion Overview",
-                   button_label = "Explain champion")
+    llm_explain_ui("llm_champion_overview", "Champion Overview")
   )
 }
 
@@ -2199,8 +2208,7 @@ section_risks <- function() {
     ),
 
     # V4.6R | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
-    llm_explain_ui("llm_governance_risks", "Governance & Risks",
-                   button_label = "Explain governance & risks")
+    llm_explain_ui("llm_governance_risks", "Governance & Risks")
   )
 }
 
@@ -2332,7 +2340,10 @@ section_audit <- function() {
         )
       ),
       open = FALSE
-    )
+    ),
+
+    # V4.7B | AEGIS Explanation Assistant — CLOSING support panel (mock) ----
+    llm_explain_ui("llm_governance_audit", "Audit Trail")
   )
 }
 
@@ -2348,8 +2359,10 @@ section_artifacts <- function() {
         tags$span(class = "artifact-dl-desc", spec$desc)
       ),
       if (available) {
-        downloadButton(paste0("dl_", spec$key), "CSV",
-                       class = "artifact-dl-btn", icon = shiny::icon("download"))
+        # V4.7C | Opens the per-artifact multi-format download modal
+        # (CSV verbatim + rendered MD/PDF/DOCX/HTML/TXT).
+        actionButton(paste0("dl_", spec$key, "_open"), "Download",
+                     class = "artifact-dl-btn", icon = shiny::icon("download"))
       } else {
         tags$span(class = "pill pill-amber", "Unavailable")
       }
@@ -2440,6 +2453,16 @@ section_artifacts <- function() {
         )
       ),
       open = FALSE
+    ),
+
+    # E. AEGIS Explanation Assistant (V4.7C) --------------------------------
+    # Closes the section: explains what these governed artifacts are, how
+    # they relate, what they feed, and how to interpret them. Read-only.
+    llm_explain_ui(
+      "llm_reference_artifacts", "Reference Artifacts",
+      panel_title = "Ask AEGIS about these artifacts",
+      panel_sub = "Ask how these governed artifacts are used across the dashboard, what they contain, and how they relate to the forecasting and governance workflow.",
+      quick_prompts = .LLM_REFERENCE_ARTIFACTS_PROMPTS
     )
   )
 }
@@ -2519,6 +2542,25 @@ section_methodology <- function() {
         info_row("Models", "Universe, Tournament, Champion \u2014 the model landscape and selection."),
         info_row("Governance", "Risks, Audit \u2014 the risk register and the audit trail."),
         info_row("Reference", "Artifacts, Methodology, Version \u2014 sources, data lineage and build metadata.")
+      ),
+      open = TRUE
+    ),
+
+    # B2. Version history (open) --------------------------------------------
+    home_collapse(
+      "Version history (V1 \u2192 V5)",
+      "How the codebase evolved \u2014 from the first forecasting build to the planned Docker package.",
+      info_list(
+        info_row("V1 \u00b7 Forecasting codebase",
+                 "The first governed build of the forecasting codebase: data ingestion, model comparison and the evaluation method, taken through the internal stages and audits (Stage 05/06, Audit #6 approved)."),
+        info_row("V2 \u00b7 Controlled copy + MVP scaffold",
+                 "A controlled full copy of V1 (2026-06-23) used to consolidate the codebase and prepare the Shiny MVP scaffold and read-only data loader \u2014 without changing the forecasting logic."),
+        info_row("V3 \u00b7 Shiny MVP (closed)",
+                 "A controlled copy of V2 (2026-06-25) that added the methodology documents, the architecture diagram and the read-only Shiny dashboard. V3 MVP was formally CLOSED on 2026-06-29 with ETS Explicit as the governed champion across 15 models."),
+        info_row("V4 \u00b7 AI explanation layer (current)",
+                 "A controlled copy of the closed V3 (2026-06-29) that adds the AEGIS Explanation Assistant and governed multi-format downloads. The assistant only EXPLAINS already-governed evidence locally \u2014 it never computes, never sees raw data and never changes the champion."),
+        info_row("V5 \u00b7 Docker package (planned)",
+                 "The next planned step: package this read-only dashboard as a Docker image for portable, reproducible local deployment. Packaging introduces no forecasting logic or governance changes.")
       ),
       open = TRUE
     ),

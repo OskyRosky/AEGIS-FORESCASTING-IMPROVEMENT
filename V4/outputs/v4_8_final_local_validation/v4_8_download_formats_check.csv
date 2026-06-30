@@ -1,0 +1,16 @@
+module,format,http_status,bytes,signature,sources_in_body,filename,status
+Tournament,MD,200,1232,"# AEGIS",no,AEGIS_Explanation_Tournament_2026-06-30.md,PASS
+Tournament,PDF,200,101570,%PDF-1.7,no,AEGIS_Explanation_Tournament_2026-06-30.pdf,PASS
+Tournament,DOCX,200,11362,PK(zip),no,AEGIS_Explanation_Tournament_2026-06-30.docx,PASS
+Tournament,HTML,200,2116,<!doctype>,no,AEGIS_Explanation_Tournament_2026-06-30.html,PASS
+Tournament,TXT,200,1264,AEGIS EX,no,AEGIS_Explanation_Tournament_2026-06-30.txt,PASS
+Forecast Viewer,MD,200,1754,"# AEGIS",no,AEGIS_Explanation_Forecast_Viewer_2026-06-30.md,PASS
+Forecast Viewer,PDF,200,103384,%PDF-1.7,no,AEGIS_Explanation_Forecast_Viewer_2026-06-30.pdf,PASS
+Forecast Viewer,DOCX,200,11439,PK(zip),no,AEGIS_Explanation_Forecast_Viewer_2026-06-30.docx,PASS
+Forecast Viewer,HTML,200,2638,<!doctype>,no,AEGIS_Explanation_Forecast_Viewer_2026-06-30.html,PASS
+Forecast Viewer,TXT,200,1784,AEGIS EX,no,AEGIS_Explanation_Forecast_Viewer_2026-06-30.txt,PASS
+Reference Artifacts,MD,200,1759,"# AEGIS",no,AEGIS_Explanation_Reference_Artifacts_2026-06-30.md,PASS
+Reference Artifacts,PDF,200,101433,%PDF-1.7,no,AEGIS_Explanation_Reference_Artifacts_2026-06-30.pdf,PASS
+Reference Artifacts,DOCX,200,11478,PK(zip),no,AEGIS_Explanation_Reference_Artifacts_2026-06-30.docx,PASS
+Reference Artifacts,HTML,200,2652,<!doctype>,no,AEGIS_Explanation_Reference_Artifacts_2026-06-30.html,PASS
+Reference Artifacts,TXT,200,1791,AEGIS EX,no,AEGIS_Explanation_Reference_Artifacts_2026-06-30.txt,PASS

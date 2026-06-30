@@ -1,0 +1,10 @@
+page_id,response_present,schema_complete,content_claims,meta_claims,download_payload_formats,available_in_phase
+models_universe,yes,yes,4,4,5,V4.7B
+forecasting_accuracy,yes,yes,4,4,5,V4.7B
+forecasting_forecast,yes,yes,4,4,5,V4.7B
+forecasting_ttl,yes,yes,4,4,5,V4.7B
+governance_audit,yes,yes,4,4,5,V4.7B
+champion_overview,yes,yes,reused,reused,5,V4.6R2
+tournament,yes,yes,reused,reused,5,V4.6R2
+forecast_viewer,yes,yes,reused,reused,5,V4.6R2
+governance_risks,yes,yes,reused,reused,5,V4.6R2

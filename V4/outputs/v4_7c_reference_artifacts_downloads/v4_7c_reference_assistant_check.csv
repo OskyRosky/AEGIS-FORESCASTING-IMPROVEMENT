@@ -1,0 +1,14 @@
+check,expected,observed,status
+assistant_present_at_end,present,"[data-llm-page=llm_reference_artifacts] rendered as last block of section_artifacts",PASS
+panel_title,"Ask AEGIS about these artifacts","Ask AEGIS about these artifacts",PASS
+panel_sub,custom artifacts subtitle,"Ask how these governed artifacts are used across the dashboard, what they contain, and how they relate to the forecasting and governance workflow.",PASS
+quick_prompts_count,5,5,PASS
+quick_prompts_labels,"5 artifact prompts","Explain what these artifacts are used for | Which artifacts feed the model pages? | Which artifacts support governance? | What should I download first? | Explain the relationship between artifacts",PASS
+answer_generates,grounded answer,"Quick-prompt generated grounded answer mentioning 43 artifacts / 9 categories / 14 mappings",PASS
+answer_grounded_downloads,mentions 8 downloads,"Answer text references eight governed direct downloads",PASS
+traceability_collapsed,collapsed,Technical traceability rendered as collapsed group,PASS
+download_explanation_md,no sources leak,"download_md 200 / 1825 bytes / hasSources=false",PASS
+existing_modules_unbroken,9 modules intact,"llm_tournament keeps original title/sub and 4 default prompts; generates grounded risk answer",PASS
+doc_basename,Reference_Artifacts,AEGIS_Explanation_Reference_Artifacts_2026-06-29,PASS
+placement_correction,inside section_artifacts,"Review found the assistant block had been inserted inside section_methodology; moved to the end of section_artifacts and re-verified live (visible under Reference > Artifacts, absent from Methodology)",PASS
+methodology_has_no_assistant,absent from Methodology,"Methodology section now ends with 'Methodology Notes'; body.innerText 'Ask AEGIS about these artifacts' = false while Methodology is shown",PASS

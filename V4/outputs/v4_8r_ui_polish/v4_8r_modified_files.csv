@@ -1,0 +1,8 @@
+file,change_type,description
+shiny_app/ui/tabs.R,edit,"Removed 9 dead button_label arguments from llm_explain_ui calls (ignored residue: Explain tournament/champion/etc.)"
+shiny_app/ui/body.R,edit,"Fixed explorer guide (title Forecast Explorer -> Forecast Viewer; intro aligned to historical backtest, no future forecasts)"
+shiny_app/ui/body.R,add,"Added missing forecast section guide entry (data-guide=forecast)"
+shiny_app/ui/body.R,edit,"Updated ttl guide (removed 'stays Planned / no governed artifact'; now reflects prototype TTL/capacity)"
+shiny_app/ui/body.R,edit,"Bumped CSS cache-buster custom.css?v=20260629h -> v=20260629i to force client reload"
+shiny_app/ui/body.R,edit,"Fixed universe guide (Oscar review): now '15 models across 4 families'; removed incorrect '7 baseline + 6 challengers' and NBEATS/NHITS mention"
+shiny_app/ui/body.R,edit,"Bumped CSS cache-buster custom.css?v=20260629i -> v=20260629j after universe guide fix"

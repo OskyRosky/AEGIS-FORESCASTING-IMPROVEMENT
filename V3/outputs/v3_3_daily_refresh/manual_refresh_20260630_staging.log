@@ -1,0 +1,45 @@
+[2026-06-30 09:29:00] INFO export_hdd_region - Export started
+[2026-06-30 09:29:30] INFO export_hdd_region - ForecastVersion used: 2026-05-01
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_hdd_region.py:64: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  forecasts = pd.read_sql(HDD_REGION_FORECASTS_QUERY, connection)
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_hdd_region.py:65: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  actuals = pd.read_sql(HDD_REGION_ACTUALS_QUERY, connection)
+[2026-06-30 09:29:35] INFO export_hdd_region - Forecasts exported to C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\v3_3_daily_refresh\v3_3de_orchestrator_staging\runs\v3_3de_run_20260630_092858\data_raw\hdd_region_forecasts.csv
+[2026-06-30 09:29:35] INFO export_hdd_region - Forecasts row count: 65095
+[2026-06-30 09:29:35] INFO export_hdd_region - Forecasts unique entities: 45
+[2026-06-30 09:29:35] INFO export_hdd_region - Forecasts unique models: 16
+[2026-06-30 09:29:35] INFO export_hdd_region - Forecasts min DateTime: 2026-04-28
+[2026-06-30 09:29:35] INFO export_hdd_region - Forecasts max DateTime: 2030-04-25
+[2026-06-30 09:29:35] INFO export_hdd_region - Actuals exported to C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\v3_3_daily_refresh\v3_3de_orchestrator_staging\runs\v3_3de_run_20260630_092858\data_raw\hdd_region_actuals.csv
+[2026-06-30 09:29:35] INFO export_hdd_region - Actuals row count: 84537
+[2026-06-30 09:29:35] INFO export_hdd_region - Actuals unique entities: 45
+[2026-06-30 09:29:35] INFO export_hdd_region - Actuals unique models: 1
+[2026-06-30 09:29:35] INFO export_hdd_region - Actuals min DateTime: 2019-07-01
+[2026-06-30 09:29:35] INFO export_hdd_region - Actuals max DateTime: 2026-04-27
+[2026-06-30 09:29:35] INFO export_hdd_region - Export completed
+S01 ingestion COMPLETED: fresh SQL -> hdd_region_forecasts.csv, hdd_region_actuals.csv
+[2026-06-30 09:29:36] INFO build_data_contract - Stage 4.1 data contract build started
+[2026-06-30 09:29:36] INFO build_data_contract - Actuals duplicate rows before cleanup: 0
+[2026-06-30 09:29:36] INFO build_data_contract - Actuals duplicate rows after cleanup: 0
+[2026-06-30 09:29:36] INFO build_data_contract - Forecast duplicate rows before cleanup: 0
+[2026-06-30 09:29:36] INFO build_data_contract - Forecast duplicate rows after cleanup: 0
+[2026-06-30 09:29:36] WARNING build_data_contract - forecast_comparison.csv has zero rows after same-date join. This can happen when actuals end before the latest forecast run starts.
+[2026-06-30 09:29:37] INFO build_data_contract - Created actuals.csv with 84537 rows
+[2026-06-30 09:29:37] INFO build_data_contract - Created forecasts.csv with 65095 rows
+[2026-06-30 09:29:37] INFO build_data_contract - Created forecast_comparison.csv with 0 rows
+[2026-06-30 09:29:37] INFO build_data_contract - Created entities.csv with 45 rows
+[2026-06-30 09:29:37] INFO build_data_contract - Created run_metadata.csv with 1 rows
+[2026-06-30 09:29:37] INFO build_data_contract - Comparison row count: 0
+[2026-06-30 09:29:37] INFO build_data_contract - Stage 4.1 data contract build completed
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+S02 transform COMPLETED: raw staging -> processed candidate
+S03a baseline COMPLETED rows=95340 fail=0
+S03b challengers COMPLETED rows=68100 fail=0 models=5
+S03c dl_reuse COMPLETED rows=40860 models=3
+GATES 32/32 PASS | champion=ETS Explicit | run=v3_3de_run_20260630_092858
+V3_3DE_DAILY_REFRESH_ORCHESTRATOR_FULL_STAGING_COMPLETED

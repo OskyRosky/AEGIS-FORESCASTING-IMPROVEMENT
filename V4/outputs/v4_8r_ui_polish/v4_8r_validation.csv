@@ -1,0 +1,19 @@
+id,check,result
+1,Dashboard responds HTTP 200,PASS
+2,Logs show no critical errors after edits,PASS
+3,Guide button opens the section guide overlay correctly,PASS
+4,Guide texts aligned with each section body,PASS
+5,No LLM teaser/panel at top of Tournament/Champion/other sections,PASS
+6,Assistant present only at section end (blocksAfter=0),PASS
+7,All 10 assistants present and structurally functional,PASS
+8,Governed downloads still wired (no changes to artifact_export),PASS
+9,Reference/Artifacts assistant in Artifacts (not Methodology),PASS
+10,No sources/traceability visible by default,PASS
+11,No data/processed mutation,PASS
+12,No data/raw mutation,PASS
+13,Champion still ETS Explicit (frozen),PASS
+14,V1/V2/V3 untouched,PASS
+15,Missing forecast guide entry added (14/14 sections covered),PASS
+16,Dead button_label residue removed from 9 calls,PASS
+17,CSS cache-buster bumped to force client reload,PASS
+18,tabs.R and body.R parse OK,PASS

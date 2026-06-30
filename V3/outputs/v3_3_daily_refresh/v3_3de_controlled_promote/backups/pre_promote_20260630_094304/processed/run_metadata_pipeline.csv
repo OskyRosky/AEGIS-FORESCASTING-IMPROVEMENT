@@ -1,0 +1,2 @@
+last_successful_refresh_timestamp,pipeline_status,total_runtime_minutes,model_scope_count,champion_model,validation_status,promoted_run_id,source_data_date,notes
+2026-06-29T09:51:29,STAGING_COMPLETED,12.81,15,ETS Explicit,PENDING,NOT_PROMOTED_STAGING_RUN,2026-06-28,staging-only candidate; full

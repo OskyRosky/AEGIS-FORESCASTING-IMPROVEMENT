@@ -1,0 +1,11 @@
+check_name,status,details,created_timestamp
+sanity_review_allowed_5_31,pass,5.30A ready flag checked,2026-06-26T18:23:29
+thirteen_scored_models_evaluated,pass,rows=13,2026-06-26T18:23:29
+nbeats_not_scored_candidate,pass,NBEATS absent,2026-06-26T18:23:29
+nhits_not_scored_candidate,pass,NHITS absent,2026-06-26T18:23:29
+fast_neural_risk_addressed,pass,FastNeuralAR_MLP status checked,2026-06-26T18:23:29
+fixedgrowth6_manual_review_addressed,pass,FixedGrowth_6 manual review checked,2026-06-26T18:23:29
+decision_allowed_value,pass,decision=CHAMPION_SELECTED_WITH_CONDITIONS,2026-06-26T18:23:29
+selected_model_is_eligible,pass,selected=ETS Explicit,2026-06-26T18:23:29
+shiny_unmodified,pass,Shiny path present,2026-06-26T18:23:29
+risk_review_created,pass,risk_rows=21,2026-06-26T18:23:29

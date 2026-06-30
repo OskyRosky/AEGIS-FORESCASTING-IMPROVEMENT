@@ -1,0 +1,2 @@
+run_id,timestamp,pipeline_status,stage_count,stages_completed,stages_failed,total_runtime_minutes,validation_status,promotion_status,notes
+v3_3de_run_20260630_092858,2026-06-30T09:42:33,STAGING_COMPLETED,3,3,0,13.59,PENDING,NOT_ATTEMPTED_STAGING_ONLY,full

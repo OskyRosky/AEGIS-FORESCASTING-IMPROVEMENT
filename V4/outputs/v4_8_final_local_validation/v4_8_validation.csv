@@ -1,0 +1,34 @@
+id,area,check,status
+1,Runtime,App starts locally and serves HTTP 200 (len 299466),PASS
+2,Runtime,Port 3839 documented; PID 39484 documented,PASS
+3,Runtime,Cache-buster custom.css?v=20260629h documented,PASS
+4,Runtime,No critical errors in stderr log (benign readr+plotly only),PASS
+5,Runtime,pandoc 3.10 + TinyTeX active for PDF/DOCX rendering,PASS
+6,Coverage,10 visible assistants present and visible (universe/tournament/champion/viewer/accuracy/forecast/ttl/risks/audit/artifacts),PASS
+7,Coverage,Each assistant has a question box,PASS
+8,Coverage,Each assistant has quick prompts (4 for 9 modules; 5 for artifacts),PASS
+9,Coverage,Each assistant has a working Generate explanation button (id <module>-explain),PASS
+10,Coverage,executive_overview exists in mock JSON but is an internal response artifact (not a visible module) - documented separately,PASS
+11,Behavior,Tournament generates a grounded paragraph response; traceability collapsed; footer discreet; no forbidden language,PASS
+12,Behavior,Forecast Viewer generates a grounded response (65095 rows); traceability collapsed; footer present,PASS
+13,Behavior,Reference Artifacts generates a grounded response (43/9/8); traceability collapsed; footer present,PASS
+14,Behavior,Sources/traceability never appear as main body (inside collapsed <details>),PASS
+15,Downloads,Tournament explanation MD/PDF/DOCX/HTML/TXT all 200 with correct signatures,PASS
+16,Downloads,Forecast Viewer explanation MD/PDF/DOCX/HTML/TXT all 200 with correct signatures,PASS
+17,Downloads,Reference Artifacts explanation MD/PDF/DOCX/HTML/TXT all 200 with correct signatures,PASS
+18,Downloads,Downloaded explanation reflects latest visible answer; includes question; includes governance footer (verified in MD/HTML/TXT),PASS
+19,Downloads,No sources/traceability leak in any downloaded explanation (hasSources=false),PASS
+20,GovernedDownloads,Governed modal opens with CSV(canonical)+MD/PDF/DOCX/HTML/TXT,PASS
+21,GovernedDownloads,CSV served verbatim (2598 bytes == on-disk 2598 bytes),PASS
+22,GovernedDownloads,Rendered formats are additional; CSV remains canonical; canonical note present,PASS
+23,GovernedDownloads,200-row preview cap documented; never trips (all downloads <=15 rows),PASS
+24,GovernedDownloads,No existing download broken,PASS
+25,Governance,Champion frozen = ETS Explicit,PASS
+26,Governance,V4 does not change champion/governance/promote/recompute/train/SQL,PASS
+27,Governance,No Azure / no real LLM / no external API,PASS
+28,Governance,data/processed and data/raw not modified (newest 2026-06-28),PASS
+29,Governance,V1/V2/V3 untouched,PASS
+30,Governance,Azure/OpenAI readiness deferred (V4.9 gated); Ollama planned only,PASS
+31,Inventory,All prior phase output folders present (v4_0..v4_7c),PASS
+32,Visual,>=5 assistants verified visually; reference assistant in Artifacts not Methodology; no misplaced panels; no dominant technical block,PASS
+33,Scope,V4.8 added no features and made no application code changes,PASS

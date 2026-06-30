@@ -1,0 +1,2 @@
+last_successful_refresh_timestamp,pipeline_status,total_runtime_minutes,model_scope_count,champion_model,validation_status,promoted_run_id,source_data_date,notes
+2026-06-28T17:39:44,PROMOTED,13.01,15,ETS Explicit,PASS,v3_3de_run_20260628_172644,2026-06-28,promoted full staging run; champion frozen ETS Explicit

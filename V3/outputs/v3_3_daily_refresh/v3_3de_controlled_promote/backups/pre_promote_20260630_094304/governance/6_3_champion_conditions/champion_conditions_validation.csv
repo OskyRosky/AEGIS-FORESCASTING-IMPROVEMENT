@@ -1,0 +1,22 @@
+check_name,status,details,created_timestamp
+output directory exists,pass,outputs/governance/6_3_champion_conditions,2026-06-14T10:40:38
+champion_conditions_protocol.csv exists,pass,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:40:38
+champion_dashboard_language.csv exists,pass,outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,2026-06-14T10:40:38
+champion_condition_traceability.csv exists,pass,outputs/governance/6_3_champion_conditions/champion_condition_traceability.csv,2026-06-14T10:40:38
+champion_dashboard_display_requirements.csv exists,pass,outputs/governance/6_3_champion_conditions/champion_dashboard_display_requirements.csv,2026-06-14T10:40:38
+champion_conditions_report.md exists,pass,outputs/governance/6_3_champion_conditions/champion_conditions_report.md,2026-06-14T10:40:38
+conditions C-001 through C-005,pass,"['C-001', 'C-002', 'C-003', 'C-004', 'C-005']",2026-06-14T10:40:38
+approved statements exist,pass,approved_count>=4,2026-06-14T10:40:38
+prohibited statements exist,pass,prohibited_count=7,2026-06-14T10:40:38
+prohibited statements have replacements,pass,all prohibited rows have replacement_statement,2026-06-14T10:40:38
+traceability file exists,pass,trace_rows=10,2026-06-14T10:40:38
+display requirements file exists,pass,display_rows=12,2026-06-14T10:40:38
+ETS Explicit remains conditional champion,pass,decision preserved,2026-06-14T10:40:38
+confidence remains medium,pass,decision_confidence=medium,2026-06-14T10:40:38
+all conditions display required,pass,dashboard_display_required true,2026-06-14T10:40:38
+DO_NOT_PRESENT_AS_UNCONDITIONAL_WINNER represented,pass,communication guardrail present,2026-06-14T10:40:38
+FastNeuralAR_MLP risk surfaced,pass,risk language/display present,2026-06-14T10:40:38
+NBEATS/NHITS deferrals surfaced,pass,deferral language/display present,2026-06-14T10:40:38
+Stage 05 outputs not modified,pass,Script writes only to 6.3 output directory.,2026-06-14T10:40:38
+Stage 06 prior outputs not modified,pass,Script reads 6.0/6.1/6.2 only.,2026-06-14T10:40:38
+Shiny not modified,pass,Script does not write to shiny_app/.,2026-06-14T10:40:38

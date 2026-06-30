@@ -1,0 +1,11 @@
+module,section_group,data_section,llm_id,assistant_exists,assistant_visible,at_end_of_section,question_box,quick_prompts,generate_button,status
+Universe,Models,universe,llm_models_universe,yes,yes,yes,yes,4,yes,PASS
+Tournament,Models,tournament,llm_tournament,yes,yes,yes,yes,4,yes,PASS
+Champion,Models,champion,llm_champion_overview,yes,yes,yes,yes,4,yes,PASS
+Viewer,Forecasting,explorer,llm_forecast_viewer,yes,yes,yes,yes,4,yes,PASS
+Accuracy,Forecasting,accuracy,llm_forecasting_accuracy,yes,yes,yes,yes,4,yes,PASS
+Forecast,Forecasting,forecast,llm_forecasting_forecast,yes,yes,yes,yes,4,yes,PASS
+TTL,Forecasting,ttl,llm_forecasting_ttl,yes,yes,yes,yes,4,yes,PASS
+Risks,Governance,risks,llm_governance_risks,yes,yes,yes,yes,4,yes,PASS
+Audit,Governance,audit,llm_governance_audit,yes,yes,yes,yes,4,yes,PASS
+Artifacts,Reference,artifacts,llm_reference_artifacts,yes,yes,yes,yes,5,yes,PASS

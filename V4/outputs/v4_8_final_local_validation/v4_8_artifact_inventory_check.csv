@@ -1,0 +1,14 @@
+phase,expected_folder,present,status
+V4.0 baseline,outputs/v4_0_baseline,yes,PASS
+V4.1 LLM design,outputs/v4_1_llm_design,yes,PASS
+V4.2 evidence pack,outputs/v4_2_evidence_pack,yes,PASS
+V4.3 deterministic insights,outputs/v4_3_deterministic_insights,yes,PASS
+V4.4 mock provider,outputs/v4_4_mock_provider,yes,PASS
+V4.5 prompt contract,outputs/v4_5_prompt_contract,yes,PASS
+V4.6 remediation,outputs/v4_6_remediation,yes,PASS
+V4.6 shiny local on-demand,outputs/v4_6_shiny_local_on_demand,yes,PASS
+V4.6R2 UX rework,outputs/v4_6r2_ux_rework,yes,PASS
+V4.7 download audit,outputs/v4_7_download_audit,yes,PASS
+V4.7B LLM coverage expansion,outputs/v4_7b_llm_coverage_expansion,yes,PASS
+V4.7C reference artifacts downloads,outputs/v4_7c_reference_artifacts_downloads,yes,PASS
+V4.8 final local validation,outputs/v4_8_final_local_validation,yes (this phase),PASS

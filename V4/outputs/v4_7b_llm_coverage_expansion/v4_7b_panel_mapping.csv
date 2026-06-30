@@ -1,0 +1,10 @@
+module_id,data_section,panel_position,renders,quick_prompts,question_box,generate_button,local_mock_badge
+llm_models_universe,universe,END_of_section,yes,4,yes,yes,yes
+llm_tournament,tournament,END_of_section,yes,4,yes,yes,yes
+llm_champion_overview,champion,END_of_section,yes,4,yes,yes,yes
+llm_forecast_viewer,explorer,END_of_section,yes,4,yes,yes,yes
+llm_forecasting_accuracy,accuracy,END_of_section,yes,4,yes,yes,yes
+llm_forecasting_forecast,forecast,END_of_section,yes,4,yes,yes,yes
+llm_forecasting_ttl,ttl,END_of_section,yes,4,yes,yes,yes
+llm_governance_risks,risks,END_of_section,yes,4,yes,yes,yes
+llm_governance_audit,audit,END_of_section,yes,4,yes,yes,yes

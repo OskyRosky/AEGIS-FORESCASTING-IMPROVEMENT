@@ -666,6 +666,623 @@
         ],
         "note": "Download UI is deferred to V4.7; the payload structure is shown here for traceability only."
       }
+    },
+    {
+      "page_id": "models_universe",
+      "title": "Model Universe",
+      "summary": "Under governed, evidence-only conditions, the canonical model universe records 15 governed models. Of these, 12 are eligible for the champion role and 3 deep-learning models are evaluation-only. The models span four families and exactly one model \u2014 ETS Explicit \u2014 is recorded as the selected champion; the rest remain active tournament or evaluation models. Nothing here is re-fit or re-classified.",
+      "what_the_evidence_says": [
+        "The governed model universe contains 15 models recorded in model_universe_canonical.csv.",
+        "Of the 15 models, 12 are eligible for the champion role and 3 deep-learning models are evaluation-only.",
+        "The models span four families: 5 statistical, 4 growth baselines, 3 machine-learning and 3 deep-learning.",
+        "Exactly one model, ETS Explicit, is recorded as the selected champion; 11 are active tournament models and 3 are active evaluation models."
+      ],
+      "why_it_matters": "The universe matters because it is the governed scope every other view is read against: champion, tournament, accuracy and forecast all draw from these 15 models. Showing the families and eligibility lets reviewers see exactly which models can be considered for the champion role, without implying any change of standing.",
+      "sources_used": [
+        "model_universe_canonical.csv",
+        "model_dashboard_summary.csv",
+        "v4_2_evidence_pack_champion_overview.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Family labels and eligibility are read from the canonical universe; no model was re-fit or re-classified."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "models_universe_01",
+          "claim": "The governed model universe contains 15 models recorded in model_universe_canonical.csv.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "governed_model_scope_rows"
+        },
+        {
+          "claim_id": "models_universe_02",
+          "claim": "Of the 15 models, 12 are eligible for the champion role and 3 deep-learning models are evaluation-only.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "eligible_for_champion | final_status"
+        },
+        {
+          "claim_id": "models_universe_03",
+          "claim": "The models span four families: 5 statistical, 4 growth baselines, 3 machine-learning and 3 deep-learning.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "model_family"
+        },
+        {
+          "claim_id": "models_universe_04",
+          "claim": "Exactly one model, ETS Explicit, is recorded as the selected champion; 11 are active tournament models and 3 are active evaluation models.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "model_universe_canonical.csv",
+          "evidence_fields": "selected_champion | final_status"
+        },
+        {
+          "claim_id": "models_universe_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "models_universe_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "models_universe_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "models_universe_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_champion_overview.json",
+          "source_artifacts": "v4_2_evidence_pack_champion_overview.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "models_universe",
+        "format_options": [
+          "md",
+          "pdf",
+          "docx",
+          "html",
+          "txt"
+        ],
+        "available_in_phase": "V4.7B",
+        "card_count": 4,
+        "source_files": [
+          "model_universe_canonical.csv",
+          "v4_3_deterministic_insights.json",
+          "v4_3_claims_traceability.csv"
+        ],
+        "note": "Explanation download is local-only and contains no sources or traceability; those stay in the dashboard."
+      }
+    },
+    {
+      "page_id": "forecasting_accuracy",
+      "title": "Accuracy Overview",
+      "summary": "Under governed, evidence-only conditions, accuracy is recorded as median MASE and median RMSSE, where lower values indicate a closer fit to the holdout. ETS Explicit is the champion reference at median MASE 6.90 and median RMSSE 1.86. The closest challenger by MASE ratio is SMLP-TCN at 2.72x the champion; the widest is FNAR-V2 at 11.83x. All challengers remain documented challengers and the champion accuracy is unchanged.",
+      "what_the_evidence_says": [
+        "Accuracy is recorded as median MASE and median RMSSE; lower values indicate a closer fit to the holdout.",
+        "ETS Explicit is the champion reference at median MASE 6.90 and median RMSSE 1.86 (ratio 1.000).",
+        "The closest challenger by MASE ratio is SMLP-TCN at 18.78 (2.72x the champion); the widest is FNAR-V2 at 81.67 (11.83x).",
+        "All six challengers are recorded as documented challengers; the champion accuracy is unchanged."
+      ],
+      "why_it_matters": "Accuracy matters because it makes the recorded distance between the champion and its documented challengers explicit and reviewable. It is shown so reviewers can read how close each challenger is on the same scale, without implying any change of standing or any promotion.",
+      "sources_used": [
+        "model_evaluation_ranking.csv",
+        "model_evaluation_summary.csv",
+        "v4_2_evidence_pack_tournament.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Accuracy figures are read from the recorded evaluation; no metric was recomputed.",
+        "'Closest' is by recorded ratio only and implies no promotion."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "forecasting_accuracy_01",
+          "claim": "Accuracy is recorded as median MASE and median RMSSE; lower values indicate a closer fit to the holdout.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_summary.csv",
+          "evidence_fields": "median_mase | median_rmsse"
+        },
+        {
+          "claim_id": "forecasting_accuracy_02",
+          "claim": "ETS Explicit is the champion reference at median MASE 6.90 and median RMSSE 1.86 (ratio 1.000).",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_ranking.csv",
+          "evidence_fields": "ranking[].model | ranking[].median_mase | ranking[].vs_champion_mase_ratio"
+        },
+        {
+          "claim_id": "forecasting_accuracy_03",
+          "claim": "The closest challenger by MASE ratio is SMLP-TCN at 18.78 (2.72x the champion); the widest is FNAR-V2 at 81.67 (11.83x).",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_ranking.csv",
+          "evidence_fields": "ranking[].model | ranking[].vs_champion_mase_ratio"
+        },
+        {
+          "claim_id": "forecasting_accuracy_04",
+          "claim": "All six challengers are recorded as documented challengers; the champion accuracy is unchanged.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "model_evaluation_summary.csv",
+          "evidence_fields": "final_decision"
+        },
+        {
+          "claim_id": "forecasting_accuracy_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecasting_accuracy_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "forecasting_accuracy_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecasting_accuracy_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_tournament.json",
+          "source_artifacts": "v4_2_evidence_pack_tournament.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "forecasting_accuracy",
+        "format_options": [
+          "md",
+          "pdf",
+          "docx",
+          "html",
+          "txt"
+        ],
+        "available_in_phase": "V4.7B",
+        "card_count": 4,
+        "source_files": [
+          "model_evaluation_ranking.csv",
+          "model_evaluation_summary.csv",
+          "v4_3_deterministic_insights.json"
+        ],
+        "note": "Explanation download is local-only and contains no sources or traceability; those stay in the dashboard."
+      }
+    },
+    {
+      "page_id": "forecasting_forecast",
+      "title": "Forward Forecast",
+      "summary": "Under governed, evidence-only conditions, the forward forecast covers 65,095 forecast rows across 45 entities, recorded in forecasts_with_intervals.csv. Forecast dates span 2026-04-28 to 2030-04-25 under forecast version 2026-05-01, and each row carries 80% and 95% prediction intervals where an interval is available. The forecast is read as governed evidence: full series are summarized and capped, never recomputed.",
+      "what_the_evidence_says": [
+        "The forward forecast covers 65,095 forecast rows across 45 entities, recorded in forecasts_with_intervals.csv.",
+        "Forecast dates span 2026-04-28 to 2030-04-25 under forecast version 2026-05-01.",
+        "Each forecast row carries 80% and 95% prediction intervals (lower and upper bounds) where an interval is available.",
+        "The forecast is read as governed evidence; full series are summarized and capped before explanation, never recomputed."
+      ],
+      "why_it_matters": "The forward forecast matters because it shows the central path and its recorded uncertainty band over the horizon. Showing the intervals alongside the point forecast lets reviewers read both the expected trajectory and how wide the recorded uncertainty is, without re-running or re-fitting anything.",
+      "sources_used": [
+        "forecasts_with_intervals.csv",
+        "run_metadata.csv",
+        "v4_2_evidence_pack_forecast_viewer.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_claims_traceability.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Forecast values and intervals are read from the artifact; no forecast was generated or re-fit.",
+        "Prediction intervals are descriptive of recorded uncertainty, not a guarantee."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "forecasting_forecast_01",
+          "claim": "The forward forecast covers 65,095 forecast rows across 45 entities, recorded in forecasts_with_intervals.csv.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv | run_metadata.csv",
+          "evidence_fields": "forecast_rows | entity_count"
+        },
+        {
+          "claim_id": "forecasting_forecast_02",
+          "claim": "Forecast dates span 2026-04-28 to 2030-04-25 under forecast version 2026-05-01.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "run_metadata.csv",
+          "evidence_fields": "first_forecast_date | last_forecast_date | forecast_version"
+        },
+        {
+          "claim_id": "forecasting_forecast_03",
+          "claim": "Each forecast row carries 80% and 95% prediction intervals (lower and upper bounds) where an interval is available.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "forecasts_with_intervals.csv",
+          "evidence_fields": "forecast_lower_80 | forecast_upper_80 | forecast_lower_95 | forecast_upper_95 | interval_available"
+        },
+        {
+          "claim_id": "forecasting_forecast_04",
+          "claim": "The forecast is read as governed evidence; full series are summarized and capped before explanation, never recomputed.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "forecast_subset.what_not_passed | forecast_subset.sample_rows_capped_at"
+        },
+        {
+          "claim_id": "forecasting_forecast_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecasting_forecast_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "forecasting_forecast_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecasting_forecast_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_forecast_viewer.json",
+          "source_artifacts": "v4_2_evidence_pack_forecast_viewer.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "forecasting_forecast",
+        "format_options": [
+          "md",
+          "pdf",
+          "docx",
+          "html",
+          "txt"
+        ],
+        "available_in_phase": "V4.7B",
+        "card_count": 4,
+        "source_files": [
+          "forecasts_with_intervals.csv",
+          "run_metadata.csv",
+          "v4_3_deterministic_insights.json"
+        ],
+        "note": "Explanation download is local-only and contains no sources or traceability; those stay in the dashboard."
+      }
+    },
+    {
+      "page_id": "forecasting_ttl",
+      "title": "TTL / Capacity View",
+      "summary": "Under governed, evidence-only conditions, the TTL snapshot covers 45 governed entities, each with a months-to-live estimate from the supply/demand intersection method. Months-to-live ranges from 5.23 to 73.84 months, with a median of 18.60. By status, 33 entities are Cool, 10 are Healthy and 2 are in Warning. Importantly, demand is the real forecast but supply and the resulting TTL are simulated under a flat-supply assumption, so TTL is a planning signal, not a commitment.",
+      "what_the_evidence_says": [
+        "The TTL snapshot covers 45 governed entities, each with a months-to-live estimate from the supply/demand intersection method.",
+        "Months-to-live ranges from 5.23 to 73.84 months, with a median of 18.60 months.",
+        "By status, 33 entities are Cool, 10 are Healthy and 2 are in Warning.",
+        "Demand is the real forecast, but supply and the resulting TTL are simulated under a flat-supply assumption."
+      ],
+      "why_it_matters": "TTL matters because it flags how long recorded demand can be served before crossing the simulated supply line, which helps reviewers prioritise capacity attention. Because the supply side is simulated, it is shown as a planning signal for review, not as a capacity decision or a guaranteed runway.",
+      "sources_used": [
+        "ttl_months_to_live_snapshot.csv",
+        "ttl_supply_demand_timeseries.csv",
+        "v4_2_evidence_pack_governance_risks.json",
+        "v4_3_deterministic_insights.json",
+        "v4_3_risk_flags.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Supply and TTL are simulated (flat-supply, intersection method); only demand is the real forecast.",
+        "TTL is a descriptive planning signal, not a capacity decision or a guaranteed runway."
+      ],
+      "confidence": "medium",
+      "claims_traceability": [
+        {
+          "claim_id": "forecasting_ttl_01",
+          "claim": "The TTL snapshot covers 45 governed entities, each with a months-to-live estimate from the supply/demand intersection method.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "ttl_months_to_live_snapshot.csv",
+          "evidence_fields": "entity_key | method | months_to_live"
+        },
+        {
+          "claim_id": "forecasting_ttl_02",
+          "claim": "Months-to-live ranges from 5.23 to 73.84 months, with a median of 18.60 months.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "ttl_months_to_live_snapshot.csv",
+          "evidence_fields": "months_to_live"
+        },
+        {
+          "claim_id": "forecasting_ttl_03",
+          "claim": "By status, 33 entities are Cool, 10 are Healthy and 2 are in Warning.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "ttl_months_to_live_snapshot.csv",
+          "evidence_fields": "ttl_status"
+        },
+        {
+          "claim_id": "forecasting_ttl_04",
+          "claim": "Demand is the real forecast, but supply and the resulting TTL are simulated under a flat-supply assumption.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "ttl_months_to_live_snapshot.csv",
+          "evidence_fields": "data_origin"
+        },
+        {
+          "claim_id": "forecasting_ttl_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecasting_ttl_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "forecasting_ttl_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "forecasting_ttl_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "forecasting_ttl",
+        "format_options": [
+          "md",
+          "pdf",
+          "docx",
+          "html",
+          "txt"
+        ],
+        "available_in_phase": "V4.7B",
+        "card_count": 4,
+        "source_files": [
+          "ttl_months_to_live_snapshot.csv",
+          "v4_3_deterministic_insights.json",
+          "v4_3_risk_flags.csv"
+        ],
+        "note": "Explanation download is local-only and contains no sources or traceability; those stay in the dashboard."
+      }
+    },
+    {
+      "page_id": "governance_audit",
+      "title": "Audit Trail",
+      "summary": "Under governed, evidence-only conditions, the latest governed run is timestamped 2026-06-28T17:27:14 on forecast version 2026-05-01, recorded in run_metadata.csv. That run covers 45 entities, 16 models, 84,537 actual rows and 65,095 forecast rows. Runtime guardrails recorded for 6 evaluation models all pass, each completing 454 of 454 windows with zero raw negatives. The audit reflects the recorded run only; nothing was re-run.",
+      "what_the_evidence_says": [
+        "The latest governed run is timestamped 2026-06-28T17:27:14 on forecast version 2026-05-01, recorded in run_metadata.csv.",
+        "That run covers 45 entities, 16 models, 84,537 actual rows and 65,095 forecast rows.",
+        "Runtime guardrails recorded for 6 evaluation models all pass, each completing 454 of 454 windows with zero raw negatives.",
+        "Recorded model runtimes range from 0.02 to 22.32 minutes."
+      ],
+      "why_it_matters": "The audit trail matters because it lets reviewers confirm the run completed within its recorded guardrails and trace every other view back to a dated, governed run. It is shown for verification and provenance; it does not change any model, champion, or governance decision.",
+      "sources_used": [
+        "run_metadata.csv",
+        "model_runtime_guardrails.csv",
+        "run_metadata_pipeline.csv",
+        "v4_2_evidence_pack_governance_risks.json",
+        "v4_3_deterministic_insights.json"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+        "Guardrail status is read from the artifact; nothing was re-run.",
+        "The audit reflects the recorded run; runtime guardrails cover the 6 evaluation models recorded, not every model in the universe."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "governance_audit_01",
+          "claim": "The latest governed run is timestamped 2026-06-28T17:27:14 on forecast version 2026-05-01, recorded in run_metadata.csv.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "run_metadata.csv",
+          "evidence_fields": "run_timestamp | forecast_version"
+        },
+        {
+          "claim_id": "governance_audit_02",
+          "claim": "That run covers 45 entities, 16 models, 84,537 actual rows and 65,095 forecast rows.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "run_metadata.csv",
+          "evidence_fields": "entity_count | model_count | actual_rows | forecast_rows"
+        },
+        {
+          "claim_id": "governance_audit_03",
+          "claim": "Runtime guardrails recorded for 6 evaluation models all pass, each completing 454 of 454 windows with zero raw negatives.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "model_runtime_guardrails.csv",
+          "evidence_fields": "guardrail_status | windows_completed | total_windows | raw_neg"
+        },
+        {
+          "claim_id": "governance_audit_04",
+          "claim": "Recorded model runtimes range from 0.02 to 22.32 minutes.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "model_runtime_guardrails.csv",
+          "evidence_fields": "runtime_minutes"
+        },
+        {
+          "claim_id": "governance_audit_91",
+          "claim": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "governance_audit_92",
+          "claim": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "governance_audit_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "governance_audit_94",
+          "claim": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_pack": "v4_2_evidence_pack_governance_risks.json",
+          "source_artifacts": "v4_2_evidence_pack_governance_risks.json",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "governance_audit",
+        "format_options": [
+          "md",
+          "pdf",
+          "docx",
+          "html",
+          "txt"
+        ],
+        "available_in_phase": "V4.7B",
+        "card_count": 4,
+        "source_files": [
+          "run_metadata.csv",
+          "model_runtime_guardrails.csv",
+          "v4_3_deterministic_insights.json"
+        ],
+        "note": "Explanation download is local-only and contains no sources or traceability; those stay in the dashboard."
+      }
+    },
+    {
+      "page_id": "reference_artifacts",
+      "title": "Reference Artifacts",
+      "summary": "Under governed, evidence-only conditions, the dashboard reads 43 governed artifacts organized into 9 categories; 42 are available now and 1 (the TTL capacity view) is on the roadmap and not yet produced. Eight of these artifacts are offered as direct governed downloads, and the dashboard handoff manifest records 14 section-to-artifact mappings so every view can be traced to the governed file that feeds it. All artifacts are read-only: files are listed and served exactly as produced by the Model Lab, with no recomputation, and the champion decision (ETS Explicit) is unchanged.",
+      "what_the_evidence_says": [
+        "The dashboard reads 43 governed artifacts organized into 9 categories (closure pack, tournament, challenger, governance, audit, methodology, forecasting, model evaluation and TTL); 42 are available now and 1 (the TTL capacity view) is on the roadmap and not yet produced.",
+        "Eight of these artifacts are offered as direct governed downloads: key results, model universe, champion summary, risk register, tournament standings, tournament scorecard, the dashboard handoff manifest and the artifact manifest.",
+        "The dashboard handoff manifest records 14 section-to-artifact mappings, so each dashboard view can be traced to the single governed file that feeds it.",
+        "The model pages are fed by the closure pack and tournament engine: the final model universe lists 15 models, the champion summary records the governed champion, and the tournament standings and scorecard each cover 13 models.",
+        "The governance pages are fed by the final risk register, which records 7 governed risks, together with the audit summaries and champion conditions.",
+        "Every artifact is read-only: the dashboard lists and serves files exactly as produced by the Model Lab, with no recomputation, and the champion decision (ETS Explicit) is unchanged."
+      ],
+      "why_it_matters": "These artifacts are the single source of truth behind every number in the dashboard. Knowing what each one contains and which view it feeds lets a reviewer trace any figure back to a governed file and download that file to verify it independently. The reference is shown for orientation and provenance; it does not change any model, champion, or governance decision.",
+      "sources_used": [
+        "governed artifact registry (43 artifacts, 9 categories, resolved by the read-only data loader)",
+        "model_lab_dashboard_handoff_manifest.csv",
+        "model_lab_artifact_manifest.csv",
+        "model_lab_key_results.csv",
+        "model_lab_final_model_universe.csv",
+        "model_lab_champion_summary.csv",
+        "model_lab_risk_register_final.csv",
+        "tournament_preliminary_standings.csv",
+        "tournament_model_scorecard.csv"
+      ],
+      "limitations": [
+        "LLM explains; it does not decide, advance, or change the champion or governance.",
+        "This reference describes the governed artifacts and their dashboard usage; it does not open or recompute the underlying data.",
+        "Availability reflects the current load (42 of 43 present; the TTL capacity view is on the roadmap).",
+        "Relationships are read from the governed handoff manifest, not inferred."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "reference_artifacts_01",
+          "claim": "The dashboard reads 43 governed artifacts organized into 9 categories; 42 are available now and 1 (the TTL capacity view) is on the roadmap.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "governed artifact registry (data loader)",
+          "evidence_fields": "artifact_key | category | requirement | presence"
+        },
+        {
+          "claim_id": "reference_artifacts_02",
+          "claim": "Eight governed artifacts are offered as direct downloads: key results, model universe, champion summary, risk register, tournament standings, tournament scorecard, handoff manifest and artifact manifest.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "closure-pack + tournament-engine paths",
+          "evidence_fields": "download_specs"
+        },
+        {
+          "claim_id": "reference_artifacts_03",
+          "claim": "The dashboard handoff manifest records 14 section-to-artifact mappings.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "model_lab_dashboard_handoff_manifest.csv",
+          "evidence_fields": "dashboard_section | artifact_path | recommended_use"
+        },
+        {
+          "claim_id": "reference_artifacts_04",
+          "claim": "Model pages use the final model universe (15 models) and tournament standings and scorecard (13 models each); governance pages use the risk register (7 risks).",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "model_lab_final_model_universe.csv | tournament_preliminary_standings.csv | tournament_model_scorecard.csv | model_lab_risk_register_final.csv",
+          "evidence_fields": "row_counts"
+        },
+        {
+          "claim_id": "reference_artifacts_91",
+          "claim": "This reference is read-only; artifacts are served verbatim with no recomputation.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "governance read-only contract",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "reference_artifacts_92",
+          "claim": "Artifact availability is resolved by the governed data loader at startup.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "governed artifact registry (data loader)",
+          "evidence_fields": "pack_metadata.snapshot_caveat"
+        },
+        {
+          "claim_id": "reference_artifacts_93",
+          "claim": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred; the champion (ETS Explicit) is unchanged.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "governance read-only contract",
+          "evidence_fields": "pack_metadata.provider_stage"
+        },
+        {
+          "claim_id": "reference_artifacts_94",
+          "claim": "Relationships between artifacts and views are read from the governed handoff manifest, not inferred.",
+          "evidence_pack": "v4_7c_reference_artifacts",
+          "source_artifacts": "model_lab_dashboard_handoff_manifest.csv",
+          "evidence_fields": "candidate_claims"
+        }
+      ],
+      "download_payload": {
+        "page_id": "reference_artifacts",
+        "format_options": [
+          "md",
+          "pdf",
+          "docx",
+          "html",
+          "txt"
+        ],
+        "available_in_phase": "V4.7C",
+        "card_count": 4,
+        "source_files": [
+          "model_lab_dashboard_handoff_manifest.csv",
+          "model_lab_artifact_manifest.csv",
+          "governed artifact registry (data loader)"
+        ],
+        "note": "Explanation download is local-only and contains no sources or traceability; those stay in the dashboard."
+      }
     }
   ],
   "validation": {

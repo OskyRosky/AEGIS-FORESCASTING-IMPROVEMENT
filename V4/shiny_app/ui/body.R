@@ -86,14 +86,25 @@ tess_guide_overlay <- function() {
         ),
 
         guide_entry(
-          "explorer", "Forecast Explorer",
-          "Lets you explore forecast curves: actual versus baseline versus challenger models, filtered by entity, model and window.",
+          "explorer", "Forecast Viewer",
+          "An exploratory historical backtest view: compare how the models fit known actuals across keys, models and horizons. It does not generate future forecasts.",
           list(
-            "Series: actual and forecast curves per entity.",
-            "Filters: entity, model and backtest window (read-only).",
-            "Charts and data are read directly from governed artifacts."
+            "Series: historical actuals versus backtest model fit per key / series.",
+            "Filters: key / series, models and horizon (read-only).",
+            "Backtest only \u2014 for the forward production forecast use the Forecast section."
           ),
-          "Charts are bound to governed forecasts/actuals; nothing is recomputed."
+          "Charts are bound to governed backtest artifacts; nothing is recomputed."
+        ),
+
+        guide_entry(
+          "forecast", "Forecast",
+          "A single-model forward production forecast: pick a key / series and forecast window to see actual history followed by the forward forecast.",
+          list(
+            "Series: actual history (solid line) then the forward production forecast.",
+            "Filters: key / series and forecast window (read-only).",
+            "One series at a time, read from the governed forecast artifact."
+          ),
+          "The forward forecast is read from governed artifacts; nothing is recomputed."
         ),
 
         guide_entry(
@@ -108,19 +119,22 @@ tess_guide_overlay <- function() {
 
         guide_entry(
           "ttl", "TTL / Capacity View",
-          "A Months-to-Live / capacity perspective. It stays Planned until a governed TTL/capacity artifact exists.",
+          "A Time-to-Live (Months-to-Live) capacity perspective: how long until forecast demand reaches supply, so capacity can be added before a shortage. Shown as a prototype built on the governed forecasts.",
           list(
-            "No governed TTL artifact is available yet.",
-            "The section is intentionally marked Planned to avoid showing non-governed data."
-          )
+            "Months-to-Live: estimated time before forecast demand crosses available supply.",
+            "Supply-vs-demand crossover and a utilization heatmap per series.",
+            "Prototype example \u2014 illustrative, derived from governed forecast outputs."
+          ),
+          "Read-only prototype: values derive from governed forecasts; nothing is recomputed."
         ),
 
         guide_entry(
           "universe", "Model Universe",
-          "Lists the full model universe: baseline, challenger and deferred models, with status, family and eligibility.",
+          "The full set of 15 models AEGIS compares \u2014 baselines, challengers and the governed champion \u2014 with status, family and eligibility.",
           list(
-            "7 baseline models and 6 audited challengers in the tournament.",
-            "NBEATS and NHITS are deferred (runtime / dependency).",
+            "15 models across four families: statistical, growth, machine-learning and deep-learning.",
+            "12 models compete in the governed rolling-origin tournament; 3 deep-learning challengers are evaluated separately.",
+            "ETS Explicit is the governed champion, selected under conditions.",
             "Includes a controls preview (read-only)."
           )
         ),
@@ -211,7 +225,7 @@ app_ui <- function() {
     fillable = FALSE,
     padding = 0,
     gap = 0,
-    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css?v=20260629f"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css?v=20260629k"),
     tags$script(src = "custom.js?v=20260623b"),
     tags$div(
       class = "tess-app",

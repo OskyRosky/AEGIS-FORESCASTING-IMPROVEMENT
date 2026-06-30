@@ -1,5 +1,5 @@
 # TESSERACT v2 | constants.R | governed app constants
-APP_VERSION <- "V3"
+APP_VERSION <- "V4"
 APP_STAGE <- "Stage 07"
 APP_STAGE_LABEL <- "Stage 07 Shiny MVP Build"
 APP_AUDIT_STATE <- "APPROVE_WITH_CONDITIONS_TO_SHINY_MVP"

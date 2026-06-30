@@ -1,0 +1,10 @@
+module_no,module,page_id,module_id,data_section,section_fn,status,llm_assistant,download_formats
+1,Universe,models_universe,llm_models_universe,universe,section_universe,NEW,yes,md|pdf|docx|html|txt
+2,Tournament,tournament,llm_tournament,tournament,section_tournament,REUSE,yes,md|pdf|docx|html|txt
+3,Champion,champion_overview,llm_champion_overview,champion,section_champion,REUSE,yes,md|pdf|docx|html|txt
+4,Viewer,forecast_viewer,llm_forecast_viewer,explorer,section_explorer,REUSE_MOVED,yes,md|pdf|docx|html|txt
+5,Accuracy,forecasting_accuracy,llm_forecasting_accuracy,accuracy,section_accuracy,NEW,yes,md|pdf|docx|html|txt
+6,Forecast,forecasting_forecast,llm_forecasting_forecast,forecast,section_forecast,NEW,yes,md|pdf|docx|html|txt
+7,TTL,forecasting_ttl,llm_forecasting_ttl,ttl,section_ttl,NEW,yes,md|pdf|docx|html|txt
+8,Risks,governance_risks,llm_governance_risks,risks,section_risks,REUSE,yes,md|pdf|docx|html|txt
+9,Audit,governance_audit,llm_governance_audit,audit,section_audit,NEW,yes,md|pdf|docx|html|txt

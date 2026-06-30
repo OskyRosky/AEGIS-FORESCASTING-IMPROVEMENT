@@ -148,14 +148,48 @@ llm_explain_get <- function(page_id) {
 .llm_doc_basename <- function(page_id) {
   sec <- switch(
     .llm_or(page_id, ""),
-    champion_overview = "Champion",
-    tournament        = "Tournament",
-    forecast_viewer   = "Forecast_Viewer",
-    governance_risks  = "Governance_Risks",
+    champion_overview   = "Champion",
+    tournament          = "Tournament",
+    forecast_viewer     = "Forecast_Viewer",
+    governance_risks    = "Governance_Risks",
+    reference_artifacts = "Reference_Artifacts",
     gsub("[^A-Za-z0-9]+", "_", .llm_or(page_id, "Explanation"))
   )
   sprintf("AEGIS_Explanation_%s_%s", sec, format(Sys.Date()))
 }
+
+# ---------------------------------------------------------------------
+# Quick prompts (data-driven). Each entry: button id (namespaced),
+# button label, and the query text sent to the composer when clicked.
+# The default set keeps the exact ids + query strings the existing
+# assistants already use, so their behavior is unchanged.
+# ---------------------------------------------------------------------
+.LLM_DEFAULT_QUICK_PROMPTS <- list(
+  list(id = "qp_takeaway",  label = "Summarize the key takeaway",
+       query = "Summarize the key takeaway"),
+  list(id = "qp_changed",   label = "Explain what changed",
+       query = "Explain what changed"),
+  list(id = "qp_risk",      label = "Explain the main risk",
+       query = "Explain the main risk"),
+  list(id = "qp_attention", label = "What should I pay attention to?",
+       query = "What should I pay attention to?")
+)
+
+# V4.7C | Reference / Artifacts assistant prompt set. The "download first"
+# query is phrased to stay in-evidence (no "should I" trigger) so it is
+# answered from the governed evidence rather than refused as a decision.
+.LLM_REFERENCE_ARTIFACTS_PROMPTS <- list(
+  list(id = "qp_takeaway",  label = "Explain what these artifacts are used for",
+       query = "Explain what these artifacts are used for"),
+  list(id = "qp_changed",   label = "Which artifacts feed the model pages?",
+       query = "Which artifacts feed the model pages"),
+  list(id = "qp_risk",      label = "Which artifacts support governance?",
+       query = "Which artifacts support governance"),
+  list(id = "qp_attention", label = "What should I download first?",
+       query = "A good first governed artifact to download for orientation"),
+  list(id = "qp_relation",  label = "Explain the relationship between artifacts",
+       query = "Explain the relationship between these artifacts")
+)
 
 # ---------------------------------------------------------------------
 # UI: closing-support explanation panel (one per MVP section)
@@ -163,8 +197,14 @@ llm_explain_get <- function(page_id) {
 # then asks AEGIS to explain it. It closes the section, it does not
 # introduce it.
 # ---------------------------------------------------------------------
-llm_explain_ui <- function(id, page_title, button_label = "Generate explanation") {
+llm_explain_ui <- function(id, page_title, button_label = "Generate explanation",
+                           panel_title = NULL, panel_sub = NULL,
+                           quick_prompts = .LLM_DEFAULT_QUICK_PROMPTS) {
   ns <- NS(id)
+  panel_title <- .llm_or(panel_title, "Ask AEGIS about this section")
+  panel_sub   <- .llm_or(
+    panel_sub,
+    sprintf("Generated from the governed evidence for %s.", page_title))
   tags$div(
     class = "llm-explain",
     `data-llm-page` = id,
@@ -173,9 +213,8 @@ llm_explain_ui <- function(id, page_title, button_label = "Generate explanation"
       tags$div(
         class = "llm-explain-titlewrap",
         tags$span(class = "llm-explain-kicker", "AEGIS Explanation Assistant"),
-        tags$h3(class = "llm-explain-title", "Ask AEGIS about this section"),
-        tags$p(class = "llm-explain-sub",
-               sprintf("Generated from the governed evidence for %s.", page_title))
+        tags$h3(class = "llm-explain-title", panel_title),
+        tags$p(class = "llm-explain-sub", panel_sub)
       )
     ),
 
@@ -191,14 +230,12 @@ llm_explain_ui <- function(id, page_title, button_label = "Generate explanation"
         placeholder = "Example: What is the main takeaway from this tournament?"
       ),
 
-      # Optional quick prompts -------------------------------------------
+      # Optional quick prompts (data-driven) -----------------------------
       tags$div(
         class = "llm-quickrow",
         tags$span(class = "llm-quick-label", "Quick prompts:"),
-        actionButton(ns("qp_takeaway"),  "Summarize the key takeaway", class = "llm-qp"),
-        actionButton(ns("qp_changed"),   "Explain what changed",       class = "llm-qp"),
-        actionButton(ns("qp_risk"),      "Explain the main risk",      class = "llm-qp"),
-        actionButton(ns("qp_attention"), "What should I pay attention to?", class = "llm-qp")
+        lapply(quick_prompts, function(qp)
+          actionButton(ns(qp$id), qp$label, class = "llm-qp"))
       ),
 
       tags$div(
@@ -705,7 +742,8 @@ llm_explain_ui <- function(id, page_title, button_label = "Generate explanation"
 # LLM, no Azure). The thinking sequence is a local, non-blocking timer
 # that walks Reading -> Checking -> Composing -> Ready.
 # ---------------------------------------------------------------------
-llm_explain_server <- function(id, page_id) {
+llm_explain_server <- function(id, page_id,
+                               quick_prompts = .LLM_DEFAULT_QUICK_PROMPTS) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
@@ -723,11 +761,12 @@ llm_explain_server <- function(id, page_id) {
       start_thinking(q)
     }, ignoreInit = TRUE)
 
-    # Optional quick prompts - each composes a bounded, governed answer.
-    observeEvent(input$qp_takeaway,  start_thinking("Summarize the key takeaway"),     ignoreInit = TRUE)
-    observeEvent(input$qp_changed,   start_thinking("Explain what changed"),           ignoreInit = TRUE)
-    observeEvent(input$qp_risk,      start_thinking("Explain the main risk"),          ignoreInit = TRUE)
-    observeEvent(input$qp_attention, start_thinking("What should I pay attention to?"), ignoreInit = TRUE)
+    # Optional quick prompts (data-driven) - each composes a bounded,
+    # governed answer using the prompt's query text.
+    lapply(quick_prompts, function(qp) local({
+      qid <- qp$id; qq <- qp$query
+      observeEvent(input[[qid]], start_thinking(qq), ignoreInit = TRUE)
+    }))
 
     # Visible, non-blocking thinking driver. Depends only on rv$ticking;
     # the step read/write is isolated so it advances on the timer, not in

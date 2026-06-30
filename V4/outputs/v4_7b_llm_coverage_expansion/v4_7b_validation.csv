@@ -1,0 +1,32 @@
+check_no,check,expected,observed,status
+1,Module 1 Universe mapped,llm_models_universe -> models_universe,present,PASS
+2,Module 2 Tournament mapped,llm_tournament -> tournament,present,PASS
+3,Module 3 Champion mapped,llm_champion_overview -> champion_overview,present,PASS
+4,Module 4 Viewer mapped (moved to explorer),llm_forecast_viewer -> forecast_viewer,present,PASS
+5,Module 5 Accuracy mapped,llm_forecasting_accuracy -> forecasting_accuracy,present,PASS
+6,Module 6 Forecast mapped,llm_forecasting_forecast -> forecasting_forecast,present,PASS
+7,Module 7 TTL mapped,llm_forecasting_ttl -> forecasting_ttl,present,PASS
+8,Module 8 Risks mapped,llm_governance_risks -> governance_risks,present,PASS
+9,Module 9 Audit mapped,llm_governance_audit -> governance_audit,present,PASS
+10,All 9 panels render at END of section,9/9,9/9,PASS
+11,All 9 mock responses present + schema complete,9/9,9/9 (10 total incl unused executive_overview),PASS
+12,Download modal offers 5 formats,md/pdf/docx/html/txt,5 enabled disabledCount=0,PASS
+13,MD download works,HTTP200,modal_enabled,PASS
+14,PDF download works,HTTP200 %PDF,200 101666B %PDF,PASS
+15,DOCX download works,HTTP200,modal_enabled,PASS
+16,HTML download works,HTTP200,modal_enabled,PASS
+17,TXT download works,HTTP200,200 1498B,PASS
+18,Traceability collapsed in panel,yes,details not open (6 modules checked),PASS
+19,Sources hidden in main body,yes,sourcesInMain=false,PASS
+20,Download contains no sources/traceability,no leak,txt+pdf hasSources=false,PASS
+21,App HTTP 200,200,200 len 297056,PASS
+22,No critical errors in log,none,clean (benign only),PASS
+23,No SQL introduced,none,none,PASS
+24,No model/forecast recompute,none,none,PASS
+25,No Azure/real LLM/external API,none,Local mock badge present,PASS
+26,No data/processed or data/raw mutation,unchanged,snapshot 2026-06-28 intact,PASS
+27,Champion frozen ETS Explicit,ETS Explicit,confirmed in universe+accuracy answers,PASS
+28,V1/V2/V3 untouched,intact,no edits outside V4,PASS
+29,Universe answer grounded,15 models/families/ETS,confirmed live,PASS
+30,TTL medium confidence + simulated caveat,medium+simulated,confirmed live,PASS
+31,Audit answer grounded,run 2026-06-28/45 ent/guardrails,confirmed live,PASS
