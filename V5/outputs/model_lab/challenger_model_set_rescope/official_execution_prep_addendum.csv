@@ -1,0 +1,4 @@
+model_name,official_prep_status,sandbox_required,official_scope_locked,output_contract_locked,ready_for_current_official_execution,notes,created_timestamp
+FastNeuralAR_MLP,ready_pending_sandbox,True,True,True,True,Must pass sandbox before official recovery execution.,2026-06-13T16:08:35
+NBEATS,deferred_runtime_impractical,False,True,True,False,Preserve evidence but exclude partial official rows from final output.,2026-06-13T16:08:35
+NHITS,deferred_dependency_blocked,False,True,True,False,No NHITS official forecast rows are allowed.,2026-06-13T16:08:35

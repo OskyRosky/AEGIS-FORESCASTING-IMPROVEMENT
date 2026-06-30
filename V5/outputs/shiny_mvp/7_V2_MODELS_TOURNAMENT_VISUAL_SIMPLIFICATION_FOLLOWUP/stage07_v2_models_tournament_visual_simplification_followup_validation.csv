@@ -1,0 +1,17 @@
+stage,check,status,detail
+07,r_parse_helpers,PASS,R/helpers.R parses without error
+07,r_parse_tabs,PASS,ui/tabs.R parses without error
+07,r_parse_body,PASS,ui/body.R parses without error
+07,flow_builder_present,PASS,tournament_flow_ui() defined in tabs.R
+07,flow_section_present,PASS,"Tournament visual overview" collapse present (open)
+07,league_view_kept,PASS,"Tournament League View" scoreboard retained (open)
+07,detailed_metrics_renamed,PASS,"Detailed governed metrics" collapse present (collapsed)
+07,head_to_head_renamed,PASS,"Head-to-head evidence details" collapse present (collapsed)
+07,policy_section_removed,PASS,"Source & governance policy" collapse removed
+07,footer_note_added,PASS,tess-foot-note single-sentence footer present
+07,scatter_removed,PASS,tournament_tradeoff_plot() no longer referenced in UI
+07,composite_removed,PASS,No composite score card/section present
+07,standings_slimmed,PASS,Standings DT reduced from 12 to 9 columns
+07,css_version_bumped,PASS,body.R custom.css?v=20260624b
+07,http_status,PASS,HTTP 200 LEN 179788 on http://127.0.0.1:3838
+07,champion_unchanged,PASS,ETS Explicit selected under conditions (no recompute)

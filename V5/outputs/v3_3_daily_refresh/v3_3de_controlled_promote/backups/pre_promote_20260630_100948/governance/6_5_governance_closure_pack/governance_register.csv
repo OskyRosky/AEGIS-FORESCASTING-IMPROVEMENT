@@ -1,0 +1,18 @@
+register_id,register_type,source_block,subject,governance_status,required_action,dashboard_visibility_required,source_artifact,created_timestamp
+GR-001,champion_condition,6.3,ETS Explicit conditional champion,active,KEEP_WITH_CONDITIONS + MONITOR,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-002,champion_condition,6.3,Medium confidence,active,MONITOR,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-003,risk,6.2,FastNeuralAR_MLP review/investigate,active,REVIEW_INVESTIGATE + EXCLUDE_FROM_CHAMPION_CONSIDERATION,True,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,2026-06-14T10:56:50
+GR-004,deferred_model,6.2,NBEATS test later/defer,active,TEST_LATER + DEFER,True,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,2026-06-14T10:56:50
+GR-005,deferred_model,6.2,NHITS test later/defer,active,TEST_LATER + DEFER,True,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,2026-06-14T10:56:50
+GR-006,manual_review,6.2,FixedGrowth_6 review/monitor,active,REVIEW + MONITOR,True,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,2026-06-14T10:56:50
+GR-007,audit_correction,6.0,Audit #5 F-010 governed correction,resolved_governed,additive_governed_correction,True,outputs/governance/6_0_audit5_finding_resolution/audit5_finding_resolution.csv,2026-06-14T10:56:50
+GR-008,audit_status,Stage 05,Audit #5 approve-with-conditions verdict,active,SURFACE_ON_DASHBOARD,True,outputs/model_lab/audit_5/audit_5_summary.csv,2026-06-14T10:56:50
+GR-009,champion_condition,6.3,C-001 medium confidence,active,MONITOR,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-010,champion_condition,6.3,C-002 conditional champion status,active,KEEP_WITH_CONDITIONS,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-011,champion_condition,6.3,C-003 pairwise evidence scope,active,MONITOR,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-012,champion_condition,6.3,C-004 risk carry-forward,active,SURFACE_ON_DASHBOARD,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-013,champion_condition,6.3,C-005 no unconditional replacement claim,active,DO_NOT_PRESENT_AS_UNCONDITIONAL_WINNER,True,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,2026-06-14T10:56:50
+GR-014,dashboard_contract,6.4,Dashboard read-only contract,active,read_only_file_load,True,outputs/governance/6_4_dashboard_contract/dashboard_governance_contract.csv,2026-06-14T10:56:50
+GR-015,dashboard_contract,6.4,No metric recalculation rule,active,no_metric_recalculation,True,outputs/governance/6_4_dashboard_contract/dashboard_governance_contract.csv,2026-06-14T10:56:50
+GR-016,dashboard_contract,6.4,No unconditional winner language rule,active,DO_NOT_PRESENT_AS_UNCONDITIONAL_WINNER,True,outputs/governance/6_4_dashboard_contract/dashboard_do_dont_rules.csv,2026-06-14T10:56:50
+GR-017,dashboard_contract,6.4,Required warning labels,active,SURFACE_ON_DASHBOARD,True,outputs/governance/6_4_dashboard_contract/dashboard_warning_labels.csv,2026-06-14T10:56:50

@@ -1,0 +1,13 @@
+display_requirement_id,dashboard_area,required_element,source_artifact,display_priority,required_wording_guidance,must_be_visible,created_timestamp
+D-001,Champion Decision,champion decision type,outputs/model_lab/champion_decision/champion_decision.csv,high,Show CHAMPION_SELECTED_WITH_CONDITIONS.,True,2026-06-14T10:40:38
+D-002,Champion Decision,selected champion model,outputs/model_lab/champion_decision/champion_decision.csv,high,Show ETS Explicit as selected champion.,True,2026-06-14T10:40:38
+D-003,Champion Decision,confidence level,outputs/model_lab/champion_decision/champion_decision.csv,high,Show medium confidence.,True,2026-06-14T10:40:38
+D-004,Champion Metrics,official median MASE,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,high,Show official median MASE = 6.901143533373399.,True,2026-06-14T10:40:38
+D-005,Champion Metrics,official median RMSSE,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,high,Show official median RMSSE = 1.856193218184295.,True,2026-06-14T10:40:38
+D-006,Evidence,pairwise support count,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,high,Show 8 supported-better and 0 supported-worse.,True,2026-06-14T10:40:38
+D-007,Conditions,conditions summary,outputs/model_lab/champion_decision/champion_decision.csv,high,Summarize conditional champion status and carry-forwards.,True,2026-06-14T10:40:38
+D-008,Risk Register,risk carry-forward indicator,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,high,Show active carry-forward risks.,True,2026-06-14T10:40:38
+D-009,Risk Register,FastNeuralAR_MLP investigation flag,outputs/governance/6_2_decision_rules/risk_to_action_mapping.csv,high,Show REVIEW_INVESTIGATE and champion-exclusion status.,True,2026-06-14T10:40:38
+D-010,Deferred Models,NBEATS/NHITS deferral note,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,medium,Show runtime/dependency deferrals as future work.,True,2026-06-14T10:40:38
+D-011,Audit Status,audit status / Audit #5 condition,outputs/model_lab/audit_5/audit_5_final_report.md,medium,Show Audit #5 approve-with-conditions context.,True,2026-06-14T10:40:38
+D-012,Methodology,tournament standing caveat,outputs/governance/6_2_decision_rules/decision_action_framework.csv,high,State tournament standing is not equivalent to unconditional winner.,True,2026-06-14T10:40:38

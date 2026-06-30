@@ -1,0 +1,4 @@
+module,response_visible,paragraph_form,traceability_collapsed,sources_not_in_main_body,download_explanation_works,governance_footer_discreet,no_forbidden_language,notes,status
+Tournament,yes,yes,yes,yes,yes,yes,yes,"Quick prompt -> EXECUTIVE SUMMARY + WHAT THE EVIDENCE SAYS + WHY IT MATTERS in paragraphs; Limitations short list (3); Confidence: high; 3 technical-traceability <details> all closed; footer 'Local mock - governed evidence only - no model or champion changes'; says 'none advanced over the champion'",PASS
+Forecast Viewer,yes,yes,yes,yes,yes,yes,yes,"Response cites 65095 forecast rows / sample of 5 embedded; traceability collapsed; footer present",PASS
+Reference Artifacts,yes,yes,yes,yes,yes,yes,yes,"Response cites 43 governed artifacts / 9 categories / 8 direct downloads; traceability collapsed; footer present; forbidden-language scan = false",PASS

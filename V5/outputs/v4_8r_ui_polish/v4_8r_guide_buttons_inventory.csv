@@ -1,0 +1,15 @@
+section,sidebar_label,guide_button_label,guide_data_guide,guide_title,has_guide_entry
+home,Home,Home Guide,home,Project Home,yes
+overview,Overview,Overview Guide,overview,Executive Overview,yes
+universe,Universe,Universe Guide,universe,Model Universe,yes
+tournament,Tournament,Tournament Guide,tournament,Tournament Standings,yes
+champion,Champion,Champion Guide,champion,Champion Decision,yes
+explorer,Viewer,Viewer Guide,explorer,Forecast Viewer,yes
+accuracy,Accuracy,Accuracy Guide,accuracy,Accuracy Overview,yes
+forecast,Forecast,Forecast Guide,forecast,Forecast,yes
+ttl,TTL,TTL Guide,ttl,TTL / Capacity View,yes
+risks,Risks,Risks Guide,risks,Risk Register,yes
+audit,Audit,Audit Guide,audit,Audit Trail,yes
+artifacts,Artifacts,Artifacts Guide,artifacts,Source Artifacts,yes
+methodology,Methodology,Methodology Guide,methodology,Methodology,yes
+version,Version,Version Guide,version,Version Info,yes

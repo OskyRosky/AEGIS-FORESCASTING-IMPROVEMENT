@@ -1,0 +1,4 @@
+S00 START 2026-06-26T18:15:14.6948762-06:00
+[2026-06-26 18:15:14] INFO test_connection - Testing database connectivity
+[2026-06-26 18:15:44] INFO test_connection - Connection succeeded: SELECT 1 returned 1
+S00 END 2026-06-26T18:15:45.4614270-06:00 elapsed_seconds=30.8 exit_code=0

@@ -1,0 +1,16 @@
+check,value,status
+http_status,200,PASS
+html_length,297056,PASS
+namespaces_present_9_of_9,9,PASS
+app_pid,53256,PASS
+port,3839,PASS
+universe_generate_live,grounded_15_models_families_ETS,PASS
+ttl_generate_live,medium_confidence_simulated_caveat,PASS
+audit_generate_live,run_2026-06-28_45_entities_6_guardrails_pass,PASS
+viewer_generate_live,65095_rows_dates,PASS
+accuracy_generate_live,ETS_6.90_SMLP-TCN_2.72x,PASS
+forecast_generate_live,65095_rows_45_entities_intervals,PASS
+traceability_collapsed_all,yes,PASS
+sources_hidden_in_main_body,yes,PASS
+download_modal_5_formats,yes,PASS
+download_no_sources_leak,yes,PASS

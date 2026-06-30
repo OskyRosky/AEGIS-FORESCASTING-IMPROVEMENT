@@ -1,0 +1,17 @@
+element,expected,observed,status
+Page title,"Forecast Viewer",present,pass
+Guided setup panel,numbered steps 1-5 in left column,fv-setup-panel with fv-step blocks,pass
+Step 1 Select series,entity selector + hint,present,pass
+Step 2 Select model,model selector + hint + availability note,present,pass
+Step 3 Select horizon,5..60 selector + hint,present,pass
+Step 4 History window,30/60/90/180/All + hint,present,pass
+Step 5 Analyze button,primary "Analyze forecast" button,present,pass
+Initial empty state,no chart before click,fv-empty-card shown,pass
+Availability panel,8 cards after click,fv-avail-grid rendered server-side,VISUAL_REVIEW
+Chart actual line,solid blue #2e75b6,configured,VISUAL_REVIEW
+Chart forecast line,dashed amber #d97706,configured,VISUAL_REVIEW
+Forecast start marker,dashed vertical plotLine,configured,VISUAL_REVIEW
+Horizontal navigation,navigator + scrollbar + range selector,stock chart options present,VISUAL_REVIEW
+Single-model note,note shown for 1-model series,fv-model-note rendered,VISUAL_REVIEW
+Dark theme,consistent styling,fv-* dark variants added,VISUAL_REVIEW
+Sidebar label,"Viewer" under FORECASTING,present,pass

@@ -1,0 +1,24 @@
+check_name,status,details
+artifact exists,pass,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V1\outputs\model_lab\tournament_engine\tournament_entity_model_scores.csv
+artifact has expected row count or document actual row count,pass,actual rows=507; expected=507
+artifact has expected 39 series or document actual count,pass,actual series=39; expected=39
+artifact has expected 13 models or document actual count,pass,actual models=13; expected=13
+artifact grain is entity x model,pass,rows=507; entities x models=507
+no duplicate entity x model rows,pass,duplicate keys=0
+median_mase exists,pass,median_mase column present
+median_rmsse exists,pass,median_rmsse column present
+ETS Explicit exists,pass,ETS Explicit rows=39
+ETS Explicit appears for all entities,pass,ETS rows=39; missing entities=[]
+leadership logic uses lowest median_mase only,pass,Verification used min(existing median_mase) per entity; no raw actuals/forecasts were read.
+ETS Explicit leads count verified,pass,ETS leads=4; expected=4
+ETS Explicit non-leads count verified,pass,ETS non-leads=35; expected=35
+most frequent leader verified,pass,most frequent leader=Theta with 8 tie-aware leads
+largest ETS gap verified,pass,max gap=51.981; entity=ESP-Go Local
+tie handling checked,pass,entities with tied lowest median_mase=0
+no MASE/RMSSE recomputation,pass,Only existing median_mase and median_rmsse columns were read.
+no Shiny source files modified,pass,No Shiny source writes were performed in this verification block.
+no data artifacts modified,pass,Primary artifact and data directories were read only.
+no models run,pass,No model execution commands were run.
+no forecasts generated,pass,No forecast generation commands were run.
+no tournaments rerun,pass,No tournament scripts were run.
+champion decision not changed,pass,Champion decision was not written or recalculated.

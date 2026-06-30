@@ -1,0 +1,10 @@
+tested_artifact,format,http_status,bytes,magic_or_head,verbatim_or_rendered,status
+tournament_scorecard,csv,200,2598,"run_ (header run_id,model_name,...,created_timestamp; CRLF)",verbatim,PASS
+tournament_scorecard,md,200,4038,"# Governed Artifact - Tournament scorecard (metadata + 17 cols + 13 rows)",rendered,PASS
+tournament_scorecard,txt,200,3852,"GOVERNED ARTIFACT - TOURNAMENT SCORECARD",rendered,PASS
+tournament_scorecard,html,200,6411,"<!DOCTYPE html> ... table.artifact-table",rendered,PASS
+tournament_scorecard,pdf,200,107916,%PDF-1.7,rendered,PASS
+tournament_scorecard,docx,200,12692,PK zip (Content_Types.xml),rendered,PASS
+preview_cap_note,n/a,n/a,n/a,"13 rows <= 200-row cap -> no truncation, full render, no preview note required",PASS
+csv_canonical_invariant,csv,200,2598,"served via file.copy from governed path (no transformation)",verbatim,PASS
+pdf_docx_caps,n/a,n/a,n/a,"PDF + DOCX enabled (pandoc 3.10 + TinyTeX active); gated buttons would show unavailable note if absent",PASS

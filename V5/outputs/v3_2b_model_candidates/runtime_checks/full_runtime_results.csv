@@ -1,0 +1,9 @@
+candidate_id,model_name,model_family,stage,entity_windows,runtime_seconds,runtime_per_entity_window_seconds,projected_full_runtime_minutes,gate_decision,status,failure_reason
+LGBM-IMP-v2,LightGBM_candidate_improved_v2,gradient_boosting,subset_re_gate,15,23.4692,1.5646,11.839,VIABLE,ok,
+XGB-IMP-v2,XGBoost_candidate_improved_v2,gradient_boosting,subset_re_gate,15,47.9332,3.1955,24.18,VIABLE,ok,
+FNAR-V2,FastNeuralAR_MLP_v2_direct,lightweight_neural,full_backtest,454,195.6613,0.431,3.261,VIABLE,ok,
+NLIN-DLIN_FIXED,NLinear_log_space_fixed,linear_dl,full_backtest,454,0.9863,0.0022,0.016,VIABLE,ok,
+SMLP-TCN,SmallMLPGlobal,lightweight_neural,full_backtest,454,29.196,0.0643,0.487,VIABLE,ok,
+ENET-RIDGE,Ridge_direct_multi_horizon,linear_ml,full_backtest,454,1.36,0.003,0.023,VIABLE,ok,
+LGBM-IMP-v2,LightGBM_candidate_improved_v2,gradient_boosting,full_backtest,454,462.9279,1.0197,7.715,VIABLE,ok,
+XGB-IMP-v2,XGBoost_candidate_improved_v2,gradient_boosting,full_backtest,454,1339.3481,2.9501,22.322,VIABLE,ok,

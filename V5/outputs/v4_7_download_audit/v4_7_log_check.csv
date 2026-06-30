@@ -1,0 +1,6 @@
+log,observation,severity,result
+stderr,"dplyr/lubridate masking messages",info,benign
+stderr,"vroom/readr parsing-issue warning (pre-existing data snapshot)",warning,"pre-existing, not introduced by V4.7"
+stderr,"Listening on http://127.0.0.1:3839",info,OK
+stderr,"no R errors / no stack traces related to download or modal",none,PASS
+critical_errors,"none",none,PASS

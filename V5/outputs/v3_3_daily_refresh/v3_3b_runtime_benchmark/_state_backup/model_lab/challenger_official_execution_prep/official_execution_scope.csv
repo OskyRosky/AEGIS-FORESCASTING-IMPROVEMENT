@@ -1,0 +1,455 @@
+run_id,entity_key,window_id,train_start_date,train_end_date,test_start_date,test_end_date,selected_for_official_execution,created_timestamp
+challenger_official_execution_prep,APC-Dedicated,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-MSIT,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,APC-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ARE-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,AUS-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,1,2020-09-22,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,2,2020-09-22,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,3,2020-09-22,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,4,2020-09-22,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,5,2020-09-22,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,6,2020-09-22,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,7,2020-09-22,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,8,2020-09-22,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,9,2020-09-22,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,10,2020-09-22,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,11,2020-09-22,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,BRA-Go Local,12,2020-09-22,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CAN-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,1,2019-09-28,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,2,2019-09-28,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,3,2019-09-28,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,4,2019-09-28,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,5,2019-09-28,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,6,2019-09-28,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,7,2019-09-28,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,8,2019-09-28,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,9,2019-09-28,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,10,2019-09-28,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,11,2019-09-28,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,CHE-Go Local,12,2019-09-28,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,1,2019-10-31,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,2,2019-10-31,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,3,2019-10-31,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,4,2019-10-31,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,5,2019-10-31,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,6,2019-10-31,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,7,2019-10-31,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,8,2019-10-31,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,9,2019-10-31,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,10,2019-10-31,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,11,2019-10-31,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,DEU-Go Local,12,2019-10-31,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,1,2023-11-17,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,2,2023-11-17,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,3,2023-11-17,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,4,2023-11-17,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,5,2023-11-17,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,6,2023-11-17,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,7,2023-11-17,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,8,2023-11-17,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,9,2023-11-17,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,10,2023-11-17,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,11,2023-11-17,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ESP-Go Local,12,2023-11-17,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-MSIT,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,EUR-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,FRA-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,GBR-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,IND-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,1,2023-07-26,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,2,2023-07-26,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,3,2023-07-26,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,4,2023-07-26,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,5,2023-07-26,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,6,2023-07-26,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,7,2023-07-26,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,8,2023-07-26,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,9,2023-07-26,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,10,2023-07-26,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,11,2023-07-26,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ISR-Go Local,12,2023-07-26,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,1,2023-07-26,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,2,2023-07-26,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,3,2023-07-26,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,4,2023-07-26,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,5,2023-07-26,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,6,2023-07-26,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,7,2023-07-26,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,8,2023-07-26,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,9,2023-07-26,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,10,2023-07-26,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,11,2023-07-26,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ITA-Go Local,12,2023-07-26,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,JPN-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,KOR-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,LAM-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,1,2023-07-26,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,2,2023-07-26,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,3,2023-07-26,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,4,2023-07-26,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,5,2023-07-26,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,6,2023-07-26,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,7,2023-07-26,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,8,2023-07-26,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,9,2023-07-26,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,10,2023-07-26,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,11,2023-07-26,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,MEX-Go Local,12,2023-07-26,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-GCC Low,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR DoD,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-ITAR GCCH,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-MSIT,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,4,2019-07-01,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,5,2019-07-01,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-SDF,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,1,2021-01-09,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,2,2021-01-09,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,3,2021-01-09,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,4,2021-01-09,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,5,2021-01-09,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,6,2021-01-09,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,7,2021-01-09,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,8,2021-01-09,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,9,2021-01-09,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,10,2021-01-09,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,11,2021-01-09,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NAM-TDF,12,2021-01-09,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,1,2020-03-08,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,2,2020-03-08,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,3,2020-03-08,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,4,2020-03-08,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,5,2020-03-08,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,6,2020-03-08,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,7,2020-03-08,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,8,2020-03-08,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,9,2020-03-08,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,10,2020-03-08,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,11,2020-03-08,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NOR-Go Local,12,2020-03-08,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,6,2024-09-14,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,7,2024-09-14,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,8,2024-09-14,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,9,2024-09-14,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,10,2024-09-14,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,11,2024-09-14,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,NZL-Go Local,12,2024-09-14,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,1,2022-12-13,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,2,2022-12-13,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,3,2022-12-13,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,4,2022-12-13,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,5,2022-12-13,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,6,2022-12-13,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,7,2022-12-13,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,8,2022-12-13,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,9,2022-12-13,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,10,2022-12-13,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,11,2022-12-13,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,POL-Go Local,12,2022-12-13,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,1,2022-06-09,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,2,2022-06-09,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,3,2022-06-09,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,4,2022-06-09,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,5,2022-06-09,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,6,2022-06-09,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,7,2022-06-09,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,8,2022-06-09,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,9,2022-06-09,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,10,2022-06-09,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,11,2022-06-09,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,QAT-Go Local,12,2022-06-09,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SGP-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,1,2021-10-23,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,2,2021-10-23,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,3,2021-10-23,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,4,2021-10-23,2025-07-31,2025-08-01,2025-08-30,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,5,2021-10-23,2025-08-30,2025-08-31,2025-09-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,6,2021-10-23,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,7,2021-10-23,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,8,2021-10-23,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,9,2021-10-23,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,10,2021-10-23,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,11,2021-10-23,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,SWE-Go Local,12,2021-10-23,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,6,2024-09-13,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,7,2024-09-13,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,8,2024-09-13,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,9,2024-09-13,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,10,2024-09-13,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,11,2024-09-13,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,TWN-Go Local,12,2024-09-13,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,1,2019-07-01,2025-05-02,2025-05-03,2025-06-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,2,2019-07-01,2025-06-01,2025-06-02,2025-07-01,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,3,2019-07-01,2025-07-01,2025-07-02,2025-07-31,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,6,2019-07-01,2025-09-29,2025-09-30,2025-10-29,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,7,2019-07-01,2025-10-29,2025-10-30,2025-11-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,8,2019-07-01,2025-11-28,2025-11-29,2025-12-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,9,2019-07-01,2025-12-28,2025-12-29,2026-01-27,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,10,2019-07-01,2026-01-27,2026-01-28,2026-02-26,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,11,2019-07-01,2026-02-26,2026-02-27,2026-03-28,True,2026-06-12T17:00:53
+challenger_official_execution_prep,ZAF-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,2026-06-12T17:00:53

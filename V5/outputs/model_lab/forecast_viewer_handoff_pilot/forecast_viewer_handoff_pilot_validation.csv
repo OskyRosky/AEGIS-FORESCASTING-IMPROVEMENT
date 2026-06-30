@@ -1,0 +1,24 @@
+check_name,status,details
+no_shiny_files_modified,pass,Builder writes only python/model_lab + data *_pilot* + outputs/model_lab/forecast_viewer_handoff_pilot
+no_existing_data_overwritten,pass,Only *_pilot* artifacts written; forecasts/actuals/entities/forecast_comparison untouched
+no_model_lab_outputs_modified,pass,Existing Model Lab outputs read-only
+no_forecasts_generated,pass,Consolidation only; zero model inference
+no_models_run,pass,No model fitting/inference
+no_metrics_recalculated,pass,No metric computation
+no_champion_decision_changed,pass,champion flag read from model universe only
+only_pilot_artifact_created,pass,All consumable artifacts carry _pilot suffix
+max_three_series,pass,"series=['APC-Dedicated', 'APC-MSIT', 'APC-Multitenant']"
+all_rows_in_pilot_series,pass,"series=['APC-Dedicated', 'APC-MSIT', 'APC-Multitenant']"
+all_model_rows_trace_to_source,pass,source_artifact populated on every row
+actual_value_source_documented,pass,challenger: joined column; baseline: left-join actuals.csv on entity_key+date
+forecast_value_source_documented,pass,full_baseline_forecasts.csv + challenger_actual_forecast_join.csv
+model_family_mapping_present,pass,model_family from model_lab_final_model_universe.csv
+champion_flag_mapping_present,pass,is_selected_champion TRUE for governed champion (ETS Explicit)
+risk_flag_mapping_present,pass,risk_status from universe risk_flag + risk register
+deferred_models_not_materialized,pass,NBEATS/NHITS excluded from forecast rows
+interval_columns_present_but_na,pass,lower/upper/interval_level all NA (no source bands)
+row_counts_by_series_produced,pass,coverage_by_series + model_coverage written
+model_counts_by_series_produced,pass,model_coverage written
+source_manifest_produced,pass,source_manifest + manifest written
+sample_csv_created,pass,forecast_viewer_model_outputs_pilot_sample.csv
+parquet_or_csv_fallback_reported,warning,CSV fallback used (no pyarrow/fastparquet)

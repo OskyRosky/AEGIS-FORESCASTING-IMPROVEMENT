@@ -1,0 +1,19 @@
+check_id,check,expected,observed,result
+B01,V4 root exists,TRUE,TRUE,PASS
+B02,V1 root intact (untouched),TRUE,TRUE,PASS
+B03,V2 root intact (untouched),TRUE,TRUE,PASS
+B04,V3 root intact (untouched),TRUE,TRUE,PASS
+B05,marker active_version,V4,V4,PASS
+B06,marker based_on_version,V3,V3,PASS
+B07,marker v3_mvp_status,V3_MVP_CLOSED,V3_MVP_CLOSED,PASS
+B08,governance model scope (model_universe_canonical rows),15,15,PASS
+B09,champion model,ETS Explicit,ETS Explicit,PASS
+B10,V4 run_metadata snapshot (caveat accepted),2026-06-28T17:27:14,2026-06-28T17:27:14,PASS
+B11,no resync to 2026-06-29 in this phase,no resync,no resync,PASS
+B12,no SQL executed in V4.0,none,none,PASS
+B13,no model refresh executed in V4.0,none,none,PASS
+B14,data/processed productive not modified in V4.0,unchanged,unchanged,PASS
+B15,champion/governance not changed in V4.0,unchanged,unchanged,PASS
+B16,prohibited models absent (NBEATS/NHITS/FastNeuralAR_MLP original),absent,absent,PASS
+B17,dashboard V4 responds (port 3839),HTTP 200,HTTP 200 LEN 275129,PASS
+B18,LLM layer NOT implemented yet (V4.0 baseline only),not implemented,not implemented,PASS

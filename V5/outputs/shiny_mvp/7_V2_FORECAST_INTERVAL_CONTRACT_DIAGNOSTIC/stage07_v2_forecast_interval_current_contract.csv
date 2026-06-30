@@ -1,0 +1,20 @@
+column_name,inferred_type,example_value,notes
+entity_key,string,APC-Dedicated,Key / series identifier (45 distinct values)
+date,date (YYYY-MM-DD),2026-04-28,Forward dates AFTER last actual; range 2026-04-28 to 2030-04-25
+forecast_value,float,29.104001,Point forecast (the mean). The ONLY value emitted.
+model_version,string,FixedGrowth1% / ARIMA / ExponentialSmoothing / Theta,16 upstream (SQL) model versions; one selected per key/series
+forecast_version,date,2026-05-01,Single forecast version (production run tag)
+scenario,string,Enterprise,Only 'Enterprise'
+resource,string,HDD,Resource type
+value_type,string,Forecast-Mean,ONLY 'Forecast-Mean' present (65095/65095 rows). This column is the interval discriminator and is currently single-valued.
+source_file,string,hdd_region_forecasts.csv,Hardcoded upstream raw filename
+contract_facts,,,
+file_path,,data/processed/forecasts.csv,
+row_count,,65095,Per run_metadata.csv forecast_rows
+entity_count,,45,
+model_count,,16,Per run_metadata.csv
+date_range,,2026-04-28 to 2030-04-25,first/last forecast date
+format,,long-by-model / wide-by-value,One row per entity_key x date x model_version; single value column. NOT a value_type long format today (only Forecast-Mean).
+grain_uniqueness,,entity_key x date x model_version,De-duplicated on these 3 keys (keep first); scenario/resource/value_type constant
+interval_columns_present,,NONE,No lower/upper/quantile/interval_level columns
+point_forecast_only,,TRUE,Confirmed point forecast only

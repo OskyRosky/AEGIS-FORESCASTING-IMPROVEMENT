@@ -1,0 +1,16 @@
+reference,location,classification,action
+"$StopCommand string (stop_shiny_v1.ps1)",V2\scripts\start_shiny.ps1 (line ~50),active runtime reference,updated to scripts\stop_shiny.ps1
+"shiny::runApp(\"shiny_app\")",V2\README.md (line 19),active documentation,no change needed (launches app directly, no .ps1 reference)
+"launch_shiny_v1.ps1 / stop_shiny_v1.ps1",V2\python\shiny_mvp\emit_stage07_11_FULL_REBIND.py,historical emit script (one-off generator),left untouched
+"launch_shiny_v1.ps1 / stop_shiny_v1.ps1",V2\python\shiny_mvp\emit_stage07_forecasting_sidebar_correction.py,historical emit script (one-off generator),left untouched
+"launch_shiny_v1.ps1 / stop_shiny_v1.ps1",V2\python\shiny_mvp\validate_shiny_runtime_fix.py,historical validator (one-off),left untouched
+"scripts/launch_shiny_v1.ps1 (modify)",V2\python\shiny_mvp\validate_stage07_0C_landing_page.py,historical validator (one-off),left untouched
+"stop_shiny_v1.ps1 / launch_shiny_v1.ps1",V2\outputs\shiny_mvp\7_V2_WORKSPACE_SMOKE_TEST\*.md/*.csv,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_MODELS_TOURNAMENT_PAGE_MVP\*.md/*.csv,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_0C_landing_page\*.md,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_0C_REV1_sidebar_fix\*.md,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_0C_RESET_minimal_shell\*.md,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_11_PILOT_REBIND_forecast_viewer\*.md/*.csv,historical output/report,left untouched (historical record)
+"launch_shiny_v1.ps1 / stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_0B_runtime_fix\shiny_runtime_fix_report.md,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_MODELS_CHAMPION_SERIES_EVIDENCE_MVP\*.md,historical output/report,left untouched (historical record)
+"stop_shiny_v1.ps1",V2\outputs\shiny_mvp\7_MODELS_CHAMPION_DECISION_MVP\*.md,historical output/report,left untouched (historical record)

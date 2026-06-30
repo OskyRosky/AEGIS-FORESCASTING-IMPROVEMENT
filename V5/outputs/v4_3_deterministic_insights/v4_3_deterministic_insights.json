@@ -1,0 +1,745 @@
+{
+  "metadata": {
+    "project_version": "V4",
+    "generated_at": "2026-06-29T16:59:18Z",
+    "stage": "deterministic_insights_no_llm",
+    "champion": "ETS Explicit",
+    "model_scope": 15,
+    "snapshot_caveat": "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "input_dir": "v4_2_evidence_pack"
+  },
+  "pages": [
+    {
+      "page_id": "champion_overview",
+      "insufficient_evidence": false,
+      "cards": [
+        {
+          "card_id": "champion_overview_01",
+          "page_id": "champion_overview",
+          "title": "Champion under governed conditions",
+          "insight_type": "status",
+          "display_order": 1,
+          "tone": "info",
+          "severity": "info",
+          "message": "Champion remains ETS Explicit under governed conditions; not re-fit and not changed in V4.",
+          "evidence_refs": [
+            "champion.champion_name",
+            "champion.final_decision"
+          ],
+          "source_artifacts": [
+            "model_dashboard_summary.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_02",
+          "page_id": "champion_overview",
+          "title": "Champion accuracy",
+          "insight_type": "metric",
+          "display_order": 2,
+          "tone": "info",
+          "severity": "info",
+          "message": "Champion accuracy on record: median MASE 6.90, median RMSSE 1.86.",
+          "evidence_refs": [
+            "champion.champion_mase",
+            "champion.champion_rmsse"
+          ],
+          "source_artifacts": [
+            "model_dashboard_summary.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_03",
+          "page_id": "champion_overview",
+          "title": "Governed model scope",
+          "insight_type": "scope",
+          "display_order": 3,
+          "tone": "info",
+          "severity": "info",
+          "message": "Governed model scope contains 15 models.",
+          "evidence_refs": [
+            "governed_model_scope_rows"
+          ],
+          "source_artifacts": [
+            "model_universe_canonical.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_04",
+          "page_id": "champion_overview",
+          "title": "No candidates advanced",
+          "insight_type": "governance",
+          "display_order": 4,
+          "tone": "info",
+          "severity": "info",
+          "message": "0 candidates were advanced; the champion is retained for review.",
+          "evidence_refs": [
+            "champion.total_candidates_advanced",
+            "champion.final_decision"
+          ],
+          "source_artifacts": [
+            "model_dashboard_summary.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_91",
+          "page_id": "champion_overview",
+          "title": "Evidence-only stage",
+          "insight_type": "stage",
+          "display_order": 91,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_champion_overview.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_92",
+          "page_id": "champion_overview",
+          "title": "Accepted snapshot caveat",
+          "insight_type": "caveat",
+          "display_order": 92,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_refs": [
+            "pack_metadata.snapshot_caveat"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_champion_overview.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_93",
+          "page_id": "champion_overview",
+          "title": "No mutations in V4.3",
+          "insight_type": "governance",
+          "display_order": 93,
+          "tone": "info",
+          "severity": "info",
+          "message": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_champion_overview.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "champion_overview_94",
+          "page_id": "champion_overview",
+          "title": "Traceability guarantee",
+          "insight_type": "traceability",
+          "display_order": 94,
+          "tone": "info",
+          "severity": "info",
+          "message": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_refs": [
+            "candidate_claims"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_champion_overview.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        }
+      ]
+    },
+    {
+      "page_id": "tournament",
+      "insufficient_evidence": false,
+      "cards": [
+        {
+          "card_id": "tournament_01",
+          "page_id": "tournament",
+          "title": "Models reviewed",
+          "insight_type": "summary",
+          "display_order": 1,
+          "tone": "info",
+          "severity": "info",
+          "message": "Evidence indicates 7 models ranked for review under stated conditions.",
+          "evidence_refs": [
+            "ranking"
+          ],
+          "source_artifacts": [
+            "model_evaluation_ranking.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+            "Rankings are descriptive only; no decision is implied."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "tournament_02",
+          "page_id": "tournament",
+          "title": "Closest challenger by MASE ratio",
+          "insight_type": "comparison",
+          "display_order": 2,
+          "tone": "info",
+          "severity": "info",
+          "message": "The closest challenger by MASE ratio is SMLP-TCN at 2.72x the champion; it remains a documented challenger.",
+          "evidence_refs": [
+            "ranking[].model",
+            "ranking[].ratio_vs_champion_mase"
+          ],
+          "source_artifacts": [
+            "model_evaluation_ranking.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+            "'Closest' is by recorded ratio only and implies no promotion."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "tournament_03",
+          "page_id": "tournament",
+          "title": "Challengers retained",
+          "insight_type": "governance",
+          "display_order": 3,
+          "tone": "info",
+          "severity": "info",
+          "message": "All challengers remain documented challengers; none advanced over the champion.",
+          "evidence_refs": [
+            "evaluation_summary[].final_decision"
+          ],
+          "source_artifacts": [
+            "model_evaluation_summary.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "tournament_91",
+          "page_id": "tournament",
+          "title": "Evidence-only stage",
+          "insight_type": "stage",
+          "display_order": 91,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_tournament.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "tournament_92",
+          "page_id": "tournament",
+          "title": "Accepted snapshot caveat",
+          "insight_type": "caveat",
+          "display_order": 92,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_refs": [
+            "pack_metadata.snapshot_caveat"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_tournament.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "tournament_93",
+          "page_id": "tournament",
+          "title": "No mutations in V4.3",
+          "insight_type": "governance",
+          "display_order": 93,
+          "tone": "info",
+          "severity": "info",
+          "message": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_tournament.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "tournament_94",
+          "page_id": "tournament",
+          "title": "Traceability guarantee",
+          "insight_type": "traceability",
+          "display_order": 94,
+          "tone": "info",
+          "severity": "info",
+          "message": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_refs": [
+            "candidate_claims"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_tournament.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        }
+      ]
+    },
+    {
+      "page_id": "forecast_viewer",
+      "insufficient_evidence": false,
+      "cards": [
+        {
+          "card_id": "forecast_viewer_01",
+          "page_id": "forecast_viewer",
+          "title": "Evidence is minimized",
+          "insight_type": "data_minimization",
+          "display_order": 1,
+          "tone": "info",
+          "severity": "info",
+          "message": "Forecast Viewer evidence is filtered, summarized, and capped before explanation; full forecasts and actuals are never embedded.",
+          "evidence_refs": [
+            "forecast_subset.what_not_passed",
+            "forecast_subset.sample_rows_capped_at"
+          ],
+          "source_artifacts": [
+            "forecasts_with_intervals.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_02",
+          "page_id": "forecast_viewer",
+          "title": "Selection coverage",
+          "insight_type": "coverage",
+          "display_order": 2,
+          "tone": "info",
+          "severity": "info",
+          "message": "The current selection covers 65095 forecast rows out of 65095 total; only 5 rows are embedded as a sample.",
+          "evidence_refs": [
+            "forecast_subset.rows_after_filter",
+            "forecast_subset.rows_total_in_artifact",
+            "forecast_subset.rows_in_sample"
+          ],
+          "source_artifacts": [
+            "forecasts_with_intervals.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_03",
+          "page_id": "forecast_viewer",
+          "title": "Forecast horizon span",
+          "insight_type": "horizon",
+          "display_order": 3,
+          "tone": "info",
+          "severity": "info",
+          "message": "Forecast dates in the selection span 2026-04-28 to 2030-04-25.",
+          "evidence_refs": [
+            "forecast_subset.date_min",
+            "forecast_subset.date_max"
+          ],
+          "source_artifacts": [
+            "forecasts_with_intervals.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_04",
+          "page_id": "forecast_viewer",
+          "title": "Model namespace difference",
+          "insight_type": "risk",
+          "display_order": 4,
+          "tone": "warning",
+          "severity": "warning",
+          "message": "Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated.",
+          "evidence_refs": [
+            "forecast_subset.distinct_models",
+            "filters.model"
+          ],
+          "source_artifacts": [
+            "forecasts_with_intervals.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_91",
+          "page_id": "forecast_viewer",
+          "title": "Evidence-only stage",
+          "insight_type": "stage",
+          "display_order": 91,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_forecast_viewer.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_92",
+          "page_id": "forecast_viewer",
+          "title": "Accepted snapshot caveat",
+          "insight_type": "caveat",
+          "display_order": 92,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_refs": [
+            "pack_metadata.snapshot_caveat"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_forecast_viewer.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_93",
+          "page_id": "forecast_viewer",
+          "title": "No mutations in V4.3",
+          "insight_type": "governance",
+          "display_order": 93,
+          "tone": "info",
+          "severity": "info",
+          "message": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_forecast_viewer.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "forecast_viewer_94",
+          "page_id": "forecast_viewer",
+          "title": "Traceability guarantee",
+          "insight_type": "traceability",
+          "display_order": 94,
+          "tone": "info",
+          "severity": "info",
+          "message": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_refs": [
+            "candidate_claims"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_forecast_viewer.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        }
+      ]
+    },
+    {
+      "page_id": "governance_risks",
+      "insufficient_evidence": false,
+      "cards": [
+        {
+          "card_id": "governance_risks_01",
+          "page_id": "governance_risks",
+          "title": "Governance scope is bounded by evidence",
+          "insight_type": "governance",
+          "display_order": 1,
+          "tone": "info",
+          "severity": "info",
+          "message": "Governance and risk explanation is limited to the artifacts available in the evidence pack; no risks are inferred beyond recorded data.",
+          "evidence_refs": [
+            "run_metadata",
+            "ttl_snapshot",
+            "runtime_guardrails"
+          ],
+          "source_artifacts": [
+            "run_metadata.csv",
+            "ttl_months_to_live_snapshot.csv",
+            "model_runtime_guardrails.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "governance_risks_02",
+          "page_id": "governance_risks",
+          "title": "TTL snapshot coverage",
+          "insight_type": "metric",
+          "display_order": 2,
+          "tone": "info",
+          "severity": "info",
+          "message": "The governance snapshot covers 45 entities; months-to-live recorded min 5.23, median 18.60.",
+          "evidence_refs": [
+            "ttl_snapshot.entities_in_snapshot",
+            "ttl_snapshot.months_to_live_min",
+            "ttl_snapshot.months_to_live_median"
+          ],
+          "source_artifacts": [
+            "ttl_months_to_live_snapshot.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "governance_risks_03",
+          "page_id": "governance_risks",
+          "title": "Governed scope and risk flags",
+          "insight_type": "governance",
+          "display_order": 3,
+          "tone": "info",
+          "severity": "info",
+          "message": "Governed model scope is 15 with 0 model(s) carrying a recorded risk flag.",
+          "evidence_refs": [
+            "governance_scope.governed_model_rows",
+            "governance_scope.models_with_risk_flag"
+          ],
+          "source_artifacts": [
+            "model_universe_canonical.csv"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "governance_risks_91",
+          "page_id": "governance_risks",
+          "title": "Evidence-only stage",
+          "insight_type": "stage",
+          "display_order": 91,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 is evidence-only at this stage; no LLM provider is active. Insights are produced by deterministic rules.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_governance_risks.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "governance_risks_92",
+          "page_id": "governance_risks",
+          "title": "Accepted snapshot caveat",
+          "insight_type": "caveat",
+          "display_order": 92,
+          "tone": "info",
+          "severity": "info",
+          "message": "V4 uses snapshot 2026-06-28 as an accepted caveat for local LLM-layer development.",
+          "evidence_refs": [
+            "pack_metadata.snapshot_caveat"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_governance_risks.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "governance_risks_93",
+          "page_id": "governance_risks",
+          "title": "No mutations in V4.3",
+          "insight_type": "governance",
+          "display_order": 93,
+          "tone": "info",
+          "severity": "info",
+          "message": "No SQL, model refresh, Shiny mutation, champion mutation, or data/processed mutation occurred in V4.3.",
+          "evidence_refs": [
+            "pack_metadata.provider_stage"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_governance_risks.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        },
+        {
+          "card_id": "governance_risks_94",
+          "page_id": "governance_risks",
+          "title": "Traceability guarantee",
+          "insight_type": "traceability",
+          "display_order": 94,
+          "tone": "info",
+          "severity": "info",
+          "message": "Each visible insight is traceable to evidence fields or source artifacts.",
+          "evidence_refs": [
+            "candidate_claims"
+          ],
+          "source_artifacts": [
+            "v4_2_evidence_pack_governance_risks.json"
+          ],
+          "limitations": [
+            "LLM explains; it does not decide, advance, or change the champion or governance.",
+            "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced)."
+          ],
+          "confidence": "high",
+          "is_user_visible": true,
+          "validation_status": "PASS"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+check_id,description,expected,observed,status
+BTN-01,Main generate button present in each MVP section,4 buttons (llm_*-explain),"llm_forecast_viewer-explain, llm_tournament-explain, llm_champion_overview-explain, llm_governance_risks-explain present",PASS
+BTN-02,Quick-prompt buttons present per section,4 per section (takeaway/changed/risk/attention),"qp_takeaway, qp_changed, qp_risk, qp_attention present in all 4 modules",PASS
+BTN-03,Clicking generate triggers visible thinking then response,Status progresses to Ready and panel renders,"Tournament + Champion: status reached 'Ready', panel rendered composed answer",PASS
+BTN-04,Quick-prompt click submits preset question,Preset question composed (intent-specific),"Verified via composition test (takeaway/changed/risk/attention map to intents)",PASS
+BTN-05,Download button enabled (not broken),Download link active with session URL,"downloadDisabled=false; href=session/.../download/llm_*-download_md",PASS

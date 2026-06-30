@@ -1,0 +1,75 @@
+{
+  "nlin_before_raw_neg": 27,
+  "nlin_after_raw_neg": 0,
+  "nlin_fixed_ok": true,
+  "gbm_regate": {
+    "LGBM-IMP-v2": {
+      "name": "LightGBM_candidate_improved_v2",
+      "kind": "lgbm",
+      "subset_runtime_s": 23.46918509993702,
+      "projected_full_min": 11.838900039301564,
+      "viable": true,
+      "raw_neg": 0
+    },
+    "XGB-IMP-v2": {
+      "name": "XGBoost_candidate_improved_v2",
+      "kind": "xgb",
+      "subset_runtime_s": 47.9331618999131,
+      "projected_full_min": 24.179617225067275,
+      "viable": true,
+      "raw_neg": 0
+    }
+  },
+  "champion_mase": 6.901143533373399,
+  "n_windows": 454,
+  "overall_status": "COMPLETE",
+  "total_wall_minutes": 30.023,
+  "budget_block": {
+    "start_time": "2026-06-26T08:26:24",
+    "candidates_to_run": [
+      "FNAR-V2",
+      "NLIN-DLIN_FIXED",
+      "SMLP-TCN",
+      "ENET-RIDGE",
+      "LGBM-IMP-v2",
+      "XGB-IMP-v2"
+    ],
+    "number_of_series": 39,
+    "number_of_windows": 454,
+    "horizons": 30,
+    "total_jobs": 81720,
+    "estimated_runtime_by_candidate_min": {
+      "FNAR-V2": 3.81,
+      "NLIN-DLIN_FIXED": 0.03,
+      "SMLP-TCN": 0.43,
+      "ENET-RIDGE": 0.04,
+      "LGBM-IMP-v2": 11.84,
+      "XGB-IMP-v2": 24.18
+    },
+    "estimated_total_runtime_min": 40.33,
+    "max_wall_clock_budget_minutes": 30.0
+  },
+  "completed_candidates": [
+    "FNAR-V2",
+    "NLIN-DLIN_FIXED",
+    "SMLP-TCN",
+    "ENET-RIDGE",
+    "LGBM-IMP-v2",
+    "XGB-IMP-v2"
+  ],
+  "incomplete_candidates": [],
+  "not_started_candidates": [],
+  "budget_events": [],
+  "max_wall_clock_budget_minutes_for_completion": 60.0,
+  "xgb_completion": {
+    "isolated_completion": true,
+    "stop_status": "ok",
+    "n_windows": 454,
+    "median_mase": 27.950413,
+    "median_rmsse": 6.426824,
+    "raw_neg": 0,
+    "runtime_seconds": 1339.3481,
+    "wall_minutes": 22.354,
+    "budget_minutes": 60.0
+  }
+}

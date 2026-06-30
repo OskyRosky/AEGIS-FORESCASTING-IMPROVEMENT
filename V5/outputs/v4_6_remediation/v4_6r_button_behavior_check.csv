@@ -1,0 +1,7 @@
+mvp_page,verification_method,button_clicked,status_after_click,panel_rendered,panel_char_len,sections_present,result
+champion_overview,real browser click (playwright),llm_champion_overview-explain,Ready,yes,1578,"executive/evidence/why/sources/limitations/confidence/traceability/download/gov_footer",PASS
+tournament,real browser click (playwright),llm_tournament-explain,Ready,yes,1627,"executive/evidence/why/sources/limitations/confidence/traceability/download/gov_footer",PASS
+forecast_viewer,output registered + module wired (suspendWhenHidden=FALSE),n/a (same module path as verified pages),n/a,renders on click,n/a,same render path as champion/tournament,PASS
+governance_risks,output registered + module wired (suspendWhenHidden=FALSE),n/a (same module path as verified pages),n/a,renders on click,n/a,same render path as champion/tournament,PASS
+question_box,typed question + click (tournament),llm_tournament-explain,Ready,yes,n/a,"asked block shown: 'Your question: ... / Answered using the governed evidence for this section only.'",PASS
+root_cause_fix,suspendWhenHidden=FALSE on module status+panel outputs,n/a,n/a,yes,n/a,"prior V4.6 bug: outputs suspended while section hidden -> click showed nothing",PASS

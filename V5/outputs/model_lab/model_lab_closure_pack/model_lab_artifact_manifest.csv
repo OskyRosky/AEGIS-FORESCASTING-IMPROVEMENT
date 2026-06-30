@@ -1,0 +1,13 @@
+artifact_group,artifact_path,artifact_exists,artifact_role,created_timestamp
+baseline_metrics,outputs/model_lab/mase/mase_scores.csv,True,Official baseline MASE,2026-06-13T20:36:01
+baseline_metrics,outputs/model_lab/rmsse/rmsse_scores.csv,True,Official baseline RMSSE,2026-06-13T20:36:01
+baseline_aggregation,outputs/model_lab/aggregation_hierarchy/aggregation_by_model.csv,True,Baseline model aggregation,2026-06-13T20:36:01
+baseline_significance,outputs/model_lab/statistical_significance/pairwise_model_significance.csv,True,Baseline pairwise significance,2026-06-13T20:36:01
+challenger_execution,outputs/model_lab/challenger_official_execution/challenger_official_forecasts.csv,True,Official challenger forecasts,2026-06-13T20:36:01
+challenger_metrics,outputs/model_lab/challenger_metrics/challenger_metrics_entity_window.csv,True,Challenger metrics,2026-06-13T20:36:01
+challenger_aggregation_significance,outputs/model_lab/challenger_aggregation_significance/challenger_aggregation_by_model.csv,True,Challenger aggregation,2026-06-13T20:36:01
+audit_4,outputs/model_lab/audit_4/audit_4_summary.csv,True,Audit #4 summary,2026-06-13T20:36:01
+tournament_engine,outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,True,Tournament scorecard,2026-06-13T20:36:01
+tournament_sanity_review,outputs/model_lab/tournament_sanity_review/tournament_sanity_summary.csv,True,Tournament sanity summary,2026-06-13T20:36:01
+champion_decision,outputs/model_lab/champion_decision/champion_decision.csv,True,Champion decision,2026-06-13T20:36:01
+closure_pack,outputs/model_lab/model_lab_closure_pack/model_lab_closure_summary.csv,False,Closure summary,2026-06-13T20:36:01

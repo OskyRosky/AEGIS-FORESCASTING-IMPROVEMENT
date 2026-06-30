@@ -1,0 +1,10 @@
+package,source,classification,used_by,needed_in_dashboard_image,needed_in_refresh_image
+pandas,requirements.txt,refresh_core,ingestion/transform,no,yes
+pyodbc,requirements.txt,refresh_core,ingestion(SQL),no,yes
+python-dotenv,requirements.txt,refresh_core,ingestion(config),no,yes
+numpy,import_scan,model_lab_heavy,model_lab(frozen),no,no
+scikit-learn,import_scan,model_lab_heavy,model_lab(frozen),no,no
+statistics,import_scan,stdlib,model_lab,no,no
+urllib,import_scan,stdlib,llm_client_mock,no,no
+importlib,import_scan,stdlib,utils,no,no
+__future__,import_scan,stdlib,multiple,no,no

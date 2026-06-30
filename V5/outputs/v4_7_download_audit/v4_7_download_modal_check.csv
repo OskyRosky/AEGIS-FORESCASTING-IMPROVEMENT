@@ -1,0 +1,13 @@
+check,expected,observed,result
+modal_opens_on_button,"Click 'Download explanation' opens modalDialog",dialog active with title 'Download explanation',PASS
+modal_title,"Download explanation",Download explanation,PASS
+shows_document_label,"'Document ready for download:'",Document ready for download:,PASS
+shows_document_name_tournament,"AEGIS_Explanation_Tournament_2026-06-29",AEGIS_Explanation_Tournament_2026-06-29,PASS
+shows_document_name_champion,"AEGIS_Explanation_Champion_2026-06-29",AEGIS_Explanation_Champion_2026-06-29,PASS
+format_md_offered_enabled,"Markdown (.md) enabled download link",enabled <a> with session download href,PASS
+format_pdf_offered,"PDF (.pdf) present",present,PASS
+format_pdf_disabled_when_unavailable,"disabled + note when no pandoc/latex",disabled button + 'PDF unavailable in this local environment.',PASS
+format_docx_offered,"Word (.docx) present",present,PASS
+format_docx_disabled_when_unavailable,"disabled + note when no pandoc",disabled button + 'Word unavailable in this local environment.',PASS
+close_button_present,"Close button",present,PASS
+governance_note_in_modal,"Local mock note",Local mock · governed evidence only · no model or champion changes.,PASS

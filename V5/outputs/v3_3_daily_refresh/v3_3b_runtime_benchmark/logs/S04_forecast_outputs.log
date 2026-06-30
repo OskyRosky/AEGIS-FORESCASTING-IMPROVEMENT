@@ -1,0 +1,18 @@
+S04 START 2026-06-26T18:23:11.8363119-06:00
+[18:23:12] Stage 05H FULL builder start | ROOT=C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3
+[18:23:12] loaded baseline: 95,340 rows <- outputs\model_lab\full_baseline\full_baseline_forecasts.csv
+[18:23:12] loaded challenger: 81,720 rows <- outputs\model_lab\challenger_metrics\challenger_actual_forecast_join.csv
+[18:23:13] loaded actuals: 84,537 rows <- data\processed\actuals.csv
+[18:23:13] loaded entities: 45 rows <- data\processed\entities.csv
+[18:23:13] loaded universe: 15 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_final_model_universe.csv
+[18:23:13] loaded deferred: 2 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_deferred_models.csv
+[18:23:13] loaded risk: 7 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_risk_register_final.csv
+[18:23:13] loaded champion: 1 rows <- outputs\model_lab\model_lab_closure_pack\model_lab_champion_summary.csv
+[18:23:13] deferred models (excluded from rows): ['NBEATS', 'NHITS']
+[18:23:14] eligible series: 39 | excluded series: 6
+[18:23:15] built full artifact rows: 177,060 | grain duplicates dropped: 0
+[18:23:16] parquet engine unavailable (ModuleNotFoundError); CSV fallback -> data\processed\forecast_viewer_model_outputs.csv
+[18:23:16] wrote sample CSV: data\processed\forecast_viewer_model_outputs_sample.csv (64 rows)
+[18:23:16] wrote manifest: data\processed\forecast_viewer_model_outputs_manifest.csv
+[18:23:16] Stage 05H FULL builder done
+S04 END 2026-06-26T18:23:16.8088732-06:00 elapsed_seconds=5 exit_code=0

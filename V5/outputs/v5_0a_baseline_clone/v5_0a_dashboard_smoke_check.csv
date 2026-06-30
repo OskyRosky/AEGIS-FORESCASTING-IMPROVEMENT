@@ -1,0 +1,22 @@
+check,expected,observed,status,evidence
+http_status,200,200,PASS,Invoke-WebRequest http://127.0.0.1:3840
+listening_port,3840,3840,PASS,stderr "Listening on http://127.0.0.1:3840"
+process_launched,running,PID 62892,PASS,start_shiny.ps1 JSON output
+content_length,>0,303501 bytes,PASS,response body length
+champion_ets_explicit,present,"ETS Explicit" x90,PASS,HTML body match count
+scope_15_governed_models,present,"15 governed models" x1,PASS,HTML body match count
+scope_15_models,present,"15 models" x9,PASS,HTML body match count
+horizons_30_60_180,present,"30 / 60 / 180 days" x2,PASS,HTML body match count
+assistants_count,10,"Generate explanation" x10,PASS,HTML body match count
+nav_home,present,5,PASS,HTML body match count
+nav_overview,present,17,PASS,HTML body match count
+nav_universe,present,9,PASS,HTML body match count
+nav_tournament,present,14,PASS,HTML body match count
+nav_champion,present,33,PASS,HTML body match count
+nav_forecast,present,38,PASS,HTML body match count
+nav_accuracy,present,12,PASS,HTML body match count
+nav_risks,present,6,PASS,HTML body match count
+nav_audit,present,23,PASS,HTML body match count
+nav_methodology,present,8,PASS,HTML body match count
+logs_no_critical_errors,no critical errors,only benign readr parse warning,PASS,stderr log tail (50 lines)
+pandoc_active,active,"Version 3.10 is now the active one",PASS,stderr log

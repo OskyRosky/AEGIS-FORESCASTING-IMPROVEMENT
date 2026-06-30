@@ -1,0 +1,5 @@
+file,change_type,purpose
+shiny_app/R/llm_explain.R,modified,"Replaced single .md download button with a 'Download explanation' action button that opens a modal; added .llm_export_caps() runtime detection, .llm_doc_basename(), .llm_download_modal(), .llm_render_export(); cleaned downloadable markdown of sources/traceability; added download_pdf and download_docx handlers reflecting the latest visible explanation."
+shiny_app/www/custom.css,modified,"Added V4.7 download modal styles (.llm-dl-modal, .llm-dl-name, .llm-dl-format, .llm-dl-disabled, .llm-dl-note, .llm-dl-foot) plus dark-theme variants."
+shiny_app/ui/body.R,modified,"Cache-buster bumped custom.css?v=20260629d -> v=20260629e so the new modal styles load."
+outputs/v4_7_download_audit/AEGIS_Explanation_Tournament_2026-06-29.md,created,"Sample exported explanation (Tournament) used as download evidence."

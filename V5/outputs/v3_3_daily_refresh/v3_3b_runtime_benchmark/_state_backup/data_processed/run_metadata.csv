@@ -1,0 +1,2 @@
+run_timestamp,forecast_version,actual_rows,forecast_rows,comparison_rows,entity_count,model_count,first_actual_date,last_actual_date,first_forecast_date,last_forecast_date,notes
+2026-06-10T09:58:29,2026-05-01,84537,65095,0,45,16,2019-07-01,2026-04-27,2026-04-28,2030-04-25,"Stage 4.1 data contract build. Same-date actual/forecast comparison only; no errors, metrics, rankings, imputations, or shifted dates."

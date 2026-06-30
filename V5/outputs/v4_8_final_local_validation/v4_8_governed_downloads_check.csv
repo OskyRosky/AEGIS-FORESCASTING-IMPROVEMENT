@@ -1,0 +1,10 @@
+check,expected,observed,status
+modal_opens,yes,"Governed download modal opens for artifact cards (verified key_results + tournament_scorecard)",PASS
+six_formats_offered,"CSV + MD/PDF/DOCX/HTML/TXT","CSV (canonical) + Markdown + PDF + Word + Web page + Plain text",PASS
+csv_canonical_verbatim,verbatim,"tournament_scorecard CSV 200 / 2598 bytes == on-disk 2598 bytes (V4/outputs/model_lab/tournament_engine/tournament_model_scorecard.csv); header run_id,model_name,...,created_timestamp matches",PASS
+csv_is_official_artifact,yes,"Modal labels CSV '(.csv) - canonical'; note: 'CSV is the canonical artifact, served verbatim'",PASS
+rendered_formats_additional,yes,"MD 4038B '# Governed Artifact - Tournament scorecard'; PDF %PDF; DOCX PK; HTML <!DOCTYPE; TXT 'GOVERNED ARTIFACT - TOURNAMENT SCORECARD' - all rendered copies, none replace the CSV",PASS
+canonical_note_present,yes,"'CSV is the canonical artifact, served verbatim. MD / PDF / DOCX / HTML / TXT are rendered copies for reading.'",PASS
+preview_cap_documented,documented,"200-row preview cap implemented in R/artifact_export.R; all 8 governed downloads are tiny (<=15 rows) so the cap never trips and tables render in full",PASS
+existing_downloads_unbroken,yes,"key_results modal also opens with 6 valid-href formats; no download regressions observed",PASS
+all_8_cards_have_open_button,yes,"8 governed artifact cards expose dl_<key>_open buttons (key_results, final_model_universe, champion_summary, risk_register_final, tournament_standings, tournament_scorecard, dashboard_handoff_manifest, artifact_manifest)",PASS

@@ -1,0 +1,508 @@
+run_id,model_name,model_origin,model_family,entity_key,median_mase,median_rmsse,median_wmape,median_smape,median_bias,entity_weight,audit_risk_flag,created_timestamp
+tournament_engine,ARIMA_Fixed,baseline,statistical,APC-Dedicated,3.2875262112854213,0.3390119024866116,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,APC-Dedicated,3.4543601462729034,0.3834239108157525,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,APC-Dedicated,2.699432193344133,0.270540812452145,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,APC-Dedicated,6.99033711757601,0.7107587468482364,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,APC-Dedicated,9.31804376627905,1.006504917230264,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,APC-Dedicated,14.686549464477892,1.5119275173839952,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,APC-Dedicated,5.7421625186151,0.6934856802010496,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,APC-MSIT,1.7252279529132228,0.3618390693687067,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,APC-MSIT,1.8913461905839253,0.3303620826820208,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,APC-MSIT,1.9963911702997563,0.3682827321290793,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,APC-MSIT,2.3663869653429903,0.4180639661420512,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,APC-MSIT,2.989507597394671,0.5297262917483665,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,APC-MSIT,4.235748861498043,0.7533946433633836,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,APC-MSIT,1.8900086631980049,0.3380359802379992,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,APC-Multitenant,9.638974197632416,1.9913228220949344,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,APC-Multitenant,9.024929960637609,1.824503285807998,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,APC-Multitenant,3.462068514744969,0.7043060946518395,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,APC-Multitenant,4.257589648799279,0.9363740042896492,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,APC-Multitenant,7.4483015537633985,1.65907090820702,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,APC-Multitenant,14.83343326011801,3.09251179877504,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,APC-Multitenant,5.964468905912527,1.2374493030553109,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,ARE-Go Local,11.334703202662183,2.547841948481873,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,ARE-Go Local,11.35853836788276,2.3198920657077347,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,ARE-Go Local,13.953320721460983,2.52962105400942,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,ARE-Go Local,16.253186290671902,2.8951785926157427,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,ARE-Go Local,23.549252796309556,4.072356391248675,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,ARE-Go Local,38.38384817068074,6.516747829726018,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,ARE-Go Local,14.634278393973112,2.7886736032439208,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,AUS-Go Local,4.360293581263965,0.4479058295012149,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,AUS-Go Local,3.781279557530012,0.495214781242869,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,AUS-Go Local,5.5487564012213095,0.4864478254367942,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,AUS-Go Local,11.3899184667372,0.954241647313701,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,AUS-Go Local,15.171136075029244,1.2319950110754658,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,AUS-Go Local,22.573719753102136,1.7880215999372022,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,AUS-Go Local,7.975785968753852,0.5822135974160774,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,BRA-Go Local,16.15160772820102,5.183478211316767,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,BRA-Go Local,5.805898722697156,2.273019421267602,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,BRA-Go Local,6.786098228326992,2.313820861507943,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,BRA-Go Local,4.797384083511805,1.510621132578915,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,BRA-Go Local,10.679793023323928,3.364162445063363,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,BRA-Go Local,23.1750602196582,7.339726856071233,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,BRA-Go Local,7.697406659044745,2.7517633206678718,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,CAN-Go Local,23.347571529622787,5.821983626801403,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,CAN-Go Local,9.102025132485656,3.0765732491383355,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,CAN-Go Local,6.908936958711907,1.7602104691358338,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,CAN-Go Local,14.255628761851762,3.705349109313717,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,CAN-Go Local,21.588490198945934,5.64161503974349,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,CAN-Go Local,36.226945469379096,9.260625561443916,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,CAN-Go Local,7.4088860262483855,1.8922113933545923,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,CHE-Go Local,14.809283856212115,3.49334506602668,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,CHE-Go Local,8.451805567997319,1.9239671408333985,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,CHE-Go Local,7.090938787736617,1.438618458618983,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,CHE-Go Local,14.65056055373211,3.011146951079982,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,CHE-Go Local,20.29040695769929,4.0979317197037926,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,CHE-Go Local,31.91387021704197,6.582742198894781,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,CHE-Go Local,10.50311724145779,2.283539622464886,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,DEU-Go Local,10.128479725540055,2.5318970613589604,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,DEU-Go Local,5.985305574716797,1.5676192295090292,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,DEU-Go Local,5.607903406364759,1.4577068343410091,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,DEU-Go Local,6.599286572782487,1.581499731591013,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,DEU-Go Local,13.342096402535653,3.24414186743465,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,DEU-Go Local,27.03655875330486,6.703385392277955,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,DEU-Go Local,4.246913678184447,0.9829396693658008,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,ESP-Go Local,61.22844919984117,22.27515571392002,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,ESP-Go Local,56.46349877415806,19.29843340121096,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,ESP-Go Local,22.775127161368744,7.105984696846958,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,ESP-Go Local,25.62842486826775,8.103909306711902,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,ESP-Go Local,28.941291700612894,9.1814890610853,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,ESP-Go Local,35.567025365303174,11.350872048865227,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,ESP-Go Local,133.75113087694936,56.26969407903965,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,EUR-Dedicated,9.64578880213781,3.1649827722846675,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,EUR-Dedicated,8.65417111153676,3.4520277255579863,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,EUR-Dedicated,12.441715436290286,4.470809284590189,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,EUR-Dedicated,19.285167899981246,6.657373179812813,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,EUR-Dedicated,23.891017212089658,8.122597570329972,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,EUR-Dedicated,33.102715836306466,11.060680069466397,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,EUR-Dedicated,10.30061087074001,3.23244475460047,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,EUR-MSIT,1.7894869056244591,0.3517325669870744,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,EUR-MSIT,2.064544661870128,0.3793564997517979,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,EUR-MSIT,1.5471765846977878,0.2923594005214562,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,EUR-MSIT,2.3587217772445657,0.4898408688887913,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,EUR-MSIT,3.085904791119489,0.6223977381234488,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,EUR-MSIT,4.571826063217207,0.8753187513730607,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,EUR-MSIT,1.3987079220989824,0.2528511126076328,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,EUR-Multitenant,18.79530447039987,4.524823151579794,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,EUR-Multitenant,14.417767707192926,3.3226424286470286,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,EUR-Multitenant,8.649280961006667,1.9978240374779048,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,EUR-Multitenant,12.06252816415175,3.019316356642247,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,EUR-Multitenant,13.14758459657198,3.302441513942032,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,EUR-Multitenant,20.678711144314757,5.083541365063246,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,EUR-Multitenant,11.7873646693143,2.7630595982118464,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,FRA-Go Local,12.45982376621593,3.7469088733001095,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,FRA-Go Local,11.74992063621528,3.733666394207369,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,FRA-Go Local,8.988835186949991,2.9242321648369844,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,FRA-Go Local,18.377700418421327,5.785853438885962,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,FRA-Go Local,25.276661719470507,7.8382584521181,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,FRA-Go Local,37.9989065719017,11.681380640442924,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,FRA-Go Local,10.753832529515794,3.3044171369964968,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,GBR-Dedicated,56.99322254488531,9.720321077337868,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,GBR-Dedicated,21.540306098134565,4.036676237198765,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,GBR-Dedicated,14.69046155674816,4.057635625423621,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,GBR-Dedicated,16.56813510840361,4.3341702698208255,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,GBR-Dedicated,17.947683656498352,4.537992263137265,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,GBR-Dedicated,20.81412056264421,4.9842887067949535,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,GBR-Dedicated,20.0668686419534,3.97755369956579,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,GBR-Go Local,24.284768471851265,8.330021721556893,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,GBR-Go Local,31.440050077081366,11.25140607546824,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,GBR-Go Local,9.604935786099531,3.886580792166213,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,GBR-Go Local,14.345010216485822,5.17366368719253,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,GBR-Go Local,20.44645757622332,7.401019876628522,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,GBR-Go Local,30.07303073506145,11.502758189454386,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,GBR-Go Local,11.116249692089086,4.068760073602808,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,IND-Go Local,11.786632298114077,1.8961161241729212,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,IND-Go Local,5.601038097492853,0.9648011230935352,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,IND-Go Local,8.21661733991988,1.5329766614139713,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,IND-Go Local,5.196886364425486,0.9980795912458874,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,IND-Go Local,12.445696832269714,1.9670559615831984,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,IND-Go Local,27.01539149184708,4.549365090888148,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,IND-Go Local,6.305819233545932,1.1710152680086137,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,ISR-Go Local,10.834718798736382,3.851800384392764,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,ISR-Go Local,8.812614577366036,4.170184148969891,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,ISR-Go Local,12.846653393329683,5.182231325219757,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,ISR-Go Local,7.434074919390634,3.15861637687874,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,ISR-Go Local,5.374893556839016,2.406811625096833,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,ISR-Go Local,6.934633148160641,2.7190990767273977,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,ISR-Go Local,6.295891589098867,2.9247536294685395,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,ITA-Go Local,29.710548543807043,7.705345745712001,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,ITA-Go Local,14.427431783630515,3.8228887231393673,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,ITA-Go Local,10.551998672930504,2.7004381216383435,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,ITA-Go Local,16.042419739099365,4.062451673670424,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,ITA-Go Local,19.719252081101253,4.98269878909136,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,ITA-Go Local,27.072916765105056,6.834861394990239,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,ITA-Go Local,15.314146340875748,4.936153361010691,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,JPN-Go Local,11.789916350319965,4.753105037118019,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,JPN-Go Local,7.410541372201708,2.6834317806478816,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,JPN-Go Local,8.708987210598883,3.034229534934608,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,JPN-Go Local,12.989045570820014,4.20690808984737,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,JPN-Go Local,21.30959973920168,7.128523774902535,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,JPN-Go Local,37.41336771607761,12.643613852860568,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,JPN-Go Local,8.383340779420022,2.9962516819184684,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,KOR-Go Local,29.230745796195365,9.414646332228196,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,KOR-Go Local,32.32818754729549,9.216716537803954,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,KOR-Go Local,14.266219617391762,4.402759616101864,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,KOR-Go Local,21.514809098012712,6.115469344666151,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,KOR-Go Local,27.962343748845434,7.78455970589995,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,KOR-Go Local,42.69271460167079,11.91404049686539,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,KOR-Go Local,20.093972490253652,6.348350900954186,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,LAM-Multitenant,7.369892597706928,1.809718602095306,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,LAM-Multitenant,3.729429070734402,1.0590079022770107,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,LAM-Multitenant,2.714077635622594,0.677367140928431,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,LAM-Multitenant,10.7429123822018,2.9857226839973885,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,LAM-Multitenant,18.17705226843197,4.712997593520805,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,LAM-Multitenant,33.04533204089238,8.246253630208148,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,LAM-Multitenant,3.298141790076302,0.8853790455015929,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,MEX-Go Local,13.248927466332812,5.0811062551943,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,MEX-Go Local,9.467852603526453,2.6979544157161124,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,MEX-Go Local,22.360026404339266,7.239878601289087,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,MEX-Go Local,16.8947281804206,5.419141898281856,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,MEX-Go Local,13.376638060829157,4.2303359376330905,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,MEX-Go Local,6.866476484562282,2.237261646122578,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,MEX-Go Local,22.497918163046247,6.263982950132263,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-Dedicated,17.193992719678207,4.801431285468084,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-Dedicated,8.149064243322753,2.82018109817499,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-Dedicated,29.943171885183396,8.272577712824498,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-Dedicated,40.51737918951401,11.207792847691124,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-Dedicated,47.56685072573447,13.172536577604006,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-Dedicated,61.66579379817524,17.108823574310918,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-Dedicated,24.485606508302297,7.136514290493824,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-GCC Low,5.249369353851487,1.8268127546385813,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-GCC Low,2.989873270070853,0.935516137749322,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-GCC Low,2.6843164502429806,0.7774553614726281,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-GCC Low,15.804430298102414,4.819740336596231,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-GCC Low,24.962554117198582,7.605679653837138,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-GCC Low,42.5141129509517,12.899157820144946,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-GCC Low,2.590509084227569,0.8294266041498985,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-ITAR DoD,4.316207847094249,0.8154024622682727,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-ITAR DoD,6.412079030739522,1.14185945864891,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-ITAR DoD,3.923759846704239,0.7096325826243839,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-ITAR DoD,3.71784148534124,0.5856652003464088,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-ITAR DoD,5.056284253045133,0.7574399202449169,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-ITAR DoD,8.316853775706303,1.150396171163085,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-ITAR DoD,5.212628828646471,0.8909060469055909,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-ITAR GCCH,7.782768123602493,0.8865674305471697,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-ITAR GCCH,8.508843521029197,1.1088079300161668,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-ITAR GCCH,3.716637124646904,0.4835018943788665,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-ITAR GCCH,3.4772251299614627,0.3509062959176207,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-ITAR GCCH,5.451233687783429,0.5758823989360062,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-ITAR GCCH,10.09717911257519,1.0574584289940128,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-ITAR GCCH,16.989830175938625,1.720514990389792,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-MSIT,4.521180238542792,1.08603782757165,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-MSIT,3.864158469857536,0.9407150119499889,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-MSIT,6.302582426390067,1.6816736770671716,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-MSIT,5.963259148347659,1.339022028604776,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-MSIT,5.039868373674321,1.1363454252965213,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-MSIT,5.216046338572483,1.1670261899875327,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-MSIT,6.466269497760478,1.786253528558145,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-Multitenant,27.097444169142733,6.911224803896382,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-Multitenant,8.69303000069338,2.543121974311439,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-Multitenant,4.730226893501323,1.1155679509730898,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-Multitenant,6.453053800898807,1.8684506423355267,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-Multitenant,9.651155645275196,2.232524469319837,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-Multitenant,16.29543308976683,3.779318144815092,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-Multitenant,6.548817454845619,1.534428794828265,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-SDF,4.143168897374547,2.267185715313266,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-SDF,3.8546242589150905,1.849433366884124,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-SDF,1.7974149895771596,0.5154079386402641,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-SDF,1.6845462178987836,0.5280676980444095,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-SDF,1.802566304359425,0.571975798771415,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-SDF,2.0544024977966564,0.6638153419046617,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-SDF,5.580685255023868,1.9910241376980964,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NAM-TDF,3.953195622514505,0.8758447920367947,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NAM-TDF,5.130391530716775,1.587423149762035,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NAM-TDF,1.4956481073491537,0.3665596643658451,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NAM-TDF,1.2417379989636868,0.3392349800799454,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NAM-TDF,1.1369310854935706,0.3346931651396497,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NAM-TDF,1.5076356807112228,0.3629733768904115,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NAM-TDF,5.212516091957131,1.7745793076590806,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NOR-Go Local,15.311110919268804,3.645803578949516,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NOR-Go Local,8.987024055493132,2.183866619633952,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NOR-Go Local,10.07111747394828,2.2718379673062783,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NOR-Go Local,20.5233748535218,4.799628197581544,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NOR-Go Local,25.850537587150964,6.160398112036793,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NOR-Go Local,41.35424793495855,9.403293864914373,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NOR-Go Local,9.959002012543548,2.526591939182227,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,NZL-Go Local,16.20725465744178,6.033207465790567,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,NZL-Go Local,8.783470312458348,3.242387876480025,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,NZL-Go Local,16.57154115433253,5.737797043476287,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,NZL-Go Local,12.99909093913804,4.514662788866621,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,NZL-Go Local,11.464117273494647,4.253567447707408,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,NZL-Go Local,8.52201336116323,3.541299238897993,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,NZL-Go Local,9.49576945571986,2.7974827126432014,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,POL-Go Local,85.8785621650287,25.002590661702484,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,POL-Go Local,33.893441800097634,10.177321943154952,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,POL-Go Local,20.960974649728566,6.439954084517429,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,POL-Go Local,28.447079697252928,8.609549434162941,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,POL-Go Local,33.43781639560255,10.106535979924558,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,POL-Go Local,43.41928979230162,13.103089315846312,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,POL-Go Local,141.96269441451423,43.75039895097751,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,QAT-Go Local,8.385696278188389,3.2457063138079647,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,QAT-Go Local,4.8939472531713495,1.6776251372329702,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,QAT-Go Local,10.678093321145418,3.021283005857599,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,QAT-Go Local,4.015332467431581,1.2180387491371794,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,QAT-Go Local,4.904343430888915,1.4606805842673125,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,QAT-Go Local,14.410507316814858,4.157477995604806,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,QAT-Go Local,10.294037317585458,2.866985547928678,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,SGP-Go Local,21.305965612933942,2.2245653440883504,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,SGP-Go Local,16.172317853285396,1.652313063172989,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,SGP-Go Local,47.9227113598981,4.531443599301426,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,SGP-Go Local,38.52133906425402,3.623914946479196,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,SGP-Go Local,32.253757533824626,3.0281110677255505,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,SGP-Go Local,32.28233053399647,4.366210688089323,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,SGP-Go Local,30.07257223844677,5.436477281427315,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,SWE-Go Local,32.113583816465066,8.885230143172857,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,SWE-Go Local,20.65162244888951,6.79155075197738,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,SWE-Go Local,12.306950354442847,3.710801190691763,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,SWE-Go Local,19.169095938543546,6.185198570996011,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,SWE-Go Local,24.229527176345997,7.849426951673561,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,SWE-Go Local,34.35038965195079,10.76435012213784,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,SWE-Go Local,23.080122270462823,7.315728777034057,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,TWN-Go Local,30.279311727651887,14.71477756522269,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,TWN-Go Local,94.09550876045653,25.54999020030055,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,TWN-Go Local,18.34384625716271,8.725089431150765,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,TWN-Go Local,16.376973962538557,8.314724615678402,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,TWN-Go Local,16.52907963144241,8.063460194947355,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,TWN-Go Local,18.65662495304688,7.622357379893588,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,TWN-Go Local,96.9106011629714,35.115488548007626,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ARIMA_Fixed,baseline,statistical,ZAF-Go Local,6.431335618685336,0.5578967299867348,,,,1,False,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,ZAF-Go Local,7.594771024807171,0.728989059208742,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,ZAF-Go Local,4.255653377823872,0.7231936830066492,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,ZAF-Go Local,11.13937466672168,1.0897995044517617,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,ZAF-Go Local,17.716549085886264,1.4864102622904627,,,,1,False,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,ZAF-Go Local,28.49951497143288,2.2847503874086854,,,,1,False,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,ZAF-Go Local,8.431067434993887,0.8431599761319357,,,,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,APC-Dedicated,9.838833843757737,1.0225080098668156,0.1212683624652326,0.148763916354267,-4.732263831404096,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,APC-Dedicated,15.450675920717762,1.6385388449847351,0.1421750304112459,0.1747794599104748,-15.27268273445445,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,APC-Dedicated,423.2312937306408,38.81162574696542,0.7894275920273377,1.3108960577957072,-692.3820763641017,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,APC-Dedicated,4.074674204450393,0.4134423799438161,0.0339643198900707,0.0333904248229098,7.0879135400055295,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,APC-Dedicated,2.0682017757883244,0.2413719397197795,0.0579208334929245,0.0564932445960938,5.70290897796205,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,APC-Dedicated,3.1404718584796054,0.3190026991447879,0.0225129265333454,0.0222708690368511,0.6443749113850918,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,APC-MSIT,2.11414575304411,0.3494784354964938,0.0165475808482519,0.0165508718609507,14.29459506066036,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,APC-MSIT,1.7839549385616462,0.3633950306196069,0.0133308696573421,0.0133860876856051,16.837880585682143,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,APC-MSIT,60.15327287245994,10.406419330106509,0.4848692818203252,0.7004766862301388,-1093.448321985948,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,APC-MSIT,3.076825051293903,0.5689142593251505,0.0250051755866979,0.025438568386031,11.049372866249753,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,APC-MSIT,7.240151121974378,1.2155182842892025,0.0571847954453295,0.0570992365451265,-27.024017937040156,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,APC-MSIT,1.6599160020599777,0.3278092737053202,0.0131134103253838,0.0131196040241082,13.710025349739452,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,APC-Multitenant,5.116166615752318,1.053547945316143,0.0066767977449337,0.0066878839451189,-2751.079735532463,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,APC-Multitenant,4.958777262942807,1.0115484430903854,0.0064777579558702,0.0064882999551632,-2661.764182786207,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,APC-Multitenant,739.9218881736479,130.92836256278113,0.999960741808023,1.9998430220740564,-536119.4568757052,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,APC-Multitenant,14.0759521351519,2.6854595456073613,0.0188290645037788,0.0189933769413176,-10214.653371254788,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,APC-Multitenant,7.137275360704119,1.4771245623234923,0.0093188346049973,0.0093480753699157,-4179.4991437565695,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,APC-Multitenant,11.166947086211014,2.3324770088667783,0.0145980414168641,0.0146750323389998,-8029.923585783317,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,ARE-Go Local,9.30574767151044,1.782459147934941,0.0064254888330146,0.0064117714007392,79.03815978145832,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,ARE-Go Local,14.405441522045496,2.6769089519033136,0.0096869004508415,0.0096747273971359,-282.9442161361153,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,ARE-Go Local,1295.4370187390268,203.65742543504524,0.8930170083981895,1.626523304660118,-42932.32448149021,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,ARE-Go Local,35.27315381109161,6.0527606162397785,0.0239785196309999,0.0242364423369273,-689.5395325652311,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,ARE-Go Local,16.429905355487342,2.9563544322279287,0.0113456546869538,0.011372265609363,-299.04905601153126,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,ARE-Go Local,26.68291973913333,4.744723924306657,0.017922592421327,0.0180526389313876,-499.9718399041677,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,AUS-Go Local,4.093038113165956,0.3387452803373981,0.005581506603639,0.0055888612947612,-1370.2801225526446,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,AUS-Go Local,3.710235426026486,0.4201599874339159,0.0043499834732524,0.0043374828090653,100.37827824032574,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,AUS-Go Local,667.9074633818615,45.67142406520949,0.9751012060442232,1.9004182980412965,-269350.82472393883,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,AUS-Go Local,10.497279264832589,1.183950663062982,0.0111603418655604,0.0112137682348981,-2665.426467895522,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,AUS-Go Local,9.604103876457842,0.9610344452922418,0.0141636687639672,0.0143406218739491,-2020.7940902755745,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,AUS-Go Local,6.378232579111202,0.5131106597203012,0.0071719619772707,0.0071764202268614,-1736.8807432000087,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,BRA-Go Local,6.434013700086247,2.347057068131117,0.0051915231021003,0.005175944212608,-188.456726203634,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,BRA-Go Local,6.426364063522847,2.34283498766389,0.0051853765097086,0.005169864416794,-189.33227549327847,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,BRA-Go Local,1169.7106580418667,323.5371767753303,0.9405564573206469,1.7790218670318405,-47542.6931639144,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,BRA-Go Local,17.985578341281872,5.577463142124064,0.0143078162555068,0.0143816026225294,-728.5368335856917,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,BRA-Go Local,10.450176867053075,3.2666213138903157,0.0082665748816125,0.008272782498671,-397.90312654351567,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,BRA-Go Local,16.204352667746022,4.939271851436347,0.0133052449308346,0.0133663033665233,-657.4909034541668,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,CAN-Go Local,5.378674728372152,1.3370868766673594,0.0040166346155233,0.0040082871324054,97.6002616155165,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,CAN-Go Local,5.393311187717977,1.3371897259129095,0.0040272178812985,0.0040188036900167,116.10661505076422,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,CAN-Go Local,1307.7418418419288,292.97476502985546,0.9682952599222094,1.8774153102345232,-154774.04695962387,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,CAN-Go Local,16.04104170759398,4.061386180935608,0.0110122939575227,0.0111105635815684,-1615.8198547479474,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,CAN-Go Local,4.591250586911581,1.186278647493014,0.0034850017628783,0.0034810693008921,-330.25005812742506,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,CAN-Go Local,12.241151481764913,3.1750563766526896,0.0085552193897944,0.008580012479238,-1166.744107666669,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,CHE-Go Local,6.5281819931518825,1.2322834646064866,0.0047932845473745,0.0047897434953943,-67.6337515521797,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,CHE-Go Local,7.092061636423937,1.5821615551931707,0.0054196897379565,0.0054172462844979,-9.322193486513122,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,CHE-Go Local,1277.8450960273683,226.12403229385157,0.8752812697546778,1.576478968856739,-28073.33762832569,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,CHE-Go Local,18.973563627347207,3.4025293962899346,0.013247776411218,0.013333888337637,-416.3016156546424,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,CHE-Go Local,8.131543264884673,1.7308384304050928,0.0055189463990446,0.005526235492786,-179.4766139672529,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,CHE-Go Local,14.048400300942747,2.8612718191820483,0.0095935050048361,0.0096349061952222,-308.77216785833446,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,DEU-Go Local,8.506507531363935,2.126901633889843,0.0063458324228512,0.0063054096075924,323.4068656789012,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,DEU-Go Local,6.60424616796759,1.641386257809476,0.0049575423576907,0.0049589111728477,-330.97461777034573,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,DEU-Go Local,1245.3736117785174,272.51289130135274,0.9522442433978766,1.8204240924361252,-77053.70959248187,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,DEU-Go Local,26.548751405167053,6.137302632352166,0.0195927253628802,0.0197651994848054,-1649.384507317467,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,DEU-Go Local,10.642289708177191,2.629440671375848,0.0079934030127433,0.0080036434887557,-581.6637381816006,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,DEU-Go Local,20.580803670540547,4.948455666036922,0.0158370265802756,0.0159477967728125,-1228.6448747999966,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,ESP-Go Local,60.09736331136054,20.82334787321996,0.1018969830719834,0.0947427749885082,-31.391259035783392,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,ESP-Go Local,67.96281339453596,23.427479642421044,0.1149576324045852,0.1062802115217873,-48.70712343573465,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,ESP-Go Local,540.4602573815939,164.62241686434226,0.8613412527614438,1.527725346943666,-11756.219966719043,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,ESP-Go Local,15.98228529838295,5.128262804729157,0.0268831390014849,0.0270969731829202,-210.9841129680181,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,ESP-Go Local,22.15693600564185,6.917792494173882,0.0362349027859126,0.0357304288439356,-96.57966635781712,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,ESP-Go Local,21.68092951861994,6.798062651389166,0.0356689606673333,0.0353645932673239,-176.04773940065087,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,EUR-Dedicated,10.99384742387334,3.637039011376588,0.010747046007717,0.0107497279763008,-29.54115216563053,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,EUR-Dedicated,10.849120052115763,3.5761848477379736,0.0098960044207524,0.0098310723098557,103.89434342385114,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,EUR-Dedicated,635.289540229666,184.86044381256957,0.7384844780586161,1.218967976722937,-17656.878866153904,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,EUR-Dedicated,6.550062296654886,2.08565900228376,0.0064663681415156,0.0064666685766515,102.68311855996863,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,EUR-Dedicated,9.05533538787137,3.0747829058057383,0.0081108887416342,0.0080841099513579,179.0312951880909,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,EUR-Dedicated,7.244918209529056,2.3175003199501725,0.0063051091902762,0.0063108936295506,107.6781359895824,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,EUR-MSIT,1.4842757670627056,0.2807726177728539,0.0100306321484466,0.0100950946244618,4.611299651855504,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,EUR-MSIT,1.534802448395867,0.269671224804117,0.010236453515828,0.0102383738502996,8.295752519255458,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,EUR-MSIT,85.51760733987756,14.350858055344284,0.5924524409144203,0.9096768664358604,-1058.6411814511785,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,EUR-MSIT,2.547550127125866,0.477864494557339,0.017772586521827,0.0176915472679792,5.620042619501165,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,EUR-MSIT,2.3540342942420427,0.4835466293611133,0.016454151402071,0.0165570031130659,-2.061482106850629,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,EUR-MSIT,2.0296365107995697,0.375347253359748,0.0139578817962046,0.0140501607796503,8.181593167708336,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,EUR-Multitenant,8.088530320808188,2.087009799258172,0.0099110042459386,0.0099133359613967,-13243.812310671425,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,EUR-Multitenant,7.0827733856603095,1.9055521895491867,0.0087554067132253,0.008735093329671,-8352.77596392948,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,EUR-Multitenant,829.4416738542698,167.66536487935434,0.9999889000527792,1.9999556508777685,-2104118.206201125,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,EUR-Multitenant,15.140656198126983,3.411139319689177,0.018702650284909,0.0188534461808699,-38421.47025001587,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,EUR-Multitenant,8.634231357738532,2.2351305830551667,0.0105795563602335,0.0105874256823684,-15266.724697576845,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,EUR-Multitenant,11.857181291254024,2.9480534347950043,0.0145410404917853,0.0145978587788496,-25804.190052050064,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,FRA-Go Local,13.993667128601196,5.081544092970237,0.0097440722024131,0.0097818071254622,221.87007462927625,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,FRA-Go Local,8.600078173568129,2.670394384993434,0.0061170913788034,0.0061177837715093,346.10079105273667,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,FRA-Go Local,1320.1650817631323,343.1938753889624,0.9555396762426333,1.831001335161466,-93103.74127920852,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,FRA-Go Local,12.85287065790464,3.878357539450159,0.0093618408123071,0.0093527290252971,-424.4092296996008,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,FRA-Go Local,8.33931812121891,3.1882333746863694,0.0059306346627907,0.00594593147632,55.57050855602308,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,FRA-Go Local,11.037644315503558,3.5532282886034547,0.0075652387387948,0.007592418595379,-404.6369170583331,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,GBR-Dedicated,25.95873781080065,3.911315548927556,0.0685735628582727,0.068238875802998,12.142762877951268,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,GBR-Dedicated,14.34136505706858,3.969270238296437,0.038488797254018,0.0386970833859931,9.968741852560504,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,GBR-Dedicated,1186.081543407735,218.2127791166641,3.0282344601877917,0.9851202879319594,2810.279185664814,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,GBR-Dedicated,21.15187282745145,3.66159550180265,0.0536618962788628,0.0547689862293339,-12.819458698980531,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,GBR-Dedicated,17.229325336511117,4.262701007254709,0.0484504876042535,0.0482091200006443,21.21469430669799,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,GBR-Dedicated,14.547628304157428,3.9121348839818095,0.0382056190363414,0.039840163435064,3.717381549088541,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,GBR-Go Local,9.475763064715636,4.063976976353676,0.0082568006958349,0.0082712998542887,-140.4956631605135,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,GBR-Go Local,10.088450262775794,3.8927906497489375,0.0083670403450673,0.0083704646181134,-742.0753992107964,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,GBR-Go Local,1187.3629521847083,372.6953932507601,0.9999302764335184,1.9997205223922632,-252069.0958722984,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,GBR-Go Local,13.285592722601088,4.563586698316515,0.0109198094750704,0.0109334692348084,-2258.0701057545407,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,GBR-Go Local,11.369482968496408,4.51027378322075,0.0097656144978283,0.0097766717893523,-1440.5389417001982,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,GBR-Go Local,13.2103343101086,4.696165447131081,0.0101975900681486,0.0102220172524873,-1588.930106150012,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,IND-Go Local,10.694059379842358,1.8841138532269055,0.007903407977284,0.007907356785348,-1798.5396130946688,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,IND-Go Local,9.738140981395908,1.736249729453649,0.0067858146220416,0.0067908109090285,-2301.4157361818,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,IND-Go Local,1369.708713049725,199.0571308788235,0.9999432724890424,1.9997729735007976,-335120.0445629421,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,IND-Go Local,28.967890182397376,4.62126202614076,0.0205169556531507,0.020706343751423,-7151.878923999284,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,IND-Go Local,14.054409220518476,2.315365780538101,0.0099346021680687,0.0099614607836145,-3376.2636594504665,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,IND-Go Local,21.95851668864873,3.603406360696956,0.0156631620563462,0.0157679731880442,-5141.298307733341,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,ISR-Go Local,7.497598587033805,3.267628186281148,0.0092611438924508,0.0091753466873562,5.154310044533244,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,ISR-Go Local,6.495419539341911,3.2844678990253326,0.0075918509669071,0.0075474914201904,1.9905994676941967,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,ISR-Go Local,191.6870017400546,63.75500987797062,0.2794105581737683,0.2623965932633982,221.5969369371873,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,ISR-Go Local,32.262806333772275,11.123422493893262,0.0422532608164548,0.0430521304500328,-49.4696718925882,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,ISR-Go Local,12.36529974906836,5.0783829596884384,0.0147792337608149,0.0148018854612912,-19.39124386008111,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,ISR-Go Local,23.544198019451365,8.754887812087194,0.0287230017960376,0.0290291883543641,-34.73634828984375,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,ITA-Go Local,40.11106488524938,10.286391379748364,0.0581376061271585,0.0536475330100193,73.40371412789983,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,ITA-Go Local,35.80625733267558,9.193410780558564,0.0555851832109053,0.0526599480504892,54.33910166438388,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,ITA-Go Local,623.9630480574024,143.34212302777962,0.8511147102195176,1.4720859837814135,-13143.223400878414,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,ITA-Go Local,13.917788538313117,3.173190256990459,0.0214906116734166,0.0217244180630953,-340.4154920588944,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,ITA-Go Local,11.011515524170273,2.819225444576951,0.0155923436091106,0.0154734324296979,-12.788307332189891,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,ITA-Go Local,6.949149165483505,1.6628132550853998,0.0105560235774766,0.0106055685777102,-167.68052918958352,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,JPN-Go Local,9.735688790940085,3.547654971006732,0.0056708519261495,0.0056776013267742,-1022.4890131284978,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,JPN-Go Local,9.757487452287222,3.520166036354299,0.0056825751730675,0.0056887510147554,-1028.5578716390185,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,JPN-Go Local,1733.7927583944124,515.554885436688,0.9999391787521624,1.999756365301117,-293610.60420103325,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,JPN-Go Local,25.904631640776916,8.407055415768644,0.0149639550791964,0.0150614429949926,-4693.949683985884,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,JPN-Go Local,12.400668067201313,4.606551798396644,0.0072133149184799,0.0072224424436261,-1867.709749535384,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,JPN-Go Local,22.400264253145203,7.448488361511543,0.0127309477213834,0.0127982227528581,-3925.146447683329,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,KOR-Go Local,49.30389586131339,15.914524479977969,0.0278669276317507,0.0275765441064338,85.36387017895942,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,KOR-Go Local,13.575532649048949,4.138350942021482,0.0080452526507527,0.0080212551524875,-16.81152770372967,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,KOR-Go Local,1212.841025037996,312.7273423842013,0.7556421829305621,1.2657951259338485,-15770.640144821293,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,KOR-Go Local,34.349933451131506,8.413250904433855,0.0216729782874626,0.0218808382148883,-410.5731339702347,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,KOR-Go Local,13.488148307296823,3.846228291353336,0.0084919750046116,0.0084868030688698,-139.01606661950876,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,KOR-Go Local,27.515241574564367,6.813721144905381,0.0173829217002051,0.0175131965761488,-323.546999216667,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,LAM-Multitenant,7.348542078197626,1.8590126984374988,0.0051154782001328,0.0051180292822714,-728.7442995176083,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,LAM-Multitenant,4.033890641569558,1.2032657219622274,0.0029922320238258,0.002988803892242,-429.0976523334252,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,LAM-Multitenant,1342.1545481778428,284.80052786637225,0.9690804505479982,1.8803362525582503,-173769.45125375327,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,LAM-Multitenant,20.667094260114236,4.677114450040243,0.0149664438427187,0.0150658336876966,-2667.406945750239,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,LAM-Multitenant,7.902496017889402,2.1480875907339847,0.0057190783617476,0.0057239600343524,-946.8919450426274,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,LAM-Multitenant,16.740128407387708,3.894316543015125,0.0118645413180859,0.0119198027428798,-2054.983319449995,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,MEX-Go Local,8.746150229409983,2.4840204735730067,0.0114964366961039,0.0113531284806884,-1.1030464993464495,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,MEX-Go Local,6.901143533373399,2.513058916694697,0.0091005227353712,0.0090603912622069,-0.8827574094751602,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,MEX-Go Local,190.0409531012406,50.49626020148721,0.2765101404919643,0.2373220237638815,273.73510923035496,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,MEX-Go Local,45.39043263626114,13.202877250597442,0.0598895939774237,0.0614215833472203,-68.14708807658842,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,MEX-Go Local,21.78726914257242,7.064815548627793,0.0299174889185803,0.0300662949103451,-35.498355720119214,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,MEX-Go Local,28.351634994114903,9.092936212082911,0.0385057767153536,0.0389411993616768,-43.75337952695312,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-Dedicated,20.40513000177068,5.700659458330248,0.0149446367269303,0.0148555919212321,999.5588279598776,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-Dedicated,25.34439040667432,7.013076412474333,0.0183728391105966,0.018323149725376,1370.819137659175,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-Dedicated,1284.5298327226592,309.56646787704227,0.9306526711710434,1.7478830432492745,-85216.31905901505,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-Dedicated,15.09073824777895,5.854951374922697,0.011085413225519,0.0110239682587453,824.6519870792029,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-Dedicated,23.17978794528684,6.424386993672365,0.0166024026487101,0.0165857550893307,1219.1760116704645,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-Dedicated,19.53805144706884,5.602178306334347,0.0132190676206392,0.013253719124606,843.9594064999951,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-GCC Low,3.630746968056189,1.1374465623345018,0.0020057660799011,0.0020027127791209,-262.72947083119703,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-GCC Low,3.450703758148765,1.1321159587835892,0.0018449386527086,0.0018413725341686,-233.20980555609185,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-GCC Low,1758.51996782915,472.3166429347488,0.97291584859807,1.895100972989387,-192294.2050373251,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-GCC Low,23.023335864520185,6.544000652406286,0.0128545638838278,0.0129298722901325,-2344.3073710537124,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-GCC Low,7.449067685533989,2.3851372903588937,0.0040509948498232,0.0040517352653478,-768.6208788492693,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-GCC Low,17.9578358196594,5.324256191767396,0.009644997565066,0.0096827287185447,-1765.9691891166594,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-ITAR DoD,8.526779274264948,1.0938363203975363,0.026567367690413,0.0268452163113971,-586.5994611638165,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-ITAR DoD,4.139737187768862,0.7455516013470675,0.0102151315070634,0.0102348454273827,-27.080331812902536,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-ITAR DoD,270.4664057940289,30.22582416300488,0.8385836955930662,1.4802977593224993,-30512.39911626067,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-ITAR DoD,9.88464650785964,1.5577570054426797,0.0264358216343375,0.0267379535898408,-799.0685930647522,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-ITAR DoD,5.380407878748814,0.7804331990182019,0.0166440600826947,0.0165905960029383,1.2680067651641878,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-ITAR DoD,7.055424302954044,1.0619438123255025,0.0199092196323169,0.0200395057034621,-363.857667741668,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-ITAR GCCH,7.435621493488037,0.8672755024604983,0.0162228515151015,0.0163713693628326,-302.0888654252679,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-ITAR GCCH,4.172002852057517,0.5384692894393289,0.0082831727715727,0.0083681080896424,-129.75379959904276,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-ITAR GCCH,238.09123309851415,24.480243781591085,0.6559822625910301,1.024372079738151,-15613.495158044429,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-ITAR GCCH,15.065047733724214,1.3842305793585976,0.023587742317529,0.0238178645711854,-519.3042418044175,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-ITAR GCCH,150.40166644485413,12.790622903337653,0.2396664767009793,0.2729661146981624,-3061.8035957450124,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-ITAR GCCH,12.947941788136651,1.2630096110735738,0.0202894351552747,0.0204709873854657,-425.9793710750012,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-MSIT,6.476013421799205,1.8386900826075765,0.0283027675669362,0.0296829822519421,-176.27991479476037,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-MSIT,6.0662579186120364,1.6840249120794673,0.0280586416535728,0.0292898705704535,-124.8969865271593,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-MSIT,147.71782647087846,30.60186456682375,0.6483966097225975,1.0083195009373631,-6492.364371141424,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-MSIT,6.38902775785048,1.687102944937895,0.0278179753223669,0.0292210147946021,-158.3032718369035,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-MSIT,5.933002108678629,1.719518050622014,0.0274439119322002,0.0286962662723195,-144.31018196151777,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-MSIT,7.133641619088875,1.716227828943635,0.030045096241729,0.0302968875237892,-135.17360024687522,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-Multitenant,5.735774404480203,1.408334093975704,0.0087303278359697,0.0087267813903245,-15987.94527071768,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-Multitenant,4.985993477256756,1.2030461911804498,0.0075894144573496,0.0075847798574253,-7595.616053315221,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-Multitenant,682.7501887718361,143.0688309201223,0.9999911670907664,1.9999646894750007,-2528829.5103414226,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-Multitenant,13.80053986677745,3.344473731486687,0.0205606623453786,0.0207589117595503,-42699.34275888764,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-Multitenant,6.755495687782577,1.5711373690272563,0.0103032674405409,0.0103197272597214,-13783.447267640266,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-Multitenant,9.418395891028323,2.439148596739347,0.0143167134150119,0.0143825785119825,-30002.11323070012,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-SDF,4.488020209321531,1.7506923249956228,0.1680851748295592,0.2016819562521978,-157.28585576579513,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-SDF,1.8785457555389449,0.5401308067874682,0.0630206869035604,0.0632598557304392,51.18495661266108,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-SDF,20.430252908433808,6.0474003243590655,0.8311823127257274,0.9475712578441486,293.08907748265045,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-SDF,7.52987458635179,2.472963386273332,0.2787886330248526,0.3418607087137705,-280.29909593791893,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-SDF,2.534919187128281,0.7494373107085821,0.0891847576160607,0.0918433204920895,14.129560393515897,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-SDF,8.844081809707639,3.461622365024334,0.2921942199227823,0.3958758117657466,-430.6342182585776,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NAM-TDF,5.675513804004069,1.2454605164552115,0.126397765665357,0.1349506623976857,0.7979301832448102,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NAM-TDF,1.4720937536805945,0.3623323577210373,0.0337454345886348,0.0337592424805283,0.231547840279771,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NAM-TDF,13.509818274675371,2.691132906293255,0.3276180676547753,0.4280449536878493,-8.692270218659754,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NAM-TDF,11.693492938405418,3.195851403244504,0.2715237840697599,0.3275248212179609,-6.869679217071819,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NAM-TDF,2.1492266299502267,0.5277801558626118,0.0428065700085623,0.0428663914089309,-0.4343170783370226,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NAM-TDF,14.364006939184094,3.880790199165525,0.3251079106788933,0.4432064906808862,-13.929483166334029,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NOR-Go Local,6.702477149773047,1.594878299855962,0.0052133718635582,0.0052089831499825,-6.944225120124614,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NOR-Go Local,7.438097937683566,1.7493489542589882,0.0057055934071929,0.0057040864240938,-10.802205663621589,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NOR-Go Local,941.0655535324876,178.91845320553273,0.6596122753272433,1.028782720717926,-12956.459980665935,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NOR-Go Local,13.03328812645917,2.6348403815579884,0.009960158396662,0.0100072937465754,-141.43187050984653,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NOR-Go Local,4.194328895149962,1.0654172211232376,0.0028582414628407,0.0028551185799386,-13.936595083445688,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NOR-Go Local,8.434089734740018,2.085119252204014,0.0064584078991991,0.0064751341805192,-69.69354105208362,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,NZL-Go Local,6.385915267590069,1.8716520230649945,0.0155499488665954,0.0153659164722616,-2.611313753060841,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,NZL-Go Local,5.4255059083598765,1.856193218184295,0.0112771690556881,0.0110760858368336,-0.3554114690004951,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,NZL-Go Local,148.85186790949126,53.597172441924045,0.3121643701588887,0.2535139966010927,86.68182780954926,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,NZL-Go Local,40.15916444982968,13.555364829128797,0.0779881297569061,0.0806886812050763,-23.060392868069176,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,NZL-Go Local,12.12452527806681,4.215557328867291,0.0252013957021119,0.0252801448537361,-6.997925617516487,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,NZL-Go Local,20.20193071522949,6.977311028784513,0.0461081169189283,0.046733809821317,-11.659970616015622,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,POL-Go Local,56.42412141571717,17.172965528979958,0.0601881361670102,0.0569708358990968,-8.624581268780153,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,POL-Go Local,48.0111385442155,14.57114793486996,0.0511808373198334,0.049030900460825,-18.278884922838373,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,POL-Go Local,570.1741601124011,158.3471803039992,0.6063598352497713,0.8923060433677066,-8416.157029867067,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,POL-Go Local,18.518687847002248,5.377517414590254,0.019601040080904,0.0197153651223352,-254.28026192896323,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,POL-Go Local,17.931597993162384,5.629867036144919,0.0186315980633091,0.0184922829057586,-42.3664983756153,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,POL-Go Local,23.10504360385334,6.723749491406426,0.0244673337956265,0.0246566291207322,-204.55704539244772,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,QAT-Go Local,5.678361357963091,1.6564286691990526,0.0064128495512122,0.0063908079775544,-22.5651235281317,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,QAT-Go Local,6.8748696213868365,2.487951864193528,0.007483854967854,0.0075122536937421,-0.0389381309365035,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,QAT-Go Local,799.9548610013171,194.37341165616607,0.833171168642258,1.480670366533463,-5739.284053778323,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,QAT-Go Local,26.17152263078432,6.549228440703045,0.0274994183565072,0.0278364154308234,-177.96772540712217,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,QAT-Go Local,11.068528393527874,3.1074180489679213,0.012434027076778,0.0124487889622135,-65.67108110529851,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,QAT-Go Local,19.238061844934503,5.021432406064642,0.0206406911610299,0.0208097878201856,-127.5727769520832,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,SGP-Go Local,9.437027085027829,0.8550337751142087,0.0075295604889748,0.0074506803922682,0.0,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,SGP-Go Local,25.99800260535292,3.4434154195904414,0.0190748220802658,0.0189058201054654,-5.743798621952384,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,SGP-Go Local,337.7159456791867,33.52985596934279,0.2288437329715565,0.2012641285701381,811.5217166578504,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,SGP-Go Local,99.01343028626832,8.605852397499898,0.0628850494787848,0.0644534448474981,-120.2404519459323,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,SGP-Go Local,53.9390842315932,5.228836773755432,0.0354627611971241,0.0359662922397643,-65.5621441913623,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,SGP-Go Local,70.70140895644842,6.813706270367504,0.0419210115325792,0.0423564493258116,-78.67286674453129,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,SWE-Go Local,42.55529088728521,12.79910420143228,0.0447463811439638,0.0447595044547933,54.234818161397925,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,SWE-Go Local,27.56754227308041,8.7328453079102,0.0262044709447995,0.0267569495090082,-126.22557836623837,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,SWE-Go Local,930.5888941478258,261.7958265423075,0.9192053357394718,1.7099017415179636,-33213.27594966546,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,SWE-Go Local,21.03922631260957,5.920418922768894,0.0248691504006826,0.0248013309997396,-378.4171565921122,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,SWE-Go Local,11.427546777428294,3.3296336624752243,0.0135618260627081,0.0135370396222763,-39.7934686095677,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,SWE-Go Local,17.069016866048777,4.853208049675461,0.0187531937149632,0.0188859783915896,-278.4691703541668,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,TWN-Go Local,32.41545536788879,10.558021723643014,0.0753457790512258,0.0719509973770833,-7.430674175993388,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,TWN-Go Local,30.941041638678684,10.49211657430145,0.071918683864366,0.0686088561005553,-6.853378937165791,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,TWN-Go Local,262.606292907893,80.95912413281413,0.5525931536647627,0.7339466175629318,-739.6561113031961,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,TWN-Go Local,96.22822828385418,20.31669354529648,0.18078825387314,0.1840157215647476,-274.4398381830273,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,TWN-Go Local,16.37176670368047,8.312981935657998,0.0380541782533676,0.0344135983746666,-64.44082309649954,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,TWN-Go Local,20.7874704646382,9.173321232036258,0.0483179439834141,0.0450005414395598,-82.09308661302093,1,False,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,ZAF-Go Local,6.520788952508621,0.9699038165533728,0.0070918070902624,0.0070673809926673,-29.49112701470137,1,False,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,ZAF-Go Local,5.461380118516016,0.7425498860981252,0.0059431037181323,0.0059235422847249,41.393927563407246,1,False,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,ZAF-Go Local,882.6820614639489,62.427414852113664,0.9171486349807142,1.7022393859181086,-50596.25659038729,1,True,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,ZAF-Go Local,16.919776554160237,1.5279963675938613,0.013536855230367,0.0136157970423512,-731.2594356468775,1,False,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,ZAF-Go Local,14.26741259668864,1.971933738052346,0.015612915742538,0.0157322136097123,-210.06896789887253,1,False,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,ZAF-Go Local,14.748667397122976,1.353299254815589,0.0096202968334872,0.0096545618275966,-523.383935750001,1,False,2026-06-13T18:07:40

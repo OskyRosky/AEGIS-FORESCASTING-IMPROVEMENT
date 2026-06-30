@@ -1,0 +1,11 @@
+check,question,result,evidence
+1,backtest_evidence_31_60,ABSENT,forecast_viewer_model_outputs.csv horizon_days range 1-30 only (177060 rows; 5902 per horizon)
+2,process_can_generate_60,CAPPED_AT_30,backtesting.yaml forecast_horizon_days=30; full_baseline_forecasts.csv & challenger_actual_forecast_join.csv both horizon_day 1-30 12 windows; requires re-running models
+3,method_recalibrate_1_60,METHOD_OK_DATA_MISSING,bucket_of() supports adding 31_45/46_60 buckets but no residuals exist at 31-60 to quantile
+4,coverage_validatable_60,NOT_NOW_DATA_SUPPORTS,no holdout residuals at 31-60; 10/12 cutoffs have actuals for 60d eval; 2026-02-27 and 2026-03-29 truncated
+final_status,overall,REQUIRES_MODEL_LAB_BACKTEST_EXTENSION,re-run walk-forward backtest at forecast_horizon_days=60 then recalibrate
+governance,shiny_modified,NO,no shiny files touched
+governance,original_artifacts_modified,NO,forecasts.csv and forecasts_with_intervals_relative.csv untouched
+governance,models_run,NO,diagnosis only
+governance,fabricated_bands,NO,no intervals created for 31-60
+governance,champion_changed,NO,ETS Explicit unchanged

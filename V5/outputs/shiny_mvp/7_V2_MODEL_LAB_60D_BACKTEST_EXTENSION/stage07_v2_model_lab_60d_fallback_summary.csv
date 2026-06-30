@@ -1,0 +1,46 @@
+entity_key,has_own_key_calibration,used_resource_or_global_fallback,rows,rows_key_grain,rows_fallback
+APC-Dedicated,True,False,60,60,0
+APC-MSIT,True,False,60,60,0
+APC-Multitenant,True,False,60,60,0
+ARE-Go Local,True,False,60,60,0
+AUS-Go Local,True,False,60,60,0
+AUT-Go Local,False,True,60,0,60
+BRA-Go Local,True,False,60,60,0
+CAN-Go Local,True,False,60,60,0
+CHE-Go Local,True,False,60,60,0
+CHL-Go Local,False,True,60,0,60
+DEU-Go Local,True,False,60,60,0
+DNK-Go Local,False,True,60,0,60
+ESP-Go Local,True,False,60,60,0
+EUR-Dedicated,True,False,60,60,0
+EUR-Go Local,False,True,60,0,60
+EUR-MSIT,True,False,60,60,0
+EUR-Multitenant,True,False,60,60,0
+FRA-Go Local,True,False,60,60,0
+GBR-Dedicated,True,False,60,60,0
+GBR-Go Local,True,False,60,60,0
+IDN-Go Local,False,True,60,0,60
+IND-Go Local,True,False,60,60,0
+ISR-Go Local,True,False,60,60,0
+ITA-Go Local,True,False,60,60,0
+JPN-Go Local,True,False,60,60,0
+KOR-Go Local,True,False,60,60,0
+LAM-Multitenant,True,False,60,60,0
+MEX-Go Local,True,False,60,60,0
+MYS-Go Local,False,True,60,0,60
+NAM-Dedicated,True,False,60,60,0
+NAM-GCC Low,True,False,60,60,0
+NAM-ITAR DoD,True,False,60,60,0
+NAM-ITAR GCCH,True,False,60,60,0
+NAM-MSIT,True,False,60,60,0
+NAM-Multitenant,True,False,60,60,0
+NAM-SDF,True,False,60,60,0
+NAM-TDF,True,False,60,60,0
+NOR-Go Local,True,False,60,60,0
+NZL-Go Local,True,False,60,60,0
+POL-Go Local,True,False,60,60,0
+QAT-Go Local,True,False,60,60,0
+SGP-Go Local,True,False,60,60,0
+SWE-Go Local,True,False,60,60,0
+TWN-Go Local,True,False,60,60,0
+ZAF-Go Local,True,False,60,60,0

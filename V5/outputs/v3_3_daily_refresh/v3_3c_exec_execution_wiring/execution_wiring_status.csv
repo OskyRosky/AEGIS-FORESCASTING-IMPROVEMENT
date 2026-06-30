@@ -1,0 +1,9 @@
+component,wired,executed_this_stage,result,notes
+master_runner_execute,YES,YES,OK,run_daily_15_model_refresh.py --execute --allow-execute (staging only).
+prohibited_model_guard,YES,YES,PASS,prohibited_model_guard() run before any staging work.
+staging_dir,YES,YES,OK,outputs/v3_3_daily_refresh/v3_3c_exec_execution_wiring/staging
+dl_reuse_frozen,YES,YES,EXECUTED_REUSE_FROZEN,40860 frozen DL rows re-staged (no training).
+clean_challenger_entrypoint,YES,YES,EXECUTION_PATH_NOT_READY,run_daily_clean_challengers.execute_clean_challengers() invoked; 5 challengers reported (live-fit path not ready).
+legacy_challenger_runner,NO,NO,EXCLUDED,run_challenger_official_execution.py (NBEATS) NOT used as daily runner.
+baseline_generation,YES,NO,READY_FOR_BENCHMARK_AUTHORIZATION,Heavy full run gated behind benchmark authorization (documented only).
+merge_manifest,YES,YES,OK,staging/daily_15_model_outputs.csv (15 rows).

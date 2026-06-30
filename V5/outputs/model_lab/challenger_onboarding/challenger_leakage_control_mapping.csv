@@ -1,0 +1,85 @@
+model_name,control_id,control_area,control_required,control_status,blocking_if_failed,created_timestamp
+AutoARIMA,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+AutoARIMA,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+Theta,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+ETS Explicit,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+LightGBM,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+XGBoost,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NBEATS,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-001,temporal cutoff,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-002,feature lag safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-003,rolling window safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-004,normalization safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-005,imputation safety,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-006,hyperparameter tuning isolation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-007,sandbox/official separation,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-008,random seed reproducibility,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-009,dependency recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-010,metadata recording,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-011,no post-hoc tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26
+NHITS,LC-012,no tournament-feedback tuning,True,mapped_pending_official_verification,True,2026-06-12T15:07:26

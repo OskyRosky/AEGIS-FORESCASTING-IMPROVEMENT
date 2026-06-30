@@ -1,0 +1,2 @@
+candidate_id,stop_status,n_windows,median_mase,median_rmsse,raw_neg,runtime_seconds,wall_minutes,budget_minutes,windows_before_partial
+XGB-IMP-v2,ok,454,27.950413,6.426824,0,1339.3481,22.354,60.0,417

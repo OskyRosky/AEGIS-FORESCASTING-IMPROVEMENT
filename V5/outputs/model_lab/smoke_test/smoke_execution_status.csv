@@ -1,0 +1,8 @@
+run_id,job_id,entity_key,window_id,model_name,status,message,created_timestamp
+smoke_20260611_101052,job_000001,APC-Dedicated,1,ARIMA_Fixed,completed,Smoke test job completed.,2026-06-11T10:10:52
+smoke_20260611_101052,job_000004,APC-Dedicated,1,ETS_Current,completed,Smoke test job completed.,2026-06-11T10:10:52
+smoke_20260611_101052,job_000010,APC-Dedicated,1,LinearRegression,completed,Smoke test job completed.,2026-06-11T10:10:52
+smoke_20260611_101052,job_000005,APC-Dedicated,1,FixedGrowth_1_5,completed,Smoke test job completed.,2026-06-11T10:10:52
+smoke_20260611_101052,job_000006,APC-Dedicated,1,FixedGrowth_3,completed,Smoke test job completed.,2026-06-11T10:10:52
+smoke_20260611_101052,job_000007,APC-Dedicated,1,FixedGrowth_4,completed,Smoke test job completed.,2026-06-11T10:10:52
+smoke_20260611_101052,job_000008,APC-Dedicated,1,FixedGrowth_6,completed,Smoke test job completed.,2026-06-11T10:10:52

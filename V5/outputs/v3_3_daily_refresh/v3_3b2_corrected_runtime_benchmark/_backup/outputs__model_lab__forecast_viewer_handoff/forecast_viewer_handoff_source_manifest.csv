@@ -1,0 +1,9 @@
+source_key,path,exists,rows,sha256_16
+baseline,outputs\model_lab\full_baseline\full_baseline_forecasts.csv,True,95340,b3d567ad83025897
+challenger,outputs\model_lab\challenger_metrics\challenger_actual_forecast_join.csv,True,81720,a83888ecc204cd03
+actuals,data\processed\actuals.csv,True,84537,427a153bffdad54b
+entities,data\processed\entities.csv,True,45,9b36102b3616c556
+universe,outputs\model_lab\model_lab_closure_pack\model_lab_final_model_universe.csv,True,15,5c63ecd981253ce3
+deferred,outputs\model_lab\model_lab_closure_pack\model_lab_deferred_models.csv,True,2,a18e926f2bde4ad9
+risk,outputs\model_lab\model_lab_closure_pack\model_lab_risk_register_final.csv,True,7,d6d562c3e1fa1e9a
+champion,outputs\model_lab\model_lab_closure_pack\model_lab_champion_summary.csv,True,1,fc457cb28db45798

@@ -1,0 +1,6 @@
+artifact_key,registry_status,available,future_work_marker,details
+ttl_capacity,roadmap,FALSE,**,"Governed TTL artifact (outputs/model_lab/ttl/ttl_capacity_view.csv) does not exist; page stays in planned/preview state"
+entity_mapping,not_defined,FALSE,**,"Entity -> capacity mapping not defined yet; required before TTL can render"
+capacity_threshold,not_defined,FALSE,**,"Capacity threshold definition not provided; required to compute time-to-impact"
+forecast_linkage,not_defined,FALSE,**,"Link between forecast outputs and capacity not established yet"
+visualization_readiness,shell_ready,TRUE,,"Dashboard shell is ready to host TTL once a governed source artifact is provided"

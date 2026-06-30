@@ -1,0 +1,6 @@
+artifact,dest,result
+actuals.csv,data/processed,OK
+entities.csv,data/processed,OK
+forecast_comparison.csv,data/processed,OK
+forecasts.csv,data/processed,OK
+run_metadata.csv,data/processed (LAST),OK

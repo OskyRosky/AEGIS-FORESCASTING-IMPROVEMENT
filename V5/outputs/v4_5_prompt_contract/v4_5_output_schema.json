@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AEGIS V4 Explanation Response Contract (V4.5, stable)",
+  "description": "Final stable contract for every explanation response in AEGIS V4 (local-first). This schema governs what V4.6 will render in Shiny and what any provider (mock now, Azure later) must return. The provider EXPLAINS, it never decides. Designed in V4.1, formalized here in V4.5; no real LLM and no Azure are activated by this contract.",
+  "type": "object",
+  "required": [
+    "response_metadata",
+    "display",
+    "traceability",
+    "governance",
+    "download_payload",
+    "validation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "response_metadata": {
+      "type": "object",
+      "required": ["page_id", "provider", "provider_stage", "generated_at", "project_version", "local_first"],
+      "additionalProperties": false,
+      "properties": {
+        "page_id": {
+          "type": "string",
+          "enum": ["champion_overview", "tournament", "forecast_viewer", "governance_risks"],
+          "description": "MVP scope is fixed to these 4 pages. Expansion to 8 modules is backlog, not part of this contract."
+        },
+        "provider": {
+          "type": "string",
+          "enum": ["mock", "azure_openai", "local"],
+          "description": "Active provider. In MVP only 'mock' is used; 'azure_openai' is reserved for the gated V4.9."
+        },
+        "provider_stage": {
+          "type": "string",
+          "enum": ["mock_no_llm", "local_live", "azure_live"],
+          "description": "MVP uses 'mock_no_llm' only. The other stages are reserved and MUST NOT be emitted while no real provider is connected."
+        },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "project_version": { "type": "string", "enum": ["V4"] },
+        "local_first": { "type": "boolean", "enum": [true], "description": "MVP is local-first; must be true." }
+      }
+    },
+    "display": {
+      "type": "object",
+      "required": [
+        "title",
+        "executive_summary",
+        "what_the_evidence_says",
+        "why_it_matters",
+        "sources_used",
+        "limitations",
+        "confidence"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "executive_summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "2-4 sentences. May equal a clear 'Insufficient evidence.' statement."
+        },
+        "what_the_evidence_says": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Bullet facts, each traceable to an evidence field, source artifact, or V4.3 card."
+        },
+        "why_it_matters": { "type": "string", "minLength": 1 },
+        "sources_used": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Governed artifact filenames actually read. Always present."
+        },
+        "limitations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Always present. Must include the explain-not-decide caveat and the 2026-06-28 snapshot caveat."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "insufficient_evidence"]
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "required": ["claims", "source_artifacts", "evidence_pack_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["claim", "maps_to"],
+            "additionalProperties": false,
+            "properties": {
+              "claim": { "type": "string" },
+              "maps_to": {
+                "type": "string",
+                "description": "Evidence pack ref, source artifact filename, evidence field path, or V4.3 card_id."
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "source_artifacts": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "evidence_pack_refs": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["champion_policy", "llm_policy", "data_policy"],
+      "additionalProperties": false,
+      "properties": {
+        "champion_policy": {
+          "type": "string",
+          "enum": ["frozen / governed / no auto-change"],
+          "description": "Champion ETS Explicit is frozen and governed; the explanation never changes it."
+        },
+        "llm_policy": {
+          "type": "string",
+          "enum": ["explain_only"],
+          "description": "The provider explains; it never decides, advances, or changes anything."
+        },
+        "data_policy": {
+          "type": "string",
+          "enum": ["read_only_evidence_pack"],
+          "description": "Only temporary read-only evidence packs are consumed; no productive artifact is mutated."
+        }
+      }
+    },
+    "download_payload": {
+      "type": "object",
+      "required": ["markdown", "json", "csv_rows"],
+      "additionalProperties": false,
+      "description": "Populated for export in V4.7. In MVP the fields may be placeholders but the keys must exist.",
+      "properties": {
+        "markdown": { "type": ["string", "null"] },
+        "json": { "type": ["object", "null"] },
+        "csv_rows": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["is_valid", "checks_passed", "checks_failed"],
+      "additionalProperties": false,
+      "properties": {
+        "is_valid": { "type": "boolean" },
+        "checks_passed": { "type": "array", "items": { "type": "string" } },
+        "checks_failed": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

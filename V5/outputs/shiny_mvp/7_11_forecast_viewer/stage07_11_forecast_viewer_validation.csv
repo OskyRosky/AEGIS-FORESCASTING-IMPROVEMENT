@@ -1,0 +1,25 @@
+check_name,status,details
+page_populated,PASS,Forecast Viewer section renders controls + summary cards + chart (HTTP 200 LEN 77696)
+title_says_forecast_viewer,PASS,Section head reads "Forecast Viewer"
+subtitle_present,PASS,"Visual comparison of actual values and model forecasts..."
+entity_selector_populated,PASS,fv_entity built from forecasts.entity_key (45 entities; first APC-Dedicated)
+model_selector_populated,PASS,fv_model reactive to entity (each entity has exactly 1 model_version; e.g. APC-Dedicated -> FixedGrowth1%)
+horizon_selector_populated,PASS,fv_horizon choices 5/10/15/20/25/30/45/60 days (default 30)
+history_selector_populated,PASS,fv_history choices Last 30/60/90/180 days + All history (default 90)
+controls_affect_chart,PASS,fv_chart/fv_summary recompute on entity/model/horizon/history inputs
+highcharter_installed,PASS,highcharter 0.9.5 installed and loaded clean
+highcharter_used,PASS,highchartOutput/renderHighchart; fv_chart returns class highchart,htmlwidget
+actuals_from_governed_artifact,PASS,Actual line from actuals.actual_value (84537 rows) filtered by entity/date
+forecasts_from_governed_artifact,PASS,Forecast line from forecasts.forecast_value (65095 rows) filtered by entity+model_version
+no_synthetic_data,PASS,No forecasts/metrics/models generated; read-only governed artifacts only
+no_recompute,PASS,No model runs/metric recompute/champion change
+empty_state_handled,PASS,fv_empty_chart returns calm no-series highchart for missing entity/model (verified class highchart)
+forecast_start_marker,PASS,Dashed plotLine at min(forecast date) per entity+model (e.g. 2026-04-28)
+summary_cards,PASS,5 cards Series/Model/Horizon/Actual observations/Forecast points (nA=90 nF=30 sample)
+home_unchanged,PASS,"Why this dashboard exists" still present
+overview_unchanged,PASS,Executive Overview / ETS Explicit still present
+universe_unchanged,PASS,Governed model universe still present
+ttl_unchanged,PASS,TTL preview placeholder untouched
+sidebar_functional,PASS,Forecasting first item now labeled "Viewer" (value=explorer preserved)
+http_200,PASS,GET http://127.0.0.1:3838 returns 200
+no_forbidden_language,PASS,No winner/absolute best/unconditional champion/the best model in rendered HTML

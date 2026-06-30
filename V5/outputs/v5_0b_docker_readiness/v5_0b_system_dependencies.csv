@@ -1,0 +1,13 @@
+component,os_package_debian,needed_in_dashboard_image,needed_in_refresh_image,purpose
+R runtime 4.6.0,(base image rocker/r-ver),yes,no,run Shiny app
+libcurl,libcurl4-openssl-dev,yes,no,httr/httr2 transport + downloads
+openssl,libssl-dev,yes,no,TLS for httr
+xml2/zlib,libxml2-dev zlib1g-dev,yes,no,common R pkg build deps
+pandoc,pandoc,yes,no,rmarkdown HTML/DOCX export
+TeX,TinyTeX (R-installed),yes,no,PDF artifact export
+fonts,fonts-dejavu-core fonts-liberation,yes,no,PDF/DOCX rendering glyphs
+fontconfig,fontconfig,yes,no,font resolution
+locales,locales (locale-gen C.UTF-8),yes,no,UTF-8 LANG/LC_ALL
+curl (cli),curl,yes,no,HEALTHCHECK probe
+ODBC driver,msodbcsql18 + unixodbc,no,yes,pyodbc SQL connection (refresh only)
+Python 3,python3 (slim base),no,yes,refresh-core runtime

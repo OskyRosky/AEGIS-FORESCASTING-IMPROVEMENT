@@ -1,0 +1,5 @@
+check,result,seconds,detail
+working_directory_is_V3,PASS,0,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3
+no_orphan_python_processes,PASS,0,verified pre-run = 0
+sleep_disabled_on_AC,PASS,0,powercfg STANDBYIDLE AC index 0x0
+vpn_sql_connectivity,PASS,113.0,ingestion.test_connection SELECT 1 -> 1 (Entra interactive)

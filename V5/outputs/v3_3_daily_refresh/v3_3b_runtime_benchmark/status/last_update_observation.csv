@@ -1,0 +1,4 @@
+observation,value,recommended_change_for_v3_3E,notes
+current_last_update_source,run_metadata.csv (written by S02 Transform),seal at end of pipeline (S11),"Today the dashboard Last Update reflects only the Transform stage timestamp, not full-pipeline success."
+last_update_reflects_transform_only,YES,build S11 Last Update seal,"Last Update advances even if downstream model/governance stages fail - misleading for daily refresh."
+recommended_seal_point,after S08 governance + S14 final validation pass,write last_update_seal.csv only on full success,"S11 should stamp Last Update only when all in-scope stages succeed."

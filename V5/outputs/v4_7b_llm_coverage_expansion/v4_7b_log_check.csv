@@ -1,0 +1,8 @@
+log_signal,classification,detail
+pandoc_3.10_activated,benign,Version '3.10' is now the active one
+listening_3839,info,Listening on http://127.0.0.1:3839
+readr_parsing_issue,benign_preexisting,One or more parsing issues (vroom) - same as prior phases
+plotly_trace_type_info,benign,No trace type specified - default scatter (cosmetic)
+package_masking_notices,benign,bslib/DT/plotly/dplyr standard attach masks
+errors,none,No R errors or stack traces present
+warnings_critical,none,No critical warnings affecting LLM modules

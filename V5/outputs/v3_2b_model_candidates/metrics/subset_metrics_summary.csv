@@ -1,0 +1,7 @@
+candidate_id,model_name,model_family,subset_entity_windows,median_mase,median_rmsse,mean_smape,mean_bias,negative_forecast_count,subset_runtime_seconds,projected_full_runtime_minutes,gate_decision,guardrail_pass,status,failure_reason
+FNAR-V2,FastNeuralAR_MLP_v2_direct,lightweight_neural,15,49.863598,17.557991,0.420631,384099.28428,0,6.7471,3.404,VIABLE,True,ok,
+NLIN-DLIN,NLinear_or_DLinear_lightweight,linear_dl,15,1.37639,0.561863,0.190016,-9711.776584,27,0.0507,0.026,VIABLE,False,ok,
+SMLP-TCN,SmallTCN_or_SmallMLPGlobal,lightweight_neural,15,3.283971,1.095051,0.198086,13768.423596,0,1.2365,0.624,VIABLE,True,ok,
+LGBM-IMP,LightGBM_candidate_improved,gradient_boosting,15,5.186288,1.457332,0.266036,-22105.062051,0,64.9532,32.765,NOT_VIABLE_FOR_V3_DAILY_REFRESH,True,ok,
+XGB-IMP,XGBoost_candidate_improved,gradient_boosting,15,4.144539,1.189961,0.264079,-20853.270418,0,153.581,77.473,NOT_VIABLE_FOR_V3_DAILY_REFRESH,True,ok,
+ENET-RIDGE,ElasticNet_or_Ridge_direct_multi_horizon,linear_ml,15,1.330116,0.558383,0.109144,-3771.596406,0,0.0639,0.032,VIABLE,True,ok,

@@ -1,0 +1,32 @@
+V3.3B RUNTIME BENCHMARK - MASTER LOG
+run_id=v3_3b_runtime_benchmark
+date=2026-06-26
+=====================================================
+18:1x  S00 auth/vpn/sql precheck   PASS  30.8s  exit 0  (unattended, no prompt)
+18:20  S01 ingestion               PASS  85.2s  exit 0  (fresh pull; forecasts 65095 / actuals 84537)
+18:21  S02 transform               PASS   1.6s  exit 0  (forecast_comparison=0 rows -> expected drift)
+18:22  S03 orchestrator+baseline   PASS  12.0s  exit 0  (plan 6356; baseline 3178 assert held; 95340 rows)
+18:23  S04 forecast viewer handoff PASS   5.0s  exit 0  (177060 rows)
+18:23  S05 tournament+champion     PASS   2.9s  exit 0  (champion ETS Explicit unchanged)
+18:23  S06 canonical universe (R)  PASS   1.3s  exit 0  (15 models; 12/12 checks)
+18:23  S07 evaluation              PASS   1.0s  exit 0
+18:24  S08 governance              PASS   5.8s  exit 0  (5/5 validation_failures=0)
+-----------------------------------------------------
+DAILY-SCOPE TOTAL (S00-S08) = 145.6s = 2.43 min
+-----------------------------------------------------
+18:25  S03b LEGACY challenger heavy probe START
+       APPROVED_MODELS include NBEATS (out of daily scope)
+18:42  S03b STOPPED by user direction at checkpoint
+       elapsed = 17.0 min  status = STOPPED_NOT_IN_SCOPE (DID NOT COMPLETE)
+       classification = LEGACY_HEAVY_CHALLENGER_PROBE / NOT_IN_DAILY_SCOPE
+-----------------------------------------------------
+S09 reference          = ENTRYPOINT_NOT_CONFIRMED
+S10 dashboard consol.  = COVERED_BY_S04_S07_S08
+S11 last update seal   = NOT_IMPLEMENTED (V3.3E)
+S12 pipeline status    = NOT_IMPLEMENTED (V3.3E)
+S13 champion audit     = NOT_IMPLEMENTED (V3.3F)
+S14 final validation   = NOT_IMPLEMENTED (V3.3H)
+-----------------------------------------------------
+STATE: backup created (95 files / 169.2 MB + challenger dirs) -> restored OK -> python.exe count 0
+FINAL STATUS: V3_3B_RUNTIME_BENCHMARK_PARTIAL  (within 150-min budget)
+=====================================================

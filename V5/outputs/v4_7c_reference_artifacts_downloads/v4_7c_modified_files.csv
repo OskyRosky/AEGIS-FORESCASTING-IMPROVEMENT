@@ -1,0 +1,9 @@
+artifact,path,change_type,summary
+mock_responses_json,outputs/v4_4_mock_provider/v4_4_mock_responses.json,modified,Added reference_artifacts response object (grounded in 43 artifacts / 9 categories / 42 available / 1 roadmap / 8 downloads / 14 mappings); 11 responses total.
+llm_explain_R,shiny_app/R/llm_explain.R,modified,Parametrized llm_explain_ui (panel_title/panel_sub/quick_prompts) and llm_explain_server (quick_prompts) preserving the 9 existing modules; added .LLM_DEFAULT_QUICK_PROMPTS + .LLM_REFERENCE_ARTIFACTS_PROMPTS; added reference_artifacts to .llm_doc_basename.
+artifact_export_R,shiny_app/R/artifact_export.R,created,Governed multi-format artifact downloads: CSV verbatim + rendered MD/TXT/HTML/PDF/DOCX with metadata header + table + preview-cap note; per-artifact modal; register_artifact_downloads().
+global_R,shiny_app/global.R,modified,Source R/artifact_export.R after llm_compose.R.
+tabs_R,shiny_app/ui/tabs.R,modified,download_card now uses an actionButton (dl_<key>_open) opening the multi-format modal; the Reference/Artifacts AEGIS Explanation Assistant closes section_artifacts. Placement correction: the assistant block was initially inserted inside section_methodology and was moved to the end of section_artifacts during closure review.
+server_R,shiny_app/server/server.R,modified,Replaced CSV-only download loop with register_artifact_downloads(); added llm_explain_server for llm_reference_artifacts with the 5 custom prompts.
+body_R,shiny_app/ui/body.R,modified,Bumped custom.css cache-buster v=20260629g -> v=20260629h.
+custom_css,shiny_app/www/custom.css,modified,Appended V4.7C block (.artifact-dl-modal-desc styling).

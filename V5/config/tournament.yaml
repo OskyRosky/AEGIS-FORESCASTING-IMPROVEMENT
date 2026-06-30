@@ -1,0 +1,9 @@
+ranking_metric: composite_score
+top_n_models: 10
+save_all_models: true
+generate_forecasts: true
+future_horizons:
+  - 5
+  - 10
+  - 30
+  - 90

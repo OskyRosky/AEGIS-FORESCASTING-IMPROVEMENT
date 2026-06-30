@@ -1,0 +1,16 @@
+metric,value
+source,V2
+destination,V3
+tool,robocopy /E
+exclusions,".venv; __pycache__; *.pyc"
+dirs_total,306
+dirs_copied,301
+dirs_skipped,5
+files_total,1158
+files_copied,1158
+files_failed,0
+files_mismatched,0
+bytes_mb,319.0
+robocopy_exit_code,1
+v1_modified,no
+v2_modified,no

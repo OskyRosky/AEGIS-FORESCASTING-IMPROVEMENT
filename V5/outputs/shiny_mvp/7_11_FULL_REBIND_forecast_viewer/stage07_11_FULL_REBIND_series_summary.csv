@@ -1,0 +1,46 @@
+series_key,in_backtest,backtest_models,in_forward,forward_forecast_points,actual_points
+APC-Dedicated,yes,13,yes,1447,2491
+APC-MSIT,yes,13,yes,1447,2493
+APC-Multitenant,yes,13,yes,1447,2493
+ARE-Go Local,yes,13,yes,1447,2493
+AUS-Go Local,yes,13,yes,1447,2493
+AUT-Go Local,no,0,yes,1455,391
+BRA-Go Local,yes,13,yes,1447,2044
+CAN-Go Local,yes,13,yes,1447,2493
+CHE-Go Local,yes,13,yes,1447,2404
+CHL-Go Local,no,0,yes,1454,375
+DEU-Go Local,yes,13,yes,1447,2371
+DNK-Go Local,no,0,yes,1451,216
+ESP-Go Local,yes,13,yes,1459,893
+EUR-Dedicated,yes,13,yes,1447,2493
+EUR-Go Local,no,0,yes,1447,139
+EUR-MSIT,yes,13,yes,1447,2493
+EUR-Multitenant,yes,13,yes,1447,2493
+FRA-Go Local,yes,13,yes,1447,2493
+GBR-Dedicated,yes,13,yes,1447,2493
+GBR-Go Local,yes,13,yes,1447,2493
+IDN-Go Local,no,0,yes,1438,376
+IND-Go Local,yes,13,yes,1447,2493
+ISR-Go Local,yes,13,yes,1443,1007
+ITA-Go Local,yes,13,yes,1443,1007
+JPN-Go Local,yes,13,yes,1447,2493
+KOR-Go Local,yes,13,yes,1447,2493
+LAM-Multitenant,yes,13,yes,1447,2493
+MEX-Go Local,yes,13,yes,1443,1007
+MYS-Go Local,no,0,yes,1430,375
+NAM-Dedicated,yes,13,yes,1447,2493
+NAM-GCC Low,yes,13,yes,1447,2493
+NAM-ITAR DoD,yes,13,yes,1447,2493
+NAM-ITAR GCCH,yes,13,yes,1447,2493
+NAM-MSIT,yes,13,yes,1447,2493
+NAM-Multitenant,yes,13,yes,1447,2493
+NAM-SDF,yes,13,yes,1447,2477
+NAM-TDF,yes,13,yes,1447,1909
+NOR-Go Local,yes,13,yes,1447,2242
+NZL-Go Local,yes,13,yes,1433,591
+POL-Go Local,yes,13,yes,1447,1232
+QAT-Go Local,yes,13,yes,1447,1419
+SGP-Go Local,yes,13,yes,1447,2489
+SWE-Go Local,yes,13,yes,1447,1648
+TWN-Go Local,yes,13,yes,1448,592
+ZAF-Go Local,yes,13,yes,1447,2489

@@ -1,0 +1,4 @@
+BLOCKED_PACKAGE_MISSING_SHINYDASHBOARD
+R package probe:
+requireNamespace('shinydashboard', quietly=TRUE) = FALSE
+requireNamespace('shinyWidgets', quietly=TRUE) = FALSE

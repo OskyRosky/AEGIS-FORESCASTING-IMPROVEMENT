@@ -1,0 +1,7 @@
+run_id,model_name,model_origin,model_family,metrics_available,aggregation_available,significance_available,eligible_for_tournament_consideration,exclusion_reason,created_timestamp
+challenger_aggregation_significance,AutoARIMA,challenger,statistical,True,True,True,True,,2026-06-13T17:27:28
+challenger_aggregation_significance,Theta,challenger,statistical,True,True,True,True,,2026-06-13T17:27:28
+challenger_aggregation_significance,ETS Explicit,challenger,statistical,True,True,True,True,,2026-06-13T17:27:28
+challenger_aggregation_significance,LightGBM,challenger,machine_learning,True,True,True,True,,2026-06-13T17:27:28
+challenger_aggregation_significance,XGBoost,challenger,machine_learning,True,True,True,True,,2026-06-13T17:27:28
+challenger_aggregation_significance,FastNeuralAR_MLP,challenger,lightweight_neural,True,True,True,True,,2026-06-13T17:27:28

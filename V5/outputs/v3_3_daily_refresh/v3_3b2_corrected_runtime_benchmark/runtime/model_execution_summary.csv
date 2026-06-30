@@ -1,0 +1,16 @@
+model,family,execution_status,jobs_completed,total_jobs,percent_complete,elapsed_minutes,output_rows,output_artifact,notes
+ARIMA_Fixed,Statistical,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+ETS_Current,Statistical,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+FixedGrowth_1_5,Growth baseline,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+FixedGrowth_3,Growth baseline,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+FixedGrowth_4,Growth baseline,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+FixedGrowth_6,Growth baseline,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+LinearRegression,Machine learning,FIT_OK,454,454,100.0,0.16,13620,outputs/.../staging/baseline_forecasts.csv,Baseline production live fit (bench staging).
+AutoARIMA,Statistical,FIT_OK,454,454,100.0,10.71,13620,outputs/.../staging/clean_challenger_forecasts.csv,Clean torch-free challenger live fit (bench staging).
+ETS Explicit,Statistical,FIT_OK,454,454,100.0,10.71,13620,outputs/.../staging/clean_challenger_forecasts.csv,Clean torch-free challenger live fit (bench staging).
+LightGBM,Machine learning,FIT_OK,454,454,100.0,10.71,13620,outputs/.../staging/clean_challenger_forecasts.csv,Clean torch-free challenger live fit (bench staging).
+Theta,Statistical,FIT_OK,454,454,100.0,10.71,13620,outputs/.../staging/clean_challenger_forecasts.csv,Clean torch-free challenger live fit (bench staging).
+XGBoost,Machine learning,FIT_OK,454,454,100.0,10.71,13620,outputs/.../staging/clean_challenger_forecasts.csv,Clean torch-free challenger live fit (bench staging).
+FNAR-V2,Deep Learning,FROZEN_REUSE,0,0,0.0,0.01,13620,outputs/v3_2b_model_candidates/candidate_outputs/full_candidate_outputs.csv,Reuse of closed V3.2B candidate output; no training.
+NLIN-DLIN_FIXED,Deep Learning,FROZEN_REUSE,0,0,0.0,0.01,13620,outputs/v3_2b_model_candidates/candidate_outputs/full_candidate_outputs.csv,Reuse of closed V3.2B candidate output; no training.
+SMLP-TCN,Deep Learning,FROZEN_REUSE,0,0,0.0,0.01,13620,outputs/v3_2b_model_candidates/candidate_outputs/full_candidate_outputs.csv,Reuse of closed V3.2B candidate output; no training.

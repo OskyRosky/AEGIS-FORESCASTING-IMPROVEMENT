@@ -1,0 +1,35 @@
+package,installed_version,classification,used_by,needed_in_dashboard_image
+shiny,1.13.0,critical,shiny_app,yes
+bslib,0.11.0,critical,shiny_app,yes
+DT,0.34.0,critical,shiny_app,yes
+plotly,4.12.0,critical,shiny_app,yes
+highcharter,0.9.5,critical,shiny_app,yes
+dplyr,1.2.1,critical,shiny_app,yes
+readr,2.2.0,critical,shiny_app,yes
+tidyr,1.3.2,critical,shiny_app,yes
+htmltools,0.5.9,critical,shiny_app,yes
+jsonlite,2.0.0,critical,shiny_app,yes
+rmarkdown,2.31,critical,shiny_app(export),yes
+tinytex,0.59,critical,shiny_app(pdf export),yes
+pandoc,0.2.0,critical,shiny_app(export),yes
+httr,1.4.8,critical,shiny_app(llm seam),yes
+httr2,1.2.3,helper,shiny_app/helpers,yes
+commonmark,2.0.0,helper,shiny_app(markdown render),yes
+lubridate,1.9.5,helper,shiny_app/helpers,yes
+scales,1.4.0,helper,shiny_app/helpers,yes
+stringr,1.6.0,helper,shiny_app/helpers,yes
+zoo,1.8-15,helper,shiny_app/helpers,yes
+stats,4.6.0,base_r,shiny_app,bundled_with_R
+utils,4.6.0,base_r,shiny_app,bundled_with_R
+forecast,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+openxlsx,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+plyr,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+prophet,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+RcppRoll,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+reactable,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+readxl,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+shinydashboard,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+shinyjs,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+shinyWidgets,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+xgboost,NOT_INSTALLED,legacy,MassiveForecasting-V3,no
+pkg,NA,false_positive,doc_placeholder,no

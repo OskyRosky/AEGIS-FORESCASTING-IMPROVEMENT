@@ -1,0 +1,16 @@
+rule_id,rule,severity,applies_when
+VR1,forecast_lower_95 <= forecast_lower_80,error,both 95 and 80 present
+VR2,forecast_lower_80 <= forecast_value,error,80 present
+VR3,forecast_value <= forecast_upper_80,error,80 present
+VR4,forecast_upper_80 <= forecast_upper_95,error,both 95 and 80 present
+VR5,forecast_lower_80 >= 0,error,non-negative resource (HDD)
+VR6,forecast_lower_95 >= 0,error,non-negative resource (HDD)
+VR7,all interval columns NA together (no partial single-bound rows),error,always
+VR8,interval_calibration_sample_size >= min_sample_size for chosen grain,warning,band populated
+VR9,interval_extrapolated=TRUE when interval_horizon_bucket beyond 30 days,error,band populated beyond backtest evidence
+VR10,empirical coverage of 80% band on backtest in [0.70 0.90],warning,coverage backtest run
+VR11,empirical coverage of 95% band on backtest in [0.90 0.99],warning,coverage backtest run
+VR12,interval_method and interval_source non-null when any bound populated,error,band populated
+VR13,row count and grain of forecasts.csv unchanged (additive only; no rows dropped),error,artifact rebuild
+VR14,existing point-only consumers still read forecast_value with no breakage,error,artifact rebuild
+VR15,coverage reported by resource x horizon-bucket x calibration-grain,info,coverage backtest run

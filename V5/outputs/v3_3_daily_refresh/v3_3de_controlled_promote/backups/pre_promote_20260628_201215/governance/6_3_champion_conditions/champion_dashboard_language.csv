@@ -1,0 +1,14 @@
+language_id,language_category,audience,statement_text,allowed_status,reason,replacement_statement,created_timestamp
+L-001,approved,executive,ETS Explicit was selected as champion with conditions.,allowed,Matches official champion decision.,,2026-06-14T10:40:38
+L-002,approved,dashboard,ETS Explicit is the current recommended champion candidate under the Model Lab governance framework.,allowed_with_context,Preserves governance context.,,2026-06-14T10:40:38
+L-003,approved,stakeholder,The champion decision has medium confidence and must be interpreted with documented carry-forward risks.,allowed,Keeps confidence and risks visible.,,2026-06-14T10:40:38
+L-004,approved,dashboard,"The tournament standing supports ETS Explicit, but the champion decision remains conditional.",allowed,Separates standing from champion decision.,,2026-06-14T10:40:38
+L-005,discouraged,dashboard,ETS Explicit is the top model.,allowed_with_context,Can be misleading unless tied to conditional champion and scope.,ETS Explicit was selected as champion with conditions under the Model Lab governance framework.,2026-06-14T10:40:38
+L-006,discouraged,stakeholder,ETS Explicit beat the other models.,allowed_with_context,Over-compresses pairwise evidence.,ETS Explicit had strong tournament evidence and was selected as champion with conditions.,2026-06-14T10:40:38
+L-007,prohibited,all,ETS Explicit won.,prohibited,Winner language hides conditions.,ETS Explicit was selected as champion with conditions.,2026-06-14T10:40:38
+L-008,prohibited,all,ETS Explicit is the absolute best model.,prohibited,Absolute claim exceeds evidence scope.,ETS Explicit is the conditional champion under current Model Lab evidence.,2026-06-14T10:40:38
+L-009,prohibited,all,ETS Explicit replaces all other models.,prohibited,Unconditional replacement claim is disallowed.,ETS Explicit is the selected champion with conditions; other models remain governed references or future-work candidates.,2026-06-14T10:40:38
+L-010,prohibited,all,The tournament winner is ETS Explicit.,prohibited,Tournament standing is not the champion decision.,The tournament evidence supports the conditional champion decision for ETS Explicit.,2026-06-14T10:40:38
+L-011,prohibited,all,There are no risks or caveats.,prohibited,Contradicts risk carry-forwards and medium confidence.,The decision has documented conditions and carry-forward risks.,2026-06-14T10:40:38
+L-012,prohibited,all,FastNeuralAR_MLP failed and should be discarded.,prohibited,"Model is high-risk and under investigation, not discarded.",FastNeuralAR_MLP is retained as a high-risk model requiring investigation.,2026-06-14T10:40:38
+L-013,prohibited,all,NBEATS and NHITS were rejected permanently.,prohibited,Deferred models remain future-work candidates.,NBEATS and NHITS are deferred for runtime/dependency reasons and may be retested later.,2026-06-14T10:40:38

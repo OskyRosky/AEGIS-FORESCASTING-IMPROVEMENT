@@ -1,0 +1,11 @@
+metric,value
+available_rows,2700.0
+median_band80_width_ratio,0.2039
+p90_band80_width_ratio,1.6655
+p95_band80_width_ratio,3.315
+max_band80_width_ratio,15.7416
+rows_band80_gt_1x,377.0
+pct_band80_gt_1x,13.96
+rows_band80_gt_2x,235.0
+pct_band80_gt_2x,8.7
+monotonicity_clamped_rows,0.0

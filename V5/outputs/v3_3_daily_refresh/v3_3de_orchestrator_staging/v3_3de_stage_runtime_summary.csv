@@ -1,0 +1,10 @@
+stage,status,run_id,notes
+S00_precheck,COMPLETED,v3_3de_run_20260628_171414,read-only check; no SQL ingestion (avoids prod mutation)
+S01_ingestion,STAGED_SKIP,v3_3de_run_20260628_171414,would mutate data/raw; processed reused read-only
+S02_transform,STAGED_SKIP,v3_3de_run_20260628_171414,would mutate data/processed; reused read-only
+S03a_baseline,COMPLETED,v3_3de_run_20260628_171414,1200 rows staging (smoke)
+S03b_clean_challengers,COMPLETED,v3_3de_run_20260628_171414,150 rows 5 models 0 fail
+S03c_dl_reuse,COMPLETED,v3_3de_run_20260628_171414,40860 frozen rows 3 models no training
+candidate_metadata,COMPLETED,v3_3de_run_20260628_171414,run_metadata.csv 9 fields + pipeline_status.csv audit
+gates,PASS,v3_3de_run_20260628_171414,32/32 PASS
+promote,NOT_ATTEMPTED,v3_3de_run_20260628_171414,staging-only; promote blocked

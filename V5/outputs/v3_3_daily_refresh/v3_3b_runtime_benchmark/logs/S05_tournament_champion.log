@@ -1,0 +1,8 @@
+S05 START 2026-06-26T18:23:26.4885858-06:00
+--- build_tournament_engine ---
+[2026-06-26 18:23:27] INFO build_tournament_engine - === Block 5.30 - Tournament Engine ===
+[2026-06-26 18:23:28] INFO build_tournament_engine - Tournament engine complete: models=13 entity_rows=507 pairwise=78 validation_failures=0
+--- build_champion_decision ---
+[2026-06-26 18:23:29] INFO build_champion_decision - === Block 5.31 - Champion / No-Champion Decision ===
+[2026-06-26 18:23:29] INFO build_champion_decision - Champion decision complete: decision=CHAMPION_SELECTED_WITH_CONDITIONS selected=ETS Explicit validation_failures=0
+S05 END 2026-06-26T18:23:29.4203337-06:00 elapsed_seconds=2.9 exit_tournament=0 exit_champion=0

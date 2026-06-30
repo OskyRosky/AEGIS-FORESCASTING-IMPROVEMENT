@@ -1,0 +1,6 @@
+handler,format,available_in_env,gating,reflects_latest,result
+download_md,Markdown (.md),TRUE,always enabled,"isolate(rv$resp/rv$question) at download time",PASS
+download_pdf,PDF (.pdf),FALSE,"enabled only when pandoc + LaTeX present (.llm_export_caps); disabled placeholder otherwise","isolate(rv$resp/rv$question) at download time",PASS (gracefully unavailable)
+download_docx,Word (.docx),FALSE,"enabled only when pandoc present (.llm_export_caps); disabled placeholder otherwise","isolate(rv$resp/rv$question) at download time",PASS (gracefully unavailable)
+caps_detection,n/a,n/a,".llm_export_caps() => md=TRUE pdf=FALSE docx=FALSE on this machine (no pandoc/LaTeX/officer/zip)",n/a,PASS
+no_install,n/a,n/a,"no new packages installed; detection only",n/a,PASS

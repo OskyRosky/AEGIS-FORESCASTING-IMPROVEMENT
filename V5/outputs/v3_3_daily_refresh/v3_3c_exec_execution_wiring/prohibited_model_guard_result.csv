@@ -1,0 +1,4 @@
+prohibited_model,found_in_active_scope,found_in_legacy_code,active_scope_status,action_taken,notes
+NBEATS,NO,YES,excluded,excluded_from_daily_runner; legacy_runner_not_used_as_daily,model_registry.py (registered); run_challenger_official_execution.py APPROVED_MODELS L49; challenger_registry.yaml CH-06; governance 6_4/6_5
+NHITS,NO,YES,excluded,excluded_from_daily_runner; legacy_runner_not_used_as_daily,model_registry.py (registered); run_challenger_official_execution.py DEFERRED_MODEL L51; challenger_registry.yaml CH-07; governance 6_4/6_5
+FastNeuralAR_MLP,NO,YES,excluded,excluded_from_daily_runner; legacy_runner_not_used_as_daily,RETIRED by build_canonical_universe.R; legacy pilot CSVs; docs/methodology (historical only)

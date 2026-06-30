@@ -1,0 +1,6 @@
+scenario,inputs,expected_behavior,observed,status
+valid_series,entity=APC-Dedicated model=FixedGrowth1% horizon=30 history=90,chart with 90 actual + 30 forecast points,nA=90 nF=30 fstart=2026-04-28 class highchart,PASS
+unknown_entity,entity=___nope___ model=x,calm empty chart no error,returns highchart (fv_empty_chart),PASS
+all_history,history=0,full actual history shown,hist_days<=0 returns all actuals,PASS
+horizon_min,horizon=5,first 5 forecast rows,fv_forecast_series trims to 5,PASS
+horizon_max,horizon=60,up to 60 forecast rows (entity may have fewer),fv_forecast_series caps at available,PASS

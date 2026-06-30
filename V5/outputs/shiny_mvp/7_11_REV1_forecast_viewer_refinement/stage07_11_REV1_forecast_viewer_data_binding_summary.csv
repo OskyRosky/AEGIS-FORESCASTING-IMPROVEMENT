@@ -1,0 +1,15 @@
+ui_control,bound_to,source_artifact,recomputed,gated_on_button
+Series / entity (fv_entity),forecasts.entity_key (45 unique),forecasts,no,no (live)
+Model (fv_model),forecasts.model_version filtered by entity,forecasts,no,no (live)
+Model availability note,count of model_version per entity vs global distinct,forecasts,no,no (live)
+Forecast horizon (fv_horizon),limits forecast rows from forecast start (5..60),forecasts,no,yes
+History window (fv_history),actuals last N days by date (0=all),actuals,no,yes
+Analyze forecast (fv_go),triggers eventReactive snapshot of all inputs,(control),no,trigger
+Chart Actual line,actuals.actual_value by entity+date,actuals,no,yes
+Chart Forecast line,forecasts.forecast_value by entity+model+date,forecasts,no,yes
+Forecast start marker,min(forecast date) for entity+model,forecasts,no,yes
+Availability: forecast points,nrow forecasts for entity+model,forecasts,no,yes
+Availability: history points,nrow actuals within history window,actuals,no,yes
+Availability: models for entity,distinct model_version for entity,forecasts,no,yes
+Availability: models global,distinct model_version overall (16),forecasts,no,yes
+Horizontal navigation,highcharter navigator/scrollbar/rangeSelector,(client),no,yes

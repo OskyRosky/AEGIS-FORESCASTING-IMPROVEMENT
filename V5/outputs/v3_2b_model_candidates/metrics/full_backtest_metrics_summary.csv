@@ -1,0 +1,20 @@
+model_name,candidate_id,role,model_family,dl_or_ml,median_mase,mean_mase,p95_mase,median_rmsse,mean_smape,mean_bias,pct_windows_beating_naive,negative_forecast_count,guardrail_pass,n_windows,runtime_seconds,completion_status
+FastNeuralAR_MLP_v2_direct,FNAR-V2,candidate,lightweight_neural,deep_learning,81.668413,2044.390226,804.805176,22.405331,0.206573,846132.96,0.0,0.0,True,454.0,195.6613,ok
+NLinear_log_space_fixed,NLIN-DLIN_FIXED,candidate,linear_dl,deep_learning,24.816041,44.234078,145.726237,6.64135,0.077056,-1202.67,1.76,0.0,True,454.0,0.9863,ok
+SmallMLPGlobal,SMLP-TCN,candidate,lightweight_neural,deep_learning,18.782572,42.050116,173.795087,4.79041,0.071895,4430.33,0.44,0.0,True,454.0,29.196,ok
+Ridge_direct_multi_horizon,ENET-RIDGE,candidate,linear_ml,machine_learning,19.330846,50.592067,199.276009,5.027895,0.097377,-3504.58,1.98,0.0,True,454.0,1.36,ok
+LightGBM_candidate_improved_v2,LGBM-IMP-v2,candidate,gradient_boosting,machine_learning,26.747444,54.758036,229.836331,6.328078,0.109544,-7322.38,1.32,0.0,True,454.0,462.9279,ok
+XGBoost_candidate_improved_v2,XGB-IMP-v2,candidate,gradient_boosting,machine_learning,27.950413,57.207431,240.236649,6.426824,0.115215,-7456.56,1.1,0.0,True,454.0,1339.3481,ok
+ETS Explicit,,anchor_champion,statistical,existing_governed,6.901144,,,1.856193,,,,,,,,
+AutoARIMA,,anchor_baseline,statistical,existing_governed,8.08853,,,1.859013,,,,,,,,
+FixedGrowth_1_5,,anchor_baseline,growth_baseline,existing_governed,8.649281,,,2.271838,,,,,,,,
+ETS_Current,,anchor_baseline,statistical,existing_governed,8.654171,,,2.273019,,,,,,,,
+LinearRegression,,anchor_baseline,machine_learning,existing_governed,9.495769,,,2.751763,,,,,,,,
+Theta,,anchor_baseline,statistical,existing_governed,10.64229,,,2.819225,,,,,,,,
+ARIMA_Fixed,,anchor_baseline,statistical,existing_governed,11.789916,,,3.493345,,,,,,,,
+FixedGrowth_3,,anchor_baseline,growth_baseline,existing_governed,12.989046,,,3.019316,,,,,,,,
+XGBoost,,anchor_baseline_current,machine_learning,existing_governed,14.547628,,,3.88079,,,,,,,,
+LightGBM,,anchor_baseline_current,machine_learning,existing_governed,16.041042,,,4.061386,,,,,,,,
+FixedGrowth_4,,anchor_baseline,growth_baseline,existing_governed,16.52908,,,4.072356,,,,,,,,
+FixedGrowth_6,,anchor_baseline,growth_baseline,existing_governed,27.015391,,,5.083541,,,,,,,,
+FastNeuralAR_MLP,,anchor_under_audit,lightweight_neural,existing_governed,739.921888,,,164.622417,,,,,,,,

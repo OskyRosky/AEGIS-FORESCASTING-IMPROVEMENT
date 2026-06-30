@@ -1,0 +1,28 @@
+check_name,status,details
+forecasting_sidebar_contains_viewer,pass,Forecasting group includes the Viewer item (data-section=explorer).
+forecasting_sidebar_contains_accuracy,pass,Forecasting group includes the Accuracy item (data-section=accuracy).
+forecasting_sidebar_contains_forecast,pass,Forecasting group includes the new Forecast item (data-section=forecast).
+forecasting_sidebar_contains_ttl,pass,Forecasting group includes the TTL item (data-section=ttl).
+forecasting_sidebar_order,pass,"Forecasting item order = explorer, accuracy, forecast, ttl (expected explorer, accuracy, forecast, ttl)."
+viewer_page_exists,pass,panel('explorer') (Forecast Viewer) is declared in tabs.R.
+forecast_page_exists,pass,panel('forecast') (Forward Forecast) is declared in tabs.R.
+accuracy_page_still_exists,pass,panel('accuracy') still declared and unchanged.
+ttl_page_still_exists,pass,panel('ttl') still declared and unchanged.
+forecast_page_registered,pass,section_forecast() is registered in app_sections().
+viewer_page_contains_backtest_comparison,pass,Viewer page contains the Backtest Comparison section.
+viewer_page_no_forward_forecast,pass,Viewer page no longer contains the Forward Forecast section or fvf_chart.
+forecast_page_contains_forward_forecast,pass,Forecast page contains the Forward Forecast section and fvf_chart.
+forecast_page_no_backtest_controls,pass,"Forecast page does not contain backtest controls (fvp_series, fvp_horizon, Backtest Comparison)."
+viewer_reads_backtest_artifact,pass,Viewer page references forecast_viewer_model_outputs.csv as its source.
+forecast_reads_forecasts_and_actuals,pass,Forecast page references forecasts.csv and actuals.csv as its sources.
+no_stage05_artifacts_modified,pass,No Stage 05 output was opened for writing in this block.
+no_processed_data_artifacts_modified,pass,"No data/processed artifact (forecast_viewer_model_outputs.csv, forecasts.csv, actuals.csv) was modified."
+no_models_run,pass,No model fit/predict executed.
+no_forecasts_generated,pass,No forecast values produced.
+no_metrics_recalculated,pass,No scoring/metric recomputation performed.
+no_champion_decision_changed,pass,Champion decision untouched; UI routing only.
+app_launches,pass,App launched via scripts/launch_shiny_v1.ps1.
+http_status_checked,pass,"HTTP 200, content length 92273 bytes."
+pid_returned,pass,PID 42192 returned by launch script.
+logs_returned,pass,stdout/stderr logs under outputs/shiny_mvp/7_FORECASTING_SIDEBAR_CORRECTION/.
+stop_command_returned,pass,Stop command: powershell -ExecutionPolicy Bypass -File scripts/stop_shiny_v1.ps1 -PidToStop 42192.

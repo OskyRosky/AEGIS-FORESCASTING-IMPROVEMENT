@@ -1,0 +1,20 @@
+check_id,governance_requirement,expected,observed,status
+VAL-01,App responds,HTTP 200,"HTTP 200 len=284644",PASS
+VAL-02,Four explanation panels at end of MVP sections,4 panels,"champion/tournament/forecast/governance present",PASS
+VAL-03,Main generate button per section,present,"4 llm_*-explain buttons",PASS
+VAL-04,Question box per section,present,"4 llm_*-question inputs",PASS
+VAL-05,Click produces a visible response,yes,"Tournament + Champion rendered composed answers",PASS
+VAL-06,Question adapts the answer (Question asked block + intent),yes,"Distinct answers per intent (takeaway/process/changed/risk/compare/bounded)",PASS
+VAL-07,Answer is paragraphs not bullet lists,yes,"Executive/evidence/why are paragraphs",PASS
+VAL-08,Sources not visible by default,yes,"Sources only inside collapsed Technical traceability",PASS
+VAL-09,Technical traceability collapsed by default,yes,"details.open=false",PASS
+VAL-10,Governance footer discrete,yes,"single muted footer line",PASS
+VAL-11,Local badge discrete,yes,"'Local mock' badge/footer present, muted",PASS
+VAL-12,Download not broken (enabled),yes,"download link active, real session URL",PASS
+VAL-13,No critical logs,yes,"no Error/cannot/object-not-found in stderr",PASS
+VAL-14,No SQL / model recompute / Azure / real LLM / network,yes,"composition is deterministic local R over the V4.4 mock JSON; is_real_llm=false, uses_azure=false",PASS
+VAL-15,No data mutation (processed/raw),yes,"read-only; no writes to data/processed or data/raw",PASS
+VAL-16,Champion frozen = ETS Explicit,yes,"Champion panel reports ETS Explicit, scope 15",PASS
+VAL-17,V1/V2/V3 intact,yes,"no files outside V4 modified",PASS
+VAL-18,Answer generated from evidence not echo of stored .md,yes,"composition selects evidence facts by intent; output differs from stored summary",PASS
+VAL-19,Champion language never altered by sanitizer,yes,"forbidden-token scan (best/promote/winner) = FALSE; champion name preserved",PASS

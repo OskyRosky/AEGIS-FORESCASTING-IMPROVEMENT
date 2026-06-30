@@ -1,0 +1,40 @@
+check_name,status,details
+Champion page exists,pass,section_champion is defined in shiny_app/ui/tabs.R.
+Champion page no longer shows placeholder-only content,pass,Placeholder controls were removed from the Champion section.
+Champion page reads champion_decision.csv if present,pass,Champion-specific helper reads outputs/model_lab/champion_decision/champion_decision.csv.
+Champion page reads model_lab_champion_summary.csv if present,pass,Champion summary is loaded through the governed loader registry.
+Champion page reads champion_conditions_protocol.csv if present,pass,Conditions are loaded through champion_conditions_artifact().
+Champion page reads champion_dashboard_language.csv if present,pass,Language policy is loaded through champion_language_artifact().
+Champion page may read tournament_model_scorecard.csv and tournament_pairwise_evidence.csv,pass,Supporting tournament artifacts are used only for governed evidence and lineage.
+Champion page does not read forecast_viewer_model_outputs.csv as official champion source,pass,Champion-specific code does not bind the forecast viewer artifact.
+Champion page does not read forecasts.csv,pass,Champion-specific code does not bind forward forecasts.
+Champion page does not read actuals.csv,pass,Champion-specific code does not bind actuals.
+Selected champion under conditions is shown,pass,Summary card and language use conditional champion wording.
+ETS Explicit is shown,pass,ETS Explicit is present in governed source artifacts and loaded into cards via helpers.
+Confidence is shown,pass,Confidence appears in summary cards and evidence panel.
+Official median MASE is shown if available,pass,MASE card is present and sourced from champion summary.
+Official median RMSSE is shown if available,pass,RMSSE card is present and sourced from champion summary.
+Pairwise support is shown if available,pass,Pairwise support card and evidence row are present.
+Governance conditions/caveats are shown,pass,Conditions table output is present and rendered by server.
+Approved language section exists,pass,Language policy section exists.
+Source / lineage section exists,pass,Source lineage table output is present and rendered by server.
+No per-series leader table is implemented in this block,pass,Only a scope guard mentions future series-level evidence; no source is read or rendered.
+No tournament_entity_model_scores.csv visualization is implemented in this block,pass,No helper reads or renders tournament_entity_model_scores.csv.
+No composite score is computed,pass,Champion helpers contain no composite-score computation patterns.
+No weights are invented,pass,Champion helpers contain no numeric weighting parameters or formulas.
+No Stage 05 artifacts modified,pass,Stage 05 artifacts were read only; no writes were made under outputs/model_lab.
+No Stage 06 artifacts modified,pass,Stage 06 governance artifacts were read only; no writes were made under outputs/governance.
+No processed data artifacts modified,pass,No writes were made under data/processed.
+No models run,pass,Only Shiny launched; no model execution commands were run.
+No forecasts generated,pass,No forecast generation scripts were run.
+No tournaments rerun,pass,No tournament scripts were run.
+No metrics recalculated,pass,No official metric recomputation was performed.
+No champion decision changed,pass,The champion decision remains read from governed artifacts.
+Universe page still exists,pass,Universe section remains defined.
+Tournament page still exists,pass,Tournament section remains defined.
+Comparison page still exists,pass,Comparison section remains defined.
+App launches successfully,pass,Shiny process is listening on 127.0.0.1:3838.
+HTTP status checked,pass,HTTP status was 200.
+PID returned,pass,PID 15584 recorded.
+logs returned,pass,stdout/stderr log files exist.
+stop command returned,pass,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny_v1.ps1 -PidToStop 15584

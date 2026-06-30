@@ -1,0 +1,23 @@
+id,area,check,status
+1,JSON,reference_artifacts response added; 11 responses total,PASS
+2,JSON,response grounded in real registry facts (43/9/42/1/8/14),PASS
+3,Assistant,UI rendered at end of section_artifacts (corrected from section_methodology) and absent from Methodology,PASS
+4,Assistant,custom panel title/subtitle applied,PASS
+5,Assistant,5 custom quick prompts rendered,PASS
+6,Assistant,quick prompt generates grounded answer,PASS
+7,Assistant,answer references 43 artifacts / 9 categories / 14 mappings / 8 downloads,PASS
+8,Assistant,technical traceability collapsed,PASS
+9,Assistant,download explanation MD has no sources/traceability leak,PASS
+10,Assistant,doc basename = Reference_Artifacts,PASS
+11,Regression,9 existing assistants keep original title/sub/4 default prompts,PASS
+12,Regression,existing tournament assistant still generates grounded answer,PASS
+13,Downloads,8 cards expose dl_<key>_open buttons,PASS
+14,Downloads,per-artifact modal opens with 6 formats,PASS
+15,Downloads,CSV served verbatim (file.copy from governed path),PASS
+16,Downloads,MD rendered with metadata + table,PASS
+17,Downloads,TXT rendered,PASS
+18,Downloads,HTML rendered,PASS
+19,Downloads,PDF rendered (%PDF; pandoc+LaTeX),PASS
+20,Downloads,DOCX rendered (PK zip; pandoc),PASS
+21,Downloads,no silent truncation (rows <= cap; preview note logic present),PASS
+22,Governance,champion frozen (ETS Explicit); read-only; no SQL/model/Azure; V1-V3 untouched,PASS

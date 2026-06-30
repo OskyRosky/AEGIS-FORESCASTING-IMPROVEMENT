@@ -1,0 +1,6 @@
+file,line,category,blocker,note
+config/project_root_policy.json,2,marker_cosmetic,no,project_container_root absolute path; NOT read by find_project_root (relative resolver)
+config/project_root_policy.json,3,marker_cosmetic,no,active_project_root absolute path; informational marker only
+python/model_lab/build_interval_calibration.py,1,dev_script_oneoff,no,absolute path in non-runtime dev script; parametrize via env in V5.5
+python/versioning/diagnose_v1_migration.py,1,dev_script_oneoff,no,absolute path in migration diagnostic; not part of dashboard/refresh-core runtime
+shiny_app/**,0,runtime_clean,no,ZERO absolute paths; relative self-rooting resolver; compatible with /app workdir

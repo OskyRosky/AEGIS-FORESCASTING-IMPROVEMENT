@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AEGIS V4 LLM Explanation Output Schema",
+  "description": "Contract for every LLM explanation response in V4 (local-first). Design preview for V4.1; enforced from V4.5 (prompt contract) onward. The LLM explains, never decides.",
+  "type": "object",
+  "required": [
+    "page_id",
+    "generated_at",
+    "provider",
+    "summary",
+    "key_findings",
+    "evidence_used",
+    "sources_used",
+    "limitations",
+    "confidence",
+    "claims_traceability"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "page_id": {
+      "type": "string",
+      "enum": ["champion_overview", "tournament", "forecast_viewer", "governance_risks"]
+    },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "provider": { "type": "string", "enum": ["mock", "azure_openai", "local"] },
+    "selection_context": {
+      "type": "object",
+      "description": "Echo of the on-screen filters that scoped the evidence pack (mainly Forecast Viewer).",
+      "additionalProperties": false,
+      "properties": {
+        "entity": { "type": ["string", "null"] },
+        "region": { "type": ["string", "null"] },
+        "models": { "type": "array", "items": { "type": "string" } },
+        "horizon": { "type": ["string", "integer", "null"] },
+        "time_window": { "type": ["string", "null"] },
+        "metric": { "type": ["string", "null"] }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Executive summary, 2-4 sentences. May equal 'insufficient evidence'."
+    },
+    "key_findings": {
+      "type": "array",
+      "description": "What the evidence says - bullet facts, each traceable.",
+      "items": { "type": "string" }
+    },
+    "evidence_used": {
+      "type": "array",
+      "description": "Concrete evidence fields/values pulled into the pack.",
+      "items": {
+        "type": "object",
+        "required": ["field", "value", "source_artifact"],
+        "additionalProperties": false,
+        "properties": {
+          "field": { "type": "string" },
+          "value": { "type": ["string", "number", "boolean", "null"] },
+          "source_artifact": { "type": "string" }
+        }
+      }
+    },
+    "sources_used": {
+      "type": "array",
+      "description": "Governed artifact filenames actually read. Always present.",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "limitations": {
+      "type": "array",
+      "description": "Always present. Must include the explain-not-decide caveat and snapshot caveat.",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "insufficient_evidence"]
+    },
+    "claims_traceability": {
+      "type": "array",
+      "description": "Each important claim mapped to an evidence field or source artifact.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "maps_to"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "maps_to": { "type": "string" }
+        }
+      }
+    },
+    "download_payload": {
+      "type": ["object", "null"],
+      "description": "Populated in V4.7 for MD/CSV/JSON export. Null until then.",
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+package,version,role,source,included_or_excluded,notes
+shiny,1.14.0,core_dashboard,P3M_noble_2026-06-23,included,Shiny runtime
+bslib,0.11.0,core_dashboard,P3M_noble_2026-06-23,included,Bootstrap theming (needs fs->libuv1)
+DT,0.34.0,core_dashboard,P3M_noble_2026-06-23,included,Data tables
+plotly,4.12.0,core_dashboard,P3M_noble_2026-06-23,included,Interactive charts
+highcharter,0.9.5,core_dashboard,P3M_noble_2026-06-23,included,Forecast viewer charts (Highcharts wrapper - commercial license flag R6)
+dplyr,1.2.1,core_dashboard,P3M_noble_2026-06-23,included,Data wrangling
+readr,2.2.0,core_dashboard,P3M_noble_2026-06-23,included,CSV reading
+tidyr,1.3.2,core_dashboard,P3M_noble_2026-06-23,included,Reshaping
+htmltools,0.5.9,core_dashboard,P3M_noble_2026-06-23,included,HTML helpers
+jsonlite,2.0.0,core_dashboard,P3M_noble_2026-06-23,included,JSON parse (mock provider)
+rmarkdown,2.31,core_dashboard,P3M_noble_2026-06-23,included,Artifact rendering (MD/HTML/DOCX/PDF)
+tinytex,0.60,core_dashboard,P3M_noble_2026-06-23,included,PDF/TeX helper (TeX gated V5.4)
+httr,1.4.8,core_dashboard,P3M_noble_2026-06-23,included,HTTP client (mock/local only)
+pandoc,0.2.0,core_dashboard,P3M_noble_2026-06-23,included,Pandoc R wrapper
+stats,base,base_r,base_image,included,Base R (no install)
+utils,base,base_r,base_image,included,Base R (no install)
+scales,transitive,helper,P3M_noble_2026-06-23,included_transitive,Pulled by plotly/ggplot2
+stringr,transitive,helper,P3M_noble_2026-06-23,included_transitive,Tidyverse helper
+lubridate,transitive,helper,P3M_noble_2026-06-23,included_transitive,Date helper
+fs,transitive,helper,P3M_noble_2026-06-23,included_transitive,bslib/sass dep (requires system libuv1)
+forecast,NA,legacy,not_installed,excluded,Belongs to MassiveForecasting-V3 legacy; not used by dashboard
+prophet,NA,legacy,not_installed,excluded,Legacy revenue dashboard only
+xgboost,NA,heavy_ml,not_installed,excluded,Not needed (champion frozen)
+torch,NA,heavy_ml,not_installed,excluded,Not needed
+lightgbm,NA,heavy_ml,not_installed,excluded,Not needed
+reticulate,NA,python_bridge,not_installed,excluded,No Python in dashboard image
+shinydashboard,NA,legacy,not_installed,excluded,Legacy UI framework; dashboard uses bslib
+reactable,NA,legacy,not_installed,excluded,Legacy tables; dashboard uses DT
+readxl,NA,legacy,not_installed,excluded,Legacy xlsx; dashboard uses readr/CSV
+openxlsx,NA,legacy,not_installed,excluded,Legacy xlsx export

@@ -1,0 +1,7 @@
+source_file,purpose,champion_page_role,exists,row_count,column_count,loaded_successfully,notes
+outputs/model_lab/champion_decision/champion_decision.csv,Formal champion decision and confidence,Champion Decision,true,1,9,true,Read-only governed artifact; values displayed without recomputation.
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,Official champion metrics and pairwise support summary,Champion Summary,true,1,11,true,Read-only governed artifact; values displayed without recomputation.
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,Governed champion conditions and caveats,Conditions,true,5,11,true,Read-only governed artifact; values displayed without recomputation.
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,"Approved, discouraged, and prohibited dashboard language",Language Policy,true,13,8,true,Read-only governed artifact; values displayed without recomputation.
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,Supporting governed tournament scorecard evidence,Supporting Evidence,true,13,17,true,Read-only governed artifact; values displayed without recomputation.
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,Supporting governed pairwise tournament evidence,Supporting Evidence,true,78,16,true,Read-only governed artifact; values displayed without recomputation.

@@ -1,0 +1,11 @@
+field,value
+process_id,20096
+host,127.0.0.1
+port,3838
+url,http://127.0.0.1:3838
+http_status,200
+listening,TRUE
+single_instance,TRUE
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 20096
+stdout_log,outputs\shiny_mvp\7_V2_FORECAST_INTERVAL_60D_CALIBRATED_SHINY_WIRING\logs\stage07_v2_forecast_interval_60d_calibrated_shiny_wiring_stdout.log
+stderr_log,outputs\shiny_mvp\7_V2_FORECAST_INTERVAL_60D_CALIBRATED_SHINY_WIRING\logs\stage07_v2_forecast_interval_60d_calibrated_shiny_wiring_stderr.log

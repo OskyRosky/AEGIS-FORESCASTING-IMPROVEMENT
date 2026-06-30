@@ -1,0 +1,11 @@
+decision_id,decision,options,recommended_default,requires_oscar_approval
+D1_source_of_truth,"Where do intervals come from for the Forecast page?","(a) SQL table forecast_substrateBE_hdd_region already has Forecast-Lower/Upper or quantile ValueType rows -> just unfilter ingestion+transform; (b) upstream system must add them; (c) compute in this pipeline via residual bootstrap on backtest; (d) quantile models","(a) FIRST verify the DB: run SELECT DISTINCT [ValueType] on the source table. If Lower/Upper exist, that is by far the safest path.",yes
+D2_interval_level,"Which interval level(s) to show?","80%, 95%, or both","Both (80 inner band + 95 outer band) if available; otherwise 95 only",yes
+D3_interval_method,"How are bounds produced/labeled?","model_native probabilistic / residual_bootstrap / empirical_backtest residual bands / quantile model","model_native if the DB provides them; else empirical_backtest residual bands calibrated on the frozen backtest (governed, documented)",yes
+D4_symmetry,"Symmetric or asymmetric bounds?","symmetric (mean +/- k*sigma) / asymmetric (true quantiles)","Asymmetric (true quantiles) when available; symmetric only as a documented fallback",yes
+D5_granularity,"Per what are intervals computed?","per model / per key / per horizon / global","Per key x model x horizon (uncertainty grows with horizon)",yes
+D6_calibration,"Calibrate on backtest residuals?","yes / no","Yes if method is residual/empirical, so coverage is honest",yes
+D7_non_negative,"Cap bounds at zero if value cannot be negative?","yes / no","Yes for non-negative resources (cap lower at 0), applied at generation, not in Shiny",yes
+D8_governance_status,"Are intervals governed or diagnostic?","governed artifact / dashboard diagnostic","Governed if model_native from the DB; diagnostic (clearly labeled) if pipeline-derived",yes
+D9_dashboard_label,"How to label in the Forecast Chart?","'Prediction interval (80/95%)' / 'Uncertainty band' / 'Confidence band'","'Prediction interval (95%)' with method + source in Data notes",yes
+D10_missing_behavior,"What if a key/model has no intervals?","hide band / show point-only with note","Show point forecast only with a clear 'No prediction interval available' note",yes

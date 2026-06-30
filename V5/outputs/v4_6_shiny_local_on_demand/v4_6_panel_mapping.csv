@@ -1,0 +1,5 @@
+mvp_page,mvp_data_section,tabs_section_function,module_id,button_label,precomputed_page_id,response_found,confidence
+champion_overview,champion,section_champion,llm_champion_overview,Explain champion,champion_overview,yes,high
+tournament,tournament,section_tournament,llm_tournament,Explain tournament,tournament,yes,high
+forecast_viewer,forecast,section_forecast,llm_forecast_viewer,Explain forecast view,forecast_viewer,yes,high
+governance_risks,risks,section_risks,llm_governance_risks,Explain governance & risks,governance_risks,yes,high

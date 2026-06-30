@@ -1,0 +1,7 @@
+log,observation,severity,result
+stderr,Normal package startup masks (dplyr/base),info,PASS
+stderr,"Pandoc 3.10 activated for rmarkdown",info,PASS
+stderr,"Listening on http://127.0.0.1:3839",info,PASS
+stderr,"vroom parsing-issues warning (pre-existing data load, unrelated to V4.8R edits)",warning,PASS
+stderr,No R errors after edits,none,PASS
+stdout,App booted and serving,info,PASS

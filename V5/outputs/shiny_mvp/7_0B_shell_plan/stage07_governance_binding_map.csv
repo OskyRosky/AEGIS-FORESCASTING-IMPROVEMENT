@@ -1,0 +1,12 @@
+dashboard_section,governance_source_artifact,binding_rule,display_requirement,prohibited_behavior,planned_block,notes
+champion decision,outputs/model_lab/champion_decision/champion_decision.csv,read_only_file_load,Display CHAMPION_SELECTED_WITH_CONDITIONS and ETS Explicit,Do not say winner or infer from rank,7.0D,confidence medium
+champion conditions,outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,read_only_file_load,Display C-001 through C-005,Do not hide conditions,7.0D,all visible
+model universe,outputs/model_lab/model_lab_closure_pack/model_lab_final_model_universe.csv,read_only_file_load,Display baseline/challenger/deferred/risk flags,Do not drop deferred models,7.0E,all models visible
+tournament evidence,outputs/model_lab/tournament_engine/tournament_preliminary_standings.csv,read_only_file_load,Display as evidence only,Do not infer champion,7.0F,preliminary standing caveat
+pairwise evidence,outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,read_only_file_load,Display pairwise rows,Do not recalculate significance,7.0F,no recompute
+risk register,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,read_only_file_load,Display active risks including FastNeuralAR_MLP,Do not hide risk rows,7.0E,warning labels
+deferred models,outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv,read_only_file_load,Display NBEATS/NHITS as future work,Do not call permanently rejected,7.0E,deferred visible
+governance actions,outputs/governance/6_2_decision_rules/governance_recommendations.csv,read_only_file_load,Display governed actions,Do not alter action labels,7.0F,action table
+audit trail,outputs/governance/audit_6/audit_6_summary.csv,read_only_file_load,Display Audit #6 approve conditions,Do not hide audit status,7.0F,include Audit #5 if needed
+source artifacts,outputs/governance/6_4_dashboard_contract/dashboard_data_binding_contract.csv,static_artifact_load,Display source paths and binding policy,Do not display untraceable values,7.0G,auditability
+methodology / metric policy,outputs/governance/6_4_dashboard_contract/dashboard_governance_contract.csv,static_artifact_load,Display read-only/no-recompute policy,Do not recompute MASE/RMSSE,7.0C,visible in methodology

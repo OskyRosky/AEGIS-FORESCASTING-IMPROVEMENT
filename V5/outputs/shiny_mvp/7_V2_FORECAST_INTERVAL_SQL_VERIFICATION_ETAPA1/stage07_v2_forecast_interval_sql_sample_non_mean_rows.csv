@@ -1,0 +1,2 @@
+Key,DateTime,Value,ModelVersion,ForecastVersion,Scenario,Resource,ValueType,status
+,,,,,,,,DB_ACCESS_NOT_AVAILABLE - run Query 3 from manual_queries.sql in SSMS/ADS and paste up to 100 non-mean sample rows here

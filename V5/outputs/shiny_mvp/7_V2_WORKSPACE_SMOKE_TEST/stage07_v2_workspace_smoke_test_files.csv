@@ -1,0 +1,9 @@
+file_path,exists,notes
+shiny_app/app.R,yes,Entry point (sources global.R)
+shiny_app/global.R,yes,Sources R/ ui/ server/ modules/ in order
+shiny_app/R/helpers.R,yes,Page accessors incl. version/methodology/artifact families
+shiny_app/ui/sidebar.R,yes,5 groups / sections nav
+shiny_app/ui/tabs.R,yes,All section_* panel builders
+shiny_app/server/server.R,yes,Reactive handlers + outputOptions block
+shiny_app/server/models_server.R,yes,Models pages server logic
+shiny_app/www/custom.css,yes,Theme + page-specific styles

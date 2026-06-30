@@ -1,0 +1,12 @@
+item,value,unit,evidence
+full_v5_tree,1414.3,MB,Get-ChildItem -Recurse Measure-Object
+kept_after_dockerignore,0.95,MB,shiny_app+config+docker+markers
+reduction_factor,1488,x,1414.3/0.95
+context_transferred_stage3,1.63,kB,build log '#3 transferring context'
+context_transferred_stage5,4.43,kB,build log '#5 transferring context'
+excluded_outputs,1255.3,MB,not in build context (runtime mount)
+excluded_data,155.3,MB,not in build context (runtime mount)
+excluded_python,1.8,MB,no Python in image
+baked_shiny_app,0.9,MB,COPY shiny_app/
+baked_config,0.02,MB,COPY config/
+baked_markers,0.01,MB,ACTIVE_PROJECT_ROOT.md + VERSION_INFO.md

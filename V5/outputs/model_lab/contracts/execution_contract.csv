@@ -1,0 +1,11 @@
+contract_area,requirement,required,notes
+execution_gate,Execution must load config/execution.yaml before any job starts.,True,training_enabled and dry_run are authoritative controls.
+execution_gate,"If training_enabled is false, execute zero jobs.",True,Write execution audit with status blocked_by_config.
+execution_gate,"If dry_run is true, execute zero jobs.",True,Write execution audit with status dry_run_only.
+execution_gate,Real execution is allowed only when training_enabled is true and dry_run is false.,True,Future implementation must still pass all preflight validations.
+job_inputs,Each executable job must originate from training_job_plan.csv.,True,Ad hoc jobs outside the planned job catalog are not allowed.
+job_inputs,"Each job must reference one run_id, job_id, entity_key, model_name, and window_id.",True,These fields define output lineage.
+artifact_layout,Model Lab artifacts must be written under outputs/model_lab/artifacts/run_id/model_name/entity_key/window_id/.,True,No artifacts should be written outside the Model Lab artifact root.
+error_handling,"Errors must capture run_id, job_id, entity_key, model_name, error_timestamp, error_type, error_message, and stack_trace_available.",True,A failed job must not stop unrelated jobs unless a platform-level failure is detected.
+logging,"Execution logs must capture timestamp, run_id, job_id, entity_key, model_name, status, and message.",True,Logs must be sufficient to reconstruct job-level execution history.
+outputs,"Forecast, metrics, and tournament outputs must follow their documented schemas.",True,Schema additions require a new forecast_version or contract update.

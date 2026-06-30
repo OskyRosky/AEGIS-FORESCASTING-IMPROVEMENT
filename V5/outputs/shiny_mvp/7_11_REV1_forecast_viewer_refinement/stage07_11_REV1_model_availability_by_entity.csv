@@ -1,0 +1,46 @@
+"entity_key","n_models","models","global_models"
+"APC-Dedicated",1,"FixedGrowth1%",16
+"APC-MSIT",1,"ExponentialSmoothing_ARIMA_Ensemble",16
+"APC-Multitenant",1,"FixedGrowth3%_FixedGrowth1%_Ensemble",16
+"ARE-Go Local",1,"FixedGrowth4%_ARIMA_Ensemble",16
+"AUS-Go Local",1,"ARIMA",16
+"AUT-Go Local",1,"ARIMA",16
+"BRA-Go Local",1,"FixedGrowth3%_ARIMA_Ensemble",16
+"CAN-Go Local",1,"ARIMA",16
+"CHE-Go Local",1,"FixedGrowth2%_ARIMA_Ensemble",16
+"CHL-Go Local",1,"FixedGrowth5%_ExponentialSmoothing_Ensemble",16
+"DEU-Go Local",1,"FixedGrowth3%_ARIMA_Ensemble",16
+"DNK-Go Local",1,"FixedGrowth5%_ExponentialSmoothing_Ensemble",16
+"ESP-Go Local",1,"ARIMA",16
+"EUR-Dedicated",1,"FixedGrowth1%",16
+"EUR-Go Local",1,"ARIMA",16
+"EUR-MSIT",1,"ARIMA",16
+"EUR-Multitenant",1,"FixedGrowth2%_FixedGrowth1%_Ensemble",16
+"FRA-Go Local",1,"ARIMA",16
+"GBR-Dedicated",1,"FixedGrowth1%",16
+"GBR-Go Local",1,"ARIMA",16
+"IDN-Go Local",1,"FixedGrowth5%",16
+"IND-Go Local",1,"FixedGrowth4%_ARIMA_Ensemble",16
+"ISR-Go Local",1,"FixedGrowth5%_ARIMA_Ensemble",16
+"ITA-Go Local",1,"FixedGrowth5%_ExponentialSmoothing_Ensemble",16
+"JPN-Go Local",1,"FixedGrowth2%",16
+"KOR-Go Local",1,"FixedGrowth4%_ExponentialSmoothing_Ensemble",16
+"LAM-Multitenant",1,"FixedGrowth2%_ARIMA_Ensemble",16
+"MEX-Go Local",1,"FixedGrowth5%_ARIMA_Ensemble",16
+"MYS-Go Local",1,"FixedGrowth5%_ExponentialSmoothing_Ensemble",16
+"NAM-Dedicated",1,"FixedGrowth1%",16
+"NAM-GCC Low",1,"FixedGrowth2%_ARIMA_Ensemble",16
+"NAM-ITAR DoD",1,"ExponentialSmoothing",16
+"NAM-ITAR GCCH",1,"ExponentialSmoothing",16
+"NAM-MSIT",1,"FixedGrowth5%_ARIMA_Ensemble",16
+"NAM-Multitenant",1,"FixedGrowth2%_FixedGrowth1%_Ensemble",16
+"NAM-SDF",1,"ExponentialSmoothing",16
+"NAM-TDF",1,"FixedGrowth1%",16
+"NOR-Go Local",1,"FixedGrowth3%_ExponentialSmoothing_Ensemble",16
+"NZL-Go Local",1,"ExponentialSmoothing",16
+"POL-Go Local",1,"FixedGrowth5%",16
+"QAT-Go Local",1,"FixedGrowth3%",16
+"SGP-Go Local",1,"ExponentialSmoothing",16
+"SWE-Go Local",1,"FixedGrowth2%",16
+"TWN-Go Local",1,"FixedGrowth5%_ARIMA_Ensemble",16
+"ZAF-Go Local",1,"FixedGrowth2%_ARIMA_Ensemble",16

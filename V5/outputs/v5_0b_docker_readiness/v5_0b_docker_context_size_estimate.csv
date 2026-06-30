@@ -1,0 +1,12 @@
+dir,size_mb,disposition,dockerignore
+outputs,1255.3,mount_read_only_or_curate,yes (ignore bulk; mount governed artifacts RO)
+data,155.3,mount_read_only,yes (ignore data/raw; mount data/processed RO)
+python,1.8,exclude_from_dashboard_image,yes (dashboard); include only in refresh image
+shiny_app,0.9,include_in_image,no
+docs,0.3,exclude,yes
+MassiveForecasting-V3,0.3,exclude_legacy,yes
+config,0.0,include_minimal,no
+notebooks,0.0,exclude,yes
+scripts,0.0,include_selected,no
+tests,0.0,exclude,yes
+TOTAL,1414.2,context_after_dockerignore_~3MB+RpkgLayers,NA

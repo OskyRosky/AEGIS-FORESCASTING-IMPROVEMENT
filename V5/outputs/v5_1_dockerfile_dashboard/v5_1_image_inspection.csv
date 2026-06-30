@@ -1,0 +1,19 @@
+item,observed,evidence
+image_tag,aegis-dashboard:v5.1,docker images
+image_size_inspect_MB,526.2,docker image inspect .Size
+image_size_docker_images,2.1GB,docker images (includes BuildKit attestation/provenance manifest)
+layer_count,19,docker image inspect .RootFS.Layers
+base_image,rocker/r-ver:4.6.0,FROM (digest-pinned)
+base_digest,sha256:a3c049a16b67a01f893c106a1c8e7c878f739a541bda1fa01e42c3507aa232e9,docker manifest inspect
+base_os,Ubuntu 24.04 (noble),/etc/os-release
+r_version,4.6.0 (2026-04-24),R --version
+required_r_packages_present,14/14,mounted _inspect.R
+heavy_ml_or_python_bridge,NONE,_inspect.R (torch/keras/xgboost/lightgbm/reticulate/prophet/forecast absent)
+python_runtime,NO_PYTHON,command -v python python3
+data_raw_baked,NO_RAW,ls -A /app/data/raw empty
+secrets_env,NO_SECRET_ENV,env grep password/secret/token
+secrets_files,none,find *.env/*.pem/*secret*/*.key
+secrets_history,none,docker history scan
+pandoc,installed_apt,which pandoc
+tinytex,installed,build log TINYTEX_INSTALLED
+app_code,/app/shiny_app present,ls /app

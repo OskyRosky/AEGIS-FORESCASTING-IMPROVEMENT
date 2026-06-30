@@ -1,0 +1,14 @@
+marker,field,expected,observed,status
+ACTIVE_PROJECT_ROOT.md,active_project_root,...\AEGIS-FORESCASTING-IMPROVEMENT\V5,...\AEGIS-FORESCASTING-IMPROVEMENT\V5,PASS
+ACTIVE_PROJECT_ROOT.md,description,V5 active / V1-V4 frozen,V5 active / V1-V4 frozen,PASS
+VERSION_INFO.md,version_name,V5,V5,PASS
+VERSION_INFO.md,active_project_root,...\V5,...\V5,PASS
+VERSION_INFO.md,based_on,V4 (controlled copy 2026-06-30),V4 (controlled copy 2026-06-30),PASS
+VERSION_INFO.md,current_status,V5.0A baseline clone,V5.0A baseline clone,PASS
+VERSION_INFO.md,next_stage,V5.0B Docker Readiness Audit,V5.0B Docker Readiness Audit,PASS
+config/project_root_policy.json,json_validity,valid JSON,VALID,PASS
+config/project_root_policy.json,active_version,V5,V5,PASS
+config/project_root_policy.json,based_on_version,V4,V4,PASS
+config/project_root_policy.json,active_project_root,...\V5,...\V5,PASS
+root_resolution,find_project_root,resolves to V5 (relative markers),resolves to V5 (relative; no absolute V4 path used),PASS
+code_scan,absolute_V4_path_leak,none in runtime code,none (clean),PASS

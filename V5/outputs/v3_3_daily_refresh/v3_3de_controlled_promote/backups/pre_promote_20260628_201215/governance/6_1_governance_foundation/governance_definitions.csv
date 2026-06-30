@@ -1,0 +1,16 @@
+term,definition,source_artifact,governance_implication,dashboard_implication,created_timestamp
+champion,A model formally selected by the champion decision artifact.,champion_decision.csv,Use only after 5.31 decision.,Display with decision context and conditions.,2026-06-14T10:24:31
+champion_with_conditions,A selected champion that carries explicit caveats or follow-up obligations.,champion_decision.csv,"Transitional monitored state, not unconditional victory.",Surface conditions beside champion name.,2026-06-14T10:24:31
+no_champion,Formal decision that no model is sufficiently defensible for champion status.,champion_decision.csv,Blocks champion promotion until later decision.,State no champion plainly.,2026-06-14T10:24:31
+selected_champion,The specific model selected in the official champion decision.,model_lab_champion_summary.csv,Single source is the decision artifact.,Show ETS Explicit as conditional champion.,2026-06-14T10:24:31
+conditional_champion,Synonym for champion selected with conditions.,champion_decision.csv,Requires risk and condition carry-forward.,Avoid absolute winner language.,2026-06-14T10:24:31
+tournament_standing,Preliminary ordered tournament output for review.,tournament_preliminary_standings.csv,Not equivalent to champion decision.,"Label as preliminary standing, not winner.",2026-06-14T10:24:31
+eligible_candidate,A scored model eligible for decision review.,champion_candidate_evaluation.csv,Can be considered but not automatically selected.,Display as eligible candidate.,2026-06-14T10:24:31
+ineligible_candidate,"A scored model excluded from champion consideration by evidence, risk, or guardrail.",champion_candidate_evaluation.csv,May remain in analysis but not champion eligible.,Show exclusion reason.,2026-06-14T10:24:31
+deferred_model,A model not scored in the final tournament due to documented blocker.,model_lab_deferred_models.csv,"Future-work candidate, not discarded concept.",Show as deferred with reason.,2026-06-14T10:24:31
+risk_flag,A documented condition that must be surfaced and reviewed.,model_lab_risk_register_final.csv,Cannot be hidden in governance or dashboard.,Show visible warning/caveat.,2026-06-14T10:24:31
+manual_review,Required human review before future promotion or decision use.,tournament_candidate_readiness_for_5_31.csv,Requires follow-up action.,Display review requirement.,2026-06-14T10:24:31
+confidence_level,Decision confidence assigned by champion decision.,champion_decision.csv,Medium confidence means caveats remain.,"Display confidence, not just champion.",2026-06-14T10:24:31
+carry_forward_condition,A non-blocking condition preserved for later stages.,champion_decision_risk_review.csv,Must remain visible in governance.,Show in risks/conditions panel.,2026-06-14T10:24:31
+dashboard_safe_statement,Language that does not overstate evidence or hide conditions.,governance_definitions.csv,Prevents misleading dashboard claims.,Use conditional champion wording.,2026-06-14T10:24:31
+source_of_truth,The authoritative artifact for a governed fact.,governance_foundation_report.md,Avoid competing interpretations.,Link dashboard values to artifact paths.,2026-06-14T10:24:31

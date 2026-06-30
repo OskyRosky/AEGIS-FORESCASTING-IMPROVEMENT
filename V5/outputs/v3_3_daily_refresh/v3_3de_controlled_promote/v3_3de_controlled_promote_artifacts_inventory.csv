@@ -1,0 +1,9 @@
+domain,artifact,status
+processed,actuals.csv,PROMOTED
+processed,entities.csv,PROMOTED
+processed,forecast_comparison.csv,PROMOTED
+processed,forecasts.csv,PROMOTED
+processed,run_metadata.csv,PROMOTED_LAST
+processed,run_metadata_pipeline.csv,PROMOTED_AUDIT_9FIELD
+raw,data_raw,NOT_PROMOTED_AUDIT_ONLY
+champion,champion_decision,NOT_PROMOTED_FROZEN

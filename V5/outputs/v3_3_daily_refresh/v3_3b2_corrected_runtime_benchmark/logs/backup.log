@@ -1,0 +1,8 @@
+backed_up:data/raw
+backed_up:data/processed
+backed_up:outputs/evaluation
+backed_up:outputs/governance
+backed_up:outputs/model_lab/forecast_viewer_handoff
+backed_up:outputs/model_lab/tournament_engine
+backed_up:outputs/model_lab/champion_decision
+backed_up:outputs/v3_2h_model_consistency_fix

@@ -1,0 +1,7 @@
+candidate,champion_mase,candidate_mase,candidate_vs_champion_ratio,candidate_gap,promotion_eligible,reason
+SMLP-TCN,6.901144,18.782572,2.721,11.881428,no,2.72x champion and 2.17x the top baseline band (~8.65)
+ENET-RIDGE,6.901144,19.330846,2.801,12.429702,no,2.80x champion; best ML but not competitive
+NLIN-DLIN_FIXED,6.901144,24.816041,3.596,17.914897,no,3.60x champion despite non-negativity fix
+LGBM-IMP-v2,6.901144,26.747444,3.876,19.846300,no,3.88x champion
+XGB-IMP-v2,6.901144,27.950413,4.050,21.049269,no,4.05x champion and slowest candidate
+FNAR-V2,6.901144,81.668413,11.834,74.767269,no,11.83x champion; improved vs original FastNeuralAR but not competitive

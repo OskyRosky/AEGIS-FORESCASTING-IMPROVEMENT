@@ -1,0 +1,11 @@
+field,value
+launched_from,V3
+process_id,47140
+host,127.0.0.1
+port,3838
+url,http://127.0.0.1:3838
+http_status,200
+resolved_root,V3
+stdout_log,outputs\shiny_mvp\0_V3_INIT_BASELINE_CLONE\logs\stage0_v3_init_baseline_clone_stdout.log
+stderr_log,outputs\shiny_mvp\0_V3_INIT_BASELINE_CLONE\logs\stage0_v3_init_baseline_clone_stderr.log
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 47140

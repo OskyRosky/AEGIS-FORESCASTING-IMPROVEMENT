@@ -1,0 +1,18 @@
+check_id,check,expectation,result,status
+V4_6R_C01,Dashboard responds HTTP 200,HTTP 200,HTTP 200 (281565 chars),PASS
+V4_6R_C02,4 panels exist,champion/tournament/forecast/risks present,All 4 present with unique ids + buttons,PASS
+V4_6R_C03,Panels located at END of sections (not start),Each panel index after its section header,4/4 AFTER head,PASS
+V4_6R_C04,Button shows visible content on click,Narrative renders,"Champion 1578 chars + Tournament 1627 chars rendered (real clicks); status Ready",PASS
+V4_6R_C05,Champion & Tournament visually verified,Screenshot or clear HTML evidence,"Playwright clicks + accessibility-tree snapshot of full Tournament panel + field-by-field Champion check",PASS
+V4_6R_C06,No critical log errors,0 critical errors,0 (only pre-existing readr warning),PASS
+V4_6R_C07,data/processed not mutated,No writes,No data/processed access (read-only UI module),PASS
+V4_6R_C08,data/raw not mutated,No writes,No data/raw access,PASS
+V4_6R_C09,No SQL,No DB/SQL,None,PASS
+V4_6R_C10,No model refresh,No model fit/forecast recompute,Module reads precomputed JSON only,PASS
+V4_6R_C11,No Azure / no real LLM,No external/Azure/LLM,"is_real_llm=false, uses_azure=false; reads local v4_4_mock_responses.json only",PASS
+V4_6R_C12,Champion unchanged,APP_CHAMPION == 'ETS Explicit',constants.R unchanged,PASS
+V4_6R_C13,Governance unchanged,No governance change,Governance footer 'Explanation only · no model changes · no champion changes',PASS
+V4_6R_C14,V1/V2/V3 intact,No edits outside V4,Only V4/shiny_app files modified,PASS
+V4_6R_C15,Download disabled until V4.7,Disabled placeholder,"Disabled button 'Download (available in V4.7)'",PASS
+V4_6R_C16,Optional question box safe + bounded,Local mock, governed-evidence only note,"Box present; note 'This MVP mock explains the current section using governed evidence only'; asked block 'Answered using the governed evidence for this section only'",PASS
+V4_6R_C17,Badge prominence reduced,Visible but not dominant,Small footer chip (.llm-explain-foot-badge),PASS

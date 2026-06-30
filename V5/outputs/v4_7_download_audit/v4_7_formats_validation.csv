@@ -1,0 +1,21 @@
+check_id,check,expected,observed,status
+F01,Modal exposes Markdown format,enabled download link,enabled link href download_md,PASS
+F02,Modal exposes PDF format,enabled download link,enabled link href download_pdf,PASS
+F03,Modal exposes Word (.docx) format,enabled download link,enabled link href download_docx,PASS
+F04,Modal exposes HTML format,enabled download link,enabled link href download_html,PASS
+F05,Modal exposes Plain text format,enabled download link,enabled link href download_txt,PASS
+F06,No format shows disabled/unavailable note,zero disabled buttons,5 of 5 enabled,PASS
+F07,Markdown download content,HTTP 200 markdown,200 1003B head '# AE',PASS
+F08,PDF download content,HTTP 200 %PDF,200 103406B head '%PDF',PASS
+F09,DOCX download content,HTTP 200 zip PK,200 11303B head 'PK\x03\x04',PASS
+F10,HTML download content,HTTP 200 html doc,200 1944B head '<!do',PASS
+F11,TXT download content,HTTP 200 text,200 1027B head 'AEGI',PASS
+F12,No sources/traceability in MD,hasSources false,false,PASS
+F13,No sources/traceability in HTML,hasSources false,false,PASS
+F14,No sources/traceability in TXT,hasSources false,false,PASS
+F15,pandoc available at runtime,rmarkdown::pandoc_available TRUE,TRUE v3.10,PASS
+F16,LaTeX available for PDF,tinytex pdflatex on PATH,pdflatex.exe found,PASS
+F17,Document name shown in modal,AEGIS_Explanation_Tournament_2026-06-29,matched,PASS
+F18,Champion frozen,ETS Explicit unchanged,unchanged,PASS
+F19,No data/model/Azure/LLM mutation,none,none,PASS
+F20,App responds after restart,HTTP 200,200 len 284644,PASS

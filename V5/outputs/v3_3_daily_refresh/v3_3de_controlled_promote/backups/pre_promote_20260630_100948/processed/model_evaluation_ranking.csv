@@ -1,0 +1,8 @@
+rank,model,family,role,median_mase,median_rmsse,vs_champion_mase_ratio,status
+0,ETS Explicit,statistical,champion_reference,6.901144,1.856193,1.000,champion_reference
+1,SMLP-TCN,lightweight_neural,best_dl_challenger,18.782572,4.79041,2.721,challenger
+2,ENET-RIDGE,linear_ml,best_ml_challenger,19.330846,5.027895,2.801,challenger
+3,NLIN-DLIN_FIXED,linear_dl,challenger,24.816041,6.64135,3.596,challenger
+4,LGBM-IMP-v2,gradient_boosting,challenger,26.747444,6.328078,3.876,challenger
+5,XGB-IMP-v2,gradient_boosting,challenger,27.950413,6.426824,4.050,challenger
+6,FNAR-V2,lightweight_neural,challenger,81.668413,22.405331,11.834,challenger

@@ -1,0 +1,18 @@
+check,expected,observed,status
+v5_created_from_v4,V5 controlled copy of V4,2079 files cloned, 0 failed,PASS
+clone_exclusions_applied,.venv/__pycache__/*.pyc/caches excluded,6 dirs skipped + *.pyc excluded,PASS
+tree_parity,V4 == V5 (same exclusions),2079=2079, 0 diffs both sides,PASS
+root_markers_point_to_v5,all 3 markers -> V5,ACTIVE_PROJECT_ROOT/VERSION_INFO/policy.json -> V5,PASS
+json_marker_valid,valid JSON,VALID,PASS
+root_resolution_self,V5 resolves own root (not V4),relative resolver -> V5; no V4 path leak,PASS
+dashboard_starts,launches locally,PID 62892 on port 3840,PASS
+http_200,HTTP 200,200,PASS
+ten_assistants_visible,10 assistants,Generate explanation x10,PASS
+champion_ets_explicit,ETS Explicit,ETS Explicit (x90 + hash parity),PASS
+scope_15_models,15-model scope,15 governed models / 15 models,PASS
+horizons_30_60_180,30 / 60 / 180 days,present x2,PASS
+no_critical_log_errors,no critical errors,only benign readr warning,PASS
+v1_v2_v3_v4_intact,untouched,untouched,PASS
+no_data_processed_mutation,unchanged,SHA256 parity identical,PASS
+no_data_raw_mutation,unchanged,unchanged,PASS
+overall,V5_0A_BASELINE_CLONE_COMPLETED,all DoD checks PASS,PASS

@@ -1,0 +1,8 @@
+priority,calibration_grain,min_sample_size,feasibility,risk,notes
+1,key/series x mapped-model x horizon-bucket,40,INFEASIBLE,n/a,Per-model mapping NOT reliable (only 0 clean + 1 weak match); cannot use for most models
+2,key/series x model-family x horizon-bucket,40,PARTIALLY_FEASIBLE,high,Production ensembles have no clean backtest family; family mapping ambiguous for ARIMA/ETS
+3,key/series x horizon-bucket,30,FEASIBLE_PREFERRED,medium,"Single resource (HDD); ~45 keys; pools all backtest models per key -> portfolio proxy band. RECOMMENDED primary grain"
+4,resource x horizon-bucket,20,FEASIBLE_FALLBACK,medium,Only one resource (HDD) so this approximates global; use when a key has too few residuals
+5,global x horizon-bucket,20,FEASIBLE_LAST_RESORT,high,Coarsest; ignores key-level heterogeneity; only to avoid empty bands
+NOTE_horizon_coverage,n/a,n/a,CONSTRAINT,critical,"Backtest horizon_days only 1-30. Buckets >30d (31-60...365+) have NO evidence -> mark interval_extrapolated=TRUE or leave NA per Oscar decision D-H1"
+NOTE_sample_per_bucket,n/a,n/a,CONSTRAINT,high,"~13620 backtest rows/model across 45 keys x 30 horizons -> ~10 obs per key-horizon-model; thin for 95% quantiles. Pool to buckets and/or across models"

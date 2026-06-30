@@ -1,0 +1,26 @@
+rule_id,applies_to,rule,severity,on_failure
+PR01,response_metadata,page_id must be one of the 4 MVP pages,blocking,reject response
+PR02,response_metadata,provider must be mock in MVP,blocking,reject response
+PR03,response_metadata,provider_stage must be mock_no_llm in MVP,blocking,reject response
+PR04,response_metadata,local_first must be true,blocking,reject response
+PR05,display,executive_summary must be non-empty,blocking,reject response
+PR06,display,what_the_evidence_says must have >=1 item,blocking,reject response
+PR07,display,why_it_matters must be non-empty,blocking,reject response
+PR08,display,sources_used must have >=1 item,blocking,reject response
+PR09,display,limitations must have >=1 item,blocking,reject response
+PR10,display,limitations must include the explain-not-decide caveat,blocking,reject response
+PR11,display,limitations must include the 2026-06-28 snapshot caveat,warning,flag response
+PR12,display,confidence must be in enum,blocking,reject response
+PR13,traceability,claims must have >=1 item each with claim+maps_to,blocking,reject response
+PR14,traceability,source_artifacts must have >=1 item,blocking,reject response
+PR15,traceability,evidence_pack_refs must have >=1 item,blocking,reject response
+PR16,governance,champion_policy must equal frozen / governed / no auto-change,blocking,reject response
+PR17,governance,llm_policy must equal explain_only,blocking,reject response
+PR18,governance,data_policy must equal read_only_evidence_pack,blocking,reject response
+PR19,download_payload,markdown json csv_rows keys must exist,blocking,reject response
+PR20,validation,is_valid checks_passed checks_failed must exist,blocking,reject response
+PR21,all-visible-text,no forbidden language present,blocking,reject response
+PR22,all-claims,each what_the_evidence_says fact must map to a claim or source,warning,flag response
+PR23,insufficient-evidence,if evidence missing then confidence=insufficient_evidence and summary says so,blocking,reject response
+PR24,provider-honesty,no text may imply Azure or a real LLM is active while mock_no_llm,blocking,reject response
+PR25,champion,no text may imply the champion changed or won absolutely,blocking,reject response

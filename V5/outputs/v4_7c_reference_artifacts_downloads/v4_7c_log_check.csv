@@ -1,0 +1,12 @@
+check,expected,observed,status
+app_listening,port 3839,"Listening on http://127.0.0.1:3839",PASS
+startup_errors,none,"stderr scan for Error/cannot/not found/unexpected -> NO_ERRORS",PASS
+pandoc_active,pandoc 3.10,"Version '3.10' is now the active one; pandoc activated for rmarkdown",PASS
+parse_llm_explain,PARSE_OK,PARSE_OK,PASS
+parse_artifact_export,PARSE_OK,PARSE_OK,PASS
+parse_tabs,PARSE_OK,PARSE_OK,PASS
+parse_server,PARSE_OK,PARSE_OK,PASS
+parse_global,PARSE_OK,PARSE_OK,PASS
+parse_body,PARSE_OK,PARSE_OK,PASS
+json_responses,11,11,PASS
+json_has_reference_artifacts,TRUE,TRUE,PASS

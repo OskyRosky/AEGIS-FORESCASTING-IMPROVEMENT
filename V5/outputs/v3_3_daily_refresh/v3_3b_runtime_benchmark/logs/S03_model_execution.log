@@ -1,0 +1,24 @@
+S03 START 2026-06-26T18:22:18.1856292-06:00
+--- training_orchestrator (plan) ---
+[2026-06-26 18:22:19] INFO training_orchestrator - Stage 5.5 training orchestration planning started
+[2026-06-26 18:22:19] INFO training_orchestrator - Loaded config sections: ['backtesting', 'scoring_weights', 'tournament']
+[2026-06-26 18:22:19] INFO training_orchestrator - Backtesting windows loaded: 454
+[2026-06-26 18:22:19] INFO training_orchestrator - Feature dataset rows loaded: 84537
+[2026-06-26 18:22:19] INFO training_orchestrator - Registered models loaded: ['ARIMA_Fixed', 'AutoARIMA', 'ETS', 'ETS_Current', 'FixedGrowth_1_5', 'FixedGrowth_3', 'FixedGrowth_4', 'FixedGrowth_6', 'LightGBM', 'LinearRegression', 'NBEATS', 'NHITS', 'Theta', 'XGBoost']
+[2026-06-26 18:22:21] INFO training_orchestrator - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\model_lab\training_job_plan.csv with 6356 rows
+[2026-06-26 18:22:21] INFO training_orchestrator - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\model_lab\training_job_summary.csv with 1 rows
+[2026-06-26 18:22:21] INFO training_orchestrator - Stage 5.5 training orchestration planning completed
+S03 ORCH END elapsed_seconds=3.8 exit_orchestrator=0
+--- run_full_baseline_execution ---
+[2026-06-26 18:22:43] INFO run_full_baseline_execution - Stage 5.10 full baseline execution started
+[2026-06-26 18:22:44] INFO run_full_baseline_execution - Processed 500/3178 baseline jobs
+[2026-06-26 18:22:45] INFO run_full_baseline_execution - Processed 1000/3178 baseline jobs
+[2026-06-26 18:22:46] INFO run_full_baseline_execution - Processed 1500/3178 baseline jobs
+[2026-06-26 18:22:47] INFO run_full_baseline_execution - Processed 2000/3178 baseline jobs
+[2026-06-26 18:22:48] INFO run_full_baseline_execution - Processed 2500/3178 baseline jobs
+[2026-06-26 18:22:49] INFO run_full_baseline_execution - Processed 3000/3178 baseline jobs
+[2026-06-26 18:22:50] INFO run_full_baseline_execution - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\model_lab\full_baseline\full_baseline_forecasts.csv with 95340 rows
+[2026-06-26 18:22:50] INFO run_full_baseline_execution - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\model_lab\full_baseline\full_baseline_execution_status.csv with 3178 rows
+[2026-06-26 18:22:50] INFO run_full_baseline_execution - Created C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\outputs\model_lab\full_baseline\full_baseline_summary.csv with 1 rows
+[2026-06-26 18:22:50] INFO run_full_baseline_execution - Stage 5.10 full baseline execution completed
+S03 BASELINE END 2026-06-26T18:22:50.3327538-06:00 elapsed_seconds=8.2 exit_baseline=0

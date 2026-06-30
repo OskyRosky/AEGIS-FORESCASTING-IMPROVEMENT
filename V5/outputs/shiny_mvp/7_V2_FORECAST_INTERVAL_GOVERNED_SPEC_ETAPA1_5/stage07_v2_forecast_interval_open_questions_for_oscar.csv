@@ -1,0 +1,12 @@
+id,question,options,recommendation,blocking
+D1,Which interval levels to generate?,80 only | 95 only | both 80 and 95,both (show 95 by default),no
+D2,What to do for horizons beyond backtest evidence (>30 days)?,leave NA | extrapolate+flag interval_extrapolated=TRUE | grow band by sqrt(horizon) heuristic,"NA up to a small grace, then flag-extrapolated with explicit caveat (NOT silent)",YES
+D3,Primary calibration grain?,per-model | key x horizon-bucket | resource x horizon-bucket | global,key x horizon-bucket with documented model-population caveat,YES
+D4,Should deterministic models (FixedGrowth*) get empirical bands?,yes (labeled empirical) | no (NA bands),yes labeled empirical,no
+D5,Accept that bands are a PORTFOLIO proxy (backtest models != production models)?,accept+document | block until model mapping solved,accept+document (no reliable mapping exists),YES
+D6,Horizon bucket boundaries?,daily | 1-7/8-14/15-30 only | full set incl >30,"1-7 / 8-14 / 15-30 (evidence-backed); >30 only if D2 allows extrapolation",no
+D7,Minimum sample size per bucket for a populated band?,20 | 30 | 40,30 (with fallback up the hierarchy when below),no
+D8,Lower cap at 0 for HDD?,yes | no,yes (document coverage distortion),no
+D9,Dashboard label?,Prediction interval (backtest-calibrated) | Uncertainty band | Confidence interval,Prediction interval (backtest-calibrated),no
+D10,Default band shown in Shiny?,80 | 95 | none until toggled,95,no
+D11,Is a 30-day-only honest band acceptable, or must long-horizon bands exist for business use?,30-day honest only | must cover full horizon,NEEDS OSCAR/business input - determines whether 2B is viable as-is,YES

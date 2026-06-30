@@ -1,0 +1,9 @@
+status,terminal,description
+planned,False,Job exists in the training plan but has not started.
+running,False,Job execution has started and has not reached a terminal state.
+completed,True,Job completed all required execution and output steps.
+failed,True,Job execution failed and error details were recorded.
+skipped,True,Job was intentionally skipped by scheduler or policy.
+blocked_by_config,True,Execution was blocked because training_enabled is false.
+dry_run_only,True,Execution was skipped because dry_run is true.
+execution_not_implemented,True,Execution was requested but real execution is not implemented.

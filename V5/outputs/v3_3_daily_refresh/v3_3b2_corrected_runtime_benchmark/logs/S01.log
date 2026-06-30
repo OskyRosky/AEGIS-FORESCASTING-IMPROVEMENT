@@ -1,0 +1,17 @@
+[2026-06-27 19:37:46] INFO export_hdd_region - Export started
+[2026-06-27 19:44:43] INFO export_hdd_region - ForecastVersion used: 2026-05-01
+[2026-06-27 19:44:48] INFO export_hdd_region - Forecasts exported to C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\hdd_region_forecasts.csv
+[2026-06-27 19:44:48] INFO export_hdd_region - Forecasts row count: 65095
+[2026-06-27 19:44:48] INFO export_hdd_region - Forecasts unique entities: 45
+[2026-06-27 19:44:48] INFO export_hdd_region - Forecasts unique models: 16
+[2026-06-27 19:44:48] INFO export_hdd_region - Forecasts min DateTime: 2026-04-28
+[2026-06-27 19:44:48] INFO export_hdd_region - Forecasts max DateTime: 2030-04-25
+[2026-06-27 19:44:48] INFO export_hdd_region - Actuals exported to C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\hdd_region_actuals.csv
+[2026-06-27 19:44:48] INFO export_hdd_region - Actuals row count: 84537
+[2026-06-27 19:44:48] INFO export_hdd_region - Actuals unique entities: 45
+[2026-06-27 19:44:48] INFO export_hdd_region - Actuals unique models: 1
+[2026-06-27 19:44:48] INFO export_hdd_region - Actuals min DateTime: 2019-07-01
+[2026-06-27 19:44:48] INFO export_hdd_region - Actuals max DateTime: 2026-04-27
+[2026-06-27 19:44:48] INFO export_hdd_region - Export completed
+
+--- STDERR ---

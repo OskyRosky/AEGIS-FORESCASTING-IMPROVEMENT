@@ -1,0 +1,16 @@
+check_name,status,details,created_timestamp
+baseline_model_rows_7,pass,expected=7,2026-06-13T18:07:40
+challenger_model_rows_6,pass,expected=6,2026-06-13T18:07:40
+total_scored_tournament_models_13,pass,actual=13,2026-06-13T18:07:40
+tournament_entity_model_rows_507,pass,actual=507,2026-06-13T18:07:40
+tournament_scorecard_rows_13,pass,actual=13,2026-06-13T18:07:40
+pairwise_comparisons_78,pass,actual=78,2026-06-13T18:07:40
+no_nbeats_scored,pass,NBEATS absent,2026-06-13T18:07:40
+no_nhits_scored,pass,NHITS absent,2026-06-13T18:07:40
+fast_neural_included_and_flagged,pass,FastNeuralAR_MLP scored with audit_risk_flag,2026-06-13T18:07:40
+no_champion_selected,pass,champion_selected=false,2026-06-13T18:07:40
+no_winner_selected,pass,winner_selected=false,2026-06-13T18:07:40
+no_final_champion_artifact,pass,champion dirs absent,2026-06-13T18:07:40
+no_shiny_modified,pass,Shiny present and untouched by this script,2026-06-13T18:07:40
+audit_4_verdict_approved,pass,verdict=APPROVE_WITH_CONDITIONS_TO_PROCEED_TO_5.30_TOURNAMENT_ENGINE,2026-06-13T18:07:40
+only_final_audited_challenger_artifacts_consumed,pass,used challenger_aggregation_significance artifacts,2026-06-13T18:07:40

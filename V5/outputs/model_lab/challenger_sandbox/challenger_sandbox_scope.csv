@@ -1,0 +1,40 @@
+run_id,entity_key,window_id,train_start_date,train_end_date,test_start_date,test_end_date,selected_for_sandbox,selection_reason,created_timestamp
+challenger_sandbox,APC-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,APC-MSIT,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,APC-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,ARE-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,AUS-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,BRA-Go Local,12,2020-09-22,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,CAN-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,CHE-Go Local,12,2019-09-28,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,DEU-Go Local,12,2019-10-31,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,ESP-Go Local,12,2023-11-17,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,EUR-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,EUR-MSIT,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,EUR-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,FRA-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,GBR-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,GBR-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,IND-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,ISR-Go Local,12,2023-07-26,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,ITA-Go Local,12,2023-07-26,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,JPN-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,KOR-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,LAM-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,MEX-Go Local,12,2023-07-26,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NAM-Dedicated,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,selected_latest_window_volume_diversity,2026-06-12T15:50:53
+challenger_sandbox,NAM-GCC Low,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NAM-ITAR DoD,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NAM-ITAR GCCH,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NAM-MSIT,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NAM-Multitenant,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,True,selected_latest_window_volume_diversity,2026-06-12T15:50:53
+challenger_sandbox,NAM-SDF,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NAM-TDF,12,2021-01-09,2026-03-28,2026-03-29,2026-04-27,True,selected_latest_window_volume_diversity,2026-06-12T15:50:53
+challenger_sandbox,NOR-Go Local,12,2020-03-08,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,NZL-Go Local,12,2024-09-14,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,POL-Go Local,12,2022-12-13,2026-03-28,2026-03-29,2026-04-27,True,selected_latest_window_volume_diversity,2026-06-12T15:50:53
+challenger_sandbox,QAT-Go Local,12,2022-06-09,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,SGP-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,SWE-Go Local,12,2021-10-23,2026-03-28,2026-03-29,2026-04-27,True,selected_latest_window_volume_diversity,2026-06-12T15:50:53
+challenger_sandbox,TWN-Go Local,12,2024-09-13,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53
+challenger_sandbox,ZAF-Go Local,12,2019-07-01,2026-03-28,2026-03-29,2026-04-27,False,not_selected,2026-06-12T15:50:53

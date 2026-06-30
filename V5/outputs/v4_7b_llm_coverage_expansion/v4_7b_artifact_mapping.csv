@@ -1,0 +1,6 @@
+page_id,primary_artifact,evidence_pack_referenced,key_figures,confidence
+models_universe,data/processed/model_universe_canonical.csv,outputs/v4_2_evidence_pack/v4_2_evidence_pack_champion_overview.json,15 models | 12 eligible | 3 DL eval-only | families 5/4/3/3 | 1 selected champion ETS Explicit,high
+forecasting_accuracy,data/processed/model_evaluation_ranking.csv;model_evaluation_summary.csv,outputs/v4_2_evidence_pack/v4_2_evidence_pack_tournament.json,ETS Explicit ref MASE 6.90 RMSSE 1.86 | SMLP-TCN 2.72x | ENET-RIDGE 2.80x | FNAR-V2 11.83x | 6 challengers kept,high
+forecasting_forecast,data/processed/forecasts_with_intervals.csv;run_metadata.csv,outputs/v4_2_evidence_pack/v4_2_evidence_pack_forecast_viewer.json,65095 forecast rows | 45 entities | 2026-04-28..2030-04-25 | version 2026-05-01 | 80/95 intervals,high
+forecasting_ttl,data/processed/ttl_months_to_live_snapshot.csv,outputs/v4_2_evidence_pack/v4_2_evidence_pack_governance_risks.json,45 entities | MTL 5.23..73.84 median 18.60 | Cool 33 Healthy 10 Warning 2 | supply SIMULATED,medium
+governance_audit,data/processed/run_metadata.csv;model_runtime_guardrails.csv,outputs/v4_2_evidence_pack/v4_2_evidence_pack_governance_risks.json,run 2026-06-28T17:27:14 | 45 entities 16 models | 84537 actual 65095 forecast | 6 guardrails pass 454/454,high

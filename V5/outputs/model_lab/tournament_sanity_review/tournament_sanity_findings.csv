@@ -1,0 +1,6 @@
+finding_id,severity,area,finding,evidence,recommendation,blocking_for_5_31,created_timestamp
+TSR-001,PASS,validation,No blocking sanity failures found.,Checklist and pairwise review have no FAIL statuses.,Proceed if advisories are carried into 5.31.,False,2026-06-13T19:46:36
+TSR-002,ADVISORY,preliminary_standings,One or more top preliminary positions have limited pairwise support.,AutoARIMA,Review during 5.31; do not treat preliminary position as champion evidence by itself.,False,2026-06-13T19:46:36
+TSR-003,ADVISORY,risk_register,FastNeuralAR_MLP high-risk condition carried forward.,risk_rows=3,Manual review required before any champion/no-champion decision involving this model.,False,2026-06-13T19:46:36
+TSR-004,MINOR,exclusions,NBEATS partial/checkpoint row condition carried forward.,NBEATS is not scored and appears only in risk review.,5.31 must consume only final tournament artifacts.,False,2026-06-13T19:46:36
+TSR-005,MINOR,exclusions,NHITS dependency deferral carried forward.,NHITS is not scored and appears only in risk review.,Do not include NHITS until dependency issue is resolved and audited.,False,2026-06-13T19:46:36

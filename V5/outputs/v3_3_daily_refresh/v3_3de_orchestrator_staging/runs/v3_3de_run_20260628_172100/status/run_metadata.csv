@@ -1,0 +1,2 @@
+last_successful_refresh_timestamp,pipeline_status,total_runtime_minutes,model_scope_count,champion_model,validation_status,promoted_run_id,source_data_date,notes
+2026-06-28T17:21:02,STAGING_COMPLETED,0.04,15,ETS Explicit,PENDING,NOT_PROMOTED_STAGING_RUN,2026-06-10,staging-only candidate; smoke
