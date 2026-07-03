@@ -1,0 +1,9 @@
+risk_id,area,risk,severity,blocker_yes_no,mitigation,status
+R1,downloads_v5_4,outputs mounted read-only may affect governed-artifact download flow in V5.4 (downloads currently read source + render to container /tmp),low,no,V5.4 will validate downloads explicitly; app writes exports to /tmp (writable) not to mounts; RO on outputs does not block reads,open_for_v5_4
+R2,repo_relocation,required artifacts could be missing if the repo is moved and Compose is run from the wrong directory,low,no,relative ./ mounts resolve against the compose file dir; run compose from V5 root; usage guide documents this,mitigated
+R3,relative_mount_cwd,relative mounts depend on running Compose from the V5 root,low,no,documented in volume usage guide; container_name fixed,mitigated
+R4,probe_confusion,V5.3 probe files under outputs/v5_3_external_mount_probe/ must not be mistaken for productive artifacts,low,no,probe clearly namespaced under v5_3_*; documented as validation-only evidence; not in loader registry,mitigated
+R5,inter_font_runtime,bslib downloads Google font Inter at first render (needs network); inherited R8/R5,low,no,offline font bundling deferred; benign; dashboard renders,carried_forward
+R6,highcharts_license,highcharter wraps Highcharts (commercial license); inherited R6,medium,no,legal review flagged; unchanged by V5.3,carried_forward
+R7,refresh_headless_mfa,real refresh gated by MFA/headless; inherited,medium,no,refresh service intentionally NOT created; deferred to V5.5/V5.6,carried_forward
+R8,windows_onedrive_locks,Windows/OneDrive file locks can transiently affect host artifacts during snapshot/probe,low,no,use read-only reads; snapshots use Get-FileHash (no lock); no host mutation attempted,mitigated

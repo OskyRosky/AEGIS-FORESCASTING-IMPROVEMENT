@@ -1,0 +1,9 @@
+check,expected,observed,status,evidence
+no_write_data_processed,blocked,READONLY (write blocked),PASS,docker exec
+no_write_data_raw,not mounted,raw absent,PASS,docker exec
+outputs_read_only,READONLY,READONLY,PASS,docker exec
+temp_generation_tmp,exports in /tmp,tmp_pdf=1 (samples in /tmp/v5_4_samples),PASS,docker exec ls
+host_processed_hash_unchanged,B0880D33F488D7E77EED32F12E214D61,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot before==after
+host_raw_hash_unchanged,BD44163AC0DB7E0CD7F8B08EB120973D,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot before==after
+samples_namespaced,v5_4_ probe not productive,download_samples/ under v5_4 folder,PASS,folder path
+dashboard_http_after,200,HTTP 200 LEN 303385,PASS,Invoke-WebRequest

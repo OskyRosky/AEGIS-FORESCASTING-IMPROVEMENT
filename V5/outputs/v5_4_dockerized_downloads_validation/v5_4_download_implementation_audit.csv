@@ -1,0 +1,12 @@
+download_family,page_or_module,format,handler_or_function,source_artifact,expected_output_type,writes_to_temp_yes_no,writes_to_outputs_yes_no,writes_to_data_yes_no,docker_risk,validation_strategy,status
+explanation,shiny_app/R/llm_explain.R,md,download_md -> .llm_build_markdown,v4_4_mock_responses.json (via llm_explain_get + .comp_answer),markdown text,yes,no,no,none (zero-dep writeLines),content+UTF8+signature,PASS
+explanation,shiny_app/R/llm_explain.R,txt,download_txt -> .llm_build_txt,v4_4_mock_responses.json,plain text,yes,no,no,none,content+UTF8,PASS
+explanation,shiny_app/R/llm_explain.R,html,download_html -> .llm_build_html,v4_4_mock_responses.json,self-contained HTML,yes,no,no,none,html structure,PASS
+explanation,shiny_app/R/llm_explain.R,docx,download_docx -> .llm_render_export(md,'docx'),v4_4_mock_responses.json,DOCX via pandoc,yes(tempfile),no,no,needs pandoc,zip+ContentTypes,PASS
+explanation,shiny_app/R/llm_explain.R,pdf,download_pdf -> .llm_render_export(md,'pdf'),v4_4_mock_responses.json,PDF via pandoc+LaTeX,yes(tempfile),no,no,needs pandoc+TinyTeX (RESOLVED V5.4),%PDF signature,PASS
+governed,shiny_app/R/artifact_export.R,csv,dl_<key>_csv -> file.copy VERBATIM,artifact_abs_path(key) governed CSV,verbatim CSV,yes(download tmp),no,no,none (byte copy),SHA256 vs source,PASS
+governed,shiny_app/R/artifact_export.R,md,dl_<key>_md -> .artifact_build_md,governed CSV,markdown table,yes,no,no,none,content+UTF8,PASS
+governed,shiny_app/R/artifact_export.R,txt,dl_<key>_txt -> .artifact_build_txt,governed CSV,plain text,yes,no,no,none,content+UTF8,PASS
+governed,shiny_app/R/artifact_export.R,html,dl_<key>_html -> .artifact_build_html,governed CSV,HTML table,yes,no,no,none,html structure,PASS
+governed,shiny_app/R/artifact_export.R,docx,dl_<key>_docx -> .llm_render_export(md,'docx'),governed CSV,DOCX via pandoc,yes(tempfile),no,no,needs pandoc,zip+ContentTypes,PASS
+governed,shiny_app/R/artifact_export.R,pdf,dl_<key>_pdf -> .llm_render_export(md,'pdf'),governed CSV,PDF via pandoc+LaTeX,yes(tempfile),no,no,needs pandoc+TinyTeX (RESOLVED V5.4),%PDF signature,PASS

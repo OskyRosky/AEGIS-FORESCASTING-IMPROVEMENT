@@ -1,0 +1,13 @@
+check,expected,observed,status,evidence
+data_processed_mount,exists,yes,PASS,docker exec
+outputs_mount,exists,yes,PASS,docker exec
+data_raw_not_mounted,absent,no,PASS,docker exec
+data_processed_read_only,READONLY,READONLY,PASS,docker exec -w
+outputs_read_only_shiny,READONLY,READONLY,PASS,docker exec -w
+processed_csv_count,24,24,PASS,docker exec ls
+llm_mock_json_present,present,yes,PASS,docker exec
+required_artifacts_present,9/9 (V5.3 manifest),all required present,PASS,V5.3 manifest + container
+no_rebuild_assumption,valid,artifacts are mounts not baked,PASS,V5.3 contract
+dashboard_image_id,a799da697173,a799da697173,PASS,docker images
+refresh_image_id,698b1634f78a,698b1634f78a,PASS,docker images
+no_new_unexpected_images,only 2 aegis,aegis-dashboard + aegis-refresh,PASS,docker images

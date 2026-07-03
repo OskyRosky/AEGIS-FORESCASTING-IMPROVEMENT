@@ -1,0 +1,12 @@
+check,expected,observed,status,evidence
+app_data_processed_exists,yes,processed_dir=yes,PASS,docker exec test -d
+app_data_processed_has_csv,>0,processed_csv=24,PASS,docker exec ls *.csv | wc -l
+app_outputs_exists,yes,outputs_dir=yes,PASS,docker exec test -d
+app_outputs_model_lab_exists,yes,outputs_model_lab=yes,PASS,docker exec test -d
+app_outputs_governance_exists,yes,governance_dir=yes,PASS,docker exec test -d
+app_data_raw_absent,no,raw_dir=no,PASS,docker exec test -d /app/data/raw
+app_backup_absent,no,backup_dir=no,PASS,docker exec test -d /app/BACKUP
+app_dotenv_absent,no,dotenv=no,PASS,docker exec test -f /app/.env
+processed_read_only,write blocked,Read-only file system,PASS,docker exec touch (Task F)
+outputs_read_only,write blocked,Read-only file system,PASS,docker exec touch (Task F)
+required_artifacts_present,all,9/9 required present (incl LLM_JSON),PASS,runtime manifest (container probe)

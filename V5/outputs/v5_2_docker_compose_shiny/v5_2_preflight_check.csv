@@ -1,0 +1,19 @@
+check,expected,observed,status,evidence
+v5_root_confirmed,active root = V5,V5\ACTIVE_PROJECT_ROOT.md + VERSION_INFO.md version_name=V5,PASS,workspace root
+v5_0a_closed,V5_0A_BASELINE_CLONE_COMPLETED,outputs/v5_0a_baseline_clone present,PASS,outputs folder
+v5_0b_closed,V5_0B_DOCKER_READINESS_REPRODUCIBILITY_COMPLETED,outputs/v5_0b_docker_readiness present,PASS,outputs folder
+v5_1_closed,V5_1_DOCKERFILE_DASHBOARD_IMAGE_COMPLETED,outputs/v5_1_dockerfile_dashboard present,PASS,outputs folder
+docker_daemon_active,daemon running,started Docker Desktop; server 29.6.1,PASS,docker version
+compose_version,docker compose v2 plugin,Docker Compose version v5.1.4 (plugin present),PASS,docker compose version
+image_v5_1_present,aegis-dashboard:v5.1,aegis-dashboard:v5.1 id ed86271fff04 2.1GB,PASS,docker images
+dockerfile_exists,present,V5\Dockerfile present,PASS,list_dir
+dockerignore_exists,present,V5\.dockerignore present,PASS,list_dir
+entrypoint_exists,present,V5\docker\entrypoint.sh present,PASS,list_dir
+smoke_test_exists,present,V5\scripts\docker_smoke_test.ps1 present,PASS,list_dir
+no_prior_compose,no docker-compose.yml,none found before V5.2,PASS,list_dir
+no_prior_refresh_service,no refresh service,no compose existed,PASS,n/a
+v5_1_container_not_blocking,no running aegis container / port 8080 free,0 aegis containers; port 8080 host listeners=0,PASS,docker ps -a / Get-NetTCPConnection
+data_processed_present,exists,data/processed exists (24 csv),PASS,Test-Path
+data_raw_present_host_not_mounted,exists on host; will NOT be mounted,data/raw exists on host,PASS,Test-Path
+outputs_present,exists,outputs exists,PASS,Test-Path
+data_not_modified_intent,processed/raw untouched,compose mounts :ro only,PASS,compose design

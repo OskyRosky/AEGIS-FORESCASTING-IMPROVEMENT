@@ -1,0 +1,11 @@
+V5.4 GOVERNED DOWNLOADS — in-container render (image aegis-dashboard:v5.1 = a799da697173)
+spec: champion_summary (label Champion summary)
+csv  OK 485b  champion_summary.csv  VERBATIM (SHA256 identical to source model_lab_champion_summary.csv)
+md   OK 1475b champion_summary.md
+txt  OK 1375b champion_summary.txt
+html OK 2532b champion_summary.html  (<!doctype)
+docx OK 10914b champion_summary.docx (PK + [Content_Types].xml)
+pdf  OK 107773b champion_summary.pdf  (%PDF)
+source: /app/outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv
+content: ETS Explicit present; no secrets; no traceback
+writes: /tmp tempfiles only; mounts read-only

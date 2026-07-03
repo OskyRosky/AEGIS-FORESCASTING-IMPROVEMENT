@@ -1,0 +1,2 @@
+selected_champion_model,model_origin,model_family,decision_type,decision_confidence,official_median_mase,official_median_rmsse,supported_better_count,supported_worse_count,conditions,created_timestamp
+ETS Explicit,challenger,statistical,CHAMPION_SELECTED_WITH_CONDITIONS,medium,6.901143533373399,1.856193218184295,8,0,Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as non-champion conditions.,2026-06-13T20:36:01

@@ -1,0 +1,17 @@
+item,expected,observed,status,evidence
+service_shiny_intact,unchanged,shiny image/ports/mounts/restart unchanged,PASS,docker compose config
+refresh_service_added,present,services.refresh,PASS,docker compose config
+refresh_profile,["refresh"],profiles: refresh,PASS,compose config
+refresh_not_autostart,excluded from up shiny,default services=shiny only,PASS,docker compose config --services
+refresh_with_profile,present,--profile refresh services=shiny+refresh,PASS,docker compose --profile refresh config --services
+refresh_image,aegis-refresh:v5.5,aegis-refresh:v5.5,PASS,compose config
+refresh_build,Dockerfile.refresh,context . dockerfile Dockerfile.refresh,PASS,compose config
+refresh_no_ports,none,no ports block,PASS,compose config
+refresh_restart_no,"no",restart: "no",PASS,compose config
+refresh_data_processed_ro,read-only,read_only:true /app/data/processed,PASS,compose config
+refresh_v5_5_output_rw,writable granular,/app/outputs/v5_5_refresh_service_validate (rw),PASS,compose config
+refresh_no_data_raw_mount,absent,no data/raw volume,PASS,compose config
+refresh_no_full_outputs_mount,granular only,productive outputs NOT mounted (only v5_5 subdir),PASS,compose config
+refresh_no_env_secrets,none,no env_file/.env/secrets/AZURE vars,PASS,compose config
+one_shot_run,docker compose run --rm refresh,ran + auto-removed,PASS,run log
+compose_config_valid,valid,parsed OK,PASS,logs/v5_5_compose_config.log

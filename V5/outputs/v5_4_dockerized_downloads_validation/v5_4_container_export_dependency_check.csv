@@ -1,0 +1,22 @@
+check,expected,observed,status,evidence
+locale_lang,C.UTF-8,C.UTF-8,PASS,container env
+locale_lc_all,C.UTF-8,C.UTF-8,PASS,container env
+pandoc_available,yes,/usr/bin/pandoc,PASS,command -v pandoc
+pandoc_version,3.x,pandoc 3.1.3,PASS,pandoc --version
+r_version,4.6.0,R 4.6.0,PASS,getRversion
+rmarkdown_pkg,TRUE,TRUE,PASS,requireNamespace
+knitr_pkg,TRUE,TRUE,PASS,requireNamespace
+tinytex_pkg,TRUE,TRUE,PASS,requireNamespace
+pandoc_pkg,TRUE,TRUE,PASS,requireNamespace
+pandoc_available_r,TRUE,TRUE,PASS,rmarkdown::pandoc_available
+pdflatex_initial,MISSING (blocker),NONE (pre-rebuild),BLOCKER_RESOLVED,pre-rebuild Sys.which
+pdflatex_after_rebuild,present,/root/.TinyTeX/bin/x86_64-linux/pdflatex,PASS,post-rebuild Sys.which
+tinytex_engine,LaTeX for PDF,TinyTeX installed (V5.4 rebuild),PASS,build PDF_BUILD_VERIFY_OK
+zip,present,/usr/bin/zip,PASS,command -v zip
+unzip,present,/usr/bin/unzip,PASS,command -v unzip
+fontconfig,present,/usr/bin/fc-list,PASS,command -v fc-list
+tmp_writable,yes,yes,PASS,test -w /tmp
+tempdir_writable,yes,TRUE,PASS,file.access
+outputs_read_only,yes,READONLY,PASS,docker exec
+data_processed_read_only,yes,READONLY,PASS,docker exec
+caps_pdf_after,TRUE,pdf=TRUE,PASS,.llm_export_caps

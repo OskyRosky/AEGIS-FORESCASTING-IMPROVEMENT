@@ -1,0 +1,104 @@
+{
+  "stage": "V5.5",
+  "mode": "validate_only",
+  "timestamp": "2026-07-03T20:20:58.149398+00:00",
+  "no_sql": true,
+  "no_models": true,
+  "no_promote": true,
+  "no_mutation": true,
+  "all_pass": true,
+  "checks": [
+    {
+      "check": "orchestrator_present",
+      "expected": "exists",
+      "observed": "True",
+      "status": "PASS",
+      "evidence": "/app/python/orchestration/run_daily_refresh_orchestrator.py"
+    },
+    {
+      "check": "data_processed_present",
+      "expected": "exists",
+      "observed": "True",
+      "status": "PASS",
+      "evidence": "/app/data/processed"
+    },
+    {
+      "check": "data_processed_read_only",
+      "expected": "write blocked",
+      "observed": "READONLY",
+      "status": "PASS",
+      "evidence": "attempted write to mount"
+    },
+    {
+      "check": "data_raw_absent",
+      "expected": "absent",
+      "observed": "absent",
+      "status": "PASS",
+      "evidence": "/app/data/raw"
+    },
+    {
+      "check": "required_artifacts_present",
+      "expected": "all present",
+      "observed": "5/5",
+      "status": "PASS",
+      "evidence": "missing=[]"
+    },
+    {
+      "check": "pyodbc_absent",
+      "expected": "not installed (no SQL capability)",
+      "observed": "absent",
+      "status": "PASS",
+      "evidence": "import pyodbc"
+    },
+    {
+      "check": "no_sql_azure_env",
+      "expected": "none",
+      "observed": "none",
+      "status": "PASS",
+      "evidence": "env scan"
+    },
+    {
+      "check": "dangerous_flags_documented",
+      "expected": "present + gated",
+      "observed": "['--execute-staging', '--allow-execute', '--promote', '--allow-promote']",
+      "status": "PASS",
+      "evidence": "static scan; wrapper never passes them"
+    },
+    {
+      "check": "orchestrator_dry_run_safe",
+      "expected": "DRY_RUN_OK (no SQL/models)",
+      "observed": "OK",
+      "status": "PASS",
+      "evidence": "subprocess --dry-run"
+    },
+    {
+      "check": "data_processed_unchanged",
+      "expected": "a2c95a6f46d54c7e9a7b51696c9fe1a3",
+      "observed": "a2c95a6f46d54c7e9a7b51696c9fe1a3",
+      "status": "PASS",
+      "evidence": "hash before==after"
+    },
+    {
+      "check": "data_raw_unchanged",
+      "expected": "MISSING",
+      "observed": "MISSING",
+      "status": "PASS",
+      "evidence": "hash before==after"
+    },
+    {
+      "check": "v5_5_output_dir_writable",
+      "expected": "writable",
+      "observed": "True",
+      "status": "PASS",
+      "evidence": "/app/outputs/v5_5_refresh_service_validate"
+    }
+  ],
+  "dry_run_tail": [
+    "  Growth baseline (4): FixedGrowth_1_5, FixedGrowth_3, FixedGrowth_4, FixedGrowth_6",
+    "  Statistical (5): ARIMA_Fixed, AutoARIMA, ETS Explicit, ETS_Current, Theta",
+    "  Machine learning (3): LightGBM, LinearRegression, XGBoost",
+    "  Deep Learning (3): FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN",
+    "PROHIBITED never executed: ('NBEATS', 'NHITS', 'FastNeuralAR_MLP')",
+    "DRY_RUN_OK"
+  ]
+}

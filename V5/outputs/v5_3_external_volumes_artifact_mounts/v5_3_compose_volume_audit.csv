@@ -1,0 +1,15 @@
+check,expected,observed,status,evidence
+service_shiny_single,only shiny,1 service (shiny),PASS,docker compose config --services
+mount_processed_ro,./data/processed:/app/data/processed:ro,bind read_only:true target /app/data/processed,PASS,docker compose config
+mount_outputs_ro,./outputs:/app/outputs:ro,bind read_only:true target /app/outputs,PASS,docker compose config
+data_raw_absent,not mounted,no data/raw volume,PASS,docker compose config
+backup_absent,not mounted,no BACKUP volume,PASS,docker compose config
+env_secrets_absent,none,no env_file/.env/secrets,PASS,docker compose config
+relative_paths_source,relative,./data/processed and ./outputs in source,PASS,docker-compose.yml
+no_cusers_path,none,no C:\Users in source file,PASS,docker-compose.yml
+no_onedrive_hardcoded,none,no OneDrive path in source file,PASS,docker-compose.yml
+no_refresh_service,absent,none,PASS,docker compose config
+no_extra_ports,only 8080:3838,single mapping,PASS,docker compose config
+no_azure_env_vars,none,no AZURE_/OPENAI_ vars,PASS,docker compose config
+no_sql_env_vars,none,no SQL connection vars,PASS,docker compose config
+healthcheck_inherited,active/inherited,image HEALTHCHECK curl 127.0.0.1:3838 inherited,PASS,Dockerfile

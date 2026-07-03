@@ -1,0 +1,9 @@
+=== NO-REBUILD REFLECTION TEST 2026-07-03T11:03:48.1648075-06:00 ===
+image_id_before=ed86271fff04
+---READ v1 FROM CONTAINER (no rebuild, no restart)---
+V5.3 external mount probe ΓÇö created on host at 2026-07-03T11:03:48.2876079-06:00. Version 1.
+---READ v2 FROM CONTAINER (after host update, no rebuild)---
+V5.3 external mount probe ΓÇö UPDATED on host at 2026-07-03T11:03:48.4198540-06:00. Version 2 (reflection confirmed).
+image_id_after=ed86271fff04
+image_id_unchanged=True
+post_probe_http=200 len=303385

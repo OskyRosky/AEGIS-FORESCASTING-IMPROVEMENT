@@ -1,0 +1,10 @@
+check,expected,observed,status,evidence
+data_processed_unchanged,identical to baseline,count=24 size=144682147 aggsha=B0880D33F488D7E77EED32F12E214D61,PASS,snapshot before==after
+data_raw_unchanged,identical to baseline,count=6 size=17860045 aggsha=BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot before==after
+image_id_unchanged,ed86271fff04,ed86271fff04,PASS,docker images
+dockerfile_unchanged,unchanged,git status clean,PASS,git status --porcelain
+dockerignore_unchanged,unchanged,git status clean,PASS,git status --porcelain
+entrypoint_unchanged,unchanged,git status clean,PASS,git status --porcelain
+smoke_test_script_unchanged,unchanged,git status clean,PASS,git status --porcelain
+docker_compose_unchanged,unchanged (V5.2),untracked new file only; no modification in V5.3,PASS,git status --porcelain
+v1_v2_v3_v4_intact,frozen,only V5 touched this stage,PASS,work scope

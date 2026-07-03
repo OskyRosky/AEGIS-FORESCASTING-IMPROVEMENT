@@ -1,0 +1,7 @@
+processed=yes
+processed_csv=24
+outputs=yes
+raw=no
+proc_ro=READONLY
+out_ro=READONLY
+llm_json=yes

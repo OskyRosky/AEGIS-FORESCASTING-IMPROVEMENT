@@ -1,0 +1,12 @@
+check,expected,observed,status,evidence
+no_env_file,no .env used,no env_file/.env in compose,PASS,docker compose config
+no_secrets_mounted,none,no secrets block; no credential mounts,PASS,docker compose config
+no_credentials_in_compose,none,no passwords/keys/tokens in docker-compose.yml,PASS,docker-compose.yml
+no_data_raw_mounted,not mounted,data/raw absent from volumes,PASS,docker compose config
+no_unnecessary_port,only 8080:3838,single port mapping,PASS,docker compose config
+no_extra_services,only shiny,1 service,PASS,docker compose config
+no_azure_env_vars,none,no AZURE_/OPENAI_ env vars,PASS,docker compose config
+no_sql_connection_attempt,none,R-only image; no SQL driver; no connection string,PASS,image + compose
+no_refresh_command,none,entrypoint = Rscript runApp only,PASS,docker/entrypoint.sh
+no_secrets_in_image_history,none,docker history scan = none,PASS,smoke_test no_secrets_in_history
+relative_paths_only,relative,no absolute C:\Users / OneDrive in source compose,PASS,docker-compose.yml

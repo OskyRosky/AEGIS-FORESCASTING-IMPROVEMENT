@@ -1,0 +1,23 @@
+check,expected,observed,status,evidence
+exit_code,0,0,PASS,docker compose run --rm refresh
+result,ALL_PASS,ALL_PASS -> V5_5_REFRESH_VALIDATE_OK,PASS,run log
+orchestrator_present,True,True,PASS,wrapper check
+data_processed_present,True,True,PASS,wrapper check
+data_processed_read_only,write blocked,READONLY,PASS,wrapper write probe
+data_raw_absent,absent,absent,PASS,wrapper check
+required_artifacts,5/5,5/5,PASS,wrapper check
+no_sql_attempted,none,pyodbc_absent + no SQL calls,PASS,wrapper
+no_odbc_connection,none,pyodbc not importable,PASS,import Traceback
+no_entra_interactive,none,no auth attempted,PASS,validate-only path
+no_mfa,none,no MFA,PASS,validate-only path
+no_model_training,none,no model imports,PASS,wrapper + dry-run
+no_model_runner,none,none,PASS,wrapper
+no_promote,none,--promote never passed,PASS,wrapper code
+no_write_data_processed,blocked,READONLY; hash unchanged,PASS,wrapper + host snapshot
+no_write_data_raw,none,not mounted; unchanged,PASS,wrapper + host snapshot
+no_sql_azure_env,none,env scan none,PASS,wrapper
+dangerous_flags_documented,present,execute-staging/allow-execute/promote/allow-promote,PASS,static scan
+dry_run_safe,DRY_RUN_OK,orchestrator --dry-run OK (pure print),PASS,subprocess
+data_processed_unchanged_in_run,hash equal,before==after,PASS,wrapper
+output_only_v5_5,v5_5 area,report json in outputs/v5_5_refresh_service_validate,PASS,file listing
+banner_validate_only,validate-only/no-sql/no-models/no-promote/no-mutation,printed,PASS,run log

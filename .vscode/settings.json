@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^docker version --format 'SERVER=\\{\\{\\.Server\\.Version\\}\\} OS=\\{\\{\\.Server\\.Os\\}\\}'; Write-Output \"---COMPOSE---\"; docker compose version; Write-Output \"---IMAGES---\"; docker images aegis-dashboard --format '\\{\\{\\.Repository\\}\\}:\\{\\{\\.Tag\\}\\} \\{\\{\\.ID\\}\\} \\{\\{\\.Size\\}\\}'; Write-Output \"---PS---\"; docker ps -a --filter \"name=aegis\" --format '\\{\\{\\.Names\\}\\} \\| \\{\\{\\.Image\\}\\} \\| \\{\\{\\.Status\\}\\} \\| \\{\\{\\.Ports\\}\\}'; Write-Output \"---PORT8080---\"; \\(Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue \\| Measure-Object\\)\\.Count$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

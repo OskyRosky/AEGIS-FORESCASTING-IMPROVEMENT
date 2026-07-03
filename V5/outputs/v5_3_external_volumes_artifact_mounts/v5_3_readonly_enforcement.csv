@@ -1,0 +1,6 @@
+path_attempted,expected,observed,status,host_file_created_yes_no,evidence
+/app/data/processed/v5_3_forbidden_write_probe.txt,Read-only file system,touch: cannot touch ... Read-only file system; PROCESSED_WRITE_BLOCKED,PASS,no,logs/v5_3_readonly_enforcement.log
+/app/outputs/v5_3_forbidden_write_probe.txt,Read-only file system,touch: cannot touch ... Read-only file system; OUTPUTS_WRITE_BLOCKED,PASS,no,logs/v5_3_readonly_enforcement.log
+host_processed_leak_check,no host file,host_processed_forbidden=False,PASS,no,Test-Path host
+host_outputs_leak_check,no host file,host_outputs_forbidden=False,PASS,no,Test-Path host
+dashboard_after_write,HTTP 200,HTTP 200 LEN 303385,PASS,no,smoke test

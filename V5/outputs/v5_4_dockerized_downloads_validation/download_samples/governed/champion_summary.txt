@@ -1,0 +1,19 @@
+GOVERNED ARTIFACT - CHAMPION SUMMARY
+Read-only governed artifact - rendered for human reading.
+The canonical file is the CSV.
+
+Artifact      : Champion summary
+Description   : Champion decision (with conditions)
+Purpose       : Governed artifact consumed by the dashboard. This rendered copy is for human reading only; the canonical full artifact is the CSV, served verbatim.
+Canonical file: model_lab_champion_summary.csv
+Source path   : outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv
+Last modified : 2026-06-14 02:36
+Rows          : 1
+Columns (11)   : selected_champion_model, model_origin, model_family, decision_type, decision_confidence, official_median_mase, official_median_rmsse, supported_better_count, supported_worse_count, conditions, created_timestamp
+
+DATA
+selected_champion_model | model_origin | model_family | decision_type | decision_confidence | official_median_mase | official_median_rmsse | supported_better_count | supported_worse_count | conditions | created_timestamp
+ETS Explicit | challenger | statistical | CHAMPION_SELECTED_WITH_CONDITIONS | medium | 6.9011435333734 | 1.8561932181843 | 8 | 0 | Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as non-champion conditions. | 1781382961
+
+----
+Local governed artifact - served read-only - no recomputation.

@@ -1,0 +1,8 @@
+document,exists,states_local_mvp,states_url,states_dashboard_cmd,states_refresh_cmd,states_no_sql_models_promote,states_no_azure_scheduler_llm,states_v5_6_gated,states_v5_8_not_pipeline,status
+docker/README.md,yes,yes,yes,yes,yes,yes,yes,yes,yes,PASS
+docker/RUNBOOK.md,yes,yes,yes,yes,yes,yes,yes,yes,yes,PASS
+docker/TROUBLESHOOTING.md,yes,yes,yes,yes,yes,yes,partial,yes,n/a,PASS
+docker/LOCAL_DEMO_CHECKLIST.md,yes,yes,yes,yes,yes,yes,yes,n/a,n/a,PASS
+docs/v5_7_local_container_handoff.md,yes,yes,yes,yes,yes,yes,yes,yes,yes,PASS
+docs/v5_7_v5_6_gating_note.md,yes,yes,n/a,n/a,n/a,yes,yes,yes,yes,PASS
+docs/v5_7_command_reference.md,yes,yes,yes,yes,yes,yes,yes,n/a,n/a,PASS

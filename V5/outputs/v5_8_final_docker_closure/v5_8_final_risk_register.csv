@@ -1,0 +1,13 @@
+risk_id,area,risk,severity,blocker_for_v5_closure,mitigation,status
+R1,refresh_real_gated,real refresh (SQL+models+promote) still gated,high,no,V5 is local MVP; refresh is validate-only; gating note documents auth strategy needed,carried_forward
+R2,validate_vs_real,user may confuse validate-only with real refresh,medium,no,docs + banner NO_SQL/NO_MODELS/NO_PROMOTE/NO_MUTATION,mitigated
+R3,no_azure_link,no public Azure endpoint exists yet,medium,no,docs state V5 is local only; Azure is future separate phase,mitigated
+R4,v5_8_scope,V5.8 does NOT ingest SQL or recalibrate models,medium,no,closure report + docs state local Docker closure only,mitigated
+R5,highcharts_license,highcharter wraps Highcharts commercial license,medium,no,legal review flagged (R6 since V5.1),carried_forward
+R6,inter_font_offline,bslib downloads Inter font at first render,low,no,offline bundle future; benign,carried_forward
+R7,repo_relocation,repo moved after V5 breaks relative mounts,low,no,run compose from V5 root; relative paths documented,mitigated
+R8,onedrive_locks,OneDrive file locks on host artifacts,low,no,read-only reads; troubleshooting doc,mitigated
+R9,port_8080_busy,port collision on demo machine,low,no,use 8081:3838; documented,mitigated
+R10,docker_desktop_requirement,requires Docker Desktop running,low,no,documented in README/troubleshooting,accepted
+R11,future_auth_strategy,real refresh needs non-interactive auth (device-code/SPN/MI),high,no,deferred to V5.6+ gated,gated_open
+R12,future_azure_deployment,Azure deployment is a separate future phase,medium,no,out of V5 scope; documented,gated_open

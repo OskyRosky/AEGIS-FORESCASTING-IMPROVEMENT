@@ -1,0 +1,11 @@
+V5.4 FAILURE / REMEDIATION LOG
+Blocker: PDF export failed in V5.1-V5.3 image (no LaTeX engine). caps$pdf=FALSE.
+Classification: dependency_missing (TeX). Documented R9/V5.4 gate from V5.1.
+Authorized by Oscar (rule 25): rebuild with TinyTeX, same tag aegis-dashboard:v5.1.
+
+Attempt 1: tinytex::install_tinytex() -> tar (child): Error is not recoverable -> missing xz-utils. FIX: add xz-utils.
+Attempt 2: install via official install-bin-unix.sh OK; pdflatex present; pandoc_convert(to=pdf) -> error 43 (LaTeX compile fail, log not surfaced).
+Attempt 3: pandoc(to=latex --standalone) + tinytex::latexmk (auto-install) -> still failed on raw UTF-8 bytes in the build printf test.
+Attempt 4 (non-fatal verify): image built (id 31aac592e64e). Live diagnosis: ASCII content compiles PDF fine; the REAL app export path (em-dash U+2014) produces valid PDFs (104KB / 107KB). Root cause = brittle UTF-8-in-printf build test, NOT the app path.
+Final: verify uses ASCII + tinytex::latexmk + FATAL -> PDF_BUILD_VERIFY_OK. Image id a799da697173, size 2.47GB.
+Result: PDF RESOLVED. All 6 formats both families PASS. No app logic changed; only Dockerfile.

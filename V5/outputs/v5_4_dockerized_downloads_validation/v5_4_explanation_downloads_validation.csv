@@ -1,0 +1,10 @@
+format,expected,observed,size_bytes,validation_method,status,evidence
+md,markdown w/ AEGIS+ETS,generated,1030,writeLines + content grep + UTF8,PASS,download_samples/explanation/AEGIS_Explanation_Champion.md
+txt,plain text w/ AEGIS+ETS,generated,1057,writeLines + content grep + UTF8,PASS,download_samples/explanation/AEGIS_Explanation_Champion.txt
+html,valid HTML w/ AEGIS+ETS,generated (<!doctype),1933,signature + content grep,PASS,download_samples/explanation/AEGIS_Explanation_Champion.html
+docx,valid DOCX (zip+ContentTypes),generated,10544,PK zip + [Content_Types].xml present,PASS,download_samples/explanation/AEGIS_Explanation_Champion.docx
+pdf,valid PDF (%PDF),generated,104478,%PDF signature,PASS,download_samples/explanation/AEGIS_Explanation_Champion.pdf
+no_secrets,none,none,-,regex password/secret/api_key,PASS,all explanation samples
+no_traceback,none,none,-,regex traceback/Error:,PASS,all explanation samples
+no_raw_full_data,mirrors visible only,no raw forecasts embedded,-,builder excludes sources/traceability,PASS,.llm_build_markdown design
+writes_only_temp,/tmp tempfile,exports to /tmp; mounts RO,-,docker exec + host leak check,PASS,readonly_download_impact

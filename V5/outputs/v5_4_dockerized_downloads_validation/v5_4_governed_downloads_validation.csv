@@ -1,0 +1,11 @@
+format,expected,observed,size_bytes,validation_method,status,evidence
+csv,verbatim byte-for-byte,SHA256 identical to source,485,SHA256 source vs downloaded,PASS,download_samples/governed/champion_summary.csv
+md,markdown table w/ artifact + ETS,generated,1475,content grep + UTF8,PASS,download_samples/governed/champion_summary.md
+txt,plain text w/ artifact + ETS,generated,1375,content grep + UTF8,PASS,download_samples/governed/champion_summary.txt
+html,valid HTML w/ artifact + ETS,generated (<!doctype),2532,signature + content grep,PASS,download_samples/governed/champion_summary.html
+docx,valid DOCX (zip+ContentTypes),generated,10914,PK zip + [Content_Types].xml present,PASS,download_samples/governed/champion_summary.docx
+pdf,valid PDF (%PDF),generated,107773,%PDF signature,PASS,download_samples/governed/champion_summary.pdf
+csv_source,champion_summary canonical,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,485,artifact_abs_path,PASS,file.copy source
+no_secrets,none,none,-,regex password/secret/api_key,PASS,all governed samples
+no_traceback,none,none,-,regex traceback,PASS,all governed samples
+writes_only_temp,/tmp,exports to /tmp; mounts RO,-,docker exec,PASS,readonly_download_impact

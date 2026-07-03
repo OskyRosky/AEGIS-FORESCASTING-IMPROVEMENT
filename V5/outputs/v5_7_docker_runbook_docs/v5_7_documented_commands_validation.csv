@@ -1,0 +1,16 @@
+command_or_check,expected,observed,status,evidence
+docker compose config,valid,exit 0,PASS,logs/v5_7_documented_commands_validation.log
+docker compose ps,shiny running,aegis-dashboard-v5-2 running,PASS,ps output
+docker compose up -d shiny,already up,healthy (not restarted),PASS,ps
+http_200,200,HTTP 200 LEN 303385,PASS,Invoke-WebRequest
+smoke_test,SMOKE_TEST_PASSED,11/11 PASS,PASS,v5_7_dashboard_regression_smoke.csv
+docker compose run --rm refresh,V5_5_REFRESH_VALIDATE_OK,exit 0 ALL_PASS,PASS,run
+docker compose logs --tail shiny,benign,Listening 3838 + Inter font,PASS,logs
+docker images (single arg),lists image,aegis-dashboard:v5.1 / aegis-refresh:v5.5,PASS,docker images
+no_sql_executed,none,not run,PASS,scope
+no_models_executed,none,not run,PASS,scope
+no_promote_executed,none,not run,PASS,scope
+no_execute_staging,none,not run,PASS,scope
+no_azure,none,not run,PASS,scope
+no_scheduler,none,not created,PASS,scope
+docker_images_multiarg_note,advisory,`docker images a b` invalid syntax; docs use `docker image inspect <one>`,ADVISORY,terminal

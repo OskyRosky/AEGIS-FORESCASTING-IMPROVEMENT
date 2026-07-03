@@ -10,11 +10,11 @@ active_project_root = C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Gen
 
 based_on = V4 (full controlled copy, 2026-06-30; .venv / __pycache__ / *.pyc excluded, recreatable)
 
-current_status = V5.0A - baseline clone of closed V4 (parity validation)
+current_status = V5.8 - Final Docker Closure Validation COMPLETE. V5_FINAL_DOCKER_VALIDATION_COMPLETED / V5_DOCKER_LOCAL_MVP_CLOSED / V5_READY_FOR_CONTAINER_DEMO
 
-next_stage = V5.0B - Docker Readiness Audit + Reproducibility Decisions
+next_stage = NONE within V5 local MVP. V5.6 (real refresh in container) DEFERRED/GATED - needs non-interactive auth strategy. Azure / real refresh / scheduler / repo relocation require explicit new authorization.
 
-next_block = V5.0A close - confirm V5 starts identically to V4 from its own root
+next_block = V5 LOCAL DOCKER MVP CLOSED - no further V5 stage without explicit Oscar authorization
 
 ## Inherited State From V4 (CLOSED)
 

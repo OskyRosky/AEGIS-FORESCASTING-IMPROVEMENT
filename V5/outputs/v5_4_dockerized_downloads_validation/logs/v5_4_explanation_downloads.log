@@ -1,0 +1,10 @@
+V5.4 EXPLANATION DOWNLOADS — in-container render (image aegis-dashboard:v5.1 = a799da697173)
+caps: md=TRUE html=TRUE txt=TRUE docx=TRUE pdf=TRUE
+resp loaded: champion_overview (title Champion Overview)
+md   OK 1030b  AEGIS_Explanation_Champion.md
+txt  OK 1057b  AEGIS_Explanation_Champion.txt
+html OK 1933b  AEGIS_Explanation_Champion.html  (<!doctype)
+docx OK 10544b AEGIS_Explanation_Champion.docx  (PK + [Content_Types].xml)
+pdf  OK 104478b AEGIS_Explanation_Champion.pdf   (%PDF)
+content: AEGIS + ETS Explicit present; no secrets; no traceback; sources/traceability excluded (no raw full data)
+writes: /tmp tempfiles only; mounts read-only

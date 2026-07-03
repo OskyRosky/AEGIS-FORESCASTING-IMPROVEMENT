@@ -1,0 +1,7 @@
+=== READ-ONLY ENFORCEMENT 2026-07-03T11:04:01.9422944-06:00 ===
+touch: cannot touch '/app/data/processed/v5_3_forbidden_write_probe.txt': Read-only file system
+PROCESSED_WRITE_BLOCKED
+touch: cannot touch '/app/outputs/v5_3_forbidden_write_probe.txt': Read-only file system
+OUTPUTS_WRITE_BLOCKED
+host_processed_forbidden=False
+host_outputs_forbidden=False

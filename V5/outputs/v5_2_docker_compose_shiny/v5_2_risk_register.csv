@@ -1,0 +1,9 @@
+risk_id,area,risk,severity,blocker_yes_no,mitigation,status
+R1,port_collision,Host port 8080 may be occupied by another process/container on a different machine,low,no,"docker-compose.yml maps 8080:3838; if 8080 busy, change to 8081:3838 (documented in local usage notes). On this machine 8080 was free.",open_documented
+R2,path_portability,Compose resolves ./ relative paths against the compose file directory; if the repo is moved the relative mounts still resolve,low,no,"Source compose uses relative ./data/processed and ./outputs; no absolute paths baked. Run compose from the V5 folder.",mitigated
+R3,image_dependency,`docker compose up` requires image aegis-dashboard:v5.1 present OR build; on a clean machine the image must be built first,low,no,"build: context . dockerfile Dockerfile included so `docker compose up --build` rebuilds from the unmodified V5.1 Dockerfile.",mitigated
+R4,highcharts_license,highcharter wraps Highcharts (commercial license) — inherited R6 from V5.1,medium,no,Legal review flagged in V5.1 risk register; unchanged by V5.2 (no code change).,carried_forward
+R5,runtime_font_download,bslib downloads Google font Inter at runtime (needs network on first render) — inherited R8 from V5.1,low,no,Offline font bundling deferred to a future stage; benign log line; dashboard renders fine.,carried_forward
+R6,restart_policy,restart: unless-stopped keeps the container running across Docker restarts until explicitly stopped,low,no,"Intended for local demo convenience; stop via `docker compose down`. Documented in local usage notes.",accepted
+R7,pdf_docx_validation,Full PDF/DOCX export validation deferred to V5.4 — inherited R9,low,no,Gated to V5.4; not in V5.2 scope.,carried_forward
+R8,refresh_headless_mfa,Real refresh in container blocked by MFA/headless — inherited R2 from V5.0B,medium,no,Refresh service intentionally NOT created in V5.2; deferred to V5.5/V5.6.,carried_forward

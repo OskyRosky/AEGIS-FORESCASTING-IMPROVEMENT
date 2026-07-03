@@ -45,6 +45,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libfribidi-dev \
         fonts-dejavu-core \
         fonts-liberation \
+        wget \
+        perl \
+        xz-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # --- R packages (dashboard-only, pinned via base P3M dated snapshot) --
@@ -59,10 +62,23 @@ RUN R -q -e "install.packages(c(\
 # Build-time gate: fail the build if any required dashboard package is missing.
 RUN R -q -e "pkgs <- c('shiny','bslib','DT','plotly','highcharter','dplyr','readr','tidyr','htmltools','jsonlite','rmarkdown','tinytex','httr','pandoc'); miss <- pkgs[!pkgs %in% rownames(installed.packages())]; if (length(miss)) stop('MISSING_R_PACKAGES: ', paste(miss, collapse=', ')) else cat('ALL_R_PKGS_OK\n')"
 
-# --- TinyTeX (PDF export) — NON-FATAL (PDF has its own gate at V5.4) ---
-RUN R -q -e "tinytex::install_tinytex()" \
-    && echo "TINYTEX_INSTALLED" \
-    || echo "TINYTEX_INSTALL_DEFERRED_TO_V5_4"
+# --- TinyTeX (LaTeX engine for PDF export) — V5.4: reliable + FATAL ---
+# V5.0B decision: TeX = pandoc + TinyTeX. In V5.1 this step was non-fatal and
+# did not persist (no pdflatex on PATH), so PDF export was gated to V5.4.
+# V5.4 makes it deterministic: install TinyTeX, symlink its binaries onto PATH
+# (tlmgr path add -> /usr/local/bin), pre-install the LaTeX packages pandoc's
+# default template + Markdown tables need (so runtime PDF is OFFLINE, no CTAN
+# fetch at run time), and FAIL the build if pdflatex is absent or a real
+# pandoc Markdown->PDF conversion (with a table + a UTF-8 accent) does not
+# produce a %PDF. Needs wget + perl + xz-utils (added to apt above).
+ENV PATH=/root/.TinyTeX/bin/x86_64-linux:$PATH
+RUN wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh \
+    && /root/.TinyTeX/bin/*/tlmgr path add \
+    && R -q -e "tinytex::tlmgr_install(c('iftex','lm','amsmath','booktabs','etoolbox','xcolor','geometry','hyperref','bookmark','xurl','ulem','upquote','microtype','parskip','footnotehyper','mdwtools','fancyvrb','framed'))" \
+    && R -q -e "if (!nzchar(Sys.which('pdflatex'))) stop('NO_PDFLATEX_ON_PATH') else cat('PDFLATEX_OK:', Sys.which('pdflatex'), '\n')" \
+    && printf '# AEGIS PDF build check\n\nETS Explicit champion.\n\n| a | b |\n|---|---|\n| 1 | 2 |\n' > /tmp/_pdfcheck.md \
+    && R -q -e "rmarkdown::pandoc_convert(input=normalizePath('/tmp/_pdfcheck.md'), to='latex', output='/tmp/_pdfcheck.tex', options='--standalone'); tinytex::latexmk('/tmp/_pdfcheck.tex'); if (!file.exists('/tmp/_pdfcheck.pdf') || file.info('/tmp/_pdfcheck.pdf')\$size < 500) stop('PDF_BUILD_VERIFY_FAILED') else cat('PDF_BUILD_VERIFY_OK\n')" \
+    && rm -f /tmp/_pdfcheck.md /tmp/_pdfcheck.tex /tmp/_pdfcheck.pdf
 
 # --- Application code (R-only; NO Python, NO data/raw, NO secrets) -----
 WORKDIR /app

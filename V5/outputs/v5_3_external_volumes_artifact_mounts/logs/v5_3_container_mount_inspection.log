@@ -1,0 +1,9 @@
+=== CONTAINER MOUNT INSPECTION 2026-07-03T11:03:33.7656297-06:00 ===
+processed_dir=yes
+processed_csv=24
+outputs_dir=yes
+outputs_model_lab=yes
+governance_dir=yes
+raw_dir=no
+backup_dir=no
+dotenv=no
