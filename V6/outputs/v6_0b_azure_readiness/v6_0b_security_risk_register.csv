@@ -1,0 +1,13 @@
+risk_id,area,risk,severity,blocker,mitigation,status
+R1,azure_permissions,cannot create ACA/ACR/KV/MI/Storage without confirmed permissions,high,yes_for_v6_1,confirm permissions checklist before V6.1 creates anything,open_for_v6_1
+R2,auth_headless,real refresh needs non-interactive auth (MFA discarded),high,no,Managed Identity primary; SPN fallback in Key Vault; gated to Track B,gated_open
+R3,sql_private_networking,SQL access needs private connectivity (Private Link/VNet/VPN),medium,no,designed for Track B only; not in Track A,gated_open
+R4,highcharts_license,Highcharts (highcharter) commercial license,medium,no,private/internal endpoint in V6.3 + legal review before public exposure,carried_forward
+R5,inter_font_egress,bslib downloads Inter font at first render (needs egress),low,no,offline bundle or egress allow-list,carried_forward
+R6,secrets_management,accidental secret in repo/image/compose,medium,no,secrets only in Key Vault; MI preferred (zero secrets); scans,mitigated
+R7,public_exposure,accidental public endpoint,medium,no,internal ingress by default; Entra-gated,mitigated
+R8,cost_growth,Log Analytics / storage cost growth,low,no,retention limits; scale-to-zero; review in V6.9,accepted
+R9,rbac_assignment_rights,may lack User Access Administrator/Owner to assign roles,medium,yes_for_v6_1,include in permissions checklist,open_for_v6_1
+R10,artifact_drift,cloud artifacts diverge from governed set,medium,no,Azure Files RO mount = same governed artifacts; refresh promote gated,mitigated
+R11,track_b_scope_creep,doing SQL/refresh before the hard gate,high,no,explicit hard gate V6.4->V6.5; nothing sensitive before it,mitigated
+R12,repo_relocation,V6 moved breaks relative/local references,low,no,cloud uses ACR/Azure Files not local paths,mitigated

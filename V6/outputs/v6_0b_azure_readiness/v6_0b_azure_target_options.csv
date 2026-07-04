@@ -1,0 +1,5 @@
+option,fit_for_dashboard,fit_for_refresh_job,complexity,cost_risk,recommendation,rationale
+Azure Container Apps,high,high,medium,low-medium,PREFERRED,"Native support for a long-running dashboard container AND a separate refresh Job; built-in managed identity, ingress (internal/private), Key Vault refs, env, Log Analytics, scale-to-zero. Cleanest split of shiny (app) vs refresh (job)."
+App Service for Containers,high,low,low,low-medium,alternative_dashboard_only,"Great for the dashboard container with easy internal ingress + managed identity, but not natural for scheduled/one-shot jobs; would need a separate mechanism for refresh."
+Azure Container Instances + external scheduler,medium,medium,medium,low,fallback,"Simple one-shot containers, but no built-in ingress story/identity integration as clean as ACA; scheduler must be external (Logic App/Automation). More glue."
+AKS,high,high,high,medium-high,rejected_for_mvp,"Full Kubernetes control but far too heavy for this MVP; large operational + cost overhead; not justified for one dashboard + one job."

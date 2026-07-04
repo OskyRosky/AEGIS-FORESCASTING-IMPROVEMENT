@@ -1,0 +1,12 @@
+resource,needed_in_stage,track,cost_risk_qualitative,operational_risk,notes
+Azure Container Apps (dashboard app),V6.3,A,low-medium,low,"Scale-to-zero possible; internal ingress; pay for vCPU/mem while running."
+Azure Container Apps (refresh job),V6.6,B,low,low,"One-shot/scheduled job; runs briefly; minimal cost."
+Azure Container Registry (ACR),V6.2,A,low,low,"Basic/Standard tier sufficient for 2 small-ish images; storage of layers."
+Key Vault,V6.1,A,low,low,"Per-operation pricing; minimal if MI covers auth (few/zero secrets)."
+Azure Files (artifact share),V6.3,A,low,low,"Read-only governed artifacts ~1.4GB; standard tier; low cost."
+Blob Storage (staging/productive/backups),V6.6,B,low,medium,"Design in Track B; versioning/backup adds some storage; still low absolute cost."
+Log Analytics / App Insights,V6.9,B,low-medium,low,"Ingestion-based cost; can grow with verbose logs; set retention/limits."
+VNet integration,V6.3/V6.5,A/B,low,medium,"Networking config complexity; needed for internal ingress / private SQL."
+Private Link (to SQL),V6.5,B,low-medium,medium,"Private endpoint cost + config; only Track B."
+Managed Identity,V6.1,A,none,low,"No direct cost; avoids secret management cost/risk."
+Egress (Inter font/first render),V6.3,A,low,low,"Minor; consider offline font bundle for restricted egress."

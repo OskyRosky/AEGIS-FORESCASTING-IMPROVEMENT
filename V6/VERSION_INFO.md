@@ -10,11 +10,11 @@ active_project_root = C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Gen
 
 based_on = V5 (full controlled copy, 2026-07-03; .venv / __pycache__ / *.pyc excluded, recreatable)
 
-current_status = V6.0A - baseline clone of closed V5 (parity validation)
+current_status = V6.0B - Azure Readiness + Architecture Decisions COMPLETE (audit + decisions only; no Azure resources). Hosting=Azure Container Apps, auth=Managed Identity primary, storage=Azure Files RO (A)/Blob (B), registry=ACR, internal ingress.
 
-next_stage = V6.0B - Azure Readiness + Architecture Decisions (needs explicit authorization)
+next_stage = V6.1 - Identity / RBAC / Key Vault (needs explicit authorization + confirmed Azure permissions)
 
-next_block = V6.0A close - confirm V6 starts identically to V5 from its own root; then V6.0B (audit + decisions only, no Azure resources)
+next_block = V6.1 - Track A; requires Azure permissions confirmation (prereq) + explicit Oscar authorization before creating any Azure resource
 
 ## Inherited State From V4 (CLOSED)
 

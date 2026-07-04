@@ -1,0 +1,16 @@
+invariant,expected,observed_or_decision,status
+champion_frozen,ETS Explicit,architecture keeps champion frozen; no promote in Track A,PASS
+scope_15_models,15,unchanged; artifacts read-only,PASS
+horizons_30_60_180,30/60/180,unchanged,PASS
+prohibited_models_absent,NBEATS/NHITS/FastNeuralAR_MLP absent,unchanged (governed artifacts inherited),PASS
+shiny_read_only,yes,dashboard consumes read-only mounts; no SQL/models/promote,PASS
+refresh_separated,yes,refresh = separate ACA Job (Track B), never in dashboard,PASS
+no_update_button,none,no Update-data button in Shiny,PASS
+data_raw_not_exposed,absent,data/raw never shared/mounted (Azure Files excludes it),PASS
+no_secrets_in_repo_image_compose,none,secrets only in Key Vault; MI preferred (zero secrets),PASS
+llm_explains_not_decides,mock/explain-only,provider seam stays mock in Track A; azure_openai optional/gated V6.8,PASS
+no_promote_without_gates,gated,promote only via staging->32 gates->controlled promote->rollback + human approval,PASS
+no_azure_resources_created_v6_0b,none,audit + decisions only; nothing created,PASS
+no_sql_v6_0b,none,no SQL/SELECT 1/pyodbc,PASS
+no_mutation_v6_0b,none,data/processed + data/raw hashes unchanged,PASS
+v1_v5_intact,frozen,only V6 docs written,PASS

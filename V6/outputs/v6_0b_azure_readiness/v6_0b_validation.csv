@@ -1,0 +1,25 @@
+id,check,expected,observed,status
+1,scope_audit_decisions_only,no resources/deploy,docs only,PASS
+2,hosting_decision,Azure Container Apps,decided (confirm V6.1),PASS
+3,track_a_architecture,read-only dashboard design,documented,PASS
+4,auth_strategy_decision,Managed Identity primary,decided,PASS
+5,storage_decision,Azure Files RO (A) / Blob (B),decided,PASS
+6,registry_decision,ACR + versioned tags + digest + MI pull,decided,PASS
+7,identity_rbac_keyvault_plan,least privilege plan,documented,PASS
+8,networking_requirements,internal/private; Private Link SQL Track B,documented,PASS
+9,highcharts_risk,carried forward + private endpoint,documented,PASS
+10,cost_risk_assessment,qualitative low/medium,documented,PASS
+11,track_b_gating,forbidden-before-gate list,documented,PASS
+12,permissions_checklist,created,documented,PASS
+13,governance_invariants,all preserved,15/15 PASS,PASS
+14,no_azure_resources_created,none,confirmed,PASS
+15,no_sql_touched,none,confirmed,PASS
+16,no_refresh_real,none,confirmed,PASS
+17,data_processed_unchanged,B0880D33...D61,unchanged,PASS
+18,data_raw_unchanged,BD44163A...73D,unchanged,PASS
+19,data_raw_not_mounted_used,absent,confirmed,PASS
+20,no_secrets_added,none,confirmed,PASS
+21,v1_v5_intact,frozen,only V6 docs,PASS
+22,roadmap_2_tracks_reflected,yes,track_gate_plan + handoff doc,PASS
+23,v6_1_needs_authorization,yes,documented,PASS
+24,all_deliverables_created,14,all present,PASS
