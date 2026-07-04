@@ -1,0 +1,12 @@
+check,expected,observed,status,evidence
+data_processed_unchanged,B0880D33F488D7E77EED32F12E214D61,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot before==after
+data_raw_unchanged,BD44163AC0DB7E0CD7F8B08EB120973D,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot before==after
+dockerfile_dashboard_unchanged,E4B6C1E01EB817F2,E4B6C1E01EB817F2,PASS,Get-FileHash
+dockerfile_refresh_unchanged,325E70E44C6A2587,325E70E44C6A2587,PASS,Get-FileHash
+docker_compose_unchanged,3753E84C5C047180,3753E84C5C047180,PASS,Get-FileHash (docs-only stage; compose not modified)
+shiny_app_unchanged,no logic change,docs-only; no shiny_app edit,PASS,scope
+dashboard_image_unchanged,a799da697173,a799da697173,PASS,docker images
+refresh_image_unchanged,698b1634f78a,698b1634f78a,PASS,docker images
+no_rebuild,none,no docker build run,PASS,command history
+no_new_images,none,same 2 aegis images,PASS,docker images
+v1_v2_v3_v4_intact,frozen,only V5 docs added,PASS,scope

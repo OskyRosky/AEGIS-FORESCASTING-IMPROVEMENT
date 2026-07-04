@@ -1,0 +1,18 @@
+check_id,check,result,detail
+1,Forecast page loads,PASS,section_forecast renders; HTTP 200
+2,fvf_chart renders,PASS,highchartOutput fvf_chart present and parses
+3,Actual history solid line,PASS,unchanged actual series solid
+4,Forecast mean dashed line,PASS,unchanged forecast mean dashed
+5,80% interval appears,PASS,add_iv_line upper_80/lower_80 retained
+6,95% interval does NOT appear,PASS,add_iv_line upper_95/lower_95 removed
+7,No 95% in legend,PASS,95% series not added so absent from legend
+8,No 95% in tooltip,PASS,95% series not added so absent from tooltip
+9,Interval lines stop after day 30,PASS,interval_available TRUE only horizons 1-30
+10,90/180/full continue point forecast after 30,PASS,mean drawn full window; 80% only <=30
+11,Shiny does not compute intervals,PASS,read-only columns; no quantile/residual calc
+12,No data artifacts modified,PASS,forecasts.csv and intervals csv untouched
+13,No models run,PASS,no tournament/backtest/model execution
+14,Champion unchanged,PASS,ETS Explicit CHAMPION_SELECTED_WITH_CONDITIONS
+15,App launches via start_shiny.ps1,PASS,PID 22096 port 3838
+16,HTTP 200,PASS,LEN 205794
+17,R files parse OK,PASS,helpers.R/tabs.R/server.R PARSE_OK

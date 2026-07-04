@@ -1,0 +1,2 @@
+entity_key,local_leader,local_leader_median_mase,ets_explicit_median_mase,gap_vs_local_leader,ets_explicit_rank_by_median_mase,local_leader_median_rmsse,ets_explicit_median_rmsse,notes
+ESP-Go Local,LightGBM,15.98228529838295,67.96281339453596,51.98052809615301,11,5.128262804729157,23.427479642421044,"Maximum ETS Explicit median_mase minus local leader median_mase, using existing artifact values only."

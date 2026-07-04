@@ -1,0 +1,81 @@
+{
+  "pack_metadata": {
+    "page_id": "governance_risks",
+    "generated_at": "2026-06-29T16:51:17Z",
+    "project_version": "V4",
+    "provider_stage": "evidence_only_no_llm",
+    "snapshot_caveat": "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "filters": {}
+  },
+  "governance_context": {
+    "champion": "ETS Explicit",
+    "champion_policy": "frozen / governed / no auto-advance",
+    "model_scope": 15,
+    "llm_decision_policy": "explain_only"
+  },
+  "evidence": {
+    "run_metadata": {
+      "run_timestamp": "2026-06-28T17:27:14",
+      "forecast_version": "2026-05-01",
+      "entity_count": 45.0,
+      "model_count": 16.0,
+      "first_actual_date": "2019-07-01",
+      "last_actual_date": "2026-04-27"
+    },
+    "ttl_snapshot": {
+      "entities_in_snapshot": 45,
+      "ttl_status_counts": {
+        "Cool": 33,
+        "Healthy": 10,
+        "Warning": 2
+      },
+      "binding_entities": 45,
+      "months_to_live_min": 5.23,
+      "months_to_live_median": 18.6
+    },
+    "runtime_guardrails": {
+      "guardrail_status_counts": {
+        "pass": 6
+      },
+      "runtime_status_counts": {
+        "viable": 6
+      }
+    },
+    "governance_scope": {
+      "governed_model_rows": 15,
+      "models_with_risk_flag": 0
+    }
+  },
+  "sources_used": [
+    "model_runtime_guardrails.csv",
+    "model_universe_canonical.csv",
+    "run_metadata.csv",
+    "ttl_months_to_live_snapshot.csv"
+  ],
+  "limitations": [
+    "LLM explains; it does not decide, advance, or change the champion or governance.",
+    "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "Only governed artifacts under data/processed were read; no SQL, no model runs.",
+    "Risks are descriptive from recorded artifacts only; no invented risk levels."
+  ],
+  "insufficient_evidence": false,
+  "candidate_claims": [
+    {
+      "claim": "Governance snapshot covers 45 entities with recorded TTL status.",
+      "maps_to": "ttl_months_to_live_snapshot.csv:rows"
+    },
+    {
+      "claim": "Governed model scope is 15 with recorded risk flags.",
+      "maps_to": "model_universe_canonical.csv:risk_flag"
+    }
+  ],
+  "validation": {
+    "required_fields_present": true,
+    "sources_used_present": true,
+    "limitations_present": true,
+    "allowed_artifacts_only": true,
+    "champion_unchanged": true,
+    "model_scope_15": true,
+    "no_forbidden_language": true
+  }
+}

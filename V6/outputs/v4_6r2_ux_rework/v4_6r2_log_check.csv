@@ -1,0 +1,6 @@
+check_id,log_pattern,severity,observed,status
+LOG-01,Error / cannot / unexpected / object not found,critical,"None found in stderr after live interaction",PASS
+LOG-02,Package masking (dplyr/stats/base),benign,"Present (standard attach messages)",PASS
+LOG-03,readr/vroom parsing warning,benign-preexisting,"Present (pre-existing data parse warning, unchanged from prior phases)",PASS
+LOG-04,plotly 'No trace type specified',benign,"Present (informational plotly default)",PASS
+LOG-05,Listening on http://127.0.0.1:3839,startup,"Present",PASS

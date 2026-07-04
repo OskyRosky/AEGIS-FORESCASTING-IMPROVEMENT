@@ -1,0 +1,18 @@
+check_id,area,check_name,status,evidence,blocking_for_5_31,created_timestamp
+SC-001,model_universe,model universe has 13 scored models,PASS,scored=13,False,2026-06-13T19:46:36
+SC-002,model_universe,7 baseline models included,PASS,baseline model set checked,False,2026-06-13T19:46:36
+SC-003,model_universe,6 challenger models included,PASS,challenger model set checked,False,2026-06-13T19:46:36
+SC-004,exclusions,NBEATS not scored,PASS,NBEATS absent from scorecard,False,2026-06-13T19:46:36
+SC-005,exclusions,NHITS not scored,PASS,NHITS absent from scorecard,False,2026-06-13T19:46:36
+SC-006,risk,FastNeuralAR_MLP scored but flagged high-risk,PASS,FastNeuralAR_MLP scored with audit_risk_flag,False,2026-06-13T19:46:36
+SC-007,standings,preliminary standings exist,PASS,standings=13,False,2026-06-13T19:46:36
+SC-008,decision_safety,no champion selected,PASS,champion_selected=false,False,2026-06-13T19:46:36
+SC-009,decision_safety,no winner selected,PASS,winner_selected=false,False,2026-06-13T19:46:36
+SC-010,pairwise,pairwise comparisons = 78,PASS,pairwise=78,False,2026-06-13T19:46:36
+SC-011,entity_scores,entity/model rows = 507,PASS,entity_rows=507,False,2026-06-13T19:46:36
+SC-012,risk,risk register exists,PASS,risk_rows=14,False,2026-06-13T19:46:36
+SC-013,audit,Audit #4 conditions carried forward,PASS,"risk register contains FastNeuralAR_MLP, NBEATS, NHITS",False,2026-06-13T19:46:36
+SC-014,source_validation,tournament validation has no failures,PASS,tournament_validation checked,False,2026-06-13T19:46:36
+SC-015,audit,Audit #4 approved with conditions,PASS,APPROVE_WITH_CONDITIONS_TO_PROCEED_TO_5.30_TOURNAMENT_ENGINE,False,2026-06-13T19:46:36
+SC-016,scope_safety,no protected outputs modified,PASS,sanity review writes only tournament_sanity_review outputs,False,2026-06-13T19:46:36
+SC-017,scope_safety,no Shiny modified,PASS,Shiny path present,False,2026-06-13T19:46:36

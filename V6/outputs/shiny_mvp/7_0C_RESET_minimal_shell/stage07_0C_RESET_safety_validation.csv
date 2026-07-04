@@ -1,0 +1,10 @@
+safety_check,result,detail
+stage05_artifacts_unmodified,PASS,No files under outputs/model_lab or Stage 05 artifacts modified
+stage06_artifacts_unmodified,PASS,No Stage 06 validation/governance artifacts modified
+audit6_artifacts_unmodified,PASS,No Audit #6 artifacts modified
+massiveforecasting_v3_unmodified,PASS,MassiveForecasting-V3 not touched
+no_models_run,PASS,Layout-only block; no model execution
+no_forecasts_recomputed,PASS,No forecast recomputation
+no_metrics_recomputed,PASS,No metric recalculation
+no_tournament_recomputed,PASS,No tournament rerun
+no_packages_installed,PASS,No packages installed; no shinydashboard dependency

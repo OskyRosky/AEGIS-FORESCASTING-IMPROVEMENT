@@ -1,0 +1,4 @@
+model_name,onboarding_status,dependency_status,leakage_controls_required,tuning_policy_required,official_candidate,notes,created_timestamp
+FastNeuralAR_MLP,added_lightweight_neural,available_or_lightweight_install_required,train only on actuals up to train_end_date; recursive forecast uses prior predictions after horizon day 1,fixed preregistered settings; no official metric feedback tuning and no tournament feedback tuning,True,Replacement neural-style MVP challenger using sklearn MLPRegressor.,2026-06-13T16:08:35
+NBEATS,deferred_runtime_impractical,not_current_blocker,not applicable while deferred,not applicable while deferred,False,"Deferred for runtime impracticality, not statistical failure.",2026-06-13T16:08:35
+NHITS,deferred_dependency_blocked,blocked_python_3_14_neuralforecast_ray,not applicable while deferred,not applicable while deferred,False,"Deferred for dependency incompatibility, not statistical failure.",2026-06-13T16:08:35

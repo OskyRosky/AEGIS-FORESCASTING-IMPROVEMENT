@@ -1,0 +1,2 @@
+horizon_bucket,row_count,avg_mape,avg_smape,avg_rmse,avg_accuracy
+short,27067,1014186.8725843278,27.492340488417632,3027.592119185724,75.25037905937118

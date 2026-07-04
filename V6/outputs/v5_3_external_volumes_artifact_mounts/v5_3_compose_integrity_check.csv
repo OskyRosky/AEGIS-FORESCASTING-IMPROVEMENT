@@ -1,0 +1,9 @@
+check,expected,observed,status,evidence
+compose_unchanged,no functional change,docker-compose.yml not modified in V5.3,PASS,git status --porcelain
+compose_config_valid,valid,V5.2 config already validated; unchanged,PASS,V5.2 compose config
+service_shiny_single,yes,shiny only,PASS,docker compose config --services
+mounts_ro_preserved,yes,processed+outputs :ro,PASS,docker compose config
+no_refresh_added,none,no refresh service,PASS,docker compose config
+no_secrets_added,none,no secrets,PASS,docker compose config
+no_data_raw_added,none,no data/raw mount,PASS,docker compose config
+hardening_decision,documented,No changes required (see hardening review),PASS,v5_3_compose_hardening_review.md

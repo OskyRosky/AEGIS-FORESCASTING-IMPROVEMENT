@@ -1,0 +1,21 @@
+id,check,expected,observed,status
+1,preflight,PASS,all PASS,PASS
+2,clone_created,V6 = controlled copy of V5,2271 files 1415.1 MB,PASS
+3,exclusions_applied,venv/pycache/pyc excluded,robocopy /XD /XF,PASS
+4,parity_file_count,V5==V6,2271==2271,PASS
+5,parity_data_processed,identical hash,B0880D33...D61,PASS
+6,parity_closure_pack,identical hash,00F3F644...0C,PASS
+7,parity_shiny_app,identical hash,441A1B59...1C,PASS
+8,root_marker_active_root,V6,updated,PASS
+9,root_marker_version_info,V6 based_on V5,updated,PASS
+10,root_marker_policy_json,active_version V6 valid,updated + valid JSON,PASS
+11,dashboard_native_http_200,200,200 LEN 303501,PASS
+12,champion_ets_explicit,ETS Explicit,found,PASS
+13,scope_15_models,15,found,PASS
+14,horizons_30_60_180,30/60/180,found,PASS
+15,assistants_10,10,x10,PASS
+16,server_stopped_clean,port released,3841 free,PASS
+17,v5_untouched,intact,Docker healthy; data unchanged,PASS
+18,v1_v2_v3_v4_v5_frozen,intact,only V6 created,PASS
+19,no_functional_change,none,shiny_app byte-identical,PASS
+20,all_deliverables_created,8,all present,PASS

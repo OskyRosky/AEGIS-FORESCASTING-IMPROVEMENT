@@ -1,0 +1,11 @@
+check,expected,observed,result
+total_visible_assistants,10,10,PASS
+duplicate_assistants,0,0,PASS
+assistant_kicker_text,AEGIS Explanation Assistant,AEGIS Explanation Assistant,PASS
+assistant_badge_text,Local mock,Local mock,PASS
+generate_button_label,Generate explanation,Generate explanation,PASS
+reference_assistant_section,artifacts,artifacts,PASS
+reference_assistant_in_methodology,absent,absent,PASS
+question_box_present,yes,yes,PASS
+quick_prompts_present,yes,yes,PASS
+sources_visible_by_default,no,no,PASS

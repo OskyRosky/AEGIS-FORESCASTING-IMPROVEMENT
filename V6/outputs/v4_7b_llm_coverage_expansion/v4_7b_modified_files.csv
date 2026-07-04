@@ -1,0 +1,8 @@
+file,change_type,summary
+V4/outputs/v4_4_mock_provider/v4_4_mock_responses.json,modified,Added 5 new governed mock responses (models_universe, forecasting_accuracy, forecasting_forecast, forecasting_ttl, governance_audit); 10 responses total; JSON valid
+V4/shiny_app/ui/tabs.R,modified,6 edits - added/moved llm_explain_ui panels into sections universe/explorer/accuracy/forecast/ttl/audit; PARSE_OK
+V4/shiny_app/server/server.R,modified,Replaced 4 llm_explain_server calls with 9 (one per module); PARSE_OK
+V4/shiny_app/ui/body.R,modified,CSS cache-buster v=20260629f -> v=20260629g
+V4/shiny_app/R/llm_explain.R,unchanged,Reused as-is (module UI/server engine)
+V4/shiny_app/R/llm_compose.R,unchanged,Reused as-is (deterministic composer)
+V4/outputs/v4_7b_llm_coverage_expansion/*,created,10 audit artifacts (this folder)

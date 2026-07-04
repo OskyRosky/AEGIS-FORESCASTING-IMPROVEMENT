@@ -1,0 +1,17 @@
+check,result,detail
+header_exists,PASS,tags$header with class app-header and TESSERACT v2 title
+header_badges,PASS,Header badges V1 / Stage 07 / Read-only present
+left_sidebar_exists,PASS,tags$aside with class app-sidebar
+sidebar_is_vertical,PASS,Sidebar nav is vertical column; layout uses sidebar+body grid
+sidebar_has_menu_items,PASS,All 11 vertical menu items present
+body_right_of_sidebar,PASS,Body content area sits to the right of the sidebar via CSS grid
+no_horizontal_nav_links,PASS,No tabsetPanel / navbar / navset horizontal nav in active surface
+old_governance_cards_hidden,PASS,"No old Stage 05/06, Audit #6, Active Version, Governance note cards"
+old_champion_summary_hidden,PASS,No champion summary card in active surface
+no_winner_language,PASS,No AutoARIMA/best candidate/sample data/winner/absolute best language
+minimal_placeholder_cards,PASS,Three minimal placeholder cards present
+body_title_subtitle,PASS,Body title and subtitle present
+footer_minimal,PASS,Minimal footer 'V1 . Stage 07 . Read-only dashboard'
+server_no_recompute,PASS,"Server is layout-only, no reactive recompute"
+app_launches_http_200,PASS,HTTP status from http://127.0.0.1:3838 = 200
+http_status_200,PASS,HTTP 200

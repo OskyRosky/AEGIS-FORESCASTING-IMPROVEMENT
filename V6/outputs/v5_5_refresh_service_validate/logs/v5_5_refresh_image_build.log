@@ -1,0 +1,83 @@
+=== V5.5 REFRESH IMAGE BUILD 2026-07-03T13:44:28.2792883-06:00 ===
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.refresh
+#1 transferring dockerfile: 3.48kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 2.6s
+
+#3 [1/8] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf
+#3 resolve docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 42B
+#4 transferring context: 1.89MB 0.2s done
+#4 DONE 0.2s
+
+#3 [1/8] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf
+#3 sha256:b32430367bf08f32c23778909985ac645d1794f0aeef670aa796a50c8751527d 248B / 248B 0.2s
+#3 sha256:b32430367bf08f32c23778909985ac645d1794f0aeef670aa796a50c8751527d 248B / 248B 0.2s done
+#3 sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492 0B / 12.11MB 0.3s
+#3 sha256:aff2d9f8dc87f4c10bbb7f438f3a325169379776bdfad5c49e4be5acc3c2f192 0B / 1.29MB 0.2s
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 0B / 29.79MB 0.2s
+#3 sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492 1.05MB / 12.11MB 0.6s
+#3 sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492 5.04MB / 12.11MB 0.8s
+#3 sha256:aff2d9f8dc87f4c10bbb7f438f3a325169379776bdfad5c49e4be5acc3c2f192 1.29MB / 1.29MB 0.9s done
+#3 sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492 12.11MB / 12.11MB 1.0s done
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 8.39MB / 29.79MB 1.2s
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 12.58MB / 29.79MB 1.4s
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 16.78MB / 29.79MB 1.5s
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 19.92MB / 29.79MB 1.7s
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 22.02MB / 29.79MB 1.8s
+#3 sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 26.21MB / 29.79MB 2.0s
+#3 DONE 2.3s
+
+#3 [1/8] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf
+#3 extracting sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a
+#3 extracting sha256:e95a6c7ea7d49b37920899b023ecd0e32796c976c1748491f76cae53ba86d13a 0.7s done
+#3 DONE 3.0s
+
+#3 [1/8] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf
+#3 extracting sha256:aff2d9f8dc87f4c10bbb7f438f3a325169379776bdfad5c49e4be5acc3c2f192 0.1s done
+#3 extracting sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492
+#3 extracting sha256:df79d931cd67092e2b8e48d8f6369922571efe4ee0f9af71636ce36600481492 0.4s done
+#3 DONE 3.5s
+
+#3 [1/8] FROM docker.io/library/python:3.12-slim@sha256:423ed6ab25b1921a477529254bfeeabf5855151dc2c3141699a1bfc852199fbf
+#3 extracting sha256:b32430367bf08f32c23778909985ac645d1794f0aeef670aa796a50c8751527d 0.0s done
+#3 DONE 3.5s
+
+#5 [2/8] WORKDIR /app
+#5 DONE 0.1s
+
+#6 [3/8] COPY python/ /app/python/
+#6 DONE 0.0s
+
+#7 [4/8] COPY scripts/refresh_validate_only.py /app/scripts/refresh_validate_only.py
+#7 DONE 0.0s
+
+#8 [5/8] COPY config/ /app/config/
+#8 DONE 0.0s
+
+#9 [6/8] COPY ACTIVE_PROJECT_ROOT.md /app/ACTIVE_PROJECT_ROOT.md
+#9 DONE 0.0s
+
+#10 [7/8] COPY VERSION_INFO.md /app/VERSION_INFO.md
+#10 DONE 0.0s
+
+#11 [8/8] RUN mkdir -p /app/data/processed /app/outputs/v5_5_refresh_service_validate
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 exporting manifest sha256:5f2414835f2974625d36b495d9c584161df93afe911f58370d7b0e6815f4c5a0 0.0s done
+#12 exporting config sha256:9bb02e5d67e5221e144ecaf1d947ac8501b8a0dfd4e6b14dfe9a9a84d7e94ac4 0.0s done
+#12 exporting attestation manifest sha256:49de2cff670ffa07529ba6e5e0b787436935b609b079ef5d8843a06256c76275 0.0s done
+#12 exporting manifest list sha256:698b1634f78a2de4b6727435ba6a0f87e6034a84d0a6f846d4dab5ed61fecb2a 0.0s done
+#12 naming to docker.io/library/aegis-refresh:v5.5 done
+#12 unpacking to docker.io/library/aegis-refresh:v5.5 0.1s done
+#12 DONE 0.5s

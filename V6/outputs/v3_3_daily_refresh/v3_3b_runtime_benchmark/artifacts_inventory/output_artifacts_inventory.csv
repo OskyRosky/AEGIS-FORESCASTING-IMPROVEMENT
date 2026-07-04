@@ -1,0 +1,17 @@
+stage_id,artifact_path,artifact_type,produced_during_benchmark,restored_from_backup,daily_scope,notes
+S01,data/raw/hdd_region_forecasts.csv,raw,YES,YES,IN_SCOPE,Fresh pull 65095 rows; restored to frozen 6/10 version after benchmark
+S01,data/raw/hdd_region_actuals.csv,raw,YES,YES,IN_SCOPE,Fresh pull 84537 rows; restored
+S01,data/raw/hdd_region_metrics.csv,raw,YES,YES,IN_SCOPE,Fresh pull; restored
+S02,data/processed/actuals.csv,processed,YES,YES,IN_SCOPE,Rebuilt then restored
+S02,data/processed/forecasts.csv,processed,YES,YES,IN_SCOPE,Rebuilt then restored
+S02,data/processed/forecast_comparison.csv,processed,YES,YES,IN_SCOPE,0 rows on fresh data (drift); restored
+S02,data/processed/run_metadata.csv,processed,YES,YES,IN_SCOPE,Drives current Last Update; restored to 6/10 version
+S03,outputs/model_lab/training_job_plan.csv,plan,YES,YES,IN_SCOPE,Orchestrator wrote 6356 rows; restored to frozen version
+S03,outputs/model_lab/full_baseline/full_baseline_forecasts.csv,forecast,YES,YES,IN_SCOPE,95340 rows; restored
+S03b,outputs/model_lab/challenger_official_execution/_checkpoint_forecasts.csv,checkpoint,PARTIAL,YES,NOT_IN_SCOPE,Legacy NBEATS probe partially advanced checkpoint; restored to backup
+S04,data/processed/forecast_viewer_model_outputs.csv,viewer,YES,YES,IN_SCOPE,177060 rows; restored
+S05,outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,tournament,YES,YES,IN_SCOPE,Champion ETS Explicit reproduced; restored
+S06,data/processed/model_universe_canonical.csv,canonical,YES,YES,IN_SCOPE,15 models reproduced; restored to V3.2H version
+S07,outputs/dashboard/metric_summary.csv,dashboard,YES,YES,IN_SCOPE,Restored
+S07,outputs/dashboard/executive_summary.csv,dashboard,YES,YES,IN_SCOPE,Restored
+S08,outputs/governance/*,governance,YES,YES,IN_SCOPE,5 governance blocks reproduced; restored

@@ -1,0 +1,12 @@
+rule_id,category,do_statement,dont_statement,reason,replacement_guidance,severity_if_violated,created_timestamp
+DD-001,Champion wording,Say ETS Explicit was selected as champion with conditions.,Do not say ETS Explicit won.,Winner language hides conditions.,Use conditional champion wording.,high,2026-06-14T10:49:31
+DD-002,Winner wording,Describe tournament standing as evidence.,Do not say ETS Explicit is absolute best.,Absolute claims exceed evidence.,Say current conditional champion under Model Lab governance.,high,2026-06-14T10:49:31
+DD-003,Confidence display,Show confidence = medium.,Do not hide or upgrade confidence.,Confidence is a condition.,Display medium confidence near champion card.,high,2026-06-14T10:49:31
+DD-004,Risk visibility,Show FastNeuralAR_MLP high-risk investigation.,Do not hide FastNeuralAR_MLP.,No silent loss of risk.,Display REVIEW_INVESTIGATE status.,high,2026-06-14T10:49:31
+DD-005,Deferred models,Show NBEATS/NHITS as deferred future work.,Do not hide NBEATS/NHITS.,Deferred is not rejected.,Show runtime/dependency deferral notes.,high,2026-06-14T10:49:31
+DD-006,Tournament ranking,Label standings as preliminary/tournament evidence.,Do not imply tournament position equals champion.,Champion decision is separate artifact.,Link standings to champion decision context.,high,2026-06-14T10:49:31
+DD-007,Ineligible models,Show ineligible/risk models with reasons.,Do not silently remove ineligible models.,Transparency requires visible exclusions.,Show eligibility and exclusion reason.,medium,2026-06-14T10:49:31
+DD-008,Pairwise evidence,Show pairwise evidence as supporting information.,Do not infer a champion directly from pairwise rows.,Evidence does not replace decision.,Use evidence context text.,medium,2026-06-14T10:49:31
+DD-009,Metric interpretation,Show sourced MASE/RMSSE values.,Do not recompute or transform MASE/RMSSE into new scores unless explicitly governed.,Dashboard must be non-computational.,Use Model Lab metrics as read-only.,high,2026-06-14T10:49:31
+DD-010,Audit conditions,Show Audit #5 approve-with-conditions.,Do not say there are no risks.,Audit conditions remain active.,Display audit verdict and carry-forwards.,high,2026-06-14T10:49:31
+DD-011,Governance actions,"Show KEEP_WITH_CONDITIONS, MONITOR, REVIEW, TEST_LATER actions.",Do not alter governance actions in the dashboard.,Actions are governed outputs.,Read and label actions from 6.2 artifacts.,medium,2026-06-14T10:49:31

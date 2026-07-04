@@ -1,0 +1,10 @@
+aspect,finding,recommendation
+tournament_method,Round-robin all-play-all (78 = C(13,2) pairwise comparisons),Do NOT present as single-elimination; a knockout bracket misrepresents the method.
+mockup_bracket_scores,"Mockup shows per-match scores like 57-43 / 61-39 and Round 0/1/2/3 — these are NOT in any artifact",Do not render fabricated match scores or rounds.
+win_loss_record_available,tournament_model_evidence_summary.csv has supported_better / supported_worse / inconclusive / net per model,Use this for a governance-safe league standings (W-D-L). PREFERRED main visual.
+head_to_head_outcomes,tournament_pairwise_evidence.csv has comparison_status (supported_difference / inconclusive) for all 78 pairs,Use to build a 13x13 head-to-head grid OR to annotate bracket edges with real verdicts.
+mase_ordering,tournament_model_scorecard.csv gives official_median_mase for all 13,Use only as a cosmetic seed/order; not a match result.
+illustrative_bracket_option,A bracket can be shown ONLY as a labeled visual aid,"If used: label 'visual aid derived from pairwise evidence — not an elimination tournament', seed by MASE rank, annotate edges with real comparison_status, no invented scores."
+champion_safety,Champion = ETS Explicit selected under conditions (medium confidence),Any visual must reflect 'selected under conditions', never 'winner' / 'best' / unconditional champion.
+recompute_safety,All numbers derivable from existing artifacts,No recomputation; read-only; no composite score invented.
+recommended_primary_visual,League standings (W-D-L + net evidence + median MASE),"Most honest, matches Oscar's football analogy; bracket optional and clearly labeled."

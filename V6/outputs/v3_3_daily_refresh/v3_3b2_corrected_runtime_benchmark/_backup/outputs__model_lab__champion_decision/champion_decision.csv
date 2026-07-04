@@ -1,0 +1,2 @@
+run_id,decision,selected_champion_model,selected_champion_origin,selected_champion_family,decision_confidence,conditions,no_champion_reason,created_timestamp
+champion_decision,CHAMPION_SELECTED_WITH_CONDITIONS,ETS Explicit,challenger,statistical,medium,Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as non-champion conditions.,,2026-06-26T18:23:29

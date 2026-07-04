@@ -1,0 +1,19 @@
+stage,artifact,metric,value,status
+clone,robocopy,dirs_copied,504,OK
+clone,robocopy,dirs_skipped_excluded,6,OK
+clone,robocopy,files_copied,2079,OK
+clone,robocopy,files_failed,0,PASS
+clone,robocopy,bytes_copied,1.381 GB,OK
+clone,robocopy,exit_code,1,PASS (exit < 8 = success)
+parity,tree_compare,V4_files,2079,OK
+parity,tree_compare,V5_files,2079,PASS
+parity,tree_compare,only_in_V4,0,PASS
+parity,tree_compare,only_in_V5,0,PASS
+parity,hash,model_champion_comparison.csv,IDENTICAL,PASS
+parity,hash,model_universe_canonical.csv,IDENTICAL,PASS
+parity,hash,run_metadata.csv,IDENTICAL,PASS
+exclusions,robocopy,.venv,excluded,OK
+exclusions,robocopy,__pycache__,excluded,OK
+exclusions,robocopy,*.pyc,excluded,OK
+exclusions,robocopy,.Rproj.user,excluded,OK
+exclusions,robocopy,.ipynb_checkpoints,excluded,OK

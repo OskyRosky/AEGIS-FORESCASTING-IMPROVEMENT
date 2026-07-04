@@ -1,0 +1,2 @@
+run_id,dependencies_attempted,dependencies_available,dependencies_missing,models_now_sandbox_runnable,models_still_blocked,created_timestamp
+challenger_dependency_resolution,8,6,2,6,1,2026-06-12T15:50:18

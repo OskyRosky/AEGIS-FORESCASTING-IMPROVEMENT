@@ -1,0 +1,7 @@
+"discovery_source","rscript_path","exists","selected","version_hint","notes"
+"PATH","","False","False","","Get-Command Rscript returned no PATH result"
+"C:\Program Files\R","C:\Program Files\R\R-4.6.0\bin\Rscript.exe","True","False","R-4.6.0","Common R install path"
+"C:\Program Files\R","C:\Program Files\R\R-4.6.0\bin\x64\Rscript.exe","True","True","R-4.6.0 x64","Selected newest/highest x64 Rscript path"
+"C:\Program Files (x86)\R","","False","False","","No Rscript found"
+"C:\Users\oscarau\AppData\Local\Programs\R","","False","False","","No Rscript found"
+"C:\Users\oscarau\AppData\Roaming","","False","False","","No Rscript found"

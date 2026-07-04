@@ -1,0 +1,17 @@
+invariant,expected,observed,status
+champion_frozen,ETS Explicit,"Champion page shows 'ETS Explicit'; no promotion/new-champion language",PASS
+governed_model_scope_consistent,15 models,"Scope unchanged (15-model governed universe; champion ETS Explicit)",PASS
+v4_does_not_change_champion,no change,"llm_policy = 'read_only_over_governed_evidence_pack_never_compute_never_change_champion'; assistants explain only",PASS
+v4_does_not_change_governance,no change,"No governance artifacts written by the app; read-only loaders only",PASS
+v4_does_not_promote_models,no promotion,"Forbidden-language scan false; answers say 'documented challenger' / 'none advanced over the champion'",PASS
+v4_does_not_recompute_forecasts,no recompute,"App reads governed CSVs as-is; no forecast computation in render path",PASS
+v4_does_not_train_models,no training,"No model training code invoked",PASS
+v4_does_not_run_sql,no SQL,"No DB connection; ingestion is upstream/offline only",PASS
+v4_does_not_use_azure,no Azure,"Provider stage = mock_no_llm; no Azure calls",PASS
+v4_does_not_use_real_llm,no real LLM,"Answers from local deterministic composition engine (R/llm_compose.R); 'Local mock' footer",PASS
+v4_does_not_use_external_api,no external API,"No outbound API calls in the explanation path",PASS
+data_processed_not_modified,unchanged,"data/processed newest file LastWriteTime 2026-06-28 (no writes on 2026-06-30)",PASS
+data_raw_not_modified,unchanged,"No writes to data/raw during V4.8",PASS
+v1_v2_v3_intact,untouched,"V4.8 touched only V4/outputs/v4_8_final_local_validation/; V1/V2/V3 not modified",PASS
+azure_openai_readiness_gated,deferred,"Azure/OpenAI live provider = V4.9, gated; not started",PASS
+local_live_ollama_planned_only,planned,"Nivel B Ollama plan documented (v4_6L_local_live_provider_plan.md) but NOT built/started",PASS

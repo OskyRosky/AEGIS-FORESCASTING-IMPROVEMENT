@@ -1,0 +1,49 @@
+aegis-dashboard-v5-2  | Loading required package: shiny
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Attaching package: ΓÇÿbslibΓÇÖ
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following object is masked from ΓÇÿpackage:utilsΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     page
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Attaching package: ΓÇÿDTΓÇÖ
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following objects are masked from ΓÇÿpackage:shinyΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     dataTableOutput, renderDataTable
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Loading required package: ggplot2
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Attaching package: ΓÇÿplotlyΓÇÖ
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following object is masked from ΓÇÿpackage:ggplot2ΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     last_plot
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following object is masked from ΓÇÿpackage:statsΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     filter
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following object is masked from ΓÇÿpackage:graphicsΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     layout
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Attaching package: ΓÇÿdplyrΓÇÖ
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following objects are masked from ΓÇÿpackage:statsΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     filter, lag
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | The following objects are masked from ΓÇÿpackage:baseΓÇÖ:
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  |     intersect, setdiff, setequal, union
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Warning: One or more parsing issues, call `problems()` on your data frame for details,
+aegis-dashboard-v5-2  | e.g.:
+aegis-dashboard-v5-2  |   dat <- vroom(...)
+aegis-dashboard-v5-2  |   problems(dat)
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Listening on http://0.0.0.0:3838
+aegis-dashboard-v5-2  | Downloading google font Inter to local cache (/root/.cache/R/sass)

@@ -1,0 +1,15 @@
+check,expected,observed,status,evidence
+data_processed_hash,B0880D33F488D7E77EED32F12E214D61,B0880D33F488D7E77EED32F12E214D61,PASS,host snapshot before==after
+data_raw_hash,BD44163AC0DB7E0CD7F8B08EB120973D,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,host snapshot before==after
+data_processed_filecount,24,24,PASS,snapshot
+data_raw_filecount,6,6,PASS,snapshot
+only_v5_5_output_written,v5_5 dir only,report json + logs in outputs/v5_5_refresh_service_validate,PASS,file listing
+no_productive_output_mutation,none,productive outputs not mounted to refresh,PASS,compose granular mount
+docker_compose_modified_for_refresh_only,refresh added,compose changed (refresh); shiny intact,PASS,git + config
+dockerfile_dashboard_unchanged,E4B6C1E01EB817F2,E4B6C1E01EB817F2 (== V5.5 baseline),PASS,Get-FileHash
+dashboard_image_unchanged,a799da697173,a799da697173,PASS,docker images
+dockerignore_unchanged,B4339EF2F9A695FA,B4339EF2F9A695FA,PASS,Get-FileHash
+entrypoint_unchanged,6EAB069067B438DF,6EAB069067B438DF,PASS,Get-FileHash
+smoke_test_unchanged,A91B61837BB4A286,A91B61837BB4A286,PASS,Get-FileHash
+shiny_app_unchanged,no app logic change,git clean for shiny_app,PASS,git status
+v1_v2_v3_v4_intact,frozen,only V5 touched,PASS,work scope

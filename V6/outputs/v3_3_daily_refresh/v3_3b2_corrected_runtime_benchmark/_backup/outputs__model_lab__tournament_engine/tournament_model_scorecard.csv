@@ -1,0 +1,14 @@
+run_id,model_name,model_origin,model_family,entity_count,official_median_mase,official_median_rmsse,median_wmape,median_smape,median_bias,mase_guardrail_status,rmsse_guardrail_status,risk_status,audit_risk_flag,eligible_for_champion_consideration,champion_exclusion_reason,created_timestamp
+tournament_engine,ARIMA_Fixed,baseline,statistical,39,11.789916350319965,3.49334506602668,,,,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,ETS_Current,baseline,statistical,39,8.65417111153676,2.273019421267602,,,,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_1_5,baseline,growth_baseline,39,8.649280961006667,2.2718379673062783,,,,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_3,baseline,growth_baseline,39,12.989045570820014,3.019316356642247,,,,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_4,baseline,growth_baseline,39,16.52907963144241,4.072356391248675,,,,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,FixedGrowth_6,baseline,growth_baseline,39,27.01539149184708,5.083541365063246,,,,warning,warning,medium,False,True,,2026-06-13T18:07:40
+tournament_engine,LinearRegression,baseline,machine_learning,39,9.49576945571986,2.7517633206678718,,,,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,AutoARIMA,challenger,statistical,39,8.088530320808188,1.8590126984374988,0.0099110042459386,0.0099133359613967,-8.624581268780153,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,Theta,challenger,statistical,39,10.642289708177191,2.819225444576951,0.0141636687639672,0.0143406218739491,-65.67108110529851,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,ETS Explicit,challenger,statistical,39,6.901143533373399,1.856193218184295,0.0087554067132253,0.008735093329671,-10.802205663621589,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,LightGBM,challenger,machine_learning,39,16.04104170759398,4.061386180935608,0.0205606623453786,0.0207589117595503,-378.4171565921122,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,XGBoost,challenger,machine_learning,39,14.547628304157428,3.880790199165525,0.0156631620563462,0.0157679731880442,-308.77216785833446,pass,pass,low,False,True,,2026-06-13T18:07:40
+tournament_engine,FastNeuralAR_MLP,challenger,lightweight_neural,39,739.9218881736479,164.62241686434226,0.8613412527614438,1.480670366533463,-17656.878866153904,fail,fail,high,True,False,Audit #4 high-risk flag: extreme MASE/RMSSE and possible scale or recursive-collapse issue,2026-06-13T18:07:40

@@ -1,0 +1,15 @@
+decision_id,decision_area,selected_option,rejected_options,rationale,impact_on_v5_1,status
+D01,dashboard_image_runtime,R-only (no Python),R+Python combined image,dashboard uses 0 Python; LLM compose is deterministic R,build single-language image; smaller/faster,decided
+D02,base_image,rocker/r-ver:4.6.0 pin-by-digest,rocker/shiny;rocker/tidyverse;build-from-source,lightweight exact-R base; we add only 14 pkgs,FROM with verified digest (digest TBD verify in V5.1),decided
+D03,r_package_pinning,PPM dated snapshot + renv.lock,CRAN latest;renv source-only,deterministic fast binaries + version record,set options(repos) PPM URL; commit renv.lock,decided
+D04,python_heavy_stack,exclude torch/darts/lightgbm/xgboost,bundle full ML stack,frozen champion; no training at runtime,not installed in any image,decided
+D05,refresh_image,separate aegis-refresh image,merge into dashboard;multi-stage only,decoupling; dashboard stays R-only,deferred to V5.5,decided
+D06,tex_pandoc,pandoc + TinyTeX in image,texlive-full;texlive-base;defer PDF,host parity; lightweight on-demand LaTeX,apt pandoc + tinytex::install_tinytex,decided
+D07,locale_fonts,C.UTF-8 + dejavu/liberation,default POSIX;en_US.UTF-8,Spanish accents + PDF glyphs,ENV LANG/LC_ALL + apt fonts,decided
+D08,data_volume,read-only mount (not baked),embed data in image,shiny writes only to tmp/download; reproducible image,mount outputs+data/processed ro; /tmp rw,decided
+D09,entrypoint,Rscript runApp host=0.0.0.0 port=3838 fixed,port-hunting like start_shiny.ps1,fixed internal port; mapping via docker -p,workdir /app; internal 3838,decided
+D10,external_port,map to 8080 (avoid 3838/3839/3840),reuse 3838-3840,host collision with local V3/V4/V5,document -p 8080:3838,decided
+D11,healthcheck,curl http://127.0.0.1:3838 30s/5s/3/30s,no healthcheck;TCP-only,verifies app responds; needs curl,add HEALTHCHECK + apt curl,decided
+D12,image_tagging,aegis-dashboard:v5.1/v5.2/v5-latest-local; aegis-refresh:v5.5,latest-only,traceable versioned tags,tag on build in V5.1,decided
+D13,refresh_real_execution,dry-run V5.5; gated CONTROLLED_REFRESH_DEFERRED_GATED V5.6,run real refresh in container now,interactive MFA incompatible with headless,redesign auth (device-code/SPN/MI) future,decided
+D14,dockerignore,exclude outputs/data/raw/BACKUP/docs/notebooks/.git/python,no dockerignore,context 1414MB->~3MB; security,create .dockerignore in V5.1,decided

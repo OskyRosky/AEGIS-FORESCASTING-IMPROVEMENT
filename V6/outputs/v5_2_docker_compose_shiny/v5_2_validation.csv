@@ -1,0 +1,33 @@
+id,check,expected,observed,status
+1,docker_compose_yml_created,created,V5\docker-compose.yml created,PASS
+2,service_shiny_defined,defined,services.shiny,PASS
+3,no_refresh_service,absent,none,PASS
+4,no_scheduler_service,absent,none,PASS
+5,no_sql_service,absent,none,PASS
+6,no_azure_service,absent,none,PASS
+7,docker_compose_config,valid,parsed OK,PASS
+8,docker_compose_up,started,container started,PASS
+9,container_running,running,State=running,PASS
+10,container_healthy,healthy,health=healthy,PASS
+11,http_200,200,HTTP 200 LEN 303385,PASS
+12,smoke_test_reusable,11/11 PASS,SMOKE_TEST_PASSED,PASS
+13,assistants_10_visible,10,Generate explanation x10,PASS
+14,champion_ets_explicit,ETS Explicit,found,PASS
+15,scope_15_models,15,found,PASS
+16,horizons_30_60_180,30/60/180,all found,PASS
+17,data_processed_ro,read-only,write blocked,PASS
+18,outputs_ro_or_justified,read-only,write blocked; :ro justified,PASS
+19,data_raw_not_mounted,absent,raw_exists=no in container,PASS
+20,no_write_to_data_processed,blocked,Read-only file system,PASS
+21,no_unexpected_write_to_host,none,no host test files,PASS
+22,no_secrets_in_compose,none,security check PASS,PASS
+23,no_python_ml_stack,none,no python image; NO_PYTHON in container,PASS
+24,no_sql,none,image + compose confirm,PASS
+25,no_models,none,no model run,PASS
+26,no_refresh,none,no refresh service/command,PASS
+27,no_azure,none,no Azure,PASS
+28,no_llm_real,mock only,inherited read-only mock,PASS
+29,v5_1_integrity_preserved,intact,4 docker files unmodified; image same id,PASS
+30,v1_v2_v3_v4_intact,frozen,only V5 touched,PASS
+31,local_usage_notes_created,created,v5_2_local_usage_notes.md,PASS
+32,all_v5_2_deliverables_created,13 files + 5 logs + compose,all present,PASS

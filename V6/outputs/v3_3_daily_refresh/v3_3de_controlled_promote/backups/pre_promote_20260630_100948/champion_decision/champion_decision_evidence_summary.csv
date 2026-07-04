@@ -1,0 +1,10 @@
+run_id,evidence_area,finding,supports_champion_selection,supports_no_champion,notes,created_timestamp
+champion_decision,primary metric MASE,Lowest official median MASE: ETS Explicit=6.901143533373399,True,False,Lower is better.,2026-06-26T18:23:29
+champion_decision,RMSSE guardrail,Selected candidate RMSSE below guardrail threshold.,True,False,RMSSE used as guardrail.,2026-06-26T18:23:29
+champion_decision,pairwise evidence,Selected candidate has 8 supported-better comparisons.,True,False,"Evidence supports decision, not raw ranking alone.",2026-06-26T18:23:29
+champion_decision,risk register,No high-risk flag on selected candidate.,True,False,High-risk candidates are not silently ignored.,2026-06-26T18:23:29
+champion_decision,sanity review,5.30A allowed proceed to 5.31.,True,False,0 blockers / 0 major findings.,2026-06-26T18:23:29
+champion_decision,audit conditions,Audit #4 conditions carried forward.,True,False,FastNeuralAR_MLP and NBEATS conditions remain documented.,2026-06-26T18:23:29
+champion_decision,operational suitability,Champion decision remains conditional on closure-pack documentation.,True,False,No source artifacts modified.,2026-06-26T18:23:29
+champion_decision,FastNeuralAR_MLP risk,FastNeuralAR_MLP marked ineligible_due_to_risk.,True,False,Extreme MASE/RMSSE risk addressed.,2026-06-26T18:23:29
+champion_decision,baseline vs challenger comparison,Selected origin: challenger.,True,False,Baseline and challenger models evaluated together.,2026-06-26T18:23:29

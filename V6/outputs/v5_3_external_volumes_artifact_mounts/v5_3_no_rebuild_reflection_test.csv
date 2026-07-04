@@ -1,0 +1,8 @@
+test,expected,observed,image_id_before,image_id_after,status,evidence
+host_probe_created,visible in container,host_probe.txt v1 read in container,ed86271fff04,ed86271fff04,PASS,docker exec cat (v1)
+host_probe_updated,new version visible without rebuild,host_probe.txt v2 read in container,ed86271fff04,ed86271fff04,PASS,docker exec cat (v2)
+no_docker_build,not run,no docker build executed,ed86271fff04,ed86271fff04,PASS,command history
+no_compose_build,not run,no docker compose build executed,ed86271fff04,ed86271fff04,PASS,command history
+image_id_unchanged,same,ed86271fff04 == ed86271fff04,ed86271fff04,ed86271fff04,PASS,docker images before/after
+no_restart_needed,reflection without restart,container Up (not restarted); change visible,ed86271fff04,ed86271fff04,PASS,docker compose ps uptime
+dashboard_http_after,200,HTTP 200 LEN 303385,ed86271fff04,ed86271fff04,PASS,Invoke-WebRequest

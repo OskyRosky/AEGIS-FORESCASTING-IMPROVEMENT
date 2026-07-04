@@ -1,0 +1,11 @@
+check_id,description,expected,observed,status
+RND-01,Answer rendered as executive paragraphs (not bullet lists),Paragraphs for summary/evidence/why,"Executive summary, What the evidence says, Why it matters all rendered as <p> paragraphs",PASS
+RND-02,Question-asked block shown when a question is submitted,"'Question asked: <q>' visible","Shown for both tournament and champion tests",PASS
+RND-03,AEGIS response lead box present and labelled,Lead box with 'AEGIS response' tag,"tag='AEGIS response'; lead box present (.llm-answer-lead)",PASS
+RND-04,Bounded question uses amber lead variant,.llm-answer-bounded class,"leadClass='llm-answer-lead llm-answer-bounded' on champion bounded question",PASS
+RND-05,Sources not visible in main view by default,Sources hidden until traceability expanded,"No 'Sources used' block in main panel; only inside collapsed details",PASS
+RND-06,Technical traceability collapsed by default,details not open,"techCollapsed=true on both sections",PASS
+RND-07,Limitations capped and shown as short list,<=4 limitation items,"3 items (tournament), 1 item (champion)",PASS
+RND-08,Confidence badge rendered,Confidence: high,"'Confidence: high' shown",PASS
+RND-09,Governance footer discrete,Local/governed footer line,"'Local mock · governed evidence only · no model or champion changes.'",PASS
+RND-10,Thinking sequence visible before answer,Status steps then Ready,"Reading -> Checking -> Composing -> Ready observed",PASS

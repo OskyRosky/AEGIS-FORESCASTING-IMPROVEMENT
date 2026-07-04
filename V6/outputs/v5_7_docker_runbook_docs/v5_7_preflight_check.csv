@@ -1,0 +1,20 @@
+check,expected,observed,status,evidence
+v5_root_confirmed,active root = V5,V5 workspace,PASS,workspace
+v5_0a_to_v5_5_closed,all closed,V5.0A/0B/1/2/3/4/5 output folders present,PASS,outputs
+v5_6_deferred_gated,DEFERRED/GATED,not executed; documented,PASS,gating note
+docker_daemon_active,running,server 29.6.1,PASS,docker version
+docker_compose_available,yes,plugin present,PASS,docker compose
+compose_file_exists,docker-compose.yml,present,PASS,list_dir
+services_shiny_refresh,both,shiny + refresh,PASS,docker compose --profile refresh config --services
+shiny_image_port,aegis-dashboard:v5.1 8080:3838,a799da697173 0.0.0.0:8080->3838,PASS,docker compose ps
+refresh_image_profile,aegis-refresh:v5.5 profile refresh,698b1634f78a validate-only,PASS,compose config
+dashboard_available,HTTP 200,HTTP 200 LEN 303385,PASS,Invoke-WebRequest
+start_command,docker compose up -d shiny,confirmed,PASS,compose ps
+url,http://127.0.0.1:8080,reachable,PASS,Invoke-WebRequest
+refresh_command,docker compose run --rm refresh,V5_5_REFRESH_VALIDATE_OK,PASS,run
+smoke_script_exists,scripts/docker_smoke_test.ps1,present,PASS,Test-Path
+no_rebuild,none,docs only; no build,PASS,scope
+no_data_touch,unchanged,RO mounts; docs only,PASS,immutability
+data_processed_baseline,captured,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot
+data_raw_baseline,captured,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot
+docker_readme_absent_before,to be created,docker/README.md not present before V5.7,PASS,Test-Path

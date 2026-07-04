@@ -1,0 +1,7 @@
+block_id,block_name,status,primary_output_directory,key_result,created_timestamp
+6.0,Audit #5 Finding Resolution,completed,outputs/governance/6_0_audit5_finding_resolution,F-010 resolved through additive governed correction.,2026-06-14T10:56:50
+6.1,Governance Foundation,completed,outputs/governance/6_1_governance_foundation,"Governance definitions, taxonomy, and principles created.",2026-06-14T10:56:50
+6.2,Decision Rules / Action Framework,completed,outputs/governance/6_2_decision_rules,Model/risk actions mapped and dashboard carry-forward rules created.,2026-06-14T10:56:50
+6.3,Champion Conditions Protocol,completed,outputs/governance/6_3_champion_conditions,ETS Explicit conditional champion communication protocol created.,2026-06-14T10:56:50
+6.4,Dashboard Governance Contract,completed,outputs/governance/6_4_dashboard_contract,Read-only no-recompute Shiny governance contract created.,2026-06-14T10:56:50
+6.5,Governance Closure Pack,completed,outputs/governance/6_5_governance_closure_pack,Stage 06 closure pack and Audit #6 handoff created.,2026-06-14T10:56:50

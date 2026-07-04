@@ -1,0 +1,2 @@
+run_id,models_reviewed,baseline_models,challenger_models,pairwise_comparisons_reviewed,standings_reviewed,risk_flags_reviewed,blockers,major_findings,minor_findings,advisories,ready_for_5_31_champion_decision,champion_selected,winner_selected,created_timestamp
+tournament_sanity_review,13,7,6,78,13,14,0,0,2,2,True,False,False,2026-06-13T19:46:36

@@ -1,0 +1,16 @@
+item,expected,status
+Actual history,solid line,KEPT
+Forecast mean,dashed line,KEPT
+Lower 80%,dashed line,KEPT
+Upper 80%,dashed line,KEPT
+Lower 95%,not drawn,REMOVED
+Upper 95%,not drawn,REMOVED
+Forecast start boundary,vertical line,KEPT
+Legend 95% entries,absent,CONFIRMED
+Tooltip 95% entries,absent,CONFIRMED
+Interval levels shown (data notes),80%,UPDATED
+Setup note 80% rationale,present,ADDED
+95% columns in artifact,retained,UNCHANGED
+forecasts.csv,not modified,UNCHANGED
+forecasts_with_intervals_relative.csv,not modified,UNCHANGED
+Champion decision,unchanged,UNCHANGED

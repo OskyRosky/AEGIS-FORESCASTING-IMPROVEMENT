@@ -1,0 +1,38 @@
+id,check,expected,observed,status
+1,preflight,PASS,all PASS,PASS
+2,docker_compose_config,PASS,exit 0,PASS
+3,shiny_running,running,running,PASS
+4,shiny_healthy,healthy,healthy,PASS
+5,refresh_service_exists,yes,refresh (profile),PASS
+6,refresh_not_autostart,excluded,default services=shiny,PASS
+7,dashboard_http_200,200,200 LEN 303385,PASS
+8,smoke_test,PASS,SMOKE_TEST_PASSED,PASS
+9,assistants_10,10,x10,PASS
+10,champion_ets_explicit,ETS Explicit,found,PASS
+11,scope_15_models,15,15,PASS
+12,horizons_30_60_180,30/60/180,found,PASS
+13,downloads_final,PASS,5+6 formats valid,PASS
+14,governed_csv_evidence,verbatim,SHA256 identical,PASS
+15,refresh_validate_only,PASS,V5_5_REFRESH_VALIDATE_OK,PASS
+16,no_sql,none,none,PASS
+17,no_odbc,none,pyodbc absent,PASS
+18,no_entra_mfa,none,none,PASS
+19,no_model_training,none,none,PASS
+20,no_model_runner,none,none,PASS
+21,no_promote,none,none,PASS
+22,no_azure,none,none,PASS
+23,no_scheduler,none,none,PASS
+24,no_llm_real,mock only,mock,PASS
+25,no_shiny_refresh_button,none,read-only,PASS
+26,data_processed_unchanged,identical,B0880D33...D61,PASS
+27,data_raw_unchanged,identical,BD44163A...73D,PASS
+28,data_raw_not_mounted,absent,raw=no,PASS
+29,artifacts_mounts_valid,valid,processed+outputs RO,PASS
+30,docs_final_validation,PASS,7 docs present + accurate,PASS
+31,v5_6_deferred_gated,documented,gating note,PASS
+32,no_rebuild,none,no build,PASS
+33,no_new_images,only 2 aegis,dashboard+refresh,PASS
+34,v1_v2_v3_v4_intact,frozen,only V5,PASS
+35,final_risk_register,created,12 risks,PASS
+36,final_closure_report,created,v5_8_final_closure_report.md,PASS
+37,all_deliverables_created,13 + 5 logs,all present,PASS

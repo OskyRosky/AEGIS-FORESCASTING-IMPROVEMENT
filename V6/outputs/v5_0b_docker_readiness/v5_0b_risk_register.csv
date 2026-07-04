@@ -1,0 +1,8 @@
+risk_id,area,risk,severity,blocker_yes_no,mitigation,owner,status
+R1,base_image,rocker/r-ver:4.6.0 tag may not yet exist (R 4.6.0 very recent),high,maybe,verify tag in V5.1; fallback nearest patch or build-from-r-ver; do not invent digest,Oscar/agent,open
+R2,refresh_auth,ActiveDirectoryInteractive MFA incompatible with headless container,high,yes(for real refresh),defer to V5.5 dry-run; gate V5.6; redesign to device-code/SPN/managed-identity,Oscar,open
+R3,build_context,outputs 1255MB + data 155MB bloat context/image,medium,no,.dockerignore + read-only volume mount,agent,mitigated_by_plan
+R4,tex_install,TinyTeX install adds image size/build time + network dependency,low,no,cache TinyTeX layer; option to defer PDF to V5.4,agent,open
+R5,data_mount_completeness,RO mount must include every governed artifact the loader opens,medium,no,build artifact manifest in V5.3 to curate mount,agent,open
+R6,licensing,highcharter wraps Highcharts (non-free for commercial use),medium,no,legal review of Highcharts license before any commercial deployment,Oscar,open_flag
+R7,ppm_snapshot,PPM snapshot date must be compatible with R 4.6.0 availability,low,no,validate snapshot date vs R 4.6.0 in V5.1,agent,open

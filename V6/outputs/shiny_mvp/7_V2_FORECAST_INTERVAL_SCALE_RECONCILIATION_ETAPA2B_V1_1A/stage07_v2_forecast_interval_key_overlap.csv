@@ -1,0 +1,46 @@
+entity_key,in_backtest,in_production_forecast,in_actuals,in_all_three
+APC-Dedicated,True,True,True,True
+APC-MSIT,True,True,True,True
+APC-Multitenant,True,True,True,True
+ARE-Go Local,True,True,True,True
+AUS-Go Local,True,True,True,True
+AUT-Go Local,False,True,True,False
+BRA-Go Local,True,True,True,True
+CAN-Go Local,True,True,True,True
+CHE-Go Local,True,True,True,True
+CHL-Go Local,False,True,True,False
+DEU-Go Local,True,True,True,True
+DNK-Go Local,False,True,True,False
+ESP-Go Local,True,True,True,True
+EUR-Dedicated,True,True,True,True
+EUR-Go Local,False,True,True,False
+EUR-MSIT,True,True,True,True
+EUR-Multitenant,True,True,True,True
+FRA-Go Local,True,True,True,True
+GBR-Dedicated,True,True,True,True
+GBR-Go Local,True,True,True,True
+IDN-Go Local,False,True,True,False
+IND-Go Local,True,True,True,True
+ISR-Go Local,True,True,True,True
+ITA-Go Local,True,True,True,True
+JPN-Go Local,True,True,True,True
+KOR-Go Local,True,True,True,True
+LAM-Multitenant,True,True,True,True
+MEX-Go Local,True,True,True,True
+MYS-Go Local,False,True,True,False
+NAM-Dedicated,True,True,True,True
+NAM-GCC Low,True,True,True,True
+NAM-ITAR DoD,True,True,True,True
+NAM-ITAR GCCH,True,True,True,True
+NAM-MSIT,True,True,True,True
+NAM-Multitenant,True,True,True,True
+NAM-SDF,True,True,True,True
+NAM-TDF,True,True,True,True
+NOR-Go Local,True,True,True,True
+NZL-Go Local,True,True,True,True
+POL-Go Local,True,True,True,True
+QAT-Go Local,True,True,True,True
+SGP-Go Local,True,True,True,True
+SWE-Go Local,True,True,True,True
+TWN-Go Local,True,True,True,True
+ZAF-Go Local,True,True,True,True

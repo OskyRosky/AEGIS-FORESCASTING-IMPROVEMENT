@@ -1,0 +1,2 @@
+flag_id,page_id,severity,message,source_artifacts,evidence_refs
+RF01,forecast_viewer,warning,"Forecast Viewer model labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth percentages) differ from tournament/governance model names (e.g., the champion name); this namespace difference must be shown so the two are never conflated.",forecasts_with_intervals.csv,forecast_subset.distinct_models | filters.model

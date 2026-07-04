@@ -1,0 +1,17 @@
+check,expected,observed,status,evidence
+exit_code,0,0,PASS,docker compose run --rm refresh
+result_token,V5_5_REFRESH_VALIDATE_OK,V5_5_REFRESH_VALIDATE_OK,PASS,run log
+no_sql_banner,NO_SQL,NO_SQL,PASS,run log
+no_models_banner,NO_MODELS,NO_MODELS,PASS,run log
+no_promote_banner,NO_PROMOTE,NO_PROMOTE,PASS,run log
+no_mutation_banner,NO_MUTATION,NO_MUTATION,PASS,run log
+no_sql_attempted,none,pyodbc absent,PASS,wrapper
+no_odbc_attempted,none,import pyodbc fails,PASS,image
+no_entra_mfa_attempted,none,none,PASS,validate-only
+no_model_runner,none,none,PASS,wrapper
+no_promote_attempted,none,none,PASS,wrapper
+no_mutation_data_processed,none,hash unchanged,PASS,immutability
+no_mutation_data_raw,none,not mounted,PASS,immutability
+only_allowed_outputs,v5_5 area,report json + logs,PASS,file listing
+refresh_not_left_running,one-shot,--rm auto-removed,PASS,docker compose run --rm
+shiny_healthy_after,healthy,Up healthy,PASS,docker compose ps

@@ -1,0 +1,13 @@
+check,expected,observed,status,evidence
+safe_mode_exists,a truly safe mode,orchestrator --dry-run = do_dry_run() pure print,PASS,code read line 318/565-566
+dry_run_no_sql,no SQL,do_dry_run only prints; no importlib/pyodbc,PASS,static + runtime
+dry_run_no_models,no model fit,no get_model/fit calls,PASS,static + runtime
+dry_run_no_mutation,no writes,prints only; no file writes,PASS,data hash unchanged
+dry_run_no_promote,no promote,do_promote not reachable from --dry-run,PASS,main dispatch
+validate_mode_writes_outside_v5_5,rejected for V5.5,--validate creates outputs/v3_3_daily_refresh run-dirs,REJECTED,do_run(execute=False)
+chosen_command,validate-only wrapper + dry-run subproof,scripts/refresh_validate_only.py (stdlib) invoking --dry-run,PASS,decision doc
+wrapper_no_sql,no SQL,no pyodbc import; asserts pyodbc_absent,PASS,run output
+wrapper_no_models,no models,no model imports,PASS,run output
+wrapper_no_promote,no promote,never passes --promote,PASS,code
+wrapper_output_scope,only v5_5 area,writes /app/outputs/v5_5_refresh_service_validate only,PASS,mount + run
+wrapper_stops_on_unsafe,blocker on unsafe,exits 1 + BLOCKER if any FAIL,PASS,code (rule 30)

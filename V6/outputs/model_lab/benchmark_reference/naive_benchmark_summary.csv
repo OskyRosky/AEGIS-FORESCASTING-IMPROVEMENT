@@ -1,0 +1,2 @@
+run_id,windows_planned,windows_completed,windows_failed,entities,forecast_rows,min_forecast_date,max_forecast_date,created_timestamp
+naive_benchmark_20260612_115222,454,454,0,39,13620,2025-05-03,2026-04-27,2026-06-12T11:52:22

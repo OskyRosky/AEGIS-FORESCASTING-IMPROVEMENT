@@ -1,0 +1,6 @@
+check,expected,observed,status
+critical_errors,none,"NO_CRITICAL_ERRORS (scan: Error|cannot open|could not find|unused argument|not found|unexpected symbol|Execution halted)",PASS
+listening_line,present,"'Listening on http://127.0.0.1:3839' present",PASS
+benign_readr_warning,benign,"'Warning: One or more parsing issues, call problems() on your data frame' - pre-existing, non-fatal",INFO
+benign_plotly_info,benign,"'No trace type specified ... a scatter trace seems appropriate' - plotly default, non-fatal",INFO
+log_path,documented,outputs/v4_7c_reference_artifacts_downloads/runtime/v4_7c_shiny_stderr.log,PASS

@@ -1,0 +1,73 @@
+file_path,column_name,inferred_type,null_count,sample_values,notes
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,run_id,text_like,0,tournament_engine,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,model_name,text_like,0,ARIMA_Fixed | ETS_Current | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,model_origin,text_like,0,baseline | challenger,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,model_family,text_like,0,statistical | growth_baseline | machine_learning | lightweight_neural,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,entity_count,numeric_like,0,39,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,official_median_mase,numeric_like,0,11.789916350319965 | 8.65417111153676 | 8.649280961006667 | 12.989045570820014 | 16.52907963144241,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,official_median_rmsse,numeric_like,0,3.49334506602668 | 2.273019421267602 | 2.2718379673062783 | 3.019316356642247 | 4.072356391248675,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,median_wmape,numeric_like,7,0.0099110042459386 | 0.0141636687639672 | 0.0087554067132253 | 0.0205606623453786 | 0.0156631620563462,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,median_smape,numeric_like,7,0.0099133359613967 | 0.0143406218739491 | 0.008735093329671 | 0.0207589117595503 | 0.0157679731880442,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,median_bias,numeric_like,7,-8.624581268780153 | -65.67108110529851 | -10.802205663621589 | -378.4171565921122 | -308.77216785833446,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,mase_guardrail_status,text_like,0,pass | warning | fail,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,rmsse_guardrail_status,text_like,0,pass | warning | fail,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,risk_status,text_like,0,low | medium | high,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,audit_risk_flag,boolean_like,0,False | True,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,eligible_for_champion_consideration,boolean_like,0,True | False,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,champion_exclusion_reason,text_like,12,Audit #4 high-risk flag: extreme MASE/RMSSE and possible scale or recursive-collapse issue,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,created_timestamp,date_like,0,2026-06-13T18:07:40,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,run_id,text_like,0,tournament_engine,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_a,text_like,0,ARIMA_Fixed | ETS_Current | LinearRegression | FixedGrowth_1_5 | FixedGrowth_3,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_b,text_like,0,ETS_Current | LinearRegression | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_a_origin,text_like,0,baseline | challenger,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,model_b_origin,text_like,0,baseline | challenger,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,paired_entity_count,numeric_like,0,39,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,median_delta_mase,numeric_like,0,3.4917490250170395 | 1.705991236700136 | 3.4709885792659385 | 2.7114576235508183 | -0.12771059449634414,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,bootstrap_ci_low,numeric_like,0,0.6140442369948076 | -1.4375163576493204 | 0.5880940179412883 | -1.1991292205000494 | -3.2136166769955974,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,bootstrap_ci_high,numeric_like,0,4.764950425683111 | 4.538827209637516 | 6.176905682887448 | 5.381384548833138 | 2.8162645370209343,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,sign_test_p_value,numeric_like,0,0.009475304279476404 | 0.7492586247608415 | 0.3367836351899314 | 1.0 | 0.10812902140605729,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,bh_adjusted_p_value,numeric_like,0,0.019449308784188407 | 0.8005777086485704 | 0.41045505538772886 | 1.0 | 0.16219353210908594,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,practical_threshold,numeric_like,0,0.02,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,practically_meaningful,boolean_like,0,True | False,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,statistically_supported,boolean_like,0,True | False,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,comparison_status,text_like,0,supported_difference | inconclusive,sample based schema summary
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,created_timestamp,date_like,0,2026-06-13T18:07:40,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,selected_champion_model,text_like,0,ETS Explicit,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,model_origin,text_like,0,challenger,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,model_family,text_like,0,statistical,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,decision_type,text_like,0,CHAMPION_SELECTED_WITH_CONDITIONS,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,decision_confidence,text_like,0,medium,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,official_median_mase,numeric_like,0,6.901143533373399,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,official_median_rmsse,numeric_like,0,1.856193218184295,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,supported_better_count,numeric_like,0,8,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,supported_worse_count,boolean_like,0,0,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,conditions,text_like,0,Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as non-champion conditions.,sample based schema summary
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,created_timestamp,date_like,0,2026-06-13T20:36:01,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,run_id,text_like,0,champion_decision,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,decision,text_like,0,CHAMPION_SELECTED_WITH_CONDITIONS,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_model,text_like,0,ETS Explicit,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_origin,text_like,0,challenger,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,selected_champion_family,text_like,0,statistical,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,decision_confidence,text_like,0,medium,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,conditions,text_like,0,Proceed through 5.31B closure pack; retain FastNeuralAR_MLP high-risk investigation and NBEATS/NHITS exclusion notes as non-champion conditions.,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,no_champion_reason,all_null_or_empty,1,,sample based schema summary
+outputs/model_lab/champion_decision/champion_decision.csv,created_timestamp,date_like,0,2026-06-13T20:05:35,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,condition_id,text_like,0,C-001 | C-002 | C-003 | C-004 | C-005,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,selected_champion_model,text_like,0,ETS Explicit,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,condition_type,text_like,0,medium_confidence | conditional_champion_status | pairwise_evidence_scope | risk_carry_forward | no_unconditional_replacement_claim,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,condition_description,text_like,0,"Champion selected with medium confidence, not high confidence. | ETS Explicit is selected as champion with conditions, not as an unconditional winner. | ETS Explicit has strong pairwise support but this does not imply dominance in every entity or future scenario. | Known risk carry-forwards remain active, including FastNeuralAR_MLP investigation and deferred NBEATS/NHITS. | Dashboard and stakeholder summaries must not state that ETS Explicit unconditionally replaces all other models.",sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,source_artifact,text_like,0,outputs/model_lab/champion_decision/champion_decision.csv | outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv | outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv | outputs/governance/6_2_decision_rules/decision_action_framework.csv,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,severity,text_like,0,condition | communication_guardrail | risk_carry_forward,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,governance_action,text_like,0,MONITOR | KEEP_WITH_CONDITIONS | SURFACE_ON_DASHBOARD | DO_NOT_PRESENT_AS_UNCONDITIONAL_WINNER,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,dashboard_display_required,boolean_like,0,True,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,review_trigger,text_like,0,"Confidence changes through future audit, monitoring, or new evidence. | Future champion decision changes decision type. | Evidence scope changes through future tournament or production monitoring. | Risk register changes or future work resolves carried-forward items. | Any dashboard or stakeholder copy claims unconditional replacement.",sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,expiration_or_reassessment_rule,text_like,0,Reassess before any high-confidence or unconditional champion language is used. | Expires only if a later governed decision upgrades or replaces the conditional champion status. | Reassess when pairwise evidence is refreshed or expanded. | Do not expire until risks are explicitly closed by a later governed artifact. | Permanent until a future champion decision explicitly authorizes unconditional language.,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,created_timestamp,date_like,0,2026-06-14T10:40:38,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,language_id,text_like,0,L-001 | L-002 | L-003 | L-004 | L-005,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,language_category,text_like,0,approved | discouraged | prohibited,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,audience,text_like,0,executive | dashboard | stakeholder | all,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,statement_text,text_like,0,"ETS Explicit was selected as champion with conditions. | ETS Explicit is the current recommended champion candidate under the Model Lab governance framework. | The champion decision has medium confidence and must be interpreted with documented carry-forward risks. | The tournament standing supports ETS Explicit, but the champion decision remains conditional. | ETS Explicit is the top model.",sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,allowed_status,text_like,0,allowed | allowed_with_context | prohibited,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,reason,text_like,0,Matches official champion decision. | Preserves governance context. | Keeps confidence and risks visible. | Separates standing from champion decision. | Can be misleading unless tied to conditional champion and scope.,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,replacement_statement,text_like,4,ETS Explicit was selected as champion with conditions under the Model Lab governance framework. | ETS Explicit had strong tournament evidence and was selected as champion with conditions. | ETS Explicit was selected as champion with conditions. | ETS Explicit is the conditional champion under current Model Lab evidence. | ETS Explicit is the selected champion with conditions; other models remain governed references or future-work candidates.,sample based schema summary
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,created_timestamp,date_like,0,2026-06-14T10:40:38,sample based schema summary

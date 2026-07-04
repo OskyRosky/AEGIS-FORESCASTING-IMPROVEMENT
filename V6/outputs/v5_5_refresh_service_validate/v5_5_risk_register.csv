@@ -1,0 +1,12 @@
+risk_id,area,risk,severity,blocker_yes_no,mitigation,status
+R1,validate_vs_real,refresh validate-only could be mistaken for real refresh,medium,no,image CMD is validate-only wrapper; banner prints NO_SQL/NO_MODELS/NO_PROMOTE/NO_MUTATION; no pyodbc in image; real refresh gated doc,mitigated
+R2,sql_auth_headless,real refresh needs SQL + Entra Interactive/MFA; incompatible with headless container,high,no,V5.5 does NOT attempt SQL/auth; refresh real deferred to V5.6+; auth strategy decision required (device-code/SPN/MI),gated_open
+R3,writable_mount_mutation,a mis-configured writable mount could allow productive mutation,medium,no,refresh mounts data/processed :ro and ONLY the v5_5 output subdir :rw; productive outputs not mounted,mitigated
+R4,compose_profiles_misuse,someone could run refresh with wrong flags,low,no,profile ["refresh"] hides it from up shiny; image only runs validate-only; dangerous orchestrator flags never wired into the service,mitigated
+R5,python_deps_growth,refresh image deps could grow (pyodbc/pandas/ML),medium,no,V5.5 image installs ZERO pip packages (stdlib only); documented; future real refresh must justify each dep,accepted
+R6,image_env_divergence,refresh image may diverge from the real refresh environment,low,no,V5.5 is architecture validation only; real refresh env (ODBC driver/pyodbc/pandas) defined later under V5.6 gating,accepted
+R7,future_real_refresh_deps,real refresh will require ODBC/pyodbc/pandas + auth,medium,no,deferred to V5.6; documented in gating doc,gated_open
+R8,scheduler_out_of_scope,no scheduler/cron/Task Scheduler/GitHub Actions,low,no,none created; explicitly out of scope,accepted
+R9,no_shiny_refresh_button,dashboard must never trigger refresh,low,no,no Update-data button; shiny stays read-only; verified,mitigated
+R10,highcharts_license,Highcharts commercial license (inherited),medium,no,legal review flagged,carried_forward
+R11,inter_font_runtime,bslib Inter font runtime download (inherited),low,no,offline bundle future,carried_forward

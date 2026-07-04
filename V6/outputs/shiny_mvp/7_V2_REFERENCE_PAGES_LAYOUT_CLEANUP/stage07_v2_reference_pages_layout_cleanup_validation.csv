@@ -1,0 +1,21 @@
+requirement_id,requirement,status,evidence
+1,Reference Artifacts page loads,PASS,App boots; HTTP 200 on 127.0.0.1:3838; section_artifacts renders.
+2,Reference Methodology page loads,PASS,section_methodology renders.
+3,Reference Version page loads,PASS,section_version renders.
+4,Each page has an About section collapsed by default,PASS,About the Artifacts/Methodology/Version Reference all home_collapse open=FALSE.
+5,Each page has a main overview box,PASS,Artifact Overview / Methodology Overview / Version Overview all open=TRUE.
+6,Artifacts table/list still renders,PASS,artifact_catalog_table + artifact_lineage_table + artifact-dl-grid preserved (suspendWhenHidden=FALSE already present).
+7,Methodology content still renders,PASS,Data pipeline cards + Current dataset + What the dashboard consumes + Dashboard structure all preserved in Methodology Overview.
+8,Architecture Diagram placeholder exists and loads no fake image,PASS,method-figure placeholder with text 'Architecture diagram will be added here once the approved image is available.'; no <img> in section.
+9,Project Documentation placeholder exists and loads no fake documentation,PASS,method-figure-doc placeholder with text 'Project documentation will be linked or embedded here once the approved document is available.'; no fake doc/link.
+10,Version metadata still renders,PASS,App version/Forecast version/Artifacts available cards + Build & governance + Runtime + Data snapshot info_lists preserved.
+11,Last update / artifact freshness values unchanged,PASS,Data contract build (meta$run_date) and coverage moved verbatim into Artifact Freshness / Last Update box; no value change.
+12,All major sections collapsible/expandable,PASS,Artifacts 4 boxes; Methodology 5 boxes; Version 5 boxes; all home_collapse.
+13,Existing server output IDs preserved,PASS,artifact_catalog_table + artifact_lineage_table IDs unchanged; download IDs (dl_*) unchanged.
+14,No data artifacts modified,PASS,No writes to any data artifact.
+15,No models/forecasts/backtests/recalibrations run,PASS,No engine/tournament/model code invoked.
+16,Champion decision unchanged,PASS,Version champion line and confidence text unchanged; no governance logic touched.
+17,Forecasting/Models/Governance/other pages untouched,PASS,Only section_artifacts/section_methodology/section_version edited in tabs.R; no server.R change (IDs already eager-render).
+18,Modified R files parse cleanly,PASS,Rscript parse(tabs.R)=OK.
+19,Shiny launches successfully,PASS,start_shiny.ps1 launched PID 17304 on 3838.
+20,HTTP 200 confirmed,PASS,Invoke-WebRequest 127.0.0.1:3838 -> HTTP 200.

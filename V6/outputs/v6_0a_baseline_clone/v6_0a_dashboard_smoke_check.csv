@@ -1,0 +1,10 @@
+check,expected,observed,status,evidence
+launch_native_v6,dashboard starts from V6 root,PID 35568 on 3841,PASS,start_shiny.ps1
+http_200,200,HTTP 200 LEN 303501,PASS,Invoke-WebRequest
+html_len_baseline,~303501 (V5.0A native baseline),303501,PASS,Invoke-WebRequest
+champion_ets_explicit,ETS Explicit,found,PASS,html regex
+scope_15_models,15 models,found,PASS,html regex
+horizons_30_60_180,30/60/180,all found,PASS,html regex
+assistants_10,10,Generate explanation x10,PASS,html regex
+server_stopped,port released,still_listening_3841=0,PASS,stop_shiny.ps1
+v5_untouched,V5 intact,Docker healthy :8080; data hash unchanged,PASS,docker ps + snapshot

@@ -1,0 +1,8 @@
+label_id,dashboard_section,label_type,label_text,display_priority,required,source_condition,created_timestamp
+WL-001,Champion Decision,champion_condition,Champion selected with conditions.,high,True,C-002 conditional champion status,2026-06-14T10:49:31
+WL-002,Champion Decision,confidence,"Decision confidence is medium, not high.",high,True,C-001 medium confidence,2026-06-14T10:49:31
+WL-003,Tournament Standings,standing_caveat,Tournament standing is not an unconditional winner declaration.,high,True,C-005 no unconditional winner,2026-06-14T10:49:31
+WL-004,Risk Register,risk,FastNeuralAR_MLP is high risk and requires investigation.,high,True,R-001 FastNeuralAR_MLP,2026-06-14T10:49:31
+WL-005,Deferred Models,deferred,NBEATS/NHITS are deferred future-work candidates.,medium,True,R-002/R-003 deferrals,2026-06-14T10:49:31
+WL-006,Audit Status,audit,Audit #5 approved dashboard handoff with conditions.,medium,True,Audit #5 verdict,2026-06-14T10:49:31
+WL-007,Methodology / Metric Policy,no_recompute,Metrics are sourced from Model Lab artifacts and are not recomputed in Shiny.,high,True,read-only dashboard contract,2026-06-14T10:49:31

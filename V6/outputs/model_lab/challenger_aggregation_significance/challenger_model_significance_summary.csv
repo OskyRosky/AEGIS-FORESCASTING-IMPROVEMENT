@@ -1,0 +1,7 @@
+run_id,model_name,comparisons_tested,supported_better_count,supported_worse_count,inconclusive_count,notes,created_timestamp
+challenger_aggregation_significance,AutoARIMA,5,2,1,2,Evidence summary only; not a ranking and not a champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,Theta,5,3,0,2,Evidence summary only; not a ranking and not a champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,ETS Explicit,5,4,0,1,Evidence summary only; not a ranking and not a champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,LightGBM,5,1,4,0,Evidence summary only; not a ranking and not a champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,XGBoost,5,2,2,1,Evidence summary only; not a ranking and not a champion decision.,2026-06-13T17:27:28
+challenger_aggregation_significance,FastNeuralAR_MLP,5,0,5,0,Evidence summary only; not a ranking and not a champion decision.,2026-06-13T17:27:28

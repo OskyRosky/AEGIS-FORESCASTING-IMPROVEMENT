@@ -1,0 +1,12 @@
+check,expected,observed,status,evidence
+champion_ets_explicit,ETS Explicit,found in rendered UI,PASS,smoke_test champion_ets_explicit
+scope_15_models,15 governed models,found in rendered UI,PASS,smoke_test scope_15_models
+horizons_30_60_180,30 / 60 / 180,30=True;60=True;180=True,PASS,smoke_test horizons_30_60_180
+assistants_10_visible,10 assistants,Generate explanation x10,PASS,smoke_test generate_explanation_x10
+no_sql,no SQL,R-only image; no pyodbc/driver; no SQL in compose,PASS,image + compose
+no_models,no model run,dashboard read-only; no model_lab in image,PASS,image
+no_refresh,no refresh,no refresh service; no refresh command,PASS,compose config
+no_azure,no Azure,no Azure env/service,PASS,compose config
+no_llm_real,mock only,LLM layer read-only mock (no real LLM/network),PASS,V4 inherited state
+shiny_read_only,read-only consumer,mounts :ro; write attempts blocked,PASS,mount validation
+v1_v4_intact,frozen,only V5 touched this stage,PASS,work scope

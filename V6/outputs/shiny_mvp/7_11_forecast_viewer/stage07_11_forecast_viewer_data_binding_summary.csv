@@ -1,0 +1,8 @@
+"ui_control","bound_to","source_artifact","recomputed"
+"Series / entity","forecasts.entity_key (unique)","forecasts","no"
+"Model","forecasts.model_version filtered by entity","forecasts","no"
+"Forecast horizon (days)","client option 5..60 limits forecast rows","forecasts","no"
+"History window","actuals last N days by date","actuals","no"
+"Chart - Actual line","actuals.actual_value by entity+date","actuals","no"
+"Chart - Forecast line","forecasts.forecast_value by entity+model+date","forecasts","no"
+"Forecast start marker","min(forecast date) for entity+model","forecasts","no"

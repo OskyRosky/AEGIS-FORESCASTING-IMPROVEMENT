@@ -1,0 +1,11 @@
+check,expected,observed,status
+champion_ets_explicit,ETS Explicit,found in V6 dashboard,PASS
+scope_15_models,15,found,PASS
+horizons_30_60_180,30/60/180,found,PASS
+prohibited_models_absent,NBEATS/NHITS/FastNeuralAR_MLP absent,inherited governed artifacts (V5 parity),PASS
+shiny_read_only,yes,shiny_app byte-identical to V5,PASS
+no_azure,none,clone only,PASS
+no_sql,none,clone only,PASS
+no_real_refresh,none,clone only,PASS
+no_functional_change,none,shiny_app hash identical to V5,PASS
+v1_v2_v3_v4_v5_frozen,intact,only V6 created,PASS

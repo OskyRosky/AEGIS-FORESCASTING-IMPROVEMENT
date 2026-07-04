@@ -1,0 +1,9 @@
+check,expected,observed,status,evidence
+active_root_v5,V5 = active before clone,V5 confirmed,PASS,workspace
+v5_closed,V5_DOCKER_LOCAL_MVP_CLOSED,V5.8 closed,PASS,V5 outputs
+v6_not_exists_before,absent,v6_exists=False,PASS,Test-Path
+v5_file_count,captured,2271 files / 1415.1 MB,PASS,Get-ChildItem
+r_runtime_present,Rscript 4.6.0,present,PASS,Test-Path
+start_shiny_present,scripts/start_shiny.ps1,present,PASS,Test-Path
+native_ports_free,3838-3842 free,none busy (Docker on 8080),PASS,Get-NetTCPConnection
+no_functional_change_planned,clone + markers only,shiny_app not modified,PASS,scope

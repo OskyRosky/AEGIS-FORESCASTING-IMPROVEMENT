@@ -1,0 +1,15 @@
+section_id,section_name,sidebar_label,dashboard_location,source_governance_requirement,planned_stage_block,priority,initial_content,notes
+S07-001,Cover / Landing Page,Home,landing tab,Champion selected with conditions + V1 root status,7.0C,high,Caratula with ETS Explicit conditional champion and Audit #6 status,first visible page
+S07-002,Executive Overview,Executive,overview tab,Executive Summary,7.0D,high,KPI cards from governed artifacts,read-only
+S07-003,Champion Decision,Champion,champion tab,CHAMPION_SELECTED_WITH_CONDITIONS,7.0D,high,Decision card with confidence medium,no winner language
+S07-004,Champion Conditions,Conditions,champion tab,C-001 through C-005,7.0D,high,Condition table and warnings,must be visible
+S07-005,Model Universe,Models,models tab,Model Universe,7.0E,high,All 15 models with flags,include deferred
+S07-006,Tournament Evidence,Tournament,evidence tab,Tournament not champion distinction,7.0F,high,Preliminary standings as evidence only,no inferred champion
+S07-007,Pairwise Evidence,Pairwise,evidence tab,Pairwise evidence visibility,7.0F,medium,Pairwise table from artifact,no recalculation
+S07-008,Risk Register,Risks,risk tab,Risk carry-forward,7.0E,high,FastNeuralAR_MLP visible,high-risk flag
+S07-009,Deferred Models,Deferred,risk tab,NBEATS/NHITS deferred future work,7.0E,high,Deferred table,not rejected
+S07-010,Governance Actions,Actions,governance tab,6.2 governance recommendations,7.0F,medium,Action map table,read-only
+S07-011,Audit Trail,Audit,audit tab,Audit #5/#6 status,7.0F,medium,Audit status and conditions,show approve with conditions
+S07-012,Source Artifacts,Sources,governance tab,Source artifact traceability,7.0G,medium,Artifact binding list,for auditability
+S07-013,Methodology / Metric Policy,Methodology,methodology tab,No recompute/read-only policy,7.0C,high,Governance explanation,no models no metrics recompute
+S07-014,Footer / Version Info,Version,footer,V1 active root policy,7.0C,medium,V1 and Stage 07 status,footer/sidebar

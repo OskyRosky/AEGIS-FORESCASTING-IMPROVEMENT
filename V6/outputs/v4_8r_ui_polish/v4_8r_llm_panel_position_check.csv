@@ -1,0 +1,11 @@
+section,llm_id,assistant_count,is_last_block,blocks_after_assistant,generate_button,foot_badge,top_teaser_present,result
+universe,llm_models_universe,1,yes,0,Generate explanation,Local mock,no,PASS
+tournament,llm_tournament,1,yes,0,Generate explanation,Local mock,no,PASS
+champion,llm_champion_overview,1,yes,0,Generate explanation,Local mock,no,PASS
+explorer,llm_forecast_viewer,1,yes,0,Generate explanation,Local mock,no,PASS
+accuracy,llm_forecasting_accuracy,1,yes,0,Generate explanation,Local mock,no,PASS
+forecast,llm_forecasting_forecast,1,yes,0,Generate explanation,Local mock,no,PASS
+ttl,llm_forecasting_ttl,1,yes,0,Generate explanation,Local mock,no,PASS
+risks,llm_governance_risks,1,yes,0,Generate explanation,Local mock,no,PASS
+audit,llm_governance_audit,1,yes,0,Generate explanation,Local mock,no,PASS
+artifacts,llm_reference_artifacts,1,yes,0,Generate explanation,Local mock,no,PASS

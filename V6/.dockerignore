@@ -1,0 +1,63 @@
+# =====================================================================
+# AEGIS V5.1 | .dockerignore | aggressive build-context reduction
+# ---------------------------------------------------------------------
+# Build context = V5 root (~1.4 GB raw). The dashboard image only needs
+# code (shiny_app/, config/) + root markers + docker/entrypoint.sh.
+# Everything heavy is excluded; data/processed and outputs are supplied
+# at runtime as EXTERNAL read-only mounts (NOT baked into the image).
+# =====================================================================
+
+# --- Heavy data + governed outputs (mounted at runtime, never baked) ---
+outputs/
+data/
+data/raw/
+data/processed/
+data/sample/
+
+# --- Non-dashboard code / assets (no Python, no ML, no legacy) ---------
+python/
+MassiveForecasting-V3/
+BACKUP/
+notebooks/
+docs/
+tests/
+scripts/
+
+# --- Python caches / virtualenvs --------------------------------------
+**/.venv
+.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/.ipynb_checkpoints/
+
+# --- VCS / IDE / local state ------------------------------------------
+.git/
+.gitignore
+.vscode/
+.idea/
+*.Rproj
+**/.Rproj.user/
+**/.Rhistory
+**/.RData
+**/.Ruserdata
+
+# --- Logs / runtime / temp / caches -----------------------------------
+**/logs/
+**/*.log
+**/runtime/
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.cache
+**/cache/
+**/.cache/
+**/transcripts/
+
+# --- OS noise ---------------------------------------------------------
+**/.DS_Store
+Thumbs.db
+
+# --- Docker meta (not needed inside the build context copy) -----------
+.dockerignore
+Dockerfile

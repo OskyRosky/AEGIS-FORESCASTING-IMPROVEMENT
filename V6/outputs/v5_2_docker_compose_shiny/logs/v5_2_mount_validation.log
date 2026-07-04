@@ -1,0 +1,9 @@
+=== MOUNT VALIDATION 2026-07-03T10:46:40.1849972-06:00 ===
+processed_exists=yes
+outputs_exists=yes
+raw_exists=no
+processed_csv=24
+touch: cannot touch '/app/data/processed/_v5_2_write_test.tmp': Read-only file system
+PROCESSED_WRITE_BLOCKED
+touch: cannot touch '/app/outputs/_v5_2_write_test.tmp': Read-only file system
+OUTPUTS_WRITE_BLOCKED

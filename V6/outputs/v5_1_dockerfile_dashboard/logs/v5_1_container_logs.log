@@ -1,0 +1,49 @@
+Loading required package: shiny
+
+Attaching package: ΓÇÿbslibΓÇÖ
+
+The following object is masked from ΓÇÿpackage:utilsΓÇÖ:
+
+    page
+
+
+Attaching package: ΓÇÿDTΓÇÖ
+
+The following objects are masked from ΓÇÿpackage:shinyΓÇÖ:
+
+    dataTableOutput, renderDataTable
+
+Loading required package: ggplot2
+
+Attaching package: ΓÇÿplotlyΓÇÖ
+
+The following object is masked from ΓÇÿpackage:ggplot2ΓÇÖ:
+
+    last_plot
+
+The following object is masked from ΓÇÿpackage:statsΓÇÖ:
+
+    filter
+
+The following object is masked from ΓÇÿpackage:graphicsΓÇÖ:
+
+    layout
+
+
+Attaching package: ΓÇÿdplyrΓÇÖ
+
+The following objects are masked from ΓÇÿpackage:statsΓÇÖ:
+
+    filter, lag
+
+The following objects are masked from ΓÇÿpackage:baseΓÇÖ:
+
+    intersect, setdiff, setequal, union
+
+Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat <- vroom(...)
+  problems(dat)
+
+Listening on http://0.0.0.0:3838
+Downloading google font Inter to local cache (/root/.cache/R/sass)

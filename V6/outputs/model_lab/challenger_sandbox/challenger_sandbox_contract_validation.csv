@@ -1,0 +1,44 @@
+run_id,model_name,check_name,status,details,created_timestamp
+challenger_sandbox,AutoARIMA,required_columns_present,pass,all contract columns present,2026-06-12T15:53:09
+challenger_sandbox,AutoARIMA,execution_mode_is_sandbox,pass,execution_mode values: ['sandbox'],2026-06-12T15:53:09
+challenger_sandbox,AutoARIMA,no_nan_values,pass,nan_count=0,2026-06-12T15:53:09
+challenger_sandbox,AutoARIMA,no_inf_values,pass,inf_count=0,2026-06-12T15:53:09
+challenger_sandbox,AutoARIMA,horizon_day_in_range,pass,min=1 max=30,2026-06-12T15:53:09
+challenger_sandbox,AutoARIMA,rows_per_entity_window_equal_horizon,pass,counts=[30],2026-06-12T15:53:09
+challenger_sandbox,AutoARIMA,negative_value_policy_reported_not_corrected,pass,negative_count=0 (reported only; not corrected in sandbox),2026-06-12T15:53:09
+challenger_sandbox,Theta,required_columns_present,pass,all contract columns present,2026-06-12T15:53:09
+challenger_sandbox,Theta,execution_mode_is_sandbox,pass,execution_mode values: ['sandbox'],2026-06-12T15:53:09
+challenger_sandbox,Theta,no_nan_values,pass,nan_count=0,2026-06-12T15:53:09
+challenger_sandbox,Theta,no_inf_values,pass,inf_count=0,2026-06-12T15:53:09
+challenger_sandbox,Theta,horizon_day_in_range,pass,min=1 max=30,2026-06-12T15:53:09
+challenger_sandbox,Theta,rows_per_entity_window_equal_horizon,pass,counts=[30],2026-06-12T15:53:09
+challenger_sandbox,Theta,negative_value_policy_reported_not_corrected,pass,negative_count=0 (reported only; not corrected in sandbox),2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,required_columns_present,pass,all contract columns present,2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,execution_mode_is_sandbox,pass,execution_mode values: ['sandbox'],2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,no_nan_values,pass,nan_count=0,2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,no_inf_values,pass,inf_count=0,2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,horizon_day_in_range,pass,min=1 max=30,2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,rows_per_entity_window_equal_horizon,pass,counts=[30],2026-06-12T15:53:09
+challenger_sandbox,ETS Explicit,negative_value_policy_reported_not_corrected,pass,negative_count=0 (reported only; not corrected in sandbox),2026-06-12T15:53:09
+challenger_sandbox,LightGBM,required_columns_present,pass,all contract columns present,2026-06-12T15:53:09
+challenger_sandbox,LightGBM,execution_mode_is_sandbox,pass,execution_mode values: ['sandbox'],2026-06-12T15:53:09
+challenger_sandbox,LightGBM,no_nan_values,pass,nan_count=0,2026-06-12T15:53:09
+challenger_sandbox,LightGBM,no_inf_values,pass,inf_count=0,2026-06-12T15:53:09
+challenger_sandbox,LightGBM,horizon_day_in_range,pass,min=1 max=30,2026-06-12T15:53:09
+challenger_sandbox,LightGBM,rows_per_entity_window_equal_horizon,pass,counts=[30],2026-06-12T15:53:09
+challenger_sandbox,LightGBM,negative_value_policy_reported_not_corrected,pass,negative_count=0 (reported only; not corrected in sandbox),2026-06-12T15:53:09
+challenger_sandbox,XGBoost,required_columns_present,pass,all contract columns present,2026-06-12T15:53:09
+challenger_sandbox,XGBoost,execution_mode_is_sandbox,pass,execution_mode values: ['sandbox'],2026-06-12T15:53:09
+challenger_sandbox,XGBoost,no_nan_values,pass,nan_count=0,2026-06-12T15:53:09
+challenger_sandbox,XGBoost,no_inf_values,pass,inf_count=0,2026-06-12T15:53:09
+challenger_sandbox,XGBoost,horizon_day_in_range,pass,min=1 max=30,2026-06-12T15:53:09
+challenger_sandbox,XGBoost,rows_per_entity_window_equal_horizon,pass,counts=[30],2026-06-12T15:53:09
+challenger_sandbox,XGBoost,negative_value_policy_reported_not_corrected,pass,negative_count=0 (reported only; not corrected in sandbox),2026-06-12T15:53:09
+challenger_sandbox,NBEATS,required_columns_present,pass,all contract columns present,2026-06-12T15:53:09
+challenger_sandbox,NBEATS,execution_mode_is_sandbox,pass,execution_mode values: ['sandbox'],2026-06-12T15:53:09
+challenger_sandbox,NBEATS,no_nan_values,pass,nan_count=0,2026-06-12T15:53:09
+challenger_sandbox,NBEATS,no_inf_values,pass,inf_count=0,2026-06-12T15:53:09
+challenger_sandbox,NBEATS,horizon_day_in_range,pass,min=1 max=30,2026-06-12T15:53:09
+challenger_sandbox,NBEATS,rows_per_entity_window_equal_horizon,pass,counts=[30],2026-06-12T15:53:09
+challenger_sandbox,NBEATS,negative_value_policy_reported_not_corrected,pass,negative_count=0 (reported only; not corrected in sandbox),2026-06-12T15:53:09
+challenger_sandbox,NHITS,forecast_presence,not_applicable_blocked,no sandbox forecasts to validate (status=sandbox_blocked_dependency_missing),2026-06-12T15:53:09

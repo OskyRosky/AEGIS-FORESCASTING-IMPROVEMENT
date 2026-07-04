@@ -1,0 +1,11 @@
+check,expected,observed,status
+section_loads,artifacts section renders,"data-section=artifacts shows Source Artifacts, registry 43/42/9/1, governed downloads, full catalog",PASS
+download_buttons_label,Download,"8 cards each render an actionButton labelled Download (icon)",PASS
+modal_opens,multi-format modal,"dl_<key>_open opens modal titled 'Download governed artifact'",PASS
+modal_name,artifact label,"e.g. 'Tournament scorecard'",PASS
+modal_desc,artifact desc,"e.g. 'Composite tournament scores'",PASS
+modal_formats,6 formats,"CSV (canonical) + MD + PDF + DOCX + HTML + TXT",PASS
+modal_footer,canonical note,"CSV is the canonical artifact, served verbatim. MD / PDF / DOCX / HTML / TXT are rendered copies for reading.",PASS
+download_links_bound,href populated,"all six links receive session download URL (suspendWhenHidden=FALSE fix)",PASS
+assistant_renders,assistant at end,"AEGIS Explanation Assistant present below the inventory",PASS
+cache_buster,v=20260629h,custom.css?v=20260629h,PASS

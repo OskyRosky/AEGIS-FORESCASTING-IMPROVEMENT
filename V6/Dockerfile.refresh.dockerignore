@@ -1,0 +1,63 @@
+# =====================================================================
+# AEGIS V5.5 | Dockerfile.refresh.dockerignore
+# ---------------------------------------------------------------------
+# Per-Dockerfile ignore used ONLY by `docker build -f Dockerfile.refresh`
+# (BuildKit prefers <dockerfile>.dockerignore over the global one). This
+# lets the refresh build see python/ + scripts/ + config/ (which the
+# dashboard .dockerignore strips) while STILL excluding all heavy data,
+# governed outputs, the R dashboard app, backups, and caches.
+# NO data/raw, NO data/processed, NO outputs, NO secrets are baked.
+# =====================================================================
+
+# Heavy data + governed outputs (supplied at runtime as mounts, never baked)
+outputs/
+data/
+data/raw/
+data/processed/
+data/sample/
+
+# Not needed by the refresh validate-only service
+shiny_app/
+MassiveForecasting-V3/
+BACKUP/
+notebooks/
+docs/
+tests/
+docker/
+
+# Python caches / virtualenvs
+**/.venv
+.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/.ipynb_checkpoints/
+
+# VCS / IDE / local state
+.git/
+.gitignore
+.vscode/
+.idea/
+*.Rproj
+**/.Rproj.user/
+
+# Logs / runtime / temp / caches
+**/logs/
+**/*.log
+**/runtime/
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.cache
+**/cache/
+**/.cache/
+
+# OS noise
+**/.DS_Store
+Thumbs.db
+
+# Docker meta
+.dockerignore
+Dockerfile
+Dockerfile.refresh
+Dockerfile.refresh.dockerignore

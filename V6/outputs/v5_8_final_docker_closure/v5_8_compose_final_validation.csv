@@ -1,0 +1,16 @@
+check,expected,observed,status,evidence
+docker_compose_config,valid,exit 0,PASS,logs/v5_8_compose_final_validation.log
+default_services,shiny only,shiny,PASS,docker compose config --services
+profile_services,shiny+refresh,shiny+refresh,PASS,--profile refresh config --services
+shiny_running,running,Up 2h,PASS,docker compose ps
+refresh_not_autostart,excluded,default services=shiny only,PASS,--services
+refresh_one_shot_profile,profile refresh,behind profile,PASS,compose config
+no_sql_service,absent,none,PASS,compose config
+no_azure_service,absent,none,PASS,compose config
+no_scheduler_service,absent,none,PASS,compose config
+no_llm_service,absent,none,PASS,compose config
+no_data_raw_mount,absent,raw not mounted,PASS,compose config
+data_processed_ro_shiny,read-only,read_only:true,PASS,compose config
+outputs_ro_shiny,read-only,read_only:true,PASS,compose config
+refresh_v5_5_output_rw,granular writable,only v5_5 subdir rw,PASS,compose config
+refresh_processed_ro,read-only,read_only:true,PASS,compose config

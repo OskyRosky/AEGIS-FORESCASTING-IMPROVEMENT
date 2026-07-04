@@ -1,0 +1,28 @@
+check_name,status,details
+v2_root_exists,pass,V2 active root confirmed
+forecasts_csv_inspected,pass,data/processed/forecasts.csv read-only; 65095 rows; 16 model_version; value_type=Forecast-Mean only; future-only 2026-04-28..2030-04-25
+forecast_viewer_outputs_inspected,pass,forecast_viewer_model_outputs.csv read-only; 21 cols; 13 model_name; horizon_days 1-30; lower/upper/interval_level 100% empty
+production_model_versions_listed,pass,16 distinct listed in mapping diagnostic
+backtest_model_names_listed,pass,13 distinct listed in mapping diagnostic
+model_mapping_diagnostic_completed,pass,Result NOT_RELIABLE: 0 clean / 1 weak / 2 ambiguous / 13 none; 10 ensembles absent from backtest
+horizon_availability_inspected,pass,Backtest horizon_days max 30; production needs ~1450d -> evidence gap documented
+residual_source_constraint_identified,pass,forecasts.csv future-only with zero overlap to actuals.csv -> no native production residuals; backtest is only source
+interval_method_recommendation_created,pass,method_decisions.csv (empirical backtest residual-quantile)
+contract_recommendation_created,pass,recommended_contract.csv (wide additive NA-safe)
+fallback_hierarchy_created,pass,fallback_hierarchy.csv (key x horizon-bucket preferred)
+validation_rules_created,pass,validation_rules.csv VR1-VR15
+open_oscar_decisions_listed,pass,open_questions_for_oscar.csv D1-D11
+future_file_changes_listed,pass,future_file_changes.csv (Etapa 2B/3/4)
+coverage_validation_plan_defined,pass,VR10/VR11/VR15 empirical coverage checks specified
+no_code_modified,pass,Specification only; no source edited
+no_data_modified,pass,No data/raw or data/processed files modified
+no_forecasts_csv_modified,pass,forecasts.csv read-only
+no_shiny_modified,pass,No shiny_app files modified
+no_models_run,pass,No models executed
+no_forecasts_generated,pass,No forecasts produced
+no_metrics_recomputed,pass,No metrics recalculated
+champion_unchanged,pass,No champion decision touched
+warning_horizon_gap,warning,Empirical evidence only 1-30 days; long-horizon bands require Oscar decision D2/D11
+warning_model_population,warning,Bands are portfolio proxy from a different model population than production
+warning_thin_samples,warning,~10 backtest obs per key-horizon-model; 95% quantiles need pooling
+temp_inspect_script_cleanup,pass,Temporary inspection script removed after run

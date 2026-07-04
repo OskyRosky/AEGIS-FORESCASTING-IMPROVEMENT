@@ -1,0 +1,53 @@
+key,value
+artifact_name,forecast_viewer_model_outputs.csv
+artifact_path,data\processed\forecast_viewer_model_outputs.csv
+artifact_format,csv_fallback
+build_timestamp,2026-06-18 20:53:18
+forecast_type,backtest_historical_comparison
+included_series_count,39
+excluded_series_count,6
+included_series,APC-Dedicated | APC-MSIT | APC-Multitenant | ARE-Go Local | AUS-Go Local | BRA-Go Local | CAN-Go Local | CHE-Go Local | DEU-Go Local | ESP-Go Local | EUR-Dedicated | EUR-MSIT | EUR-Multitenant | FRA-Go Local | GBR-Dedicated | GBR-Go Local | IND-Go Local | ISR-Go Local | ITA-Go Local | JPN-Go Local | KOR-Go Local | LAM-Multitenant | MEX-Go Local | NAM-Dedicated | NAM-GCC Low | NAM-ITAR DoD | NAM-ITAR GCCH | NAM-MSIT | NAM-Multitenant | NAM-SDF | NAM-TDF | NOR-Go Local | NZL-Go Local | POL-Go Local | QAT-Go Local | SGP-Go Local | SWE-Go Local | TWN-Go Local | ZAF-Go Local
+excluded_series,AUT-Go Local | CHL-Go Local | DNK-Go Local | EUR-Go Local | IDN-Go Local | MYS-Go Local
+model_count,13
+models,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | FastNeuralAR_MLP | FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4 | FixedGrowth_6 | LightGBM | LinearRegression | Theta | XGBoost
+row_count,177060
+date_min,2025-05-03
+date_max,2026-04-27
+horizon_min,1
+horizon_max,30
+ui_horizons_offered,5 | 10 | 15 | 20 | 25 | 30
+interval_availability,none_point_forecasts_only
+grain,series_key x model_name x date x horizon_days
+grain_duplicates_dropped,0
+deferred_models_excluded,NBEATS | NHITS
+no_model_rerun,TRUE
+no_forecast_generation,TRUE
+no_synthetic_forecasts,TRUE
+no_metric_recalculation,TRUE
+no_champion_change,TRUE
+known_limitations,backtest_only; point_forecasts_only_no_intervals; deferred_deep_learning_excluded; 6_actuals_only_series_excluded
+csv_or_parquet_decision,csv_fallback_no_pyarrow_fastparquet
+source__baseline,outputs\model_lab\full_baseline\full_baseline_forecasts.csv
+source_rows__baseline,95340
+source_sha256_16__baseline,168e9d9229917356
+source__challenger,outputs\model_lab\challenger_metrics\challenger_actual_forecast_join.csv
+source_rows__challenger,81720
+source_sha256_16__challenger,a83888ecc204cd03
+source__actuals,data\processed\actuals.csv
+source_rows__actuals,84537
+source_sha256_16__actuals,427a153bffdad54b
+source__entities,data\processed\entities.csv
+source_rows__entities,45
+source_sha256_16__entities,9b36102b3616c556
+source__universe,outputs\model_lab\model_lab_closure_pack\model_lab_final_model_universe.csv
+source_rows__universe,15
+source_sha256_16__universe,5c63ecd981253ce3
+source__deferred,outputs\model_lab\model_lab_closure_pack\model_lab_deferred_models.csv
+source_rows__deferred,2
+source_sha256_16__deferred,a18e926f2bde4ad9
+source__risk,outputs\model_lab\model_lab_closure_pack\model_lab_risk_register_final.csv
+source_rows__risk,7
+source_sha256_16__risk,d6d562c3e1fa1e9a
+source__champion,outputs\model_lab\model_lab_closure_pack\model_lab_champion_summary.csv
+source_rows__champion,1
+source_sha256_16__champion,fc457cb28db45798

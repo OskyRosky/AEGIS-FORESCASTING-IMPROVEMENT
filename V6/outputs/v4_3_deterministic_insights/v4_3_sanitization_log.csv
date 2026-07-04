@@ -1,0 +1,5 @@
+original_field,original_text_excerpt,sanitized_text,reason,user_visible,source_artifact
+champion_overview.upstream_v4_2,[sanitized in V4.2; original not retained in pack],see evidence.*.text_sanitized flags,upstream_sanitization_in_v4_2_evidence_pack,True,v4_2_evidence_pack_champion_overview.json
+tournament.upstream_v4_2,[sanitized in V4.2; original not retained in pack],see evidence.*.text_sanitized flags,upstream_sanitization_in_v4_2_evidence_pack,True,v4_2_evidence_pack_tournament.json
+forecast_viewer.upstream_v4_2,[sanitized in V4.2; original not retained in pack],see evidence.*.text_sanitized flags,upstream_sanitization_in_v4_2_evidence_pack,True,v4_2_evidence_pack_forecast_viewer.json
+governance_risks.upstream_v4_2,[sanitized in V4.2; original not retained in pack],see evidence.*.text_sanitized flags,upstream_sanitization_in_v4_2_evidence_pack,True,v4_2_evidence_pack_governance_risks.json

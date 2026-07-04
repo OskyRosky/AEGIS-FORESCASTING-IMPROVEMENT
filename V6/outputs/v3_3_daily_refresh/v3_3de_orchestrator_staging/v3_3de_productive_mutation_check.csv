@@ -1,0 +1,10 @@
+productive_area,changed,method
+data/raw,NO,filecount+mtime snapshot
+data/processed,NO,filecount+mtime snapshot
+dashboard forecast_viewer_handoff,NO,filecount+mtime snapshot
+tournament_engine,NO,filecount+mtime snapshot
+champion_decision,NO,filecount+mtime snapshot
+evaluation,NO,filecount+mtime snapshot
+governance,NO,filecount+mtime snapshot
+V1,NO,filecount+mtime snapshot
+V2,NO,filecount+mtime snapshot

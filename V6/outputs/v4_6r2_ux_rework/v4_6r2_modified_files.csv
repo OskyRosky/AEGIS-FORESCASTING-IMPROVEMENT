@@ -1,0 +1,6 @@
+file,change_type,purpose
+shiny_app/R/llm_compose.R,new,"Local deterministic composition engine (Nivel A): generates the answer paragraphs from the governed evidence pack by question intent at runtime; no real LLM, no Azure, no network, no SQL, no model recompute."
+shiny_app/R/llm_explain.R,modified,"On-demand explanation module reworked to call .comp_answer(); conversational UI (quick prompts + question box), non-blocking thinking sequence, paragraph rendering, collapsed technical traceability, enabled .md download."
+shiny_app/global.R,modified,"Added source('R/llm_compose.R') after source('R/llm_explain.R') so the composition engine loads on app start."
+shiny_app/www/custom.css,modified,"V4.6R2 styles: quick-prompt row, answer-lead box (green) + bounded variant (amber), .llm-answer-tag label, thinking list + spinner, collapsed technical block, enabled download button, discrete governance footer."
+shiny_app/ui/body.R,modified,"CSS cache-buster bumped to custom.css?v=20260629d."

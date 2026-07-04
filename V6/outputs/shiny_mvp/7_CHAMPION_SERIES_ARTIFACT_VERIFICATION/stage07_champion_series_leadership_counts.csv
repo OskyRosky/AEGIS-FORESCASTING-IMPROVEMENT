@@ -1,0 +1,12 @@
+model_name,series_level_lead_count,is_ets_explicit,notes
+Theta,8,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+FixedGrowth_3,6,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+AutoARIMA,4,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+ETS Explicit,4,true,Tie-aware count; tied lowest median_mase leaders are all counted.
+FixedGrowth_1_5,4,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+ETS_Current,3,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+LinearRegression,3,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+FixedGrowth_4,2,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+LightGBM,2,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+XGBoost,2,false,Tie-aware count; tied lowest median_mase leaders are all counted.
+FixedGrowth_6,1,false,Tie-aware count; tied lowest median_mase leaders are all counted.

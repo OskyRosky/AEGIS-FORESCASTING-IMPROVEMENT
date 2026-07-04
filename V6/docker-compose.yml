@@ -1,0 +1,98 @@
+# =====================================================================
+# AEGIS V5.2 | docker-compose.yml | Docker Compose Shiny Service
+# ---------------------------------------------------------------------
+# Purpose:
+#   Turn the manual V5.1 `docker run ...` command into a reproducible,
+#   one-line local flow:   docker compose up -d shiny
+#
+# Governance (inherited from V5.0A / V5.0B / V5.1 — UNCHANGED):
+#   - Single service: shiny. Dashboard image stays R-only.
+#   - NO refresh service, NO scheduler, NO SQL, NO Azure, NO LLM service.
+#   - NO Python / ML stack. NO secrets. NO .env. NO data/raw mount.
+#   - data/processed and outputs are EXTERNAL read-only (:ro) mounts.
+#   - Internal port fixed = 3838 (no port-hunting). External = 8080.
+#   - Healthcheck is INHERITED from the image HEALTHCHECK (see Dockerfile).
+#   - All paths are RELATIVE to this repo (no absolute C:\Users / OneDrive).
+#
+# Note: the top-level `version:` key is intentionally omitted — it is
+# obsolete in Docker Compose v2+ and only emits a deprecation warning.
+# =====================================================================
+
+services:
+  shiny:
+    # Use the image built and validated in V5.1.
+    image: aegis-dashboard:v5.1
+
+    # Build context is included ONLY for clean-machine reproducibility:
+    # if the aegis-dashboard:v5.1 image is not present locally,
+    # `docker compose build shiny` (or `up --build`) rebuilds it from the
+    # SAME, unmodified V5.1 Dockerfile. When the image already exists,
+    # `docker compose up` reuses it and does NOT rebuild.
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Deterministic container name so smoke tests / inspect can target it.
+    container_name: aegis-dashboard-v5-2
+
+    # External:Internal. Internal 3838 is fixed by the Dockerfile/entrypoint.
+    ports:
+      - "8080:3838"
+
+    # App working directory (matches Dockerfile WORKDIR /app).
+    working_dir: /app
+
+    # EXTERNAL read-only mounts of governed artifacts (relative paths).
+    # data/raw is intentionally NOT mounted. No secrets, no .env, no BACKUP.
+    volumes:
+      - ./data/processed:/app/data/processed:ro
+      - ./outputs:/app/outputs:ro
+
+    # Local-demo convenience: restart unless explicitly stopped.
+    restart: unless-stopped
+
+    # Healthcheck is inherited from the image HEALTHCHECK defined in the
+    # V5.1 Dockerfile (curl http://127.0.0.1:3838/). Not redefined here to
+    # avoid drift from the validated V5.1 definition.
+
+  # ===================================================================
+  # V5.5 | refresh — SEPARATED, VALIDATE-ONLY refresh service.
+  # ---------------------------------------------------------------------
+  # Architectural separation only: shiny = read-only dashboard; refresh =
+  # a distinct one-shot service. In V5.5 it runs VALIDATE-ONLY:
+  #   NO SQL, NO ODBC/pyodbc, NO Entra/MFA, NO models, NO promote,
+  #   NO mutation of data/processed or data/raw. Real refresh is GATED
+  #   to V5.6+ (see v5_5_refresh_real_gating.md).
+  #
+  # It does NOT auto-start with `docker compose up shiny` because it is
+  # behind the "refresh" profile. Run it explicitly, one-shot:
+  #   docker compose run --rm refresh
+  # ===================================================================
+  refresh:
+    # Separate Python-slim image (NO Python in the R-only dashboard image).
+    image: aegis-refresh:v5.5
+    build:
+      context: .
+      dockerfile: Dockerfile.refresh
+
+    container_name: aegis-refresh-v5-5
+
+    # Behind a profile so it never starts with `up shiny`; call explicitly.
+    profiles: ["refresh"]
+
+    working_dir: /app
+
+    # One-shot: do not keep running, do not auto-restart.
+    restart: "no"
+
+    # NO ports exposed. NO Azure env, NO secrets, NO .env.
+    # data/processed read-only; ONLY the V5.5 output subdir is writable
+    # (granular) so the validate report cannot touch productive artifacts.
+    # data/raw is intentionally NOT mounted.
+    volumes:
+      - ./data/processed:/app/data/processed:ro
+      - ./outputs/v5_5_refresh_service_validate:/app/outputs/v5_5_refresh_service_validate:rw
+
+    # Command is the VALIDATE-ONLY wrapper (CMD in Dockerfile.refresh):
+    # python /app/scripts/refresh_validate_only.py
+

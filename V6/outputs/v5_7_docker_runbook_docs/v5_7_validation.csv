@@ -1,0 +1,31 @@
+id,check,expected,observed,status
+1,readme_created,docker/README.md,created,PASS
+2,runbook_created,docker/RUNBOOK.md,created (17 sections),PASS
+3,troubleshooting_created,docker/TROUBLESHOOTING.md,created (16 problems),PASS
+4,local_demo_checklist_created,docker/LOCAL_DEMO_CHECKLIST.md,created (20 checks),PASS
+5,local_container_handoff_created,docs/v5_7_local_container_handoff.md,created,PASS
+6,v5_6_gating_note_created,docs/v5_7_v5_6_gating_note.md,created,PASS
+7,command_reference_created,docs/v5_7_command_reference.md,created,PASS
+8,commands_validated,safe subset,config/ps/refresh/logs/images PASS,PASS
+9,docker_compose_config,valid,exit 0,PASS
+10,dashboard_http_200,200,200 LEN 303385,PASS
+11,smoke_test,PASS,SMOKE_TEST_PASSED,PASS
+12,refresh_validate_command_documented,yes,in README/RUNBOOK/command ref,PASS
+13,refresh_validate_command_tested,yes,V5_5_REFRESH_VALIDATE_OK,PASS
+14,docs_state_no_sql_real,yes,README/RUNBOOK/handoff/gating,PASS
+15,docs_state_no_model_training,yes,RUNBOOK What V5 does NOT do,PASS
+16,docs_state_no_promote,yes,command ref safety + RUNBOOK,PASS
+17,docs_state_no_azure,yes,README/RUNBOOK/handoff,PASS
+18,docs_state_no_scheduler,yes,README/RUNBOOK,PASS
+19,docs_state_no_llm_real,yes,RUNBOOK,PASS
+20,docs_state_no_refresh_button,yes,RUNBOOK/gating note,PASS
+21,docs_state_v5_6_deferred_gated,yes,gating note + RUNBOOK future phases,PASS
+22,docs_state_v5_8_local_closure_not_sql,yes,RUNBOOK/handoff/gating note,PASS
+23,data_processed_unchanged,identical,B0880D33...D61,PASS
+24,data_raw_unchanged,identical,BD44163A...73D,PASS
+25,no_rebuild,none,no build run,PASS
+26,no_new_images,none,same 2 aegis images,PASS
+27,no_dashboard_logic_change,none,docs-only,PASS
+28,v1_v2_v3_v4_intact,frozen,only V5 docs,PASS
+29,risk_register_updated,created,11 risks,PASS
+30,all_deliverables_created,7 docs + 7 evidence + 2 logs,all present,PASS

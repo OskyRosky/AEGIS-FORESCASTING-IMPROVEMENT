@@ -1,0 +1,11 @@
+check,expected,observed,status,evidence
+dockerfile_unmodified,unchanged,git status clean (no change),PASS,git status --porcelain Dockerfile
+dockerignore_unmodified,unchanged,git status clean (no change),PASS,git status --porcelain .dockerignore
+entrypoint_unmodified,unchanged,git status clean (no change),PASS,git status --porcelain docker/entrypoint.sh
+smoke_test_unmodified,unchanged,git status clean (no change),PASS,git status --porcelain scripts/docker_smoke_test.ps1
+image_v5_1_available,aegis-dashboard:v5.1,id ed86271fff04 present,PASS,docker images
+no_python_image_created,none,no python/aegis-refresh image,PASS,docker images grep
+no_ml_stack_installed,none,image unchanged R-only (same id),PASS,docker images id match
+data_processed_untouched,unchanged,mounted :ro; no write; 24 csv,PASS,mount validation
+data_raw_untouched,unchanged,not mounted; not baked,PASS,mount validation
+compose_did_not_rebuild,reuse existing image,up used existing image (no build step in up log),PASS,logs/v5_2_compose_up.log

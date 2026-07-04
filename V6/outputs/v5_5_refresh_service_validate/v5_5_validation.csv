@@ -1,0 +1,39 @@
+id,check,expected,observed,status
+1,preflight,PASS,all preflight PASS,PASS
+2,refresh_code_audit,completed,13 rows audited,PASS
+3,safe_command_decision,documented,validate-only wrapper + dry-run subproof,PASS
+4,refresh_service_added,Compose,services.refresh added,PASS
+5,service_shiny_preserved,intact,shiny unchanged,PASS
+6,no_refresh_autostart_with_shiny,profile,default services=shiny only,PASS
+7,docker_compose_config,PASS,parsed OK,PASS
+8,refresh_validate_only_run,PASS,V5_5_REFRESH_VALIDATE_OK,PASS
+9,exit_code_0,0,0,PASS
+10,no_sql_attempted,none,no SQL,PASS
+11,no_odbc_connection,none,pyodbc absent,PASS
+12,no_entra_interactive,none,none,PASS
+13,no_mfa,none,none,PASS
+14,no_model_training,none,none,PASS
+15,no_model_runner,none,none,PASS
+16,no_promote,none,none,PASS
+17,no_write_data_processed,blocked,READONLY,PASS
+18,no_write_data_raw,none,not mounted,PASS
+19,no_mutation_productive,none,hashes unchanged,PASS
+20,only_v5_5_outputs_created,v5_5 area,report+logs only in v5_5 dir,PASS
+21,data_processed_hash_unchanged,identical,B0880D33...D61,PASS
+22,data_raw_hash_unchanged,identical,BD44163A...73D,PASS
+23,dashboard_healthy,healthy,healthy,PASS
+24,dashboard_http_200,200,200,PASS
+25,smoke_test,11/11,SMOKE_TEST_PASSED,PASS
+26,champion_ets_explicit,ETS Explicit,found,PASS
+27,scope_15_models,15,found,PASS
+28,horizons_30_60_180,30/60/180,found,PASS
+29,no_azure,none,none,PASS
+30,no_llm_real,mock only,mock,PASS
+31,no_scheduler,none,none,PASS
+32,no_shiny_refresh_button,none,shiny read-only,PASS
+33,refresh_real_gating_doc,created,v5_5_refresh_real_gating.md,PASS
+34,local_usage_notes,created,v5_5_local_usage_notes.md,PASS
+35,risk_register_updated,created,11 risks,PASS
+36,v1_v2_v3_v4_intact,frozen,only V5 touched,PASS
+37,v5_1_2_3_4_invariants,preserved,dashboard image/files unchanged; smoke 11/11,PASS
+38,all_deliverables_created,19 + logs,all present,PASS

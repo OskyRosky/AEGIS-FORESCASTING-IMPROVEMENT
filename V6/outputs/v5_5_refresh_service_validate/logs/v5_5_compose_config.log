@@ -1,0 +1,31 @@
+name: v5
+services:
+  shiny:
+    build:
+      context: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V5
+      dockerfile: Dockerfile
+    container_name: aegis-dashboard-v5-2
+    image: aegis-dashboard:v5.1
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 3838
+        published: "8080"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V5\data\processed
+        target: /app/data/processed
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V5\outputs
+        target: /app/outputs
+        read_only: true
+        bind: {}
+    working_dir: /app
+networks:
+  default:
+    name: v5_default

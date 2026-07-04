@@ -1,0 +1,22 @@
+check,expected,observed,status,evidence
+yaml_valid,valid YAML,docker compose config parsed OK,PASS,logs/v5_2_compose_config.log
+service_shiny_present,service shiny,services.shiny present,PASS,compose config
+single_service,only shiny,1 service (shiny),PASS,compose config
+no_refresh_service,absent,no refresh service,PASS,compose config
+no_scheduler_service,absent,no scheduler service,PASS,compose config
+no_sql_service,absent,no sql service,PASS,compose config
+no_azure_service,absent,no azure service,PASS,compose config
+no_llm_service,absent,no llm service,PASS,compose config
+image_ref,aegis-dashboard:v5.1,image: aegis-dashboard:v5.1,PASS,compose config
+build_context_for_reproducibility,context . dockerfile Dockerfile,build.context=. build.dockerfile=Dockerfile,PASS,compose config
+ports,8080:3838,published 8080 -> target 3838 tcp,PASS,compose config
+working_dir,/app,working_dir: /app,PASS,compose config
+mount_processed_ro,./data/processed:/app/data/processed:ro,bind read_only:true target /app/data/processed,PASS,compose config
+mount_outputs_ro,./outputs:/app/outputs:ro,bind read_only:true target /app/outputs,PASS,compose config
+data_raw_absent,not mounted,no data/raw volume,PASS,compose config
+no_env_file,absent,no env_file / .env,PASS,compose config
+no_secrets,absent,no secrets block,PASS,compose config
+no_backup_mount,absent,no BACKUP volume,PASS,compose config
+relative_paths_in_source,relative,source file uses ./ relative volume paths,PASS,docker-compose.yml
+healthcheck_inherited,inherited from image,image HEALTHCHECK curl 127.0.0.1:3838 inherited (not overridden),PASS,Dockerfile HEALTHCHECK
+restart_policy,unless-stopped,restart: unless-stopped,PASS,compose config

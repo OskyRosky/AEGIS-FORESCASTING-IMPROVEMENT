@@ -1,0 +1,24 @@
+artifact,path,created_or_modified,purpose,status
+Dockerfile,V5/Dockerfile,created,R-only dashboard image definition (digest-pinned base + P3M snapshot),PASS
+.dockerignore,V5/.dockerignore,created,Aggressive build-context reduction (1414.3MB -> 0.95MB),PASS
+entrypoint.sh,V5/docker/entrypoint.sh,created,Simple fixed-port (3838) Shiny launcher; no port-hunting,PASS
+docker_smoke_test.ps1,V5/scripts/docker_smoke_test.ps1,created,Reusable read-only smoke test (V5.1/V5.2/V5.4/V5.8),PASS
+base_image_verification,V5/outputs/v5_1_dockerfile_dashboard/v5_1_base_image_verification.md,created,rocker/r-ver:4.6.0 verified + digest,PASS
+r_pinning_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_r_pinning_report.md,created,P3M dated snapshot pinning strategy,PASS
+r_dependencies_final,V5/outputs/v5_1_dockerfile_dashboard/v5_1_r_dependencies_final.csv,created,Final installed package versions,PASS
+dockerignore_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_dockerignore_report.md,created,Exclusion rationale + context delta,PASS
+build_context_check,V5/outputs/v5_1_dockerfile_dashboard/v5_1_build_context_check.csv,created,Before/after context sizes,PASS
+dockerfile_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_dockerfile_report.md,created,Dockerfile design + bug-fix (libuv1),PASS
+entrypoint_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_entrypoint_report.md,created,Entrypoint design notes,PASS
+healthcheck_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_healthcheck_report.md,created,HEALTHCHECK config + result,PASS
+build_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_build_report.md,created,Build outcome + image size,PASS
+image_inspection,V5/outputs/v5_1_dockerfile_dashboard/v5_1_image_inspection.csv,created,Image facts (size/layers/pkgs/python),PASS
+runtime_report,V5/outputs/v5_1_dockerfile_dashboard/v5_1_runtime_report.md,created,Run command + runtime validation,PASS
+smoke_test_results,V5/outputs/v5_1_dockerfile_dashboard/v5_1_smoke_test_results.csv,created,11/11 smoke checks,PASS
+security_image_check,V5/outputs/v5_1_dockerfile_dashboard/v5_1_security_image_check.csv,created,Secrets/python/raw/ML checks,PASS
+risk_register,V5/outputs/v5_1_dockerfile_dashboard/v5_1_risk_register.csv,created,V5.1 risks + carry-overs,PASS
+validation,V5/outputs/v5_1_dockerfile_dashboard/v5_1_validation.csv,created,27-point Definition of Done,PASS
+closure_summary,V5/outputs/v5_1_dockerfile_dashboard/v5_1_closure_summary.md,created,Closure token + summary,PASS
+docker_build_log,V5/outputs/v5_1_dockerfile_dashboard/logs/v5_1_docker_build.log,created,Captured build output,PASS
+docker_run_log,V5/outputs/v5_1_dockerfile_dashboard/logs/v5_1_docker_run.log,created,Container id / run record,PASS
+container_logs,V5/outputs/v5_1_dockerfile_dashboard/logs/v5_1_container_logs.log,created,Container boot logs,PASS

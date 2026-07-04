@@ -1,0 +1,11 @@
+risk_id,area,risk,severity,blocker_yes_no,mitigation,status
+R1,base_image,rocker/r-ver:4.6.0 tag availability,high,no,Verified AVAILABLE and pinned by digest sha256:a3c049...,RESOLVED
+R2,refresh_mfa,ActiveDirectoryInteractive MFA incompatible with headless,high,no,Out of scope for V5.1 (dashboard-only); refresh deferred V5.5 / gated V5.6,DEFERRED
+R3,build_context,outputs+data ~1.4GB bloat build,medium,no,.dockerignore reduced context 1414.3MB -> 0.95MB; transferred ~4kB,RESOLVED
+R4,tex_size,TinyTeX size/time,low,no,Installed non-fatally; image 526MB acceptable; PDF gated V5.4,MITIGATED
+R5,data_mount,data/processed completeness for governed reads,medium,no,Mounted full data/processed + outputs read-only; smoke confirms 15 models/champion,RESOLVED
+R6,licensing,highcharter wraps Highcharts (non-free commercial license),medium,no,Flag for legal review before any commercial/external deployment,OPEN
+R7,sysdep_libuv,fs.so requires libuv.so.1 (missing system lib),high,no,Added libuv1 to apt; rebuild; render error cleared (env fix not functional change),RESOLVED
+R8,runtime_font,bslib downloads Google font 'Inter' at runtime (network),low,no,Non-fatal cache; bundle font offline as hardening in later stage,OPEN
+R9,pdf_docx_export,PDF requires TeX; full export not validated in V5.1,low,no,pandoc present (DOCX/HTML/MD ok); PDF/DOCX full validation owns V5.4 gate,DEFERRED
+R10,image_size_report,docker images reports 2.1GB vs inspect 526MB,low,no,Discrepancy from BuildKit attestation manifest; functional image ~526MB,INFO

@@ -1,0 +1,14 @@
+target_file_or_area,decision,rationale,planned_action,planned_block,safe_to_modify_later,notes
+app.R,preserve_then_modify_later,Existing app runner is baseline and must not change in 7.0B,Reconcile shell and landing in 7.0C,7.0C,manual_review,Launch baseline first
+global.R,preserve_then_modify_later,May source helpers/constants and needs V1 root alignment,Review and adapt for read-only setup,7.0C-7.0D,manual_review,No change now
+R/libraries.R,modify_later,Dependencies must be display-only,Review package list and remove runtime modeling needs if present,7.0D,manual_review,No install in 7.0B
+R/constants.R,modify_later,Should hold V1-relative paths and governance constants,Align with project_root_policy and 6.4 bindings,7.0D,manual_review,No change now
+R/data_loader.R,modify_later,Must become read-only governed artifact loader,Implement static CSV/MD loading only,7.0E,manual_review,No recalculation
+R/llm_client.R,modify_later,Claude found language such as AutoARIMA leads as best candidate conflicting with champion governance,Correct prohibited/best-candidate language later,7.0D,manual_review,Must use 6.3 approved language
+ui/header,preserve_or_create_later,Header pattern useful but target structure needs review,Create/adapt header in shell,7.0C,manual_review,Show V1 and governance status
+ui/body,preserve_or_create_later,Body/tab shell needed for required sections,Create/adapt body shell,7.0C,manual_review,No project-specific reference text
+ui/tabs,create_later,Section files improve maintainability,Create landing and required tabs as needed,7.0C-7.0F,manual_review,Use 6.4 sections
+server files,preserve_then_modify_later,Existing server may contain reactive/ranking/forecast modules,Convert to read-only orchestration,7.0E,manual_review,Visual validate after changes
+modules,manual_review,Existing modules include forecast_chart and model_ranking names,Preserve until governance-safe module plan,7.0D-7.0G,manual_review,No direct recompute/ranking inference
+www/custom.css,modify_later,Safe styling layer,Adapt for landing and warning labels,7.0C,yes,Visual validation required
+www/custom.js,manual_review,JS can hide/filter content if unsafe,Use only non-computational display behavior,7.0D,manual_review,No hidden risk filters

@@ -1,0 +1,9 @@
+highcharter status (Block 7.11-REV1)
+-------------------------------------
+highcharter was already installed in Block 7.11. No installation was required for REV1.
+Installed version: 0.9.5
+Stock-chart navigation functions verified present in the installed package:
+  hc_rangeSelector : TRUE
+  hc_navigator     : TRUE
+  hc_scrollbar     : TRUE
+No fallback to plotly was needed.

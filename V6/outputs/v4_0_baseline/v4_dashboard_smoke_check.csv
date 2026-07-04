@@ -1,0 +1,5 @@
+"check_id","target","url","method","expected","observed","result"
+"S01","V4 dashboard primary port","http://127.0.0.1:3839/","GET","HTTP 200","HTTP 200 LEN 275129","PASS"
+"S02","V3 dashboard reference (must stay up and untouched)","http://127.0.0.1:3838/","GET","HTTP 200","HTTP 200 LEN 275129","PASS"
+"S03","V4 dashboard read-only (no compute on load)","NA","NA","read-only","read-only","PASS"
+"S04","V4 dashboard reflects accepted snapshot date","NA","NA","2026-06-28","2026-06-28","PASS"

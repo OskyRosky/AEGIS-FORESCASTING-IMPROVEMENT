@@ -1,0 +1,8 @@
+file,phase,change_type,note
+shiny_app/ui/tabs.R,V4.7C closure correction,modified,"Placement fix recorded under V4.7C: moved the llm_reference_artifacts assistant block from section_methodology() to the end of section_artifacts(). NOT a V4.8 feature change."
+outputs/v4_7c_reference_artifacts_downloads/v4_7c_reference_assistant_check.csv,V4.7C closure correction,modified,"Added placement_correction + methodology_has_no_assistant rows."
+outputs/v4_7c_reference_artifacts_downloads/v4_7c_modified_files.csv,V4.7C closure correction,modified,"tabs_R note records the placement correction."
+outputs/v4_7c_reference_artifacts_downloads/v4_7c_validation.csv,V4.7C closure correction,modified,"id 3 wording updated to reflect corrected placement."
+outputs/v4_7c_reference_artifacts_downloads/v4_7c_closure_summary.md,V4.7C closure correction,modified,"Added 'Post-review placement correction' section."
+outputs/v4_8_final_local_validation/*,V4.8,created,"13 validation artifacts (this phase). No application code modified by V4.8."
+NOTE,V4.8,none,"V4.8 made ZERO application/source code changes. It is validation-only. The only source edit since V4.7C completion was the V4.7C placement correction (above), which predates and is attributed to V4.7C closure, not V4.8."

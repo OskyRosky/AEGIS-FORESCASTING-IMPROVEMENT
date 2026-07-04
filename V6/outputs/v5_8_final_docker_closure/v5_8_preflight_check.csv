@@ -1,0 +1,23 @@
+check,expected,observed,status,evidence
+v5_root_confirmed,active root = V5,V5 workspace,PASS,workspace
+v5_0a_to_v5_7_closed,all closed,V5.0A/0B/1/2/3/4/5/7 output folders present,PASS,outputs
+v5_6_deferred_gated,DEFERRED/GATED,documented (not executed),PASS,docs/v5_7_v5_6_gating_note.md
+docker_daemon_active,running,server 29.6.1,PASS,docker version
+docker_compose_available,yes,plugin present,PASS,docker compose
+compose_file_exists,docker-compose.yml,present,PASS,list_dir
+service_shiny_exists,yes,shiny,PASS,compose config
+service_refresh_exists,yes,refresh (profile),PASS,--profile refresh config
+shiny_image,aegis-dashboard:v5.1,a799da697173,PASS,docker compose ps
+refresh_image,aegis-refresh:v5.5,698b1634f78a,PASS,docker images
+dashboard_image_exists,yes,a799da697173 2.47GB,PASS,docker images
+refresh_image_exists,yes,698b1634f78a 180MB,PASS,docker images
+no_extra_services,only shiny+refresh,2 services,PASS,compose config
+no_old_conflicting_containers,none,only aegis-dashboard-v5-2,PASS,docker compose ps
+port_8080,running,0.0.0.0:8080->3838,PASS,docker compose ps
+baseline_processed_hash,captured,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot
+baseline_raw_hash,captured,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot
+baseline_compose_hash,captured,3753E84C5C047180,PASS,Get-FileHash
+baseline_dockerfile_hash,captured,E4B6C1E01EB817F2,PASS,Get-FileHash
+baseline_dockerfile_refresh_hash,captured,325E70E44C6A2587,PASS,Get-FileHash
+no_rebuild_planned,none,validation-only,PASS,scope
+no_mutation_planned,none,RO mounts,PASS,scope

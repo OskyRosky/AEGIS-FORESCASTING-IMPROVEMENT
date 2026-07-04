@@ -1,0 +1,8 @@
+check,expected,observed,status,evidence
+container_created,created,aegis-dashboard-v5-2 created,PASS,logs/v5_2_compose_up.log
+container_running,running,State=running,PASS,docker compose ps
+container_healthy,healthy,health=healthy,PASS,docker inspect health
+external_port_listening,8080,0.0.0.0:8080->3838/tcp,PASS,docker compose ps
+internal_port_3838,3838,Listening on http://0.0.0.0:3838,PASS,container logs
+http_200,200,HTTP 200 LEN 303385,PASS,Invoke-WebRequest
+logs_no_critical_error,benign only,dplyr masking + vroom parse warn + Inter font download,PASS,logs/v5_2_compose_container_logs.log

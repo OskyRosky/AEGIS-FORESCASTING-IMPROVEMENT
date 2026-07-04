@@ -1,0 +1,15 @@
+field,value
+stage,Stage 07 - V2 Forecast Viewer Layout Correction
+page,Forecasting > Viewer (section_explorer)
+status,READY_FOR_OSCAR_VISUAL_REVIEW_V2_FORECAST_VIEWER_LAYOUT_CORRECTION
+url,http://127.0.0.1:3838
+process_id,16284
+port,3838
+http_status,HTTP 200
+content_length,198334
+stale_instances_stopped,PID 23372 (port 3838) + PID 33852 (port 3839)
+stdout_log,outputs/shiny_mvp/7_V2_FORECAST_VIEWER_LAYOUT_CORRECTION/logs/viewer_layout_correction_stdout.log
+stderr_log,outputs/shiny_mvp/7_V2_FORECAST_VIEWER_LAYOUT_CORRECTION/logs/viewer_layout_correction_stderr.log
+stop_command,powershell -ExecutionPolicy Bypass -File scripts\stop_shiny.ps1 -PidToStop 16284
+files_modified,"shiny_app/ui/tabs.R; shiny_app/www/custom.css; shiny_app/ui/body.R"
+css_version,?v=20260624h

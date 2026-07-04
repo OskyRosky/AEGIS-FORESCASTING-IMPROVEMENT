@@ -1,0 +1,36 @@
+check_name,status,details
+no_shiny_files_modified,pass,Builder writes only python/model_lab + data/processed/forecast_viewer_model_outputs* + outputs/model_lab/forecast_viewer_handoff
+no_existing_processed_artifacts_overwritten,pass,Only new forecast_viewer_model_outputs* files written; forecasts/actuals/entities/forecast_comparison untouched
+pilot_artifact_not_overwritten,pass,Full builder writes non-_pilot file names; *_pilot* artifacts preserved
+no_model_lab_outputs_modified,pass,Existing Model Lab outputs read-only
+no_stage06_governance_modified,pass,No Stage 06 governance outputs written
+no_forecasts_generated,pass,Consolidation only; zero model inference
+no_models_run,pass,No model fitting/inference
+no_metrics_recalculated,pass,No metric computation
+no_champion_decision_changed,pass,champion flag read from model universe only
+full_builder_created,pass,python/model_lab/build_forecast_viewer_handoff.py
+source_artifacts_found_and_documented,pass,8 sources documented in source_manifest + manifest
+eligible_series_identified,pass,39 eligible series
+excluded_series_documented,pass,6 excluded -> forecast_viewer_handoff_excluded_series.csv
+full_output_artifact_created,pass,"177,060 rows"
+sample_csv_created,pass,forecast_viewer_model_outputs_sample.csv
+manifest_created,pass,forecast_viewer_model_outputs_manifest.csv
+required_columns_present,pass,all required schema columns present
+no_duplicate_rows_at_grain,pass,"grain=['series_key', 'model_name', 'date', 'horizon_days']; duplicates dropped during build=0"
+actual_value_populated,pass,actual_value present (challenger joined; baseline left-join actuals.csv)
+forecast_value_populated,pass,forecast_value present on every row
+model_family_populated,pass,model_family from model_lab_final_model_universe.csv
+champion_flag_populated,pass,is_selected_champion TRUE for governed champion (ETS Explicit)
+risk_status_populated,pass,risk_status from universe risk_flag + risk register
+horizon_days_populated,pass,horizon_days present on every row
+date_parsing_valid,pass,date parses to valid dates
+forecast_start_date_parsing_valid,pass,forecast_start_date = date - horizon_days parses valid
+all_rows_trace_to_source,pass,every row carries a known source_artifact
+no_synthetic_forecasts,pass,all forecast_value rows originate from source forecast outputs
+deferred_models_not_materialized,pass,deferred models excluded from forecast rows
+interval_columns_present_but_na,pass,lower/upper/interval_level all NA (no source bands)
+row_counts_by_series_produced,pass,coverage_by_series + model_coverage written
+model_counts_by_series_produced,pass,model_coverage written
+horizon_summary_produced,pass,forecast_viewer_handoff_horizon_summary.csv
+chart_readiness_produced,pass,forecast_viewer_handoff_chart_readiness.csv
+parquet_or_csv_fallback_reported,warning,CSV fallback used (no pyarrow/fastparquet)

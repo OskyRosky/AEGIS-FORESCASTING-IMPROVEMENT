@@ -1,0 +1,11 @@
+marker,field,expected,observed,status
+ACTIVE_PROJECT_ROOT.md,active_root,...\V6,updated to V6 (V1-V5 frozen),PASS
+VERSION_INFO.md,version_name,V6,V6,PASS
+VERSION_INFO.md,based_on,V5,V5 (full controlled copy 2026-07-03),PASS
+VERSION_INFO.md,current_status,V6.0A,V6.0A - baseline clone of closed V5,PASS
+VERSION_INFO.md,next_stage,V6.0B,V6.0B - Azure Readiness + Architecture Decisions,PASS
+project_root_policy.json,active_version,V6,V6,PASS
+project_root_policy.json,based_on_version,V5,V5,PASS
+project_root_policy.json,v5_mvp_status,V5_DOCKER_LOCAL_MVP_CLOSED,V5_DOCKER_LOCAL_MVP_CLOSED,PASS
+project_root_policy.json,valid_json,valid,ConvertFrom-Json OK,PASS
+shiny_app,constants_R_APP_VERSION,unchanged (byte-parity),"V4 (inherited cosmetic quirk; NOT changed to keep clone parity)",NOTED

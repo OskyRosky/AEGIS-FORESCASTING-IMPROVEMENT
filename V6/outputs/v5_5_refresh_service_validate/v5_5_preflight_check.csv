@@ -1,0 +1,26 @@
+check,expected,observed,status,evidence
+v5_root_confirmed,active root = V5,V5 workspace,PASS,workspace
+v5_0a_closed,V5_0A_BASELINE_CLONE_COMPLETED,present,PASS,outputs
+v5_0b_closed,V5_0B_DOCKER_READINESS_REPRODUCIBILITY_COMPLETED,present,PASS,outputs
+v5_1_closed,V5_1_DOCKERFILE_DASHBOARD_IMAGE_COMPLETED,present,PASS,outputs
+v5_2_closed,V5_2_DOCKER_COMPOSE_SHINY_SERVICE_COMPLETED,present,PASS,outputs
+v5_3_closed,V5_3_EXTERNAL_VOLUMES_ARTIFACT_MOUNTS_COMPLETED,present,PASS,outputs
+v5_4_closed,V5_4_DOCKERIZED_DOWNLOADS_VALIDATED,present,PASS,outputs
+docker_daemon_active,running,server 29.6.1,PASS,docker version
+docker_compose_available,yes,plugin present,PASS,docker compose
+compose_file_exists,docker-compose.yml,present,PASS,list_dir
+service_shiny_current,shiny,docker compose config --services=shiny,PASS,compose config
+dashboard_healthy,healthy,aegis-dashboard-v5-2 Up healthy,PASS,docker compose ps
+dashboard_http_200,200,HTTP 200 LEN 303385,PASS,Invoke-WebRequest
+smoke_current,11/11,SMOKE_TEST_PASSED,PASS,smoke
+dashboard_image_id,a799da697173 (TinyTeX),a799da697173,PASS,docker images
+no_refresh_service_yet,absent,none before V5.5,PASS,compose config
+no_dockerfile_refresh_prior,absent,Dockerfile.refresh not present before,PASS,Test-Path
+baseline_processed_hash,captured,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot
+baseline_raw_hash,captured,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot
+baseline_compose_hash,captured,3036817271DB1604,PASS,Get-FileHash
+baseline_dockerfile_hash,captured,E4B6C1E01EB817F2,PASS,Get-FileHash
+baseline_dockerignore_hash,captured,B4339EF2F9A695FA,PASS,Get-FileHash
+baseline_entrypoint_hash,captured,6EAB069067B438DF,PASS,Get-FileHash
+baseline_smoketest_hash,captured,A91B61837BB4A286,PASS,Get-FileHash
+data_not_modified_intent,processed/raw untouched,RO mount + validate-only,PASS,design

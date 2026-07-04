@@ -1,0 +1,14 @@
+check,expected,observed,status,evidence
+explanation_md_exists,exists,1030b,PASS,V5.4 download_samples/explanation
+explanation_pdf_signature,%PDF,104478b sig=%PDF-,PASS,byte signature
+explanation_docx_zip,PK zip,10544b sig=PK,PASS,byte signature
+explanation_html_valid,<!doctype,1933b sig=<!doc,PASS,byte signature
+explanation_txt_readable,UTF-8 ETS,1057b ETS present,PASS,content
+governed_csv_exists,exists,485b,PASS,V5.4 download_samples/governed
+governed_csv_verbatim,SHA256 identical,True (vs model_lab_champion_summary.csv),PASS,Get-FileHash compare
+governed_pdf_signature,%PDF,107773b sig=%PDF-,PASS,byte signature
+governed_docx_zip,PK zip,10914b sig=PK,PASS,byte signature
+no_traceback_in_samples,none,none,PASS,content scan
+no_secrets_in_samples,none,none,PASS,content scan
+regenerated_samples,no,reused V5.4 evidence (no regeneration needed),PASS,scope
+no_data_mutation,none,RO mounts; validation only,PASS,immutability

@@ -1,0 +1,33 @@
+id,check,expected,observed,status
+1,preflight,PASS,all pre-flight items PASS,PASS
+2,runtime_artifact_manifest_created,created,43 rows (42 registry + LLM json),PASS
+3,required_artifacts_mapped,mapped,9 required all present in container,PASS
+4,data_processed_mount_validated,validated,exists + 24 csv + RO,PASS
+5,outputs_mount_validated,validated,exists + model_lab + governance + RO,PASS
+6,data_raw_not_mounted,absent,raw_dir=no in container,PASS
+7,no_service_refresh,absent,none,PASS
+8,no_service_scheduler,absent,none,PASS
+9,no_sql_azure_llm_service,absent,none,PASS
+10,container_mount_inspection,PASS,all checks PASS,PASS
+11,readonly_enforcement,PASS,both writes blocked,PASS
+12,host_probe_visible_in_container,PASS,v1 read in container,PASS
+13,host_probe_update_no_rebuild,PASS,v2 read; no rebuild,PASS
+14,image_id_unchanged,ed86271fff04,unchanged,PASS
+15,no_docker_build,not run,none,PASS
+16,no_docker_compose_build,not run,none,PASS
+17,dashboard_http_200_after_tests,200,HTTP 200 LEN 303385,PASS
+18,smoke_test,11/11,SMOKE_TEST_PASSED,PASS
+19,assistants_10_visible,10,Generate explanation x10,PASS
+20,champion_ets_explicit,ETS Explicit,found,PASS
+21,scope_15_models,15,found,PASS
+22,horizons_30_60_180,30/60/180,all found,PASS
+23,data_processed_unchanged,identical,aggsha match,PASS
+24,data_raw_unchanged,identical,aggsha match,PASS
+25,no_unexpected_host_writes,none,no probe/forbidden host files,PASS
+26,no_secrets,none,security checks PASS,PASS
+27,v5_1_integrity_preserved,intact,4 docker files unmodified; image same id,PASS
+28,v5_2_compose_integrity_preserved,intact,docker-compose.yml unchanged,PASS
+29,v1_v2_v3_v4_intact,frozen,only V5 touched,PASS
+30,volume_usage_guide_created,created,v5_3_volume_usage_guide.md,PASS
+31,risk_register_updated,created,v5_3_risk_register.csv (8 risks),PASS
+32,all_deliverables_created,17 + logs + probe,all present,PASS

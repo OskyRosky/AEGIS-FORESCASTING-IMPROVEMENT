@@ -1,0 +1,8 @@
+step_id,priority,action,owner,blocking
+NS1,1,"BLOCKING FIX: switch from ABSOLUTE residual offsets to RELATIVE residuals. relative_error = (actual - forecast)/actual on backtest; band = forecast_value * (1 + rel_quantile). Scale-invariant -> credible proportional bands.",Agent (v1.1),YES
+NS2,1,"Investigate WHY the three sources differ in scale for the same entity_key: forecasts.csv (prod), forecast_viewer_model_outputs.csv (backtest actuals), actuals.csv. Confirm units/aggregation before trusting any residual transfer.",Oscar+Agent,YES
+NS3,2,"Re-run coverage as OUT-OF-SAMPLE (holdout split of backtest) instead of in-sample, so 'calibrated' is evidence-based not tautological.",Agent,no
+NS4,2,"Confirm Oscar decisions D2/D11 still stand (30-day-only honest band; NA beyond 30).",Oscar,no
+NS5,3,"After v1.1 produces credible bands, THEN proceed to Etapa 3 (Shiny arearange band, NA-safe, 95% default, 30-day note).",Agent,no
+NS6,3,"Etapa 4: governance doc with method, scale resolution, model-population caveat, 30-day limit, coverage results.",Agent,no
+NS7,note,"forecasts_with_intervals.csv is a CANDIDATE artifact only. Do NOT overwrite forecasts.csv and do NOT visualize until NS1/NS2 resolved.",Agent,YES

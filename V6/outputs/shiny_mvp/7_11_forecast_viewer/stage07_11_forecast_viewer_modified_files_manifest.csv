@@ -1,0 +1,8 @@
+file,change_type,summary
+shiny_app/R/libraries.R,modified,Added suppressPackageStartupMessages(library(highcharter))
+shiny_app/R/helpers.R,modified,Appended forecast viewer accessors (fv_forecasts/fv_actuals/fv_entity_choices/fv_models_for_entity/fv_horizon_choices/fv_actual_series/fv_forecast_series/fv_summary/fv_empty_chart/fv_chart)
+shiny_app/ui/tabs.R,modified,Rewrote section_explorer into Forecast Viewer UI (4 selectInputs + summary cards + highchartOutput + method note)
+shiny_app/server/server.R,modified,Added fv_model reactive update + fv_summary_cards renderUI + fv_chart renderHighchart + suspendWhenHidden=FALSE
+shiny_app/ui/sidebar.R,modified,Forecasting first item label Explorer->Viewer; title Forecast Explorer->Forecast Viewer (value=explorer unchanged)
+shiny_app/www/custom.css,modified,Appended Forecast Viewer styles (.fv-controls/.fv-control/.fv-summary/.fv-summary-card/.fv-chart-wrap/.fv-method-note + dark variants)
+shiny_app/www/custom.js,modified,Dispatch window resize on sidebar sublink click so highcharter reflows when section shown

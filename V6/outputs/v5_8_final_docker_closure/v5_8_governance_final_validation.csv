@@ -1,0 +1,18 @@
+check,expected,observed,status,evidence
+champion_ets_explicit,ETS Explicit,ETS Explicit,PASS,model_universe_canonical.csv (container)
+champion_unchanged,frozen,unchanged,PASS,constants + artifact
+no_auto_promote,none,no promote run,PASS,scope
+scope_15_models,15,15 (canonical 16 lines = header+15),PASS,container grep
+prohibited_nbeats_absent,absent,0 matches,PASS,container grep
+prohibited_nhits_absent,absent,0 matches,PASS,container grep
+prohibited_fastneuralar_original_absent,absent,0 matches,PASS,container grep
+forecast_horizons_30_60_180,30/60/180,found in UI,PASS,smoke
+shiny_read_only,yes,mounts RO; no writes,PASS,mount validation
+llm_provider_mock,mock/deterministic,mock (v4_4_mock_responses.json),PASS,image + docs
+no_llm_real,none,mock only,PASS,scope
+no_azure,none,no Azure service/env,PASS,compose config
+no_scheduler,none,none,PASS,scope
+no_sql_from_shiny,none,R-only image; no SQL,PASS,image
+no_models_from_shiny,none,read-only consumer,PASS,image
+data_raw_absent_container,absent,raw=no,PASS,docker exec
+v1_v2_v3_v4_intact,frozen,only V5 touched,PASS,scope

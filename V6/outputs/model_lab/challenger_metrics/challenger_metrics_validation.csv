@@ -1,0 +1,18 @@
+check_name,status,details,created_timestamp
+forecast_row_count_81720,pass,actual=81720,2026-06-13T16:26:54
+scoring_forecast_row_count_81720,pass,actual=81720,2026-06-13T16:26:54
+actual_join_row_count_81720,pass,actual=81720,2026-06-13T16:26:54
+metric_row_count_2724,pass,actual=2724,2026-06-13T16:26:54
+exactly_6_final_models,pass,"models=['AutoARIMA', 'ETS Explicit', 'FastNeuralAR_MLP', 'LightGBM', 'Theta', 'XGBoost']",2026-06-13T16:26:54
+no_nbeats_in_metrics,pass,NBEATS absent,2026-06-13T16:26:54
+no_nhits_in_metrics,pass,NHITS absent,2026-06-13T16:26:54
+execution_mode_official,pass,joined and metrics execution_mode official,2026-06-13T16:26:54
+no_missing_actuals,pass,missing_actuals=0,2026-06-13T16:26:54
+no_nan_mase,pass,nan_mase=0,2026-06-13T16:26:54
+no_nan_rmsse,pass,nan_rmsse=0,2026-06-13T16:26:54
+no_inf_mase,pass,MASE finite,2026-06-13T16:26:54
+no_inf_rmsse,pass,RMSSE finite,2026-06-13T16:26:54
+denominator_source_training_only,pass,outputs\model_lab\denominator_reconciliation\training_only_denominators.csv,2026-06-13T16:26:54
+no_ranking_columns,pass,ranking_like_columns=none,2026-06-13T16:26:54
+no_tournament_outputs,pass,challenger_tournament absent,2026-06-13T16:26:54
+no_champion_outputs,pass,challenger_champion absent,2026-06-13T16:26:54

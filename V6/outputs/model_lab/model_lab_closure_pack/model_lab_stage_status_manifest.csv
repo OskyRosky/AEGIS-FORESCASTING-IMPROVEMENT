@@ -1,0 +1,26 @@
+block_id,block_name,status,primary_output_directory,key_result,created_timestamp
+5.18,Benchmark Semantics Redesign,completed,outputs/model_lab/ranking_policy,Benchmark semantics approved,2026-06-13T20:36:01
+5.19,Naive Benchmark Implementation,completed,outputs/model_lab/forecasts,Naive benchmark established,2026-06-13T20:36:01
+5.20,Seasonal Naive Implementation,completed,outputs/model_lab/forecasts,Seasonal naive benchmark established,2026-06-13T20:36:01
+5.21,MASE Engine,completed,outputs/model_lab/mase,MASE calculated with corrected denominator,2026-06-13T20:36:01
+5.22,RMSSE Guardrail,completed,outputs/model_lab/rmsse,RMSSE guardrail calculated,2026-06-13T20:36:01
+5.23,Non-Negative Forecast Policy,completed,outputs/model_lab/non_negative_policy,Non-negative scoring policy applied,2026-06-13T20:36:01
+5.24,Aggregation Hierarchy,completed,outputs/model_lab/aggregation_hierarchy,Equal-entity aggregation completed,2026-06-13T20:36:01
+5.25,Statistical Significance Layer,completed,outputs/model_lab/statistical_significance,Baseline pairwise evidence completed,2026-06-13T20:36:01
+5.26,No-Tuning-Leakage Contract,completed,outputs/model_lab/no_tuning_leakage_contract,Leakage contract established,2026-06-13T20:36:01
+5.27,Audit #3,completed,outputs/model_lab/audit_3,Challenger readiness audited,2026-06-13T20:36:01
+5.27A,Denominator Reconciliation Fix,completed,outputs/model_lab/denominator_reconciliation,Training-only denominators reconciled,2026-06-13T20:36:01
+5.27B,Targeted Re-check,completed,outputs/model_lab/denominator_reconciliation,Targeted denominator re-check completed,2026-06-13T20:36:01
+5.28,Challenger Onboarding,completed,outputs/model_lab/challenger_onboarding,Challengers onboarded,2026-06-13T20:36:01
+5.29A,Challenger Execution Planning,completed,outputs/model_lab/challenger_execution_planning,Execution planning completed,2026-06-13T20:36:01
+5.29B,Challenger Sandbox Execution,completed,outputs/model_lab/challenger_sandbox,Sandbox execution completed,2026-06-13T20:36:01
+5.29B-Fix,Dependency Resolution + Sandbox Re-run,completed,outputs/model_lab/challenger_dependency_resolution,Dependencies resolved where practical,2026-06-13T20:36:01
+5.29C,Official Execution Prep,completed,outputs/model_lab/challenger_official_execution_prep,Official execution scope locked,2026-06-13T20:36:01
+5.29D-Recovery,Official Execution + FastNeuralAR_MLP Integration,completed,outputs/model_lab/challenger_official_execution,Final six challenger forecasts produced,2026-06-13T20:36:01
+5.29E,Challenger Metrics Scoring,completed,outputs/model_lab/challenger_metrics,Challenger metrics scored,2026-06-13T20:36:01
+5.29F,Challenger Aggregation & Significance,completed,outputs/model_lab/challenger_aggregation_significance,Challenger aggregation/significance completed,2026-06-13T20:36:01
+Audit #4,Official Challenger Results Readiness Audit,completed,outputs/model_lab/audit_4,Approved with conditions,2026-06-13T20:36:01
+5.30,Tournament Engine,completed,outputs/model_lab/tournament_engine,Tournament scorecards and preliminary standings created,2026-06-13T20:36:01
+5.30A,Tournament Sanity Review,completed,outputs/model_lab/tournament_sanity_review,Proceed to champion decision,2026-06-13T20:36:01
+5.31,Champion / No-Champion Decision,completed,outputs/model_lab/champion_decision,ETS Explicit selected with conditions,2026-06-13T20:36:01
+5.31B,Model Lab Closure Pack,completed,outputs/model_lab/model_lab_closure_pack,Closure pack created,2026-06-13T20:36:01

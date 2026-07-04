@@ -1,0 +1,9 @@
+artifact_key,label,canonical_csv,rows,cols,open_button,modal_formats
+key_results,Key results,model_lab_key_results.csv,11,5,dl_key_results_open,"csv,md,pdf,docx,html,txt"
+final_model_universe,Model universe,model_lab_final_model_universe.csv,15,10,dl_final_model_universe_open,"csv,md,pdf,docx,html,txt"
+champion_summary,Champion summary,model_lab_champion_summary.csv,1,11,dl_champion_summary_open,"csv,md,pdf,docx,html,txt"
+risk_register_final,Risk register,model_lab_risk_register_final.csv,7,10,dl_risk_register_final_open,"csv,md,pdf,docx,html,txt"
+tournament_standings,Tournament standings,tournament_preliminary_standings.csv,13,13,dl_tournament_standings_open,"csv,md,pdf,docx,html,txt"
+tournament_scorecard,Tournament scorecard,tournament_model_scorecard.csv,13,17,dl_tournament_scorecard_open,"csv,md,pdf,docx,html,txt"
+dashboard_handoff_manifest,Handoff manifest,model_lab_dashboard_handoff_manifest.csv,14,6,dl_dashboard_handoff_manifest_open,"csv,md,pdf,docx,html,txt"
+artifact_manifest,Artifact manifest,model_lab_artifact_manifest.csv,12,5,dl_artifact_manifest_open,"csv,md,pdf,docx,html,txt"

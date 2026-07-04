@@ -1,0 +1,14 @@
+source_file,column_name,null_count,sample_value,notes
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,run_id,0,tournament_engine,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,model_name,0,ARIMA_Fixed,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,model_origin,0,baseline,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,model_family,0,statistical,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,entity_key,0,APC-Dedicated,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,median_mase,0,3.2875262112854213,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,median_rmsse,0,0.3390119024866116,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,median_wmape,273,,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,median_smape,273,,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,median_bias,273,,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,entity_weight,0,1,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,audit_risk_flag,0,False,Source schema captured for Champion Block B.
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,created_timestamp,0,2026-06-13T18:07:40,Source schema captured for Champion Block B.

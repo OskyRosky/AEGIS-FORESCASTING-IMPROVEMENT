@@ -1,0 +1,14 @@
+check,expected,observed,status,evidence
+image_tag,aegis-refresh:v5.5,aegis-refresh:v5.5,PASS,docker images
+image_id,captured,698b1634f78a,PASS,docker images
+image_size,slim,180MB,PASS,docker images
+base_image,python slim,python:3.12-slim,PASS,Dockerfile.refresh
+pyodbc_absent,not installed,import pyodbc -> Traceback,PASS,docker run import
+pandas_absent,not installed,import pandas -> Traceback,PASS,docker run import
+no_ml_stack,none,no torch/darts/lightgbm/xgboost/sklearn,PASS,Dockerfile.refresh (no pip installs)
+data_raw_absent,not baked,raw=absent,PASS,docker run ls
+data_processed_not_baked,empty mount point,processed_baked=0,PASS,docker run ls
+shiny_app_absent,no R contamination,shiny_baked=absent,PASS,docker run test -d
+orchestrator_present,present,orch=yes,PASS,docker run test -f
+no_secrets_in_history,none,0 secret patterns,PASS,docker history scan
+dashboard_image_unchanged,a799da697173,a799da697173,PASS,docker images

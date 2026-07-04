@@ -1,0 +1,15 @@
+section,section_head_title,guide_title,alignment_before,action_taken,alignment_after
+home,AEGIS Forecast Improvement Platform,Project Home,aligned (landing context),none,aligned
+overview,Executive Overview,Executive Overview,aligned,none,aligned
+explorer,Forecast Viewer,Forecast Explorer,MISALIGNED (title + intro said future forecast curves),"retitled to Forecast Viewer; intro rewritten to historical backtest, no future forecasts",aligned
+forecast,Forecast,(missing),BROKEN (no guide entry -> empty modal),added new forecast guide entry,aligned
+accuracy,Accuracy,Accuracy Overview,aligned,none,aligned
+ttl,TTL / Capacity View,TTL / Capacity View,MISALIGNED (said 'stays Planned / no governed artifact'),rewrote to reflect prototype TTL/capacity built on governed forecasts,aligned
+universe,Model Universe,Model Universe,MISALIGNED (said '7 baseline + 6 challengers'; named NBEATS/NHITS deferred),corrected to 15 models across 4 families; removed NBEATS/NHITS mention,aligned
+tournament,Tournament Standings,Tournament Standings,aligned,none,aligned
+champion,Champion,Champion Decision,aligned (descriptive),none,aligned
+risks,Risk Register,Risk Register,aligned,none,aligned
+audit,Audit Trail,Audit Trail,aligned,none,aligned
+artifacts,Source Artifacts,Source Artifacts,aligned,none,aligned
+methodology,Methodology,Methodology,aligned,none,aligned
+version,Version Info,Version Info,aligned,none,aligned

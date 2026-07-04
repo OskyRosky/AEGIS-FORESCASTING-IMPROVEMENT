@@ -1,0 +1,66 @@
+[v3.2h] project root: C:/Users/oscarau/OneDrive - Microsoft/Desktop/Forecast Generation Codebase Improvement/AEGIS-FORESCASTING-IMPROVEMENT/V3
+[v3.2h] wrote canonical universe: C:/Users/oscarau/OneDrive - Microsoft/Desktop/Forecast Generation Codebase Improvement/AEGIS-FORESCASTING-IMPROVEMENT/V3/data/processed/model_universe_canonical.csv (15 rows)
+         model_name     model_family model_origin median_mase median_rmsse
+1      ETS Explicit      statistical   challenger    6.901144     1.856193
+2         AutoARIMA      statistical   challenger    8.088530     1.859013
+3       ETS_Current      statistical     baseline    8.654171     2.273019
+4             Theta      statistical   challenger   10.642290     2.819225
+5       ARIMA_Fixed      statistical     baseline   11.789916     3.493345
+6   FixedGrowth_1_5  growth_baseline     baseline    8.649281     2.271838
+7     FixedGrowth_3  growth_baseline     baseline   12.989046     3.019316
+8     FixedGrowth_4  growth_baseline     baseline   16.529080     4.072356
+9     FixedGrowth_6  growth_baseline     baseline   27.015391     5.083541
+10 LinearRegression machine_learning     baseline    9.495769     2.751763
+11          XGBoost machine_learning   challenger   14.547628     3.880790
+12         LightGBM machine_learning   challenger   16.041042     4.061386
+13         SMLP-TCN    deep_learning   challenger   17.719198     4.478512
+14  NLIN-DLIN_FIXED    deep_learning   challenger   20.413128     5.169837
+15          FNAR-V2    deep_learning   challenger   80.415039    20.568891
+        evidence_source
+1   governed_tournament
+2   governed_tournament
+3   governed_tournament
+4   governed_tournament
+5   governed_tournament
+6   governed_tournament
+7   governed_tournament
+8   governed_tournament
+9   governed_tournament
+10  governed_tournament
+11  governed_tournament
+12  governed_tournament
+13 candidate_evaluation
+14 candidate_evaluation
+15 candidate_evaluation
+
+[v3.2h] data checks:
+                                    check pass
+1  canonical_model_universe_has_15_models TRUE
+2                 growth_baseline_count_4 TRUE
+3                     statistical_count_5 TRUE
+4                machine_learning_count_3 TRUE
+5                   deep_learning_count_3 TRUE
+6            deep_learning_models_correct TRUE
+7        fastneuralar_original_not_active TRUE
+8     lightweight_neural_not_in_canonical TRUE
+9                      no_champion_change TRUE
+10          champion_mase_unchanged_6_901 TRUE
+11            all_models_have_median_mase TRUE
+12           all_models_have_median_rmsse TRUE
+                               detail
+1                           rows = 15
+2                           count = 4
+3                           count = 5
+4                           count = 3
+5                           count = 3
+6  FNAR-V2; NLIN-DLIN_FIXED; SMLP-TCN
+7            FastNeuralAR_MLP retired
+8                      family dropped
+9             champion = ETS Explicit
+10                    mase = 6.901144
+11                                   
+12                                   
+
+[v3.2h] ALL DATA CHECKS PASSED
+
+--- STDERR ---

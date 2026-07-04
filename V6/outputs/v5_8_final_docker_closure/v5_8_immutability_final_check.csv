@@ -1,0 +1,15 @@
+check,expected,observed,status,evidence
+data_processed_unchanged,B0880D33F488D7E77EED32F12E214D61,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot
+data_raw_unchanged,BD44163AC0DB7E0CD7F8B08EB120973D,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot
+dockerfile_unchanged,E4B6C1E01EB817F2,E4B6C1E01EB817F2,PASS,Get-FileHash
+dockerfile_refresh_unchanged,325E70E44C6A2587,325E70E44C6A2587,PASS,Get-FileHash
+docker_compose_unchanged,3753E84C5C047180,3753E84C5C047180,PASS,Get-FileHash
+dockerignore_unchanged,B4339EF2F9A695FA,B4339EF2F9A695FA,PASS,Get-FileHash
+entrypoint_unchanged,6EAB069067B438DF,6EAB069067B438DF,PASS,Get-FileHash
+smoke_test_unchanged,A91B61837BB4A286,A91B61837BB4A286,PASS,Get-FileHash
+shiny_app_unchanged,no logic change,validation only,PASS,scope
+docs_unchanged_except_v5_8,V5.7 docs stable,no docs edited in V5.8,PASS,scope
+no_rebuild,none,no docker build,PASS,command history
+no_new_image,only 2 aegis,dashboard a799da697173 + refresh 698b1634f78a,PASS,docker images
+only_v5_8_output_created,v5_8 folder,outputs/v5_8_final_docker_closure only,PASS,file listing
+v1_v2_v3_v4_untouched,frozen,only V5,PASS,scope

@@ -1,0 +1,10 @@
+area,check,expected,observed,status
+parity,file_count,V5 == V6,2271 == 2271,PASS
+parity,total_size_MB,V5 == V6,1415.1 == 1415.1,PASS
+parity,data_processed_hash,identical,B0880D33F488D7E77EED32F12E214D61 == B0880D33F488D7E77EED32F12E214D61,PASS
+parity,closure_pack_hash,identical,00F3F6443DEF432296362CF1004FBE0C == 00F3F6443DEF432296362CF1004FBE0C,PASS
+parity,shiny_app_hash,identical,441A1B59C575D73CFDF2F4C455D0771C == 441A1B59C575D73CFDF2F4C455D0771C,PASS
+parity,data_processed_count,24,24 == 24,PASS
+parity,closure_pack_count,13,13 == 13,PASS
+parity,shiny_app_count,48,48 == 48,PASS
+exclusions,venv_pycache_pyc_excluded,excluded,robocopy /XD /XF,PASS

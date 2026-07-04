@@ -1,0 +1,39 @@
+# =====================================================================
+# AEGIS V5.5 | Dockerfile.refresh | Separated refresh service (VALIDATE-ONLY)
+# ---------------------------------------------------------------------
+# Governance (V5.5 dry-run / validate-only):
+#   - SEPARATE image from the R-only dashboard. Python does NOT contaminate
+#     the dashboard image (aegis-dashboard:v5.1 stays R-only).
+#   - VALIDATE-ONLY: NO SQL, NO ODBC/pyodbc, NO Entra/MFA, NO models,
+#     NO promote, NO mutation of data/processed or data/raw.
+#   - Deliberately installs NO pyodbc / pandas / sklearn / xgboost /
+#     lightgbm / torch / darts. The validate-only wrapper and the
+#     orchestrator's `--dry-run` path are stdlib-only -> a bare slim
+#     Python is sufficient. Absence of pyodbc = no SQL capability by
+#     construction (the wrapper asserts this).
+#   - NO data/raw, NO secrets, NO productive artifacts baked. data/processed
+#     and the V5.5 output dir are supplied at runtime via mounts.
+# =====================================================================
+FROM python:3.12-slim
+
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app/python
+
+WORKDIR /app
+
+# Application code needed for the validate-only check + orchestrator --dry-run.
+# NO data/raw, NO secrets, NO productive data/processed or outputs are copied.
+COPY python/ /app/python/
+COPY scripts/refresh_validate_only.py /app/scripts/refresh_validate_only.py
+COPY config/ /app/config/
+COPY ACTIVE_PROJECT_ROOT.md /app/ACTIVE_PROJECT_ROOT.md
+COPY VERSION_INFO.md /app/VERSION_INFO.md
+
+# Mount points for runtime volumes (data/processed read-only + V5.5 output rw).
+RUN mkdir -p /app/data/processed /app/outputs/v5_5_refresh_service_validate
+
+# VALIDATE-ONLY entrypoint. Never runs SQL / models / promote.
+CMD ["python", "/app/scripts/refresh_validate_only.py"]

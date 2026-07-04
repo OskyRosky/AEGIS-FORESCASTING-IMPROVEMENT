@@ -1,0 +1,15 @@
+dashboard_section,artifact_path,artifact_exists,recommended_use,required_for_mvp_dashboard,audit_status,notes,created_timestamp
+Executive Summary,outputs/model_lab/model_lab_closure_pack/model_lab_key_results.csv,True,KPI summary,True,PASS,11 KPI rows; reconciles with sources,2026-06-14T12:00:00
+Model Universe,outputs/model_lab/model_lab_closure_pack/model_lab_final_model_universe.csv,True,Final model status table,True,PASS,15 models with status/flags,2026-06-14T12:00:00
+Champion Decision,outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,True,Champion decision summary,True,PASS,ETS Explicit with conditions/medium confidence,2026-06-14T12:00:00
+Tournament Standings,outputs/model_lab/tournament_engine/tournament_preliminary_standings.csv,True,Preliminary standings visualization,True,PASS,13-row standings; ETS Explicit position 1,2026-06-14T12:00:00
+Baseline vs Challenger Scorecard,outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,True,Unified scorecard,True,PASS,Combined baseline+challenger scorecard present,2026-06-14T12:00:00
+Pairwise Evidence,outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,True,Pairwise evidence heatmap/table,True,PASS,78 pairwise comparisons available,2026-06-14T12:00:00
+Risk Register,outputs/model_lab/model_lab_closure_pack/model_lab_risk_register_final.csv,True,Risk and conditions panel,True,PASS,7 carry-forward risks,2026-06-14T12:00:00
+Challenger Metrics,outputs/model_lab/challenger_metrics/challenger_metrics_by_model_diagnostic.csv,True,Challenger diagnostics,True,PASS,Per-model diagnostic metrics present,2026-06-14T12:00:00
+Aggregation Summary,outputs/model_lab/challenger_aggregation_significance/challenger_aggregation_by_model.csv,True,Challenger aggregation details,True,PASS,Equal-entity aggregation per model present,2026-06-14T12:00:00
+Audit Status,outputs/model_lab/audit_4/audit_4_summary.csv,True,Audit #4 status,True,PASS,APPROVE_WITH_CONDITIONS; 0 blockers,2026-06-14T12:00:00
+Audit Status,outputs/model_lab/tournament_sanity_review/tournament_sanity_summary.csv,True,Tournament sanity status,True,PASS,0 blockers / 0 major; proceed to 5.31,2026-06-14T12:00:00
+Deferred Models,outputs/model_lab/model_lab_closure_pack/model_lab_deferred_models.csv,True,Deferred model details,True,PASS,NBEATS/NHITS documented,2026-06-14T12:00:00
+Methodology / Governance,outputs/model_lab/champion_decision/champion_decision_report.md,True,Decision governance narrative,True,PASS,Champion decision narrative present,2026-06-14T12:00:00
+Methodology / Governance,outputs/model_lab/champion_decision/champion_decision.csv,True,Machine-readable champion decision,True,PASS,Single-row machine-readable decision,2026-06-14T12:00:00

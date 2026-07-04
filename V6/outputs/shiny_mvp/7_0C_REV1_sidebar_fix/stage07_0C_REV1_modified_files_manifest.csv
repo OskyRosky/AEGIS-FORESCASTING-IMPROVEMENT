@@ -1,0 +1,9 @@
+file_path,change_type,backup_path,reason,notes
+shiny_app/ui/header.R,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/ui/header.R,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+shiny_app/ui/sidebar.R,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/ui/sidebar.R,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+shiny_app/ui/body.R,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/ui/body.R,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+shiny_app/ui/tabs.R,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/ui/tabs.R,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+shiny_app/server/server.R,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/server/server.R,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+shiny_app/www/custom.css,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/www/custom.css,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+shiny_app/www/custom.js,modify,outputs/shiny_mvp/7_0C_REV1_sidebar_fix/backups/shiny_app/www/custom.js,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."
+python/shiny_mvp/validate_stage07_0C_REV1_sidebar_fix.py,create,,Convert 7.0C shell from top navigation to persistent left sidebar.,"No model, metric, forecast, or tournament logic changed."

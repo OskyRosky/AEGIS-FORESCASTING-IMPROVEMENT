@@ -1,0 +1,3 @@
+chart_id,section,container,gate_input,empty_state_fn,lines_on_render,rendered_live
+fvp_chart,backtest,static highchartOutput,input$fvp_go,fvp_empty_chart,actual + selected model forecast lines,yes (live)
+fvf_chart,forward,static highchartOutput,input$fvf_go,fvf_empty_chart,actual history + forward forecast + Forecast start boundary,yes (live)

@@ -1,0 +1,11 @@
+check,expected,observed,status,evidence
+processed_mount_exists,/app/data/processed exists,processed_exists=yes,PASS,docker exec test -d
+outputs_mount_exists,/app/outputs exists,outputs_exists=yes,PASS,docker exec test -d
+processed_has_data,>0 csv,processed_csv=24,PASS,docker exec ls | wc -l
+data_raw_not_in_container,absent,raw_exists=no,PASS,docker exec test -d /app/data/raw
+processed_write_blocked,read-only failure,Read-only file system; PROCESSED_WRITE_BLOCKED,PASS,docker exec touch
+outputs_write_blocked,read-only failure,Read-only file system; OUTPUTS_WRITE_BLOCKED,PASS,docker exec touch
+no_host_leak_processed,no test file on host,host_processed_testfile=False,PASS,Test-Path host
+no_host_leak_outputs,no test file on host,host_outputs_testfile=False,PASS,Test-Path host
+dashboard_alive_after_write,HTTP 200,POST_WRITE_HTTP=200 LEN=303385,PASS,Invoke-WebRequest
+outputs_ro_justified,read-only (no write need),dashboard writes only to /tmp per V5.0B; outputs mounted :ro,PASS,V5.0B decision log

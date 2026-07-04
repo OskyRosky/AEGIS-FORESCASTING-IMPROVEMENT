@@ -1,0 +1,38 @@
+id,check,expected,observed,status
+1,preflight,PASS,all preflight PASS,PASS
+2,download_implementation_audit,completed,11 handlers audited,PASS
+3,container_export_dependencies,validated,pandoc+TinyTeX+UTF8+/tmp,PASS
+4,test_strategy_documented,documented,Preference 3 programmatic in-container,PASS
+5,explanation_md,PASS,1030b AEGIS+ETS,PASS
+6,explanation_pdf,PASS,104478b %PDF,PASS
+7,explanation_docx,PASS,10544b zip+ContentTypes,PASS
+8,explanation_html,PASS,1933b <!doctype,PASS
+9,explanation_txt,PASS,1057b UTF-8,PASS
+10,governed_csv_verbatim,PASS,SHA256 identical to source,PASS
+11,governed_md,PASS,1475b,PASS
+12,governed_pdf,PASS,107773b %PDF,PASS
+13,governed_docx,PASS,10914b zip+ContentTypes,PASS
+14,governed_html,PASS,2532b <!doctype,PASS
+15,governed_txt,PASS,1375b,PASS
+16,pdf_signature_validated,%PDF,both PDFs %PDF,PASS
+17,docx_zip_structure,zip+ContentTypes,both DOCX valid,PASS
+18,html_structure,valid,<!doctype/html,PASS
+19,utf8_validation,UTF-8,LANG C.UTF-8; text UTF-8; app PDF em-dash OK,PASS
+20,no_secrets_in_downloads,none,none,PASS
+21,no_traceback_in_downloads,none,none,PASS
+22,no_raw_full_data_in_explanation,mirrors visible only,sources/traceability excluded,PASS
+23,read_only_mounts_preserved,RO,processed+outputs READONLY,PASS
+24,data_processed_unchanged,identical,hash match,PASS
+25,data_raw_unchanged,identical,hash match,PASS
+26,dashboard_http_200_after,200,HTTP 200 LEN 303385,PASS
+27,smoke_test,11/11,SMOKE_TEST_PASSED,PASS
+28,container_healthy,healthy,healthy,PASS
+29,no_sql,none,R-only,PASS
+30,no_models,none,none,PASS
+31,no_refresh,none,none,PASS
+32,no_azure,none,none,PASS
+33,no_llm_real,mock only,mock,PASS
+34,v5_1_2_3_integrity,preserved or justified,Dockerfile rebuild justified; compose/entrypoint/dockerignore/smoke unchanged,PASS
+35,v1_v2_v3_v4_intact,frozen,only V5 touched,PASS
+36,risk_register_updated,created,13 risks,PASS
+37,all_deliverables_created,14 + samples + logs,all present,PASS

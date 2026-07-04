@@ -1,0 +1,6 @@
+=== V5.8 COMPOSE FINAL 2026-07-03T14:20:32.9318377-06:00 ===
+config_exit=0
+shiny
+shiny
+refresh
+aegis-dashboard-v5-2 | running | Up 2 hours (healthy) | 0.0.0.0:8080->3838/tcp, [::]:8080->3838/tcp

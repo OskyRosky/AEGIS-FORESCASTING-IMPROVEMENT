@@ -1,0 +1,25 @@
+check_name,status,details
+v2_root_exists,pass,V2 active root confirmed at AEGIS-FORESCASTING-IMPROVEMENT/V2
+vpn_retry_attempted,pass,Retried after Oscar reconnected Microsoft VPN
+network_route_available,pass,Test-NetConnection tesseractearth.database.windows.net:1433 TcpTestSucceeded=True (RemoteAddress 20.51.9.131)
+odbc_driver18_detected,pass,'ODBC Driver 18 for SQL Server' present via pyodbc.drivers()
+pyodbc_detected,pass,pyodbc 5.3.0 available in python 3.14.6
+sql_config_inspected,pass,config.py -> tesseractearth.database.windows.net / TesseractEarthDW / ActiveDirectoryInteractive (no secrets)
+sql_connection_attempted,pass,pyodbc.connect succeeded (CONNECTED_OK) via Entra interactive auth
+value_type_count_query_executed,pass,Query 1 returned 1 row: Forecast-Mean = 5094743 (Enterprise)
+coverage_query_executed,pass,Query 2 returned 1 row: Forecast-Mean date_count=4859 model_count=143 key_count=52 dates 2017-01-05..2030-04-25
+non_mean_sample_query_executed,pass,Query 3 returned 0 rows (no non-mean ValueTypes exist for Enterprise)
+resource_by_valuetype_query_executed,pass,Query 4 returned 1 row: HDD / Forecast-Mean = 5094743
+latest_forecast_version_query_executed,pass,Query 5 returned 1 row: Forecast-Mean rows=150032 keys=45 models=17 dates 2019-07-01..2030-04-25
+upstream_intervals_present,fail,No ValueType other than Forecast-Mean exists upstream for Scenario=Enterprise
+no_code_modified,pass,No python/R source modified
+no_data_modified,pass,No data/raw or data/processed files modified
+no_csv_source_modified,pass,Only new diagnostic output CSVs written under outputs/shiny_mvp
+no_shiny_modified,pass,No shiny_app files modified
+no_sql_source_modified,pass,Only SELECT queries executed; no DDL/DML
+no_models_run,pass,No model_lab models executed
+no_forecasts_generated,pass,No forecasts produced
+no_metrics_recomputed,pass,No metrics recalculated
+champion_unchanged,pass,No champion decision touched
+secrets_not_printed,pass,No tokens/credentials printed; Entra interactive auth used
+temp_script_cleanup,pass,Temporary diagnostic script removed after run

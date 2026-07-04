@@ -1,0 +1,18 @@
+=== V5.7 DOC COMMANDS VALIDATION 2026-07-03T14:11:23.9290450-06:00 ===
+config_exit=0
+aegis-dashboard-v5-2 running
+docker: 'docker images' requires at most 1 argument
+
+Usage:  docker images [OPTIONS] [REPOSITORY[:TAG]]
+
+Run 'docker images --help' for more information
+
+AEGIS V5.5 REFRESH VALIDATE-ONLY | NO_SQL | NO_MODELS | NO_PROMOTE | NO_MUTATION
+  [PASS] no_sql_azure_env: none
+RESULT: ALL_PASS
+VALIDATE_ONLY | NO_SQL | NO_MODELS | NO_PROMOTE | NO_MUTATION
+V5_5_REFRESH_VALIDATE_OK
+
+aegis-dashboard-v5-2  | 
+aegis-dashboard-v5-2  | Listening on http://0.0.0.0:3838
+aegis-dashboard-v5-2  | Downloading google font Inter to local cache (/root/.cache/R/sass)

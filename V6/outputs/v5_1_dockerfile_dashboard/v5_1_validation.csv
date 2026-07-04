@@ -1,0 +1,28 @@
+dod_id,check,expected,observed,status
+1,dockerfile_created,Dockerfile present,V5/Dockerfile created,PASS
+2,dockerignore_created,.dockerignore present,V5/.dockerignore created,PASS
+3,entrypoint_created,docker/entrypoint.sh present,created (fixed port 3838),PASS
+4,base_image_verified,verified or fallback documented,rocker/r-ver:4.6.0 AVAILABLE,PASS
+5,digest_pinning,digest used or limitation documented,sha256:a3c049... pinned,PASS
+6,r_pinning,implemented,P3M noble 2026-06-23 dated snapshot,PASS
+7,docker_build,build success,exit 0,PASS
+8,image_tag,aegis-dashboard:v5.1,created,PASS
+9,container_run,run success,Up healthy,PASS
+10,http_200,200,200,PASS
+11,healthcheck,passes,healthy,PASS
+12,smoke_test,pass,11/11 PASS,PASS
+13,assistants_10,>=10,10 'Generate explanation',PASS
+14,champion_ets_explicit,ETS Explicit,found,PASS
+15,scope_15_models,15 models,found,PASS
+16,horizons_30_60_180,30/60/180,all found,PASS
+17,no_sql,none,none,PASS
+18,no_models,none,none,PASS
+19,no_refresh,none,none,PASS
+20,no_python_heavy_ml,absent or exception documented,NO_PYTHON + no heavy ML,PASS
+21,no_secrets,none,none,PASS
+22,no_data_raw_in_image,absent,NO_RAW,PASS
+23,no_mutation_data_processed,unchanged,RO mount; write blocked; no host file,PASS
+24,no_mutation_data_raw,unchanged,not mounted/baked,PASS
+25,v1_v2_v3_v4_intact,unchanged,only V5 touched,PASS
+26,logs_no_critical_errors,none,NO_CRITICAL_ERRORS after libuv1 fix,PASS
+27,outputs_v5_1_created,present,v5_1_dockerfile_dashboard/ populated,PASS

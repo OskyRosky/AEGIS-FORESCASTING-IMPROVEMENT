@@ -1,0 +1,15 @@
+check_name,status,details,created_timestamp
+canonical_rows_2724,pass,actual=2724,2026-06-13T17:27:28
+exactly_6_challenger_models,pass,"models=['AutoARIMA', 'ETS Explicit', 'FastNeuralAR_MLP', 'LightGBM', 'Theta', 'XGBoost']",2026-06-13T17:27:28
+no_nbeats,pass,NBEATS absent,2026-06-13T17:27:28
+no_nhits,pass,NHITS absent,2026-06-13T17:27:28
+entity_model_aggregation_exists,pass,rows=234,2026-06-13T17:27:28
+model_aggregation_6_rows,pass,rows=6,2026-06-13T17:27:28
+pairwise_comparisons_15,pass,rows=15,2026-06-13T17:27:28
+no_ranking_columns,pass,columns=none,2026-06-13T17:27:28
+no_tournament_outputs,pass,challenger_tournament absent,2026-06-13T17:27:28
+no_champion_outputs,pass,challenger_champion absent,2026-06-13T17:27:28
+aggregation_uses_entity_equal_weighting,pass,entity-level medians feed model-level medians,2026-06-13T17:27:28
+significance_uses_entity_paired_comparisons,pass,paired_entity_count_range=39..39,2026-06-13T17:27:28
+fast_neural_included,pass,FastNeuralAR_MLP present,2026-06-13T17:27:28
+summary_flags_safe,pass,aggregation/significance true; ranking/tournament/champion false,2026-06-13T17:27:28

@@ -1,0 +1,12 @@
+risk_id,area,risk,severity,blocker_yes_no,mitigation,status
+R1,validate_vs_real,user mistakes refresh validate-only for real refresh,medium,no,README/RUNBOOK/handoff/gating-note all state validate-only does NOT update data; banner NO_SQL/NO_MODELS/NO_PROMOTE/NO_MUTATION,mitigated
+R2,azure_expectation,user expects a public Azure link,medium,no,docs state V5 is LOCAL MVP only; Azure is future/gated,mitigated
+R3,wrong_folder,user runs compose from wrong directory,low,no,every doc says run from V5 root; troubleshooting #10,mitigated
+R4,port_8080_busy,port collision,low,no,troubleshooting #2: use 8081:3838,mitigated
+R5,docker_desktop_off,daemon off,low,no,troubleshooting #1: start Docker Desktop,mitigated
+R6,onedrive_locks,file locks on host artifacts,low,no,troubleshooting #11; reads are read-only,mitigated
+R7,refresh_real_gated,real refresh still gated (headless MFA),high,no,gating note; needs non-interactive auth strategy (V5.6),gated_open
+R8,v5_8_overclaim,V5.8 must not promise SQL/model automation,medium,no,RUNBOOK/handoff/gating-note explicitly state V5.8 = local Docker closure only,mitigated
+R9,repo_relocation,repo moved after V5,low,no,relative paths; run compose from V5 root,mitigated
+R10,highcharts_license,Highcharts commercial license (inherited),medium,no,legal review flagged,carried_forward
+R11,inter_font_runtime,bslib Inter font runtime download (inherited),low,no,offline bundle future,carried_forward

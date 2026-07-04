@@ -1,0 +1,194 @@
+/* TESSERACT v2 | governed Shiny shell styles */
+
+body {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.tess-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+}
+
+.app-header {
+  min-height: 68px;
+  background: #102a43;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 24px;
+  box-shadow: 0 2px 14px rgba(16, 42, 67, 0.22);
+  z-index: 5;
+}
+
+.app-header-title {
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.header-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.header-badges {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 310px) minmax(0, 1fr);
+  min-height: calc(100vh - 124px);
+}
+
+.app-sidebar {
+  background: linear-gradient(180deg, #102a43 0%, #17324d 58%, #1f3864 100%);
+  color: #eaf2fb;
+  padding: 22px 16px;
+  box-shadow: 8px 0 24px rgba(16, 42, 67, 0.14);
+}
+
+.sidebar-heading {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 14px;
+  padding: 0 8px 16px;
+}
+
+.sidebar-kicker {
+  color: #9fc5e8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sidebar-title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  color: #d9e8f6;
+  display: block;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 650;
+  padding: 10px 12px;
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.sidebar-link.active {
+  background: #dbeafe;
+  color: #102a43;
+  box-shadow: inset 3px 0 0 #2e75b6;
+}
+
+.app-content {
+  min-width: 0;
+  padding: 0 24px;
+}
+
+.governance-badge {
+  background: #dbeafe;
+  color: #1f3864;
+}
+
+.tess-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.landing-hero {
+  background: linear-gradient(135deg, #102a43 0%, #1f3864 52%, #2e75b6 100%);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 34px;
+  box-shadow: 0 12px 28px rgba(16, 42, 67, 0.22);
+}
+
+.governance-card {
+  border: 1px solid #e6edf5;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16, 42, 67, 0.08);
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #edf2f7;
+  color: #1f3864;
+}
+
+.policy-list li {
+  margin-bottom: 6px;
+}
+
+.placeholder-panel {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 28px;
+}
+
+.app-footer {
+  border-top: 1px solid #e5eaf0;
+  background: #ffffff;
+  color: #5d6d7e;
+  font-size: 12px;
+  padding: 16px 24px 22px;
+  margin-top: 0;
+}
+
+@media (max-width: 960px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+
+  .app-sidebar {
+    padding: 14px;
+  }
+
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+
+  .app-content {
+    padding: 0 14px;
+  }
+}

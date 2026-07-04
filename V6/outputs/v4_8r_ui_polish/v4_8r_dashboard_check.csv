@@ -1,0 +1,11 @@
+check,value,result
+http_status,200,PASS
+content_length,300604,PASS
+listen_port,3839,PASS
+process_id,60476,PASS
+css_cache_buster,custom.css?v=20260629i,PASS
+parse_tabs_R,PARSE_OK,PASS
+parse_body_R,PARSE_OK,PASS
+guide_overlay_opens,"display=flex; opacity=1; visibility=visible",PASS
+guide_entries_total,14,PASS
+sections_with_guide,14 of 14,PASS

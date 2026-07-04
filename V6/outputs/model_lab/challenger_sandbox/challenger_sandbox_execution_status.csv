@@ -1,0 +1,8 @@
+run_id,model_name,execution_mode,sandbox_status,attempted,forecast_rows,entities_attempted,windows_attempted,error_message,eligible_for_official_candidate,created_timestamp
+challenger_sandbox,AutoARIMA,sandbox,sandbox_passed,True,150,5,1,,True,2026-06-12T15:50:53
+challenger_sandbox,Theta,sandbox,sandbox_passed,True,150,5,1,,True,2026-06-12T15:50:53
+challenger_sandbox,ETS Explicit,sandbox,sandbox_passed,True,150,5,1,,True,2026-06-12T15:50:53
+challenger_sandbox,LightGBM,sandbox,sandbox_passed,True,150,5,1,,True,2026-06-12T15:50:53
+challenger_sandbox,XGBoost,sandbox,sandbox_passed,True,150,5,1,,True,2026-06-12T15:50:53
+challenger_sandbox,NBEATS,sandbox,sandbox_passed,True,150,5,1,,True,2026-06-12T15:50:53
+challenger_sandbox,NHITS,sandbox,sandbox_blocked_dependency_missing,False,0,0,0,required forecasting dependency not installed,False,2026-06-12T15:50:53

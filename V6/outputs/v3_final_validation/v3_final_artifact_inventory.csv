@@ -1,0 +1,20 @@
+artifact,path,kind,provenance,status,notes
+actuals.csv,V3/data/processed/actuals.csv,productive_data,promoted by D/E-2,PRESENT,84537 actual rows 2019-07-01..2026-04-27
+entities.csv,V3/data/processed/entities.csv,productive_data,promoted by D/E-2,PRESENT,45 entities
+forecasts.csv,V3/data/processed/forecasts.csv,productive_data,promoted by D/E-2,PRESENT,65095 forecast rows 2026-04-28..2030-04-25
+forecast_comparison.csv,V3/data/processed/forecast_comparison.csv,productive_data,promoted by D/E-2,PRESENT,same-date comparison contract (0 rows)
+run_metadata.csv,V3/data/processed/run_metadata.csv,productive_metadata,promoted LAST by D/E-2,PRESENT,run_timestamp 2026-06-28T17:27:14; 12-field contract; Last Update source
+run_metadata_pipeline.csv,V3/data/processed/run_metadata_pipeline.csv,audit_metadata,D/E-2 audit,PRESENT,PROMOTED scope 15 champion ETS Explicit validation PASS promoted_run_id v3_3de_run_20260628_172644
+de1b_full_staging_run_dir,V3/outputs/v3_3_daily_refresh/v3_3de_orchestrator_staging/runs/v3_3de_run_20260628_172644/,staging_evidence,D/E-1B,PRESENT,validation gates.csv 32/32 PASS + status/runtime/staging/dashboard_candidate/data_processed_candidate/data_raw/artifacts_inventory
+de1b_gates,V3/outputs/v3_3_daily_refresh/v3_3de_orchestrator_staging/runs/v3_3de_run_20260628_172644/validation/gates.csv,validation,D/E-1B,PRESENT,G01..G32 all PASS
+de1_staging_validation,V3/outputs/v3_3_daily_refresh/v3_3de_orchestrator_staging/v3_3de_staging_validation.csv,validation,D/E-1,PRESENT,staging-only orchestrator validation
+de1_model_scope_check,V3/outputs/v3_3_daily_refresh/v3_3de_orchestrator_staging/v3_3de_model_scope_check.csv,model_scope,D/E-1,PRESENT,15-model scope 4/5/3/3
+de1_prohibited_guard,V3/outputs/v3_3_daily_refresh/v3_3de_orchestrator_staging/v3_3de_prohibited_model_guard.csv,governance,D/E-1,PRESENT,NBEATS/NHITS/FastNeuralAR_MLP not executed
+de2_controlled_promote_report,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/v3_3de_controlled_promote_report.md,promote_evidence,D/E-2,PRESENT,controlled promote narrative
+de2_postcheck,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/v3_3de_controlled_promote_postcheck.csv,validation,D/E-2,PRESENT,6/6 PASS
+de2_validation,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/v3_3de_controlled_promote_validation.csv,validation,D/E-2,PRESENT,promote validation
+de2_rollback_plan,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/v3_3de_controlled_promote_rollback_plan.csv,rollback,D/E-2,PRESENT,rollback not_needed OK
+de2_artifacts_inventory,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/v3_3de_controlled_promote_artifacts_inventory.csv,inventory,D/E-2,PRESENT,promoted artifacts inventory
+de2_backup_inventory,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/v3_3de_controlled_promote_backup_inventory.csv,inventory,D/E-2,PRESENT,pre-promote backup inventory
+backup_pre_promote,V3/outputs/v3_3_daily_refresh/v3_3de_controlled_promote/backups/pre_promote_20260628_201215/,backup,D/E-2,PRESENT,prior productive snapshot (processed/governance/tournament/evaluation/champion_decision/forecast_viewer_handoff) RETAINED
+v3_final_validation_dir,V3/outputs/v3_final_validation/,closure,H,PRESENT,this final validation + closure package

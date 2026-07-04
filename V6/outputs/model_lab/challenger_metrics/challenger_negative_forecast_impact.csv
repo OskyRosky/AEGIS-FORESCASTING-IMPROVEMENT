@@ -1,0 +1,7 @@
+run_id,model_name,negative_forecast_rows,total_forecast_rows,negative_forecast_rate,min_raw_forecast_value,max_negative_adjustment_amount,affected_entity_windows,created_timestamp
+challenger_metrics_scoring,AutoARIMA,115,13620,0.008443465491923641,-71653.28770546109,71653.28770546109,6,2026-06-13T16:26:53
+challenger_metrics_scoring,ETS Explicit,133,13620,0.009765051395007341,-46129.326273371305,46129.326273371305,7,2026-06-13T16:26:53
+challenger_metrics_scoring,FastNeuralAR_MLP,55,13620,0.004038179148311307,-154.510583183654,154.510583183654,18,2026-06-13T16:26:53
+challenger_metrics_scoring,LightGBM,0,13620,0.0,12.572371380391711,0.0,0,2026-06-13T16:26:53
+challenger_metrics_scoring,Theta,0,13620,0.0,28.780999653801203,0.0,0,2026-06-13T16:26:53
+challenger_metrics_scoring,XGBoost,3,13620,0.00022026431718061675,-97.00184631347656,97.00184631347656,2,2026-06-13T16:26:53

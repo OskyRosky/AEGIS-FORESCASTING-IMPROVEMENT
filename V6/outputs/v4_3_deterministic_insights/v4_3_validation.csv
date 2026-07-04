@@ -1,0 +1,23 @@
+check,result,detail
+script_exists,PASS,generate_deterministic_insights.py
+input_evidence_packs_exist,PASS,v4_2_evidence_pack
+all_4_page_summaries_generated,PASS,4 pages
+insight_cards_csv_exists,PASS,v4_3_insight_cards.csv
+deterministic_insights_json_exists,PASS,v4_3_deterministic_insights.json
+claims_traceability_exists,PASS,v4_3_claims_traceability.csv
+risk_flags_exists,PASS,v4_3_risk_flags.csv
+sanitization_log_exists,PASS,v4_3_sanitization_log.csv
+no_forbidden_language_in_visible_outputs,PASS,[]
+sources_present_for_every_visible_insight,PASS,30 visible
+limitations_present_for_every_page,PASS,"champion_overview,forecast_viewer,governance_risks,tournament"
+confidence_present,PASS,30 cards
+champion_unchanged_ets_explicit,PASS,ETS Explicit
+model_scope_unchanged_15,PASS,15
+no_full_raw_forecast_actuals_embedded,PASS,only V4.2 minimized packs read
+no_llm_provider_mock_azure_used,PASS,deterministic rules only
+no_shiny_modified,PASS,no shiny_app files touched
+no_sql_executed,PASS,reads JSON packs only
+no_model_refresh_executed,PASS,no model code invoked
+no_data_processed_mutation,PASS,read-only
+v1_v2_v3_untouched,PASS,only V4 outputs written
+all_cards_validation_pass,PASS,30 cards

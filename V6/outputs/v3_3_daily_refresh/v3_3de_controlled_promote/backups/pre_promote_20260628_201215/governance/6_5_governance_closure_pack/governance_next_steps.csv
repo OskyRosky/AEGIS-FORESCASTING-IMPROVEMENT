@@ -1,0 +1,9 @@
+next_step_id,next_step_name,priority,description,blocking_dependency,created_timestamp
+NS-001,Audit #6 - Governance Pre-Shiny Audit,high,Claude Opus audits Stage 06 governance closure before Shiny work.,Stage 06 closure pack complete.,2026-06-14T10:56:50
+NS-002,Fix any Audit #6 blockers if found,high,Resolve blockers through additive governed updates.,Audit #6 findings.,2026-06-14T10:56:50
+NS-003,Build Shiny MVP dashboard,high,Build read-only dashboard after Audit #6 approval.,Audit #6 approval.,2026-06-14T10:56:50
+NS-004,Use dashboard governance contract as implementation guide,high,Implement dashboard sections and bindings from 6.4.,Dashboard contract.,2026-06-14T10:56:50
+NS-005,Surface champion conditions and risks,high,"Show conditional champion, medium confidence, risks, and deferrals.",6.3 and 6.4 artifacts.,2026-06-14T10:56:50
+NS-006,Keep Shiny read-only / no recompute,high,No metric recalculation or model execution in Shiny.,6.4 dashboard contract.,2026-06-14T10:56:50
+NS-007,Investigate FastNeuralAR_MLP in future work,medium,Review scale/recursive-collapse behavior outside Shiny MVP.,Future model workstream.,2026-06-14T10:56:50
+NS-008,Consider NBEATS/NHITS future re-evaluation environment,medium,Evaluate runtime/dependency path in future Python/container environment.,Future model workstream.,2026-06-14T10:56:50

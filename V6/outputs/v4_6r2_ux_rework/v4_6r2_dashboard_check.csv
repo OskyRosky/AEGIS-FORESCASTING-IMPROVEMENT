@@ -1,0 +1,6 @@
+check_id,description,expected,observed,status
+DSH-01,App responds on port 3839,HTTP 200,"HTTP 200 len=284644",PASS
+DSH-02,Four MVP explanation panels present,champion/tournament/forecast/governance,"llm_champion_overview, llm_tournament, llm_forecast_viewer, llm_governance_risks modules present",PASS
+DSH-03,Last update / snapshot unchanged,2026-06-28,"Header shows 'Last update: 2026-06-28'",PASS
+DSH-04,Composition engine loaded,R/llm_compose.R sourced,"global.R sources R/llm_compose.R; .comp_answer used at render",PASS
+DSH-05,No champion change,ETS Explicit retained,"Champion panel reports ETS Explicit, MASE 6.90, scope 15",PASS

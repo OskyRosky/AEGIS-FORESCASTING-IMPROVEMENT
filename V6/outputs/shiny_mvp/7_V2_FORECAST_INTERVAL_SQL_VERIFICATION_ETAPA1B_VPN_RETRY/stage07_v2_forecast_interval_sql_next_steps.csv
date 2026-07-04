@@ -1,0 +1,8 @@
+step_id,branch,action,owner,blocking
+NS1,confirmed,"CONFIRMED via live SQL: upstream holds ONLY Forecast-Mean for Scenario=Enterprise. Branch 2B applies (intervals must be generated, not extracted).",Agent,no
+NS2,2B,"Etapa 1.5 governed decision: confirm interval level(s) (80 and/or 95), generation method, wide vs long contract shape, and dashboard label ('intervalos de prediccion').",Oscar+Agent,yes
+NS3,2B,"Choose a generation method per model family. Deterministic models (FixedGrowth*) have NO honest statistical interval - decide whether to (a) omit bands for them, or (b) apply an empirical/backtest-residual band with an explicit 'empirical' label.",Agent,no
+NS4,2B,"For stochastic-capable models (ARIMA / ExponentialSmoothing), evaluate model-native prediction intervals OR an empirical residual-quantile band calibrated on backtest errors.",Agent,no
+NS5,2B,"Define additive, NA-safe contract columns (e.g. forecast_lower_80/upper_80/lower_95/upper_95/interval_method/interval_level_available). Never break existing point-only consumers.",Agent,no
+NS6,2B,"Etapa 3: render the shaded band in the Shiny Forecast Chart using lower/upper, NA-safe (no band when unavailable). Etapa 4: governance, docs, validation.",Agent,no
+NS7,note,"Coverage query shows full table has 52 keys / 143 models across 2017-2030, but latest ForecastVersion (Enterprise) = 45 keys / 17 models / 2019-2030, matching forecasts.csv grain (45 keys / 16-17 models).",Agent,no

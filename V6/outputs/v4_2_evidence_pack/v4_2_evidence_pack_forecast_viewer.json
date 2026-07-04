@@ -1,0 +1,132 @@
+{
+  "pack_metadata": {
+    "page_id": "forecast_viewer",
+    "generated_at": "2026-06-29T16:51:17Z",
+    "project_version": "V4",
+    "provider_stage": "evidence_only_no_llm",
+    "snapshot_caveat": "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "filters": {}
+  },
+  "governance_context": {
+    "champion": "ETS Explicit",
+    "champion_policy": "frozen / governed / no auto-advance",
+    "model_scope": 15,
+    "llm_decision_policy": "explain_only"
+  },
+  "evidence": {
+    "forecast_subset": {
+      "rows_total_in_artifact": 65095,
+      "rows_after_filter": 65095,
+      "rows_in_sample": 5,
+      "distinct_entities": 45,
+      "distinct_models": [
+        "ARIMA",
+        "ExponentialSmoothing",
+        "ExponentialSmoothing_ARIMA_Ensemble",
+        "FixedGrowth1%",
+        "FixedGrowth2%",
+        "FixedGrowth2%_ARIMA_Ensemble",
+        "FixedGrowth2%_FixedGrowth1%_Ensemble",
+        "FixedGrowth3%",
+        "FixedGrowth3%_ARIMA_Ensemble",
+        "FixedGrowth3%_ExponentialSmoothing_Ensemble"
+      ],
+      "date_min": "2026-04-28",
+      "date_max": "2030-04-25",
+      "forecast_value_min": 0.5005,
+      "forecast_value_max": 4661740.665,
+      "forecast_value_mean": 250957.0247,
+      "horizon_requested": null,
+      "columns_passed": [
+        "entity_key",
+        "date",
+        "forecast_value",
+        "model_version",
+        "forecast_lower_80",
+        "forecast_upper_80",
+        "interval_available"
+      ],
+      "columns_withheld": "all other interval/calibration columns not in sample",
+      "sample_rows_capped_at": 5,
+      "what_not_passed": "Full forecasts_with_intervals.csv, full actuals.csv, and all non-sampled rows were NOT embedded.",
+      "sample": [
+        {
+          "entity_key": "APC-Dedicated",
+          "date": "2026-04-28",
+          "forecast_value": "29.104001000000004",
+          "model_version": "FixedGrowth1%",
+          "forecast_lower_80": "0.0",
+          "forecast_upper_80": "77.487493",
+          "interval_available": "True"
+        },
+        {
+          "entity_key": "APC-Dedicated",
+          "date": "2026-04-29",
+          "forecast_value": "29.11344191893224",
+          "model_version": "FixedGrowth1%",
+          "forecast_lower_80": "0.0",
+          "forecast_upper_80": "77.496934",
+          "interval_available": "True"
+        },
+        {
+          "entity_key": "APC-Dedicated",
+          "date": "2026-04-30",
+          "forecast_value": "29.12288283786448",
+          "model_version": "FixedGrowth1%",
+          "forecast_lower_80": "0.0",
+          "forecast_upper_80": "77.506375",
+          "interval_available": "True"
+        },
+        {
+          "entity_key": "APC-Dedicated",
+          "date": "2026-05-01",
+          "forecast_value": "29.13232375679672",
+          "model_version": "FixedGrowth1%",
+          "forecast_lower_80": "0.0",
+          "forecast_upper_80": "77.515816",
+          "interval_available": "True"
+        },
+        {
+          "entity_key": "APC-Dedicated",
+          "date": "2026-05-02",
+          "forecast_value": "29.14176467572896",
+          "model_version": "FixedGrowth1%",
+          "forecast_lower_80": "0.0",
+          "forecast_upper_80": "77.525256",
+          "interval_available": "True"
+        }
+      ]
+    }
+  },
+  "sources_used": [
+    "forecasts_with_intervals.csv"
+  ],
+  "limitations": [
+    "LLM explains; it does not decide, advance, or change the champion or governance.",
+    "Data snapshot 2026-06-28 (V4 was cloned before the 2026-06-29 refresh and not resynced).",
+    "Only governed artifacts under data/processed were read; no SQL, no model runs.",
+    "Forecast Viewer never embeds full forecasts.csv/actuals.csv; only filtered aggregates plus a capped sample.",
+    "The 'model' filter matches productive model_version labels (e.g., ExponentialSmoothing, ARIMA, FixedGrowth3%), which differ from tournament model names (e.g., 'ETS Explicit')."
+  ],
+  "insufficient_evidence": false,
+  "candidate_claims": [
+    {
+      "claim": "The selection covers 65095 forecast rows across 45 entity(ies).",
+      "maps_to": "forecasts_with_intervals.csv:filtered_rows"
+    },
+    {
+      "claim": "Forecast dates in the selection span 2026-04-28 to 2030-04-25.",
+      "maps_to": "forecasts_with_intervals.csv:date"
+    }
+  ],
+  "validation": {
+    "required_fields_present": true,
+    "sources_used_present": true,
+    "limitations_present": true,
+    "allowed_artifacts_only": true,
+    "champion_unchanged": true,
+    "model_scope_15": true,
+    "no_raw_full_series_embedded": true,
+    "no_forbidden_language": true
+  }
+}

@@ -1,0 +1,26 @@
+check_id,check,result,evidence
+V01,Stage is scaffolding/design only (no model trained),pass,No fit/training executed; only structure + plan + registry created
+V02,Work confined to V3,pass,All paths under V3/outputs/v3_2b_model_candidates/
+V03,V1 untouched,pass,No V1 file written
+V04,V2 untouched,pass,No V2 file written
+V05,Champion unchanged,pass,No closure_pack/champion artifact modified; ETS Explicit remains champion
+V06,Production forecasts unchanged,pass,data/processed/forecasts.csv not written
+V07,Interval artifacts unchanged,pass,forecasts_with_intervals_relative*.csv not written
+V08,data/processed artifacts unchanged,pass,Nothing written under data/processed/
+V09,Governance decisions unchanged,pass,No governance/audit/risk artifact modified
+V10,Experimental outputs isolated,pass,All outputs in outputs/v3_2b_model_candidates/ only
+V11,Experiment directory structure created,pass,candidate_outputs/ metrics/ logs/ runtime_checks/ created with README
+V12,candidate_registry.csv created,pass,11 rows: 6 candidates + 5 reference/excluded anchors
+V13,experiment_contract.csv created,pass,21-field data dictionary for candidate output rows
+V14,backtest_plan.md created,pass,11 sections: series/horizons/splits/metrics/comparisons/runtime/failure/guardrails/promotion/rejection/determinism
+V15,runtime_risk_assessment.md created,pass,6 sections incl N-BEATS/N-HiTS exclusion rationale + runtime gate
+V16,FastNeuralAR_MLP_v2 remediation defined,pass,FNAR-V2 = direct multi-horizon + log1p + non-neg clamp + L2 + early stopping (attacks recursive collapse + negatives)
+V17,Lightweight DL candidates defined,pass,NLinear/DLinear + SmallTCN/SmallMLPGlobal; epoch cap + early stopping + runtime gate
+V18,ML candidates defined,pass,LightGBM improved + XGBoost improved + ElasticNet/Ridge multi-horizon
+V19,N-BEATS/N-HiTS excluded as primary,pass,Marked excluded_not_primary/deferred in registry (rule 13)
+V20,Runtime gate mandatory before full backtest,pass,Subset dry-run 3-5 min target; ~30 min => NOT_VIABLE_FOR_V3_DAILY_REFRESH
+V21,Dependencies verified in V3 env,pass,sklearn1.9.0/lightgbm4.6.0/xgboost3.2.0/torch2.12.0+cpu/darts0.44.1 all importable; CUDA False
+V22,No auto-promotion,pass,Promotion is a separate Oscar-authorized governance step; not performed
+V23,V3.3 pipeline not started,pass,No daily job/orchestrator created
+V24,V4 AI/LLM not started,pass,No provider/LLM code created
+V25,No heavy full training executed,pass,Full training deferred to V3.2C pending explicit authorization

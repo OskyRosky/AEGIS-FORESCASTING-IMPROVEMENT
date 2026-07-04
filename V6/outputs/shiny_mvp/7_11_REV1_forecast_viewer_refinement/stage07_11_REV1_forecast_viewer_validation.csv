@@ -1,0 +1,32 @@
+check_name,status,details
+forecast_viewer_title_exists,pass,Section head reads "Forecast Viewer" with the required subtitle
+old_crowded_one_row_layout_removed,pass,fv-controls one-row grid removed (HTML no longer contains fv-controls)
+controls_organized_into_guided_sections,pass,Five numbered steps (Select series/model/horizon/history/Analyze) in .fv-setup-panel
+chart_not_rendered_before_button,pass,fv_view shows empty-state card until input$fv_go > 0; eventReactive does not fire on init
+action_button_exists,pass,actionButton fv_go labelled "Analyze forecast"
+entity_selector_populated_from_real_data,pass,fv_entity built from forecasts.entity_key (45 entities)
+model_selector_populated_from_real_data,pass,fv_model from forecasts.model_version filtered by entity
+model_list_responds_to_selected_entity,pass,observeEvent(fv_entity) -> updateSelectInput(fv_model)
+model_availability_diagnostic_exists,pass,fv_model_note + Forecast data availability panel report per-entity and global model counts
+horizon_selector_5_10_15_20_25_30_45_60,pass,fv_horizon_choices() = c(5,10,15,20,25,30,45,60)
+history_window_selector_exists,pass,Last 30/60/90/180 days + All history
+controls_affect_chart_after_button_click,pass,fv_request snapshots inputs on click; fv_chart/fv_availability use the snapshot
+actual_values_from_governed_artifact,pass,actuals.csv actual_value via fv_actual_series (no synthesis)
+forecast_values_from_governed_artifact,pass,forecasts.csv forecast_value via fv_forecast_series (no synthesis)
+highcharter_used_for_main_chart,pass,highchart(type=stock); fv_chart returns class highchart,htmlwidget
+xaxis_zoom_or_horizontal_navigation_enabled,pass,hc_navigator + hc_scrollbar + hc_rangeSelector + zoomType=x + shift-pan
+empty_state_handled_safely,pass,fv_empty_chart for no-data; availability note for clipped/empty; empty-state card pre-click
+no_forecasts_generated,pass,Read-only filtering of existing rows only
+no_metrics_recalculated,pass,No metric computation anywhere
+no_models_run,pass,No model execution
+no_synthetic_actual_values,pass,Only existing actuals rows filtered
+no_synthetic_forecast_values,pass,Only existing forecast rows filtered
+champion_decision_unchanged,pass,No champion artifacts touched
+no_forbidden_language,pass,No winner/best/absolute best/unconditional champion in rendered HTML
+home_unchanged,pass,"Why this dashboard exists" still present
+overview_unchanged,pass,Executive Overview / ETS Explicit still present
+universe_unchanged,pass,Governed model universe still present
+ttl_unchanged,pass,TTL preview placeholder untouched
+sidebar_structure_functional,pass,Forecasting first item labelled "Viewer"; value=explorer preserved
+app_launches_successfully,pass,stderr ends "Listening on http://127.0.0.1:3838"
+http_status_200,pass,GET http://127.0.0.1:3838 returned 200 (LEN 76999)

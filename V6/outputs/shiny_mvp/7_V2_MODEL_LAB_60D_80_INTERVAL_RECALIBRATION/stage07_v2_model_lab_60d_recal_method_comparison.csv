@@ -1,0 +1,5 @@
+method,factor,holdout_cov_80,n,in_target_range,holdout_w_median,holdout_w_p95,holdout_pct_gt2x,chosen
+baseline_k1,1.0,0.7314,89921,False,0.1986,6.5713,11.75,False
+global_inflation,1.5,0.7979,89921,True,0.2978,9.857,13.35,True
+per_bucket_inflation,"{""1_7"": 1.2, ""8_14"": 1.65, ""15_30"": 1.55, ""31_45"": 1.5, ""46_60"": 1.65}",0.8007,89921,True,0.3119,10.161,13.35,False
+quantile_widening,0.075,0.8001,89921,True,1.2319,15.6033,41.27,False

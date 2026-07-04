@@ -1,0 +1,5 @@
+page_id,generated_at,sources_count,evidence_keys,limitations_count,candidate_claims,insufficient_evidence,no_forbidden_language,json_file
+champion_overview,2026-06-29T16:51:17Z,3,4,3,4,False,True,v4_2_evidence_pack_champion_overview.json
+tournament,2026-06-29T16:51:17Z,3,3,4,2,False,True,v4_2_evidence_pack_tournament.json
+forecast_viewer,2026-06-29T16:51:17Z,1,1,5,2,False,True,v4_2_evidence_pack_forecast_viewer.json
+governance_risks,2026-06-29T16:51:17Z,4,4,4,2,False,True,v4_2_evidence_pack_governance_risks.json

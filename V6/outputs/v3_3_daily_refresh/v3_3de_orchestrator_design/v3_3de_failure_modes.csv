@@ -1,0 +1,14 @@
+stage,failure,action,production_impact,status_code,recovery
+S01,ingestion SQL fail,abort before transform,none,INGEST_FAIL,fix VPN/auth rerun
+S02,transform error,abort,none,TRANSFORM_FAIL,rerun staging
+S03a,baseline fit fail,abort,none,MODEL_FAIL,inspect S03a_failures.log
+S03b,challenger fit fail,abort,none,MODEL_FAIL,inspect S03b_failures.log
+S03c,frozen reuse missing,abort,none,DL_REUSE_FAIL,restore frozen artifact
+S04,viewer handoff fail,abort,none,FORECAST_FAIL,rerun
+S05,champion would change,hard stop,none,CHAMPION_GUARD_FAIL,manual governance review
+S08,governance export fail,abort,none,GOVERNANCE_FAIL,rerun
+S10,dashboard export fail,abort before promote,none,DASHBOARD_FAIL,rerun
+S14,any gate FAIL,no promote,none,VALIDATION_FAIL,fix and rerun
+promote,robocopy rc>=8,rollback from backup,restored,PROMOTE_FAIL_ROLLED_BACK,retry promote
+post-promote,rows/champion mismatch,rollback,restored,POST_VALIDATE_FAIL_ROLLED_BACK,investigate
+budget,exceeds hard 150min,stop write partial audit,none,TIME_BUDGET_EXCEEDED,rerun off-peak

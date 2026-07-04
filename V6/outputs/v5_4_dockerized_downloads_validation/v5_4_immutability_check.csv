@@ -1,0 +1,13 @@
+check,expected,observed,status,evidence
+image_id_changed_by_rebuild,documented rebuild,ed86271fff04 -> a799da697173,JUSTIFIED,blocker: PDF/TeX (rule 25 + Task I)
+rebuild_reason,export dependency missing,LaTeX engine absent -> PDF blocked,JUSTIFIED,v5_4_failure_remediation_log.csv
+dockerfile_changed,blocker fix only,9E9A4D0E478F7360 -> E4B6C1E01EB817F2,JUSTIFIED,TinyTeX+LaTeX+PDF verify added
+dockerignore_unchanged,unchanged,B4339EF2F9A695FA,PASS,Get-FileHash
+entrypoint_unchanged,unchanged,6EAB069067B438DF,PASS,Get-FileHash
+smoke_test_unchanged,unchanged,A91B61837BB4A286,PASS,Get-FileHash
+compose_unchanged,unchanged,3036817271DB1604,PASS,Get-FileHash
+shiny_app_unchanged,no app logic change,git shows only Dockerfile modified,PASS,git status
+data_processed_unchanged,identical,B0880D33F488D7E77EED32F12E214D61,PASS,snapshot
+data_raw_unchanged,identical,BD44163AC0DB7E0CD7F8B08EB120973D,PASS,snapshot
+image_size,noted,2.1GB -> 2.47GB (+TinyTeX),NOTED,docker images
+v1_v2_v3_v4_intact,frozen,only V5 touched,PASS,work scope

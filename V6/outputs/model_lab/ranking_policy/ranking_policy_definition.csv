@@ -1,0 +1,5 @@
+policy_area,rule,rationale
+scope,Policy applies to baseline production models only.,Challenger evaluation is not active in Stage 5.13.
+methodology,Use normalized metric scores; raw RMSE must not be used directly.,Prevents scale and entity-size dominance.
+methodology,All metrics are lower-is-better before normalization and higher-is-better after normalization.,Provides a consistent score direction.
+prohibition,Do not select winners or produce model rankings in this stage.,Stage 5.13 is policy design only.

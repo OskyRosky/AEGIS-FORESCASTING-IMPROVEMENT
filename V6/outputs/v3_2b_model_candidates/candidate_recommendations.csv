@@ -1,0 +1,7 @@
+candidate_id,model_name,model_family,dl_or_ml,median_mase,median_rmsse,guardrail_pass,negative_forecast_count,vs_champion_ratio,runtime_seconds,recommendation,reason
+FNAR-V2,FastNeuralAR_MLP_v2_direct,lightweight_neural,deep_learning,81.668413,22.405331,True,0,11.834,195.6613,keep as challenger,median MASE 81.668; far better than current FastNeuralAR (739.9)
+NLIN-DLIN_FIXED,NLinear_log_space_fixed,linear_dl,deep_learning,24.816041,6.64135,True,0,3.596,0.9863,keep as challenger,median MASE 24.816; far better than current FastNeuralAR (739.9)
+SMLP-TCN,SmallMLPGlobal,lightweight_neural,deep_learning,18.782572,4.79041,True,0,2.722,29.196,keep as challenger,median MASE 18.783; far better than current FastNeuralAR (739.9)
+ENET-RIDGE,Ridge_direct_multi_horizon,linear_ml,machine_learning,19.330846,5.027895,True,0,2.801,1.36,keep as challenger,median MASE 19.331; far better than current FastNeuralAR (739.9)
+LGBM-IMP-v2,LightGBM_candidate_improved_v2,gradient_boosting,machine_learning,26.747444,6.328078,True,0,3.876,462.9279,keep as challenger,median MASE 26.747; far better than current FastNeuralAR (739.9)
+XGB-IMP-v2,XGBoost_candidate_improved_v2,gradient_boosting,machine_learning,27.950413,6.426824,True,0,4.05,1339.3481,keep as challenger,median MASE 27.950; far better than current FastNeuralAR (739.9); runtime 22.3min within 60-min budget

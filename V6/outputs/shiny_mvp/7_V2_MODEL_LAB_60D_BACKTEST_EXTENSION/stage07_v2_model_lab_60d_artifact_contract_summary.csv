@@ -1,0 +1,21 @@
+item,value
+rows_in,65095
+rows_out,65095
+original_columns,9
+columns_added,18
+forecast_start,2026-04-28
+horizon_calibrated_max,60
+rows_horizon_1_60,2700
+interval_available_true,2700
+interval_available_false,62395
+grain_key,2340
+grain_resource_fallback,360
+grain_global_fallback,0
+near_zero_excluded,9174
+clip_lower,-0.95
+clip_upper,26.0996
+holdout_cutoffs,3
+holdout_coverage_80,0.7314
+level_available,80
+anomaly_keys,APC-Dedicated;POL-Go Local
+mono_clamped_rows,0

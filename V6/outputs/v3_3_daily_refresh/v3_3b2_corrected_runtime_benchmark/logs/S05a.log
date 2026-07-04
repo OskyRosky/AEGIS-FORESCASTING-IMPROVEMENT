@@ -1,0 +1,4 @@
+[2026-06-27 19:55:48] INFO build_tournament_engine - === Block 5.30 - Tournament Engine ===
+[2026-06-27 19:55:49] INFO build_tournament_engine - Tournament engine complete: models=13 entity_rows=507 pairwise=78 validation_failures=0
+
+--- STDERR ---

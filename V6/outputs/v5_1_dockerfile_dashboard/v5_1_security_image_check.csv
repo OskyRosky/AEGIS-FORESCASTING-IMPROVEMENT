@@ -1,0 +1,14 @@
+check,expected,observed,status,evidence
+no_env_file_baked,none,none,PASS,find /app -name *.env empty
+no_pem_key_baked,none,none,PASS,find /app -name *.pem/*.key empty
+no_secret_named_file,none,none,PASS,find /app -name *secret* empty
+no_password_env,none,NO_SECRET_ENV,PASS,env grep password/secret/token/api_key
+no_secrets_in_history,none,none,PASS,docker history --no-trunc scan
+no_data_raw_baked,NO_RAW,NO_RAW,PASS,ls -A /app/data/raw empty
+no_python_runtime,NO_PYTHON,NO_PYTHON,PASS,command -v python python3 absent
+no_heavy_ml_packages,absent,absent,PASS,torch/keras/xgboost/lightgbm absent
+no_python_bridge,absent,absent,PASS,reticulate absent
+data_processed_mount,read_only,WRITE_BLOCKED_RO,PASS,touch -> Read-only file system
+no_host_mutation,no_probe_file,probe_absent,PASS,Test-Path _v51_write_probe = False
+no_azure_connection,none,none,PASS,no Azure SDK/network in image; config not baked with creds
+no_real_llm,mock_only,mock_only,PASS,llm_client/llm_compose mock; httr present but local/mock

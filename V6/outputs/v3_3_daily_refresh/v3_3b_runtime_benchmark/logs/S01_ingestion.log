@@ -1,0 +1,73 @@
+S01 START 2026-06-26T18:20:09.0654024-06:00
+--- export_hdd_region ---
+[2026-06-26 18:20:10] INFO export_hdd_region - Export started
+[2026-06-26 18:21:02] INFO export_hdd_region - ForecastVersion used: 2026-05-01
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_hdd_region.py:64: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  forecasts = pd.read_sql(HDD_REGION_FORECASTS_QUERY, connection)
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_hdd_region.py:65: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  actuals = pd.read_sql(HDD_REGION_ACTUALS_QUERY, connection)
+[2026-06-26 18:21:07] INFO export_hdd_region - Forecasts exported to C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\hdd_region_forecasts.csv
+[2026-06-26 18:21:07] INFO export_hdd_region - Forecasts row count: 65095
+[2026-06-26 18:21:07] INFO export_hdd_region - Forecasts unique entities: 45
+[2026-06-26 18:21:07] INFO export_hdd_region - Forecasts unique models: 16
+[2026-06-26 18:21:07] INFO export_hdd_region - Forecasts min DateTime: 2026-04-28
+[2026-06-26 18:21:07] INFO export_hdd_region - Forecasts max DateTime: 2030-04-25
+[2026-06-26 18:21:07] INFO export_hdd_region - Actuals exported to C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\hdd_region_actuals.csv
+[2026-06-26 18:21:07] INFO export_hdd_region - Actuals row count: 84537
+[2026-06-26 18:21:07] INFO export_hdd_region - Actuals unique entities: 45
+[2026-06-26 18:21:07] INFO export_hdd_region - Actuals unique models: 1
+[2026-06-26 18:21:07] INFO export_hdd_region - Actuals min DateTime: 2019-07-01
+[2026-06-26 18:21:07] INFO export_hdd_region - Actuals max DateTime: 2026-04-27
+[2026-06-26 18:21:07] INFO export_hdd_region - Export completed
+--- export_official_metrics ---
+[2026-06-26 18:21:09] INFO export_official_metrics - Official metrics export started
+[2026-06-26 18:21:30] INFO export_official_metrics - Exporting [TesseractEarthDW].[dbo].[forecast_substrateBE_hdd_region_metrics]
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_official_metrics.py:93: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  frame = pd.read_sql(f"SELECT * FROM {table};", connection)
+[2026-06-26 18:21:31] INFO export_official_metrics - Table: [TesseractEarthDW].[dbo].[forecast_substrateBE_hdd_region_metrics]
+[2026-06-26 18:21:31] INFO export_official_metrics - Output CSV: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\hdd_region_metrics.csv
+[2026-06-26 18:21:31] INFO export_official_metrics - Row count: 3254
+[2026-06-26 18:21:31] INFO export_official_metrics - Column count: 15
+[2026-06-26 18:21:31] INFO export_official_metrics - Forecast_Version values: ['2026-03-07', '2026-04-16', '2026-05-01']
+[2026-06-26 18:21:31] INFO export_official_metrics - Start_Date min: 2026-04-07 00:00:00
+[2026-06-26 18:21:31] INFO export_official_metrics - Start_Date max: 2026-06-19 00:00:00
+[2026-06-26 18:21:31] INFO export_official_metrics - End_Date min: 2026-04-13 00:00:00
+[2026-06-26 18:21:31] INFO export_official_metrics - End_Date max: 2026-06-25 00:00:00
+[2026-06-26 18:21:31] INFO export_official_metrics - Exporting [TesseractEarthDW].[dbo].[forecast_substrateBE_hdd_forest_metrics]
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_official_metrics.py:93: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  frame = pd.read_sql(f"SELECT * FROM {table};", connection)
+[2026-06-26 18:21:32] INFO export_official_metrics - Table: [TesseractEarthDW].[dbo].[forecast_substrateBE_hdd_forest_metrics]
+[2026-06-26 18:21:32] INFO export_official_metrics - Output CSV: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\hdd_forest_metrics.csv
+[2026-06-26 18:21:32] INFO export_official_metrics - Row count: 11275
+[2026-06-26 18:21:32] INFO export_official_metrics - Column count: 15
+[2026-06-26 18:21:32] INFO export_official_metrics - Forecast_Version values: ['2026-04-06 19:49:02', '2026-04-16 07:50:38', '2026-05-01 03:35:00']
+[2026-06-26 18:21:32] INFO export_official_metrics - Start_Date min: 2026-04-07 00:00:00
+[2026-06-26 18:21:32] INFO export_official_metrics - Start_Date max: 2026-06-19 00:00:00
+[2026-06-26 18:21:32] INFO export_official_metrics - End_Date min: 2026-04-13 00:00:00
+[2026-06-26 18:21:32] INFO export_official_metrics - End_Date max: 2026-06-25 00:00:00
+[2026-06-26 18:21:32] INFO export_official_metrics - Exporting [TesseractEarthDW].[dbo].[forecast_substrateBE_ssd_phx_lvwe_metrics]
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_official_metrics.py:93: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  frame = pd.read_sql(f"SELECT * FROM {table};", connection)
+[2026-06-26 18:21:33] INFO export_official_metrics - Table: [TesseractEarthDW].[dbo].[forecast_substrateBE_ssd_phx_lvwe_metrics]
+[2026-06-26 18:21:33] INFO export_official_metrics - Output CSV: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\ssd_phx_lvwe_metrics.csv
+[2026-06-26 18:21:33] INFO export_official_metrics - Row count: 9934
+[2026-06-26 18:21:33] INFO export_official_metrics - Column count: 15
+[2026-06-26 18:21:33] INFO export_official_metrics - Forecast_Version values: ['2026-03-12']
+[2026-06-26 18:21:33] INFO export_official_metrics - Start_Date min: 2026-04-07 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - Start_Date max: 2026-06-19 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - End_Date min: 2026-04-13 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - End_Date max: 2026-06-25 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - Exporting [TesseractEarthDW].[dbo].[forecast_substrateBE_ssd_phx_lvne_metrics]
+C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\python\ingestion\export_official_metrics.py:93: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  frame = pd.read_sql(f"SELECT * FROM {table};", connection)
+[2026-06-26 18:21:33] INFO export_official_metrics - Table: [TesseractEarthDW].[dbo].[forecast_substrateBE_ssd_phx_lvne_metrics]
+[2026-06-26 18:21:33] INFO export_official_metrics - Output CSV: C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V3\data\raw\ssd_phx_lvne_metrics.csv
+[2026-06-26 18:21:33] INFO export_official_metrics - Row count: 10071
+[2026-06-26 18:21:33] INFO export_official_metrics - Column count: 15
+[2026-06-26 18:21:33] INFO export_official_metrics - Forecast_Version values: ['2026-03-12']
+[2026-06-26 18:21:33] INFO export_official_metrics - Start_Date min: 2026-04-03 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - Start_Date max: 2026-06-19 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - End_Date min: 2026-04-09 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - End_Date max: 2026-06-25 00:00:00
+[2026-06-26 18:21:33] INFO export_official_metrics - Official metrics export completed
+S01 END 2026-06-26T18:21:34.2456636-06:00 elapsed_seconds=85.2 exit_hdd=0 exit_metrics=0

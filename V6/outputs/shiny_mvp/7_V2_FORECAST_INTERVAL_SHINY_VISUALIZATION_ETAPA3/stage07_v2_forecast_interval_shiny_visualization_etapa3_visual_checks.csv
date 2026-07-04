@@ -1,0 +1,16 @@
+check_id,area,what_to_look_for,expected_visual,auto_signal
+VC01,Forecast > Forecast,Select a series and press Run (step 4),Chart renders only after Run,action-gated PASS
+VC02,Forecast Chart,Actual history line,Solid line up to the forecast-start boundary,present
+VC03,Forecast Chart,Forecast mean line,Dashed mean line after the boundary,present
+VC04,Forecast Chart,80% interval lines,Two dashed amber lines (Lower 80% / Upper 80%) hugging the mean for first 30 days,2 dashed lines (drawable=30)
+VC05,Forecast Chart,95% interval lines,Two dotted red lines (Lower 95% / Upper 95%) wider than 80% for first 30 days,2 dotted lines (drawable=30)
+VC06,Forecast Chart,No shaded band,No filled ribbon/arearange between bounds; lines only,no arearange
+VC07,Forecast Chart,Forecast-start boundary,Vertical boundary at last actual date,boundary plotline present
+VC08,Forecast Chart (90/180-day window),Interval lines stop after day 30,Interval lines visible only first 30 days; mean continues as point forecast afterwards,window90 drawable=30 then NA
+VC09,Forecast Chart (APC-Dedicated),Point anomaly key,Amber 'Point anomaly' note appears in data notes; interval is proportional to the (anomalous) point,point_anomaly TRUE surfaced
+VC10,Setup box,Governed setup note,"Green note: intervals backtest-calibrated, first 30 days only, longer windows point-forecast after day 30, Shiny only visualizes columns",fvb-setup-note present
+VC11,Data notes,Interval metadata grid,"Cells: Interval method, Interval source, Interval levels shown (80%, 95%), Calibrated horizon (1-30 days), Calibration grain, Calibration sample size",6 cells when has_intervals
+VC12,Data notes,Source line,"Source line shows forecasts_with_intervals_relative.csv + actuals.csv",source_file surfaced
+VC13,Data notes,30-day note (90/180 window),"Note: intervals shown only through forecast day 30; later days point forecast only",note branch present
+VC14,Data notes,Fallback note,"When a series has no interval rows: point-forecast-only note shown",else branch present
+VC15,Cross-page,Other pages unaffected,Viewer/Accuracy/TTL/Models/Governance/Reference look unchanged,only Forecast code edited

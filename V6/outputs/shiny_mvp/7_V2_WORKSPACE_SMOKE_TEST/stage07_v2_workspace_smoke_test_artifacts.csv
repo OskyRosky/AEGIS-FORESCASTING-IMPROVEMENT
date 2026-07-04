@@ -1,0 +1,11 @@
+artifact_path,exists,data_rows,cols,notes
+data/processed/forecast_viewer_model_outputs.csv,yes,177060,21,Full backtest multi-model handoff (39 eligible series)
+data/processed/forecasts.csv,yes,65095,9,Forward forecasts (45 entities)
+data/processed/actuals.csv,yes,84537,7,Historical actuals
+outputs/model_lab/tournament_engine/tournament_model_scorecard.csv,yes,13,17,13 tournament models
+outputs/model_lab/tournament_engine/tournament_pairwise_evidence.csv,yes,78,16,78 pairwise comparisons
+outputs/model_lab/tournament_engine/tournament_entity_model_scores.csv,yes,507,13,Per-entity x model scores
+outputs/model_lab/champion_decision/champion_decision.csv,yes,1,9,Champion decision record (read-only)
+outputs/model_lab/model_lab_closure_pack/model_lab_champion_summary.csv,yes,1,11,Champion summary (ETS Explicit)
+outputs/governance/6_3_champion_conditions/champion_conditions_protocol.csv,yes,5,11,5 champion conditions
+outputs/governance/6_3_champion_conditions/champion_dashboard_language.csv,yes,13,8,Governed dashboard language

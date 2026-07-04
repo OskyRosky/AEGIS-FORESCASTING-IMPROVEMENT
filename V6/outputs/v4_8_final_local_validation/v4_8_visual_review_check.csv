@@ -1,0 +1,8 @@
+check,expected,observed,status
+assistants_visible_min_5,>=5,"10 visible assistants verified via Playwright (universe, tournament, champion, viewer, accuracy, forecast, ttl, risks, audit, artifacts)",PASS
+reference_assistant_in_artifacts,Artifacts,"'Ask AEGIS about these artifacts' renders at end of Reference > Artifacts (after 'Artifact Notes / Lineage / Evidence')",PASS
+reference_assistant_not_in_methodology,absent,"Methodology section ends with 'Methodology Notes'; assistant text absent while Methodology is shown",PASS
+download_modal_formats_correct,"5 explanation / 6 governed","Explanation modal = MD/PDF/DOCX/HTML/TXT (5); Governed modal = CSV + MD/PDF/DOCX/HTML/TXT (6)",PASS
+no_misplaced_panels,none,"Each assistant renders at the end of its own section; no panel found in the wrong section",PASS
+no_dominant_technical_block,none,"Technical traceability rendered inside collapsed <details>, closed by default; main body is executive paragraphs",PASS
+evidence_type,visual+html,"Playwright accessibility snapshots + JS innerText + fetched download bytes (status/signature) - not HTTP-200-only",PASS

@@ -1,0 +1,15 @@
+check_id,check,expectation,result,status
+V4_6_C01,R parse/source check on all modified files,All parse OK,"llm_explain.R / global.R / tabs.R / body.R / server.R all OK",PASS
+V4_6_C02,Shiny restarted once on :3839,Single restart, single instance,"Old PID 12708 stopped; new PID 17868 listening",PASS
+V4_6_C03,Dashboard responds HTTP 200,HTTP 200,HTTP 200 (279109 chars),PASS
+V4_6_C04,4 MVP panels present and connected,"champion / tournament / forecast / risks panels rendered",All 4 present with unique ids + buttons,PASS
+V4_6_C05,At least one narrative renders,>=1 page returns full narrative,"All 4 pages return confidence=high with evidence/sources/limits/claims",PASS
+V4_6_C06,No critical log errors,0 critical errors in stderr,0 critical errors (only pre-existing readr warning),PASS
+V4_6_C07,data/processed untouched,No writes to data/processed,No data/processed access in module (read-only UI),PASS
+V4_6_C08,data/raw untouched,No writes to data/raw,No data/raw access,PASS
+V4_6_C09,No SQL,No SQL / DB connection,No SQL anywhere in V4.6,PASS
+V4_6_C10,No models run,No model fit / forecast recompute,Module only reads precomputed JSON,PASS
+V4_6_C11,Champion still ETS Explicit,APP_CHAMPION == 'ETS Explicit',constants.R unchanged: APP_CHAMPION = 'ETS Explicit',PASS
+V4_6_C12,V1/V2/V3 intact,No edits outside V4,Only V4/shiny_app files modified,PASS
+V4_6_C13,No Azure/OpenAI/external API,No external/LLM/Azure calls,"Module reads local v4_4_mock_responses.json only; is_real_llm=false, uses_azure=false",PASS
+V4_6_C14,Download is placeholder/disabled,Download disabled until V4.7,"Disabled button 'Download (available in V4.7)'",PASS

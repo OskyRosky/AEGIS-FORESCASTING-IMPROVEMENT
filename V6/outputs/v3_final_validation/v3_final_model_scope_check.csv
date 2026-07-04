@@ -1,0 +1,10 @@
+family,expected_count,actual_count,result,models
+Growth Baseline,4,4,PASS,FixedGrowth_1_5;FixedGrowth_3;FixedGrowth_4;FixedGrowth_6
+Statistical,5,5,PASS,ARIMA_Fixed;AutoARIMA;ETS Explicit;ETS_Current;Theta
+Machine Learning,3,3,PASS,LightGBM;LinearRegression;XGBoost
+Deep Learning,3,3,PASS,FNAR-V2;NLIN-DLIN_FIXED;SMLP-TCN (frozen reuse, no training)
+TOTAL,15,15,PASS,canonical 15-model scope preserved
+PROHIBITED_NBEATS,0,0,PASS,not executed (gate G10)
+PROHIBITED_NHITS,0,0,PASS,not executed (gate G11)
+PROHIBITED_FastNeuralAR_MLP_original,0,0,PASS,original excluded (gate G12)
+LEGACY_CONTAMINATED_RUNNER,0,0,PASS,not used as daily runner; clean entrypoint only

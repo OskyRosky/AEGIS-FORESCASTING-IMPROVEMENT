@@ -1,0 +1,9 @@
+check,value
+families,growth_baseline|lightweight_neural|machine_learning|statistical
+deep_learning_models,FNAR-V2|NLIN-DLIN_FIXED|SMLP-TCN
+deep_learning_series,39
+deep_learning_rows,40860
+total_rows,204300
+champion_rows,13620
+legacy_dl_removed,1
+backup_exists,1

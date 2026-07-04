@@ -1,0 +1,27 @@
+check,expected,observed,status,evidence
+no_docker_built,no image/container created,no docker commands executed,PASS,this stage = audit + decision log only
+no_operational_dockerfile,no Dockerfile as runnable file,only documented proposals in *_plan.md,PASS,v5_0b_*_plan.md
+no_functional_app_change,app unchanged,no edits to shiny_app/config/scripts,PASS,only outputs/v5_0b_docker_readiness/ created
+no_sql_no_models_no_refresh,no SQL/model/refresh executed,no connections; no training; no refresh,PASS,no runtime SQL/model calls
+no_data_mutation,data/processed untouched,no writes to data/processed,PASS,write-scan: only tmp/download targets
+r_deps_inventoried,full R dependency inventory,34 distinct pkgs; 14 critical installed; 11 legacy NOT_INSTALLED,PASS,v5_0b_r_dependencies.csv
+python_deps_inventoried,full Python dependency inventory,requirements.txt=pandas/pyodbc/python-dotenv; heavy=model_lab only,PASS,v5_0b_python_dependencies.csv
+system_deps_inventoried,system deps documented,R/pandoc/TeX/fonts/locale/curl + ODBC(refresh),PASS,v5_0b_system_dependencies.csv
+path_audit_done,absolute paths audited,shiny_app=0; 2 markers cosmetic; 2 dev scripts,PASS,v5_0b_path_audit.csv
+secrets_audit_done,secrets audited safely,no passwords/.env/tokens; Entra Interactive only,PASS,v5_0b_security_secrets_audit.csv
+write_behavior_determined,read-only volume viability,shiny writes only tmp/download,PASS,write-scan in readiness report sec6
+context_size_estimated,build context sized,1414MB total; outputs 89%,PASS,v5_0b_docker_context_size_estimate.csv
+base_image_decided,base image decision recorded,rocker/r-ver:4.6.0 pin-by-digest,PASS,v5_0b_base_image_decision.md
+pinning_decided,pinning strategy recorded,PPM snapshot + renv.lock,PASS,v5_0b_package_pinning_decision.md
+tex_decided,tex strategy recorded,pandoc + TinyTeX,PASS,v5_0b_tex_pandoc_decision.md
+locale_decided,locale/fonts recorded,C.UTF-8 + dejavu/liberation,PASS,v5_0b_locale_fonts_decision.md
+volume_decided,volume strategy recorded,read-only data mount; /tmp rw,PASS,v5_0b_volume_plan.md
+entrypoint_decided,entrypoint/healthcheck recorded,runApp 0.0.0.0:3838 + curl healthcheck,PASS,v5_0b_entrypoint_healthcheck_plan.md
+dockerignore_planned,dockerignore proposed,outputs/data/legacy excluded,PASS,v5_0b_dockerignore_plan.md
+smoke_test_planned,smoke test proposed (not operational),docker_smoke_test proposal only,PASS,v5_0b_smoke_test_plan.md
+refresh_plan_gated,refresh gated decision recorded,separate image V5.5; real gated V5.6,PASS,v5_0b_refresh_service_plan.md
+decision_log_complete,all decisions logged,14 decisions,PASS,v5_0b_decision_log.csv
+risk_register_complete,risks logged,7 risks incl MFA + tag availability,PASS,v5_0b_risk_register.csv
+v1_v4_intact,V1-V4 not touched,no edits outside V5,PASS,workspace unchanged for V1-V4
+v5_invariants_intact,champion/universe/horizons unchanged,ETS Explicit FROZEN; 15 governed; 30/60/180,PASS,no governance change
+dashboard_still_running,V5 dashboard unaffected,:3840 PID 62892 left running,PASS,not stopped during audit

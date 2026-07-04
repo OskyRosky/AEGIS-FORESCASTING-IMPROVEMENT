@@ -1,0 +1,7 @@
+check,value,result
+processed_forecasts_promoted,yes,PASS
+run_metadata_present,yes,PASS
+run_metadata_fields,12,PASS
+champion_frozen,ETS Explicit,PASS
+raw_unchanged,yes,PASS
+prohibited_absent,yes,PASS

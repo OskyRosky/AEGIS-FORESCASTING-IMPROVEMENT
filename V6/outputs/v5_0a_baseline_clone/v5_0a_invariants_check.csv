@@ -1,0 +1,15 @@
+invariant,expected,observed,status,evidence
+champion_frozen,ETS Explicit,ETS Explicit (rendered + data parity),PASS,HTML x90 + model_champion_comparison.csv hash IDENTICAL to V4
+model_scope,15 governed models,15 governed models,PASS,HTML markers + model_universe_canonical.csv hash IDENTICAL to V4
+prohibited_models_absent,NBEATS/NHITS/FastNeuralAR_MLP not executed,not executed (inherited frozen scope; nothing run),PASS,no model execution in V5.0A
+no_sql_run,no SQL executed,no SQL executed,PASS,only robocopy + file edits + dashboard read
+no_models_run,no models executed,no models executed,PASS,no model code invoked
+no_refresh_run,no refresh executed,no refresh executed,PASS,orchestrator not invoked
+no_docker_built,no Docker built,no Docker built,PASS,no docker commands run
+no_azure,no Azure connection,no Azure connection,PASS,no Azure calls
+no_real_llm,LLM mock-only,LLM mock-only (unchanged from V4),PASS,llm_client/llm_compose unchanged
+data_processed_not_mutated,unchanged,unchanged (copied read-only; hashes identical),PASS,SHA256 parity vs V4
+data_raw_not_mutated,unchanged,unchanged,PASS,no writes to data/raw
+v1_v2_v3_v4_intact,untouched,untouched,PASS,no writes outside V5 during V5.0A
+backups_not_cleaned,preserved,preserved,PASS,no delete operations
+shiny_read_only,read-only consumer,read-only consumer,PASS,find_project_root + data_loader read-only
