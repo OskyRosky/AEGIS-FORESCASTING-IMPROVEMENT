@@ -1,0 +1,31 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"AC-01","Every normal Viewer-selectable case is viewer_complete","100 percent","596 of 596","PASS",TRUE
+"AC-02","No normal Viewer selection ends in Backtest unavailable","0","0 across all six routes, verified by sweeping every route","PASS",TRUE
+"AC-03","HDD Viewer-complete cases render observed actuals plus 15 governed model estimates","All six routes","All six routes available, Analyze enabled, 15 models each","PASS",TRUE
+"AC-04","SSD Phoenix not a normal Viewer backtest case","Not selectable","Not offered in the Viewer Metric selector; option A satisfied","PASS",TRUE
+"AC-04B","SSD Phoenix shown as a separated forecast-only state","Present","Callout below the selector; option B also satisfied","PASS",FALSE
+"AC-05","Forecast still shows HDD and SSD Phoenix forecast-complete cases","Both","HDD 596 and SSD 298; SSD renders 30 forward points","PASS",TRUE
+"AC-06","PROD excluded","Both selectors","0 in the Viewer and 0 in Forecast; SSD No Efficiency now offers 147 entities","PASS",TRUE
+"AC-07","CPU and IOPS not fabricated","0 rows","0; both remain declared backend gaps","PASS",TRUE
+"AC-08","Output states whether SSD Viewer-complete data exists","Stated","Stated: it does not exist in any local artifact","PASS",TRUE
+"AC-09","Output states exactly what would be required to build it","Stated","Governed SQL extraction of SSD-Phoenix actual history, then a 15-model backtest run","PASS",TRUE
+"AC-10","No SQL or model run performed","None","None","PASS",TRUE
+"AU-01","Cohort cases audited","894","894","PASS",FALSE
+"AU-02","VIEWER_COMPLETE classification","596","596","PASS",FALSE
+"AU-03","FORECAST_ONLY classification","298","298","PASS",FALSE
+"AU-04","DATA_GAP_CAN_BUILD classification","0","0; nothing missing can be built from local artifacts","PASS",FALSE
+"AU-05","HDD cases with observed actuals","596","596","PASS",FALSE
+"AU-06","HDD cases with all 15 governed models","596","596","PASS",FALSE
+"AU-07","SSD cases with observed actuals","0","0","PASS",FALSE
+"AU-08","SSD cases with any backtest estimate","0","0","PASS",FALSE
+"AU-09","SSD rows in the Viewer backtest artifact","0","0","PASS",FALSE
+"AU-10","SSD actual records in the forward artifact","0 of 219600 SSD rows","0","PASS",FALSE
+"AU-11","SSD groups in the accuracy artifact","0","0","PASS",FALSE
+"AU-12","SSD series in the legacy Viewer CSV","0","0; the legacy artifact is single-route HDD","PASS",FALSE
+"GOV-01","No fabricated observed values","None","None","PASS",TRUE
+"GOV-02","No fabricated model estimates","None","None","PASS",TRUE
+"GOV-03","No SQL or Tesseract extraction","None","None","PASS",TRUE
+"GOV-04","Productive Parquet unchanged","Byte size and mtime","14280896 and 6210430 bytes, mtimes unchanged","PASS",TRUE
+"GOV-05","V1 through V5 untouched","0 files","0","PASS",TRUE
+"GOV-06","V6.22 manifest untouched","0 changes","0","PASS",FALSE
+"GOV-07","Nothing pushed","No push","No push","PASS",FALSE

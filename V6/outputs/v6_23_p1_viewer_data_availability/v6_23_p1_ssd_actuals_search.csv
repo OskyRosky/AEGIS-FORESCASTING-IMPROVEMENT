@@ -1,0 +1,5 @@
+artifact,what_was_searched,rows_found,ssd_actual_values_found,conclusion
+forecast_viewer_model_outputs_v2_full.parquet,rows whose metric contains SSD,0,0,The Viewer backtest artifact contains no SSD rows at all.
+forecast_forward_outputs_v6_17_full.parquet,SSD rows with record_type = actual,219600,0,SSD is present but every row is a forecast record; zero actual records.
+v6_21b_accuracy_metrics.parquet,SSD groups,0,0,"No SSD group exists, which follows from the Viewer artifact having none."
+data/processed/forecast_viewer_model_outputs.csv (legacy),a metric column that could carry SSD,204300,0,Legacy artifact has no metric column; it is single-route HDD with 39 series and carries no SSD data.

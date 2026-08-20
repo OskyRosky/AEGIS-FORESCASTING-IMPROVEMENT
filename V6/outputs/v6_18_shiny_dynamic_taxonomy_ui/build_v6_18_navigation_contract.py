@@ -196,8 +196,19 @@ def main() -> None:
                 "source_scenario": row["scenario"],
                 "source_granularity": row["granularity"],
                 "source_series_key": row["series_key"],
-                "viewer_visible": flag(row["series_key"] not in QUARANTINED_ENTITIES),
-                "forecast_visible": "TRUE",
+                # V6.23-P1 | The Viewer selector exposes ONLY cases that can
+                # render a real backtest: observed actuals plus the governed
+                # model estimates. A case that would end in "Backtest
+                # unavailable" is not offered as a normal Viewer selection.
+                # Forecast-only routes are surfaced separately, as a callout on
+                # the Viewer page, and remain fully selectable in Forecast.
+                "viewer_visible": flag(
+                    row["series_key"] not in QUARANTINED_ENTITIES
+                    and viewer_row is not None
+                    and truth(viewer_row["viewer_available"])
+                    and truth(viewer_row["has_actuals"])
+                ),
+                "forecast_visible": flag(row["series_key"] not in QUARANTINED_ENTITIES),
                 "viewer_eligible": flag(
                     viewer_row is not None
                     and truth(viewer_row["viewer_available"])

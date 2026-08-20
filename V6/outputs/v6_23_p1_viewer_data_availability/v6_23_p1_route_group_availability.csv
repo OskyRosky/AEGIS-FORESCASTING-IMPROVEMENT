@@ -1,0 +1,6 @@
+route_group,cases,observed_cases,backtest_cases,all_15_models_cases,forecast_cases,viewer_complete,forecast_complete,case_class
+HDD Basilisk,202,202,202,202,202,202,202,VIEWER_COMPLETE
+HDD EDB Consumer,197,197,197,197,197,197,197,VIEWER_COMPLETE
+HDD EDB Enterprise,197,197,197,197,197,197,197,VIEWER_COMPLETE
+SSD Phoenix Low Volume No Efficiency,147,0,0,0,147,0,147,FORECAST_ONLY
+SSD Phoenix Low Volume With Efficiency,151,0,0,0,151,0,151,FORECAST_ONLY

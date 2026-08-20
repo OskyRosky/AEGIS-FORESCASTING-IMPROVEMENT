@@ -26,15 +26,18 @@ section_explorer <- function() {
         tags$li("Metric is the first selection control."),
         tags$li("Only dimensions that apply to the selected operational route appear."),
         tags$li(sprintf(
-          paste("%s prepared cases are visible: %s carry actuals and the 15 AEGIS",
-                "model backtests, and %s are forecast-only."),
-          fvp_scope$total, fvp_scope$backtest, fvp_scope$forecast_only
+          paste("Every one of the %s selectable cases has observed actuals and the",
+                "15 AEGIS model backtests, so a selection never ends in an",
+                "unavailable result."),
+          fvp_scope$selectable
         )),
         tags$li("Actual values are known history; model lines are prepared backtests."),
-        tags$li(
-          "SSD-Phoenix is selectable but forecast-only: it renders an explicit ",
-          "state instead of a backtest, and no actuals are fabricated."
-        ),
+        tags$li(sprintf(
+          paste("%s prepared cases (%s) have a forward forecast but no actuals and",
+                "no backtest, so they are not selectable here. They are listed",
+                "below and are fully available in Forecast."),
+          fvp_scope$forecast_only, fvp_scope$forecast_only_labels
+        )),
         tags$li(
           "Shiny reads prepared metadata and Parquet; it does not train, backtest, ",
           "aggregate, extract, or write data."
@@ -49,11 +52,8 @@ section_explorer <- function() {
         tags$span(class = "fvx-section-kicker", "A"),
         tags$h3(class = "fvx-section-title", "Selection"),
         tags$span(class = "pill pill-blue", sprintf(
-          "%s cases / %s routes", fvp_scope$total, fvp_scope$routes
-        )),
-        tags$span(class = "pill pill-slate", sprintf(
-          "%s backtest \u00b7 %s forecast-only",
-          fvp_scope$backtest, fvp_scope$forecast_only
+          "%s Viewer-complete cases / %s routes",
+          fvp_scope$selectable, fvp_scope$routes
         ))
       ),
       tags$p(
@@ -63,7 +63,29 @@ section_explorer <- function() {
           "The breadcrumb and route cards resolve back to the V6.17 source fields."
         )
       ),
-      taxonomy_navigation_ui("fvp_taxonomy")
+      taxonomy_navigation_ui("fvp_taxonomy"),
+      # V6.23-P1 | Forecast-only routes are surfaced here, clearly separated from
+      # the selector, so they are discoverable without ever producing a
+      # selection that ends in an unavailable backtest.
+      if (fvp_scope$forecast_only > 0) {
+        tags$div(
+          class = "fvb-pilot-status is-forecast-only fvp-forecast-only-callout",
+          tags$span(class = "pill pill-teal", "Forecast-only, not selectable here"),
+          tags$div(
+            tags$strong(sprintf(
+              "%s prepared cases (%s) are available in Forecast only.",
+              fvp_scope$forecast_only, fvp_scope$forecast_only_labels
+            )),
+            tags$br(),
+            paste(
+              "No observed actuals and no 15-model backtest estimates exist for",
+              "them in any local artifact, so there is nothing to backtest and",
+              "nothing was fabricated. Open the Forecast section to see their",
+              "prepared forward forecasts."
+            )
+          )
+        )
+      }
     ),
     tags$section(
       class = "fvx-section fvx-backtest fvb fvb-setup-section fvb-config-section",

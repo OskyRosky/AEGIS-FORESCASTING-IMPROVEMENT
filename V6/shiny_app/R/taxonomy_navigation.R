@@ -77,21 +77,28 @@ taxonomy_values <- function(rows, column) {
   sort(values)
 }
 
-# V6.23-P0 | Viewer scope counts derived from the shared contract, never
-# hardcoded. Distinguishes the three numbers the header must not conflate:
-#   backtest      cases carrying actuals and the 15 governed model backtests
-#   forecast_only cases visible in the selector but with no actuals
-#   total         everything the Viewer selector exposes
+# V6.23-P1 | Viewer scope counts derived from the shared contract, never
+# hardcoded. The Viewer selector exposes ONLY cases that can render a real
+# backtest, so `selectable` and `backtest` are the same number by construction.
+# `forecast_only` counts prepared cases that exist locally but cannot be
+# backtested; they are surfaced as a separate callout, never as a selection.
 taxonomy_viewer_scope <- function(contract = taxonomy_navigation_data()) {
-  rows <- taxonomy_page_rows("viewer", contract)
-  rows <- rows[rows$contract_row_type == "OPERATIONAL_ENTITY", , drop = FALSE]
-  backtest <- sum(rows$viewer_eligible)
+  operational <- contract[
+    contract$contract_row_type == "OPERATIONAL_ENTITY", , drop = FALSE
+  ]
+  selectable <- operational[operational$viewer_visible, , drop = FALSE]
+  forecast_only <- operational[
+    operational$forecast_visible & !operational$viewer_visible, , drop = FALSE
+  ]
   list(
-    total = nrow(rows),
-    backtest = backtest,
-    forecast_only = nrow(rows) - backtest,
-    routes = length(unique(rows$route_id)),
-    backtest_routes = length(unique(rows$route_id[rows$viewer_eligible]))
+    selectable = nrow(selectable),
+    routes = length(unique(selectable$route_id)),
+    forecast_only = nrow(forecast_only),
+    forecast_only_routes = length(unique(forecast_only$route_id)),
+    forecast_only_labels = paste(
+      sort(unique(forecast_only$display_label)), collapse = ", "
+    ),
+    forecast_total = sum(operational$forecast_visible)
   )
 }
 

@@ -2315,3 +2315,11 @@ body {
 
 /* ===== V4.7C | Reference / Artifacts download modal ===== */
 .artifact-dl-modal .artifact-dl-modal-desc { margin: .15rem 0 .65rem; color: #4b5563; font-size: .9rem; }
+
+/* V6.23-P1 | Forecast-only callout on the Viewer page. Separated from the
+   selector so a forecast-only route is discoverable but never selectable
+   as a backtest case. */
+.fvp-forecast-only-callout {
+  align-items: flex-start; margin: 14px 0 0; line-height: 1.55;
+}
+.fvp-forecast-only-callout .pill { flex: none; margin-top: 1px; }
