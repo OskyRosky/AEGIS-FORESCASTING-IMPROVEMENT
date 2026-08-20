@@ -1,0 +1,26 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"V621APOST-001","Hard gate satisfied before deletion","All preconditions pass","10 of 10 gate checks passed","PASS",FALSE
+"V621APOST-002","Checkpoint on the remote","b19bccd reachable from origin/main","Confirmed ancestor of origin/main","PASS",FALSE
+"V621APOST-003","Backup branch recorded before deletion","Hash recorded","0a53d4b85496eeaed0df5185f933e85c41e68fe1","PASS",FALSE
+"V621APOST-004","Backup tag recorded before deletion","Hash recorded","0a53d4b85496eeaed0df5185f933e85c41e68fe1","PASS",FALSE
+"V621APOST-005","Backup branch deleted","0 remaining","0","PASS",FALSE
+"V621APOST-006","Backup tag deleted","0 remaining","0","PASS",FALSE
+"V621APOST-007","Bundle preserved and not regenerated","Untouched","Present, 212821486 bytes, unchanged","PASS",FALSE
+"V621APOST-008","Master Catalog evidence committed","4 files tracked","4 files tracked in 61ebb65 by the owner","PASS_ALREADY_DONE",FALSE
+"V621APOST-009","Other root documents committed","3 files tracked","3 files tracked in 61ebb65 by the owner","PASS_ALREADY_DONE",FALSE
+"V621APOST-010","Evidence files under 25 MB","All under the limit","Largest is Presentation.pptx at 8500056 bytes","PASS",FALSE
+"V621APOST-011","Scoped exception commit created by the agent","One commit if needed","Not needed; section 2 was already satisfied on the remote","NOT_REQUIRED",FALSE
+"V621APOST-012","Distinct Viewer entities verified","391","391 distinct series_key values","PASS",FALSE
+"V621APOST-013","Viewer case count verified","596","596 metadata rows and sum of viewer_case_count equals 596","PASS",FALSE
+"V621APOST-014","Legacy Accuracy entities verified","39","39 distinct series_key values","PASS",FALSE
+"V621APOST-015","V6.20 artifacts corrected","All occurrences updated","7 files corrected; 0 remaining matches for the old wording","PASS",FALSE
+"V621APOST-016","Git history not rewritten","No amend, rebase or filter","None performed","PASS",FALSE
+"V621APOST-017","Prior commit messages untouched","Unchanged","b19bccd message unchanged","PASS",FALSE
+"V621APOST-018","Broad staging avoided","No git add . or -A or --all","Only explicit paths","PASS",FALSE
+"V621APOST-019","Nothing staged outside V6","0","0","PASS",FALSE
+"V621APOST-020","V1 to V5 untouched","0 files","0 files","PASS",FALSE
+"V621APOST-021","No reset --hard","Never used","Never used","PASS",FALSE
+"V621APOST-022","No Shiny or model changes","None","None","PASS",FALSE
+"V621APOST-023","Commits created by this stage","Reported","2 local commits","PASS",FALSE
+"V621APOST-024","Push status","Not pushed","Not pushed; awaiting the owner","PASS",FALSE
+"V621APOST-025","V6/data/processed still unprotected","Reported","24 files and about 138 MiB remain ignored","REPORTED",TRUE
