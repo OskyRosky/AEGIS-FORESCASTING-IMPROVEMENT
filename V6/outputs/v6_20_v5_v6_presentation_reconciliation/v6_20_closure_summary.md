@@ -61,7 +61,8 @@ rather than by commit history.
 ## What V6 improved
 
 - Conditional, metadata-driven selection shared by Viewer and Forecast.
-- Viewer coverage from 39 keys to 596 entities across 6 routes.
+- Viewer coverage from 39 distinct entities to 596 route x key cases across 391
+  distinct entities, over 6 routes.
 - Forecast coverage to 896 entities across 8 routes.
 - Explicit Forecast structure: Data Selection, Forecast Configuration, Forecast Results.
 - Mandatory `Forecast start` boundary derived from the prepared artifact.
@@ -83,8 +84,9 @@ One item, and it is real:
 ## What must be recovered before generation
 
 1. **Accuracy data source decision.** `acc_data()` resolves to
-   `data/processed/forecast_viewer_model_outputs.csv`: 204,300 rows, 39 series
-   keys, 15 models. The Viewer reads 2,416,050 rows across 596 entities. The
+   `data/processed/forecast_viewer_model_outputs.csv`: 204,300 rows, 39 distinct
+   entities, 15 models. The Viewer reads 2,416,050 rows covering 596 route x key
+   cases across 391 distinct entities. The
    product currently shows two different universes. The owner must choose
    between migrating, labelling, disabling, or rebuilding Accuracy.
 2. **Artifact registry versus Parquet-only.** The registry holds 43 entries,

@@ -1,5 +1,5 @@
 "artifact_id","current_path","current_format","used_by","would_break_under_parquet_only","required_replacement","generation_blocking","owner_decision_required","notes"
-"forecast_viewer_full","data/processed/forecast_viewer_model_outputs.csv","csv","Accuracy page via acc_data and fvp_data legacy helpers","YES","Parquet-backed accuracy input or a registry entry pointing at the prepared Parquet","YES","YES","204300 rows, 39 keys, 15 models, about 51 MB."
+"forecast_viewer_full","data/processed/forecast_viewer_model_outputs.csv","csv","Accuracy page via acc_data and fvp_data legacy helpers","YES","Parquet-backed accuracy input or a registry entry pointing at the prepared Parquet","YES","YES","204300 rows, 39 distinct entities, 15 models, about 51 MB."
 "forecast_viewer_full_manifest","data/processed/forecast_viewer_model_outputs_manifest.csv","csv","Legacy Viewer manifest helpers","YES","Manifest regenerated for the new universe","NO","YES","Describes the legacy artifact only."
 "actuals","data/processed/actuals.csv","csv","Legacy forecast helpers and TTL demand","YES","Prepared actuals source","NO","YES","Not used by the live Viewer or Forecast providers."
 "forecasts","data/processed/forecasts.csv","csv","Legacy forecast helpers","YES","Prepared forward Parquet","NO","YES","Superseded in the live UI by forecast_pilot."

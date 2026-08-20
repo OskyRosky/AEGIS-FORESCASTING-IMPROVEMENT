@@ -10,7 +10,7 @@
 "V620-009","All LLM servers matched to live UI","10 of 10","9 of 10","FAIL",FALSE
 "V620-010","F2 Accuracy legacy source","Confirmed or refuted","CONFIRMED; acc_data resolves to the legacy CSV","PASS",TRUE
 "V620-011","Accuracy versus Viewer row counts","Measured","204300 versus 2416050","PASS",TRUE
-"V620-012","Accuracy versus Viewer key counts","Measured","39 versus 596","PASS",TRUE
+"V620-012","Accuracy versus Viewer entity counts","Measured","39 distinct entities versus 391 distinct entities across 596 route x key cases","PASS",TRUE
 "V620-013","Artifact registry format coverage","Measured","43 entries, 40 CSV, 0 Parquet","PASS",TRUE
 "V620-014","Parquet-only impact identified","Any registry entry that would break","forecast_viewer_full and other legacy CSV consumers would break","PASS",TRUE
 "V620-015","Download specs inspected","Enumerated","8 governed specs, none pointing at forecast_viewer_full","PASS",FALSE
