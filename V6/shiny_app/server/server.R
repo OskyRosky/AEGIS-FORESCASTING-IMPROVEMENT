@@ -282,7 +282,7 @@ app_server <- function(input, output, session) {
     if (is.null(input$acc_go) || input$acc_go == 0) {
       return(tags$div(
         class = "acc-kpi-grid",
-        cell("Keys covered", "\u2014"),
+        cell("Route \u00d7 key cases covered", "\u2014"),
         cell("Models covered", "\u2014"),
         cell("Selected horizon", "\u2014"),
         cell("Selected metric", "\u2014"),
@@ -294,7 +294,7 @@ app_server <- function(input, output, session) {
     s <- acc_summary(acc_result(), r$metric, r$horizon)
     tags$div(
       class = "acc-kpi-grid",
-      cell("Keys covered", s$n_series),
+      cell("Route \u00d7 key cases covered", s$n_series),
       cell("Models covered", s$n_models),
       cell("Selected horizon", paste0(s$horizon, " days")),
       cell("Selected metric", s$metric),

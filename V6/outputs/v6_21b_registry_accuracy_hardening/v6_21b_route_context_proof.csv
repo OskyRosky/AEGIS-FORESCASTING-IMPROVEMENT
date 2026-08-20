@@ -1,0 +1,12 @@
+series_key,metric,scenario,granularity,model_name,horizon,n_points,MAE,distinct_rows_for_this_series_key
+DNK-Go Local,HDD - Basilisk,Basilisk,Region,ETS Explicit,30,5,0.0,3
+DNK-Go Local,HDD - EDB,Consumer,Region,ETS Explicit,30,11,0.0025354607784885117,3
+DNK-Go Local,HDD - EDB,Enterprise,Region,ETS Explicit,30,11,1.6229047127432936,3
+APC-Dedicated,HDD - EDB,Enterprise,Region,ETS Explicit,30,12,706.2211183529254,2
+APC-Dedicated,HDD - EDB,Consumer,Region,ETS Explicit,30,11,0.0,2
+APC-MSIT,HDD - EDB,Enterprise,Region,ETS Explicit,30,12,77.34400700456865,2
+APC-MSIT,HDD - EDB,Consumer,Region,ETS Explicit,30,11,0.0032789027940928156,2
+APC-Multitenant,HDD - EDB,Enterprise,Region,ETS Explicit,30,12,36293.136176183594,2
+APC-Multitenant,HDD - EDB,Consumer,Region,ETS Explicit,30,11,2790.384485913733,2
+APCP150,HDD - EDB,Consumer,Forest,ETS Explicit,30,11,0.0,2
+APCP150,HDD - EDB,Enterprise,Forest,ETS Explicit,30,11,608.8689837165313,2

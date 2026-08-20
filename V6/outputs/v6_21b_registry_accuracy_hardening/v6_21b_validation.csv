@@ -1,0 +1,56 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"PRE-01","V6.21A-POST pushed","0 commits ahead and 0 behind","0 ahead, 0 behind, clean tree, HEAD 3506b52","PASS",FALSE
+"PRE-02","Baseline render timing captured before any edit","Recorded","acc_data 0.163 s, acc_compute h5 0.299 s, h30 0.249 s, total 0.711 s, 585 groups","PASS",FALSE
+"V1-01","Formula equivalence, same input rows","Agreement to at least 6 decimal places","1200 comparisons; max abs difference 4.4703e-8","PASS",TRUE
+"V1-02","n_points identical","Exact","Max abs difference 0","PASS",TRUE
+"V1-03","MAE equivalence","<= 1e-6","1.3039e-8","PASS",TRUE
+"V1-04","RMSE equivalence","<= 1e-6","1.4901e-8","PASS",TRUE
+"V1-05","sMAPE equivalence","<= 1e-6","0","PASS",TRUE
+"V1-06","wMAPE equivalence","<= 1e-6","4e-12","PASS",TRUE
+"V1-07","signed_bias and abs_bias_severity equivalence","<= 1e-6","1.3039e-8","PASS",TRUE
+"V1-08","error_variability equivalence","<= 1e-6","4.4703e-8","PASS",TRUE
+"V2-01","Route context preserved for DNK-Go Local","3 separate rows with distinct metric values","3 rows: Basilisk/Basilisk/Region MAE 0.000000, EDB/Consumer/Region MAE 0.002535, EDB/Enterprise/Region MAE 1.622905","PASS",TRUE
+"V2-02","Keys appearing in multiple routes","197 of 391","197, maximum 3 routes per key","PASS",TRUE
+"V2-03","Grouping key includes route dimensions","metric + scenario + granularity + series_key + model_name + horizon_days","Confirmed in the artifact and the builder","PASS",TRUE
+"V3-01","No metric arithmetic left in acc_compute","0 arithmetic expressions","0","PASS",FALSE
+"V3-02","acc_data no longer reads the legacy CSV","Reads the precomputed parquet through the registry","tess_collect_parquet_artifact('accuracy_metrics_parquet')","PASS",FALSE
+"V4-01","Distinct route x key cases","596","596","PASS",FALSE
+"V4-02","Distinct series_key entities","391","391","PASS",FALSE
+"V4-03","Distinct models","15","15","PASS",FALSE
+"V4-04","Horizons covered by the artifact","Reported","1 to 30; the Accuracy selector exposes 5,10,15,20,25,30 only","REPORTED",FALSE
+"V4-05","Legacy coverage not lost","No regression","All 39 legacy entities are present within the 391","PASS",FALSE
+"V5-01","No group mixes extraction runs","0","0; the builder raises SystemExit if any group mixes","PASS",FALSE
+"V5-02","Runs present","2","LEGACY_STAGE05H_VERIFIED_R8FIX0 and R6P1-20260812T100822","PASS",FALSE
+"V5-03","n_points distribution per run","Reported","Legacy: 17550 groups, 7 to 12, median 12. R6P1: 250650 groups, 5 to 11, median 11","REPORTED",FALSE
+"V5-04","n_points heterogeneity flagged","Recorded in the artifact summary and the closure summary","Recorded in both","PASS",FALSE
+"V6-01","Shiny starts and serves","HTTP 200 on port 8082","Serving","PASS",FALSE
+"V6-02","Accuracy heatmap populates","Rows and columns present","20 rows x 15 models","PASS",FALSE
+"V6-03","Accuracy table populates","Rows present","15 rows, first cell route-qualified","PASS",FALSE
+"V6-04","Summary cards populate","Real values","596 cases, 15 models, horizon 30, metric MAE","PASS",FALSE
+"V6-05","All option shows the real N with its unit","All cases (N)","All cases (596)","PASS",FALSE
+"V6-06","No Shiny output errors on Accuracy","0","0","PASS",FALSE
+"V7-01","Viewer opens and analyzes","Chart renders","15 models, 6 defaults, 7 chart series","PASS",FALSE
+"V7-02","Viewer reset clears downstream","Cleared","Metric cleared, 1 remaining selector, horizon 5, 0 chart series","PASS",FALSE
+"V7-03","Forecast opens and analyzes","Chart renders","Actual history 180 points and forward forecast 30 points","PASS",FALSE
+"V7-04","Forecast start boundary preserved","Present","Aligned at the first prepared forecast date","PASS",FALSE
+"V7-05","Viewer coverage unchanged","596 cases and 391 entities","596 and 391","PASS",FALSE
+"V7-06","Forecast coverage unchanged","896 cases","896","PASS",FALSE
+"V8-01","Accuracy render time not worse than baseline","<= 0.711 s","0.150 s total, about 4.7x faster on 15x more data","PASS",FALSE
+"V8-02","Artifact load time","Reported","0.087 s versus 0.163 s for the legacy CSV","PASS",FALSE
+"V9-01","Champion unchanged","ETS Explicit","ETS Explicit","PASS",FALSE
+"V9-02","Model universe","15","15","PASS",FALSE
+"V9-03","Prohibited models absent","NBEATS, NHITS, FastNeuralAR_MLP original","0 present","PASS",FALSE
+"V9-04","Viewer horizons unchanged","5,10,15,20,25,30","5,10,15,20,25,30","PASS",FALSE
+"V9-05","Accuracy horizons unchanged","5,10,15,20,25,30","5,10,15,20,25,30","PASS",FALSE
+"V9-06","Forecast windows unchanged","30,60,180","30,60,180","PASS",FALSE
+"V9-07","Productive Viewer parquet unchanged","14280896 bytes","14280896 bytes, timestamp unchanged","PASS",FALSE
+"V9-08","Productive Forecast parquet unchanged","6210430 bytes","6210430 bytes, timestamp unchanged","PASS",FALSE
+"V9-09","No model training or forecasting","None","None; the builder only aggregates existing forecast and actual pairs","PASS",FALSE
+"V9-10","No SQL or Tesseract extraction","None","None","PASS",FALSE
+"V9-11","V1 through V5 untouched","0 files","0","PASS",FALSE
+"V9-12","ACC_METRICS unchanged","6 metrics","6 metrics","PASS",FALSE
+"BLOCK-C-01","Forward Forecast LLM panel restored","Mounted","tabs_v6_16_viewer.R line 303","PASS",FALSE
+"BLOCK-C-02","All LLM servers have a live UI mount","10 of 10","10 of 10","PASS",FALSE
+"KNOWN-01","Prediction interval bounds","Empty throughout the V6.17 artifact","Confirmed empty; Accuracy does not use them","REPORTED",FALSE
+"KNOWN-02","Dropped non-finite pairs","Reported","0 rows dropped","PASS",FALSE
+"KNOWN-03","NA metrics in the artifact","Reported","sMAPE 61836 NA, wMAPE 71685 NA, from zero denominators on flat zero-actual series","REPORTED",FALSE

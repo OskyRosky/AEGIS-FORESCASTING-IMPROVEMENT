@@ -295,6 +295,11 @@ section_forecast <- function() {
         "Source: forecast_forward_outputs_v6_17_full.parquet.",
         "Shiny lazily filters the frozen prepared artifact and remains read-only."
       )
-    )
+    ),
+    # V6.21B | Restores the Forward Forecast assistant lost in the V6.16
+    # rewrite. llm_explain_server("llm_forecasting_forecast", ...) was still
+    # registered in server/server.R with no live UI mount. Mock-only, read-only,
+    # positioned consistently with the Viewer panel.
+    llm_explain_ui("llm_forecasting_forecast", "Forward Forecast")
   )
 }

@@ -1,0 +1,3 @@
+extraction_run_id,routes_covered,groups,n_points_min,n_points_max,n_points_median,mixes_other_run,notes
+LEGACY_STAGE05H_VERIFIED_R8FIX0,HDD - EDB/Enterprise/Region,17550,7,12,12.0,NO,Verified at build time: no grouping key contains rows from more than one extraction run. n_points is therefore not comparable across runs.
+R6P1-20260812T100822,HDD - Basilisk/Basilisk/Forest|HDD - Basilisk/Basilisk/Region|HDD - EDB/Consumer/Forest|HDD - EDB/Consumer/Region|HDD - EDB/Enterprise/Forest|HDD - EDB/Enterprise/Region,250650,5,11,11.0,NO,Verified at build time: no grouping key contains rows from more than one extraction run. n_points is therefore not comparable across runs.

@@ -75,10 +75,28 @@ find_project_root <- function(start = getwd()) {
   )
 }
 
+# V6.21B | Parquet support. Lazy by default: open_dataset() never materialises
+# the file, so a multi-million-row productive artifact can be registered
+# without being read into memory. Never throws, like the other readers.
+.tess_open_parquet_file <- function(path) {
+  if (is.null(path) || !file.exists(path)) return(NULL)
+  if (!requireNamespace("arrow", quietly = TRUE)) return(NULL)
+  tryCatch(arrow::open_dataset(path, format = "parquet"), error = function(e) NULL)
+}
+
+# Materialising read. Only for parquet entries explicitly registered as eager.
+.tess_read_parquet_file <- function(path) {
+  ds <- .tess_open_parquet_file(path)
+  if (is.null(ds)) return(data.frame())
+  tryCatch(as.data.frame(dplyr::collect(ds)), error = function(e) data.frame())
+}
+
 # ---------------------------------------------------------------------
 # 3. Artifact registry definition
 #    requirement: required | optional | roadmap
-#    type:        csv | text
+#    type:        csv | text | parquet
+#    lazy:        TRUE only for parquet entries that must never be read
+#                 into memory whole (5th positional element, optional)
 # ---------------------------------------------------------------------
 build_artifact_registry <- function() {
   rows <- list(
@@ -227,7 +245,24 @@ build_artifact_registry <- function() {
     #     universe definition; the 13-model bootstrap tournament remains as
     #     clearly-labelled legacy governed evidence.
     c("model_universe_canonical",   "model_eval",   "csv",  "optional",
-      "data/processed/model_universe_canonical.csv")
+      "data/processed/model_universe_canonical.csv"),
+
+    # --- V6.21B | Productive Parquet artifacts -------------------------
+    # Registered so a future Parquet-only migration cannot break a page
+    # silently. The two productive artifacts are LAZY: the registry records
+    # their presence and schema without ever materialising them.
+    c("viewer_backtest_parquet",    "productive",   "parquet", "required",
+      paste0("outputs/v6_17_full_multimetric_productive_artifact_generation/",
+             "forecast_viewer_model_outputs_v2_full.parquet"), "lazy"),
+    c("forecast_forward_parquet",   "productive",   "parquet", "required",
+      paste0("outputs/v6_17_full_multimetric_productive_artifact_generation/",
+             "forecast_forward_outputs_v6_17_full.parquet"), "lazy"),
+    # Precomputed Accuracy metrics (V6.21B). Lazy as well: the Accuracy page
+    # collects it once through tess_collect_parquet_artifact(), so Shiny never
+    # recomputes a metric.
+    c("accuracy_metrics_parquet",   "productive",   "parquet", "required",
+      paste0("outputs/v6_21b_registry_accuracy_hardening/",
+             "v6_21b_accuracy_metrics.parquet"), "lazy")
   )
 
   reg <- do.call(rbind, lapply(rows, function(r) {
@@ -237,6 +272,7 @@ build_artifact_registry <- function() {
       type         = r[3],
       requirement  = r[4],
       rel_path     = r[5],
+      lazy         = length(r) >= 6 && identical(r[6], "lazy"),
       stringsAsFactors = FALSE
     )
   }))
@@ -267,6 +303,24 @@ load_governed_artifacts <- function(root = find_project_root(), verbose = TRUE) 
         data_store[[key]] <- df
         n_rows[i] <- nrow(df)
         n_cols[i] <- ncol(df)
+      } else if (identical(type, "parquet")) {
+        # Lazy: record schema and row count from Parquet metadata only.
+        # The file is NEVER materialised here.
+        ds <- .tess_open_parquet_file(p)
+        if (is.null(ds)) {
+          data_store[[key]] <- NULL
+          n_rows[i] <- 0L
+          n_cols[i] <- 0L
+        } else if (isTRUE(reg$lazy[i])) {
+          data_store[[key]] <- NULL
+          n_rows[i] <- tryCatch(as.integer(ds$num_rows), error = function(e) NA_integer_)
+          n_cols[i] <- tryCatch(length(names(ds)), error = function(e) 0L)
+        } else {
+          df <- .tess_read_parquet_file(p)
+          data_store[[key]] <- df
+          n_rows[i] <- nrow(df)
+          n_cols[i] <- ncol(df)
+        }
       } else {
         txt <- .tess_read_text_file(p)
         data_store[[key]] <- txt
@@ -276,7 +330,8 @@ load_governed_artifacts <- function(root = find_project_root(), verbose = TRUE) 
       if (verbose) cat(sprintf("[loader] available : %-28s (%s)\n", key, reg$rel_path[i]))
     } else {
       presence[i] <- "missing"
-      data_store[[key]] <- if (identical(type, "csv")) data.frame() else character(0)
+      data_store[[key]] <- if (identical(type, "csv")) data.frame() else
+        if (identical(type, "parquet")) NULL else character(0)
       n_rows[i] <- 0L
       n_cols[i] <- 0L
       lvl <- if (identical(reg$requirement[i], "required")) "MISSING " else "missing "
@@ -318,6 +373,28 @@ load_csv_artifact <- function(artifact_key) {
 load_text_artifact <- function(artifact_key) {
   val <- tess_artifact(artifact_key)
   if (is.character(val)) val else character(0)
+}
+
+# V6.21B | Parquet accessors.
+# tess_open_parquet_artifact() returns a lazy arrow Dataset (or NULL) so a
+# caller can push filters down before collecting. Never materialises here.
+tess_open_parquet_artifact <- function(artifact_key) {
+  reg <- get_artifact_status()
+  if (!is.data.frame(reg) || !("artifact_key" %in% names(reg))) return(NULL)
+  row <- reg[reg$artifact_key == artifact_key, , drop = FALSE]
+  if (nrow(row) == 0) return(NULL)
+  path <- if ("abs_path" %in% names(row)) as.character(row$abs_path[[1]]) else
+    file.path(find_project_root(), as.character(row$rel_path[[1]]))
+  .tess_open_parquet_file(path)
+}
+
+# Collect a registered parquet artifact as a data.frame. Returns an empty
+# data.frame when the artifact or the arrow package is unavailable, matching
+# the fail-soft contract of the rest of the loader.
+tess_collect_parquet_artifact <- function(artifact_key) {
+  ds <- tess_open_parquet_artifact(artifact_key)
+  if (is.null(ds)) return(data.frame())
+  tryCatch(as.data.frame(dplyr::collect(ds)), error = function(e) data.frame())
 }
 
 get_artifact_status <- function() {

@@ -682,11 +682,20 @@ section_accuracy <- function() {
   # Heatmap + table live in STATIC containers and render only after the user
   # clicks Analyze Accuracy.
 
-  acc_series    <- acc_series_choices()                  # 39 eligible series
-  acc_models    <- acc_model_choices()                   # 13 family-ordered models
+  acc_series    <- acc_series_choices()                  # distinct entities
+  acc_models    <- acc_model_choices()                   # family-ordered models
   horizon_opts  <- acc_horizon_choices()                 # 5..30
   horizon_named <- stats::setNames(as.character(horizon_opts),
                                    paste0(horizon_opts, " days"))
+  # V6.21B | Derived at runtime from the precomputed artifact, and the unit is
+  # named. The ranking unit is the route x key case, because the same
+  # series_key exists in up to three different routes (fact F4).
+  acc_cases     <- acc_case_count()
+  acc_entities  <- acc_entity_count()
+  acc_topn_opts <- stats::setNames(
+    c(10, 20, acc_cases),
+    c("Top 10 cases", "Top 20 cases", paste0("All cases (", acc_cases, ")"))
+  )
 
   panel(
     "accuracy",
@@ -727,7 +736,10 @@ section_accuracy <- function() {
       tags$p(
         class = "fvb-setup-lead",
         "Choose a horizon, metric, models and filters, then run step 6. ",
-        "Source: ", tags$code("forecast_viewer_model_outputs.csv"), "."
+        "Source: ", tags$code("v6_21b_accuracy_metrics.parquet"),
+        " \u2014 metrics are precomputed outside Shiny over ",
+        acc_cases, " route \u00d7 key cases across ", acc_entities,
+        " distinct entities."
       ),
 
       # Steps 1, 2, 4, 5 -------------------------------------------------
@@ -766,10 +778,10 @@ section_accuracy <- function() {
           tags$label(class = "fvb-field-label",
                      tags$span(class = "fvb-step-num", "5"), "Rows shown"),
           selectInput("acc_topn", NULL,
-                      choices = c("Top 10" = 10, "Top 20" = 20, "All (39)" = 39),
+                      choices = acc_topn_opts,
                       selected = 20, width = "100%"),
           tags$p(class = "fvb-field-hint",
-                 "Heatmap keeps this many keys, ranked worst-first by the selected metric.")
+                 "Heatmap keeps this many route \u00d7 key cases, ranked worst-first by the selected metric.")
         )
       ),
 

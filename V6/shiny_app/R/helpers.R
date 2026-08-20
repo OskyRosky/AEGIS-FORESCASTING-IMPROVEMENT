@@ -1117,13 +1117,65 @@ ACC_METRICS <- c("MAE", "RMSE", "sMAPE", "wMAPE",
 # Valid UI horizons (governed subset of the 1..30 artifact horizons).
 acc_horizon_choices <- function() c(5, 10, 15, 20, 25, 30)
 
-# Same governed read as the Viewer (backtest artifact, cached at loader init).
-acc_data <- function() fvp_data()
+# V6.21B | Accuracy reads the PRECOMPUTED metrics artifact.
+# Metrics are built outside Shiny by
+# outputs/v6_21b_registry_accuracy_hardening/build_v6_21b_accuracy_metrics.py
+# and registered as a lazy parquet entry. Shiny never recomputes a metric.
+.acc_env <- new.env(parent = emptyenv())
 
-# Sorted eligible series keys (39).
-acc_series_choices <- function(df = acc_data()) fvp_series_choices(df)
+acc_data <- function(refresh = FALSE) {
+  if (!isTRUE(refresh) &&
+      exists("metrics", envir = .acc_env, inherits = FALSE)) {
+    return(get("metrics", envir = .acc_env, inherits = FALSE))
+  }
+  df <- tryCatch(tess_collect_parquet_artifact("accuracy_metrics_parquet"),
+                 error = function(e) data.frame())
+  if (is.data.frame(df) && nrow(df) > 0) {
+    # Route-qualified display key: the same series_key exists in up to three
+    # different routes and those are different time series. Ranking on the raw
+    # key would blend them (V6.21B fact F4).
+    if ("case_label" %in% names(df)) df$display_key <- df$case_label
+    assign("metrics", df, envir = .acc_env)
+  }
+  df
+}
 
-# Family-ordered model names present in the artifact (13).
+# TRUE when the precomputed artifact is usable; drives the unavailable state.
+acc_data_available <- function(df = acc_data()) {
+  required <- c("series_key", "model_name", "model_family", "horizon",
+                "n_points", "MAE", "RMSE", "sMAPE", "wMAPE",
+                "signed_bias", "abs_bias_severity", "error_variability")
+  is.data.frame(df) && nrow(df) > 0 && all(required %in% names(df))
+}
+
+# Sorted eligible entities. These are RAW series_key values (entities), used
+# by the filter control; the ranking unit is the route x key case.
+acc_series_choices <- function(df = acc_data()) {
+  if (!is.data.frame(df) || !("series_key" %in% names(df)) || nrow(df) == 0) {
+    return(character(0))
+  }
+  sort(unique(df$series_key))
+}
+
+# Number of route x key cases available in the precomputed artifact.
+acc_case_count <- function(df = acc_data()) {
+  dims <- c("metric", "scenario", "granularity", "series_key")
+  if (!is.data.frame(df) || nrow(df) == 0) return(0L)
+  if (all(dims %in% names(df))) {
+    return(nrow(unique(df[, dims, drop = FALSE])))
+  }
+  length(unique(df$series_key))
+}
+
+# Number of distinct entities (raw series_key values).
+acc_entity_count <- function(df = acc_data()) {
+  if (!is.data.frame(df) || !("series_key" %in% names(df)) || nrow(df) == 0) {
+    return(0L)
+  }
+  length(unique(df$series_key))
+}
+
+# Family-ordered model names present in the artifact.
 acc_model_choices <- function(df = acc_data()) {
   if (!is.data.frame(df) || !all(c("model_name", "model_family") %in% names(df)) ||
       nrow(df) == 0) {
@@ -1178,57 +1230,49 @@ acc_metric_column <- function(res, metric) {
     res$MAE)
 }
 
-# Core diagnostics: per (series_key x model_name) at a single horizon.
-# Returns raw metrics + the standardized score for the selected `metric`.
-# All values are computed in memory from actual_value / forecast_value.
+# V6.21B | FILTER ONLY. Metrics are precomputed outside Shiny by
+# build_v6_21b_accuracy_metrics.py using the grouping key
+#   metric + scenario + granularity + series_key + model_name + horizon_days
+# and the exact formulas that previously lived in this function. This function
+# no longer computes MAE, RMSE, sMAPE, wMAPE, bias or variability: it selects
+# precomputed rows and attaches the standardized score for the chosen metric.
+#
+# The returned `series_key` is the ROUTE-QUALIFIED case label, so the heatmap,
+# the table and the summary cards all rank route x key cases and never blend
+# two different series that share a raw key (V6.21B fact F4).
 acc_compute <- function(horizon = 30, models = NULL, series = NULL,
                         metric = "MAE", df = acc_data()) {
-  needed <- c("series_key", "model_name", "model_family",
-              "horizon_days", "actual_value", "forecast_value")
+  needed <- c("series_key", "model_name", "model_family", "horizon",
+              "n_points", "MAE", "RMSE", "sMAPE", "wMAPE",
+              "signed_bias", "abs_bias_severity", "error_variability")
   if (!is.data.frame(df) || nrow(df) == 0 || !all(needed %in% names(df))) {
     return(data.frame())
   }
   hz <- suppressWarnings(as.numeric(horizon))
-  d <- df[!is.na(df$horizon_days) &
-            suppressWarnings(as.numeric(df$horizon_days)) == hz, , drop = FALSE]
+  d <- df[!is.na(df$horizon) &
+            suppressWarnings(as.numeric(df$horizon)) == hz, , drop = FALSE]
   if (!is.null(models) && length(models)) d <- d[d$model_name %in% models, , drop = FALSE]
   if (!is.null(series) && length(series)) d <- d[d$series_key %in% series, , drop = FALSE]
   if (nrow(d) == 0) return(data.frame())
 
-  a <- suppressWarnings(as.numeric(d$actual_value))
-  f <- suppressWarnings(as.numeric(d$forecast_value))
-  ok <- is.finite(a) & is.finite(f)
-  d <- d[ok, , drop = FALSE]; a <- a[ok]; f <- f[ok]
-  if (nrow(d) == 0) return(data.frame())
-  e <- f - a; ae <- abs(e)
+  display <- if ("display_key" %in% names(d)) d$display_key else
+    if ("case_label" %in% names(d)) d$case_label else d$series_key
 
-  key   <- paste(d$series_key, d$model_name, sep = "\r")
-  parts <- split(seq_len(nrow(d)), key)
-  rows  <- lapply(parts, function(idx) {
-    aa <- a[idx]; ff <- f[idx]; ee <- e[idx]; aee <- ae[idx]
-    denom <- (abs(aa) + abs(ff)) / 2
-    smape_terms <- ifelse(denom == 0, NA_real_, aee / denom)
-    smape <- if (all(is.na(smape_terms))) NA_real_
-             else mean(smape_terms, na.rm = TRUE) * 100
-    sum_abs_actual <- sum(abs(aa))
-    wmape <- if (sum_abs_actual == 0) NA_real_ else sum(aee) / sum_abs_actual * 100
-    data.frame(
-      series_key        = d$series_key[idx[1]],
-      model_name        = d$model_name[idx[1]],
-      model_family      = d$model_family[idx[1]],
-      horizon           = hz,
-      n_points          = length(idx),
-      MAE               = mean(aee),
-      RMSE              = sqrt(mean(ee^2)),
-      sMAPE             = smape,
-      wMAPE             = wmape,
-      signed_bias       = mean(ee),
-      abs_bias_severity = abs(mean(ee)),
-      error_variability = if (length(ee) > 1) stats::sd(ee) else 0,
-      stringsAsFactors  = FALSE
-    )
-  })
-  res <- do.call(rbind, rows)
+  res <- data.frame(
+    series_key        = display,
+    model_name        = d$model_name,
+    model_family      = d$model_family,
+    horizon           = hz,
+    n_points          = d$n_points,
+    MAE               = d$MAE,
+    RMSE              = d$RMSE,
+    sMAPE             = d$sMAPE,
+    wMAPE             = d$wMAPE,
+    signed_bias       = d$signed_bias,
+    abs_bias_severity = d$abs_bias_severity,
+    error_variability = d$error_variability,
+    stringsAsFactors  = FALSE
+  )
   rownames(res) <- NULL
   res$metric_value       <- acc_metric_column(res, metric)
   res$standardized_score <- acc_standardize(res$metric_value)

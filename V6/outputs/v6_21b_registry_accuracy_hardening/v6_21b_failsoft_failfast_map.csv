@@ -1,0 +1,8 @@
+"page","loader","on_missing_artifact","user_sees","appropriate","notes"
+"Accuracy","data_loader.R via tess_collect_parquet_artifact","FAIL_SOFT: returns an empty data.frame","Empty heatmap and table with the standard no-data message; acc_data_available() returns FALSE","YES","Appropriate. Accuracy is a diagnostic page; degrading to an explicit empty state is preferable to crashing the whole app."
+"Viewer","viewer_pilot.R","FAIL_FAST: 9 stop() calls","App error if the prepared artifact or metadata is missing or invalid","YES","Appropriate. The Viewer asserts governed invariants such as required columns and non-NA values; silently rendering a partial backtest would be a correctness hazard."
+"Forecast","forecast_pilot.R","FAIL_FAST: 5 stop() calls","App error if the prepared forward artifact is missing or invalid","YES","Appropriate for the same reason as the Viewer."
+"Selection navigator","taxonomy_navigation.R","FAIL_FAST: 4 stop() calls","App error if the navigation contract is missing or malformed","YES","Appropriate. A partially loaded routing contract would silently hide valid routes."
+"Model Universe, Tournament, Champion, Risks, Audit, Artifacts, Methodology, Version","data_loader.R","FAIL_SOFT: empty data.frame or character(0)","Empty tables and cards","YES","These are governed evidence pages; an empty section is honest and non-blocking."
+"TTL","data_loader.R via ttl_provider.R","FAIL_SOFT","Empty gauge and chart","YES","TTL is a documented prototype."
+"NORMALISATION_DECISION","n/a","NOT NORMALISED IN THIS STAGE","n/a","n/a","As instructed, the mixed behaviour was reported rather than unified. The split is defensible: read-only diagnostic pages degrade, governed prepared-artifact providers assert."
