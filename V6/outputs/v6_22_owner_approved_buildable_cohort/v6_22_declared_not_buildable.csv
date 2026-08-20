@@ -1,0 +1,8 @@
+route_id,metric,entity_or_scope,exclusion_reason,blocking_factor,still_forecast_buildable,what_would_unblock,notes
+HDD|Inorganic,HDD,whole route,SQL_REQUIRED,No governed local extract; SQL access required,False,An authorised read-only SQL extraction,"Declared, never fabricated. No data row exists for this scope."
+CPU,CPU,whole route,SQL_REQUIRED,No governed local extract; SQL access required,False,An authorised read-only SQL extraction,"Declared, never fabricated. No data row exists for this scope."
+IOPS,IOPS,whole route,SQL_REQUIRED,No governed local extract; SQL access required,False,An authorised read-only SQL extraction,"Declared, never fabricated. No data row exists for this scope."
+SSD|MCDB,SSD,whole route,SQL_REQUIRED,No governed local extract; SQL access required,False,An authorised read-only SQL extraction,"Declared, never fabricated. No data row exists for this scope."
+Memory,Memory,whole route,NOT_ROUTABLE,No routable productive source,False,A governed routable source,"Declared, never fabricated. No data row exists for this scope."
+SSD - Phoenix|Low Volume No Efficiency|Forest,SSD - Phoenix,PROD,INVALID_ENTITY_QUARANTINED,PROD is not a forest identifier,False,Positive evidence that PROD is a real forest,Owner decision D2. Absent from the Viewer metadata entirely.
+SSD - Phoenix|Low Volume With Efficiency|Forest,SSD - Phoenix,PROD,INVALID_ENTITY_QUARANTINED,PROD is not a forest identifier,False,Positive evidence that PROD is a real forest,Owner decision D2. Absent from the Viewer metadata entirely.

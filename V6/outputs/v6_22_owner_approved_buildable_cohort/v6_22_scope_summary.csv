@@ -1,0 +1,13 @@
+scope_class,routes,route_key_cases,distinct_entity_tokens,distinct_physical_entities,viewer_buildable,accuracy_buildable,forecast_buildable_total,forecast_only_buildable,blocking_factor
+HDD|Organic|Basilisk|Forest,1,155,155,155,155,155,155,0,
+HDD|Organic|Basilisk|Region,1,47,47,46,47,47,47,0,
+HDD|Organic|EDB|Consumer|Forest,1,152,152,152,152,152,152,0,
+HDD|Organic|EDB|Consumer|Region,1,45,45,45,45,45,45,0,
+HDD|Organic|EDB|Enterprise|Forest,1,152,152,152,152,152,152,0,
+HDD|Organic|EDB|Enterprise|Region,1,45,45,45,45,45,45,0,
+SSD|Phoenix|LEGACY_VARIANT|Low Volume No Efficiency|Forest,1,147,147,147,0,0,147,147,
+SSD|Phoenix|LEGACY_VARIANT|Low Volume With Efficiency|Forest,1,151,151,151,0,0,151,151,
+TOTAL_COHORT,8,894,396,205,596,596,894,298,
+CPU_ROUTES,0,0,0,0,0,0,0,0,SQL_REQUIRED
+IOPS_ROUTES,0,0,0,0,0,0,0,0,SQL_REQUIRED
+MEMORY,0,0,0,0,0,0,0,0,NOT_ROUTABLE

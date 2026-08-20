@@ -1,0 +1,206 @@
+entity_token_upper,variants_found,routes_per_variant,counted_once_as,notes
+APC-DEDICATED,APC-Dedicated|apc-Dedicated,APC-Dedicated:2|apc-Dedicated:1,APC-DEDICATED,Multiple casings observed; NOT normalised in any data or join column.
+APC-MSIT,APC-MSIT|apc-MSIT,APC-MSIT:2|apc-MSIT:1,APC-MSIT,Multiple casings observed; NOT normalised in any data or join column.
+APC-MULTITENANT,APC-Multitenant|apc-Multitenant,APC-Multitenant:2|apc-Multitenant:1,APC-MULTITENANT,Multiple casings observed; NOT normalised in any data or join column.
+APCP150,APCP150|apcp150,APCP150:4|apcp150:1,APCP150,Multiple casings observed; NOT normalised in any data or join column.
+APCP153,APCP153|apcp153,APCP153:2|apcp153:1,APCP153,Multiple casings observed; NOT normalised in any data or join column.
+APCPRD01,APCPRD01|apcprd01,APCPRD01:4|apcprd01:1,APCPRD01,Multiple casings observed; NOT normalised in any data or join column.
+APCPRD02,APCPRD02|apcprd02,APCPRD02:4|apcprd02:1,APCPRD02,Multiple casings observed; NOT normalised in any data or join column.
+APCPRD03,APCPRD03|apcprd03,APCPRD03:4|apcprd03:1,APCPRD03,Multiple casings observed; NOT normalised in any data or join column.
+APCPRD04,APCPRD04|apcprd04,APCPRD04:4|apcprd04:1,APCPRD04,Multiple casings observed; NOT normalised in any data or join column.
+APCPRD06,APCPRD06|apcprd06,APCPRD06:4|apcprd06:1,APCPRD06,Multiple casings observed; NOT normalised in any data or join column.
+ARE-GO LOCAL,ARE-Go Local|are-Go Local,ARE-Go Local:2|are-Go Local:1,ARE-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+AREP273,AREP273|arep273,AREP273:4|arep273:1,AREP273,Multiple casings observed; NOT normalised in any data or join column.
+AUS-GO LOCAL,AUS-Go Local|aus-Go Local,AUS-Go Local:2|aus-Go Local:1,AUS-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+AUSP282,AUSP282|ausp282,AUSP282:4|ausp282:1,AUSP282,Multiple casings observed; NOT normalised in any data or join column.
+AUSP300,AUSP300|ausp300,AUSP300:4|ausp300:1,AUSP300,Multiple casings observed; NOT normalised in any data or join column.
+AUSPRD01,AUSPRD01|ausprd01,AUSPRD01:4|ausprd01:1,AUSPRD01,Multiple casings observed; NOT normalised in any data or join column.
+AUT-GO LOCAL,AUT-Go Local|aut-Go Local,AUT-Go Local:2|aut-Go Local:1,AUT-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+AUTP296,AUTP296|autp296,AUTP296:4|autp296:1,AUTP296,Multiple casings observed; NOT normalised in any data or join column.
+BRA-GO LOCAL,BRA-Go Local|bra-Go Local,BRA-Go Local:2|bra-Go Local:1,BRA-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+BRAP284,BRAP284|brap284,BRAP284:4|brap284:1,BRAP284,Multiple casings observed; NOT normalised in any data or join column.
+CAN-GO LOCAL,CAN-Go Local|can-Go Local,CAN-Go Local:2|can-Go Local:1,CAN-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+CANP288,CANP288|canp288,CANP288:4|canp288:1,CANP288,Multiple casings observed; NOT normalised in any data or join column.
+CANPRD01,CANPRD01|canprd01,CANPRD01:4|canprd01:1,CANPRD01,Multiple casings observed; NOT normalised in any data or join column.
+CHE-GO LOCAL,CHE-Go Local|che-Go Local,CHE-Go Local:2|che-Go Local:1,CHE-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+CHEP278,CHEP278|chep278,CHEP278:4|chep278:1,CHEP278,Multiple casings observed; NOT normalised in any data or join column.
+CHL-GO LOCAL,CHL-Go Local|chl-Go Local,CHL-Go Local:2|chl-Go Local:1,CHL-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+CHLP298,CHLP298|chlp298,CHLP298:4|chlp298:1,CHLP298,Multiple casings observed; NOT normalised in any data or join column.
+CHN-GALLATIN,chn-Gallatin,chn-Gallatin:1,CHN-GALLATIN,
+CHNPR01,CHNPR01|chnpr01,CHNPR01:3|chnpr01:1,CHNPR01,Multiple casings observed; NOT normalised in any data or join column.
+DEU-GO LOCAL,DEU-Go Local|deu-Go Local,DEU-Go Local:2|deu-Go Local:1,DEU-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+DEUP281,DEUP281|deup281,DEUP281:4|deup281:1,DEUP281,Multiple casings observed; NOT normalised in any data or join column.
+DNK-GO LOCAL,DNK-Go Local,DNK-Go Local:3,DNK-GO LOCAL,
+DNKP307,DNKP307|dnkp307,DNKP307:4|dnkp307:1,DNKP307,Multiple casings observed; NOT normalised in any data or join column.
+ESP-GO LOCAL,ESP-Go Local,ESP-Go Local:3,ESP-GO LOCAL,
+ESPP292,ESPP292|espp292,ESPP292:4|espp292:1,ESPP292,Multiple casings observed; NOT normalised in any data or join column.
+EUR-DEDICATED,EUR-Dedicated|eur-Dedicated,EUR-Dedicated:2|eur-Dedicated:1,EUR-DEDICATED,Multiple casings observed; NOT normalised in any data or join column.
+EUR-GO LOCAL,EUR-Go Local,EUR-Go Local:3,EUR-GO LOCAL,
+EUR-MSIT,EUR-MSIT|eur-MSIT,EUR-MSIT:2|eur-MSIT:1,EUR-MSIT,Multiple casings observed; NOT normalised in any data or join column.
+EUR-MULTITENANT,EUR-Multitenant|eur-Multitenant,EUR-Multitenant:2|eur-Multitenant:1,EUR-MULTITENANT,Multiple casings observed; NOT normalised in any data or join column.
+EURP107,EURP107|eurp107,EURP107:4|eurp107:1,EURP107,Multiple casings observed; NOT normalised in any data or join column.
+EURP119,EURP119|eurp119,EURP119:4|eurp119:1,EURP119,Multiple casings observed; NOT normalised in any data or join column.
+EURP120,EURP120|eurp120,EURP120:4|eurp120:1,EURP120,Multiple casings observed; NOT normalised in any data or join column.
+EURP121,EURP121|eurp121,EURP121:4|eurp121:1,EURP121,Multiple casings observed; NOT normalised in any data or join column.
+EURP122,EURP122|eurp122,EURP122:4|eurp122:1,EURP122,Multiple casings observed; NOT normalised in any data or join column.
+EURP137,EURP137|eurp137,EURP137:4|eurp137:1,EURP137,Multiple casings observed; NOT normalised in any data or join column.
+EURP138,EURP138|eurp138,EURP138:4|eurp138:1,EURP138,Multiple casings observed; NOT normalised in any data or join column.
+EURP174,EURP174|eurp174,EURP174:2|eurp174:1,EURP174,Multiple casings observed; NOT normalised in any data or join column.
+EURP175,EURP175|eurp175,EURP175:4|eurp175:1,EURP175,Multiple casings observed; NOT normalised in any data or join column.
+EURP176,EURP176|eurp176,EURP176:4|eurp176:1,EURP176,Multiple casings observed; NOT normalised in any data or join column.
+EURP177,EURP177|eurp177,EURP177:4|eurp177:1,EURP177,Multiple casings observed; NOT normalised in any data or join column.
+EURP178,EURP178|eurp178,EURP178:4|eurp178:1,EURP178,Multiple casings observed; NOT normalised in any data or join column.
+EURP179,EURP179|eurp179,EURP179:4|eurp179:1,EURP179,Multiple casings observed; NOT normalised in any data or join column.
+EURP180,EURP180|eurp180,EURP180:4|eurp180:1,EURP180,Multiple casings observed; NOT normalised in any data or join column.
+EURP189,EURP189|eurp189,EURP189:4|eurp189:1,EURP189,Multiple casings observed; NOT normalised in any data or join column.
+EURP190,EURP190|eurp190,EURP190:4|eurp190:1,EURP190,Multiple casings observed; NOT normalised in any data or join column.
+EURP191,EURP191|eurp191,EURP191:4|eurp191:1,EURP191,Multiple casings observed; NOT normalised in any data or join column.
+EURP192,EURP192|eurp192,EURP192:4|eurp192:1,EURP192,Multiple casings observed; NOT normalised in any data or join column.
+EURP193,EURP193|eurp193,EURP193:4|eurp193:1,EURP193,Multiple casings observed; NOT normalised in any data or join column.
+EURP194,EURP194|eurp194,EURP194:4|eurp194:1,EURP194,Multiple casings observed; NOT normalised in any data or join column.
+EURP195,EURP195|eurp195,EURP195:4|eurp195:1,EURP195,Multiple casings observed; NOT normalised in any data or join column.
+EURP250,EURP250|eurp250,EURP250:4|eurp250:1,EURP250,Multiple casings observed; NOT normalised in any data or join column.
+EURP251,EURP251|eurp251,EURP251:4|eurp251:1,EURP251,Multiple casings observed; NOT normalised in any data or join column.
+EURP309,EURP309|eurp309,EURP309:4|eurp309:1,EURP309,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD01,EURPRD01|eurprd01,EURPRD01:4|eurprd01:1,EURPRD01,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD02,EURPRD02|eurprd02,EURPRD02:4|eurprd02:1,EURPRD02,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD03,EURPRD03|eurprd03,EURPRD03:4|eurprd03:1,EURPRD03,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD04,EURPRD04|eurprd04,EURPRD04:4|eurprd04:1,EURPRD04,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD05,EURPRD05|eurprd05,EURPRD05:4|eurprd05:1,EURPRD05,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD06,EURPRD06|eurprd06,EURPRD06:4|eurprd06:1,EURPRD06,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD07,EURPRD07|eurprd07,EURPRD07:4|eurprd07:1,EURPRD07,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD08,EURPRD08|eurprd08,EURPRD08:4|eurprd08:1,EURPRD08,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD09,EURPRD09|eurprd09,EURPRD09:4|eurprd09:1,EURPRD09,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD10,EURPRD10|eurprd10,EURPRD10:4|eurprd10:1,EURPRD10,Multiple casings observed; NOT normalised in any data or join column.
+EURPRD83,EURPRD83|eurprd83,EURPRD83:2|eurprd83:1,EURPRD83,Multiple casings observed; NOT normalised in any data or join column.
+FRA-GO LOCAL,FRA-Go Local|fra-Go Local,FRA-Go Local:2|fra-Go Local:1,FRA-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+FRAP264,FRAP264|frap264,FRAP264:4|frap264:1,FRAP264,Multiple casings observed; NOT normalised in any data or join column.
+GBR-DEDICATED,GBR-Dedicated|gbr-Dedicated,GBR-Dedicated:2|gbr-Dedicated:1,GBR-DEDICATED,Multiple casings observed; NOT normalised in any data or join column.
+GBR-GO LOCAL,GBR-Go Local|gbr-Go Local,GBR-Go Local:3|gbr-Go Local:1,GBR-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+GBRP123,GBRP123|gbrp123,GBRP123:4|gbrp123:1,GBRP123,Multiple casings observed; NOT normalised in any data or join column.
+GBRP265,GBRP265|gbrp265,GBRP265:4|gbrp265:1,GBRP265,Multiple casings observed; NOT normalised in any data or join column.
+GBRP267,GBRP267|gbrp267,GBRP267:4|gbrp267:1,GBRP267,Multiple casings observed; NOT normalised in any data or join column.
+GBRP302,GBRP302|gbrp302,GBRP302:4|gbrp302:1,GBRP302,Multiple casings observed; NOT normalised in any data or join column.
+IDN-GO LOCAL,IDN-Go Local|idn-Go Local,IDN-Go Local:2|idn-Go Local:1,IDN-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+IDNP305,IDNP305|idnp305,IDNP305:4|idnp305:1,IDNP305,Multiple casings observed; NOT normalised in any data or join column.
+IND-GO LOCAL,IND-Go Local|ind-Go Local,IND-Go Local:2|ind-Go Local:1,IND-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+INDP287,INDP287|indp287,INDP287:4|indp287:1,INDP287,Multiple casings observed; NOT normalised in any data or join column.
+INDPRD01,INDPRD01|indprd01,INDPRD01:4|indprd01:1,INDPRD01,Multiple casings observed; NOT normalised in any data or join column.
+ISR-GO LOCAL,ISR-Go Local,ISR-Go Local:3,ISR-GO LOCAL,
+ISRP290,ISRP290|isrp290,ISRP290:4|isrp290:1,ISRP290,Multiple casings observed; NOT normalised in any data or join column.
+ITA-GO LOCAL,ITA-Go Local,ITA-Go Local:3,ITA-GO LOCAL,
+ITAP293,ITAP293|itap293,ITAP293:4|itap293:1,ITAP293,Multiple casings observed; NOT normalised in any data or join column.
+JPN-GO LOCAL,JPN-Go Local|jpn-Go Local,JPN-Go Local:2|jpn-Go Local:1,JPN-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+JPNP286,JPNP286|jpnp286,JPNP286:4|jpnp286:1,JPNP286,Multiple casings observed; NOT normalised in any data or join column.
+JPNP301,JPNP301|jpnp301,JPNP301:4|jpnp301:1,JPNP301,Multiple casings observed; NOT normalised in any data or join column.
+JPNPRD01,JPNPRD01|jpnprd01,JPNPRD01:4|jpnprd01:1,JPNPRD01,Multiple casings observed; NOT normalised in any data or join column.
+KOR-GO LOCAL,KOR-Go Local|kor-Go Local,KOR-Go Local:2|kor-Go Local:1,KOR-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+KORP216,KORP216|korp216,KORP216:4|korp216:1,KORP216,Multiple casings observed; NOT normalised in any data or join column.
+LAM-MULTITENANT,LAM-Multitenant|lam-Multitenant,LAM-Multitenant:2|lam-Multitenant:1,LAM-MULTITENANT,Multiple casings observed; NOT normalised in any data or join column.
+LAMP152,LAMP152|lamp152,LAMP152:4|lamp152:1,LAMP152,Multiple casings observed; NOT normalised in any data or join column.
+LAMP215,LAMP215|lamp215,LAMP215:4|lamp215:1,LAMP215,Multiple casings observed; NOT normalised in any data or join column.
+LAMPRD80,LAMPRD80|lamprd80,LAMPRD80:4|lamprd80:1,LAMPRD80,Multiple casings observed; NOT normalised in any data or join column.
+MEX-GO LOCAL,MEX-Go Local,MEX-Go Local:3,MEX-GO LOCAL,
+MEXP297,MEXP297|mexp297,MEXP297:4|mexp297:1,MEXP297,Multiple casings observed; NOT normalised in any data or join column.
+MYS-GO LOCAL,MYS-Go Local|mys-Go Local,MYS-Go Local:2|mys-Go Local:1,MYS-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+MYSP306,MYSP306|mysp306,MYSP306:4|mysp306:1,MYSP306,Multiple casings observed; NOT normalised in any data or join column.
+NAM-DEDICATED,NAM-Dedicated|nam-Dedicated,NAM-Dedicated:2|nam-Dedicated:1,NAM-DEDICATED,Multiple casings observed; NOT normalised in any data or join column.
+NAM-GCC LOW,NAM-GCC Low|nam-GCC Low,NAM-GCC Low:2|nam-GCC Low:1,NAM-GCC LOW,Multiple casings observed; NOT normalised in any data or join column.
+NAM-ITAR DOD,NAM-ITAR DoD|nam-ITAR DoD,NAM-ITAR DoD:2|nam-ITAR DoD:1,NAM-ITAR DOD,Multiple casings observed; NOT normalised in any data or join column.
+NAM-ITAR GCCH,NAM-ITAR GCCH|nam-ITAR GCCH,NAM-ITAR GCCH:2|nam-ITAR GCCH:1,NAM-ITAR GCCH,Multiple casings observed; NOT normalised in any data or join column.
+NAM-MSIT,NAM-MSIT|nam-MSIT,NAM-MSIT:2|nam-MSIT:1,NAM-MSIT,Multiple casings observed; NOT normalised in any data or join column.
+NAM-MULTITENANT,NAM-Multitenant|nam-Multitenant,NAM-Multitenant:2|nam-Multitenant:1,NAM-MULTITENANT,Multiple casings observed; NOT normalised in any data or join column.
+NAM-SDF,NAM-SDF|nam-SDF,NAM-SDF:2|nam-SDF:1,NAM-SDF,Multiple casings observed; NOT normalised in any data or join column.
+NAM-TDF,NAM-TDF|nam-TDF,NAM-TDF:2|nam-TDF:1,NAM-TDF,Multiple casings observed; NOT normalised in any data or join column.
+NAMP100,NAMP100|namp100,NAMP100:4|namp100:1,NAMP100,Multiple casings observed; NOT normalised in any data or join column.
+NAMP101,NAMP101|namp101,NAMP101:4|namp101:1,NAMP101,Multiple casings observed; NOT normalised in any data or join column.
+NAMP102,NAMP102|namp102,NAMP102:2|namp102:1,NAMP102,Multiple casings observed; NOT normalised in any data or join column.
+NAMP103,NAMP103|namp103,NAMP103:4|namp103:1,NAMP103,Multiple casings observed; NOT normalised in any data or join column.
+NAMP104,NAMP104|namp104,NAMP104:4|namp104:1,NAMP104,Multiple casings observed; NOT normalised in any data or join column.
+NAMP105,NAMP105|namp105,NAMP105:4|namp105:1,NAMP105,Multiple casings observed; NOT normalised in any data or join column.
+NAMP106,NAMP106|namp106,NAMP106:4|namp106:1,NAMP106,Multiple casings observed; NOT normalised in any data or join column.
+NAMP108,NAMP108|namp108,NAMP108:4|namp108:1,NAMP108,Multiple casings observed; NOT normalised in any data or join column.
+NAMP109,NAMP109|namp109,NAMP109:4|namp109:1,NAMP109,Multiple casings observed; NOT normalised in any data or join column.
+NAMP110,namp110,namp110:1,NAMP110,
+NAMP111,namp111,namp111:1,NAMP111,
+NAMP113,NAMP113|namp113,NAMP113:4|namp113:1,NAMP113,Multiple casings observed; NOT normalised in any data or join column.
+NAMP114,NAMP114|namp114,NAMP114:4|namp114:1,NAMP114,Multiple casings observed; NOT normalised in any data or join column.
+NAMP115,NAMP115|namp115,NAMP115:4|namp115:1,NAMP115,Multiple casings observed; NOT normalised in any data or join column.
+NAMP116,NAMP116|namp116,NAMP116:4|namp116:1,NAMP116,Multiple casings observed; NOT normalised in any data or join column.
+NAMP118,NAMP118|namp118,NAMP118:4|namp118:1,NAMP118,Multiple casings observed; NOT normalised in any data or join column.
+NAMP125,NAMP125|namp125,NAMP125:4|namp125:1,NAMP125,Multiple casings observed; NOT normalised in any data or join column.
+NAMP126,NAMP126|namp126,NAMP126:4|namp126:1,NAMP126,Multiple casings observed; NOT normalised in any data or join column.
+NAMP128,NAMP128|namp128,NAMP128:4|namp128:1,NAMP128,Multiple casings observed; NOT normalised in any data or join column.
+NAMP129,NAMP129|namp129,NAMP129:4|namp129:1,NAMP129,Multiple casings observed; NOT normalised in any data or join column.
+NAMP130,NAMP130|namp130,NAMP130:4|namp130:1,NAMP130,Multiple casings observed; NOT normalised in any data or join column.
+NAMP131,NAMP131|namp131,NAMP131:4|namp131:1,NAMP131,Multiple casings observed; NOT normalised in any data or join column.
+NAMP132,NAMP132|namp132,NAMP132:4|namp132:1,NAMP132,Multiple casings observed; NOT normalised in any data or join column.
+NAMP133,NAMP133|namp133,NAMP133:4|namp133:1,NAMP133,Multiple casings observed; NOT normalised in any data or join column.
+NAMP134,NAMP134|namp134,NAMP134:4|namp134:1,NAMP134,Multiple casings observed; NOT normalised in any data or join column.
+NAMP135,NAMP135|namp135,NAMP135:4|namp135:1,NAMP135,Multiple casings observed; NOT normalised in any data or join column.
+NAMP136,NAMP136|namp136,NAMP136:4|namp136:1,NAMP136,Multiple casings observed; NOT normalised in any data or join column.
+NAMP154,NAMP154|namp154,NAMP154:4|namp154:1,NAMP154,Multiple casings observed; NOT normalised in any data or join column.
+NAMP156,NAMP156,NAMP156:1,NAMP156,
+NAMP157,NAMP157|namp157,NAMP157:4|namp157:1,NAMP157,Multiple casings observed; NOT normalised in any data or join column.
+NAMP158,NAMP158|namp158,NAMP158:4|namp158:1,NAMP158,Multiple casings observed; NOT normalised in any data or join column.
+NAMP159,NAMP159|namp159,NAMP159:4|namp159:1,NAMP159,Multiple casings observed; NOT normalised in any data or join column.
+NAMP161,NAMP161|namp161,NAMP161:4|namp161:1,NAMP161,Multiple casings observed; NOT normalised in any data or join column.
+NAMP162,NAMP162|namp162,NAMP162:4|namp162:1,NAMP162,Multiple casings observed; NOT normalised in any data or join column.
+NAMP163,NAMP163|namp163,NAMP163:4|namp163:1,NAMP163,Multiple casings observed; NOT normalised in any data or join column.
+NAMP164,NAMP164|namp164,NAMP164:4|namp164:1,NAMP164,Multiple casings observed; NOT normalised in any data or join column.
+NAMP166,NAMP166|namp166,NAMP166:4|namp166:1,NAMP166,Multiple casings observed; NOT normalised in any data or join column.
+NAMP167,NAMP167|namp167,NAMP167:4|namp167:1,NAMP167,Multiple casings observed; NOT normalised in any data or join column.
+NAMP169,NAMP169|namp169,NAMP169:4|namp169:1,NAMP169,Multiple casings observed; NOT normalised in any data or join column.
+NAMP170,NAMP170|namp170,NAMP170:4|namp170:1,NAMP170,Multiple casings observed; NOT normalised in any data or join column.
+NAMP171,NAMP171|namp171,NAMP171:4|namp171:1,NAMP171,Multiple casings observed; NOT normalised in any data or join column.
+NAMP172,NAMP172|namp172,NAMP172:4|namp172:1,NAMP172,Multiple casings observed; NOT normalised in any data or join column.
+NAMP173,NAMP173|namp173,NAMP173:4|namp173:1,NAMP173,Multiple casings observed; NOT normalised in any data or join column.
+NAMP197,NAMP197|namp197,NAMP197:4|namp197:1,NAMP197,Multiple casings observed; NOT normalised in any data or join column.
+NAMP220,NAMP220|namp220,NAMP220:4|namp220:1,NAMP220,Multiple casings observed; NOT normalised in any data or join column.
+NAMP221,NAMP221|namp221,NAMP221:4|namp221:1,NAMP221,Multiple casings observed; NOT normalised in any data or join column.
+NAMP222,NAMP222|namp222,NAMP222:4|namp222:1,NAMP222,Multiple casings observed; NOT normalised in any data or join column.
+NAMP223,NAMP223|namp223,NAMP223:4|namp223:1,NAMP223,Multiple casings observed; NOT normalised in any data or join column.
+NAMP242,NAMP242,NAMP242:1,NAMP242,
+NAMP243,NAMP243,NAMP243:1,NAMP243,
+NAMP283,NAMP283|namp283,NAMP283:2|namp283:1,NAMP283,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD00,NAMPRD00|namprd00,NAMPRD00:2|namprd00:1,NAMPRD00,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD01,NAMPRD01,NAMPRD01:4,NAMPRD01,
+NAMPRD02,NAMPRD02|namprd02,NAMPRD02:4|namprd02:1,NAMPRD02,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD03,NAMPRD03|namprd03,NAMPRD03:4|namprd03:1,NAMPRD03,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD04,NAMPRD04|namprd04,NAMPRD04:4|namprd04:1,NAMPRD04,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD05,NAMPRD05|namprd05,NAMPRD05:4|namprd05:1,NAMPRD05,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD06,NAMPRD06|namprd06,NAMPRD06:4|namprd06:1,NAMPRD06,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD07,NAMPRD07|namprd07,NAMPRD07:4|namprd07:1,NAMPRD07,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD08,NAMPRD08|namprd08,NAMPRD08:4|namprd08:1,NAMPRD08,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD09,NAMPRD09|namprd09,NAMPRD09:2|namprd09:1,NAMPRD09,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD10,NAMPRD10|namprd10,NAMPRD10:4|namprd10:1,NAMPRD10,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD11,NAMPRD11|namprd11,NAMPRD11:4|namprd11:1,NAMPRD11,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD12,NAMPRD12|namprd12,NAMPRD12:4|namprd12:1,NAMPRD12,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD13,NAMPRD13|namprd13,NAMPRD13:4|namprd13:1,NAMPRD13,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD14,NAMPRD14|namprd14,NAMPRD14:4|namprd14:1,NAMPRD14,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD15,NAMPRD15|namprd15,NAMPRD15:4|namprd15:1,NAMPRD15,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD16,NAMPRD16|namprd16,NAMPRD16:4|namprd16:1,NAMPRD16,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD17,NAMPRD17|namprd17,NAMPRD17:4|namprd17:1,NAMPRD17,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD18,NAMPRD18|namprd18,NAMPRD18:4|namprd18:1,NAMPRD18,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD19,NAMPRD19|namprd19,NAMPRD19:4|namprd19:1,NAMPRD19,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD20,NAMPRD20|namprd20,NAMPRD20:4|namprd20:1,NAMPRD20,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD21,NAMPRD21|namprd21,NAMPRD21:2|namprd21:1,NAMPRD21,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD22,NAMPRD22|namprd22,NAMPRD22:4|namprd22:1,NAMPRD22,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD84,NAMPRD84|namprd84,NAMPRD84:4|namprd84:1,NAMPRD84,Multiple casings observed; NOT normalised in any data or join column.
+NAMPRD85,NAMPRD85|namprd85,NAMPRD85:4|namprd85:1,NAMPRD85,Multiple casings observed; NOT normalised in any data or join column.
+NOR-GO LOCAL,NOR-Go Local|nor-Go Local,NOR-Go Local:2|nor-Go Local:1,NOR-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+NORP279,NORP279|norp279,NORP279:4|norp279:1,NORP279,Multiple casings observed; NOT normalised in any data or join column.
+NZL-GO LOCAL,NZL-Go Local|nzl-Go Local,NZL-Go Local:2|nzl-Go Local:1,NZL-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+NZLP299,NZLP299|nzlp299,NZLP299:4|nzlp299:1,NZLP299,Multiple casings observed; NOT normalised in any data or join column.
+POL-GO LOCAL,POL-Go Local,POL-Go Local:3,POL-GO LOCAL,
+POLP291,POLP291|polp291,POLP291:4|polp291:1,POLP291,Multiple casings observed; NOT normalised in any data or join column.
+QAT-GO LOCAL,QAT-Go Local|qat-Go Local,QAT-Go Local:2|qat-Go Local:1,QAT-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+QATP289,QATP289|qatp289,QATP289:4|qatp289:1,QATP289,Multiple casings observed; NOT normalised in any data or join column.
+SGP-GO LOCAL,SGP-Go Local|sgp-Go Local,SGP-Go Local:2|sgp-Go Local:1,SGP-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+SGPP274,SGPP274|sgpp274,SGPP274:4|sgpp274:1,SGPP274,Multiple casings observed; NOT normalised in any data or join column.
+SWE-GO LOCAL,SWE-Go Local|swe-Go Local,SWE-Go Local:2|swe-Go Local:1,SWE-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+SWEP280,SWEP280|swep280,SWEP280:4|swep280:1,SWEP280,Multiple casings observed; NOT normalised in any data or join column.
+TWN-GO LOCAL,TWN-Go Local|twn-Go Local,TWN-Go Local:2|twn-Go Local:1,TWN-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+TWNP295,TWNP295|twnp295,TWNP295:4|twnp295:1,TWNP295,Multiple casings observed; NOT normalised in any data or join column.
+ZAF-GO LOCAL,ZAF-Go Local|zaf-Go Local,ZAF-Go Local:2|zaf-Go Local:1,ZAF-GO LOCAL,Multiple casings observed; NOT normalised in any data or join column.
+ZAFP275,ZAFP275|zafp275,ZAFP275:4|zafp275:1,ZAFP275,Multiple casings observed; NOT normalised in any data or join column.

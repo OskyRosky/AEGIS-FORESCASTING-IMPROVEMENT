@@ -1,0 +1,43 @@
+history_depth,staleness_days,viewer_buildable_cases,distinct_entity_tokens,distinct_physical_entities,routes_retained,routes_eliminated,total_forecast_buildable_unchanged
+0,no limit,596,391,202,6,none,894
+0,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+0,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+0,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+0,60,555,389,202,6,none,894
+0,90,596,391,202,6,none,894
+30,no limit,596,391,202,6,none,894
+30,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+30,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+30,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+30,60,555,389,202,6,none,894
+30,90,596,391,202,6,none,894
+60,no limit,596,391,202,6,none,894
+60,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+60,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+60,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+60,60,555,389,202,6,none,894
+60,90,596,391,202,6,none,894
+90,no limit,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+90,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+90,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+90,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+90,60,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+90,90,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+120,no limit,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+120,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+120,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+120,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+120,60,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+120,90,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+150,no limit,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+150,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+150,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+150,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+150,60,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+150,90,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+180,no limit,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+180,7,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+180,14,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+180,30,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+180,60,353,195,195,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
+180,90,394,197,197,4,HDD|Organic|Basilisk|Forest|HDD|Organic|Basilisk|Region,894
