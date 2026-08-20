@@ -1,0 +1,8 @@
+route_group,cases,in_selector,observed_values,fifteen_model_estimates,forecast_values,expected_shiny_behavior
+HDD Basilisk,202,YES,YES,YES,YES,Viewer: actuals + 15 governed model backtests. Forecast: actual history + forward forecast with the Forecast start boundary.
+HDD EDB Consumer,197,YES,YES,YES,YES,Viewer: actuals + 15 governed model backtests. Forecast: actual history + forward forecast with the Forecast start boundary.
+HDD EDB Enterprise,197,YES,YES,YES,YES,Viewer: actuals + 15 governed model backtests. Forecast: actual history + forward forecast with the Forecast start boundary.
+SSD Phoenix Low Volume No Efficiency,147,YES,NO,NO,YES,"Not in the Viewer selector. Forecast: forecast-only chart with the Forecast start boundary, no fabricated actuals, not eligible for Accuracy."
+SSD Phoenix Low Volume With Efficiency,151,YES,NO,NO,YES,"Not in the Viewer selector. Forecast: forecast-only chart with the Forecast start boundary, no fabricated actuals, not eligible for Accuracy."
+CPU,0,YES_AS_BACKEND_GAP,NO,NO,NO,Selector stops at an explicit BACKEND_GAP state. No data row exists and none is fabricated. Requires an authorised read-only SQL extraction.
+IOPS,0,YES_AS_BACKEND_GAP,NO,NO,NO,Selector stops at an explicit BACKEND_GAP state. No data row exists and none is fabricated. Requires an authorised read-only SQL extraction.

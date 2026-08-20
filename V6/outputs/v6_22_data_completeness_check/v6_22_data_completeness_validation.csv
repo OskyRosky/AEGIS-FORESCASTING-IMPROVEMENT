@@ -1,0 +1,41 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"A-01","Total local cohort exposed to Shiny selectors","894 route x key cases","894","PASS",TRUE
+"B-01","Full Viewer/backtest cases","596 route x key cases","596","PASS",TRUE
+"B-02","Full Viewer cases have observed actual values","596","596","PASS",TRUE
+"B-03","Full Viewer cases have governed 15-model backtest estimates","596","596","PASS",TRUE
+"B-04","Full Viewer cases have forward forecast values","596","596","PASS",TRUE
+"C-01","Forecast-only cases","298 route x key cases","298","PASS",TRUE
+"C-02","Forecast-only cases have forecast values","298","298","PASS",TRUE
+"C-03","Forecast-only cases have no fabricated observed values","0","0 in the Viewer artifact and 0 actual records in the forward artifact","PASS",TRUE
+"C-04","Forecast-only cases have no governed 15-model backtest estimates","0","0","PASS",TRUE
+"C-05","Forecast-only cases classified as forecast-only","298","298 classified FORECAST_ONLY, taxonomy_alignment LEGACY_VARIANT","PASS",TRUE
+"C-06","Forecast-only cases not eligible for Accuracy","0","0 present in v6_21b_accuracy_metrics.parquet","PASS",TRUE
+"D-01","PROD excluded from the active cohort","0 rows in the manifest","0","PASS",TRUE
+"D-02","PROD recorded in declared-not-buildable","2 cases","2, both SSD Phoenix Forest, reason INVALID_ENTITY_QUARANTINED","PASS",TRUE
+"E-01","CPU active cohort rows","0","0","PASS",TRUE
+"E-02","IOPS active cohort rows","0","0","PASS",TRUE
+"E-03","CPU and IOPS never fabricated","No data rows","No data rows; declared SQL_REQUIRED","PASS",TRUE
+"CLS-01","FULL_VIEWER_AND_FORECAST class count","596","596","PASS",TRUE
+"CLS-02","FORECAST_ONLY class count","298","298","PASS",TRUE
+"CLS-03","INVALID_OR_QUARANTINED outside the manifest","2","2","PASS",TRUE
+"CLS-04","MISSING_OR_INCONSISTENT class count","0","0","PASS",TRUE
+"MOD-01","Every full Viewer case has exactly 15 governed models","596 with exactly 15","596; 0 cases with a count other than 15","PASS",TRUE
+"MOD-02","Governed model list verified","15 names","ARIMA_Fixed, AutoARIMA, ETS Explicit, ETS_Current, Theta, FixedGrowth_1_5, FixedGrowth_3, FixedGrowth_4, FixedGrowth_6, LightGBM, LinearRegression, XGBoost, FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN","PASS",TRUE
+"MOD-03","No claim that all 894 cases carry 15-model estimates","Only 596 do","Only 596; the other 298 carry zero","PASS",TRUE
+"SSD-01","SSD Phoenix present in the cohort and selection list","298","298","PASS",TRUE
+"SSD-02","SSD Phoenix has forecast values","298","298","PASS",TRUE
+"SSD-03","SSD Phoenix has no observed actual values","0","0","PASS",TRUE
+"SSD-04","SSD Phoenix has no governed 15-model estimates","0","0","PASS",TRUE
+"SSD-05","SSD Phoenix not eligible for Accuracy or backtest","0","0","PASS",TRUE
+"FC-01","Forecast values exist for every active local case","894","894","PASS",TRUE
+"FC-02","Forward forecast row count per case","Uniform","732 rows per case across all 894","PASS",FALSE
+"OBS-01","Observed row count range for full Viewer cases","Reported","2250 to 5400 rows per case","PASS",FALSE
+"TT-01","Dashboard truth table emitted","7 route groups","7: HDD Basilisk, HDD EDB Consumer, HDD EDB Enterprise, two SSD Phoenix variants, CPU, IOPS","PASS",FALSE
+"GOV-01","V6.22 manifest not modified","Unchanged","Unchanged; read-only","PASS",TRUE
+"GOV-02","Final selection list not modified","Unchanged","Unchanged; read-only","PASS",TRUE
+"GOV-03","No artifact regenerated","None","None","PASS",TRUE
+"GOV-04","No models run or trained","None","None","PASS",TRUE
+"GOV-05","No SQL or Tesseract extraction","None","None","PASS",TRUE
+"GOV-06","No Shiny modification","None","No file under V6/shiny_app modified","PASS",TRUE
+"GOV-07","Productive parquet unchanged","Byte size and mtime","14280896 and 6210430 bytes, mtimes unchanged","PASS",TRUE
+"GOV-08","V6.23 not started","Not started","Not started","PASS",TRUE

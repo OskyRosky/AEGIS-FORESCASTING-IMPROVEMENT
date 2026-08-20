@@ -1,0 +1,18 @@
+model_name,in_governed_15,full_viewer_cases_expected,full_viewer_cases_with_model,notes
+ARIMA_Fixed,True,596,596,Verified through the per-case governed model count.
+AutoARIMA,True,596,596,Verified through the per-case governed model count.
+ETS Explicit,True,596,596,Verified through the per-case governed model count.
+ETS_Current,True,596,596,Verified through the per-case governed model count.
+Theta,True,596,596,Verified through the per-case governed model count.
+FixedGrowth_1_5,True,596,596,Verified through the per-case governed model count.
+FixedGrowth_3,True,596,596,Verified through the per-case governed model count.
+FixedGrowth_4,True,596,596,Verified through the per-case governed model count.
+FixedGrowth_6,True,596,596,Verified through the per-case governed model count.
+LightGBM,True,596,596,Verified through the per-case governed model count.
+LinearRegression,True,596,596,Verified through the per-case governed model count.
+XGBoost,True,596,596,Verified through the per-case governed model count.
+FNAR-V2,True,596,596,Verified through the per-case governed model count.
+NLIN-DLIN_FIXED,True,596,596,Verified through the per-case governed model count.
+SMLP-TCN,True,596,596,Verified through the per-case governed model count.
+ANY_CASE_NOT_EXACTLY_15,False,596,0,Count of FULL_VIEWER_AND_FORECAST cases whose governed model count is not 15.
+FORECAST_ONLY_CASES_WITH_GOVERNED_MODELS,False,298,0,Must be 0: no forecast-only case may carry governed backtest estimates.
