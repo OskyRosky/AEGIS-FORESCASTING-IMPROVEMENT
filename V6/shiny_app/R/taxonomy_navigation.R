@@ -77,6 +77,24 @@ taxonomy_values <- function(rows, column) {
   sort(values)
 }
 
+# V6.23-P0 | Viewer scope counts derived from the shared contract, never
+# hardcoded. Distinguishes the three numbers the header must not conflate:
+#   backtest      cases carrying actuals and the 15 governed model backtests
+#   forecast_only cases visible in the selector but with no actuals
+#   total         everything the Viewer selector exposes
+taxonomy_viewer_scope <- function(contract = taxonomy_navigation_data()) {
+  rows <- taxonomy_page_rows("viewer", contract)
+  rows <- rows[rows$contract_row_type == "OPERATIONAL_ENTITY", , drop = FALSE]
+  backtest <- sum(rows$viewer_eligible)
+  list(
+    total = nrow(rows),
+    backtest = backtest,
+    forecast_only = nrow(rows) - backtest,
+    routes = length(unique(rows$route_id)),
+    backtest_routes = length(unique(rows$route_id[rows$viewer_eligible]))
+  )
+}
+
 taxonomy_filter <- function(rows, column, value) {
   if (is.null(value) || length(value) == 0 || is.na(value) || !nzchar(value)) {
     return(rows[0, , drop = FALSE])

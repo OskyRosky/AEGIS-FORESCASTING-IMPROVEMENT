@@ -29,6 +29,13 @@ def truth(value: str) -> bool:
     return value.strip().lower() == "true"
 
 
+# V6.23-P0 | Entities excluded from the Viewer selector.
+# PROD is not a forest identifier: it appears twice in the prepared forecast
+# metadata and zero times in the Viewer metadata. Quarantined per owner
+# decision D2 recorded in V6.22.
+QUARANTINED_ENTITIES = {"PROD"}
+
+
 def flag(value: bool) -> str:
     return "TRUE" if value else "FALSE"
 
@@ -189,7 +196,7 @@ def main() -> None:
                 "source_scenario": row["scenario"],
                 "source_granularity": row["granularity"],
                 "source_series_key": row["series_key"],
-                "viewer_visible": flag(viewer_row is not None),
+                "viewer_visible": flag(row["series_key"] not in QUARANTINED_ENTITIES),
                 "forecast_visible": "TRUE",
                 "viewer_eligible": flag(
                     viewer_row is not None

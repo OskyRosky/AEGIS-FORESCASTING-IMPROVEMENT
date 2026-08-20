@@ -5,14 +5,17 @@ section_explorer <- function() {
   horizon_named <- stats::setNames(
     as.character(horizon_opts), paste0(horizon_opts, " days")
   )
+  # V6.23-P0 | Counts derived from the shared contract, never hardcoded.
+  fvp_scope <- taxonomy_viewer_scope()
 
   panel(
     "explorer",
     section_head(
       "Forecast Viewer",
       paste(
-        "Actual values versus selected model backtests for governed,",
-        "actual-bearing prepared routes."
+        "Actual values versus selected model backtests for actual-bearing",
+        "prepared routes, plus an explicit forecast-only state for prepared",
+        "routes that carry no actuals."
       )
     ),
     home_collapse(
@@ -22,9 +25,16 @@ section_explorer <- function() {
         class = "fvb-how-list",
         tags$li("Metric is the first selection control."),
         tags$li("Only dimensions that apply to the selected operational route appear."),
-        tags$li("All 596 governed HDD entities and exactly 15 AEGIS models remain available."),
+        tags$li(sprintf(
+          paste("%s prepared cases are visible: %s carry actuals and the 15 AEGIS",
+                "model backtests, and %s are forecast-only."),
+          fvp_scope$total, fvp_scope$backtest, fvp_scope$forecast_only
+        )),
         tags$li("Actual values are known history; model lines are prepared backtests."),
-        tags$li("SSD-Phoenix is forecast-only and is not exposed in Viewer."),
+        tags$li(
+          "SSD-Phoenix is selectable but forecast-only: it renders an explicit ",
+          "state instead of a backtest, and no actuals are fabricated."
+        ),
         tags$li(
           "Shiny reads prepared metadata and Parquet; it does not train, backtest, ",
           "aggregate, extract, or write data."
@@ -38,7 +48,13 @@ section_explorer <- function() {
         class = "fvb-setup-head",
         tags$span(class = "fvx-section-kicker", "A"),
         tags$h3(class = "fvx-section-title", "Selection"),
-        tags$span(class = "pill pill-blue", "596 entities / 6 routes")
+        tags$span(class = "pill pill-blue", sprintf(
+          "%s cases / %s routes", fvp_scope$total, fvp_scope$routes
+        )),
+        tags$span(class = "pill pill-slate", sprintf(
+          "%s backtest \u00b7 %s forecast-only",
+          fvp_scope$backtest, fvp_scope$forecast_only
+        ))
       ),
       tags$p(
         class = "fvb-setup-lead",

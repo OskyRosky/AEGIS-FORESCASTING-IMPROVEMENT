@@ -218,24 +218,44 @@ viewer_pilot_server <- function(input, output, session) {
     )
   })
 
+  # V6.23-P0 | A route that resolves but carries no actuals is FORECAST-ONLY,
+  # not "unavailable". SSD-Phoenix is now visible in the Viewer selector so the
+  # local cohort is honestly exposed; it renders an explicit state instead of a
+  # broken empty backtest.
+  fvp_forecast_only <- reactive({
+    route <- fvp_route()
+    !is.null(route) && !isTRUE(route$has_actuals)
+  })
+
   output$fvp_availability <- renderUI({
+    route <- fvp_route()
     if (isTRUE(fvp_current_available())) {
-      route <- fvp_route()
-      tags$div(
+      return(tags$div(
         class = "fvb-pilot-status is-available",
         tags$span(class = "pill pill-green", "Backtest available"),
         paste0(
           "Prepared actual and 15-model backtest rows are available for this ",
           tolower(route$entity_label), "."
         )
-      )
-    } else {
-      tags$div(
-        class = "fvb-pilot-status is-unavailable",
-        tags$span(class = "pill pill-amber", "Unavailable"),
-        "Backtest not available for this combination."
-      )
+      ))
     }
+    if (isTRUE(fvp_forecast_only())) {
+      return(tags$div(
+        class = "fvb-pilot-status is-forecast-only",
+        tags$span(class = "pill pill-teal", "Forecast-only"),
+        paste0(
+          "No observed actuals or 15-model backtest estimates are available for ",
+          route$display_label, ". Nothing was fabricated. ",
+          "Open the Forecast section to see the prepared forward forecast for this ",
+          tolower(route$entity_label), "."
+        )
+      ))
+    }
+    tags$div(
+      class = "fvb-pilot-status is-unavailable",
+      tags$span(class = "pill pill-amber", "Unavailable"),
+      "Backtest not available for this combination."
+    )
   })
 
   output$fvp_model_groups <- renderUI({
@@ -361,12 +381,27 @@ viewer_pilot_server <- function(input, output, session) {
 
   output$fvp_chart <- highcharter::renderHighchart({
     if (!isTRUE(fvp_analysis_ready())) {
+      if (isTRUE(fvp_forecast_only())) {
+        return(fvp_empty_chart(paste(
+          "Forecast-only route.",
+          "No observed actuals or 15-model backtest estimates exist for this",
+          "selection, so there is nothing to backtest.",
+          "Use the Forecast section for the prepared forward forecast."
+        )))
+      }
       return(fvp_empty_chart(
         "Select Metric through Models, then click Analyze Backtest."
       ))
     }
     request <- fvp_request()
     if (!isTRUE(request$available)) {
+      if (isTRUE(fvp_forecast_only())) {
+        return(fvp_empty_chart(paste(
+          "Forecast-only route.",
+          "No observed actuals or 15-model backtest estimates exist for this",
+          "selection. Nothing was fabricated."
+        )))
+      }
       return(fvp_empty_chart("Backtest not available for this combination."))
     }
     if (length(request$models) == 0) {
