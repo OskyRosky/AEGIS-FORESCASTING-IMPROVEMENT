@@ -1,0 +1,7 @@
+phase,sequence,scope,models,key_combinations,expected_rows,budget_minutes,entry_gate,stop_rule,output
+Phase 0,0,Preflight,0,0,0,15,"V6.16 and V6.15 gates","Stop before models on any blocking failure","Preflight, scope matrix, execution plan"
+Phase A,1,Missing Viewer HDD,12,557,1769400,140,"Preflight PASS","Stop on first systemic failure or when safe-stop threshold is reached","viewer_backtest_phase_a_nonneural.csv"
+Phase B,2,Missing Viewer HDD,3,557,442350,50,"Phase A PASS","Stop on first systemic failure or when safe-stop threshold is reached","viewer_backtest_phase_b_neural.csv"
+Phase C,3,Local forecast-eligible scope,0,896,NA,12,"Phase B PASS","Block unavailable CPU/IOPS; never fabricate","forecast_forward_outputs_v6_17_full.csv"
+Phase D,4,Productive artifacts and metadata,15,596,2416050,13,"Phases A-C validated","Never promote partial files as full","Full Viewer/Forecast artifacts and metadata"
+Phase E,5,Dashboard feeding and live validation,0,0,0,10,"Phase D PASS","Do not wire invalid or partial artifacts","Shiny full-artifact providers and live review"

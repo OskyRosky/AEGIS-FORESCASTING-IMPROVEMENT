@@ -1,0 +1,23 @@
+path,change_type,purpose,validation
+V6/shiny_app/R/taxonomy_navigation.R,CREATED,Shared Viewer and Forecast taxonomy contract loader resolver and Shiny module with callable reset,R parse plus 1492-case resolver and outer-reset browser validation
+V6/shiny_app/global.R,MODIFIED,Source the shared taxonomy module before Viewer and Forecast,R parse and Shiny startup
+V6/shiny_app/R/helpers.R,MODIFIED,Preserve governed Viewer model family labels in the always-visible panel,R parse and four-family browser validation
+V6/shiny_app/R/viewer_pilot.R,MODIFIED,Preserve the governed 15-model universe for valid incomplete and unavailable routes while disabling unrunnable Analyze actions,R parse exact-model contract and browser journey validation
+V6/shiny_app/R/forecast_pilot.R,MODIFIED,Render artifact-derived actual and forward series with mandatory emphasized Forecast start boundary conditional intervals and route-aware legend,R parse HDD 30/60 SSD-Phoenix NAMPRD07 Highcharts inspection and screenshots
+V6/shiny_app/ui/tabs_v6_16_viewer.R,MODIFIED,Present Forecast structure and explicit chart transition legend while preserving accepted Viewer structure,R parse and browser DOM validation
+V6/shiny_app/server/server.R,MODIFIED,Remove obsolete dynamic-output registrations,R parse and Shiny startup
+V6/shiny_app/ui/body.R,MODIFIED,Update Viewer and Forecast guide text to user-facing selection terminology,R parse and browser rendering
+V6/shiny_app/www/custom.css,MODIFIED,Preserve dropdown fix and style the Forecast actual-boundary-forward transition legend,Browser validation in Forecast Results
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/build_v6_18_navigation_contract.py,CREATED,Generate prepared contract and preflight artifacts,Executed successfully
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/run_v6_18_contract_validation.R,CREATED,Run full contract stale-state dropdown model-panel Forecast Start and final chart validation,83 checks passed
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_preflight_inventory.csv,CREATED,Freeze operational counts and worktree facts,Generated from governed metadata and git
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_navigation_contract.csv,CREATED,Central prepared navigation contract consumed by both pages with neutral user-facing route messaging,901 rows validated
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_current_supported_routes.csv,CREATED,Freeze eight operational routes and case counts,Counts reconcile to 596 Viewer and 896 Forecast cases
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_taxonomy_valid_not_implemented.csv,CREATED,Record 30 routable catalog routes absent from V6.17,Count and route IDs validated
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_viewer_validation.csv,CREATED,Persist Viewer automated owner-polish and final regression validation,30 checks passed
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_forecast_validation.csv,CREATED,Persist Forecast structure boundary exact-route chart and visual validation,36 checks passed
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_reactive_reset_validation.csv,CREATED,Persist stale-state control-removal outer-reset model-preservation and Forecast reset validation,17 checks passed
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_dashboard_feeding_contract.csv,CREATED,Document read-only lazy dashboard feeds Forecast render-only windowing and artifact-derived boundary,Four feeds validated
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/AEGIS_Shiny_Dynamic_Taxonomy_UI_Implementation.md,CREATED,Implementation handoff and owner visual checklist,Reviewed against V6.18 requirements
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_files_changed.csv,CREATED,Complete V6.18 change inventory,Compared with primary git status
+V6/outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_closure_summary.md,CREATED,Stage status and remaining owner gate,Awaiting owner visual validation

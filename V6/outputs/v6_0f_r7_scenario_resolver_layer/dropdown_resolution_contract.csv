@@ -1,0 +1,9 @@
+control,resolver_function,metadata_slice,slice_rows,slice_size_kb,depends_on,measured_values,empty_state_behaviour,status
+Metric,get_available_metrics(),available_scenarios.csv,8,0.6,none,HDD - Basilisk | HDD - EDB | SSD - Phoenix,Never empty; Memory is absent by design,IMPLEMENTED
+Scenario,get_available_scenarios(metric),available_scenarios.csv,8,0.6,metric,HDD - EDB: Consumer Enterprise; HDD - Basilisk: Basilisk; SSD - Phoenix: 2 scenarios,Renders an explicit empty state,IMPLEMENTED
+Granularity,get_available_granularities(metric scenario),available_scenarios.csv,8,0.6,metric + scenario,HDD: Region and Forest; SSD - Phoenix: Forest only,Single value is rendered disabled,IMPLEMENTED
+Key,get_available_keys(metric scenario granularity),available_keys.csv,896,46.9,metric + scenario + granularity,HDD - EDB Forest 152; HDD - Basilisk Forest 155; SSD - Phoenix 148 and 152; Region 45 to 47,Renders an explicit empty state,IMPLEMENTED
+Forecast Version,get_available_versions(metric scenario granularity key),available_versions.csv,16,1.1,metric + scenario + granularity,HDD - EDB Region 3; HDD - Basilisk 1; SSD - Phoenix 3,single_version flag disables the control,IMPLEMENTED
+Model / Type,get_available_model_types(metric scenario granularity),available_model_types.csv,88,8.3,metric + scenario + granularity,HDD - EDB Forest 4 families; HDD - Basilisk 2 types; SSD - Phoenix not applicable,applies = FALSE hides the control entirely,IMPLEMENTED
+Badge,resolve_series_query(),scenario_registry.csv,36,5.5,metric + scenario,GREEN for HDD; AMBER for SSD - Phoenix; GREY for blocked,Always rendered next to the chart title,IMPLEMENTED
+Out-of-scope notice,scenario_registry.csv status field,scenario_registry.csv,36,5.5,none,Memory OUT_OF_SCOPE; 22 SSD scenarios NOT_EXPOSED; CPU and IOPS NOT_AVAILABLE_IN_PHASE1; SSD - MCDB BLOCKED_O1,Always visible,IMPLEMENTED

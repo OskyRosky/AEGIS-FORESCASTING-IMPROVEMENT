@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "artifact": "V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_forward_outputs_v6_16_pilot.csv",
+  "rows": 78142,
+  "metrics": 2,
+  "scenario_granularity_combinations": 3,
+  "key_combinations": 345,
+  "hdd_keys": 45,
+  "ssd_key_combinations": 300,
+  "maximum_forecast_window_days": 180,
+  "maximum_actual_history_days": 365,
+  "models_run": false,
+  "tesseract_accessed": false,
+  "full_backtest_started": false
+}

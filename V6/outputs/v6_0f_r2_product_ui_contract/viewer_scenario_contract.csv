@@ -1,0 +1,19 @@
+row_id,metric,scenario,granularity,key_column,key_count,actual_source,forecast_source,type_model_dimension,viewer_status,badge,chart_behaviour,exposed_in_first_release
+V01,HDD - EDB,Enterprise,Region,Key,52,forecast_substrateBE_hdd_region ModelVersion='actual',forecast_substrateBE_hdd_region,ModelVersion,FULL,GREEN,Actual line plus forecast line plus interval when available,yes
+V02,HDD - EDB,Enterprise,Forest,forest_name,318,forecast_substrateBE_hdd type='actual',forecast_substrateBE_hdd,type,FULL,GREEN,Actual line plus one line per selected model type,yes
+V03,HDD - EDB,Consumer,Region,Key,52,forecast_substrateBE_hdd_region ModelVersion='actual',forecast_substrateBE_hdd_region,ModelVersion,FULL,GREEN,Actual line plus forecast line,yes
+V04,HDD - EDB,Consumer,Forest,forest_name,318,forecast_substrateBE_hdd type='actual',forecast_substrateBE_hdd,type,FULL,GREEN,Actual line plus one line per selected model type,yes
+V05,HDD - Basilisk,Basilisk,Region,Key,52,forecast_substrateBE_hdd_region ModelVersion='actual',forecast_substrateBE_hdd_region,ModelVersion,FULL,GREEN,Actual line plus forecast line,yes
+V06,HDD - Basilisk,Basilisk,Forest,forest_name,318,forecast_substrateBE_hdd type='actual',forecast_substrateBE_hdd,type,FULL,GREEN,Actual line plus one line per selected model type,yes
+V07,CPU,Consumed,Region,Key,46,none confirmed,forecast_substrateBE_cpu_region,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice; no actual series drawn,yes
+V08,CPU,Consumed,Forest,Forest_SKU,714,none confirmed,forecast_substrateBE_cpu,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V09,CPU Failover,Failover,Region,Key,46,none confirmed,forecast_substrateBE_cpu_region,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V10,CPU Failover,Failover,Forest,Forest_SKU,714,none confirmed,forecast_substrateBE_cpu,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V11,IOPS,Consumed,Region,Key,46,none confirmed,forecast_substrateBE_iops_region,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V12,IOPS,Consumed,Forest,Forest_SKU,552,none confirmed,forecast_substrateBE_iops,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V13,IOPS Failover,Failover,Region,Key,46,none confirmed,forecast_substrateBE_iops_region,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V14,IOPS Failover,Failover,Forest,Forest_SKU,552,none confirmed,forecast_substrateBE_iops,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V15,SSD - Phoenix,Low Volume No Efficiency,Forest,Key,163,none confirmed,forecast_substrateBE_SSD_TotalForecast,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V16,SSD - Phoenix,Low Volume With Efficiency,Forest,Key,163,none confirmed,forecast_substrateBE_SSD_TotalForecast,none,FORECAST_ONLY,AMBER,Forecast line only plus amber notice,yes
+V17,SSD - MCDB,pending definition,Forest,Key,163,none confirmed,forecast_substrateBE_SSD_TotalForecast,none,FORECAST_ONLY,AMBER,Not rendered until O1 is answered,no
+V18,Memory,not available,none,none,0,none,none,none,OUT_OF_SCOPE,GREY,Not selectable; covered by the out-of-scope notice,no

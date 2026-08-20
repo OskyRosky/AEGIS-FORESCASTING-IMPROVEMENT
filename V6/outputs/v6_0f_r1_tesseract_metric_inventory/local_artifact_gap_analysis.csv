@@ -1,0 +1,21 @@
+area,tesseract_object,tesseract_rows,tesseract_keys,tesseract_versions,local_artifact,local_rows,local_keys,local_versions,gap_type,severity,note
+Accuracy metrics,forecast_substrateBE_hdd_region_metrics,5317,45,120 exec dates,V6/data/raw/forecast_substrateBE_hdd_region_metrics.csv,2550,45,n/a,STALE_SNAPSHOT,HIGH,Local copy holds 48 percent of current rows; Tesseract refreshed 2026-08-12 13:07
+Accuracy metrics,forecast_substrateBE_hdd_forest_metrics,18414,155,120 exec dates,V6/data/raw/forecast_substrateBE_hdd_forest_metrics.csv,8828,155,n/a,STALE_SNAPSHOT,HIGH,Local copy holds 48 percent of current rows
+Accuracy metrics,forecast_substrateBE_ssd_phx_lvwe_metrics,16158,137,120 exec dates,V6/data/raw/forecast_substrateBE_ssd_phx_lvwe_metrics.csv,7776,137,n/a,STALE_SNAPSHOT,HIGH,Local copy holds 48 percent of current rows
+Accuracy metrics,forecast_substrateBE_ssd_phx_lvne_metrics,16295,137,121 exec dates,V6/data/raw/forecast_substrateBE_ssd_phx_lvne_metrics.csv,7913,137,n/a,STALE_SNAPSHOT,HIGH,Local copy holds 49 percent of current rows
+Fact HDD region,forecast_substrateBE_hdd_region,10485054,52,50,V6/data/raw/forecast_substrateBE_hdd_region_forecasts.csv,65095,45,1,TRUNCATED_EXTRACT,CRITICAL,Local extract carries 1 of 50 forecast versions and 45 of 52 keys
+Fact HDD forest,forecast_substrateBE_hdd,53922502,318,30998,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,Forest grain HDD never extracted; this is the source with actuals and model variants
+Fact CPU region,forecast_substrateBE_cpu_region,8508120,46,42,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,No local CPU data at all
+Fact CPU byDB region,forecast_substrateBE_cpu_byDB_region,6221824,44,12,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,No local CPU DBType data
+Fact CPU byDB forest,forecast_substrateBE_cpu_byDB_forest,44256529,159,11,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,No local CPU DBType forest data
+Fact CPU forest,forecast_substrateBE_cpu,51194194,714,65,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,No local CPU forest SKU data
+Fact IOPS region,forecast_substrateBE_iops_region,6451852,46,37,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,No local IOPS data at all
+Fact IOPS forest,forecast_substrateBE_iops,32620690,552,43,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,No local IOPS forest SKU data
+Fact SSD total,forecast_substrateBE_SSD_TotalForecast,26723954,163,29,NONE,0,0,0,MISSING_ENTIRELY,CRITICAL,Source of the 24 SSD scenarios including the 2 Phoenix Low Volume ones shown in the portal
+Fact SSD Phoenix organic,forecast_substrateBE_SSD_Phoenix_Organic,707069,149,3,NONE,0,0,0,MISSING_ENTIRELY,HIGH,No local copy
+Fact SSD MCDB forest SKU,SubstrateBE_Ssd_MCDB_ForecastForestSKU,30966833,774,32,NONE,0,0,0,MISSING_ENTIRELY,HIGH,No local copy
+Viewer artifact,derived from HDD region only,n/a,n/a,n/a,V6/data/processed/forecast_viewer_model_outputs.csv,204300,39 series,1,SCOPE_TOO_NARROW,CRITICAL,Viewer covers 39 series from a single scenario family; Tesseract exposes 26 usable scenario combinations
+Forecast artifact,derived from HDD region only,n/a,n/a,n/a,V6/data/processed/forecasts.csv + actuals.csv,n/a,n/a,1,SCOPE_TOO_NARROW,CRITICAL,No Scenario dimension present at all
+Multi-metric artifacts,not sourced from Tesseract,n/a,n/a,n/a,V6/outputs/metrics_multi/*,27067,873 rankings,n/a,BUILT_ON_STALE_LOCAL,CRITICAL,Entire V6.0E/V6.0F output derived from local snapshots; declared several existing tables as SOURCE_NOT_LOCATED
+Memory,no forecast object,0,0,0,NONE,0,0,0,SOURCE_DOES_NOT_EXIST,BLOCKER,Demand Memory views return 0 rows; only raw telemetry exists
+HDD Basilisk views,vw_SubstrateBE_Demand_HddBasilisk_Forest/Region,0,0,0,NONE,0,0,0,EMPTY_VIEW,MEDIUM,Basilisk data lives inside the main HDD tables as a Scenario value not in these views

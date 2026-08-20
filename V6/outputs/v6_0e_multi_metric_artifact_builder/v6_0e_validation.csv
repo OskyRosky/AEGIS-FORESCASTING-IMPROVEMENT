@@ -1,0 +1,31 @@
+check_id,area,check,expected,observed,status
+V01,inputs,V6.0D contract artifacts read and used,15 artifacts,Canonical columns loaded from canonical_metric_columns.csv and enforced by T02,PASS
+V02,inputs,V6.0C evidence read and used,10 artifacts,hdd_baseline_freeze.csv drives the freeze revalidation and the inventory seeds the registry,PASS
+V03,artifacts,outputs/metrics_multi created,directory exists,10 artifacts written,PASS
+V04,artifacts,All official artifacts created,10,10 present and hashed in the manifest,PASS
+V05,artifacts,Assistant artifacts created,2,assistant_metric_context.csv with 873 rows and metric_assistant_evidence_pack.json with 11 entries,PASS
+V06,immutability,Legacy hashes unchanged,0 mismatches,14 frozen artifacts rehashed with 0 mismatches,PASS
+V07,immutability,Shiny unchanged,0 modified files,git reports no modified tracked file under V6/shiny_app,PASS
+V08,immutability,Assistant source files unchanged,0 modified,llm_explain.R llm_compose.R llm_client.R and the llm_summary module all present and unmodified,PASS
+V09,immutability,Legacy assistant evidence pack unchanged,hash match,v4_4_mock_responses.json rehashes to the V6.0D recorded value,PASS
+V10,execution,No SQL executed,0,No database driver imported or invoked by the builder,PASS
+V11,execution,No Azure resource or call,0,No Azure SDK import or client construction,PASS
+V12,immutability,V1 to V5 intact,no change,git reports no modification under V1 V2 V3 V4 V5,PASS
+V13,contract,Scenario optional and not_applicable valid,0 violations,All 27067 normalized rows carry a non blank scenario and every not_applicable pairs with the matching status,PASS
+V14,contract,No inherited or defaulted scenario,0,Enterprise appears only where the source physically exposes a Scenario column,PASS
+V15,isolation,LVWE and LVNE isolated,0 blended groups,873 ranking groups each resolve to exactly one source_object where the legacy build blended 137,PASS
+V16,isolation,Region and forest isolated,0,No ranking group spans more than one key namespace,PASS
+V17,ranking,Ranking key unique,873,873 distinct identity tuples,PASS
+V18,units,No cross unit raw aggregation,0,Every ranking group resolves to exactly one unit,PASS
+V19,contract,Single version accuracy not labelled as drift,0,Both SSD sources resolve to single_version_accuracy_only with drift_computable false,PASS
+V20,assistant,Assistant preserved and prepared for extension,15 checks,All assistant preservation checks pass with 0 failures,PASS
+V21,coverage,All four local metrics sources normalized,4,hdd_region 2550 hdd_forest 8828 lvwe 7776 lvne 7913,PASS
+V22,coverage,Unlocated sources reported honestly,12,Each carries an availability status a limitation and a next action with no fabricated metrics,PASS
+V23,coverage,Validation case resolves correctly,forest,NAMPRD07 resolves to forest grain across three sources and stays separated by db_type,PASS
+V24,quality,No rows dropped,0,rows_out equals rows_in for every emitting source,PASS
+V25,quality,Measures preserved verbatim,checksum match,MAPE checksums identical between source and normalized output for all four sources,PASS
+V26,filters,Filter options complete and dependency valid,0 orphans,1381 options across 8 levels with every child resolving to a valid parent,PASS
+V27,security,No secrets in artifacts,0,No server name connection string or credential pattern found,PASS
+V28,deployment,Artifacts inside the container mount,10,All artifacts under outputs which is mounted read-only,PASS
+V29,tests,All blocking tests pass,0 failures,33 PASS and 2 correctly deferred to stages that have a runtime,PASS
+V30,scope,No advance to V6.0F,no Shiny change,No UI server module or loader file was modified,PASS

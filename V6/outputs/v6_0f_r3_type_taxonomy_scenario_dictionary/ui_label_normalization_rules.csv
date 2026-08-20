@@ -1,0 +1,25 @@
+field,raw_value,normalized_ui_label,preserve_raw_value,reason,status
+scenario,Enterprise,Enterprise,yes,already canonical,ACTIVE
+scenario,Consumer,Consumer,yes,canonical form used by hdd_region,ACTIVE
+scenario,consumer,Consumer,yes,hdd forest stores lowercase; resolves O2 by display only,ACTIVE
+scenario,Basilisk,Basilisk,yes,already canonical,ACTIVE
+scenario,Consumed,Consumed,yes,canonical form used by region tables,ACTIVE
+scenario,consumed,Consumed,yes,cpu and iops forest store lowercase,ACTIVE
+scenario,Failover,Failover,yes,canonical form used by region tables,ACTIVE
+scenario,failover,Failover,yes,cpu and iops forest store lowercase,ACTIVE
+scenario,Low Volume No Efficiency,Low Volume No Efficiency,yes,portal scenario exposed per D2,ACTIVE
+scenario,Low Volume With Efficiency,Low Volume With Efficiency,yes,portal scenario exposed per D2,ACTIVE
+scenario,(empty string),Not specified,yes,MCDB ForestSKU stores a blank scenario; display placeholder only,PENDING_O1
+scenario,Combined (Tenant+User),Combined (Tenant+User),yes,single scenario of SSD Phoenix Organic,ACTIVE
+model_type,ARIMA,Arima,yes,hdd_region stores both ARIMA and Arima; display unified,ACTIVE
+model_type,actual,Actual,yes,rendered as the actual series not a model,ACTIVE
+model_type,<space padded value>,<trimmed value>,yes,hdd forest type is a CHAR column; TRIM for display and matching,ACTIVE
+model_type,stubbed,Stubbed,yes,data quality marker; excluded from the model selector,ACTIVE
+model_type,Extrapolated,Extrapolated,yes,data quality marker; excluded from the model selector,ACTIVE
+model_type,Fixed_NA,Fixed_NA,yes,data quality marker; excluded from the model selector,ACTIVE
+model_type,(empty string),Unspecified,yes,hdd_region has 46490 rows with a blank ModelVersion,ACTIVE
+model_type,None,Unspecified,yes,cpu_byDB_forest has 2 rows with the literal None,ACTIVE
+granularity,Region,Region,yes,separate control per D6,ACTIVE
+granularity,Forest,Forest,yes,separate control per D6,ACTIVE
+granularity,Forest_SKU,Forest (SKU level),yes,kept at SKU grain per D4; no aggregation,ACTIVE
+metric,Memory,Memory,yes,never selectable; appears only in the out-of-scope notice per D1,OUT_OF_SCOPE

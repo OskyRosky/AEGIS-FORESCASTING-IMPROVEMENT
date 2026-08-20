@@ -1,0 +1,11 @@
+question_id,question,area,blocks_stage,raised_in,status,default_if_unanswered,impact_if_wrong
+O1,SSD - MCDB scenario selection is undefined. D2 covered Phoenix only. MCDB_ForestSKU has a blank Scenario column and SSD_TotalForecast has 24 scenarios for Resource='SSD-MCDB'.,scope,R5,V6.0F-R1,OPEN,Keep SSD - MCDB out of the first release,A whole metric family is missing from the deliverable
+O2,HDD Forest stores data_type='consumer' in lowercase while Region stores 'Consumer'. Should the UI label be normalised to a single casing?,data quality,R3,V6.0F-R1,OPEN,Normalise the display label and match case-insensitively,Duplicate or empty scenario entries in the dropdown
+O3,CPU has three source tables (region, byDB region, byDB forest) and IOPS has two. Is DBType a fourth control or is byDB a separate Scenario?,ui,R2 and R7,V6.0F-R1,OPEN,Exclude byDB tables from the first release,8 contract rows stay unexposed
+O4,How many forecast versions should be extracted? forecast_substrateBE_hdd has 30998 distinct execution_time values.,extraction,R5,V6.0F-R1,OPEN,Latest N versions only with N to be set in R5,Extraction volume becomes unmanageable
+O5,What temporal window should the extract cover? Data spans 2017 to 2031.,extraction,R5,V6.0F-R1,OPEN,Rolling window anchored on the latest snapshot,Extract size and Shiny performance
+O6,Are the 4 portal scenarios the exact Boon deliverable?,scope,G1,V6.0F-R2,OPEN,Assume the 4 portal scenarios,Scope mismatch discovered late
+O7,Should Accuracy be re-synced in the same release as Viewer and Forecast?,consistency,R9b,V6.0F-R2,OPEN,Yes; otherwise pages contradict each other,Dashboard shows inconsistent numbers
+O8,Should the assistant evidence pack be extended to the new metrics or explicitly limited?,assistant,R9c,V6.0F-R2,OPEN,Limit the assistant and state its coverage,Assistant answers without evidence
+O9,Which storage format replaces flat CSV for the large sources?,performance,R5b,V6.0F-R2,OPEN,Evaluate parquet or duckdb in R5b,Shiny cannot load the real volume
+O10,Should HDD Forest type values be exposed individually or grouped into model families?,ui,R3,V6.0F-R2,OPEN,Expose individually and group in R3 taxonomy,Model selector with 25 unlabelled options

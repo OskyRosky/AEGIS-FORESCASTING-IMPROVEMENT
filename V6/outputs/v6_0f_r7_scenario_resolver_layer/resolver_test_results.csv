@@ -1,0 +1,26 @@
+case_id,description,input,expected,observed,rows_returned,elapsed_seconds,status,notes
+T1,HDD - EDB / Enterprise / Forest / NAMPRD07 / Viewer,key='NAMPRD07',AVAILABLE + FULL + rows>0,AVAILABLE + FULL + rows=1097,1097,0.0892,PASS,series_type: actual/forecast
+T2,HDD - EDB / Consumer / Forest / NAMPRD07 / Viewer,key='NAMPRD07',AVAILABLE + FULL + rows>0,AVAILABLE + FULL + rows=1097,1097,0.0836,PASS,series_type: actual/forecast
+T3,HDD - Basilisk / Basilisk / Forest / namprd07 / Viewer,key='namprd07',AVAILABLE + rows>0,AVAILABLE + rows=954,954,0.0782,PASS,key as physically stored
+T4,HDD - Basilisk / Basilisk / Forest / NAMPRD07 / Viewer,key='NAMPRD07',same row count as T3 (954),rows=954,954,0.0768,PASS,case-insensitive matching proves RB1 is handled
+T5,SSD - Phoenix / Low Volume No Efficiency / Forest / NAMPRD07 / Forecast,page='forecast',AVAILABLE + forecast_ssd + rows>0,AVAILABLE + forecast_ssd + rows=2196,2196,0.0786,PASS,SSD-Phoenix has no model dimension; no model selector is rendered.
+T6,SSD - Phoenix / Low Volume With Efficiency / Forest / NAMPRD07 / Forecast,page='forecast',AVAILABLE + forecast_ssd + rows>0,AVAILABLE + forecast_ssd + rows=2196,2196,0.079,PASS,SSD-Phoenix has no model dimension; no model selector is rendered.
+T7,HDD - EDB / Enterprise / Region / sample key / Viewer,key='APC-Dedicated',AVAILABLE + FULL + rows>0,AVAILABLE + FULL + rows=3291,3291,0.0804,PASS,series_type: actual/forecast
+T8,Memory must be out of scope,metric='Memory',OUT_OF_SCOPE,OUT_OF_SCOPE,,,PASS,No populated forecast source in Tesseract (D1)
+T9,SSD-Phoenix hidden scenario (22 of 24) must not be exposed,scenario='Data Driven',NOT_EXPOSED,NOT_EXPOSED,,,PASS,22 hidden scenarios registered
+T10,CPU must not resolve in Phase 1,metric='CPU',NOT_AVAILABLE_IN_PHASE1,NOT_AVAILABLE_IN_PHASE1,,,PASS,Scheduled for R6 Phase 2; not extracted yet
+T10,IOPS must not resolve in Phase 1,metric='IOPS',NOT_AVAILABLE_IN_PHASE1,NOT_AVAILABLE_IN_PHASE1,,,PASS,Scheduled for R6 Phase 2; not extracted yet
+T11,SSD - MCDB must be blocked by O1,metric='SSD - MCDB',BLOCKED_O1,BLOCKED_O1,,,PASS,Scenario mapping ambiguous; blocked by O1
+D1,Memory absent from the metric dropdown,get_available_metrics(),FALSE,FALSE,,,PASS,HDD - Basilisk | HDD - EDB | SSD - Phoenix
+D2,Only HDD and SSD-Phoenix metrics offered,get_available_metrics(),3,3,,,PASS,HDD - Basilisk | HDD - EDB | SSD - Phoenix
+D3,SSD-Phoenix exposes exactly 2 scenarios,get_available_scenarios(),2,2,,,PASS,Low Volume No Efficiency | Low Volume With Efficiency
+D4,HDD - EDB offers Region and Forest,get_available_granularities(),Region|Forest,Region|Forest,,,PASS,""
+D5,Basilisk keys are scoped and lowercase,get_available_keys(),TRUE,TRUE,155,,PASS,"155 keys; sample: apcp150, apcp153, apcprd01"
+D6,Basilisk reports a single forecast version,get_available_versions(),TRUE,TRUE,1,,PASS,Only one forecast version exists for this selection; the control must be disabled.
+D7,HDD - EDB Region reports 3 versions,get_available_versions(),3,3,3,,PASS,3 forecast versions available.
+D8,HDD model types grouped by family,get_available_model_types(),TRUE,TRUE,25,,PASS,Actual | Ensemble | Fixed growth baseline | Statistical model
+D9,Basilisk exposes few model types,get_available_model_types(),TRUE,TRUE,2,,PASS,actual | FixedGrowth1.5%
+D10,SSD-Phoenix renders no model selector,get_available_model_types(),FALSE,FALSE,,,PASS,This source has no model dimension; no selector is rendered.
+D11,Markers excluded from model types,available_model_types,FALSE,FALSE,,,PASS,""
+D12,Version filter reduces the result set,version = latest,TRUE,TRUE,732,,PASS,"all versions=2196, one version=732"
+D13,Viewer keeps actuals when a model is selected,model_type='actual',TRUE,TRUE,342,,PASS,actual

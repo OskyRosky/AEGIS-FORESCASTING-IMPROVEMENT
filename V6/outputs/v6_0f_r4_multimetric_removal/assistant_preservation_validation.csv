@@ -1,0 +1,16 @@
+check,expected,observed,status
+llm_explain.R not modified,byte identical to git HEAD,not in git status output,PASS
+llm_compose.R not modified,byte identical to git HEAD,not in git status output,PASS
+llm_client.R not modified,byte identical to git HEAD,not in git status output,PASS
+modules/llm_summary not modified,byte identical to git HEAD,not in git status output,PASS
+Evidence pack hash,A4DB09B4B78443D095CF9C4862120F209E1C509CE1EB619861F1642FD6D16E40,A4DB09B4B78443D095CF9C4862120F209E1C509CE1EB619861F1642FD6D16E40,PASS
+Evidence pack loads,11 page responses,LLM_PAGES=11,PASS
+Page ids intact,executive_overview champion_overview tournament forecast_viewer governance_risks models_universe forecasting_accuracy forecasting_forecast forecasting_ttl governance_audit reference_artifacts,identical list returned,PASS
+Injected multi_metric entries removed,no page id containing multi_metric,LLM_HAS_MULTIMETRIC=FALSE,PASS
+llm_explain_get works,returns a populated response,GET_OK=TRUE title='Executive Overview',PASS
+Claims traceability intact,executive_overview retains its claims,N_CLAIMS=30,PASS
+Provider metadata intact,mock provider not real LLM not Azure,PROVIDER=mock IS_REAL_LLM=FALSE USES_AZURE=FALSE,PASS
+Assistant server registrations,same count as git HEAD,HEAD=10 and current=10; the extra llm_multi_metric registration added by V6.0F was removed,PASS
+Assistant registered page ids,identical to git HEAD,models_universe tournament champion_overview forecast_viewer forecasting_accuracy forecasting_forecast forecasting_ttl governance_risks governance_audit reference_artifacts,PASS
+Pack path resolution,resolves to V6/outputs/v4_4_mock_provider,resolved correctly,PASS
+No Azure call introduced,uses_azure FALSE,FALSE,PASS

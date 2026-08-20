@@ -1,0 +1,9 @@
+metric,scenario,granularity,keys_available,actuals_first,actuals_last,months_of_actuals,backtest_exists_today,keys_with_backtest,coverage_pct,gap_type,notes
+HDD - EDB,Enterprise,Region,45,2025-08-12,2026-07-18,11,yes,39,86.7,PARTIAL,Verified by actual-value match: 96.6 percent exact against the existing artifact
+HDD - EDB,Enterprise,Forest,152,2025-08-12,2026-07-19,11,no,0,0.0,MISSING,No forest backtest has ever been produced
+HDD - EDB,Consumer,Region,45,2025-08-12,2026-07-18,11,no,0,0.0,MISSING,Actual values differ from the existing artifact by a median of 27762
+HDD - EDB,Consumer,Forest,152,2025-08-12,2026-07-19,11,no,0,0.0,MISSING,
+HDD - Basilisk,Basilisk,Region,47,2026-01-02,2026-05-25,5,no,0,0.0,MISSING,Only 5 months of actuals so fewer rolling origins are possible
+HDD - Basilisk,Basilisk,Forest,155,2026-01-02,2026-05-25,5,no,0,0.0,MISSING,Only 5 months of actuals
+SSD - Phoenix,Low Volume No Efficiency,Forest,148,none,none,0,no,0,0.0,NOT_BACKTESTABLE,No actual series exists in Tesseract so a backtest cannot be produced
+SSD - Phoenix,Low Volume With Efficiency,Forest,152,none,none,0,no,0,0.0,NOT_BACKTESTABLE,No actual series exists in Tesseract

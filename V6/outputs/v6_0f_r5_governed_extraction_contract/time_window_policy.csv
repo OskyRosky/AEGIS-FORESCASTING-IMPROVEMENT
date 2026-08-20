@@ -1,0 +1,15 @@
+metric,scenario_ui_label,page,historical_window,forecast_window,min_date_available,max_date_available,proposed_start_date,proposed_end_date,reason
+HDD - EDB,Enterprise,Viewer,12 months,24 months,2017-01-01,2030-07-16,2025-08-12,2028-08-12,Actual and forecast coexist; 12 months of history is enough to judge fit
+HDD - EDB,Consumer,Viewer,12 months,24 months,2019-07-01,2031-02-27,2025-08-12,2028-08-12,Same as Enterprise
+HDD - Basilisk,Basilisk,Viewer,12 months,24 months,2017-01-01,2030-07-16,2025-08-12,2028-08-12,Same as Enterprise
+HDD - EDB,Enterprise,Forecast,0 months,24 months,2017-01-01,2030-07-16,2026-08-12,2028-08-12,Forward view only
+HDD - EDB,Consumer,Forecast,0 months,24 months,2019-07-01,2031-02-27,2026-08-12,2028-08-12,Forward view only
+HDD - Basilisk,Basilisk,Forecast,0 months,24 months,2017-01-01,2030-07-16,2026-08-12,2028-08-12,Forward view only
+SSD - Phoenix,Low Volume No Efficiency,Forecast,0 months,24 months,2024-02-08,2030-07-02,2026-08-12,2028-08-12,Forecast-only; latest version starts 2026-03-12
+SSD - Phoenix,Low Volume With Efficiency,Forecast,0 months,24 months,2024-02-08,2030-07-02,2026-08-12,2028-08-12,Forecast-only
+CPU,Consumed,Forecast,0 months,24 months,2022-02-01,2030-08-27,2026-08-12,2028-08-12,Forecast-only; latest version starts 2026-05-01
+CPU Failover,Failover,Forecast,0 months,24 months,2022-02-01,2030-08-27,2026-08-12,2028-08-12,Forecast-only
+IOPS,Consumed,Forecast,0 months,24 months,2021-09-01,2030-02-26,2026-08-12,2028-08-12,EXCEPTION: latest version is 2026-01-01 so recent months may be sparse
+IOPS Failover,Failover,Forecast,0 months,24 months,2021-09-01,2030-02-26,2026-08-12,2028-08-12,EXCEPTION: same staleness as IOPS Consumed
+SSD - MCDB,pending definition,none,n/a,n/a,2022-03-31,2030-04-29,n/a,n/a,Blocked by O1; no window defined
+Memory,not available,none,n/a,n/a,n/a,n/a,n/a,n/a,Out of scope per D1

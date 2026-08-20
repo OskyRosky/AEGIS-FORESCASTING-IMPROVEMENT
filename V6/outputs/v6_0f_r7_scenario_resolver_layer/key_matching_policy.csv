@@ -1,0 +1,9 @@
+rule_id,rule,rationale,implementation,status
+K1,Key comparison is always case-insensitive,HDD - Basilisk stores namprd07 while HDD - EDB stores NAMPRD07 for the same forest (risk RB1),WHERE key_lower = lower(?) with key_lower materialised in DuckDB at build time,ENFORCED
+K2,The raw key is preserved and displayed exactly as stored,Traceability to Tesseract must not be lost by normalisation,The key column is returned unchanged in every SELECT; only key_lower is derived,ENFORCED
+K3,Keys are scoped by metric scenario and granularity,The same forest appears under different namespaces per scenario,get_available_keys filters available_keys.csv on all three dimensions,ENFORCED
+K4,No aggregation of Forest_SKU into Forest,Decision D4,No SKU source is in Phase 1; the rule carries forward to Phase 2,ENFORCED
+K5,Key values are never invented or padded,Governance,Keys come only from the R6 extraction,ENFORCED
+K6,key_lower is derived at build time not query time,An UPDATE after CREATE inflated the DuckDB file from 25.8 MB to 33.0 MB,CREATE TABLE ... SELECT *, lower(key) AS key_lower,ENFORCED
+K7,Queries are parameterised,Prevents SQL injection through UI input,DBI params argument; no string concatenation of user input,ENFORCED
+K8,Region keys are region names not forests,NAMPRD07 does not exist at region grain by design,Documented; no mandatory key at region grain,DOCUMENTED

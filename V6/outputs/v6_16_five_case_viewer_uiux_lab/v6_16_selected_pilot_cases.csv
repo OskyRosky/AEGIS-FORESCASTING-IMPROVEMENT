@@ -1,0 +1,6 @@
+case_id,metric,scenario,granularity,key,has_actuals,reason_selected,expected_ui_behavior,status
+P01,HDD - EDB,Enterprise,Region,APC-Dedicated,TRUE,"Verified legacy coverage; reuses existing governed backtest rows without rerunning models","Default case; full 15-model chart renders from prepared legacy rows",SELECTED
+P02,HDD - EDB,Enterprise,Forest,NAMPRD07,TRUE,"Required Forest grain and stakeholder-relevant NAMPRD07 key","Metric/scenario/granularity cascade reaches Forest and renders uppercase NAMPRD07",SELECTED
+P03,HDD - EDB,Consumer,Region,APC-Dedicated,TRUE,"Tests the Consumer scenario at Region grain with a key also present in Enterprise","Scenario cascade changes data while preserving the same Region key label",SELECTED
+P04,HDD - EDB,Consumer,Forest,NAMPRD07,TRUE,"Tests the Consumer scenario at Forest grain and NAMPRD07 comparability","Consumer/Forest selection renders only its prepared pilot rows",SELECTED
+P05,HDD - Basilisk,Basilisk,Forest,namprd07,TRUE,"Tests a second metric, shorter real history, and scenario-specific lowercase key casing","Metric cascade exposes Basilisk; lowercase key and shorter history are shown honestly",SELECTED

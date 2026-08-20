@@ -1,0 +1,28 @@
+scenario_ui_label,metric,db_type,scenario,granularity,source_table,scenario_column,scenario_filter_value,key_column,key_count,namprd07_present,date_column,version_column,distinct_versions,value_column,has_actuals,status
+HDD - EDB Enterprise (Region),HDD,EDB,Enterprise,Region,forecast_substrateBE_hdd_region,Scenario,Enterprise,Key,52,no,DateTime,ForecastVersion,50,Value,yes,VERIFIED
+HDD - EDB Enterprise (Forest),HDD,EDB,Enterprise,Forest,forecast_substrateBE_hdd,data_type,Enterprise,forest_name,318,yes,target_date,execution_time,30998,forecast_mean,yes,VERIFIED
+HDD - EDB Consumer (Region),HDD,EDB,Consumer,Region,forecast_substrateBE_hdd_region,Scenario,Consumer,Key,52,no,DateTime,ForecastVersion,50,Value,yes,VERIFIED
+HDD - EDB Consumer (Forest),HDD,EDB,Consumer,Forest,forecast_substrateBE_hdd,data_type,consumer,forest_name,318,yes,target_date,execution_time,30998,forecast_mean,yes,VERIFIED_CASE_MISMATCH
+HDD - Basilisk (Region),HDD,EDB,Basilisk,Region,forecast_substrateBE_hdd_region,Scenario,Basilisk,Key,52,no,DateTime,ForecastVersion,50,Value,yes,VERIFIED_NOT_IN_EXCEL
+HDD - Basilisk (Forest),HDD,EDB,Basilisk,Forest,forecast_substrateBE_hdd,data_type,Basilisk,forest_name,318,yes,target_date,execution_time,30998,forecast_mean,yes,VERIFIED_NOT_IN_EXCEL
+CPU Total Consumed (Region),CPU,Total (phx and nonphx),Consumed,Region,forecast_substrateBE_cpu_region,Scenario,Consumed,Key,46,no,Datetime,ForecastVersion,42,Value,no,VERIFIED
+CPU Total Failover (Region),CPU,Total (phx and nonphx),Failover,Region,forecast_substrateBE_cpu_region,Scenario,Failover,Key,46,no,Datetime,ForecastVersion,42,Value,no,VERIFIED
+CPU Phoenix Consumed (Region),CPU,Phoenix,Consumed,Region,forecast_substrateBE_cpu_byDB_region,Scenario,Consumed,MyKey,44,no,Datetime,ForecastVersion,12,Value,no,VERIFIED
+CPU NonPhoenix Consumed (Region),CPU,NonPhoenix,Consumed,Region,forecast_substrateBE_cpu_byDB_region,Scenario,Consumed,MyKey,44,no,Datetime,ForecastVersion,12,Value,no,VERIFIED
+CPU Phoenix Failover (Region),CPU,Phoenix,Failover,Region,forecast_substrateBE_cpu_byDB_region,Scenario,Failover,MyKey,44,no,Datetime,ForecastVersion,12,Value,no,VERIFIED
+CPU NonPhoenix Failover (Region),CPU,NonPhoenix,Failover,Region,forecast_substrateBE_cpu_byDB_region,Scenario,Failover,MyKey,44,no,Datetime,ForecastVersion,12,Value,no,VERIFIED
+CPU Total Consumed (Forest),CPU,Total (phx and nonphx),Consumed,Forest,forecast_substrateBE_cpu,CPU_type,consumed,Forest_SKU,714,yes,datadate,forecastdate,65,forecast,no,VERIFIED_SKU_GRAIN
+CPU Total Failover (Forest),CPU,Total (phx and nonphx),Failover,Forest,forecast_substrateBE_cpu,CPU_type,failover,Forest_SKU,714,yes,datadate,forecastdate,65,forecast,no,VERIFIED_SKU_GRAIN
+CPU Phoenix Consumed (Forest),CPU,Phoenix,Consumed,Forest,forecast_substrateBE_cpu_byDB_forest,Scenario,Consumed,MyKey,159,yes,Datetime,ForecastVersion,11,Value,no,VERIFIED
+CPU NonPhoenix Consumed (Forest),CPU,NonPhoenix,Consumed,Forest,forecast_substrateBE_cpu_byDB_forest,Scenario,Consumed,MyKey,159,yes,Datetime,ForecastVersion,11,Value,no,VERIFIED
+CPU Phoenix Failover (Forest),CPU,Phoenix,Failover,Forest,forecast_substrateBE_cpu_byDB_forest,Scenario,Failover,MyKey,159,yes,Datetime,ForecastVersion,11,Value,no,VERIFIED
+CPU NonPhoenix Failover (Forest),CPU,NonPhoenix,Failover,Forest,forecast_substrateBE_cpu_byDB_forest,Scenario,Failover,MyKey,159,yes,Datetime,ForecastVersion,11,Value,no,VERIFIED
+IOPS Consumed (Region),IOPS,N/A,Consumed,Region,forecast_substrateBE_iops_region,Scenario,Consumed,Key,46,no,Datetime,ForecastVersion,37,Value,no,VERIFIED
+IOPS Failover (Region),IOPS,N/A,Failover,Region,forecast_substrateBE_iops_region,Scenario,Failover,Key,46,no,Datetime,ForecastVersion,37,Value,no,VERIFIED
+IOPS Consumed (Forest),IOPS,N/A,Consumed,Forest,forecast_substrateBE_iops,IOPS_type,consumed,Forest_SKU,552,yes,datadate,forecastdate,43,forecast,no,VERIFIED_SKU_GRAIN
+IOPS Failover (Forest),IOPS,N/A,Failover,Forest,forecast_substrateBE_iops,IOPS_type,failover,Forest_SKU,552,yes,datadate,forecastdate,43,forecast,no,VERIFIED_SKU_GRAIN
+SSD - Phoenix Total (24 scenarios),SSD,PHX(Total),see scenario list,Forest,forecast_substrateBE_SSD_TotalForecast,Scenario,Resource='SSD-Phoenix',Key,163,yes,Datetime,ForecastVersion,29,Value,no,VERIFIED_24_SCENARIOS
+SSD - MCDB Total (24 scenarios),SSD,MCDB(Total),see scenario list,Forest,forecast_substrateBE_SSD_TotalForecast,Scenario,Resource='SSD-MCDB',Key,163,yes,Datetime,ForecastVersion,29,Value,no,VERIFIED_24_SCENARIOS
+SSD - MCDB Organic (Forest SKU),SSD,MCDB(Organic),blank,Forest_SKU,SubstrateBE_Ssd_MCDB_ForecastForestSKU,Scenario,(empty string),Key,774,yes,DateTime,ForecastVersion,32,Value,no,VERIFIED_BLANK_SCENARIO
+SSD - Phoenix Organic,SSD,PHX(Organic),Combined (Tenant+User),Forest,forecast_substrateBE_SSD_Phoenix_Organic,Scenario,Combined (Tenant+User),Forest,149,yes,DateTime,ForecastVersion,3,Value,no,VERIFIED
+Memory,Memory,unknown,unknown,unknown,NONE,,,,0,no,,,0,,no,NO_FORECAST_SOURCE_FOUND

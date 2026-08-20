@@ -1,0 +1,12 @@
+metric,source_table,version_column,total_versions,version_semantics,proposed_versions_to_extract,proposed_rule,reason,risk
+HDD - EDB / HDD - Basilisk,forecast_substrateBE_hdd_region,ForecastVersion,50,true forecast version (date),3,latest 3 ForecastVersion per Scenario,Low cardinality and genuinely versioned; 3 supports version comparison in the UI,Latest version does not contain every scenario; must resolve per scenario
+HDD - EDB / HDD - Basilisk,forecast_substrateBE_hdd,execution_time,30998,RUN TIMESTAMP not a forecast version,1 per scenario,latest execution_time per TRIM(data_type),Runs are duplicated within seconds and each run covers a single scenario; a flat dropdown is impossible,Taking latest N overall would return only one scenario and could duplicate a run
+CPU / CPU Failover,forecast_substrateBE_cpu_region,ForecastVersion,42,true forecast version (date),3,latest 3 ForecastVersion per Scenario,Low cardinality; consistent with HDD region,None material
+CPU / CPU Failover,forecast_substrateBE_cpu,forecastdate,65,forecast run date,3,latest 3 forecastdate per CPU_type,Moderate cardinality; SKU grain makes each version large,1.5M rows per version before windowing
+IOPS / IOPS Failover,forecast_substrateBE_iops_region,ForecastVersion,37,true forecast version (date),3,latest 3 ForecastVersion per Scenario,Low cardinality,Latest version is 2026-01-01; data is older than CPU
+IOPS / IOPS Failover,forecast_substrateBE_iops,forecastdate,43,forecast run date,3,latest 3 forecastdate per IOPS_type,Moderate cardinality,1.4M rows per version before windowing; latest is 2025-12-30
+SSD - Phoenix,forecast_substrateBE_SSD_TotalForecast,ForecastVersion,29,true forecast version (date),3,latest 3 ForecastVersion per Scenario with Resource='SSD-Phoenix',Low cardinality; supports version comparison,Scenario set varies by version; must resolve per scenario
+SSD - MCDB,SubstrateBE_Ssd_MCDB_ForecastForestSKU,ForecastVersion,32,true forecast version (date),0,not extracted,Blocked by O1,Not applicable
+SSD - Phoenix Organic,forecast_substrateBE_SSD_Phoenix_Organic,ForecastVersion,3,true forecast version (date),0,not extracted,Not in the first release,Not applicable
+CPU byDB,forecast_substrateBE_cpu_byDB_region,ForecastVersion,12,true forecast version (date),0,not extracted,Blocked by O3,Not applicable
+CPU byDB,forecast_substrateBE_cpu_byDB_forest,ForecastVersion,11,true forecast version (date),0,not extracted,Blocked by O3,Not applicable

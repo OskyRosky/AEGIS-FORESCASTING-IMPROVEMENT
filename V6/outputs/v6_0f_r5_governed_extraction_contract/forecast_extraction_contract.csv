@@ -1,0 +1,19 @@
+metric,scenario_ui_label,granularity,supports_forecast,forecast_filter,version_rule,notes
+HDD - EDB,Enterprise,Region,yes,Scenario='Enterprise' and ModelVersion <> 'actual',latest 3 ForecastVersion for this scenario,forward window 24 months
+HDD - EDB,Enterprise,Forest,yes,TRIM(data_type)='enterprise' and TRIM(type) not in markers,latest execution_time for this scenario,execution_time is a run stamp not a version
+HDD - EDB,Consumer,Region,yes,Scenario='Consumer' and ModelVersion <> 'actual',latest 3 ForecastVersion for this scenario,
+HDD - EDB,Consumer,Forest,yes,TRIM(data_type)='consumer' and TRIM(type) not in markers,latest execution_time for this scenario,case-insensitive scenario match
+HDD - Basilisk,Basilisk,Region,yes,Scenario='Basilisk' and ModelVersion <> 'actual',latest 3 ForecastVersion for this scenario,
+HDD - Basilisk,Basilisk,Forest,yes,TRIM(data_type)='Basilisk' and TRIM(type) not in markers,the single available execution_time,only 1 run exists so no version comparison is possible
+SSD - Phoenix,Low Volume No Efficiency,Forest,yes,Resource='SSD-Phoenix' and Scenario='Low Volume No Efficiency',latest 3 ForecastVersion for this scenario,Type in (Total TotalPerturbed) must be exposed or fixed
+SSD - Phoenix,Low Volume With Efficiency,Forest,yes,Resource='SSD-Phoenix' and Scenario='Low Volume With Efficiency',latest 3 ForecastVersion for this scenario,Type in (Total TotalPerturbed) must be exposed or fixed
+CPU,Consumed,Region,yes,Scenario='Consumed',latest 3 ForecastVersion,phase 2
+CPU Failover,Failover,Region,yes,Scenario='Failover',latest 3 ForecastVersion,phase 2
+CPU,Consumed,Forest,yes,CPU_type='consumed',latest 3 forecastdate,phase 2; SKU grain
+CPU Failover,Failover,Forest,yes,CPU_type='failover',latest 3 forecastdate,phase 2; SKU grain
+IOPS,Consumed,Region,yes,Scenario='Consumed',latest 3 ForecastVersion,phase 2; latest version is 2026-01-01
+IOPS Failover,Failover,Region,yes,Scenario='Failover',latest 3 ForecastVersion,phase 2
+IOPS,Consumed,Forest,yes,IOPS_type='consumed',latest 3 forecastdate,phase 2; latest version is 2025-12-30
+IOPS Failover,Failover,Forest,yes,IOPS_type='failover',latest 3 forecastdate,phase 2
+SSD - MCDB,pending definition,Forest,no,blocked,none,blocked by O1
+Memory,not available,none,no,none,none,out of scope per D1

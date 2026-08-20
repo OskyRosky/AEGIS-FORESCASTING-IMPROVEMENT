@@ -10,11 +10,11 @@ active_project_root = C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Gen
 
 based_on = V5 (full controlled copy, 2026-07-03; .venv / __pycache__ / *.pyc excluded, recreatable)
 
-current_status = V6.0B - Azure Readiness + Architecture Decisions COMPLETE (audit + decisions only; no Azure resources). Hosting=Azure Container Apps, auth=Managed Identity primary, storage=Azure Files RO (A)/Blob (B), registry=ACR, internal ingress.
+current_status = V6.0D - Canonical Multi-Metric Contract COMPLETE (design + governance only; no builder, no Shiny change, no legacy artifact modified). V6.0C closed the multi-metric scope diagnosis. Azure deployment is PAUSED until V6.0H Docker revalidation passes.
 
-next_stage = V6.1 - Identity / RBAC / Key Vault (needs explicit authorization + confirmed Azure permissions)
+next_stage = V6.0E - Multi-Metric Artifact Builder (needs explicit authorization)
 
-next_block = V6.1 - Track A; requires Azure permissions confirmation (prereq) + explicit Oscar authorization before creating any Azure resource
+next_block = V6.0E - build additive multi-metric artifacts per the v6.0d contract; Azure (V6.1+) stays paused until V6.0H PASS
 
 ## Inherited State From V4 (CLOSED)
 
@@ -30,10 +30,11 @@ Package the closed V4 platform as the final local / containerized (Docker) versi
 
 ## Active Root Rules
 
-- All active work must happen inside V5 unless explicitly instructed otherwise.
+- All active work must happen inside V6 unless explicitly instructed otherwise.
 - The parent folder is only a project container/version root.
 - Historical artifacts must not be rewritten solely to change old path text.
 - Shiny must remain read-only and must not recompute metrics or forecasts.
 - The LLM layer must stay read-only and mock-only; it must never compute, train, query raw data, or alter the champion.
 - Do not build Docker, run SQL, run models, or run refresh without explicit per-stage authorization.
-- V1, V2, V3 and V4 are frozen previous versions and must not be modified.
+- V1 through V5 are frozen previous versions and must not be modified.
+- Legacy governed CSVs are additive-only: new multi-metric dimensions live in new artifacts, never in forecasts.csv, actuals.csv, forecast_comparison.csv, forecast_viewer_model_outputs.csv, baseline_metrics.csv or baseline_rankings.csv.

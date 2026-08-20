@@ -1,0 +1,30 @@
+row_id,metric,scenario_ui_label,scenario_source_column,scenario_source_value,granularity,source_table,key_column,key_count,viewer_status,forecast_status,badge,exposed_in_first_release,type_model_control,forecast_version_control,notes
+R01,HDD - EDB,Enterprise,Scenario,Enterprise,Region,forecast_substrateBE_hdd_region,Key,52,FULL,FULL,GREEN,yes,ModelVersion,ForecastVersion,Actual and forecast coexist in the same table
+R02,HDD - EDB,Enterprise,data_type,Enterprise,Forest,forecast_substrateBE_hdd,forest_name,318,FULL,FULL,GREEN,yes,type,execution_time,Richest source; 25 distinct type values documented in R3
+R03,HDD - EDB,Consumer,Scenario,Consumer,Region,forecast_substrateBE_hdd_region,Key,52,FULL,FULL,GREEN,yes,ModelVersion,ForecastVersion,
+R04,HDD - EDB,Consumer,data_type,consumer,Forest,forecast_substrateBE_hdd,forest_name,318,FULL,FULL,GREEN,yes,type,execution_time,Source value is lowercase; label normalisation pending O2
+R05,HDD - Basilisk,Basilisk,Scenario,Basilisk,Region,forecast_substrateBE_hdd_region,Key,52,FULL,FULL,GREEN,yes,ModelVersion,ForecastVersion,Not present in the Excel mapping; discovered in R1
+R06,HDD - Basilisk,Basilisk,data_type,Basilisk,Forest,forecast_substrateBE_hdd,forest_name,318,FULL,FULL,GREEN,yes,type,execution_time,Not present in the Excel mapping; discovered in R1
+R07,CPU,Consumed,Scenario,Consumed,Region,forecast_substrateBE_cpu_region,Key,46,FORECAST_ONLY,FULL,AMBER,yes,none,ForecastVersion,No actual marker in the fact table
+R08,CPU,Consumed,CPU_type,consumed,Forest,forecast_substrateBE_cpu,Forest_SKU,714,FORECAST_ONLY,FULL,AMBER,yes,none,forecastdate,Key is Forest_SKU per D4; no aggregation applied
+R09,CPU Failover,Failover,Scenario,Failover,Region,forecast_substrateBE_cpu_region,Key,46,FORECAST_ONLY,FULL,AMBER,yes,none,ForecastVersion,
+R10,CPU Failover,Failover,CPU_type,failover,Forest,forecast_substrateBE_cpu,Forest_SKU,714,FORECAST_ONLY,FULL,AMBER,yes,none,forecastdate,Key is Forest_SKU per D4
+R11,CPU,Consumed Phoenix,Scenario,Consumed,Region,forecast_substrateBE_cpu_byDB_region,MyKey,44,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Requires a DBType control; blocked by O3
+R12,CPU,Consumed NonPhoenix,Scenario,Consumed,Region,forecast_substrateBE_cpu_byDB_region,MyKey,44,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R13,CPU Failover,Failover Phoenix,Scenario,Failover,Region,forecast_substrateBE_cpu_byDB_region,MyKey,44,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R14,CPU Failover,Failover NonPhoenix,Scenario,Failover,Region,forecast_substrateBE_cpu_byDB_region,MyKey,44,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R15,CPU,Consumed Phoenix,Scenario,Consumed,Forest,forecast_substrateBE_cpu_byDB_forest,MyKey,159,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R16,CPU,Consumed NonPhoenix,Scenario,Consumed,Forest,forecast_substrateBE_cpu_byDB_forest,MyKey,159,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R17,CPU Failover,Failover Phoenix,Scenario,Failover,Forest,forecast_substrateBE_cpu_byDB_forest,MyKey,159,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R18,CPU Failover,Failover NonPhoenix,Scenario,Failover,Forest,forecast_substrateBE_cpu_byDB_forest,MyKey,159,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Blocked by O3
+R19,IOPS,Consumed,Scenario,Consumed,Region,forecast_substrateBE_iops_region,Key,46,FORECAST_ONLY,FULL,AMBER,yes,none,ForecastVersion,
+R20,IOPS,Consumed,IOPS_type,consumed,Forest,forecast_substrateBE_iops,Forest_SKU,552,FORECAST_ONLY,FULL,AMBER,yes,none,forecastdate,Key is Forest_SKU per D4
+R21,IOPS Failover,Failover,Scenario,Failover,Region,forecast_substrateBE_iops_region,Key,46,FORECAST_ONLY,FULL,AMBER,yes,none,ForecastVersion,
+R22,IOPS Failover,Failover,IOPS_type,failover,Forest,forecast_substrateBE_iops,Forest_SKU,552,FORECAST_ONLY,FULL,AMBER,yes,none,forecastdate,Key is Forest_SKU per D4
+R23,SSD - Phoenix,Low Volume No Efficiency,Scenario,Low Volume No Efficiency,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,FORECAST_ONLY,FULL,AMBER,yes,none,ForecastVersion,Requires Resource='SSD-Phoenix'; portal scenario per D2
+R24,SSD - Phoenix,Low Volume With Efficiency,Scenario,Low Volume With Efficiency,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,FORECAST_ONLY,FULL,AMBER,yes,none,ForecastVersion,Requires Resource='SSD-Phoenix'; portal scenario per D2
+R25,SSD - Phoenix,22 additional scenarios,Scenario,see documented_not_exposed,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Documented in R1 but not exposed in the first release per D2
+R26,SSD - MCDB,pending definition,Scenario,undefined,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Requires Resource='SSD-MCDB'; scenario selection blocked by O1
+R27,SSD - MCDB,Organic,Scenario,(empty string),Forest_SKU,SubstrateBE_Ssd_MCDB_ForecastForestSKU,Key,774,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Scenario column is blank; blocked by O1
+R28,SSD - Phoenix,Organic Combined,Scenario,Combined (Tenant+User),Forest,forecast_substrateBE_SSD_Phoenix_Organic,Forest,149,FORECAST_ONLY,FULL,AMBER,no,none,ForecastVersion,Only 3 forecast versions; documented not exposed
+R29,Memory,not available,none,none,none,NONE,none,0,OUT_OF_SCOPE,OUT_OF_SCOPE,GREY,no,none,none,No populated forecast source in Tesseract per D1

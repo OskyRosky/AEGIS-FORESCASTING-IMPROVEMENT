@@ -1,0 +1,12 @@
+inventory_item,observed_value,source,status,notes
+PRIMARY_WORKTREE,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT,git rev-parse --show-toplevel,VERIFIED,Primary repository worktree; do not use the isolated inspection worktree.
+BRANCH,main,git branch --show-current,VERIFIED,
+DIRTY_WORKTREE_ENTRY_COUNT,40,git status --porcelain,RECORDED,Existing user and prior-stage changes were not reverted.
+FULL_DISCOVERED_TAXONOMY_COUNT,6383,Master Catalog E11,REFERENCE_ONLY,Logical leaves; not materialized as V6 operational cases.
+FULL_DISCOVERED_ROUTABLE_ROUTE_COUNT,34,Master Catalog E10 / reviewed mockup manifest,REFERENCE_ONLY,38 total route rows; 34 routable UI routes.
+CURRENT_VIEWER_SUPPORTED_ROUTE_COUNT,6,v6_17_viewer_dropdown_metadata.csv,VERIFIED,
+CURRENT_VIEWER_SUPPORTED_CASE_COUNT,596,v6_17_viewer_dropdown_metadata.csv,VERIFIED,All cases have actuals and exactly 15 Viewer models.
+CURRENT_FORECAST_SUPPORTED_ROUTE_COUNT,8,v6_17_forecast_dropdown_metadata.csv,VERIFIED,
+CURRENT_FORECAST_SUPPORTED_CASE_COUNT,896,v6_17_forecast_dropdown_metadata.csv,VERIFIED,
+TAXONOMY_VALID_BUT_NOT_IMPLEMENTED_COUNT,30,E10 routable routes reconciled to V6.17 direct canonical matches,VERIFIED_WITH_RECONCILIATION,34 routable routes minus four direct operational EDB matches; four more V6.17 routes use explicit legacy/source-precedence compatibility.
+VIEWER_MODEL_COUNT,15,v6_17_viewer_dropdown_metadata.csv,VERIFIED,Minimum and maximum are both 15.

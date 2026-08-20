@@ -1,0 +1,25 @@
+case_id,category,metric,scenario,granularity,key,version,model_type,page,expected_status,expected_behaviour,mandatory
+T1,series,HDD - EDB,Enterprise,Forest,NAMPRD07,,,viewer,AVAILABLE,Resolves to viewer_hdd in FULL mode with actual and forecast rows,yes
+T2,series,HDD - EDB,Consumer,Forest,NAMPRD07,,,viewer,AVAILABLE,Resolves to viewer_hdd in FULL mode,yes
+T3,series,HDD - Basilisk,Basilisk,Forest,namprd07,,,viewer,AVAILABLE,Resolves using the lowercase key as physically stored,yes
+T4,series,HDD - Basilisk,Basilisk,Forest,NAMPRD07,,,viewer,AVAILABLE,Returns the same rows as T3 proving case-insensitive matching,yes
+T5,series,SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,,,forecast,AVAILABLE,Resolves to forecast_ssd forecast-only,yes
+T6,series,SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,,,forecast,AVAILABLE,Resolves to forecast_ssd forecast-only,yes
+T7,series,HDD - EDB,Enterprise,Region,sample region key,,,viewer,AVAILABLE,Resolves to viewer_hdd in FULL mode at region grain,yes
+T8,blocked,Memory,not available,none,any,,,viewer,OUT_OF_SCOPE,Never resolves and never appears in the dropdown,yes
+T9,blocked,SSD - Phoenix,any of the other 22 scenarios,Forest,NAMPRD07,,,forecast,NOT_EXPOSED,Registered but not exposed in the first release,yes
+T10,blocked,CPU and IOPS,Consumed,Region,any,,,forecast,NOT_AVAILABLE_IN_PHASE1,Scheduled for R6 Phase 2,yes
+T11,blocked,SSD - MCDB,pending definition,Forest,any,,,forecast,BLOCKED_O1,Blocked until the scenario mapping is defined,yes
+D1,dropdown,all,-,-,-,,,-,FALSE,Memory is absent from the metric dropdown,yes
+D2,dropdown,all,-,-,-,,,-,3,Only HDD - EDB HDD - Basilisk and SSD - Phoenix are offered,yes
+D3,dropdown,SSD - Phoenix,-,-,-,,,-,2,Exactly the 2 authorised scenarios,yes
+D4,dropdown,HDD - EDB,Enterprise,-,-,,,-,Region|Forest,Both granularities offered in order,yes
+D5,dropdown,HDD - Basilisk,Basilisk,Forest,-,,,-,TRUE,Keys are scoped to the scenario and keep their lowercase form,yes
+D6,dropdown,HDD - Basilisk,Basilisk,Forest,-,,,-,TRUE,Single forecast version is flagged so the control can be disabled,yes
+D7,dropdown,HDD - EDB,Enterprise,Region,-,,,-,3,Three forecast versions available,yes
+D8,dropdown,HDD - EDB,Enterprise,Forest,-,,,-,TRUE,Model types grouped by family rather than a flat list,yes
+D9,dropdown,HDD - Basilisk,Basilisk,Forest,-,,,-,TRUE,Basilisk exposes at most 3 model types,yes
+D10,dropdown,SSD - Phoenix,Low Volume No Efficiency,Forest,-,,,-,FALSE,No model selector is rendered,yes
+D11,dropdown,HDD - EDB,Enterprise,Forest,-,,,-,FALSE,Data quality markers excluded from the model list,yes
+D12,filter,HDD - EDB,Enterprise,Region,sample region key,latest,,forecast,TRUE,Selecting a version narrows the result set,yes
+D13,filter,HDD - EDB,Enterprise,Forest,NAMPRD07,,single model,viewer,TRUE,Choosing a model keeps the actual series visible,yes

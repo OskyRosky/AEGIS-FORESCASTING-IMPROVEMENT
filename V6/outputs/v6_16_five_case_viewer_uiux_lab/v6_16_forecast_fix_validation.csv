@@ -1,0 +1,20 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V616FF-001,Forecast HTTP availability,"HTTP 200","HTTP 200 on port 8081",PASS,TRUE
+V616FF-002,Forecast page load,"Forecast opens from Forecasting navigation","Forecast section loaded and active",PASS,TRUE
+V616FF-003,Forecast setup sequence,"Metric through Analyze Forward Forecast","Seven-step unified setup implemented",PASS,TRUE
+V616FF-004,Forecast controls,"Metric, Scenario, Granularity, Key, Forecast Window, Actual History Window","All required controls present",PASS,TRUE
+V616FF-005,HDD prepared coverage,"Existing HDD forward cases included","HDD - EDB / Enterprise / Region with 45 keys",PASS,TRUE
+V616FF-006,HDD actual history,"HDD uses prepared actual history","Actuals available status and 90/180/365-day controls shown",PASS,TRUE
+V616FF-007,HDD chart,"Actual history plus forward forecast","180 actual points and 30 forecast points rendered for APC-Dedicated",PASS,TRUE
+V616FF-008,SSD metric availability,"SSD-Phoenix appears in Forecast","SSD - Phoenix is a Forecast metric option",PASS,TRUE
+V616FF-009,SSD no-efficiency scenario,"Low Volume No Efficiency available","Forest granularity with 148 prepared keys",PASS,TRUE
+V616FF-010,SSD efficiency scenario,"Low Volume With Efficiency available","Forest granularity with 152 prepared keys",PASS,TRUE
+V616FF-011,SSD actual independence,"Forecast does not require SSD actuals","Actual History Window shows Not available — forecast-only",PASS,TRUE
+V616FF-012,SSD forecast-only status,"Forecast-only cases clearly labelled","External Forecast-only status explains no actuals exist",PASS,TRUE
+V616FF-013,SSD chart,"Forward forecast renders without actual history","30 prepared forecast points and no actual series rendered for NAMPRD18",PASS,TRUE
+V616FF-014,Forecast data notes,"Required dimensions and coverage","Metric, scenario, granularity, key, forecast window, actual-history availability, forecast points, and date range shown",PASS,TRUE
+V616FF-015,Forecast version control,"No new selector required","Version is frozen outside Shiny and reported only as traceability metadata",PASS,FALSE
+V616FF-016,Prepared Forecast artifact,"One standardized runtime input","forecast_forward_outputs_v6_16_pilot.csv with 78142 rows",PASS,TRUE
+V616FF-017,External data preparation,"Version selection and windowing outside Shiny","Python builder produced the frozen artifact from existing local governed inputs",PASS,TRUE
+V616FF-018,No runtime cooking,"Shiny only loads, filters, summarizes, and renders","No model, extraction, SQL write, or source-artifact generation in Shiny",PASS,TRUE
+V616FF-019,Full-run guardrail,"Four-hour run remains blocked","No full backtest run started",PASS,TRUE

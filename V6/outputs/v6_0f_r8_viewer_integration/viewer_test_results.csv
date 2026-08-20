@@ -1,0 +1,18 @@
+test_id,metric,scenario,granularity,key,expected_mode,expected_rows,expected_badge,observed_mode,observed_rows,observed_badge,status,notes
+V1,HDD - EDB,Enterprise,Forest,NAMPRD07,FULL,>0,Actual + Forecast,FULL,1097,Actual + Forecast,PASS,series: actual/forecast
+V2,HDD - EDB,Consumer,Forest,NAMPRD07,FULL,>0,Actual + Forecast,FULL,1097,Actual + Forecast,PASS,series: actual/forecast
+V3,HDD - Basilisk,Basilisk,Forest,namprd07,FULL,>0,Actual + Forecast,FULL,954,Actual + Forecast,PASS,series: actual/forecast
+V4,HDD - Basilisk,Basilisk,Forest,NAMPRD07,FULL,>0,Actual + Forecast,FULL,954,Actual + Forecast,PASS,series: actual/forecast
+V5,SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,FORECAST_ONLY,>0,Forecast only,FORECAST_ONLY,2196,Forecast only,PASS,No actuals for this metric: the Viewer renders the forecast series only. SSD-Phoenix has no model dimension; no model selector is rendered.
+V6,SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,FORECAST_ONLY,>0,Forecast only,FORECAST_ONLY,2196,Forecast only,PASS,No actuals for this metric: the Viewer renders the forecast series only. SSD-Phoenix has no model dimension; no model selector is rendered.
+V7,HDD - EDB,Enterprise,Region,APC-Dedicated,FULL,>0,Actual + Forecast,FULL,3291,Actual + Forecast,PASS,series: actual/forecast
+V8,Memory,-,-,-,not selectable,0,GREY,OUT_OF_SCOPE,0,GREY,PASS,in metric dropdown: FALSE
+V9,CPU,-,-,-,not selectable,0,GREY,NOT_AVAILABLE_IN_PHASE1,0,GREY,PASS,in metric dropdown: FALSE
+V10,IOPS,-,-,-,not selectable,0,GREY,NOT_AVAILABLE_IN_PHASE1,0,GREY,PASS,in metric dropdown: FALSE
+V11,SSD - MCDB,-,-,-,not selectable,0,GREY,BLOCKED_O1,0,GREY,PASS,in metric dropdown: FALSE
+V12,SSD - Phoenix,Data Driven,Forest,NAMPRD07,not exposed,0,GREY,NOT_EXPOSED,0,GREY,PASS,22 hidden scenarios
+V13,HDD - EDB,Enterprise,Forest,-,model selector,no actual,-,24 types,24,-,PASS,Ensemble | Fixed growth baseline | Statistical model
+V14,SSD - Phoenix,Low Volume No Efficiency,Forest,-,no model selector,0,-,applies=FALSE,0,-,PASS,This source has no model dimension; no selector is rendered.
+V15,HDD - Basilisk,Basilisk,Forest,-,single version flagged,1,-,count=1 single=TRUE,1,-,PASS,Only one forecast version exists for this selection; the control must be disabled.
+V16,HDD - Basilisk,Basilisk,Forest,-,honest model list,few,-,1 types,1,-,PASS,FixedGrowth1.5%
+V17,HDD - Basilisk,Basilisk,Forest,namprd07 vs NAMPRD07,same rows,equal,-,-,954,-,PASS,case-insensitive key matching

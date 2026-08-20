@@ -1,0 +1,36 @@
+test_id,test_name,expected_result,observed_result,status,blocking,notes
+T01,registry_drives_the_build,0,0,PASS,yes,Only the declared VALIDATION_CASE_KEY constant names a key
+T02,normalized_schema_valid,"['metric_id', 'metric_name', 'db_type', 'db_type_label', 'scenario', 'scenario_status', 'granularity', 'entity_key', 'region', 'forest', 'key_namespace', 'forecast_version', 'forecast_version_date', 'source_object', 'source_file', 'source_family', 'source_grain', 'unit', 'unit_status', 'evaluation_start_date', 'evaluation_end_date', 'execution_date', 'count', 'mean_actual', 'mean_forecast', 'mae', 'rmse', 'bias', 'bias_pct', 'mape', 'smape', 'accuracy', 'accuracy_computable', 'drift_computable', 'forecast_curve_computable', 'cross_plan_computable', 'horizon_error_computable', 'computability_status', 'not_computable_reason', 'availability_status', 'evidence_level', 'data_quality_status', 'notes', 'contract_version']","['metric_id', 'metric_name', 'db_type', 'db_type_label', 'scenario', 'scenario_status', 'granularity', 'entity_key', 'region', 'forest', 'key_namespace', 'forecast_version', 'forecast_version_date', 'source_object', 'source_file', 'source_family', 'source_grain', 'unit', 'unit_status', 'evaluation_start_date', 'evaluation_end_date', 'execution_date', 'count', 'mean_actual', 'mean_forecast', 'mae', 'rmse', 'bias', 'bias_pct', 'mape', 'smape', 'accuracy', 'accuracy_computable', 'drift_computable', 'forecast_curve_computable', 'cross_plan_computable', 'horizon_error_computable', 'computability_status', 'not_computable_reason', 'availability_status', 'evidence_level', 'data_quality_status', 'notes', 'contract_version']",PASS,yes,44 columns in contract order
+T03,no_blank_scenario,0,0,PASS,yes,
+T04,scenario_not_applicable_accepted,True,True,PASS,yes,Sources without a Scenario column normalise without error
+T05,no_inherited_scenario,0,0,PASS,yes,No metrics source received a scenario value it does not physically have
+T06,legacy_files_unchanged,0,0,PASS,yes,14 frozen artifacts rehashed
+T07,lvwe_lvne_isolation,0,0,PASS,yes,Legacy build produced 137 blended groups
+T08,region_forest_isolation,0,0,PASS,yes,
+T09,no_cross_unit_aggregation,0,0,PASS,yes,
+T10,ranking_key_uniqueness,873,873,PASS,yes,
+T11,availability_gate_respected,0,0,PASS,yes,
+T12,single_version_not_marked_as_drift,0,0,PASS,yes,
+T13,filter_options_from_artifacts,0,0,PASS,yes,
+T14,dependent_filter_chain_valid,8,8,PASS,yes,Availability Status|Computability Status|DB Type|Forecast Version|Granularity|Key|Metric|Scenario
+T15,lineage_completeness,0,0,PASS,yes,
+T16,data_quality_flags_not_dropped,0,0,PASS,yes,rows_out equals rows_in for every emitting source
+T17,contract_version_stamped,0,0,PASS,yes,
+T18,namprd07_resolves_as_forest,['forest'],['forest'],PASS,yes,172 rows across 3 sources
+T19,hdd_metrics_preserved,True,True,PASS,yes,hdd_region_metrics.csv:ok; hdd_forest_metrics.csv:ok; ssd_phx_lvwe_metrics.csv:ok; ssd_phx_lvne_metrics.csv:ok
+T20,no_sql_executed,0,0,PASS,yes,
+T21,no_azure_calls,0,0,PASS,yes,Detects SDK imports and client construction rather than the word in comments
+T22,no_raw_data_exposed,0,0,PASS,yes,No fact-grain business rows emitted and no raw file copied. Lineage stores relative source paths as metadata only
+T23,no_secrets_in_artifacts,0,0,PASS,yes,
+T24,artifacts_land_in_mounted_paths,0,0,PASS,yes,All artifacts under outputs/metrics_multi which is inside the read-only mount
+T25,unavailable_metric_reported_not_empty,True,True,PASS,yes,11 unavailable sources each carry a status and a limitation
+T26,assistant_ui_still_present,0,0,PASS,yes,Static check: no tracked Shiny file modified. Runtime render check runs in V6.0F
+T27,assistant_reads_governed_artifacts,True,True,PASS,yes,Legacy pack parses with 11 responses; new pack has 11
+T28,assistant_explains_selection_context,True,True,PASS,yes,873 selection rows carry the full identity tuple
+T29,assistant_explains_drift_computability,True,True,PASS,yes,Every non-computable context row carries a reason code
+T30,assistant_does_not_invent_scenario,0,0,PASS,yes,
+T31,assistant_never_calls_single_version_drift,0,0,PASS,yes,
+T32,assistant_no_cross_metric_aggregation_in_prose,0,0,PASS,yes,
+T33,assistant_legacy_pack_unchanged,A4DB09B4B78443D095CF9C4862120F209E1C509CE1EB619861F1642FD6D16E40,A4DB09B4B78443D095CF9C4862120F209E1C509CE1EB619861F1642FD6D16E40,PASS,yes,
+T34,assistant_exports_still_work,5 formats,deferred,DEFERRED,no,Requires a running Shiny session. Scheduled for V6.0F
+T35,assistant_works_in_docker_v6,container parity,deferred,DEFERRED,no,Scheduled for V6.0H

@@ -1,0 +1,9 @@
+filter,level,required,dependency,allowed_not_applicable,multi_select,source_artifact,behavior_when_unavailable,behavior_when_not_applicable,status
+Metric,1,yes,none,no,no,metric_filter_options.csv,Show every known metric including unavailable ones marked disabled with a reason,Not applicable does not occur at this level,DEFINED
+DB Type,2,yes,Metric,no,no,metric_filter_options.csv,Disable options whose availability_status is not local_ingested or partially_available and show the reason,When a metric declares a single db_type the control may collapse to a static label,DEFINED
+Scenario,3,no,DB Type,yes,no,metric_filter_options.csv,Disable and explain when pending_mapping or unknown,Hide the control or render it as the static text Not applicable. Never send a value and never default to Enterprise,DEFINED
+Granularity,4,yes,Scenario applicability,no,no,metric_filter_options.csv,Only expose granularities that exist for the current selection,Not applicable does not occur at this level,DEFINED
+Key,5,yes,Granularity,no,yes,metric_filter_options.csv,Only expose keys belonging to the selected key_namespace,Not applicable does not occur at this level,DEFINED
+Forecast Version,6,yes,Key,no,no,metric_filter_options.csv,When a single version exists show it and label the view single-version accuracy only,Not applicable does not occur at this level,DEFINED
+Availability Status,filter_badge,no,Metric,no,no,metric_availability_status.csv,Always visible as a read-only badge,Shows the declared status verbatim,DEFINED
+Computability Status,filter_badge,no,Metric,no,no,metric_computability_status.csv,Always visible as a read-only badge,Shows the declared status verbatim,DEFINED

@@ -1,0 +1,9 @@
+metric,scenario_ui_label,granularity,viewer_status,forecast_status,badge,has_actuals,has_forecast
+HDD - EDB,Enterprise,Region,FULL,FULL,GREEN,TRUE,TRUE
+HDD - EDB,Consumer,Region,FULL,FULL,GREEN,TRUE,TRUE
+HDD - Basilisk,Basilisk,Region,FULL,FULL,GREEN,TRUE,TRUE
+HDD - EDB,Enterprise,Forest,FULL,FULL,GREEN,TRUE,TRUE
+HDD - EDB,Consumer,Forest,FULL,FULL,GREEN,TRUE,TRUE
+HDD - Basilisk,Basilisk,Forest,FULL,FULL,GREEN,TRUE,TRUE
+SSD - Phoenix,Low Volume No Efficiency,Forest,FORECAST_ONLY,FULL,AMBER,FALSE,TRUE
+SSD - Phoenix,Low Volume With Efficiency,Forest,FORECAST_ONLY,FULL,AMBER,FALSE,TRUE

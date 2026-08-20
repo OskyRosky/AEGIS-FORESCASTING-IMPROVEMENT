@@ -1,0 +1,12 @@
+metric,source_table,granularity,key_column,total_keys,keys_in_latest_version,extract_all_keys,mandatory_keys,sample_policy,reason
+HDD - EDB / HDD - Basilisk,forecast_substrateBE_hdd_region,Region,Key,52,43,yes,none,full inventory,Only 52 keys; trivial volume
+HDD - EDB / HDD - Basilisk,forecast_substrateBE_hdd,Forest,forest_name,318,152 to 155 per scenario,yes,NAMPRD07.PROD.OUTLOOK.CO,full inventory,Present in the source; NAMPRD07 required for the demo
+SSD - Phoenix,forecast_substrateBE_SSD_TotalForecast,Forest,Key,163,148,yes,NAMPRD07,full inventory,163 keys is manageable; NAMPRD07 confirmed present
+CPU / CPU Failover,forecast_substrateBE_cpu_region,Region,Key,46,44,yes,none,full inventory,Small
+CPU / CPU Failover,forecast_substrateBE_cpu,Forest,Forest_SKU,714,493,yes,NAMPRD07 SKUs,full inventory,SKU grain preserved per D4; 823k rows windowed is acceptable
+IOPS / IOPS Failover,forecast_substrateBE_iops_region,Region,Key,46,44,yes,none,full inventory,Small
+IOPS / IOPS Failover,forecast_substrateBE_iops,Forest,Forest_SKU,552,454,yes,NAMPRD07 SKUs,full inventory,SKU grain preserved per D4
+SSD - MCDB,SubstrateBE_Ssd_MCDB_ForecastForestSKU,Forest_SKU,Key,774,not measured,no,none,none,Blocked by O1
+CPU byDB,forecast_substrateBE_cpu_byDB_region,Region,MyKey,44,not measured,no,none,none,Blocked by O3
+CPU byDB,forecast_substrateBE_cpu_byDB_forest,Forest,MyKey,159,not measured,no,none,none,Blocked by O3
+Memory,NONE,none,none,0,0,no,none,none,Out of scope per D1

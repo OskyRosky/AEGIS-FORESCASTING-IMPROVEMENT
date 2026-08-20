@@ -1,0 +1,28 @@
+check_id,check,expected,observed,result
+B01,Legacy artifact rows,204300,204300,PASS
+B02,Legacy series,39,39,PASS
+B03,Legacy distinct origin dates,12,12,PASS
+B04,Legacy series-origin units,454,454,PASS
+B05,Legacy horizons,1 through 30,1 through 30,PASS
+B06,Legacy models,15,15,PASS
+B07,Legacy dimensional reconciliation,454 x 15 x 30 = 204300,204300,PASS
+B08,Model contract reconciliation,Exact same 15 model names,Exact match,PASS
+B09,All-six HDD new keys,557,557,PASS
+B10,All-six series-origin units,4915,4915,PASS
+B11,All-six model fits,73725,73725,PASS
+B12,All-six new rows,2211750,2211750,PASS
+B13,Formal Boon scope,Enterprise Region top-up plus Enterprise Forest,6 Region keys plus 152 Forest keys,PASS
+B14,NAMPRD07 grain,Forest only,Forest only; Region uses region keys,PASS
+B15,Cheap-model reference,10.87 minutes for exact 12 models over 454 units,V3.3B-2 measured 10.88 umbrella and 10.87 component sum,PASS
+B16,Neural reference,Isolated runtime for all three models,V3.2D totals 225.8436 seconds,PASS
+B17,Full base estimate,Sum of cheap and neural projections,117.68 + 40.75 = 158.43 minutes,PASS
+B18,Thirty-minute scenario,NAMPRD07 pilot only,Full 15-model pilot budgeted with overhead,PASS
+B19,One-hour scenario,Formal Boon cheap 12 only recommended,41.61-minute base with 18.39-minute allowance,PASS
+B20,Two-to-three-hour scenario,All-six cheap 12 feasible,117.68-minute base inside 180 minutes,PASS
+B21,Full-run scenario,Four-hour phased budget recommended,158.43-minute base with 81.57-minute allowance,PASS
+B22,Overnight scenario,Eight-hour conservative contingency,480-minute cap documented,PASS
+B23,No model run,Zero model execution commands,Zero,PASS
+B24,No Tesseract extraction,Zero extraction actions,Zero,PASS
+B25,No Shiny or resolver wiring,No tracked Shiny changes and resolver remains unwired,No tracked Shiny changes; resolver only remains untracked,PASS
+B26,No SQL Docker Azure or V1-V5 changes,None,None,PASS
+B27,R8-FIX-3 stage,Not started,Not started,PASS

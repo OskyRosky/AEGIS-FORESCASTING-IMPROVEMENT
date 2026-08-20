@@ -1,0 +1,163 @@
+raw_type_value,ui_type_label,classification,model_family,is_actual,is_model,is_baseline,is_candidate,row_count,expose_in_viewer,notes
+Arima,Arima,statistical,Statistical model,False,True,False,True,6416434,yes,stored space-padded; TRIM required for matching
+actual,actual,actual,Actual,True,False,False,False,4372036,yes,stored space-padded; TRIM required for matching
+"Arima+Fixed_0.015(0.5,0.5)","Arima+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,4286323,yes,stored space-padded; TRIM required for matching
+Fixed_0.015,Fixed_0.015,baseline_fixed,Fixed rate baseline,False,True,True,False,2858966,yes,stored space-padded; TRIM required for matching
+Linear,Linear,statistical,Statistical model,False,True,False,True,2682438,yes,stored space-padded; TRIM required for matching
+bsts_trend,bsts_trend,statistical,Statistical model,False,True,False,True,2287040,yes,stored space-padded; TRIM required for matching
+"Arima+Linear(0.5,0.5)","Arima+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,2031501,yes,stored space-padded; TRIM required for matching
+ETS_AAZ180HaLb,ETS_AAZ180HaLb,statistical,Statistical model,False,True,False,True,1790015,yes,stored space-padded; TRIM required for matching
+Fixed_0.01,Fixed_0.01,baseline_fixed,Fixed rate baseline,False,True,True,False,1743979,yes,stored space-padded; TRIM required for matching
+"Arima+Prophet(0.5,0.5)","Arima+Prophet(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1485994,yes,stored space-padded; TRIM required for matching
+"Arima+bsts_trend(0.5,0.5)","Arima+bsts_trend(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1270940,yes,stored space-padded; TRIM required for matching
+Prophet,Prophet,statistical,Statistical model,False,True,False,True,1264180,yes,stored space-padded; TRIM required for matching
+"Arima+Fixed_0.04(0.5,0.5)","Arima+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1188350,yes,stored space-padded; TRIM required for matching
+"Prophet+Linear(0.5,0.5)","Prophet+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1107495,yes,stored space-padded; TRIM required for matching
+"Arima+Fixed_0.02(0.5,0.5)","Arima+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1106469,yes,stored space-padded; TRIM required for matching
+"bsts_trend+Linear(0.5,0.5)","bsts_trend+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1092043,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Linear(0.5,0.5)","ETS_AAZ180HaLb+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,870713,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%,FixedGrowth1%,baseline_growth,Fixed growth baseline,False,True,True,False,834439,yes,stored space-padded; TRIM required for matching
+Fixed_0.04,Fixed_0.04,baseline_fixed,Fixed rate baseline,False,True,True,False,772492,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+bsts_trend(0.5,0.5)","ETS_AAZ180HaLb+bsts_trend(0.5,0.5)",ensemble,Ensemble,False,True,False,True,553450,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Fixed_0.015(0.5,0.5)","ETS_AAZ180HaLb+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,530995,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Fixed_0.015(0.5,0.5)","ETS_AAZ180HaHb+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,499717,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Fixed_0.04(0.5,0.5)","ETS_AAZ180HaLb+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,472899,yes,stored space-padded; TRIM required for matching
+"Arima+Fixed_0.03(0.5,0.5)","Arima+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,466066,yes,stored space-padded; TRIM required for matching
+"Prophet+bsts_trend(0.5,0.5)","Prophet+bsts_trend(0.5,0.5)",ensemble,Ensemble,False,True,False,True,406333,yes,stored space-padded; TRIM required for matching
+"Arima+Fixed_0.05(0.5,0.5)","Arima+Fixed_0.05(0.5,0.5)",ensemble,Ensemble,False,True,False,True,396060,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Fixed_0.02(0.5,0.5)","ETS_AAZ180HaHb+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,364411,yes,stored space-padded; TRIM required for matching
+Fixed_0.02,Fixed_0.02,baseline_fixed,Fixed rate baseline,False,True,True,False,360646,yes,stored space-padded; TRIM required for matching
+"Prophet+Fixed_0.04(0.5,0.5)","Prophet+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,359844,yes,stored space-padded; TRIM required for matching
+"bsts_trend+Fixed_0.04(0.5,0.5)","bsts_trend+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,334056,yes,stored space-padded; TRIM required for matching
+"Arima+Fixed_0.06(0.5,0.5)","Arima+Fixed_0.06(0.5,0.5)",ensemble,Ensemble,False,True,False,True,331850,yes,stored space-padded; TRIM required for matching
+ETS_AAZ180HaHb,ETS_AAZ180HaHb,statistical,Statistical model,False,True,False,True,330320,yes,stored space-padded; TRIM required for matching
+Fixed_0.017,Fixed_0.017,baseline_fixed,Fixed rate baseline,False,True,True,False,297368,yes,stored space-padded; TRIM required for matching
+"Fixed_0.015+Linear(0.5,0.5)","Fixed_0.015+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,293325,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Fixed_0.03(0.5,0.5)","ETS_AAZ180HaHb+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,281861,yes,stored space-padded; TRIM required for matching
+FixedGrowth2%,FixedGrowth2%,baseline_growth,Fixed growth baseline,False,True,True,False,281455,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Arima(0.5,0.5)","ETS_AAZ180HaHb+Arima(0.5,0.5)",ensemble,Ensemble,False,True,False,True,259930,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Fixed_0.05(0.5,0.5)","ETS_AAZ180HaLb+Fixed_0.05(0.5,0.5)",ensemble,Ensemble,False,True,False,True,245647,yes,stored space-padded; TRIM required for matching
+Fixed_0.026,Fixed_0.026,baseline_fixed,Fixed rate baseline,False,True,True,False,238853,yes,stored space-padded; TRIM required for matching
+"Prophet+Fixed_0.05(0.5,0.5)","Prophet+Fixed_0.05(0.5,0.5)",ensemble,Ensemble,False,True,False,True,227797,yes,stored space-padded; TRIM required for matching
+FixedGrowth1.5%,FixedGrowth1.5%,baseline_growth,Fixed growth baseline,False,True,True,False,224595,yes,stored space-padded; TRIM required for matching
+Fixed_0.007,Fixed_0.007,baseline_fixed,Fixed rate baseline,False,True,True,False,223219,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+ETS_AAZ180La(0.5,0.5)","ETS_AAZ180HaLb+ETS_AAZ180La(0.5,0.5)",ensemble,Ensemble,False,True,False,True,213111,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Fixed_0.04(0.5,0.5)","ETS_AAZ180HaHb+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,201879,yes,stored space-padded; TRIM required for matching
+Fixed_0.05,Fixed_0.05,baseline_fixed,Fixed rate baseline,False,True,True,False,193179,yes,stored space-padded; TRIM required for matching
+Fixed_0.03,Fixed_0.03,baseline_fixed,Fixed rate baseline,False,True,True,False,192187,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+ETS_AAZ180La(0.5,0.5)","ETS_AAZ180HaHb+ETS_AAZ180La(0.5,0.5)",ensemble,Ensemble,False,True,False,True,175714,yes,stored space-padded; TRIM required for matching
+Fixed_0.011,Fixed_0.011,baseline_fixed,Fixed rate baseline,False,True,True,False,172601,yes,stored space-padded; TRIM required for matching
+Fixed_0.018,Fixed_0.018,baseline_fixed,Fixed rate baseline,False,True,True,False,172098,yes,stored space-padded; TRIM required for matching
+"Fixed_0.015+Fixed_0.02(0.5,0.5)","Fixed_0.015+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,171909,yes,stored space-padded; TRIM required for matching
+ETS_AAZ180La,ETS_AAZ180La,statistical,Statistical model,False,True,False,True,169840,yes,stored space-padded; TRIM required for matching
+"bsts_regression+Fixed_0.015(0.5,0.5)","bsts_regression+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,168303,yes,stored space-padded; TRIM required for matching
+FixedGrowth2%_ARIMA_Ensemble,FixedGrowth2%_ARIMA_Ensemble,ensemble,Ensemble,False,True,False,True,167806,yes,stored space-padded; TRIM required for matching
+ExponentialSmoothing,ExponentialSmoothing,statistical,Statistical model,False,True,False,True,167610,yes,stored space-padded; TRIM required for matching
+"Fixed_0.02+Fixed_0.03(0.5,0.5)","Fixed_0.02+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,167036,yes,stored space-padded; TRIM required for matching
+FixedGrowth3%,FixedGrowth3%,baseline_growth,Fixed growth baseline,False,True,True,False,166209,yes,stored space-padded; TRIM required for matching
+Fixed_0.019,Fixed_0.019,baseline_fixed,Fixed rate baseline,False,True,True,False,163380,yes,stored space-padded; TRIM required for matching
+bsts_regression,bsts_regression,statistical,Statistical model,False,True,False,True,156328,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%_ExponentialSmoothing_Ensemble,FixedGrowth1%_ExponentialSmoothing_Ensemble,ensemble,Ensemble,False,True,False,True,149017,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Arima(0.5,0.5)","ETS_AAZ180HaLb+Arima(0.5,0.5)",ensemble,Ensemble,False,True,False,True,133959,yes,stored space-padded; TRIM required for matching
+FixedGrowth4%,FixedGrowth4%,baseline_growth,Fixed growth baseline,False,True,True,False,131505,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Prophet(0.5,0.5)","ETS_AAZ180HaHb+Prophet(0.5,0.5)",ensemble,Ensemble,False,True,False,True,131038,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Fixed_0.06(0.5,0.5)","ETS_AAZ180HaLb+Fixed_0.06(0.5,0.5)",ensemble,Ensemble,False,True,False,True,121453,yes,stored space-padded; TRIM required for matching
+Fixed_0.006,Fixed_0.006,baseline_fixed,Fixed rate baseline,False,True,True,False,120408,yes,stored space-padded; TRIM required for matching
+FixedGrowth5%,FixedGrowth5%,baseline_growth,Fixed growth baseline,False,True,True,False,108572,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Prophet(0.5,0.5)","ETS_AAZ180La+Prophet(0.5,0.5)",ensemble,Ensemble,False,True,False,True,104795,yes,stored space-padded; TRIM required for matching
+FixedGrowth2%_ExponentialSmoothing_Ensemble,FixedGrowth2%_ExponentialSmoothing_Ensemble,ensemble,Ensemble,False,True,False,True,101260,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Fixed_0.04(0.5,0.5)","ETS_AAZ180La+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,88738,yes,stored space-padded; TRIM required for matching
+"Fixed_0.015+Fixed_0.03(0.5,0.5)","Fixed_0.015+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,88200,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%_ARIMA_Ensemble,FixedGrowth1%_ARIMA_Ensemble,ensemble,Ensemble,False,True,False,True,88198,yes,stored space-padded; TRIM required for matching
+Fixed_0.005,Fixed_0.005,baseline_fixed,Fixed rate baseline,False,True,True,False,86725,yes,stored space-padded; TRIM required for matching
+ExponentialSmoothing_ARIMA_Ensemble,ExponentialSmoothing_ARIMA_Ensemble,ensemble,Ensemble,False,True,False,True,79532,yes,stored space-padded; TRIM required for matching
+"bsts_trend+bsts_regression(0.5,0.5)","bsts_trend+bsts_regression(0.5,0.5)",ensemble,Ensemble,False,True,False,True,74075,yes,stored space-padded; TRIM required for matching
+"bsts+Fixed_0.03(0.5,0.5)","bsts+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,73328,yes,stored space-padded; TRIM required for matching
+"bsts_regression+Fixed_0.02(0.5,0.5)","bsts_regression+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,72339,yes,stored space-padded; TRIM required for matching
+"Fixed_0.03+Fixed_0.04(0.5,0.5)","Fixed_0.03+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,71831,yes,stored space-padded; TRIM required for matching
+"Fixed_0.04+Linear(0.5,0.5)","Fixed_0.04+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,69568,yes,stored space-padded; TRIM required for matching
+Fixed_0.06,Fixed_0.06,baseline_fixed,Fixed rate baseline,False,True,True,False,65264,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%_FixedGrowth2%_Ensemble,FixedGrowth1%_FixedGrowth2%_Ensemble,ensemble,Ensemble,False,True,False,True,63637,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Fixed_0.02(0.5,0.5)","ETS_AAZ180La+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,60905,yes,stored space-padded; TRIM required for matching
+Fixed_0.003,Fixed_0.003,baseline_fixed,Fixed rate baseline,False,True,True,False,60277,yes,stored space-padded; TRIM required for matching
+"bsts_reg+Fixed_0.03(0.5,0.5)","bsts_reg+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,53633,yes,stored space-padded; TRIM required for matching
+"Fixed_0.05+Linear(0.5,0.5)","Fixed_0.05+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,53483,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Fixed_0.015(0.5,0.5)","ETS_AAZ180La+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,52152,yes,stored space-padded; TRIM required for matching
+"Prophet+Fixed_0.015(0.5,0.5)","Prophet+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,50906,yes,stored space-padded; TRIM required for matching
+FixedGrowth3%_ARIMA_Ensemble,FixedGrowth3%_ARIMA_Ensemble,ensemble,Ensemble,False,True,False,True,50612,yes,stored space-padded; TRIM required for matching
+FixedGrowth2%_FixedGrowth1%_Ensemble,FixedGrowth2%_FixedGrowth1%_Ensemble,ensemble,Ensemble,False,True,False,True,49164,yes,stored space-padded; TRIM required for matching
+Fixed_0.09,Fixed_0.09,baseline_fixed,Fixed rate baseline,False,True,True,False,46780,yes,stored space-padded; TRIM required for matching
+Fixed_0.027,Fixed_0.027,baseline_fixed,Fixed rate baseline,False,True,True,False,46532,yes,stored space-padded; TRIM required for matching
+FixedGrowth5%_ExponentialSmoothing_Ensemble,FixedGrowth5%_ExponentialSmoothing_Ensemble,ensemble,Ensemble,False,True,False,True,46233,yes,stored space-padded; TRIM required for matching
+Fixed_0.034,Fixed_0.034,baseline_fixed,Fixed rate baseline,False,True,True,False,42739,yes,stored space-padded; TRIM required for matching
+"bsts_trend+Fixed_0.06(0.5,0.5)","bsts_trend+Fixed_0.06(0.5,0.5)",ensemble,Ensemble,False,True,False,True,42040,yes,stored space-padded; TRIM required for matching
+FixedGrowth5%_ARIMA_Ensemble,FixedGrowth5%_ARIMA_Ensemble,ensemble,Ensemble,False,True,False,True,41859,yes,stored space-padded; TRIM required for matching
+"ETS+Fixed_0.03(0.5,0.5)","ETS+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,40984,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Linear(0.5,0.5)","ETS_AAZ180La+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,39686,yes,stored space-padded; TRIM required for matching
+"bsts_regression+Fixed_0.04(0.5,0.5)","bsts_regression+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,39282,yes,stored space-padded; TRIM required for matching
+FixedGrowth3%_ExponentialSmoothing_Ensemble,FixedGrowth3%_ExponentialSmoothing_Ensemble,ensemble,Ensemble,False,True,False,True,39035,yes,stored space-padded; TRIM required for matching
+Fixed_0,Fixed_0,baseline_fixed,Fixed rate baseline,False,True,True,False,38988,yes,stored space-padded; TRIM required for matching
+Fixed_0.001,Fixed_0.001,baseline_fixed,Fixed rate baseline,False,True,True,False,38552,yes,stored space-padded; TRIM required for matching
+Fixed_0.002,Fixed_0.002,baseline_fixed,Fixed rate baseline,False,True,True,False,37932,yes,stored space-padded; TRIM required for matching
+Fixed_0.024,Fixed_0.024,baseline_fixed,Fixed rate baseline,False,True,True,False,37835,yes,stored space-padded; TRIM required for matching
+"Fixed_0.06+Linear(0.5,0.5)","Fixed_0.06+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,36940,yes,stored space-padded; TRIM required for matching
+"Fixed_0.02+Linear(0.5,0.5)","Fixed_0.02+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,36735,yes,stored space-padded; TRIM required for matching
+Fixed_0.004,Fixed_0.004,baseline_fixed,Fixed rate baseline,False,True,True,False,33386,yes,stored space-padded; TRIM required for matching
+FixedGrowth4%_ExponentialSmoothing_Ensemble,FixedGrowth4%_ExponentialSmoothing_Ensemble,ensemble,Ensemble,False,True,False,True,30365,yes,stored space-padded; TRIM required for matching
+"Arima+bsts_regression(0.5,0.5)","Arima+bsts_regression(0.5,0.5)",ensemble,Ensemble,False,True,False,True,27872,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Prophet(0.5,0.5)","ETS_AAZ180HaLb+Prophet(0.5,0.5)",ensemble,Ensemble,False,True,False,True,27386,yes,stored space-padded; TRIM required for matching
+"bsts_trend+Fixed_0.02(0.5,0.5)","bsts_trend+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,26010,yes,stored space-padded; TRIM required for matching
+"bsts_trend+Fixed_0.05(0.5,0.5)","bsts_trend+Fixed_0.05(0.5,0.5)",ensemble,Ensemble,False,True,False,True,22240,yes,stored space-padded; TRIM required for matching
+Fixed_0.012,Fixed_0.012,baseline_fixed,Fixed rate baseline,False,True,True,False,21267,yes,stored space-padded; TRIM required for matching
+Fixed_0.014,Fixed_0.014,baseline_fixed,Fixed rate baseline,False,True,True,False,21235,yes,stored space-padded; TRIM required for matching
+Fixed_0.008,Fixed_0.008,baseline_fixed,Fixed rate baseline,False,True,True,False,21226,yes,stored space-padded; TRIM required for matching
+"Prophet+Fixed_0.03(0.5,0.5)","Prophet+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,18835,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%_FixedGrowth3%_Ensemble,FixedGrowth1%_FixedGrowth3%_Ensemble,ensemble,Ensemble,False,True,False,True,18803,yes,stored space-padded; TRIM required for matching
+Fixed_0.009,Fixed_0.009,baseline_fixed,Fixed rate baseline,False,True,True,False,17832,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+Fixed_0.03(0.5,0.5)","ETS_AAZ180HaLb+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,17825,yes,stored space-padded; TRIM required for matching
+FixedGrowth2%_FixedGrowth3%_Ensemble,FixedGrowth2%_FixedGrowth3%_Ensemble,ensemble,Ensemble,False,True,False,True,17345,yes,stored space-padded; TRIM required for matching
+FixedGrowth3%_FixedGrowth1%_Ensemble,FixedGrowth3%_FixedGrowth1%_Ensemble,ensemble,Ensemble,False,True,False,True,13010,yes,stored space-padded; TRIM required for matching
+Fixed_0.025,Fixed_0.025,baseline_fixed,Fixed rate baseline,False,True,True,False,12705,yes,stored space-padded; TRIM required for matching
+Fixed_0.031,Fixed_0.031,baseline_fixed,Fixed rate baseline,False,True,True,False,12064,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+Linear(0.5,0.5)","ETS_AAZ180HaHb+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,11324,yes,stored space-padded; TRIM required for matching
+Fixed_0.022,Fixed_0.022,baseline_fixed,Fixed rate baseline,False,True,True,False,10143,yes,stored space-padded; TRIM required for matching
+Fixed_0.013,Fixed_0.013,baseline_fixed,Fixed rate baseline,False,True,True,False,9326,yes,stored space-padded; TRIM required for matching
+"Fixed_0.04+Fixed_0.05(0.5,0.5)","Fixed_0.04+Fixed_0.05(0.5,0.5)",ensemble,Ensemble,False,True,False,True,9158,yes,stored space-padded; TRIM required for matching
+"Fixed_0.03+Linear(0.5,0.5)","Fixed_0.03+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,8760,yes,stored space-padded; TRIM required for matching
+FixedGrowth4%_ARIMA_Ensemble,FixedGrowth4%_ARIMA_Ensemble,ensemble,Ensemble,False,True,False,True,8687,yes,stored space-padded; TRIM required for matching
+Fixed_NA,Fixed_NA,data_quality_marker,Marker,False,False,False,False,8512,no,stored space-padded; TRIM required for matching; not a model; excluded from the model selector
+Fixed_0.033,Fixed_0.033,baseline_fixed,Fixed rate baseline,False,True,True,False,8512,yes,stored space-padded; TRIM required for matching
+Fixed_0.036,Fixed_0.036,baseline_fixed,Fixed rate baseline,False,True,True,False,8203,yes,stored space-padded; TRIM required for matching
+Fixed_0.016,Fixed_0.016,baseline_fixed,Fixed rate baseline,False,True,True,False,7871,yes,stored space-padded; TRIM required for matching
+FixedGrowth4%_FixedGrowth3%_Ensemble,FixedGrowth4%_FixedGrowth3%_Ensemble,ensemble,Ensemble,False,True,False,True,7224,yes,stored space-padded; TRIM required for matching
+"Prophet+bsts_regression(0.5,0.5)","Prophet+bsts_regression(0.5,0.5)",ensemble,Ensemble,False,True,False,True,7096,yes,stored space-padded; TRIM required for matching
+"bsts_regression+Fixed_0.03(0.5,0.5)","bsts_regression+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,6646,yes,stored space-padded; TRIM required for matching
+Fixed_0.023,Fixed_0.023,baseline_fixed,Fixed rate baseline,False,True,True,False,6246,yes,stored space-padded; TRIM required for matching
+"Prophet+Fixed_0.02(0.5,0.5)","Prophet+Fixed_0.02(0.5,0.5)",ensemble,Ensemble,False,True,False,True,4669,yes,stored space-padded; TRIM required for matching
+"bsts_regression+Linear(0.5,0.5)","bsts_regression+Linear(0.5,0.5)",ensemble,Ensemble,False,True,False,True,4411,yes,stored space-padded; TRIM required for matching
+FixedGrowth3%_FixedGrowth2%_Ensemble,FixedGrowth3%_FixedGrowth2%_Ensemble,ensemble,Ensemble,False,True,False,True,4355,yes,stored space-padded; TRIM required for matching
+Fixed_0.032,Fixed_0.032,baseline_fixed,Fixed rate baseline,False,True,True,False,4256,yes,stored space-padded; TRIM required for matching
+Fixed_0.043,Fixed_0.043,baseline_fixed,Fixed rate baseline,False,True,True,False,4256,yes,stored space-padded; TRIM required for matching
+Fixed_0.028,Fixed_0.028,baseline_fixed,Fixed rate baseline,False,True,True,False,4256,yes,stored space-padded; TRIM required for matching
+Fixed_0.021,Fixed_0.021,baseline_fixed,Fixed rate baseline,False,True,True,False,4197,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+bsts_regression(0.5,0.5)","ETS_AAZ180HaHb+bsts_regression(0.5,0.5)",ensemble,Ensemble,False,True,False,True,3954,yes,stored space-padded; TRIM required for matching
+Fixed_0.055,Fixed_0.055,baseline_fixed,Fixed rate baseline,False,True,True,False,3898,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaHb+bsts_trend(0.5,0.5)","ETS_AAZ180HaHb+bsts_trend(0.5,0.5)",ensemble,Ensemble,False,True,False,True,3769,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Fixed_0.03(0.5,0.5)","ETS_AAZ180La+Fixed_0.03(0.5,0.5)",ensemble,Ensemble,False,True,False,True,2949,yes,stored space-padded; TRIM required for matching
+FixedGrowth4%_FixedGrowth5%_Ensemble,FixedGrowth4%_FixedGrowth5%_Ensemble,ensemble,Ensemble,False,True,False,True,2901,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%_FixedGrowth4%_Ensemble,FixedGrowth1%_FixedGrowth4%_Ensemble,ensemble,Ensemble,False,True,False,True,2892,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+bsts_trend(0.5,0.5)","ETS_AAZ180La+bsts_trend(0.5,0.5)",ensemble,Ensemble,False,True,False,True,2463,yes,stored space-padded; TRIM required for matching
+"Prophet+Fixed_0.06(0.5,0.5)","Prophet+Fixed_0.06(0.5,0.5)",ensemble,Ensemble,False,True,False,True,2196,yes,stored space-padded; TRIM required for matching
+Extrapolated,Extrapolated,data_quality_marker,Marker,False,False,False,False,2048,no,stored space-padded; TRIM required for matching; not a model; excluded from the model selector
+Fixed_0.039,Fixed_0.039,baseline_fixed,Fixed rate baseline,False,True,True,False,2039,yes,stored space-padded; TRIM required for matching
+"bsts_reg+Fixed_0.04(0.5,0.5)","bsts_reg+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1949,yes,stored space-padded; TRIM required for matching
+"bsts_trend+Fixed_0.015(0.5,0.5)","bsts_trend+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1905,yes,stored space-padded; TRIM required for matching
+"ETS+Fixed_0.015(0.5,0.5)","ETS+Fixed_0.015(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1653,yes,stored space-padded; TRIM required for matching
+stubbed,stubbed,data_quality_marker,Marker,False,False,False,False,1597,no,stored space-padded; TRIM required for matching; not a model; excluded from the model selector
+AAZ90HaLb,AAZ90HaLb,statistical,Statistical model,False,True,False,True,1582,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180HaLb+ETS_AAZ180HaHb(0.5,0.5)","ETS_AAZ180HaLb+ETS_AAZ180HaHb(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1460,yes,stored space-padded; TRIM required for matching
+"ETS_AAZ180La+Arima(0.5,0.5)","ETS_AAZ180La+Arima(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1460,yes,stored space-padded; TRIM required for matching
+"Fixed_0.015+Fixed_0.04(0.5,0.5)","Fixed_0.015+Fixed_0.04(0.5,0.5)",ensemble,Ensemble,False,True,False,True,1460,yes,stored space-padded; TRIM required for matching
+FixedGrowth1%_FixedGrowth5%_Ensemble,FixedGrowth1%_FixedGrowth5%_Ensemble,ensemble,Ensemble,False,True,False,True,1454,yes,stored space-padded; TRIM required for matching
+FixedGrowth5%_FixedGrowth2%_Ensemble,FixedGrowth5%_FixedGrowth2%_Ensemble,ensemble,Ensemble,False,True,False,True,1454,yes,stored space-padded; TRIM required for matching
+FixedGrowth5%_FixedGrowth4%_Ensemble,FixedGrowth5%_FixedGrowth4%_Ensemble,ensemble,Ensemble,False,True,False,True,1445,yes,stored space-padded; TRIM required for matching

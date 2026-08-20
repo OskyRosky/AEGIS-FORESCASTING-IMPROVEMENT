@@ -1,0 +1,37 @@
+check_id,check,expected,observed,method,result
+F1V01,Scenario Explorer section absent from the DOM,absent,vsx-section = false,live browser,PASS
+F1V02,vsx_metric control absent,absent,false,live browser,PASS
+F1V03,vsx_chart output absent,absent,false,live browser,PASS
+F1V04,Text 'Scenario explorer' absent from the page,absent,false,live browser,PASS
+F1V05,Text 'r6_phase1.duckdb' absent from the page,absent,false,live browser,PASS
+F1V06,Multi-Metric still absent,absent,false,live browser,PASS
+F1V07,Zero residual code references,0 matches,0 matches for viewer_scenario / vsx_ / Scenario explorer,Select-String over V6/shiny_app,PASS
+F1V08,shiny_app identical to git HEAD,empty diff,git diff --stat returns empty,git,PASS
+F1V09,Only scenario_resolver.R remains untracked,1 untracked file,?? V6/shiny_app/R/scenario_resolver.R,git status,PASS
+F1V10,Shiny app starts,no error,Listening on http://127.0.0.1:8081,Rscript,PASS
+F1V11,HTTP 200,200,200,browser navigation,PASS
+F1V12,Viewer page reachable,reachable,Forecast Viewer heading rendered,live browser,PASS
+F1V13,Single Set up the backtest view box,1 box,1 box; no second controls box,live browser + screenshot,PASS
+F1V14,Legacy key/series control works,populated,APC-Dedicated selected from 39 series,live browser,PASS
+F1V15,Legacy Horizon control present,present,6 options 5 to 30 days,live browser,PASS
+F1V16,Legacy History window control present,present,Full available window,live browser,PASS
+F1V17,Legacy model families present,4 families,Growth baseline / Statistical / Machine learning / Deep Learning,live browser,PASS
+F1V18,All 15 AEGIS models offered,15,15 checkboxes across the 4 families,live browser,PASS
+F1V19,Analyze Backtest executes,chart renders,chart html 120659 bytes after click,live browser,PASS
+F1V20,Backtest chart draws actual plus models,Actual present,legend: Actual FixedGrowth_3 ARIMA_Fixed ETS Explicit LightGBM XGBoost SMLP-TCN,live browser,PASS
+F1V21,Data notes render,populated,Series APC-Dedicated / 6 models / horizon 5 / 442 actual points / 72 forecast points / 2025-05-03 to 2026-04-27,live browser,PASS
+F1V22,Assistant panel present,present,AEGIS Explanation Assistant rendered,live browser,PASS
+F1V23,All 14 sections present,14,home overview universe tournament champion explorer accuracy forecast ttl risks audit artifacts methodology version,live browser,PASS
+F1V24,Forecast page not modified,0 changes,0,git,PASS
+F1V25,Accuracy page not modified,0 changes,0,git,PASS
+F1V26,Assistant and LLM files not modified,0 changes,0,git,PASS
+F1V27,Evidence pack intact,A4DB09B4,A4DB09B4,SHA256,PASS
+F1V28,V1 to V5 not modified,0 changes,0,git,PASS
+F1V29,No models run,0,0,command audit,PASS
+F1V30,No backtests generated,0,0,command audit,PASS
+F1V31,No Tesseract query,0,0,command audit,PASS
+F1V32,No SQL writes,0,0,command audit,PASS
+F1V33,No Azure action,none,none,command audit,PASS
+F1V34,No Docker action,none,none,command audit,PASS
+F1V35,R6 artifacts unmodified,unchanged,timestamps 10:08 preserved,filesystem,PASS
+F1V36,Not advanced to R8-FIX-2 R8-FIX-3 R8-FIX-4 R8-FIX-5 R8-FIX-6 or R9,no work started,no work started,command audit,PASS

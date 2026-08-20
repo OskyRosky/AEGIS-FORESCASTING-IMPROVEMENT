@@ -1,0 +1,7 @@
+"csv_group","file_count","total_size_mb","feeds_dashboard","purpose","notes"
+"CONTRACT_SPEC_CSV","190","1.96","NO","Contracts dictionaries policies plans and scope definitions","Pre-V6.15 snapshot"
+"CURRENT_DASHBOARD_INPUTS","39","107.045","YES","Existing governed CSVs registered and loaded by Shiny","Pre-V6.15 snapshot"
+"EVIDENCE_VALIDATION_CSV","1223","1266.813","NO","Validation inventories logs summaries and historical evidence","Pre-V6.15 snapshot"
+"FUTURE_STORAGE_METADATA","5","0.061","NO","Dropdown metadata for the unwired R7 resolver","Metadata is productive but not currently wired"
+"GOVERNED_EXTRACTION_SOURCE","3","421.344","NO","R6 governed source extracts used outside Shiny to build storage","Large governed extracts are not loaded into Shiny sessions"
+"OTHER_PROCESSED_DATA","5","30.984","NO","Processed CSVs present but not registered as current Shiny inputs","Pre-V6.15 snapshot"

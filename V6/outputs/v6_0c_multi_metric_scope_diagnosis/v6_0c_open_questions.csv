@@ -1,0 +1,19 @@
+question_id,type,question,impact,needed_from,blocks_stage,status
+Q01,STAKEHOLDER_DECISION,Confirm the final Metric catalog beyond HDD-EDB SSD-Phoenix SSD-MCDB and CPU,Defines the registry scope and the Metric selector contents,Chinmay and Sihui,V6.0D,OPEN
+Q02,STAKEHOLDER_DECISION,Classify SSD-Phoenix Total Organic and Low-Vol with or without Efficiency as DB Type Scenario or variant flag,Determines the filter hierarchy and the ranking isolation key,Stakeholders,V6.0D,OPEN
+Q03,STAKEHOLDER_DECISION,Classify CPU Consumed and Failover as Scenario or DB Type and place Fleet and Workload in the taxonomy,Determines the CPU canonical key,Stakeholders,V6.0E,OPEN
+Q04,SOURCE_AVAILABILITY,Confirm exact table names for CPU SSD-Total SSD-Organic and MCDB and whether they are refreshed in Earth,Without names no adapter can be registered,Data engineering,V6.0E,OPEN
+Q05,UNIT_MAPPING,Confirm the raw unit for each metric including HDD which is currently undocumented,Blocks any raw value comparison or roll-up,Data engineering,V6.0D,OPEN
+Q06,STAKEHOLDER_DECISION,Confirm whether SSD_TotalForecast is shared between Phoenix and MCDB and which column discriminates them,If shared without a discriminator the two metrics cannot be separated at all,Data engineering,V6.0E,OPEN
+Q07,DATA_GAP,SSD-Phoenix retains only one forecast version 2026-03-12 so no cross-plan comparison is possible,Limits the answer to Boon to single-version accuracy,Data engineering,V6.0G,OPEN
+Q08,DATA_GAP,The local HDD fact extract contains only ForecastVersion 2026-05-01 although the source retains 48 versions,Blocks cross-plan and drift work for HDD locally until re-ingestion is authorised,Data engineering and Track B gate,V6.0E,OPEN
+Q09,DATA_GAP,forecast_comparison.csv is empty because actuals end 2026-04-27 and the forecast starts 2026-04-28,No same-date error can be computed from the contract layer,Methodology owner,V6.0D,OPEN
+Q10,METHODOLOGY_DECISION,Decide whether metrics-table windows defined by Start_Date and End_Date can be treated as a horizon proxy,Determines whether horizon analysis is offered for metrics-only sources,Methodology owner,V6.0D,OPEN
+Q11,SHINY_PRODUCT_DECISION,Decide how to display Scenario when the source has no Scenario column,Prevents inventing Enterprise as a default,Product and stakeholders,V6.0F,OPEN
+Q12,SHINY_PRODUCT_DECISION,Decide how to present single-version accuracy so users do not read it as drift,Prevents a misleading empty or zero chart,Product and stakeholders,V6.0F,OPEN
+Q13,SHINY_PRODUCT_DECISION,Decide whether Accuracy should consume official metrics the backtest artifact or both side by side,Determines the Accuracy page contract,Product,V6.0F,OPEN
+Q14,METHODOLOGY_DECISION,Decide whether IOPS enters scope now or stays deferred,Affects registry breadth,Stakeholders,V6.0D,OPEN
+Q15,STAKEHOLDER_DECISION,Confirm what can be answered to Boon now versus after Shiny integration,Controls external communication risk,Oscar and Chinmay,V6.0G,OPEN
+Q16,DATA_GAP,Confirm whether the Consumer scenario should be ingested for HDD since the extract hardcodes Enterprise,Expands scenario coverage,Stakeholders and Track B gate,V6.0E,OPEN
+Q17,DEPLOYMENT_IMPACT,Confirm that new multi-metric artifacts will live under paths already mounted read-only in the container,Any artifact outside data/processed or outputs will be invisible in Docker and in Azure,Oscar,V6.0H,OPEN
+Q18,METHODOLOGY_DECISION,Decide the deduplication rule when two DB Types share Key and Forecast_Version,Directly caused the current ranking collision,Methodology owner,V6.0D,OPEN

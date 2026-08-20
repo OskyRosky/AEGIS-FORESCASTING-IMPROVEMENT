@@ -1,0 +1,7 @@
+metric,scenario,granularity,expected_keys,completed_keys,models,origins,rows,status
+HDD - EDB,Enterprise,Region,45,45,15,12 legacy / 11 top-up,234000,PASS
+HDD - EDB,Enterprise,Forest,152,152,15,11,752400,PASS
+HDD - EDB,Consumer,Region,45,45,15,11,222750,PASS
+HDD - EDB,Consumer,Forest,152,152,15,11,752400,PASS
+HDD - Basilisk,Basilisk,Region,47,47,15,5,105750,PASS
+HDD - Basilisk,Basilisk,Forest,155,155,15,5,348750,PASS

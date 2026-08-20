@@ -1,0 +1,38 @@
+check_id,check,expected,observed,result
+R7V01,DuckDB exists and is queryable,exists,25.76 MB at V6/data/storage/r6_phase1.duckdb; 3 tables queried,PASS
+R7V02,Metadata slices exist and load fast,5 slices,available_scenarios available_keys available_versions available_model_types scenario_registry totalling 62.4 KB,PASS
+R7V03,Resolver never loads heavy CSV,0 fact CSV reads,resolver has no read.csv or fread of any r6_phase1_*.csv fact file,PASS
+R7V04,NAMPRD07 matching is case-insensitive,same rows for both casings,T3 namprd07 = 954 rows and T4 NAMPRD07 = 954 rows,PASS
+R7V05,Basilisk resolves with the lowercase key,rows>0,954 rows,PASS
+R7V06,Scenario and Type stay separate,separate dimensions,scenario comes from scenario_ui_label and model from model_type; no shared column,PASS
+R7V07,Memory is not selectable,absent from dropdown,get_available_metrics returns 3 metrics and Memory is not among them,PASS
+R7V08,Memory resolves to OUT_OF_SCOPE,OUT_OF_SCOPE,OUT_OF_SCOPE,PASS
+R7V09,Only authorised HDD and SSD-Phoenix resolve,3 metrics,HDD - Basilisk HDD - EDB SSD - Phoenix,PASS
+R7V10,Viewer FULL only for HDD,HDD only,T1 T2 T7 return FULL; SSD returns FORECAST_ONLY,PASS
+R7V11,SSD-Phoenix is forecast-only,FORECAST_ONLY,T5 and T6 resolve to forecast_ssd in FORECAST_ONLY mode,PASS
+R7V12,SSD-Phoenix exposes only 2 scenarios,2,2,PASS
+R7V13,Other 22 SSD scenarios return NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED for 22 registered scenarios,PASS
+R7V14,CPU and IOPS return NOT_AVAILABLE_IN_PHASE1,NOT_AVAILABLE_IN_PHASE1,both return NOT_AVAILABLE_IN_PHASE1,PASS
+R7V15,SSD-MCDB returns BLOCKED_O1,BLOCKED_O1,BLOCKED_O1,PASS
+R7V16,Single version case is flagged,single_version TRUE for Basilisk,TRUE with an explicit note,PASS
+R7V17,Version filter narrows the result,fewer rows,all versions vs one version confirmed smaller and non-zero,PASS
+R7V18,Model selector grouped by family,>1 family,4 families for HDD - EDB Forest,PASS
+R7V19,No model selector where it does not apply,applies FALSE,SSD - Phoenix returns applies = FALSE,PASS
+R7V20,Markers excluded from the model list,FALSE,stubbed Extrapolated Fixed_NA absent,PASS
+R7V21,Viewer keeps actuals when a model is chosen,actual present,actual retained alongside the selected model,PASS
+R7V22,All 11 mandatory test cases executed,11,T1 to T11 executed,PASS
+R7V23,All resolver checks pass,0 FAIL,25 checks 25 PASS 0 FAIL,PASS
+R7V24,Queries are parameterised,no concatenated user input,DBI params used for every predicate,PASS
+R7V25,Connections are read-only,read_only TRUE,every fetch opens read_only and closes on exit,PASS
+R7V26,No Tesseract queries,0,0; R7 read only R6 artifacts and derived storage,PASS
+R7V27,No SQL writes to Tesseract,0,0,PASS
+R7V28,No Shiny UI changes,0,only R/scenario_resolver.R created; no ui/ or server/ file touched,PASS
+R7V29,Viewer and Forecast pages untouched,unchanged,unchanged; resolver is not yet sourced by global.R,PASS
+R7V30,Assistant and LLM untouched,unchanged,evidence pack hash A4DB09B4 unchanged,PASS
+R7V31,V1 to V5 untouched,0 changes,0 changes,PASS
+R7V32,No Azure action,none,none,PASS
+R7V33,No Docker action,none,none,PASS
+R7V34,R6 artifacts unmodified,unchanged,read-only derivation only,PASS
+R7V35,Byproducts registered before deletion,registered then deleted,r5b_byproducts_cleanup.csv written first; 506.23 MB then deleted,PASS
+R7V36,Protected R5b artifacts retained,all retained,12 files plus bench/ui_metadata and bench/r6_phase1.duckdb retained,PASS
+R7V37,Not advanced to R8 R9 R9b R9c R10 G1 G2 R6 Phase 2,no work started,no work started,PASS

@@ -1,0 +1,24 @@
+metric,scenario_ui_label,granularity,source_table,scenario_column,scenario_raw_value,key_column,version_column,date_column,value_column,extraction_status,extraction_reason
+HDD - EDB,Enterprise,Region,forecast_substrateBE_hdd_region,Scenario,Enterprise,Key,ForecastVersion,DateTime,Value,EXTRACT_PHASE_1,Viewer FULL; actual and forecast in the same table
+HDD - EDB,Enterprise,Forest,forecast_substrateBE_hdd,data_type,enterprise,forest_name,execution_time,target_date,forecast_mean,EXTRACT_PHASE_1,Viewer FULL; requires TRIM and case-insensitive match
+HDD - EDB,Consumer,Region,forecast_substrateBE_hdd_region,Scenario,Consumer,Key,ForecastVersion,DateTime,Value,EXTRACT_PHASE_1,Viewer FULL
+HDD - EDB,Consumer,Forest,forecast_substrateBE_hdd,data_type,consumer,forest_name,execution_time,target_date,forecast_mean,EXTRACT_PHASE_1,Viewer FULL; requires TRIM
+HDD - Basilisk,Basilisk,Region,forecast_substrateBE_hdd_region,Scenario,Basilisk,Key,ForecastVersion,DateTime,Value,EXTRACT_PHASE_1,Viewer FULL
+HDD - Basilisk,Basilisk,Forest,forecast_substrateBE_hdd,data_type,Basilisk,forest_name,execution_time,target_date,forecast_mean,EXTRACT_PHASE_1,Viewer FULL; only 1 distinct run exists
+SSD - Phoenix,Low Volume No Efficiency,Forest,forecast_substrateBE_SSD_TotalForecast,Scenario,Low Volume No Efficiency,Key,ForecastVersion,Datetime,Value,EXTRACT_PHASE_1,Forecast-only; portal scenario per D2; requires Resource='SSD-Phoenix'
+SSD - Phoenix,Low Volume With Efficiency,Forest,forecast_substrateBE_SSD_TotalForecast,Scenario,Low Volume With Efficiency,Key,ForecastVersion,Datetime,Value,EXTRACT_PHASE_1,Forecast-only; portal scenario per D2; requires Resource='SSD-Phoenix'
+CPU,Consumed,Region,forecast_substrateBE_cpu_region,Scenario,Consumed,Key,ForecastVersion,Datetime,Value,EXTRACT_PHASE_2,Forecast-only; no actual marker
+CPU Failover,Failover,Region,forecast_substrateBE_cpu_region,Scenario,Failover,Key,ForecastVersion,Datetime,Value,EXTRACT_PHASE_2,Forecast-only
+CPU,Consumed,Forest,forecast_substrateBE_cpu,CPU_type,consumed,Forest_SKU,forecastdate,datadate,forecast,EXTRACT_PHASE_2,Forecast-only; SKU grain preserved per D4
+CPU Failover,Failover,Forest,forecast_substrateBE_cpu,CPU_type,failover,Forest_SKU,forecastdate,datadate,forecast,EXTRACT_PHASE_2,Forecast-only; SKU grain preserved per D4
+IOPS,Consumed,Region,forecast_substrateBE_iops_region,Scenario,Consumed,Key,ForecastVersion,Datetime,Value,EXTRACT_PHASE_2,Forecast-only
+IOPS Failover,Failover,Region,forecast_substrateBE_iops_region,Scenario,Failover,Key,ForecastVersion,Datetime,Value,EXTRACT_PHASE_2,Forecast-only
+IOPS,Consumed,Forest,forecast_substrateBE_iops,IOPS_type,consumed,Forest_SKU,forecastdate,datadate,forecast,EXTRACT_PHASE_2,Forecast-only; SKU grain preserved per D4
+IOPS Failover,Failover,Forest,forecast_substrateBE_iops,IOPS_type,failover,Forest_SKU,forecastdate,datadate,forecast,EXTRACT_PHASE_2,Forecast-only; SKU grain preserved per D4
+SSD - Phoenix,22 additional scenarios,Forest,forecast_substrateBE_SSD_TotalForecast,Scenario,see excluded_scope_register,Key,ForecastVersion,Datetime,Value,NOT_EXTRACTED,Documented but not exposed per D2
+SSD - MCDB,pending definition,Forest,forecast_substrateBE_SSD_TotalForecast,Scenario,undefined,Key,ForecastVersion,Datetime,Value,BLOCKED,Scenario mapping ambiguous; blocked by O1
+SSD - MCDB,Organic,Forest_SKU,SubstrateBE_Ssd_MCDB_ForecastForestSKU,Scenario,(empty string),Key,ForecastVersion,DateTime,Value,BLOCKED,Scenario column is blank; blocked by O1
+SSD - Phoenix,Organic Combined,Forest,forecast_substrateBE_SSD_Phoenix_Organic,Scenario,Combined (Tenant+User),Forest,ForecastVersion,DateTime,Value,NOT_EXTRACTED,Only 3 forecast versions; not in the first release
+CPU,byDB Phoenix and NonPhoenix,Region,forecast_substrateBE_cpu_byDB_region,Scenario,Consumed and Failover,MyKey,ForecastVersion,Datetime,Value,BLOCKED,Requires a DBType control; blocked by O3
+CPU,byDB Phoenix and NonPhoenix,Forest,forecast_substrateBE_cpu_byDB_forest,Scenario,Consumed and Failover,MyKey,ForecastVersion,Datetime,Value,BLOCKED,Requires a DBType control; blocked by O3
+Memory,not available,none,NONE,none,none,none,none,none,none,NOT_EXTRACTED,No populated forecast source per D1

@@ -1,0 +1,16 @@
+model_name,model_family,include_in_viewer,existing_in_legacy_artifact,requires_retraining,notes
+FixedGrowth_1_5,growth_baseline,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+FixedGrowth_3,growth_baseline,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+FixedGrowth_4,growth_baseline,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+FixedGrowth_6,growth_baseline,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+ARIMA_Fixed,statistical,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+AutoARIMA,statistical,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+ETS Explicit,statistical,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+ETS_Current,statistical,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+Theta,statistical,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+LinearRegression,machine_learning,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+LightGBM,machine_learning,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+XGBoost,machine_learning,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Legacy rows can be backfilled without rerunning; uncovered keys and combinations require execution
+FNAR-V2,lightweight_neural,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Neural execution may be phased but the final v2 artifact is incomplete without this model
+NLIN-DLIN_FIXED,lightweight_neural,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Neural execution may be phased but the final v2 artifact is incomplete without this model
+SMLP-TCN,lightweight_neural,TRUE,TRUE,YES_FOR_UNCOVERED_SCOPE,Neural execution may be phased but the final v2 artifact is incomplete without this model

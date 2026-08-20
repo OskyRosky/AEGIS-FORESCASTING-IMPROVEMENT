@@ -1,0 +1,39 @@
+check_id,area,check,expected,observed,status
+V01,inputs,V6.0E artifacts consumed by Shiny,10 artifacts,All 10 load through the multi-metric loader,PASS
+V02,inputs,V6.0D contract respected,identity tuple honoured,Filters and tables keyed by metric db_type scenario granularity key and forecast version,PASS
+V03,live,Application starts locally,listening,R 4.6.0 serving on 127.0.0.1:8081,PASS
+V04,live,Home page returns HTTP 200,200,200 with 316354 bytes,PASS
+V05,live,Multi-Metric section renders,section active,section data-section multimetric is-active with heading Multi-Metric Accuracy,PASS
+V06,filters,Six dependent filters visible,6 levels,Metric DB Type Scenario Granularity Key Forecast Version all rendered,PASS
+V07,filters,Options are data driven,no hardcoded UI options,All options come from metric_filter_options.csv with 1381 rows,PASS
+V08,filters,No orphan options,0,0 orphans across the five parent-child levels,PASS
+V09,filters,Scenario optional,static Not applicable,Renders Not applicable with the reason and sends no value,PASS
+V10,filters,Unavailable options listed with reason,visible note,4 metrics and 2 SSD variants listed with their availability reason,PASS
+V11,rankings,Official rankings used,official_metric_rankings.csv,Table bound to the new artifact; legacy baseline_rankings not used,PASS
+V12,rankings,LVWE and LVNE separated,distinct rows,LVWE avg MAPE 4.513 over 57 windows and LVNE 4.498 over 58 windows with source_object_count 1,PASS
+V13,rankings,Region and forest separated,no mixing,key_namespace resolves to a single namespace per group,PASS
+V14,rankings,NAMPRD07 resolves as forest,forest,granularity forest and forest_keys namespace across HDD forest and both SSD variants,PASS
+V15,gating,Accuracy shown when allowed,accuracy views,accuracy_table and accuracy_heatmap listed as allowed for all four live sources,PASS
+V16,gating,Drift hidden when not computable,not available with reason,Cross-version trend and plan-to-plan show not available with SINGLE_VERSION_ONLY for SSD,PASS
+V17,gating,Forecast curve hidden for metrics sources,not available,Marked not available with NO_TARGET_DATE_GRAIN on every metrics source,PASS
+V18,gating,Single version labelled clearly,badge,Badge reads Single-version accuracy only not drift plus an explicit Not drift notice,PASS
+V19,gating,Blocked metrics show reason,reason visible,Coverage table lists 16 sources with status limitation and next action,PASS
+V20,gating,Unit limitation surfaced,note visible,Raw cross-metric aggregation blocked message rendered and unit shows UNKNOWN,PASS
+V21,assistant,Assistant UI still visible,panel present,Panel rendered with quick prompts and Generate explanation,PASS
+V22,assistant,Legacy assistant preserved,legacy pack resolves,champion_overview still resolves and 11 legacy pages remain,PASS
+V23,assistant,Multi-metric grounding added,11 entries,11 pack entries registered additively without touching the legacy file,PASS
+V24,assistant,Assistant generates an explanation live,panel renders,Executive summary evidence why-it-matters limitations confidence high and traceability all rendered,PASS
+V25,assistant,Claims traceability preserved,present,Technical traceability block present in the rendered panel,PASS
+V26,assistant,Limitations preserved,present,Limitations block rendered with the availability caveat,PASS
+V27,assistant,No invented scenario,not_applicable respected,Context row carries scenario not_applicable with matching status,PASS
+V28,assistant,Single version never called drift,disallowed claim,assistant_disallowed_claims contains drift for single-version rows,PASS
+V29,downloads,Assistant exports work,5 formats,MD 748 TXT 772 HTML 1644 DOCX 11216 PDF 100674 bytes all written,PASS
+V30,downloads,New multi-metric downloads work,session href bound,Three download links bound to session download endpoints,PASS
+V31,downloads,Legacy downloads preserved,handlers registered,register_artifact_downloads still active,PASS
+V32,regression,Legacy artifacts unchanged,hashes identical,6 frozen artifacts rehash unchanged,PASS
+V33,regression,Existing pages still load,14 sections,All legacy sections present in the served HTML,PASS
+V34,governance,Shiny remains read-only,no recompute,Views subset governed artifacts; no business measure recomputed,PASS
+V35,governance,No SQL and no Azure,zero,No database or cloud call in the app,PASS
+V36,governance,No Docker change,unchanged,No Docker file touched,PASS
+V37,governance,V1 to V5 intact,unchanged,git reports no change,PASS
+V38,scope,No advance to V6.0G or V6.0H,stage boundary respected,No evidence pack finalised and no container built,PASS

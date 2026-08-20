@@ -1,0 +1,18 @@
+test_id,category,metric,scenario,granularity,key,expected_mode,expected_rows,expected_badge,mandatory
+V1,series,HDD - EDB,Enterprise,Forest,NAMPRD07,FULL,>0,Actual + Forecast,yes
+V2,series,HDD - EDB,Consumer,Forest,NAMPRD07,FULL,>0,Actual + Forecast,yes
+V3,series,HDD - Basilisk,Basilisk,Forest,namprd07,FULL,>0,Actual + Forecast,yes
+V4,series,HDD - Basilisk,Basilisk,Forest,NAMPRD07,FULL,same as V3,Actual + Forecast,yes
+V5,series,SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,FORECAST_ONLY,>0,Forecast only,yes
+V6,series,SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,FORECAST_ONLY,>0,Forecast only,yes
+V7,series,HDD - EDB,Enterprise,Region,sample region key,FULL,>0,Actual + Forecast,yes
+V8,not selectable,Memory,-,-,-,not selectable,0,GREY,yes
+V9,not selectable,CPU,-,-,-,not selectable,0,GREY,yes
+V10,not selectable,IOPS,-,-,-,not selectable,0,GREY,yes
+V11,not selectable,SSD - MCDB,-,-,-,not selectable,0,GREY,yes
+V12,not exposed,SSD - Phoenix,one of the other 22 scenarios,Forest,NAMPRD07,not exposed,0,GREY,yes
+V13,control,HDD - EDB,Enterprise,Forest,-,model selector excludes actual,no actual,-,yes
+V14,control,SSD - Phoenix,Low Volume No Efficiency,Forest,-,no model selector,0,-,yes
+V15,control,HDD - Basilisk,Basilisk,Forest,-,single version flagged,1,-,yes
+V16,control,HDD - Basilisk,Basilisk,Forest,-,honest model list,<=3,-,yes
+V17,key matching,HDD - Basilisk,Basilisk,Forest,namprd07 vs NAMPRD07,identical row counts,equal,-,yes

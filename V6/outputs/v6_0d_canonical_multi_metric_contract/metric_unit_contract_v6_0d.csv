@@ -1,0 +1,12 @@
+metric_id,db_type,expected_unit,unit_status,raw_aggregation_allowed,normalized_score_comparable,cross_metric_raw_aggregation_allowed,stakeholder_decision_required,notes
+hdd_edb,EDB,UNKNOWN,pending_d5,within_same_metric_db_type_and_granularity,yes,no,yes,Storage magnitude. The data dictionary does not document the unit so TB and PB must not be assumed. Region and forest totals must never be summed because forest keys roll up on a different namespace.
+ssd_phoenix,lv_with_efficiency,UNKNOWN,pending_d5,within_same_db_type_only,yes,no,yes,Stakeholders suggest PB but this is unverified. LVWE is a distinct efficiency treatment and must never be pooled with LVNE.
+ssd_phoenix,lv_no_efficiency,UNKNOWN,pending_d5,within_same_db_type_only,yes,no,yes,Same magnitude family as LVWE but a separate series. Side by side comparison is legitimate. Blending is not.
+ssd_phoenix,phx_total,UNKNOWN,pending_d5_d2,no,unknown,no,yes,Whether Total is a derived sum of Organic plus other components is undecided so any aggregation is unsafe.
+ssd_phoenix,phx_organic,UNKNOWN,pending_d5_d2,no,unknown,no,yes,Source not located. Classification undecided.
+ssd_mcdb,mcdb_total,UNKNOWN,pending_d5_d10,no,unknown,no,yes,May share a physical table with SSD-Phoenix Total. Without a confirmed discriminator column no aggregation and no comparison is valid.
+ssd_mcdb,mcdb_organic,UNKNOWN,pending_d5,no,unknown,no,yes,SKU grain may require a different aggregation rule than forest.
+cpu,PENDING_CONFIRMATION,UNKNOWN,pending_d5_d3,no,unknown,no,yes,Stakeholders state GCycles. CPU is a throughput measure and is never additive with storage. Fleet and Workload may change the aggregation grain.
+iops,PENDING_CONFIRMATION,UNKNOWN,pending_d5,no,unknown,no,yes,Rate measure. Not additive with storage or compute. Currently deferred.
+hdd_basilisk,EDB,UNKNOWN,pending_d5,no,unknown,no,no,Scenario being phased out upstream. Out of scope.
+CROSS_METRIC,ALL,MIXED,rule,no,conditional,no,no,Hard rule. Raw business values are never aggregated across metric_id. Only normalized scores such as MAPE SMAPE Bias_Pct and Accuracy may be compared and only when methodology horizon window and coverage are equivalent.

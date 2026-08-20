@@ -1,0 +1,5 @@
+metadata_artifact,purpose,source_artifact,expected_size,rows,load_strategy,used_by_control,status
+available_scenarios.csv,Populate Metric Scenario and Granularity in cascade,r6_phase1_viewer_hdd.csv + forecast_hdd + forecast_ssd,under 1 KB,14,eager load once at app start,Metric / Scenario / Granularity,BUILT
+available_keys.csv,Populate the Key dropdown for the selected combination,r6_phase1_viewer_hdd.csv + forecast_ssd,40 KB,896,eager load once at app start then filter in memory,Key,BUILT
+available_versions.csv,Populate the Forecast Version dropdown,r6_phase1_forecast_hdd.csv + forecast_ssd,under 1 KB,16,eager load once at app start,Forecast Version,BUILT
+available_model_types.csv,Populate the Model / Type selector grouped by family,r6_phase1_viewer_hdd.csv,10 KB,88,eager load once at app start,Model / Type,BUILT

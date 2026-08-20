@@ -9,8 +9,10 @@
   "v3_mvp_status": "V3_MVP_CLOSED",
   "v4_mvp_status": "V4_LOCAL_MVP_CLOSED",
   "v5_mvp_status": "V5_DOCKER_LOCAL_MVP_CLOSED",
-  "next_stage": "V6.0A - baseline clone parity validation",
-  "next_block": "V6.0B - Azure Readiness + Architecture Decisions (audit + decisions only, no Azure resources)",
+  "next_stage": "V6.0E - multi-metric artifact builder",
+  "next_block": "V6.0E - additive multi-metric artifacts per the v6.0d canonical contract; requires explicit authorization",
+  "azure_deployment_status": "paused_until_v6_0h",
+  "multi_metric_contract_version": "v6.0d",
   "historical_artifacts_rewrite_policy": "do_not_rewrite_for_path_only",
   "shiny_policy": "read_only_no_recompute",
   "llm_policy": "read_only_over_governed_evidence_pack_never_compute_never_change_champion"

@@ -1,0 +1,41 @@
+check_id,check,expected,observed,result
+R8V01,Viewer uses scenario_resolver.R,resolver only,viewer_scenario_server.R calls resolve_series_query and fetch_series_preview exclusively,PASS
+R8V02,Viewer does not read heavy CSV,0 fact CSV reads,no read.csv or fread of any r6_phase1_*.csv in the Viewer path,PASS
+R8V03,Viewer queries DuckDB,read-only queries,live notes report DuckDB table viewer_hdd and forecast_ssd,PASS
+R8V04,Dropdowns are a real cascade,each level filtered by the previous,verified live: Metric to Scenario to Granularity to Key to Version to Model,PASS
+R8V05,NAMPRD07 matching is case-insensitive,same result for both casings,V3 = 954 rows and V4 = 954 rows,PASS
+R8V06,Basilisk resolves with namprd07 and NAMPRD07,both work,both return 954 rows,PASS
+R8V07,SSD-Phoenix renders forecast-only,Forecast only badge and notice,live badge Forecast only with the amber notice,PASS
+R8V08,Memory is not selectable,absent from the dropdown,absent; resolver returns OUT_OF_SCOPE,PASS
+R8V09,CPU is not selectable in Phase 1,absent,absent; resolver returns NOT_AVAILABLE_IN_PHASE1,PASS
+R8V10,IOPS is not selectable in Phase 1,absent,absent; resolver returns NOT_AVAILABLE_IN_PHASE1,PASS
+R8V11,SSD-MCDB is not selectable,absent,absent; resolver returns BLOCKED_O1,PASS
+R8V12,Other 22 SSD scenarios not exposed,absent,scenario dropdown offers exactly 2,PASS
+R8V13,No Multi-Metric tab,absent,served HTML contains no multimetric or Multi-Metric,PASS
+R8V14,Actual series survives a model filter,actual present,live legend shows Actual plus the selected model,PASS
+R8V15,Model selector excludes actual,not offered,actual removed from available_model_types.csv; live check false,PASS
+R8V16,Model selector excludes data quality markers,not offered,stubbed Extrapolated Fixed_NA absent,PASS
+R8V17,No model selector where it does not apply,hidden,SSD - Phoenix shows Not applicable and an explanatory line,PASS
+R8V18,Single version handled honestly,flagged,HDD - Basilisk reports one version; the Viewer states it is not versioned,PASS
+R8V19,Basilisk model list is honest,not simulated,1 model type shown for Basilisk Forest; nothing invented,PASS
+R8V20,No zero filling,rows with missing values dropped not filled,chart filters NA rows and never substitutes zeros,PASS
+R8V21,No invented actuals,none,actual rows come only from series_type = actual in the extract,PASS
+R8V22,Empty states are explicit,6 messages defined,7 empty state cases validated,PASS
+R8V23,Query performance under 1 second,<1 s,worst case 0.090 s across 7 series tests,PASS
+R8V24,Startup does not load fact data,metadata only,62.4 KB of metadata slices; no fact table loaded at startup,PASS
+R8V25,All 17 Viewer tests pass,0 FAIL,17 PASS 0 FAIL,PASS
+R8V26,Forecast page unchanged,0 changes,section_forecast and fvf_* untouched,PASS
+R8V27,Accuracy page unchanged,0 changes,section_accuracy and acc_* untouched,PASS
+R8V28,Legacy Viewer backtest unchanged,still functional,fvp_series fvp_horizon fvp_models fvp_chart and Analyze Backtest all present and rendering,PASS
+R8V29,Assistant unchanged,0 changes,llm_explain.R llm_compose.R llm_client.R and modules/llm_summary untouched; panel renders,PASS
+R8V30,Evidence pack intact,A4DB09B4,A4DB09B4,PASS
+R8V31,V1 to V5 unchanged,0 changes,0 changes,PASS
+R8V32,TTL Universe Tournament Champion Risks Audit Artifacts Methodology Version unchanged,0 changes,0 changes,PASS
+R8V33,No Tesseract queries,0,0,PASS
+R8V34,No SQL writes,0,read-only connections only,PASS
+R8V35,No data extracted,0,0,PASS
+R8V36,No Azure action,none,none,PASS
+R8V37,No Docker action,none,none,PASS
+R8V38,Shiny returns HTTP 200,200,200,PASS
+R8V39,Changes are additive only,0 deletions,14 insertions and 0 deletions across 4 files plus 2 new files,PASS
+R8V40,Not advanced to R9 R9b R9c R10 G1 G2 or R6 Phase 2,no work started,no work started,PASS

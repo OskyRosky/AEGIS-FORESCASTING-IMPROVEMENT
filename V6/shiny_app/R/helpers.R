@@ -458,9 +458,9 @@ fv_chart <- function(entity, model, horizon_days = 30, hist_days = 90) {
 FVP_FAMILY_ORDER <- c("growth_baseline", "statistical",
                       "machine_learning", "lightweight_neural")
 FVP_FAMILY_LABELS <- c(
-  growth_baseline    = "Growth baseline",
+  growth_baseline    = "Growth Baseline",
   statistical        = "Statistical",
-  machine_learning   = "Machine learning",
+  machine_learning   = "Machine Learning",
   lightweight_neural = "Deep Learning"
 )
 

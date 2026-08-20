@@ -1,0 +1,9 @@
+metric,scenario,granularity,key_count,has_actuals,has_existing_backtest,needs_backtest_generation,priority,notes
+HDD - EDB,Enterprise,Region,45,TRUE,PARTIAL_39_OF_45,TOP_UP_6,P0,Backfill the verified legacy 39 keys and generate only the six uncovered keys
+HDD - EDB,Enterprise,Forest,152,TRUE,FALSE,FULL,P1,Governed actuals exist in R6 Phase 1; all model backtests are missing
+HDD - EDB,Consumer,Region,45,TRUE,FALSE,FULL,P1,Governed actuals exist in R6 Phase 1; all model backtests are missing
+HDD - EDB,Consumer,Forest,152,TRUE,FALSE,FULL,P1,Governed actuals exist in R6 Phase 1; all model backtests are missing
+HDD - Basilisk,Basilisk,Region,47,TRUE,FALSE,FULL,P1,Only about five months of actual history exist; never pad the series
+HDD - Basilisk,Basilisk,Forest,155,TRUE,FALSE,FULL,P1,Only about five months of actual history exist; never pad the series
+SSD - Phoenix,Low Volume No Efficiency,Forest,148,FALSE,FALSE,NONE,EXCLUDED,Forecast-only metric with no actuals; belongs on Forecast and must not enter Viewer backtests
+SSD - Phoenix,Low Volume With Efficiency,Forest,152,FALSE,FALSE,NONE,EXCLUDED,Forecast-only metric with no actuals; belongs on Forecast and must not enter Viewer backtests

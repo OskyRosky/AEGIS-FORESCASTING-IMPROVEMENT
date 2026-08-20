@@ -1,0 +1,8 @@
+source_table,version_column,latest_version,rows_latest_version,keys_latest_version,scenarios_latest_version,min_date,max_date
+forecast_substrateBE_hdd_region,ForecastVersion,2026-07-22,291864,43,2,2019-07-01,2030-07-16
+forecast_substrateBE_hdd,execution_time,2026-07-23 20:26:01,574409,152,1,2019-07-01 00:00:00,2030-07-16 00:00:00
+forecast_substrateBE_cpu_region,ForecastVersion,2026-07-02,267344,44,2,2026-05-01,2030-06-27
+forecast_substrateBE_cpu,forecastdate,2026-07-02,1497734,493,2,2026-05-01,2030-06-27
+forecast_substrateBE_iops_region,ForecastVersion,2026-01-01,267344,44,2,2026-01-01,2030-02-27
+forecast_substrateBE_iops,forecastdate,2025-12-30,1379252,454,2,2025-11-14,2030-02-26
+forecast_substrateBE_SSD_TotalForecast,ForecastVersion,2026-03-12,465470,148,2,2026-03-12,2030-07-02

@@ -1,0 +1,22 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"V620-001","V5 and V6 shiny_app trees compared by hash","Complete file-level comparison","48 V5 files and 53 V6 files compared","PASS",FALSE
+"V620-002","Files identical","Reported","43","PASS",FALSE
+"V620-003","Files different","Reported","5","PASS",FALSE
+"V620-004","Files only in V5","Reported","0","PASS",FALSE
+"V620-005","Files only in V6","Reported","5","PASS",FALSE
+"V620-006","Real presentation baseline identified","V5 versus V6 or previous V6 versus current V6","ui/tabs.R is byte-identical, so the baseline is previous V6 presentation versus current V6","PASS",FALSE
+"V620-007","Git evidence available","Per-stage commits for V6.16 to V6.18","Only one baseline commit 0d573f4; all later work is uncommitted","PARTIAL",FALSE
+"V620-008","F1 Forecast LLM panel lost","Confirmed or refuted","CONFIRMED; server.R line 552 registered with no live UI mount","PASS",FALSE
+"V620-009","All LLM servers matched to live UI","10 of 10","9 of 10","FAIL",FALSE
+"V620-010","F2 Accuracy legacy source","Confirmed or refuted","CONFIRMED; acc_data resolves to the legacy CSV","PASS",TRUE
+"V620-011","Accuracy versus Viewer row counts","Measured","204300 versus 2416050","PASS",TRUE
+"V620-012","Accuracy versus Viewer key counts","Measured","39 versus 596","PASS",TRUE
+"V620-013","Artifact registry format coverage","Measured","43 entries, 40 CSV, 0 Parquet","PASS",TRUE
+"V620-014","Parquet-only impact identified","Any registry entry that would break","forecast_viewer_full and other legacy CSV consumers would break","PASS",TRUE
+"V620-015","Download specs inspected","Enumerated","8 governed specs, none pointing at forecast_viewer_full","PASS",FALSE
+"V620-016","Fail-soft versus fail-fast documented","Reported","Loader fail soft; providers use 9, 5 and 4 stop calls","PASS",FALSE
+"V620-017","Duplicate heavy CSV measured","Reported","About 690 MB and 255 MB with no live consumer","PASS",FALSE
+"V620-018","Read-only boundary respected","No writes outside V6/outputs/v6_20_...","Only the V6.20 folder was written","PASS",FALSE
+"V620-019","Productive artifacts unchanged","No mutation","No productive CSV or Parquet was written or modified","PASS",FALSE
+"V620-020","No fixes implemented","Reconciliation only","No Shiny file was modified","PASS",FALSE
+"V620-021","Generation readiness","Non-blocking or blocking","Blocking; Accuracy source and Parquet-only registry decisions are open","BLOCKED",TRUE

@@ -1,0 +1,18 @@
+area,expected,observed,status
+Application starts,Shiny serves the app locally,Listening on http://127.0.0.1:8081 with R 4.6.0,PASS
+Home page loads,HTTP 200,HTTP 200 with 316354 bytes,PASS
+Existing sections still present,All 14 legacy sections render,Home Overview Viewer Accuracy Forecast TTL Universe Tournament Champion Risks Audit Artifacts Methodology Version all present in the served HTML,PASS
+Sidebar navigation intact,Five groups with existing items,Project Models Forecasting Governance Reference all present with Multi-Metric added under Forecasting,PASS
+Champion language unchanged,ETS Explicit still shown,ETS Explicit present in served HTML,PASS
+Legacy assistant panels,Ten existing assistants still registered,Generate explanation button present and legacy pack resolves champion_overview,PASS
+Legacy governed downloads,register_artifact_downloads still active,Function present and registered in server,PASS
+data/processed unchanged,hashes identical,forecasts actuals and forecast_viewer_model_outputs rehash UNCHANGED,PASS
+outputs/metrics legacy unchanged,hashes identical,baseline_metrics and baseline_rankings rehash UNCHANGED,PASS
+Legacy assistant pack unchanged,hash identical,v4_4_mock_responses.json rehashes to the recorded value,PASS
+V1 to V5 untouched,no modification,git reports no change under V1 V2 V3 V4 V5,PASS
+Docker files untouched,no modification,No change to Dockerfile Dockerfile.refresh or docker-compose.yml,PASS
+No SQL executed,zero connections,No database driver loaded by the app,PASS
+No Azure calls,zero,No Azure SDK used,PASS
+Modified Shiny files,only additive hooks,global.R body.R tabs.R sidebar.R server.R modified with 5 additive edits totalling 14 lines,PASS
+New Shiny files,three additive files,R/multi_metric_loader.R ui/tabs_multi_metric.R server/multi_metric_server.R,PASS
+Graceful degradation,section degrades when artifacts absent,mm_is_available gate returns a Not available card and the server module returns early,PASS

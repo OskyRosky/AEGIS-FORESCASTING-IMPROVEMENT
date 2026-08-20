@@ -1,0 +1,23 @@
+check_id,check_name,method,expected,observed,result
+V1,Tesseract connection established,pyodbc + AAD access token attrs_before 1256,connection open to TesseractEarthDW,connected as oscarau@microsoft.com,PASS
+V2,All Excel mapped tables exist,INFORMATION_SCHEMA.TABLES lookup,11 of 11 exist,11 of 11 exist,PASS
+V3,No table declared SOURCE_NOT_LOCATED remains unverified,re-check of V6.0E unresolved sources,0 unresolved,0 unresolved,PASS
+V4,Column layout captured for every source,INFORMATION_SCHEMA.COLUMNS,all sources profiled,246 columns across 21 objects,PASS
+V5,Row counts obtained without unsupported DMVs,COUNT_BIG(*) instead of dm_db_partition_stats,21 counts,21 counts,PASS
+V6,Key column identified per source,column name detection + distinct count,every fact has a key,5 distinct key column names found (Key MyKey Forest Forest_SKU forest_name),PASS
+V7,Key counts differ from V6.0E assumptions,compare to prior artifacts,mismatch expected,HDD forest 318 vs 155 assumed; HDD region 52 vs 45 assumed,PASS_DISCREPANCY_CONFIRMED
+V8,Scenario column identified per source,column detection + distinct values,scenario present,4 different scenario carriers found (Scenario data_type CPU_type IOPS_type),PASS
+V9,Portal scenario labels mapped to Tesseract filters,value matching against portal screenshot,4 of 4 portal labels mapped,4 of 4 mapped,PASS
+V10,SSD scenario universe measured,SELECT DISTINCT Scenario,unknown,24 distinct scenarios,PASS
+V11,NAMPRD07 presence verified,LIKE match on key column,present in main facts,present in 13 of 21 objects,PASS
+V12,Actual values located,distinct values of actual marker column,at least one source with actuals,only HDD region and HDD forest carry actuals in fact tables,PASS_WITH_FINDING
+V13,Actual vs forecast views profiled,INFORMATION_SCHEMA + COUNT_BIG,views usable,4 views exist but are region monthly aggregates of 750 to 1509 rows,PASS_WITH_FINDING
+V14,Memory forecast source located,view and table search,source expected,no forecast object; demand views return 0 rows,FAIL_NO_SOURCE
+V15,HDD Basilisk source located,view and table search,source expected,dedicated views return 0 rows; Basilisk exists as Scenario value in main HDD tables,PASS_REDIRECTED
+V16,Local metrics snapshots compared to Tesseract,row and key comparison,parity expected,local holds about 48 percent of current rows in all 4 metrics tables,FAIL_STALE
+V17,Local fact extract compared to Tesseract,row key and version comparison,parity expected,local HDD region extract has 1 of 50 versions and 45 of 52 keys,FAIL_TRUNCATED
+V18,Coverage of the 9 requested metrics,contract build,9 of 9 covered,8 of 9 have a source; Memory has none,PARTIAL
+V19,No Shiny file modified during V6.0F-R1,git status of V6/shiny_app,0 new modifications in this stage,0 new modifications in this stage; 5 modified + 3 untracked files remain from the earlier V6.0F stage and are pending removal,PASS_WITH_CARRYOVER
+V20,No refresh model or data mutation executed,command audit,read only,all statements were SELECT or INFORMATION_SCHEMA reads,PASS
+V21,No Azure resource created,command audit,0 created,0 created,PASS
+V22,LLM assistant evidence pack untouched,SHA256 comparison,A4DB09B4 unchanged,A4DB09B4 unchanged,PASS

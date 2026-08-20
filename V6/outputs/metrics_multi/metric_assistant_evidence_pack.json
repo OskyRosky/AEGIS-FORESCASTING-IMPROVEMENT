@@ -1,0 +1,378 @@
+{
+  "provider": "artifact_grounded_metric_pack",
+  "provider_stage": "artifact_grounded_metric_pack",
+  "is_real_llm": false,
+  "uses_azure": false,
+  "contract_version": "v6.0d",
+  "generated_stage": "V6.0E",
+  "generated_at": "2026-08-12T01:39:44+00:00",
+  "responses": [
+    {
+      "page_id": "multi_metric_overview",
+      "title": "Multi-metric overview",
+      "summary": "AEGIS now carries governed accuracy metrics for more than one metric, each keeping its own identity so variants are never blended.",
+      "what_the_evidence_says": "Every normalized row declares metric_id, db_type, scenario, granularity, entity_key and forecast_version, and every ranking group is isolated by that same tuple.",
+      "why_it_matters": "Without this identity the dashboard silently averaged different series together.",
+      "sources_used": [
+        "official_metrics_normalized.csv",
+        "official_metric_rankings.csv",
+        "metric_registry_resolved.csv"
+      ],
+      "limitations": [
+        "Availability differs per metric. Several metrics are not yet located in the source."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "multi_metric_overview_c1",
+          "claim": "Each metric keeps a separate identity",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metrics_normalized.csv",
+          "evidence_fields": "metric_id|db_type|granularity"
+        },
+        {
+          "claim_id": "multi_metric_overview_c2",
+          "claim": "Rankings never merge two source objects",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "source_object_count"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "AEGIS now carries governed accuracy metrics for more than one metric, each keeping its own identity so variants are never blended."
+      }
+    },
+    {
+      "page_id": "hdd_edb_edb_region",
+      "title": "HDD-EDB EDB at region grain",
+      "summary": "HDD-EDB EDB at region grain covers 45 keys across 3 retained forecast version(s), with an average MAPE of 18.2491 and average accuracy of 84.0029.",
+      "what_the_evidence_says": "The source contributes 134 isolated ranking groups. Values are read verbatim from the governed extract and are never recomputed.",
+      "why_it_matters": "It lets the review compare model behaviour on a like-for-like basis inside one metric.",
+      "sources_used": [
+        "official_metrics_normalized.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "The source has no target date dimension, so error by horizon is not available."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "hdd_edb_edb_region_c1",
+          "claim": "Coverage and averages come from governed rows",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "row_count|avg_mape|avg_accuracy"
+        },
+        {
+          "claim_id": "hdd_edb_edb_region_c2",
+          "claim": "Capability is declared upstream",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_computability_status.csv",
+          "evidence_fields": "computability_status|not_computable_reason"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "HDD-EDB EDB at region grain covers 45 keys across 3 retained forecast version(s), with an average MAPE of 18.2491 and average accuracy of 84.0029."
+      }
+    },
+    {
+      "page_id": "hdd_edb_edb_forest",
+      "title": "HDD-EDB EDB at forest grain",
+      "summary": "HDD-EDB EDB at forest grain covers 155 keys across 3 retained forecast version(s), with an average MAPE of 54.234 and average accuracy of 86.6703.",
+      "what_the_evidence_says": "The source contributes 465 isolated ranking groups. Values are read verbatim from the governed extract and are never recomputed.",
+      "why_it_matters": "It lets the review compare model behaviour on a like-for-like basis inside one metric.",
+      "sources_used": [
+        "official_metrics_normalized.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "The source has no target date dimension, so error by horizon is not available."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "hdd_edb_edb_forest_c1",
+          "claim": "Coverage and averages come from governed rows",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "row_count|avg_mape|avg_accuracy"
+        },
+        {
+          "claim_id": "hdd_edb_edb_forest_c2",
+          "claim": "Capability is declared upstream",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_computability_status.csv",
+          "evidence_fields": "computability_status|not_computable_reason"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "HDD-EDB EDB at forest grain covers 155 keys across 3 retained forecast version(s), with an average MAPE of 54.234 and average accuracy of 86.6703."
+      }
+    },
+    {
+      "page_id": "ssd_phoenix_lv_with_efficiency_forest",
+      "title": "SSD-Phoenix Low-Vol with Efficiency at forest grain",
+      "summary": "SSD-Phoenix Low-Vol with Efficiency at forest grain covers 137 keys across 1 retained forecast version(s), with an average MAPE of 1810764.6662 and average accuracy of 67.7021.",
+      "what_the_evidence_says": "The source contributes 137 isolated ranking groups. Values are read verbatim from the governed extract and are never recomputed.",
+      "why_it_matters": "It lets the review compare model behaviour on a like-for-like basis inside one metric.",
+      "sources_used": [
+        "official_metrics_normalized.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "Only one forecast version is retained, so cross plan drift is not available.",
+        "The source has no target date dimension, so error by horizon is not available."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "ssd_phoenix_lv_with_efficiency_forest_c1",
+          "claim": "Coverage and averages come from governed rows",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "row_count|avg_mape|avg_accuracy"
+        },
+        {
+          "claim_id": "ssd_phoenix_lv_with_efficiency_forest_c2",
+          "claim": "Capability is declared upstream",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_computability_status.csv",
+          "evidence_fields": "computability_status|not_computable_reason"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "SSD-Phoenix Low-Vol with Efficiency at forest grain covers 137 keys across 1 retained forecast version(s), with an average MAPE of 1810764.6662 and average accuracy of 67.7021."
+      }
+    },
+    {
+      "page_id": "ssd_phoenix_lv_no_efficiency_forest",
+      "title": "SSD-Phoenix Low-Vol without Efficiency at forest grain",
+      "summary": "SSD-Phoenix Low-Vol without Efficiency at forest grain covers 137 keys across 1 retained forecast version(s), with an average MAPE of 1784990.7606 and average accuracy of 67.8043.",
+      "what_the_evidence_says": "The source contributes 137 isolated ranking groups. Values are read verbatim from the governed extract and are never recomputed.",
+      "why_it_matters": "It lets the review compare model behaviour on a like-for-like basis inside one metric.",
+      "sources_used": [
+        "official_metrics_normalized.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "Only one forecast version is retained, so cross plan drift is not available.",
+        "The source has no target date dimension, so error by horizon is not available."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "ssd_phoenix_lv_no_efficiency_forest_c1",
+          "claim": "Coverage and averages come from governed rows",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "row_count|avg_mape|avg_accuracy"
+        },
+        {
+          "claim_id": "ssd_phoenix_lv_no_efficiency_forest_c2",
+          "claim": "Capability is declared upstream",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_computability_status.csv",
+          "evidence_fields": "computability_status|not_computable_reason"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "SSD-Phoenix Low-Vol without Efficiency at forest grain covers 137 keys across 1 retained forecast version(s), with an average MAPE of 1784990.7606 and average accuracy of 67.8043."
+      }
+    },
+    {
+      "page_id": "namprd07_case",
+      "title": "NAMPRD07 across metrics",
+      "summary": "NAMPRD07 is a forest-grain key and appears in 5 isolated groups: hdd_edb/EDB version 2026-04-16 07:50:38 average accuracy 88.570625 and average MAPE 11.429375; hdd_edb/EDB version 2026-05-01 03:35:00 average accuracy 85.4275 and average MAPE 14.5725; hdd_edb/EDB version 2026-04-06 19:49:02 average accuracy 99.507778 and average MAPE 0.492222; ssd_phoenix/lv_with_efficiency version 2026-03-12 average accuracy 95.486667 and average MAPE 4.513333; ssd_phoenix/lv_no_efficiency version 2026-03-12 average accuracy 95.501552 and average MAPE 4.498448.",
+      "what_the_evidence_says": "The key resolves to the same namespace in every source that contains it and never appears in a source of a different granularity.",
+      "why_it_matters": "It is the first validation case for the multi-metric separation.",
+      "sources_used": [
+        "official_metric_rankings.csv",
+        "metric_availability_status.csv"
+      ],
+      "limitations": [
+        "Some of this evidence is single version, so no cross plan drift can be stated."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "namprd07_case_c1",
+          "claim": "NAMPRD07 resolves to one granularity",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metrics_normalized.csv",
+          "evidence_fields": "granularity|key_namespace"
+        },
+        {
+          "claim_id": "namprd07_case_c2",
+          "claim": "Variants of the same metric stay separated",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "db_type|source_object"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "NAMPRD07 is a forest-grain key and appears in 5 isolated groups: hdd_edb/EDB version 2026-04-16 07:50:38 average accuracy 88.570625 and average MAPE 11.429375; hdd_edb/EDB version 2026-05-01 03:35:00 average accuracy 85.4275 and average MAPE 14.5725; hdd_edb/EDB version 2026-04-06 19:49:02 average accuracy 99.507778 and average MAPE 0.492222; ssd_phoenix/lv_with_efficiency version 2026-03-12 average accuracy 95.486667 and average MAPE 4.513333; ssd_phoenix/lv_no_efficiency version 2026-03-12 average accuracy 95.501552 and average MAPE 4.498448."
+      }
+    },
+    {
+      "page_id": "unavailable_metrics",
+      "title": "Metrics that are not available yet",
+      "summary": "11 declared sources are not usable yet, and each one states why.",
+      "what_the_evidence_says": "ssd_phoenix/phx_total: source_not_found; ssd_phoenix/phx_organic: source_not_found; ssd_mcdb/mcdb_total: pending_stakeholder_mapping; ssd_mcdb/mcdb_organic: source_not_found; cpu/PENDING_CONFIRMATION: source_not_found; cpu/PENDING_CONFIRMATION: source_not_found; cpu/PENDING_CONFIRMATION: source_not_found; cpu/PENDING_CONFIRMATION: source_not_found; iops/PENDING_CONFIRMATION: deferred; hdd_edb/EDB: not_ingested; hdd_basilisk/EDB: deferred",
+      "why_it_matters": "Reporting absence honestly prevents an empty chart from being read as a zero.",
+      "sources_used": [
+        "metric_availability_status.csv",
+        "metric_computability_status.csv"
+      ],
+      "limitations": [
+        "Several table names are stakeholder statements that were never located in evidence."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "unavailable_metrics_c1",
+          "claim": "Unavailable sources are declared not guessed",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_availability_status.csv",
+          "evidence_fields": "availability_status|limitation"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "11 declared sources are not usable yet, and each one states why."
+      }
+    },
+    {
+      "page_id": "single_version_accuracy",
+      "title": "Why single-version accuracy is not drift",
+      "summary": "When only one forecast version is retained, the evidence supports point accuracy for that cycle and nothing about change over time.",
+      "what_the_evidence_says": "Drift requires at least two comparable forecast versions. The contract sets drift_computable to false whenever a source retains one version.",
+      "why_it_matters": "Calling it drift would imply a trend that the data cannot support.",
+      "sources_used": [
+        "metric_computability_status.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "This limitation is a property of source retention, not of the analysis method."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "single_version_accuracy_c1",
+          "claim": "Single version blocks drift",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_computability_status.csv",
+          "evidence_fields": "drift_computable|not_computable_reason"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "When only one forecast version is retained, the evidence supports point accuracy for that cycle and nothing about change over time."
+      }
+    },
+    {
+      "page_id": "drift_computability",
+      "title": "Why drift is or is not computable",
+      "summary": "Drift is only offered when a source retains two or more comparable forecast versions and the compared rows share one unit.",
+      "what_the_evidence_says": "hdd_edb/EDB at region grain: drift_computable=True because NO_TARGET_DATE_GRAIN|NO_FORECAST_FACT_TABLE|SHINY_NOT_CONNECTED; hdd_edb/EDB at forest grain: drift_computable=True because NO_TARGET_DATE_GRAIN|NO_FORECAST_FACT_TABLE|SHINY_NOT_CONNECTED; ssd_phoenix/lv_with_efficiency at forest grain: drift_computable=False because SINGLE_VERSION_ONLY|NO_TARGET_DATE_GRAIN|NO_FORECAST_FACT_TABLE|SHINY_NOT_CONNECTED; ssd_phoenix/lv_no_efficiency at forest grain: drift_computable=False because SINGLE_VERSION_ONLY|NO_TARGET_DATE_GRAIN|NO_FORECAST_FACT_TABLE|SHINY_NOT_CONNECTED; hdd_edb/EDB at region grain: drift_computable=False because NO_ACTUALS|SINGLE_VERSION_ONLY|SHINY_NOT_CONNECTED",
+      "why_it_matters": "It stops a one-cycle measurement from being read as a movement between plans.",
+      "sources_used": [
+        "metric_computability_status.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "Capability is declared by the producer and the dashboard must not override it."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "drift_computability_c1",
+          "claim": "Drift availability is declared per source",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_computability_status.csv",
+          "evidence_fields": "drift_computable|cross_plan_computable|not_computable_reason"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "Drift is only offered when a source retains two or more comparable forecast versions and the compared rows share one unit."
+      }
+    },
+    {
+      "page_id": "variant_separation",
+      "title": "Why same-metric variants are reported separately",
+      "summary": "Metrics ssd_phoenix expose more than one variant that shares the same key and forecast version: lv_no_efficiency, lv_with_efficiency. They are reported side by side and never pooled.",
+      "what_the_evidence_says": "Grouping by key and version alone merged them. The ranking key now includes db_type and every group asserts a single source object.",
+      "why_it_matters": "A blended average corresponds to no real series and would misinform the review.",
+      "sources_used": [
+        "official_metric_rankings.csv",
+        "metric_registry_resolved.csv"
+      ],
+      "limitations": [
+        "The final classification of these variants is a pending stakeholder decision."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "variant_separation_c1",
+          "claim": "Variants stay isolated",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "db_type|source_object_count"
+        },
+        {
+          "claim_id": "variant_separation_c2",
+          "claim": "Isolation is registry driven",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_registry_resolved.csv",
+          "evidence_fields": "db_type|merge_sources_allowed"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "Metrics ssd_phoenix expose more than one variant that shares the same key and forecast version: lv_no_efficiency, lv_with_efficiency. They are reported side by side and never pooled."
+      }
+    },
+    {
+      "page_id": "unit_discipline",
+      "title": "Why values are not combined across metrics",
+      "summary": "Raw business values are never aggregated across metrics because their units differ and none of the units is verified yet.",
+      "what_the_evidence_says": "Every row carries a unit and a unit_status. Storage, compute and rate measures are not additive, and a ranking group must resolve to exactly one unit.",
+      "why_it_matters": "Summing across metrics would produce a number with no physical meaning.",
+      "sources_used": [
+        "metric_unit_contract_v6_0d.csv",
+        "official_metric_rankings.csv"
+      ],
+      "limitations": [
+        "Units remain UNKNOWN pending the data engineering confirmation."
+      ],
+      "confidence": "high",
+      "claims_traceability": [
+        {
+          "claim_id": "unit_discipline_c1",
+          "claim": "Cross metric raw aggregation is blocked",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "official_metric_rankings.csv",
+          "evidence_fields": "unit"
+        },
+        {
+          "claim_id": "unit_discipline_c2",
+          "claim": "Units are unverified",
+          "evidence_pack": "metric_assistant_evidence_pack.json",
+          "source_artifacts": "metric_registry_resolved.csv",
+          "evidence_fields": "unit|unit_status"
+        }
+      ],
+      "download_payload": {
+        "format": "markdown",
+        "body": "Raw business values are never aggregated across metrics because their units differ and none of the units is verified yet."
+      }
+    }
+  ]
+}

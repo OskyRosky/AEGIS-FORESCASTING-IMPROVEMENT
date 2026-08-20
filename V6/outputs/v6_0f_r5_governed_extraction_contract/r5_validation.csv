@@ -1,0 +1,35 @@
+check_id,check,expected,observed,result
+R5V01,No full table extraction proposed,every scope row has a filter,23 of 23 rows carry a scenario filter or an explicit NOT_EXTRACTED status,PASS
+R5V02,Extraction is a small fraction of the source,well under 10 percent,7569660 of 243906366 rows equals 3.1 percent,PASS
+R5V03,Memory is not extracted,0 rows,extraction_status = NOT_EXTRACTED,PASS
+R5V04,SSD-Phoenix limited to 2 scenarios in the first extraction,2,2 rows EXTRACT_PHASE_1; the other 22 are NOT_EXTRACTED,PASS
+R5V05,Viewer FULL only for HDD,6 combinations,6 FULL rows all HDD,PASS
+R5V06,CPU IOPS SSD are forecast-only,all FORECAST_ONLY,10 FORECAST_ONLY rows,PASS
+R5V07,Every extraction has a source table,0 missing,0 missing,PASS
+R5V08,Every extraction has a scenario column,0 missing,0 missing,PASS
+R5V09,Every extraction has a key column,0 missing,0 missing,PASS
+R5V10,Every extraction has a date column,0 missing,0 missing,PASS
+R5V11,Every extraction has a value column,0 missing,0 missing,PASS
+R5V12,Every source has a version policy,11 sources,11 rows in version_selection_policy.csv,PASS
+R5V13,Every in-scope metric has a time window policy,all,14 rows in time_window_policy.csv,PASS
+R5V14,Every source has a key policy,11 sources,11 rows in key_extraction_policy.csv,PASS
+R5V15,Every exclusion has a reason,0 missing,16 of 16 exclusions carry a reason and a future condition,PASS
+R5V16,Volume estimates are measured not guessed,measured,all figures come from COUNT_BIG aggregates run in this stage,PASS
+R5V17,execution_time semantics investigated,documented,confirmed to be a run stamp; duplicate runs 73 seconds apart with identical row counts,PASS_FINDING
+R5V18,HDD forest version rule avoids duplicate runs,rule defined,latest execution_time per TRIM(data_type),PASS
+R5V19,Basilisk forest availability verified,documented,only 1 distinct execution_time exists,PASS_FINDING
+R5V20,TRIM rule carried from R3,applied,type and data_type filters specify TRIM,PASS
+R5V21,Data quality markers excluded from forecast filters,excluded,stubbed Extrapolated Fixed_NA excluded in viewer and forecast contracts,PASS
+R5V22,Blank ModelVersion handled explicitly,bucketed not dropped,Unspecified bucket proposed in O15,PASS
+R5V23,NAMPRD07 included where present,mandatory for 2 sources,HDD forest and SSD-Phoenix,PASS
+R5V24,No simulated data or zero filling,none proposed,none,PASS
+R5V25,No invented scenarios keys versions or actuals,none,every value traces to R1 or R3 evidence,PASS
+R5V26,Only read-only SQL executed,aggregates only,COUNT_BIG MIN MAX and GROUP BY only; no SELECT * on a large table,PASS
+R5V27,No data extracted in R5,0 datasets,0; only 3 small estimate files were written,PASS
+R5V28,Shiny not modified,git status empty,empty,PASS
+R5V29,Assistant and LLM not modified,unchanged,unchanged,PASS
+R5V30,V1 to V5 not modified,unchanged,unchanged,PASS
+R5V31,No Azure action,none,none,PASS
+R5V32,No Docker action,none,none,PASS
+R5V33,No SQL writes,0,0,PASS
+R5V34,Not advanced to R5b R6 R7 R8 R9 R9b R9c R10 G1 G2,no work started,no work started,PASS

@@ -1,0 +1,12 @@
+source_table,metric,granularity,version_column,version_count,min_version,max_version,notes
+forecast_substrateBE_hdd_region,HDD - EDB / HDD - Basilisk,Region,ForecastVersion,50,2021-06-01,2026-07-22,
+forecast_substrateBE_hdd,HDD - EDB / HDD - Basilisk,Forest,execution_time,30998,2021-01-01 00:00:00,2026-07-23 20:26:01,execution timestamp not a date; very high cardinality; version selector must be capped; see O4
+forecast_substrateBE_cpu_region,CPU / CPU Failover,Region,ForecastVersion,42,2022-02-01,2026-07-02,
+forecast_substrateBE_cpu,CPU / CPU Failover,Forest,forecastdate,65,2021-03-24,2026-07-02,named forecastdate not ForecastVersion
+forecast_substrateBE_cpu_byDB_region,CPU / CPU Failover,Region,ForecastVersion,12,2024-11-13,2026-01-29,
+forecast_substrateBE_cpu_byDB_forest,CPU / CPU Failover,Forest,ForecastVersion,11,2024-11-16,2026-04-01,
+forecast_substrateBE_iops_region,IOPS / IOPS Failover,Region,ForecastVersion,37,2022-02-01,2026-01-01,
+forecast_substrateBE_iops,IOPS / IOPS Failover,Forest,forecastdate,43,2021-09-01,2025-12-30,named forecastdate not ForecastVersion
+forecast_substrateBE_SSD_TotalForecast,SSD - Phoenix / SSD - MCDB,Forest,ForecastVersion,29,2024-02-07,2026-03-12,
+forecast_substrateBE_SSD_Phoenix_Organic,SSD - Phoenix,Forest,ForecastVersion,3,2025-12-05,2026-03-05,
+SubstrateBE_Ssd_MCDB_ForecastForestSKU,SSD - MCDB,Forest_SKU,ForecastVersion,32,2023-08-01,2026-03-01,

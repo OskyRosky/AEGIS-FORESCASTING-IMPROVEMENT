@@ -1,0 +1,35 @@
+check_id,check,expected,observed,result
+R3V01,Every exposed scenario has a physical source table,0 exposed rows without source_table,0,PASS
+R3V02,Every scenario row carries its raw value,0 empty scenario_raw_value,0,PASS
+R3V03,Scenario dictionary covers the full R2 contract,29 rows,29 rows,PASS
+R3V04,Exposed scenario count matches R2,16 exposed,16 exposed,PASS
+R3V05,SSD-Phoenix exposes only the 2 authorised scenarios per D2,2,2,PASS
+R3V06,Memory is not selectable per D1,0 exposed,0 exposed,PASS
+R3V07,Scenario and Type are not mixed,separate dictionaries and columns,scenario_dictionary.csv holds no type values; hdd_forest_type_taxonomy.csv holds no scenario values,PASS
+R3V08,Key dictionary covers every mapped fact table,11 tables,11 tables,PASS
+R3V09,All five key column forms documented,Key MyKey Forest Forest_SKU forest_name,all five present,PASS
+R3V10,Sample keys captured for every table,0 tables without samples,0,PASS
+R3V11,NAMPRD07 traceability recorded,tracked per table,7 of 11 tables contain NAMPRD07,PASS
+R3V12,Forest_SKU preserved without aggregation per D4,no aggregation rule,714 and 552 kept at SKU grain; noted in key_column_dictionary.csv,PASS
+R3V13,Version dictionary covers every mapped fact table,11 tables,11 tables,PASS
+R3V14,Version min and max resolved for every table,0 errors,0 errors,PASS
+R3V15,High cardinality version columns flagged,flagged where above 1000,forecast_substrateBE_hdd flagged at 30998 versions,PASS
+R3V16,HDD forest type taxonomy is complete,all distinct values classified,162 of 162 classified,PASS
+R3V17,Taxonomy row counts reconcile with the table,53922502,53922502,PASS
+R3V18,Exactly one actual value in the taxonomy,1,1 with 4372036 rows,PASS
+R3V19,Data quality markers excluded from the model selector,stubbed Extrapolated Fixed_NA not exposed,3 values with expose_in_viewer=no,PASS
+R3V20,Space padding detected and documented,padding recorded,162 of 162 HDD forest values are space padded; TRIM rule recorded,PASS
+R3V21,Casing variants documented,ARIMA and Arima both recorded,normalisation rule added for display only,PASS
+R3V22,Raw values preserved everywhere,preserve_raw_value=yes on all rules,24 of 24 rules preserve the raw value,PASS
+R3V23,No label invented without traceability,every label derives from a queried value,all labels trace to model_type_values_raw.csv or the R1 inventory,PASS
+R3V24,Only read-only SQL executed,SELECT and GROUP BY only,10 GROUP BY queries and 11 MIN/MAX queries; no writes,PASS
+R3V25,No full table extracted,aggregates only,largest artifact is 162 rows,PASS
+R3V26,No large data artifact created,all outputs small,largest file is model_type_values_raw.csv with 825 rows,PASS
+R3V27,Shiny not modified,git status empty for V6/shiny_app,empty,PASS
+R3V28,Viewer Forecast Assistant not modified,unchanged,unchanged,PASS
+R3V29,V1 to V5 not modified,unchanged,unchanged,PASS
+R3V30,No Azure resource action,none,none,PASS
+R3V31,No Docker action,none,none,PASS
+R3V32,Not advanced to R5 R5b R6 R7 R8 R9 R9b R9c R10 G1 G2,no work started,no work started,PASS
+R3V33,Earlier claim of 25 HDD forest type values corrected,true count recorded,162 distinct values; previous figure came from a TOP-N sample,PASS_CORRECTION
+R3V34,Blank ModelVersion detected in hdd_region,documented,46490 rows with an empty ModelVersion,PASS_FINDING

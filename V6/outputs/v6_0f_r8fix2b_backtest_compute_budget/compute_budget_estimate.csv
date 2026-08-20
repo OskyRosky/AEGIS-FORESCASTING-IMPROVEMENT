@@ -1,0 +1,11 @@
+estimate_id,scope,model_group,new_key_combinations,distinct_origin_dates,series_origin_units,models,horizons,estimated_new_rows,measured_reference_minutes,scale_factor,base_runtime_minutes,planning_budget_minutes,confidence,evidence_basis
+E01,LEGACY_ARTIFACT,all_15,39,12,454,15,30,204300,14.634,1.000,14.634,NA,MEASURED_AND_RECONSTRUCTED,"Artifact dimensions measured directly; 12-model runtime from V3.3B-2 and neural runtime from V3.2D"
+E02,ALL_6_HDD,cheap_12,557,"11 EDB; 5 Basilisk",4915,12,30,1769400,10.870,10.826,117.68,180,MEDIUM,"Linear scaling from 454 series-origin units; exact 12-model set measured live in V3.3B-2"
+E03,ALL_6_HDD,neural_3,557,"11 EDB; 5 Basilisk",4915,3,30,442350,3.764,10.826,40.75,60,MEDIUM,"Linear scaling from measured V3.2D FNAR-V2 NLIN-DLIN_FIXED and SMLP-TCN runtimes"
+E04,ALL_6_HDD,full_15,557,"11 EDB; 5 Basilisk",4915,15,30,2211750,14.634,10.826,158.43,240,MEDIUM,"Sum of E02 and E03; model execution only; excludes artifact assembly"
+E05,BOON_ENTERPRISE_REGION_FOREST,cheap_12,158,11,1738,12,30,625680,10.870,3.828,41.61,60,MEDIUM,"Formal R8-FIX-0 Boon slice: six Enterprise Region top-up keys plus all 152 Enterprise Forest keys"
+E06,BOON_ENTERPRISE_REGION_FOREST,neural_3,158,11,1738,3,30,156420,3.764,3.828,14.41,30,MEDIUM,"Formal R8-FIX-0 Boon slice; neural models measured separately"
+E07,BOON_ENTERPRISE_REGION_FOREST,full_15,158,11,1738,15,30,782100,14.634,3.828,56.02,90,MEDIUM,"Legacy 39 Enterprise Region keys are backfilled and not rerun; estimate covers only missing scope"
+E08,NAMPRD07_ENTERPRISE_FOREST_PILOT,cheap_12,1,11,11,12,30,3960,10.870,0.024,0.26,30,LOW,"Single-key pilot; startup and validation overhead dominate the scaled model time"
+E09,NAMPRD07_ENTERPRISE_FOREST_PILOT,neural_3,1,11,11,3,30,990,3.764,0.024,0.09,30,LOW,"Single-key pilot; intended only as a runtime and correctness gate"
+E10,NAMPRD07_ENTERPRISE_FOREST_PILOT,full_15,1,11,11,15,30,4950,14.634,0.024,0.35,30,LOW,"NAMPRD07 exists at Forest grain only; Region uses region keys and cannot be part of this pilot"

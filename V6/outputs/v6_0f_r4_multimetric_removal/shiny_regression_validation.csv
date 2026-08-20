@@ -1,0 +1,18 @@
+area,expected,observed,method,status
+App startup,Shiny app starts without error,Listening on http://127.0.0.1:8081,Rscript shiny::runApp,PASS
+HTTP response,HTTP 200,200,Invoke-WebRequest,PASS
+Page size,Smaller than the 316354 bytes served with Multi-Metric,303501 bytes,Invoke-WebRequest content length,PASS
+Sidebar Multi-Metric,Absent,CONTAINS[Multi-Metric]=False,HTML string match,PASS
+Section id multimetric,Absent,CONTAINS[multimetric]=False,HTML string match,PASS
+Module reference multi_metric,Absent,CONTAINS[multi_metric]=False,HTML string match,PASS
+Residual code references,Zero references in any .R file,0 matches for multi_metric multimetric mm_init metrics_multi,Select-String recursive,PASS
+Function section_multi_metric,Not defined,exists=FALSE,R exists(),PASS
+Function multi_metric_server,Not defined,exists=FALSE,R exists(),PASS
+Function mm_init,Not defined,exists=FALSE,R exists(),PASS
+Viewer section,Present,PRESENT[explorer]=True and PRESENT[Viewer]=True,HTML string match,PASS
+Forecast section,Present,PRESENT[forecast]=True and PRESENT[Forecast]=True,HTML string match,PASS
+Accuracy section,Present,PRESENT[accuracy]=True and PRESENT[Accuracy]=True,HTML string match,PASS
+Sidebar Forecasting group,Viewer Accuracy Forecast TTL restored,MENU_HAS_EXPLORER=TRUE MENU_HAS_ACCURACY=TRUE MENU_HAS_FORECAST=TRUE,R stage07_menu(),PASS
+layer-group icon,Belongs to the legacy Universe section not Multi-Metric,sidebar.R line 12 universe,Select-String,PASS
+app_server,Defined and callable,is.function=TRUE,R is.function(),PASS
+Git parity,shiny_app identical to HEAD,git status --porcelain returns empty,git status,PASS

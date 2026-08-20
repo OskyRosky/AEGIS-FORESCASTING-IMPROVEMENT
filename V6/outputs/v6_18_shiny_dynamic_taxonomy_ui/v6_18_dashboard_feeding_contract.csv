@@ -1,0 +1,5 @@
+consumer,input_artifact,purpose,access_pattern,mutability,dashboard_operation
+Viewer,v6_18_navigation_contract.csv,Shared conditional taxonomy and source-field resolution,Read once; in-memory metadata filtering,READ_ONLY,FILTER_ONLY
+Viewer,forecast_viewer_model_outputs_v2_full.parquet,Actual versus 15-model historical backtests,Arrow open_dataset; collect selected case only,READ_ONLY,LAZY_FILTER_ONLY
+Forecast,v6_18_navigation_contract.csv,Shared conditional taxonomy and source-field resolution,Read once; in-memory metadata filtering,READ_ONLY,FILTER_ONLY
+Forecast,forecast_forward_outputs_v6_17_full.parquet,Prepared actual history forward series artifact-derived Forecast start and optional prediction intervals,Arrow open_dataset; collect selected case only,READ_ONLY,LAZY_FILTER_WINDOW_RENDER_ONLY

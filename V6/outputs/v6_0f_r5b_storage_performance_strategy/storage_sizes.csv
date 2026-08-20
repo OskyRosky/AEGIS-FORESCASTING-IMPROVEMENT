@@ -1,0 +1,6 @@
+option,size_mb,build_seconds
+A CSV plain,421.34,
+B CSV partitioned,322.81,
+C DuckDB,23.51,
+D Parquet partitioned,183.42,
+E UI metadata,0.05,

@@ -1,0 +1,12 @@
+file,action,change,reason,backup_location,status
+V6/shiny_app/global.R,reverted,-5 lines,Removed the source() of R/scenario_resolver.R and server/viewer_scenario_server.R,git HEAD,DONE
+V6/shiny_app/ui/body.R,reverted,-1 line,Removed the source() of ui/tabs_viewer_scenario.R,git HEAD,DONE
+V6/shiny_app/ui/tabs.R,reverted,-4 lines,Removed viewer_scenario_box() from section_explorer(),git HEAD,DONE
+V6/shiny_app/server/server.R,reverted,-4 lines,Removed the viewer_scenario_server() call,git HEAD,DONE
+V6/shiny_app/ui/tabs_viewer_scenario.R,deleted,file removed,UI of the rejected separate Scenario Explorer,V6/outputs/v6_0f_r8fix1_scenario_explorer_removal/reverted_files_backup/,DONE
+V6/shiny_app/server/viewer_scenario_server.R,deleted,file removed,Server module of the rejected separate Scenario Explorer,V6/outputs/v6_0f_r8fix1_scenario_explorer_removal/reverted_files_backup/,DONE
+V6/shiny_app/R/scenario_resolver.R,KEPT,unchanged and not sourced,R7 deliverable already validated; required by R8-FIX-5. Left unwired exactly as R7 closed it,not applicable,KEPT
+V6/data/storage/r6_phase1.duckdb,KEPT,unchanged,R7 storage build; required by R8-FIX-4 and R8-FIX-5,not applicable,KEPT
+V6/data/storage/ui_metadata/,KEPT,unchanged,R7 metadata slices; required by R8-FIX-5,not applicable,KEPT
+V6/outputs/v6_0f_r8_viewer_integration/,KEPT,unchanged,Historical record of the rejected R8 attempt,not applicable,KEPT
+V6/outputs/v6_0f_r8fix_unified_backtest_design/,KEPT,unchanged,Approved R8-FIX-0 design,not applicable,KEPT

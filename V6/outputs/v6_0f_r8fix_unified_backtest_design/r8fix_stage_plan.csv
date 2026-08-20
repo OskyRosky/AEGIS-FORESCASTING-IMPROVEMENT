@@ -1,0 +1,8 @@
+stage,name,type,touches_shiny,runs_models,depends_on,deliverable,blocking_decision
+R8-FIX-0,Unified Backtest Viewer Design,documentation,no,no,R8,This design pack,none
+R8-FIX-1,Revert the Scenario explorer,code,yes (removal only),no,R8-FIX-0 approved,Viewer returns to a single Setup Backtest View,none
+R8-FIX-2,Backtest input contract,documentation and read-only checks,no,no,R8-FIX-1,Actual series per Metric x Scenario x Granularity x Key ready for modelling,D2 origin cadence
+R8-FIX-3,Backtest execution,MODEL RUN,no,YES,R8-FIX-2 authorised,forecast_viewer_model_outputs_v2 raw outputs,D1 scope and D3 compute budget
+R8-FIX-4,Artifact assembly and storage,data,no,no,R8-FIX-3,v2 artifact plus a backtest table in the DuckDB store,none
+R8-FIX-5,Unified Setup Backtest View,code,yes,no,R8-FIX-4,Single box: Metric to Scenario to Granularity to Key to Horizon to History to Models to Analyze,D4 interim behaviour
+R8-FIX-6,Validation and closure,testing,no,no,R8-FIX-5,Live validation and governance register,none

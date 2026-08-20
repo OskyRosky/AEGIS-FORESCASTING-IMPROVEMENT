@@ -1,0 +1,9 @@
+source_table,probe,execution_time,rows,distinct_keys,distinct_scenarios
+forecast_substrateBE_hdd,execution_time_probe,2026-07-23 20:26:01,574409,152,1
+forecast_substrateBE_hdd,execution_time_probe,2026-07-23 20:24:48,574409,152,1
+forecast_substrateBE_hdd,execution_time_probe,2026-05-29 21:17:55,246915,155,1
+forecast_substrateBE_hdd,execution_time_probe,2026-05-01 03:36:34,576579,156,1
+forecast_substrateBE_hdd,execution_time_probe,2026-05-01 03:35:00,576579,156,1
+forecast_substrateBE_hdd,execution_time_probe,2026-04-16 07:50:38,974829,156,2
+forecast_substrateBE_hdd,execution_time_probe,2026-04-06 19:49:02,1715877,156,1
+forecast_substrateBE_hdd,execution_time_probe,2026-04-06 19:18:17,1143672,156,1

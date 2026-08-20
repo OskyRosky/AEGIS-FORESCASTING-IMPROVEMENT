@@ -1,6 +1,7 @@
 # TESSERACT v2 | body.R | dashboard shell composition (Block 7.0C)
 source("ui/sidebar.R")
 source("ui/tabs.R")
+source("ui/tabs_v6_16_viewer.R")
 source("ui/footer.R")
 
 tess_help_overlay <- function() {
@@ -87,10 +88,10 @@ tess_guide_overlay <- function() {
 
         guide_entry(
           "explorer", "Forecast Viewer",
-          "An exploratory historical backtest view: compare how the models fit known actuals across keys, models and horizons. It does not generate future forecasts.",
+          "A governed historical backtest view: use the applicable HDD selection and compare selected model forecasts with known actuals.",
           list(
-            "Series: historical actuals versus backtest model fit per key / series.",
-            "Filters: key / series, models and horizon (read-only).",
+            "Selection: Metric first, followed only by dimensions used by the selected branch.",
+            "Series: searchable Region or Forest controls, followed by models and horizon.",
             "Backtest only \u2014 for the forward production forecast use the Forecast section."
           ),
           "Charts are bound to governed backtest artifacts; nothing is recomputed."
@@ -98,11 +99,11 @@ tess_guide_overlay <- function() {
 
         guide_entry(
           "forecast", "Forecast",
-          "A single-model forward production forecast: pick a key / series and forecast window to see actual history followed by the forward forecast.",
+          "A prepared forward production forecast: use the applicable selection and choose a forecast window.",
           list(
             "Series: actual history (solid line) then the forward production forecast.",
-            "Filters: key / series and forecast window (read-only).",
-            "One series at a time, read from the governed forecast artifact."
+            "Filters: conditional selection, searchable entity and forecast windows (read-only).",
+            "Unsupported selection branches stop at an explicit backend or routing state."
           ),
           "The forward forecast is read from governed artifacts; nothing is recomputed."
         ),

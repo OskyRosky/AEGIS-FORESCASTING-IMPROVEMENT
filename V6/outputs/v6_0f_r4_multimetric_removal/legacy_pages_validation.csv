@@ -1,0 +1,23 @@
+section_id,section_label,group,expected,observed,status
+home,Home,Project,present and untouched,present in served HTML,PASS
+overview,Executive Overview,Project,present and untouched,present in served HTML,PASS
+explorer,Viewer,Forecasting,present and untouched,present in served HTML and in stage07_menu,PASS
+accuracy,Accuracy,Forecasting,present and untouched,present in served HTML and in stage07_menu,PASS
+forecast,Forecast,Forecasting,present and untouched,present in served HTML and in stage07_menu,PASS
+ttl,TTL,Forecasting,present and untouched,present in served HTML and in stage07_menu,PASS
+universe,Model Universe,Models,present and untouched,present in served HTML; owns the layer-group icon,PASS
+tournament,Tournament,Models,present and untouched,present in served HTML,PASS
+champion,Champion,Models,present and untouched,present in served HTML,PASS
+risks,Risk Register,Governance,present and untouched,present in served HTML,PASS
+audit,Audit Trail,Governance,present and untouched,present in served HTML,PASS
+artifacts,Artifacts,Reference,present and untouched,present in served HTML,PASS
+methodology,Methodology,Reference,present and untouched,present in served HTML,PASS
+version,Version Info,Reference,present and untouched,present in served HTML,PASS
+multimetric,Multi-Metric,Forecasting,REMOVED,absent from HTML menu and code,PASS
+downloads,Download handlers,cross-cutting,same count as git HEAD,11 downloadHandler definitions unchanged; rendered dynamically so absent from static HTML by design,PASS
+sidebar,Sidebar items,cross-cutting,one fewer than with Multi-Metric,28 data-section anchors; Multi-Metric absent,PASS
+V1,Legacy version V1,repo,untouched,git status empty,PASS
+V2,Legacy version V2,repo,untouched,git status empty,PASS
+V3,Legacy version V3,repo,untouched,git status empty,PASS
+V4,Legacy version V4,repo,untouched,git status empty,PASS
+V5,Legacy version V5,repo,untouched,git status empty,PASS

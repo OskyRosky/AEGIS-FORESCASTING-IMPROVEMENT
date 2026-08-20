@@ -1,0 +1,15 @@
+page,control_or_chart,reads_from,load_mode,filters_required,expected_behavior,must_not_read,status
+Viewer,Metric dropdown,available_scenarios.csv,eager at app start,none,Lists only metrics with in_scope=yes; Memory never appears,r6_phase1_viewer_hdd.csv,DEFINED
+Viewer,Scenario dropdown,available_scenarios.csv,eager at app start,metric,Cascades from Metric,r6_phase1_viewer_hdd.csv,DEFINED
+Viewer,Granularity dropdown,available_scenarios.csv,eager at app start,metric + scenario,Region or Forest only where data exists,r6_phase1_viewer_hdd.csv,DEFINED
+Viewer,Key dropdown,available_keys.csv,eager at app start,metric + scenario + granularity,Cascades; keys shown exactly as stored,r6_phase1_viewer_hdd.csv,DEFINED
+Viewer,Model / Type selector,available_model_types.csv,eager at app start,metric + scenario + granularity,Grouped by model_family; markers excluded,r6_phase1_viewer_hdd.csv,DEFINED
+Viewer,Actual vs Forecast chart,DuckDB table viewer_hdd,lazy query on demand,metric + scenario + granularity + key + model_type,Returns only the selected series; typical 1097 rows in 0.005 s,any CSV fact file,DEFINED
+Viewer,Download,DuckDB table viewer_hdd,lazy query on demand,same as chart,Exports exactly what is charted,any CSV fact file,DEFINED
+Forecast,Metric / Scenario / Granularity dropdowns,available_scenarios.csv,eager at app start,cascade,Same cascade as Viewer,r6_phase1_forecast_hdd.csv,DEFINED
+Forecast,Key dropdown,available_keys.csv,eager at app start,metric + scenario + granularity,Cascades,r6_phase1_forecast_hdd.csv,DEFINED
+Forecast,Forecast Version dropdown,available_versions.csv,eager at app start,metric + scenario + granularity,Basilisk shows a single disabled value,r6_phase1_forecast_hdd.csv,DEFINED
+Forecast,Forward chart HDD,DuckDB table forecast_hdd,lazy query on demand,metric + scenario + granularity + key + forecast_version,Returns only the selected series,any CSV fact file,DEFINED
+Forecast,Forward chart SSD-Phoenix,DuckDB table forecast_ssd,lazy query on demand,scenario + key + forecast_version,Returns only the selected series; 2196 rows in 0.006 s,any CSV fact file,DEFINED
+Both,Out-of-scope notice,static text from R2 contract,eager at app start,none,Memory notice always visible,none,DEFINED
+Both,Badge,ui_decision_contract.csv,eager at app start,metric + scenario,GREEN AMBER or GREY per contract,none,DEFINED

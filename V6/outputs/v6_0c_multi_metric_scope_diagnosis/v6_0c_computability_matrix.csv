@@ -1,0 +1,15 @@
+metric_id,db_type,scenario,granularity,source_ref,accuracy_computable,drift_computable,forecast_curve_computable,cross_plan_computable,horizon_error_computable,dashboard_ready,needs_stakeholder_decision,needs_source_data,single_version_only,not_computable_reason
+hdd_edb,EDB,Enterprise,region,forecast_substrateBE_hdd_region (local fact),yes,no,yes,no,no,partial,no,yes,yes,SINGLE_VERSION_ONLY for cross-plan; NO_ACTUALS overlap for horizon error because actuals end 2026-04-27 and the forecast starts 2026-04-28
+hdd_edb,EDB,not_applicable,region,hdd_region_metrics.csv,yes,yes,no,yes,no,no,no,no,no,NO_TARGET_DATE_GRAIN; SHINY_NOT_CONNECTED
+hdd_edb,EDB,not_applicable,forest,hdd_forest_metrics.csv,yes,yes,no,yes,no,no,no,no,no,NO_TARGET_DATE_GRAIN; SHINY_NOT_CONNECTED
+ssd_phoenix,lv_with_efficiency,not_applicable,forest,ssd_phx_lvwe_metrics.csv,yes,no,no,no,no,no,yes,yes,yes,SINGLE_VERSION_ONLY; NO_TARGET_DATE_GRAIN; NO_FORECAST_FACT_TABLE; NO_SCENARIO_COLUMN; SHINY_NOT_CONNECTED
+ssd_phoenix,lv_no_efficiency,not_applicable,forest,ssd_phx_lvne_metrics.csv,yes,no,no,no,no,no,yes,yes,yes,SINGLE_VERSION_ONLY; NO_TARGET_DATE_GRAIN; NO_FORECAST_FACT_TABLE; NO_SCENARIO_COLUMN; SHINY_NOT_CONNECTED
+ssd_phoenix,phx_total,PENDING_CONFIRMATION,PENDING_CONFIRMATION,forecast_substrateBE_SSD_TotalForecast,no,no,no,no,no,no,yes,yes,unknown,NO_FORECAST_FACT_TABLE; PENDING_STAKEHOLDER_MAPPING; SOURCE_NOT_LOCATED
+ssd_phoenix,phx_organic,PENDING_CONFIRMATION,PENDING_CONFIRMATION,forecast_substrateBE_SSD_Phoenix_Organic,no,no,no,no,no,no,yes,yes,unknown,SOURCE_NOT_LOCATED; PENDING_STAKEHOLDER_MAPPING
+ssd_mcdb,mcdb_total,PENDING_CONFIRMATION,PENDING_CONFIRMATION,forecast_substrateBE_SSD_TotalForecast,no,no,no,no,no,no,yes,yes,unknown,SOURCE_NOT_LOCATED; PENDING_STAKEHOLDER_MAPPING for shared-table discriminator
+ssd_mcdb,mcdb_organic,PENDING_CONFIRMATION,forest_sku,SubstrateBE_Ssd_MCDB_ForecastForestSKU,no,no,no,no,no,no,yes,yes,unknown,SOURCE_NOT_LOCATED; grain below forest is unmodelled
+cpu,PENDING_CONFIRMATION,PENDING_CONFIRMATION,region,forecast_substrateBE_cpu_region,no,no,no,no,no,no,yes,yes,unknown,SOURCE_NOT_LOCATED; UNKNOWN_UNIT; PENDING_STAKEHOLDER_MAPPING
+cpu,PENDING_CONFIRMATION,PENDING_CONFIRMATION,forest_by_db,forecast_substrateBE_cpu_byDB_forest,no,no,no,no,no,no,yes,yes,unknown,SOURCE_NOT_LOCATED; UNKNOWN_UNIT; Fleet and Workload placement undecided
+iops,PENDING_CONFIRMATION,PENDING_CONFIRMATION,unknown,UNNAMED_substrateBE_iops_family,no,no,no,no,no,no,yes,yes,unknown,SOURCE_NOT_LOCATED; UNKNOWN_UNIT; explicitly deferred
+hdd_edb,EDB,Consumer,region,forecast_substrateBE_hdd_region,no,no,no,no,no,no,no,yes,unknown,NOT_INGESTED because the extract hardcodes Scenario=Enterprise
+legacy_backtest,EDB,not_applicable,region,data/processed/forecast_viewer_model_outputs.csv,yes,no,yes,no,yes,yes,no,no,no,LEGACY_HDD_ONLY_ARTIFACT; this is the only artifact Shiny Accuracy and Viewer actually consume

@@ -1,0 +1,17 @@
+item,type,reason,future_condition_to_include,status
+Memory,metric,No populated forecast source in Tesseract; both demand views return 0 rows,A validated and populated forecast table or view is identified,EXCLUDED_D1
+SSD - Phoenix 22 additional scenarios,scenario,Only the 2 portal scenarios are authorised for the first release,Boon or the team confirms which additional scenarios are needed,DOCUMENTED_NOT_EXTRACTED_D2
+SSD - MCDB via SSD_TotalForecast,scenario,Scenario selection is undefined for Resource='SSD-MCDB',O1 is answered with an unambiguous scenario mapping,BLOCKED_O1
+SSD - MCDB Organic (ForestSKU),source,Scenario column is stored blank so no unambiguous mapping exists,O1 is answered,BLOCKED_O1
+SSD - Phoenix Organic,source,Only 3 forecast versions and a single scenario; not in the first release,A business need is confirmed,DOCUMENTED_NOT_EXTRACTED
+CPU byDB Region,source,Requires a DBType control that is not in the agreed cascade,O3 is answered,BLOCKED_O3
+CPU byDB Forest,source,Requires a DBType control that is not in the agreed cascade,O3 is answered,BLOCKED_O3
+Viewer FULL for CPU,capability,No actual marker exists in the CPU fact tables,A validated actual source at the same grain is identified,EXCLUDED_D3
+Viewer FULL for IOPS,capability,No actual marker exists in the IOPS fact tables,A validated actual source is identified,EXCLUDED_D3
+Viewer FULL for SSD - Phoenix,capability,No actual marker exists in SSD_TotalForecast,A validated actual source is identified; the metrics tables hold Mean_Actual but only as aggregates,EXCLUDED_D3
+Viewer FULL for SSD - MCDB,capability,No actual marker and the scenario mapping is blocked,O1 is answered and an actual source is identified,EXCLUDED_D3
+stubbed / Extrapolated / Fixed_NA,model type,Data quality markers not models; 12157 rows combined in HDD forest,Never; they stay out of the model selector,EXCLUDED_R3
+Historical execution_time runs for HDD forest,version,30998 run timestamps with duplicates seconds apart; not a user facing version,A true forecast version column is identified for the forest grain,EXCLUDED_TECHNICAL
+Full table extraction of any source,method,Sources total 243.9M rows; the contract extracts approximately 3.1 percent,Never under the current governance,EXCLUDED_GOVERNANCE
+vw_SubstrateBE_*_Demand_Actual_Forecast views,source,Region level monthly aggregates of 750 to 1509 rows; too coarse for the Viewer,A decision to show a coarse region level comparison,DOCUMENTED_NOT_EXTRACTED
+SubstrateBE_SSD_Demand_History,source,Data stops in 2021; stale,Never unless refreshed,EXCLUDED_STALE

@@ -1,0 +1,6 @@
+case_id,artifact_path,rows,models,horizons,origins,actuals_present,validation_status,notes
+P01,V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_viewer_model_outputs_v2_pilot.csv,1350,15,30,3,TRUE,PASS,"Three most recent governed legacy origins reused; no model rerun"
+P02,V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_viewer_model_outputs_v2_pilot.csv,1350,15,30,3,TRUE,PASS,"Generated from R6 Phase-1 Enterprise Forest NAMPRD07 actuals"
+P03,V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_viewer_model_outputs_v2_pilot.csv,1350,15,30,3,TRUE,PASS,"Generated from R6 Phase-1 Consumer Region APC-Dedicated actuals; identical duplicate dates deduplicated outside Shiny"
+P04,V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_viewer_model_outputs_v2_pilot.csv,1350,15,30,3,TRUE,PASS,"Generated from R6 Phase-1 Consumer Forest NAMPRD07 actuals"
+P05,V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_viewer_model_outputs_v2_pilot.csv,1350,15,30,3,TRUE,PASS,"Generated from shorter Basilisk history without padding; raw lowercase key preserved"

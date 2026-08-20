@@ -1,0 +1,28 @@
+scenario_ui_label,source_table,key_count,has_forecast,has_actual_same_table,actual_source_if_separate,usable_in_viewer,viewer_reason,usable_in_forecast,forecast_reason
+HDD - EDB Enterprise (Region),forecast_substrateBE_hdd_region,52,yes,yes,ModelVersion='actual' in same table,YES,Actual and forecast coexist with Key + DateTime + ForecastVersion,YES,Forward horizon to 2030-07-16 with 50 forecast versions
+HDD - EDB Enterprise (Forest),forecast_substrateBE_hdd,318,yes,yes,type='actual' in same table,YES,Actual and forecast coexist with forest_name + target_date + execution_time,YES,Forward horizon to 2031-02-27 with 30998 execution stamps
+HDD - EDB Consumer (Region),forecast_substrateBE_hdd_region,52,yes,yes,ModelVersion='actual' in same table,YES,Same structure as Enterprise,YES,Same structure as Enterprise
+HDD - EDB Consumer (Forest),forecast_substrateBE_hdd,318,yes,yes,type='actual' in same table,YES,Same structure as Enterprise; requires case-insensitive match on 'consumer',YES,Same structure as Enterprise
+HDD - Basilisk (Region),forecast_substrateBE_hdd_region,52,yes,yes,ModelVersion='actual' in same table,YES,Same structure as Enterprise,YES,Same structure as Enterprise
+HDD - Basilisk (Forest),forecast_substrateBE_hdd,318,yes,yes,type='actual' in same table,YES,Same structure as Enterprise,YES,Same structure as Enterprise
+CPU Total Consumed (Region),forecast_substrateBE_cpu_region,46,yes,no,vw_SubstrateBE_CPU_Demand_Actual_Forecast (1202 rows region monthly),PARTIAL,Fact table has no actual marker; only the small region view carries DataType=Actual,YES,Forward horizon to 2030-08-27 with 42 forecast versions
+CPU Total Failover (Region),forecast_substrateBE_cpu_region,46,yes,no,none found,NO,No actual series located for Failover scenario,YES,Forward horizon to 2030-08-27
+CPU Phoenix Consumed (Region),forecast_substrateBE_cpu_byDB_region,44,yes,no,none found,NO,No actual series located at DBType grain,YES,Forward horizon to 2030-03-27 with 12 versions
+CPU NonPhoenix Consumed (Region),forecast_substrateBE_cpu_byDB_region,44,yes,no,none found,NO,No actual series located at DBType grain,YES,Forward horizon to 2030-03-27
+CPU Phoenix Failover (Region),forecast_substrateBE_cpu_byDB_region,44,yes,no,none found,NO,No actual series located at DBType grain,YES,Forward horizon to 2030-03-27
+CPU NonPhoenix Failover (Region),forecast_substrateBE_cpu_byDB_region,44,yes,no,none found,NO,No actual series located at DBType grain,YES,Forward horizon to 2030-03-27
+CPU Total Consumed (Forest),forecast_substrateBE_cpu,714,yes,no,none found,NO,type column holds Organic variants not actuals,YES,Forward horizon to 2030-08-27 with 65 versions; key is Forest_SKU not Forest
+CPU Total Failover (Forest),forecast_substrateBE_cpu,714,yes,no,none found,NO,type column holds Organic variants not actuals,YES,Forward horizon to 2030-08-27
+CPU Phoenix Consumed (Forest),forecast_substrateBE_cpu_byDB_forest,159,yes,no,none found,NO,No actual series located,YES,Forward horizon to 2030-05-28 with 11 versions
+CPU NonPhoenix Consumed (Forest),forecast_substrateBE_cpu_byDB_forest,159,yes,no,none found,NO,No actual series located,YES,Forward horizon to 2030-05-28
+CPU Phoenix Failover (Forest),forecast_substrateBE_cpu_byDB_forest,159,yes,no,none found,NO,No actual series located,YES,Forward horizon to 2030-05-28
+CPU NonPhoenix Failover (Forest),forecast_substrateBE_cpu_byDB_forest,159,yes,no,none found,NO,No actual series located,YES,Forward horizon to 2030-05-28
+IOPS Consumed (Region),forecast_substrateBE_iops_region,46,yes,no,vw_SubstrateBE_IOPS_Demand_Actual_Forecast (1509 rows region monthly),PARTIAL,Only the small region view carries DataType=Actual,YES,Forward horizon to 2030-02-27 with 37 versions
+IOPS Failover (Region),forecast_substrateBE_iops_region,46,yes,no,none found,NO,No actual series located for Failover scenario,YES,Forward horizon to 2030-02-27
+IOPS Consumed (Forest),forecast_substrateBE_iops,552,yes,no,none found,NO,type column holds Organic variants not actuals,YES,Forward horizon to 2030-02-26 with 43 versions; key is Forest_SKU
+IOPS Failover (Forest),forecast_substrateBE_iops,552,yes,no,none found,NO,type column holds Organic variants not actuals,YES,Forward horizon to 2030-02-26
+SSD - Phoenix Total (24 scenarios),forecast_substrateBE_SSD_TotalForecast,163,yes,no,forecast_substrateBE_ssd_phx_lvwe_metrics / _lvne_metrics (Mean_Actual vs Mean_Forecast),PARTIAL,Actual only available as precomputed accuracy aggregates for 2 of 24 scenarios,YES,Forward horizon to 2030-07-02 with 29 versions
+SSD - MCDB Total (24 scenarios),forecast_substrateBE_SSD_TotalForecast,163,yes,no,none found,NO,No actual series located for MCDB,YES,Forward horizon to 2030-07-02
+SSD - MCDB Organic (Forest SKU),SubstrateBE_Ssd_MCDB_ForecastForestSKU,774,yes,no,none found,NO,No actual series located,YES,Forward horizon to 2030-04-29 with 32 versions
+SSD - Phoenix Organic,forecast_substrateBE_SSD_Phoenix_Organic,149,yes,no,none found,NO,No actual series located,YES,Forward horizon to 2030-07-02 but only 3 forecast versions
+Memory,NONE,0,no,no,vw_SubstrateBE_MemoryRawData (raw telemetry only),NO,No forecast and no curated actual demand series,NO,No forecast table exists for Memory

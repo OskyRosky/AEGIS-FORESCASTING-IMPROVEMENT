@@ -1,0 +1,21 @@
+check_id,check_name,expected,observed,result
+R2V01,All 9 requested metrics registered,9 rows in metric_scope_register.csv,9 rows,PASS
+R2V02,Memory marked out of scope per D1,in_scope=no and not selectable,in_scope=no; selectable_in_viewer=no; selectable_in_forecast=no,PASS
+R2V03,Memory has approved notice copy,notice text defined,defined in out_of_scope_notice_copy.md section 1,PASS
+R2V04,SSD-Phoenix exposes only the 2 portal scenarios per D2,2 exposed,rows R23 and R24 exposed; R25 documents the other 22 as not exposed,PASS
+R2V05,Viewer FULL restricted to HDD per D3,only HDD rows FULL,6 FULL rows all HDD; 11 FORECAST_ONLY; 1 OUT_OF_SCOPE,PASS
+R2V06,Keys preserved as stored per D4,no aggregation declared,Forest_SKU kept at 714 and 552; no aggregation rule present,PASS
+R2V07,type kept separate from Scenario per D5,separate control,control 6 Model/Type separate from control 2 Scenario; rule C6 recorded,PASS
+R2V08,Granularity is a separate control per D6,not folded into Scenario,control 3 Granularity; rule C5 recorded,PASS
+R2V09,No new tab proposed per D7,integration inside Viewer and Forecast,control_cascade_spec.md scopes to the two existing pages only,PASS
+R2V10,Every contract row cites a verified Tesseract source,source_table populated,28 of 29 rows have a source; Memory row is NONE by decision,PASS
+R2V11,Key counts match the R1 inventory,identical values,52 318 46 714 44 159 552 163 774 149 all match,PASS
+R2V12,Badge vocabulary limited to three states,GREEN AMBER GREY,only GREEN AMBER GREY used,PASS
+R2V13,No simulated data permitted,explicit prohibition,rules B1 B2 B3 and P1-P4 recorded,PASS
+R2V14,Open questions registered,all unresolved items captured,10 questions O1-O10 registered with blocked stage,PASS
+R2V15,R2 produced documentation only,0 code files changed,0 code files changed by R2,PASS
+R2V16,No SQL executed in R2,0 queries,0 queries; R2 reused the R1 inventory,PASS
+R2V17,No data extracted in R2,0 datasets,0 datasets,PASS
+R2V18,No Azure or Docker action,none,none,PASS
+R2V19,Not advanced to R3 R5 R6 R7 R8 R9 R10 G1 G2,no work started,no work started,PASS
+R2V20,All 9 required deliverables created,9 files,9 files,PASS

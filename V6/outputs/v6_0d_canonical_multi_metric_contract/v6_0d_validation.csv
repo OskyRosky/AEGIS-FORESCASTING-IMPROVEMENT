@@ -1,0 +1,34 @@
+check_id,area,check,expected,observed,status
+V01,inputs,V6.0C outputs were read and used as the contractual base,10 artifacts read,All 10 files listed and hashed; computability matrix and open questions re-read and cited in the contract,PASS
+V02,immutability,data/processed not modified,hashes unchanged,forecasts actuals forecast_comparison and forecast_viewer_model_outputs all rehash UNCHANGED,PASS
+V03,immutability,outputs/metrics legacy not modified,hashes unchanged,baseline_metrics and baseline_rankings rehash UNCHANGED,PASS
+V04,immutability,Shiny not modified,no change,git status shows no entry under V6/shiny_app,PASS
+V05,immutability,Python pipeline not modified,no change,git status shows no entry under V6/python,PASS
+V06,execution,No SQL executed,zero connections,no database driver invoked in this stage,PASS
+V07,execution,No Azure resource created,zero resources,no Azure call issued,PASS
+V08,immutability,V1 to V5 untouched,no change,git status shows no entry under V1 V2 V3 V4 V5,PASS
+V09,contract,Scenario is optional and not_applicable is defined,explicit rules,canonical_metric_contract.md section 4 plus scenario_status enum with four values,PASS
+V10,contract,No blank or inherited scenario permitted,explicit prohibition,Validation rule on the scenario column and tests T03 T04 T05,PASS
+V11,ranking,Ranking key includes all six identity components,six part key,metric_id db_type scenario granularity entity_key forecast_version declared mandatory,PASS
+V12,ranking,LVWE and LVNE cannot merge under the new contract,structural impossibility,They differ in db_type which is part of the key; guard T07 asserts source_object_count equals one,PASS
+V13,ranking,Region and forest cannot merge,structural impossibility,granularity is in the key and key_namespace guard is asserted by T08,PASS
+V14,units,Cross unit raw aggregation prohibited,explicit rule,metric_unit_contract_v6_0d.csv CROSS_METRIC row and test T09 requiring one unit per group,PASS
+V15,artifacts,New artifacts are additive and do not replace legacy,additive only,All 8 contracts marked additive_only=yes targeting outputs/metrics_multi; legacy marked superseded not deleted,PASS
+V16,contract,Single version accuracy is never labelled as drift,explicit rule,computability precedence rule 5 plus view gating plus test T12,PASS
+V17,shiny,Filter contract does not require Scenario for all metrics,scenario optional,shiny_filter_contract.csv marks Scenario required=no with allowed_not_applicable=yes,PASS
+V18,markers,VERSION_INFO.md updated to reflect real state,documentation only,current_status=V6.0D next_stage=V6.0E active root corrected from V5 to V6,PASS
+V19,markers,project_root_policy.json updated and still valid,valid JSON,Parsed successfully; next_stage=V6.0E azure_deployment_status=paused_until_v6_0h contract=v6.0d,PASS
+V20,scope,No production artifact was built,design only,No file created under outputs/metrics_multi; only contracts under v6_0d_canonical_multi_metric_contract,PASS
+V21,scope,No metric specific fix implemented,metric agnostic,Contract is registry driven; NAMPRD07 appears only as validation case T18,PASS
+V22,scope,No hardcoding of SSD-Phoenix,generic treatment,SSD is one of six metric_id values in the same contract,PASS
+V23,boon,Draft is preliminary and not the final evidence pack,explicitly marked,Header states PRELIMINARY DRAFT not sent and defers to V6.0G,PASS
+V24,scope,Did not advance to V6.0E,stage boundary respected,No builder code written and no adapter implemented,PASS
+V25,deliverables,All fourteen required artifacts created,14 files,14 files present in v6_0d_canonical_multi_metric_contract,PASS
+V26,security,No secrets or connection details in any artifact,zero,No server name connection string or credential appears in the contracts,PASS
+V27,deployment,New artifact location is inside a mounted path,container visible,outputs/metrics_multi sits under the existing read-only outputs mount,PASS
+V28,assistant,Assistant layer inventoried before contracting,components measured,llm_explain.R 860 lines llm_compose.R 282 lines llm_client.R 9 lines plus the llm_summary module,PASS
+V29,assistant,Existing evidence pack characterised and frozen,structure captured,11 page responses 108 traceable claims 78 source references provider stage mock_no_llm,PASS
+V30,assistant,Assistant preservation invariant recorded,binding rules,llm_assistant_grounding_contract.md rules A1 to A5,PASS
+V31,assistant,Grounding restrictions recorded,binding rules,Rules G1 to G10 covering no SQL no training no recalculation no mutation no unsupported claims no cross metric aggregation and no single version drift,PASS
+V32,assistant,Extension is additive and the legacy pack is untouched,frozen,v4_4_mock_responses.json rehashes unchanged and the new pack is a separate file,PASS
+V33,assistant,Explicit assistant validation checks added for later stages,tests defined,T26 to T35 covering UI presence artifact reading selection context drift explanation scenario honesty exports and Docker parity,PASS

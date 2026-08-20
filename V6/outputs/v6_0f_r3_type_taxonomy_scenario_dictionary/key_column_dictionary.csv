@@ -1,0 +1,12 @@
+source_table,metric,granularity,key_column,key_label,key_count,sample_keys,namprd07_present,notes
+forecast_substrateBE_hdd_region,HDD - EDB / HDD - Basilisk,Region,Key,Region,52,APC-DEDICATED | APC-MSIT | APC-Multitenant,no,
+forecast_substrateBE_hdd,HDD - EDB / HDD - Basilisk,Forest,forest_name,Forest,318,APCP150 | APCP153 | AREP273,yes,lowercase column name unique to this table
+forecast_substrateBE_cpu_region,CPU / CPU Failover,Region,Key,Region,46,APC-Dedicated | APC-MSIT | APC-Multitenant,no,
+forecast_substrateBE_cpu,CPU / CPU Failover,Forest,Forest_SKU,Forest + SKU,714,APCP150-HP Gen9 | APCP150-WCS Gen5 | APCP150-WCS Gen6,yes,composite Forest + SKU; not aggregated per D4
+forecast_substrateBE_cpu_byDB_region,CPU / CPU Failover,Region,MyKey,Region + DBType,44,APC-Dedicated | APC-MSIT | APC-Multitenant,no,key column is MyKey not Key
+forecast_substrateBE_cpu_byDB_forest,CPU / CPU Failover,Forest,MyKey,Forest + DBType,159,APCP150 | APCP153 | APCPRD01,yes,key column is MyKey not Key
+forecast_substrateBE_iops_region,IOPS / IOPS Failover,Region,Key,Region,46,APC-Dedicated | APC-MSIT | APC-Multitenant,no,
+forecast_substrateBE_iops,IOPS / IOPS Failover,Forest,Forest_SKU,Forest + SKU,552,APCP150-WCS Gen7 | APCP153-HP Gen9 | APCP153-WCS Gen5,yes,composite Forest + SKU; not aggregated per D4
+forecast_substrateBE_SSD_TotalForecast,SSD - Phoenix / SSD - MCDB,Forest,Key,Forest,163,APCP150 | APCP153 | APCPRD01,yes,
+forecast_substrateBE_SSD_Phoenix_Organic,SSD - Phoenix,Forest,Forest,Forest,149,APCP150 | APCP153 | APCPRD01,yes,
+SubstrateBE_Ssd_MCDB_ForecastForestSKU,SSD - MCDB,Forest_SKU,Key,Forest + SKU,774,APC-Dedicated-APCP150 | APC-Dedicated-APCP150-HP Gen9 | APC-Dedicated-APCP150-WCS Gen5,yes,

@@ -1,0 +1,37 @@
+benchmark_id,artifact_or_storage,metric,scenario,granularity,key,rows_returned,elapsed_seconds,status,notes
+B1,CSV in-memory,HDD - EDB,Enterprise,Forest,NAMPRD07,1097,0.08,OK,filter only; excludes the load cost
+B2,CSV in-memory,HDD - EDB,Consumer,Forest,NAMPRD07,1097,0.065,OK,filter only
+B3,CSV in-memory,HDD - Basilisk,Basilisk,Forest,NAMPRD07,0,0.063,OK,filter only
+B4,CSV in-memory,SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,2196,0.047,OK,filter only
+B5,CSV in-memory,SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,2196,0.048,OK,filter only
+B6,CSV in-memory,HDD,all,Region,EUR-Go Local,7140,0.007,OK,filter only
+B7,CSV in-memory,all,all,all,-,6,0.017,OK,scenario dropdown metadata
+B8,CSV in-memory,HDD - EDB,Enterprise,Forest,-,152,0.013,OK,key dropdown metadata
+B1,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B2,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B3,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B4,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B5,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B6,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B7,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B8,CSV cold read,-,-,-,-,,0.691,OK,every filter above requires this full load first
+B1,DuckDB,HDD - EDB,Enterprise,Forest,NAMPRD07,1097,0.005,OK,cold connect and query
+B2,DuckDB,HDD - EDB,Consumer,Forest,NAMPRD07,1097,0.003,OK,cold connect and query
+B3,DuckDB,HDD - Basilisk,Basilisk,Forest,NAMPRD07,0,0.002,OK,cold connect and query
+B4,DuckDB,SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,2196,0.006,OK,""
+B5,DuckDB,SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,2196,0.004,OK,""
+B6,DuckDB,HDD,all,Region,EUR-Go Local,7140,0.008,OK,""
+B7,DuckDB,all,all,all,-,6,0.007,OK,scenario dropdown metadata
+B8,DuckDB,HDD - EDB,Enterprise,Forest,-,152,0.003,OK,key dropdown metadata
+B1,Parquet partitioned,HDD - EDB,Enterprise,Forest,NAMPRD07,1097,3.174,OK,lazy scan of one partition
+B2,Parquet partitioned,HDD - EDB,Consumer,Forest,NAMPRD07,1097,3.022,OK,""
+B3,Parquet partitioned,HDD - Basilisk,Basilisk,Forest,NAMPRD07,0,3.055,OK,""
+B4,Parquet partitioned,SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,2196,0.076,OK,""
+B5,Parquet partitioned,SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,2196,0.077,OK,""
+B6,Parquet partitioned,HDD,all,Region,EUR-Go Local,7140,3.035,OK,""
+B7,Parquet partitioned,all,all,all,-,6,1.075,OK,scenario dropdown metadata
+B8,Parquet partitioned,HDD - EDB,Enterprise,Forest,-,152,0.925,OK,key dropdown metadata
+B8,UI metadata slice,-,-,-,-,896,0.003,OK,available_keys.csv
+B9,UI metadata slice,-,-,-,-,88,0.002,OK,available_model_types.csv
+B7,UI metadata slice,-,-,-,-,14,0.002,OK,available_scenarios.csv
+B9,UI metadata slice,-,-,-,-,16,0.002,OK,available_versions.csv

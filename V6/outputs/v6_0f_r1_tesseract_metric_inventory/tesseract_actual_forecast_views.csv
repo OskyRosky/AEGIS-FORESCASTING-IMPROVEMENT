@@ -1,0 +1,10 @@
+view_name,status,column_count,row_count,key_column,namprd07_rows,columns
+vw_SubstrateBE_HDD_Demand_Actual_Forecast,EXISTS,4,825,Key,0,Key|DateTime|Value|DataType
+vw_SubstrateBE_CPU_Demand_Actual_Forecast,EXISTS,4,1202,Key,0,Key|DateTime|Value|DataType
+vw_SubstrateBE_IOPS_Demand_Actual_Forecast,EXISTS,4,1509,Key,0,Key|DateTime|Value|DataType
+vw_SubstrateBE_SSD_Demand_Actual_Forecast,EXISTS,4,750,Key,0,Key|DateTime|Value|DataType
+vw_SubstrateBE_Demand_Memory_Forest,EXISTS,9,0,Key,0,Fleet|Workload|Resource|Unit|DemandType|DateTime|Key|Value|ForecastVersion
+vw_SubstrateBE_Demand_Memory_Region,EXISTS,10,0,Key,0,Fleet|Workload|Resource|Unit|DemandType|DateTime|Key|Environment|Value|ForecastVersion
+vw_SubstrateBE_MemoryRawData,EXISTS,7,54333691,Forest,1198671,DataDate|Dagname|DagNumberOfServers|Forest|Sku_CommonName|ConsumedRate|InstalledMemoryGBPerServer
+vw_SubstrateBE_Demand_HddBasilisk_Forest,EXISTS,9,0,Key,0,Fleet|Workload|Resource|Unit|DemandType|DateTime|Key|Value|ForecastVersion
+vw_SubstrateBE_Demand_HddBasilisk_Region,EXISTS,10,0,Key,0,Fleet|Workload|Resource|Unit|DemandType|DateTime|Key|Environment|Value|ForecastVersion

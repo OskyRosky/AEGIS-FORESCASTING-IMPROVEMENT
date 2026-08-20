@@ -1,0 +1,13 @@
+source_table,metric,scenario_ui_label,granularity,phase,table_total_rows,rows_one_version_unwindowed,rows_one_version_windowed,estimated_versions,estimated_keys,estimated_rows_extracted,risk_level,notes
+forecast_substrateBE_hdd_region,HDD - EDB / Basilisk,3 scenarios,Region,1,10485054,291864,94190,3,52,282570,LOW,Measured on ForecastVersion 2026-07-22
+forecast_substrateBE_hdd,HDD - EDB Enterprise,enterprise,Forest,1,53922502,574409,166668,1,152,166668,LOW,Latest run per scenario; 15553 historical runs exist
+forecast_substrateBE_hdd,HDD - EDB Consumer,consumer,Forest,1,53922502,574409,166668,1,152,166668,LOW,Latest run per scenario; 15449 historical runs exist
+forecast_substrateBE_hdd,HDD - Basilisk,Basilisk,Forest,1,53922502,246915,147870,1,155,147870,LOW,Only 1 execution_time exists for Basilisk
+forecast_substrateBE_SSD_TotalForecast,SSD - Phoenix,2 portal scenarios,Forest,1,26723954,465470,261960,3,148,785880,MEDIUM,Measured with Resource='SSD-Phoenix' on version 2026-03-12
+forecast_substrateBE_cpu_region,CPU / CPU Failover,2 scenarios,Region,2,8508120,267344,146960,3,46,440880,LOW,Measured on ForecastVersion 2026-07-02
+forecast_substrateBE_cpu,CPU / CPU Failover,2 scenarios,Forest,2,51194194,1497734,823310,3,493,2469930,HIGH,SKU grain; largest phase 2 contributor
+forecast_substrateBE_iops_region,IOPS / IOPS Failover,2 scenarios,Region,2,6451852,267344,168080,3,46,504240,LOW,Latest version is 2026-01-01
+forecast_substrateBE_iops,IOPS / IOPS Failover,2 scenarios,Forest,2,32620690,1379252,868318,3,454,2604954,HIGH,SKU grain; latest version is 2025-12-30
+PHASE_1_TOTAL,HDD and SSD-Phoenix,Boon slice,mixed,1,145131510,,,,,1549656,MEDIUM,Approximately 1.55M rows; feasible for the first release
+PHASE_2_TOTAL,CPU and IOPS,remaining metrics,mixed,2,98774856,,,,,6020004,HIGH,Approximately 6.02M rows; requires the R5b storage decision
+COMBINED_TOTAL,all in-scope,all,mixed,1 and 2,243906366,,,,,7569660,HIGH,Approximately 7.57M rows against 243.9M in source; a 3.1 percent extract

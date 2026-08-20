@@ -1,0 +1,10 @@
+source_table,scope,granularity,latest_version,rows_windowed_one_version,keys_windowed,distinct_runs
+forecast_substrateBE_hdd,HDD consumer,Forest,2026-07-23 20:26:01,166668,152,15449
+forecast_substrateBE_hdd,HDD enterprise,Forest,2026-07-23 20:24:48,166668,152,15553
+forecast_substrateBE_hdd,HDD Basilisk,Forest,2026-05-29 21:17:55,147870,155,1
+forecast_substrateBE_hdd_region,all in-scope scenarios,see contract,2026-07-22,94190,43,
+forecast_substrateBE_cpu_region,all in-scope scenarios,see contract,2026-07-02,146960,44,
+forecast_substrateBE_cpu,all in-scope scenarios,see contract,2026-07-02,823310,493,
+forecast_substrateBE_iops_region,all in-scope scenarios,see contract,2026-01-01,168080,44,
+forecast_substrateBE_iops,all in-scope scenarios,see contract,2025-12-30,868318,454,
+forecast_substrateBE_SSD_TotalForecast,all in-scope scenarios,see contract,2026-03-12,261960,148,

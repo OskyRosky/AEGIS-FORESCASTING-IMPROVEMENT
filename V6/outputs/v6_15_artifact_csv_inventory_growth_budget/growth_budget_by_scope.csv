@@ -1,0 +1,8 @@
+scope_name,metric,scenario_count,granularity_count,key_count,model_count,origin_count,horizon_count,estimated_rows,estimated_csv_files_added,estimated_artifacts_added,estimated_storage_mb_added,feeds_dashboard,notes
+CURRENT_STATE,HDD - EDB,1,1,39,15,12,30,204300,0,0,0.00,CURRENT,"Measured legacy Viewer state; existing CSV is 49.083 MB and no growth is attributed here"
+FIVE_CASE_PILOT,HDD - EDB,1,1,5,15,11,30,24750,1,5,5.95,FUTURE_AFTER_AUTHORIZATION,"Budget assumes five representative Enterprise Forest key-combinations; exact keys are not selected by V6.15"
+BOON_NAMPRD07_SLICE,HDD - EDB,1,2,158,15,11,30,782100,3,8,385.71,FUTURE_AFTER_ASSEMBLY,"Formal Boon scope is six Enterprise Region top-up keys plus 152 Enterprise Forest keys; NAMPRD07 is the demo key not the sole scope"
+ALL_6_HDD_CHEAP_12,HDD - EDB + HDD - Basilisk,3,2,557,12,"11 EDB; 5 Basilisk",30,1769400,1,5,425.10,FUTURE_PHASE_OUTPUT,"Missing-scope generation only; 39 verified legacy keys are backfilled separately"
+ALL_6_HDD_NEURAL_3,HDD - EDB + HDD - Basilisk,3,2,557,3,"11 EDB; 5 Basilisk",30,442350,1,5,106.28,FUTURE_PHASE_OUTPUT,"Three verified neural models only; not a complete Viewer artifact"
+ALL_6_HDD_ALL_15,HDD - EDB + HDD - Basilisk,3,2,557,15,"11 EDB; 5 Basilisk",30,2211750,3,8,1090.77,FUTURE_AFTER_ASSEMBLY,"Final coverage becomes 596 key-combinations after adding 557 generated combinations to 39 verified legacy keys; storage includes retained phase CSVs final CSV and proportional DuckDB growth"
+FORECAST_ONLY_SSD_PHOENIX,SSD - Phoenix,2,1,300,0,3,0,651480,0,3,0.00,FUTURE_FORECAST_REUSE,"Rows and storage already exist in the Phase-1 CSV and forecast_ssd DuckDB table; model and horizon counts are not applicable; implementation should reuse them without new extraction"

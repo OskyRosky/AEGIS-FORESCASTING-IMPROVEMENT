@@ -9,6 +9,17 @@ source("R/llm_client.R")
 source("R/data_loader.R")
 tess_init_governed_loader()
 
+# V6.18 | Shared conditional taxonomy contract for Viewer and Forecast.
+source("R/taxonomy_navigation.R")
+
+# V6.17 | Read-only productive Viewer. All modeling and artifact assembly
+# happen outside Shiny; this provider filters prepared metadata and Parquet.
+source("R/viewer_pilot.R")
+
+# V6.17 | Read-only HDD + SSD-Phoenix productive forward Forecast.
+# Version selection and artifact assembly happen outside Shiny.
+source("R/forecast_pilot.R")
+
 # V4.6 | Shiny Local On-Demand LLM explanation panel (mock, read-only)
 source("R/llm_explain.R")
 

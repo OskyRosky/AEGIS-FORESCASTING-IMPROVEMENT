@@ -1,0 +1,21 @@
+row_id,metric,scenario,granularity,source_table,key_column,key_count,date_column,version_column,distinct_versions,horizon_max_date,value_column,forecast_status,badge,exposed_in_first_release
+F01,HDD - EDB,Enterprise,Region,forecast_substrateBE_hdd_region,Key,52,DateTime,ForecastVersion,50,2030-07-16,Value,FULL,GREEN,yes
+F02,HDD - EDB,Enterprise,Forest,forecast_substrateBE_hdd,forest_name,318,target_date,execution_time,30998,2031-02-27,forecast_mean,FULL,GREEN,yes
+F03,HDD - EDB,Consumer,Region,forecast_substrateBE_hdd_region,Key,52,DateTime,ForecastVersion,50,2030-07-16,Value,FULL,GREEN,yes
+F04,HDD - EDB,Consumer,Forest,forecast_substrateBE_hdd,forest_name,318,target_date,execution_time,30998,2031-02-27,forecast_mean,FULL,GREEN,yes
+F05,HDD - Basilisk,Basilisk,Region,forecast_substrateBE_hdd_region,Key,52,DateTime,ForecastVersion,50,2030-07-16,Value,FULL,GREEN,yes
+F06,HDD - Basilisk,Basilisk,Forest,forecast_substrateBE_hdd,forest_name,318,target_date,execution_time,30998,2031-02-27,forecast_mean,FULL,GREEN,yes
+F07,CPU,Consumed,Region,forecast_substrateBE_cpu_region,Key,46,Datetime,ForecastVersion,42,2030-08-27,Value,FULL,GREEN,yes
+F08,CPU,Consumed,Forest,forecast_substrateBE_cpu,Forest_SKU,714,datadate,forecastdate,65,2030-08-27,forecast,FULL,GREEN,yes
+F09,CPU Failover,Failover,Region,forecast_substrateBE_cpu_region,Key,46,Datetime,ForecastVersion,42,2030-08-27,Value,FULL,GREEN,yes
+F10,CPU Failover,Failover,Forest,forecast_substrateBE_cpu,Forest_SKU,714,datadate,forecastdate,65,2030-08-27,forecast,FULL,GREEN,yes
+F11,IOPS,Consumed,Region,forecast_substrateBE_iops_region,Key,46,Datetime,ForecastVersion,37,2030-02-27,Value,FULL,GREEN,yes
+F12,IOPS,Consumed,Forest,forecast_substrateBE_iops,Forest_SKU,552,datadate,forecastdate,43,2030-02-26,forecast,FULL,GREEN,yes
+F13,IOPS Failover,Failover,Region,forecast_substrateBE_iops_region,Key,46,Datetime,ForecastVersion,37,2030-02-27,Value,FULL,GREEN,yes
+F14,IOPS Failover,Failover,Forest,forecast_substrateBE_iops,Forest_SKU,552,datadate,forecastdate,43,2030-02-26,forecast,FULL,GREEN,yes
+F15,SSD - Phoenix,Low Volume No Efficiency,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,Datetime,ForecastVersion,29,2030-07-02,Value,FULL,GREEN,yes
+F16,SSD - Phoenix,Low Volume With Efficiency,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,Datetime,ForecastVersion,29,2030-07-02,Value,FULL,GREEN,yes
+F17,SSD - MCDB,pending definition,Forest,forecast_substrateBE_SSD_TotalForecast,Key,163,Datetime,ForecastVersion,29,2030-07-02,Value,FULL,GREEN,no
+F18,SSD - MCDB,Organic,Forest_SKU,SubstrateBE_Ssd_MCDB_ForecastForestSKU,Key,774,DateTime,ForecastVersion,32,2030-04-29,Value,FULL,GREEN,no
+F19,SSD - Phoenix,Organic Combined,Forest,forecast_substrateBE_SSD_Phoenix_Organic,Forest,149,DateTime,ForecastVersion,3,2030-07-02,Value,FULL,GREEN,no
+F20,Memory,not available,none,NONE,none,0,none,none,0,none,none,OUT_OF_SCOPE,GREY,no

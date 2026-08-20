@@ -1,0 +1,16 @@
+phase,model_name,model_family,fits,passed_fits,failed_fits,rows,runtime_seconds,runtime_minutes,status
+neural,FNAR-V2,lightweight_neural,4915,4915,0,147450,420.526701,7.00877835,PASS
+neural,NLIN-DLIN_FIXED,lightweight_neural,4915,4915,0,147450,7.240546,0.12067576666666667,PASS
+neural,SMLP-TCN,lightweight_neural,4915,4915,0,147450,3.090638,0.05151063333333334,PASS
+non_neural,ARIMA_Fixed,statistical,4915,4915,0,147450,4.779541,0.07965901666666667,PASS
+non_neural,AutoARIMA,statistical,4915,4915,0,147450,2446.414564,40.77357606666667,PASS
+non_neural,ETS Explicit,statistical,4915,4915,0,147450,81.343388,1.3557231333333335,PASS
+non_neural,ETS_Current,statistical,4915,4915,0,147450,5.1223279999999995,0.08537213333333332,PASS
+non_neural,FixedGrowth_1_5,growth_baseline,4915,4915,0,147450,4.314011,0.07190018333333333,PASS
+non_neural,FixedGrowth_3,growth_baseline,4915,4915,0,147450,3.952911,0.06588184999999999,PASS
+non_neural,FixedGrowth_4,growth_baseline,4915,4915,0,147450,3.861587,0.06435978333333334,PASS
+non_neural,FixedGrowth_6,growth_baseline,4915,4915,0,147450,3.817693,0.06362821666666667,PASS
+non_neural,LightGBM,machine_learning,4915,4915,0,147450,127.183273,2.1197212166666666,PASS
+non_neural,LinearRegression,machine_learning,4915,4915,0,147450,6.765072,0.1127512,PASS
+non_neural,Theta,statistical,4915,4915,0,147450,99.249332,1.6541555333333333,PASS
+non_neural,XGBoost,machine_learning,4915,4915,0,147450,246.557517,4.10929195,PASS

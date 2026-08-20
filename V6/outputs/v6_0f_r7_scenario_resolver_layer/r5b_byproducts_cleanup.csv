@@ -1,0 +1,13 @@
+path,size_mb,file_count,reason_for_deletion,reproducible_from,evidence_retained_in,deletion_status,deleted_at
+V6/outputs/v6_0f_r5b_storage_performance_strategy/bench/csv_partitioned,322.81,14,Option B was rejected in R5b: 14 files to keep in sync and no predicate pushdown while still loading whole partitions,V6/outputs/v6_0f_r5b_storage_performance_strategy/bench_storage.R,benchmark_results.csv and storage_options_comparison.csv and storage_sizes.csv,DELETED,2026-08-12T15:37:50
+V6/outputs/v6_0f_r5b_storage_performance_strategy/bench/parquet,183.42,14,Option D was rejected in R5b: string predicates cannot be pushed down so a key filter took 3.174 s versus 0.005 s in DuckDB and the dataset was 8x larger,V6/outputs/v6_0f_r5b_storage_performance_strategy/bench_storage.R,benchmark_results.csv and storage_options_comparison.csv and storage_sizes.csv,DELETED,2026-08-12T15:37:50
+KEPT: benchmark_results.csv,0.003,1,Measured evidence for all five options,not applicable,itself,KEPT,
+KEPT: storage_options_comparison.csv,0.001,1,Comparison table behind the recommendation,not applicable,itself,KEPT,
+KEPT: storage_sizes.csv,0.0001,1,Disk footprint per option,not applicable,itself,KEPT,
+KEPT: bench_storage.R,0.013,1,Reproduces every rejected store on demand,not applicable,itself,KEPT,
+KEPT: diag_keys.R,0.001,1,Reproduces the key casing diagnosis,not applicable,itself,KEPT,
+KEPT: recommended_storage_architecture.md,0.005,1,Architecture decision record,not applicable,itself,KEPT,
+KEPT: bench/ui_metadata,0.05,4,Benchmark copy of the metadata slices,bench_storage.R,itself,KEPT,
+KEPT: bench/r6_phase1.duckdb,23.51,1,Benchmark copy of the recommended store,bench_storage.R,itself,KEPT,
+KEPT: V6/data/storage/r6_phase1.duckdb,25.76,1,Production store built in R7,build_storage.R,itself,KEPT,
+KEPT: V6/data/storage/ui_metadata,0.06,5,Production metadata slices built in R7,build_storage.R,itself,KEPT,

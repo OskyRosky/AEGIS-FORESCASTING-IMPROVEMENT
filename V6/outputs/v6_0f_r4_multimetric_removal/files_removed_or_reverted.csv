@@ -1,0 +1,9 @@
+file,action,reason,backup_location,lines_changed,status
+V6/shiny_app/global.R,reverted,Removed the V6.0F source() of multi_metric_loader.R and multi_metric_server.R and the mm_init() call,git HEAD,-7,DONE
+V6/shiny_app/server/server.R,reverted,Removed the multi_metric_server() call and the llm_explain_server("llm_multi_metric") registration,git HEAD,-6,DONE
+V6/shiny_app/ui/body.R,reverted,Removed the source() of ui/tabs_multi_metric.R,git HEAD,-1,DONE
+V6/shiny_app/ui/sidebar.R,reverted,Removed the Multi-Metric menu entry from the Forecasting group,git HEAD,-1,DONE
+V6/shiny_app/ui/tabs.R,reverted,Removed section_multi_metric() from app_sections(),git HEAD,-1,DONE
+V6/shiny_app/R/multi_metric_loader.R,deleted,Loader for the rejected Multi-Metric section,V6/outputs/v6_0f_r4_multimetric_removal/reverted_files_backup/,file removed,DONE
+V6/shiny_app/server/multi_metric_server.R,deleted,Server module for the rejected Multi-Metric section,V6/outputs/v6_0f_r4_multimetric_removal/reverted_files_backup/,file removed,DONE
+V6/shiny_app/ui/tabs_multi_metric.R,deleted,UI section for the rejected Multi-Metric section,V6/outputs/v6_0f_r4_multimetric_removal/reverted_files_backup/,file removed,DONE

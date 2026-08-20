@@ -1,0 +1,9 @@
+metric,scenario,granularity,expected_keys,status,reason,required_next_action
+CPU,Consumed,Region,46,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+CPU,Consumed,Forest,714,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+CPU Failover,Failover,Region,46,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+CPU Failover,Failover,Forest,714,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+IOPS,Consumed,Region,46,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+IOPS,Consumed,Forest,552,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+IOPS Failover,Failover,Region,46,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data
+IOPS Failover,Failover,Forest,552,BLOCKED_NOT_AVAILABLE,No governed productive Forecast artifact exists locally,Authorize a separate governed read-only extraction stage; do not fabricate data

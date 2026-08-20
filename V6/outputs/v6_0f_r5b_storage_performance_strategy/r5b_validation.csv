@@ -1,0 +1,25 @@
+check_id,check,expected,observed,result
+R5BV01,No Shiny changes,0,0 changes in V6/shiny_app,PASS
+R5BV02,No Tesseract re-extraction,0 queries,0 queries; only R6 artifacts were read,PASS
+R5BV03,No SQL writes to Tesseract,0,0,PASS
+R5BV04,R6 source artifacts unmodified,unchanged,all three CSV files unchanged; opened read-only,PASS
+R5BV05,No Docker action,none,none,PASS
+R5BV06,No Azure action,none,none,PASS
+R5BV07,No V1 to V5 changes,0,0,PASS
+R5BV08,Assistant and LLM untouched,unchanged,evidence pack hash A4DB09B4 unchanged,PASS
+R5BV09,CSV baseline measured,measured,421.34 MB; 0.69 s load; 155.9 MB in session,PASS
+R5BV10,At least one performant strategy evaluated,>=1,DuckDB measured at 23.51 MB and 0.002 to 0.008 s per query,PASS
+R5BV11,All five options considered,5,A CSV / B partitioned CSV / C DuckDB / D Parquet / E metadata slices,PASS
+R5BV12,All 8 mandatory benchmarks executed,8,B1 to B8 executed on CSV DuckDB and Parquet,PASS
+R5BV13,Dropdown metadata strategy defined,defined,4 slices totalling 0.05 MB loading in under 0.01 s,PASS
+R5BV14,Shiny does not need 421 MB in memory,confirmed,recommended path holds 0 MB of fact data in session,PASS
+R5BV15,Recommendation supports R7,yes,shiny_loading_contract.csv defines every read for both pages,PASS
+R5BV16,Recommendation supports R6 Phase 2,yes,projected 95 to 115 MB combined database; no architecture change needed,PASS
+R5BV17,Lineage preserved,preserved,extraction_run_id on every row plus manifest and lineage retained,PASS
+R5BV18,No simulated data created,none,all benchmark data derives from R6 artifacts,PASS
+R5BV19,No zero filling,none,none,PASS
+R5BV20,Parquet evaluated rather than assumed,measured,183.42 MB and up to 3.174 s per key filter; rejected on evidence,PASS
+R5BV21,Memory footprint quantified per option,quantified,CSV 155.9 MB vs DuckDB approximately 0 MB,PASS
+R5BV22,Key casing discrepancy detected,detected,Basilisk stores namprd07 lowercase while EDB stores NAMPRD07; logged as RB1,PASS_FINDING
+R5BV23,Required R dependencies identified,identified,duckdb and DBI required; arrow not required,PASS
+R5BV24,Not advanced to R7 R8 R9 R9b R9c R10 G1 G2 or R6 Phase 2,no work started,no work started,PASS

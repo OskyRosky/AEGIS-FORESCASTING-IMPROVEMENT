@@ -1,0 +1,24 @@
+metric,scenario_ui_label,granularity,status,page,resolved_table,expected_mode,badge,has_actuals,has_forecast,key_column_in_storage,version_filter_applies,model_filter_applies,notes
+HDD - EDB,Enterprise,Region,AVAILABLE,viewer,viewer_hdd,FULL,GREEN,yes,yes,key + key_lower,no,yes,Viewer table has no version column
+HDD - EDB,Enterprise,Region,AVAILABLE,forecast,forecast_hdd,FORECAST_ONLY,GREEN,no,yes,key + key_lower,yes,yes,3 forecast versions
+HDD - EDB,Enterprise,Forest,AVAILABLE,viewer,viewer_hdd,FULL,GREEN,yes,yes,key + key_lower,no,yes,25 model types across 4 families
+HDD - EDB,Enterprise,Forest,AVAILABLE,forecast,forecast_hdd,FORECAST_ONLY,GREEN,no,yes,key + key_lower,yes,yes,Single run per scenario per R5
+HDD - EDB,Consumer,Region,AVAILABLE,viewer,viewer_hdd,FULL,GREEN,yes,yes,key + key_lower,no,yes,
+HDD - EDB,Consumer,Region,AVAILABLE,forecast,forecast_hdd,FORECAST_ONLY,GREEN,no,yes,key + key_lower,yes,yes,
+HDD - EDB,Consumer,Forest,AVAILABLE,viewer,viewer_hdd,FULL,GREEN,yes,yes,key + key_lower,no,yes,
+HDD - EDB,Consumer,Forest,AVAILABLE,forecast,forecast_hdd,FORECAST_ONLY,GREEN,no,yes,key + key_lower,yes,yes,
+HDD - Basilisk,Basilisk,Region,AVAILABLE,viewer,viewer_hdd,FULL,GREEN,yes,yes,key + key_lower,no,yes,
+HDD - Basilisk,Basilisk,Region,AVAILABLE,forecast,forecast_hdd,FORECAST_ONLY,GREEN,no,yes,key + key_lower,yes,yes,Single version only
+HDD - Basilisk,Basilisk,Forest,AVAILABLE,viewer,viewer_hdd,FULL,GREEN,yes,yes,key + key_lower,no,yes,Keys stored lowercase and short
+HDD - Basilisk,Basilisk,Forest,AVAILABLE,forecast,forecast_hdd,FORECAST_ONLY,GREEN,no,yes,key + key_lower,yes,yes,Only 2 model types available
+SSD - Phoenix,Low Volume No Efficiency,Forest,AVAILABLE,viewer,forecast_ssd,FORECAST_ONLY,AMBER,no,yes,key + key_lower,yes,no,Viewer renders the forecast series only
+SSD - Phoenix,Low Volume No Efficiency,Forest,AVAILABLE,forecast,forecast_ssd,FORECAST_ONLY,AMBER,no,yes,key + key_lower,yes,no,No model dimension
+SSD - Phoenix,Low Volume With Efficiency,Forest,AVAILABLE,viewer,forecast_ssd,FORECAST_ONLY,AMBER,no,yes,key + key_lower,yes,no,Viewer renders the forecast series only
+SSD - Phoenix,Low Volume With Efficiency,Forest,AVAILABLE,forecast,forecast_ssd,FORECAST_ONLY,AMBER,no,yes,key + key_lower,yes,no,No model dimension
+Memory,not available,none,OUT_OF_SCOPE,both,none,NOT_RENDERABLE,GREY,no,no,none,no,no,No populated forecast source in Tesseract (D1)
+SSD - Phoenix,22 other scenarios,Forest,NOT_EXPOSED,both,none,NOT_RENDERABLE,GREY,no,yes,none,no,no,Documented in R1 but not exposed in the first release (D2)
+CPU,Consumed,Region and Forest,NOT_AVAILABLE_IN_PHASE1,both,none,NOT_RENDERABLE,AMBER,no,yes,none,no,no,Scheduled for R6 Phase 2
+CPU Failover,Failover,Region and Forest,NOT_AVAILABLE_IN_PHASE1,both,none,NOT_RENDERABLE,AMBER,no,yes,none,no,no,Scheduled for R6 Phase 2
+IOPS,Consumed,Region and Forest,NOT_AVAILABLE_IN_PHASE1,both,none,NOT_RENDERABLE,AMBER,no,yes,none,no,no,Scheduled for R6 Phase 2
+IOPS Failover,Failover,Region and Forest,NOT_AVAILABLE_IN_PHASE1,both,none,NOT_RENDERABLE,AMBER,no,yes,none,no,no,Scheduled for R6 Phase 2
+SSD - MCDB,pending definition,Forest,BLOCKED_O1,both,none,NOT_RENDERABLE,GREY,no,yes,none,no,no,Scenario mapping ambiguous; blocked by O1

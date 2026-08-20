@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "rows": 818980,
+  "actual_rows": 163108,
+  "forecast_rows": 655872,
+  "key_combinations": 896,
+  "viewer_actual_revision_conflicts_reconciled": 1772,
+  "reconciliation": "median of observed governed revisions at key/date grain",
+  "metrics": [
+    "HDD - Basilisk",
+    "HDD - EDB",
+    "SSD - Phoenix"
+  ],
+  "completed_at": "2026-08-14T22:24:23.134898+00:00",
+  "runtime_seconds": 12.902,
+  "models_run": false,
+  "tesseract_accessed": false,
+  "cpu_iops_fabricated": false
+}

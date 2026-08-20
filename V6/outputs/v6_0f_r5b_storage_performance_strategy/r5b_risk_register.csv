@@ -1,0 +1,11 @@
+risk_id,risk,severity,mitigation,blocks_stage,status
+RB1,Basilisk uses lowercase short forest keys (namprd07 apcprd01) while EDB uses uppercase (NAMPRD07); the same forest appears under two namespaces in the same table,HIGH,The resolver must match keys case-insensitively and the Key dropdown must be scoped per scenario; raw values stay untouched,R7,OPEN
+RB2,duckdb arrow and DBI were not installed in the R environment and had to be added,MEDIUM,Record duckdb and DBI as required dependencies; arrow can be dropped since Parquet was rejected,R7 and Docker,RESOLVED_LOCALLY
+RB3,Shiny holding 155.9 MB per session with plain CSV does not scale with concurrent users,HIGH,DuckDB removes the in-session footprint entirely,R7,MITIGATED_BY_RECOMMENDATION
+RB4,Parquet string predicates cannot be pushed down so key filters take about 3 seconds,MEDIUM,Parquet rejected; DuckDB answers the same query in 0.005 s,none,CLOSED
+RB5,The DuckDB file must be rebuilt whenever R6 re-extracts,MEDIUM,Add a build step that regenerates the database from the R6 CSV artifacts and records the run id,R7,OPEN
+RB6,Phase 2 (CPU and IOPS) adds approximately 6.02M rows,MEDIUM,DuckDB scaled from 2.03M rows to 23.5 MB; phase 2 is projected near 90 MB which remains viable,R6 Phase 2,MITIGATED
+RB7,Benchmark byproducts occupy about 506 MB on disk (partitioned CSV and Parquet),LOW,Both are reproducible from bench_storage.R and may be deleted after review,none,OPEN
+RB8,DuckDB stores extensions in a temp directory by default,LOW,Connect with shared_home = FALSE as done in the benchmark; no extension is required for these queries,R7,RESOLVED
+RB9,Basilisk carries only two model types (actual and FixedGrowth1.5%),MEDIUM,The Model selector must render honestly rather than appear broken,R8,OPEN
+RB10,The three source CSV files remain on disk at 421 MB but must never be read by Shiny,LOW,shiny_loading_contract.csv lists them under must_not_read,R7,DEFINED

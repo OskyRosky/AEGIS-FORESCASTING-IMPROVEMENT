@@ -1,0 +1,25 @@
+row,metric,db_type,scenario,granularity,table_name,updated_in_earth
+1,HDD,EDB,Enterprise,Region,forecast_substrateBE_hdd_region,yes
+2,HDD,EDB,Enterprise,Forest,forecast_substrateBE_hdd,yes
+3,HDD,EDB,Consumer,Region,forecast_substrateBE_hdd_region,yes
+4,HDD,EDB,Consumer,Forest,forecast_substrateBE_hdd,yes
+5,CPU,Total (phx and nonphx),Consumed,Region,forecast_substrateBE_cpu_region,yes
+6,CPU,Phoenix,Consumed,Region,forecast_substrateBE_cpu_byDB_region,yes
+7,CPU,NonPhoenix,Consumed,Region,forecast_substrateBE_cpu_byDB_region,yes
+8,CPU,Total (phx and nonphx),Consumed,Forest,forecast_substrateBE_cpu,yes
+9,CPU,Phoenix,Consumed,Forest,forecast_substrateBE_cpu_byDB_forest,yes
+10,CPU,NonPhoenix,Consumed,Forest,forecast_substrateBE_cpu_byDB_forest,yes
+11,CPU,Total (phx and nonphx),Failover,Region,forecast_substrateBE_cpu_region,yes
+12,CPU,Phoenix,Failover,Region,forecast_substrateBE_cpu_byDB_region,yes
+13,CPU,NonPhoenix,Failover,Region,forecast_substrateBE_cpu_byDB_region,yes
+14,CPU,Total (phx and nonphx),Failover,Forest,forecast_substrateBE_cpu,yes
+15,CPU,Phoenix,Failover,Forest,forecast_substrateBE_cpu_byDB_forest,yes
+16,CPU,NonPhoenix,Failover,Forest,forecast_substrateBE_cpu_byDB_forest,yes
+17,IOPS,N/A,Consumed,Region,forecast_substrateBE_iops_region,yes
+18,IOPS,N/A,Consumed,Forest,forecast_substrateBE_iops,yes
+19,IOPS,N/A,Failover,Region,forecast_substrateBE_iops_region,yes
+20,IOPS,N/A,Failover,Forest,forecast_substrateBE_iops,yes
+21,SSD,MCDB(Total),N/A,Forest,forecast_substrateBE_SSD_TotalForecast,no
+22,SSD,PHX(Total),N/A,Forest,forecast_substrateBE_SSD_TotalForecast,no
+23,SSD,MCDB(Organic),N/A,Forest,SubstrateBE_Ssd_MCDB_ForecastForestSKU,no
+24,SSD,PHX(Organic),N/A,Forest,forecast_substrateBE_SSD_Phoenix_Organic,no

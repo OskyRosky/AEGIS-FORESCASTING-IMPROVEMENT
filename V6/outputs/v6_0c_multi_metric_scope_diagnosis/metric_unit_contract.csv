@@ -1,0 +1,11 @@
+metric_id,db_type,unit,unit_status,can_aggregate_raw_values,can_compare_normalized_scores,notes
+hdd_edb,EDB,UNKNOWN,PENDING_D5,within_same_metric_and_granularity_only,yes,Storage magnitude. The data dictionary does not document the unit so TB or PB must not be assumed. Region and forest values must never be summed together because forest keys roll up differently.
+ssd_phoenix,lv_with_efficiency,UNKNOWN,PENDING_D5,within_same_db_type_only,yes,Stakeholder statement suggests PB but this is unverified. LVWE and LVNE are different efficiency treatments of the same fleet so their raw values must never be summed or averaged together.
+ssd_phoenix,lv_no_efficiency,UNKNOWN,PENDING_D5,within_same_db_type_only,yes,Same magnitude family as LVWE but a distinct series. Comparison is only meaningful side by side never blended.
+ssd_phoenix,phx_total,UNKNOWN,PENDING_D5_D2,no,unknown,Source not located. Whether Total is a sum of Organic plus other components is undecided which makes any aggregation unsafe.
+ssd_phoenix,phx_organic,UNKNOWN,PENDING_D5_D2,no,unknown,Source not located.
+ssd_mcdb,mcdb_total,UNKNOWN,PENDING_D5_D10,no,unknown,Possibly shares a physical table with SSD-Phoenix Total. Until a discriminator column is confirmed no aggregation is valid.
+ssd_mcdb,mcdb_organic,UNKNOWN,PENDING_D5,no,unknown,Source not located. SKU grain may require a different aggregation rule.
+cpu,PENDING_CONFIRMATION,UNKNOWN,PENDING_D5_D3,no,unknown,Stakeholders state GCycles. CPU is a throughput measure and is not additive with storage under any circumstance.
+iops,PENDING_CONFIRMATION,UNKNOWN,PENDING_D5,no,unknown,Rate measure. Not additive with storage or CPU. Deferred.
+CROSS_METRIC,ALL,MIXED,RULE,no,conditional,Hard rule. Raw business values must never be aggregated across metric_id. Only normalized scores such as MAPE SMAPE Bias_Pct and Accuracy may be compared and only when methodology horizon window and coverage are equivalent.

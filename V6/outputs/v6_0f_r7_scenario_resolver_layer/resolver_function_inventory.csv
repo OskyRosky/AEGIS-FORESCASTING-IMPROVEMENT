@@ -1,0 +1,14 @@
+function,signature,purpose,reads_from,returns,loads_fact_data,status
+sr_root,sr_root(start = getwd()),Walk up from the working directory to the folder containing data/storage,filesystem,character path,no,IMPLEMENTED
+sr_paths,sr_paths(),Resolve the DuckDB path and the metadata folder,filesystem,list of paths,no,IMPLEMENTED
+sr_storage_ready,sr_storage_ready(),Report whether the DuckDB file and metadata folder exist,filesystem,logical,no,IMPLEMENTED
+sr_reset_cache,sr_reset_cache(),Clear the cached metadata slices,internal env,invisible TRUE,no,IMPLEMENTED
+get_available_metrics,get_available_metrics(),List metrics offered in the Metric dropdown,available_scenarios.csv,character vector,no,IMPLEMENTED
+get_available_scenarios,get_available_scenarios(metric),List scenarios valid for the chosen metric,available_scenarios.csv,character vector,no,IMPLEMENTED
+get_available_granularities,get_available_granularities(metric scenario),List Region and Forest where data exists,available_scenarios.csv,character vector ordered Region then Forest,no,IMPLEMENTED
+get_available_keys,get_available_keys(metric scenario granularity),List keys scoped by scenario and granularity preserving the stored casing,available_keys.csv,character vector,no,IMPLEMENTED
+get_available_versions,get_available_versions(metric scenario granularity key = NULL),List forecast versions and flag the single version case,available_versions.csv,list with versions count single_version applies note,no,IMPLEMENTED
+get_available_model_types,get_available_model_types(metric scenario granularity),List model types grouped by family or report that no selector applies,available_model_types.csv,list with applies model_types families by_family note,no,IMPLEMENTED
+resolve_series_query,resolve_series_query(metric scenario granularity key version model_type page),Translate a UI selection into a physical DuckDB query or a blocked status,scenario_registry.csv,list with status storage_type duckdb_path table_name filters query_sql query_params expected_mode has_actuals has_forecast badge notes,no,IMPLEMENTED
+fetch_series_preview,fetch_series_preview(... page limit = 100),Execute the resolved query read-only and return the filtered series,DuckDB,list with resolution rows elapsed data,query only,IMPLEMENTED
+fetch_series_count,fetch_series_count(... page),Return the row count for a resolved query without materialising the rows,DuckDB,list with resolution rows elapsed,query only,IMPLEMENTED

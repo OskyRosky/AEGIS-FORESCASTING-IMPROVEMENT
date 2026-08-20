@@ -2,6 +2,10 @@
 
 app_server <- function(input, output, session) {
 
+  viewer_pilot_server(input, output, session)
+  forecast_pilot_server(input, output, session)
+
+  if (FALSE) {
   # --- Forecast Viewer SECTION 1 : BACKTEST COMPARISON (full artifact) ------
   # Read-only reactivity: filters / reshapes existing rows from the Stage 05H
   # FULL artifact (forecast_viewer_model_outputs.csv) for charting only.
@@ -127,6 +131,9 @@ app_server <- function(input, output, session) {
     )
   })
 
+  }
+
+  if (FALSE) {
   # --- Forecast Viewer SECTION 2 : FORWARD FORECAST ------------------------
   # Read-only: observed actuals (actuals.csv) + forward production forecast
   # (forecasts.csv). Single model_version per series, no multi-model picker,
@@ -235,6 +242,8 @@ app_server <- function(input, output, session) {
                "No forward forecast rows were found after the last actual date for this series.")
     )
   })
+
+  }
 
   # ==========================================================================
   # ACCURACY PAGE MVP (acc_*) -- heatmap-first backtest diagnostics.
@@ -501,9 +510,12 @@ app_server <- function(input, output, session) {
   outputOptions(output, "fvp_model_groups", suspendWhenHidden = FALSE)
   outputOptions(output, "fvp_model_count",  suspendWhenHidden = FALSE)
   outputOptions(output, "fvp_notes",        suspendWhenHidden = FALSE)
-  outputOptions(output, "fvf_chart",        suspendWhenHidden = FALSE)
-  outputOptions(output, "fvf_model_note",   suspendWhenHidden = FALSE)
-  outputOptions(output, "fvf_notes",        suspendWhenHidden = FALSE)
+  outputOptions(output, "fvp_availability",         suspendWhenHidden = FALSE)
+  outputOptions(output, "fvp_download_ui",          suspendWhenHidden = FALSE)
+  outputOptions(output, "ffp_case_status",         suspendWhenHidden = FALSE)
+  outputOptions(output, "ffp_history_control",     suspendWhenHidden = FALSE)
+  outputOptions(output, "ffp_chart",               suspendWhenHidden = FALSE)
+  outputOptions(output, "ffp_notes",               suspendWhenHidden = FALSE)
   outputOptions(output, "acc_summary_cards", suspendWhenHidden = FALSE)
   outputOptions(output, "acc_heatmap",       suspendWhenHidden = FALSE)
   outputOptions(output, "acc_table",         suspendWhenHidden = FALSE)

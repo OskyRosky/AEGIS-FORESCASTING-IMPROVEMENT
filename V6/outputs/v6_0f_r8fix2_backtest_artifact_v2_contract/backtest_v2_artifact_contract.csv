@@ -1,0 +1,26 @@
+column_name,data_type,required,source,description,validation_rule
+metric,character,TRUE,R6 Phase 1 viewer scope,Product metric represented by the backtest row,Must be HDD - EDB or HDD - Basilisk; SSD-Phoenix is not eligible
+scenario,character,TRUE,R6 Phase 1 viewer scope,Scenario represented by the backtest row,Must be Enterprise or Consumer for HDD - EDB and Basilisk for HDD - Basilisk
+granularity,character,TRUE,R6 Phase 1 viewer scope,Region or Forest grain of the series,Must be Region or Forest and must match the governed source combination
+series_key,character,TRUE,R6 Phase 1 actual series,Raw key identifying the series,Must be nonblank; raw casing is preserved and matching is case-insensitive
+series_label,character,TRUE,Derived from series_key,Display label for the series,Must be nonblank and map one-to-one to series_key within a metric/scenario/granularity combination
+date,Date,TRUE,R6 Phase 1 actual series,Target date for the actual and forecast point; supports History Window filtering,Must parse as ISO date and fall inside the governed actual window for the combination
+actual_value,numeric,TRUE,R6 Phase 1 actual series,Observed actual paired with the model forecast,Must be finite observed data; never simulated padded zero-filled or model-derived
+model_name,character,TRUE,AEGIS backtest execution,One of the 15 authorized AEGIS models,Must match exactly one model_name in backtest_v2_model_contract.csv with include_in_viewer TRUE
+model_origin,character,TRUE,AEGIS model registry,Model role in the governed comparison,Must be baseline or challenger and agree with the model contract
+model_family,character,TRUE,AEGIS model registry,Viewer grouping for model selection,Must be growth_baseline statistical machine_learning or lightweight_neural and agree with the model contract
+forecast_value,numeric,TRUE,AEGIS backtest execution,Point forecast generated at the rolling origin,Must be finite and must originate from an authorized model run
+forecast_type,character,TRUE,Constant contract value,Distinguishes historical evaluation from production forecasts,Must equal backtest for every row
+horizon_days,integer,TRUE,AEGIS backtest execution,Forecast horizon from the rolling origin to the target date,Must be an integer from 1 through 30 and equal date minus forecast_start_date
+forecast_start_date,Date,TRUE,AEGIS backtest execution,Rolling-origin date used to generate the forecast,Must parse as ISO date and precede date by horizon_days
+run_id,character,TRUE,AEGIS backtest execution,Unique identifier for the model execution batch,Must be nonblank and trace to an authorized R8-FIX-3 run manifest
+source_artifact,character,TRUE,AEGIS backtest execution,Provenance path of the generated or legacy source artifact,Must be nonblank and resolve to a governed artifact recorded in the assembly manifest
+is_baseline,logical,TRUE,AEGIS model registry,Marks baseline models,Must be TRUE exactly for models classified as baseline
+is_challenger,logical,TRUE,AEGIS model registry,Marks challenger models,Must be TRUE exactly for models classified as challenger
+is_deferred,logical,TRUE,AEGIS model registry,Records whether the model result is governed as deferred,Must be TRUE or FALSE and must not be used to hide a missing model result
+is_selected_champion,logical,TRUE,Backtest evaluation,Marks the selected champion for the represented combination,Must be recomputed per metric/scenario/granularity scope and never copied from another scope
+risk_status,character,TRUE,Backtest evaluation,Governed model risk or decision status,Must use the existing governed vocabulary and must be nonblank
+lower_bound,numeric,FALSE,AEGIS backtest execution,Optional lower prediction interval,May be blank; when populated it must be less than or equal to forecast_value
+upper_bound,numeric,FALSE,AEGIS backtest execution,Optional upper prediction interval,May be blank; when populated it must be greater than or equal to forecast_value
+interval_level,numeric,FALSE,AEGIS backtest execution,Optional prediction interval confidence level,May be blank; when populated it must be between 0 and 1 and both bounds must be populated
+extraction_run_id,character,TRUE,R6 Phase 1 governed extraction,Links the actual value to its governed extraction,Must be nonblank and reconcile to the R6 extraction lineage for the actual row

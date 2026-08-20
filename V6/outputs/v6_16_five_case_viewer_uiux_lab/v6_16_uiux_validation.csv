@@ -1,0 +1,28 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V616-001,Selected pilot cases,"Exactly 5 governed HDD cases with actuals","5 selected cases; all have actuals",PASS,TRUE
+V616-002,Pilot artifact contract,"Backtest v2 contract with 25 columns","25 columns present",PASS,TRUE
+V616-003,Pilot artifact rows,"5 cases x 3 origins x 15 models x 30 horizons = 6750 rows","6750 rows",PASS,TRUE
+V616-004,Verified model universe,"Exactly 15 models; no 16th model","15 distinct models",PASS,TRUE
+V616-005,Horizon coverage,"Prepared horizons 1 through 30","30 distinct horizons; minimum 1 and maximum 30",PASS,TRUE
+V616-006,Origin coverage,"3 origins per selected case","3 origins per case",PASS,TRUE
+V616-007,Actual values,"Actuals present for all five cases","Actual values present for all rows and cases",PASS,TRUE
+V616-008,Bounded model execution,"No failed pilot model runs","0 model failures in pilot run log",PASS,TRUE
+V616-009,Shiny startup,"Application sources and starts without an R error","R source validation passed; app listening on port 8081",PASS,TRUE
+V616-010,HTTP response,"Local app returns HTTP 200","HTTP 200",PASS,TRUE
+V616-011,Viewer load,"Forecast Viewer page loads","Viewer loaded in browser",PASS,TRUE
+V616-012,Unified setup panel,"One panel with Metric through Analyze Backtest","Single eight-step Set up the backtest view panel visible",PASS,TRUE
+V616-013,Scenario Explorer removal,"No Scenario Explorer","Text and control absent",PASS,TRUE
+V616-014,Multi-Metric removal,"No Multi-Metric tab or control","Text and control absent",PASS,TRUE
+V616-015,Forecast Version removal,"No Forecast Version in Viewer","Text and control absent",PASS,TRUE
+V616-016,Cascade behavior,"Metric, Scenario, Granularity, and Key/Series cascade correctly","All five selected combinations resolved to their prepared key",PASS,TRUE
+V616-017,Unavailable combination,"Non-pilot combinations show a clear limit message","Basilisk / Region shows Backtest not available for this pilot",PASS,TRUE
+V616-018,Model controls,"All 15 verified models are selectable and grouped by family","15 model checkboxes across four families",PASS,TRUE
+V616-019,Horizon behavior,"Horizon changes the analyzed prepared rows","Horizon 10 selected and reflected in chart and notes",PASS,TRUE
+V616-020,Backtest chart,"Chart renders Actual against selected model forecasts","Actual plus 6 selected model series rendered for P05",PASS,TRUE
+V616-021,Data notes,"Notes show all required setup and coverage fields","Metric, scenario, granularity, key, horizon, models, actual points, forecast points, and date range shown",PASS,TRUE
+V616-022,Prepared download source,"Download uses the pilot artifact only","Download handler filters the cached pilot CSV only",PASS,TRUE
+V616-023,No Shiny data cooking,"Shiny does not train, backtest, extract, or persist source data","Provider performs read-only load, filter, summary, render, and user download",PASS,TRUE
+V616-024,Full-run guardrail,"No 557-key or 596-key full run started","Pilot summary records full_557_key_run_started=false",PASS,TRUE
+V616-025,Tesseract guardrail,"No Tesseract extraction","Pilot summary records tesseract_accessed=false",PASS,TRUE
+V616-026,Scenario resolver isolation,"scenario_resolver.R remains unwired","V6.16 uses viewer_pilot.R; scenario_resolver.R is not sourced",PASS,TRUE
+V616-027,Scope governance,"No V1-V5, Docker, Azure, Forecast redesign, or Assistant/LLM change","V6.16 changes are limited to pilot outputs and Viewer compatibility wiring",PASS,TRUE

@@ -1,0 +1,26 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"V621AFIX-000","History depth before remediation","Exactly one new unpushed commit","THREE unpushed commits above origin/main: cae6955, 8cafcd2, 0a53d4b","DEVIATION_HANDLED",FALSE
+"V621AFIX-001","Nothing pushed to remote","origin/main unchanged","origin/main at 3d94b06; 3 commits ahead before remediation","PASS",FALSE
+"V621AFIX-002","Backup reference created before reset","Old history preserved","Branch v6_21a_pre_remediation and tag v6_21a_pre_remediation_tag point at 0a53d4b","PASS",FALSE
+"V621AFIX-003","Reset type","Only --soft, never --hard","git reset --soft 3d94b06 followed by git reset to clear the index","PASS",FALSE
+"V621AFIX-004","Reset target","Undo all unpushed commits","Reset to origin/main tip 3d94b06 instead of HEAD~1, because three commits existed","DEVIATION_HANDLED",FALSE
+"V621AFIX-005",".gitignore extended, not replaced","Existing rules preserved","5 original rules kept; 9 new patterns appended","PASS",FALSE
+"V621AFIX-006","4a No file over 25 MB added by this commit","None","0 of the 294 changed files exceeds 25 MB","PASS",FALSE
+"V621AFIX-007","4a Pre-existing oversized blobs in HEAD","Reported","7 blobs between 45 MB and 66 MB, all already present in origin/main before this work","REPORTED_PRE_EXISTING",FALSE
+"V621AFIX-008","4b Viewer Parquet committed","forecast_viewer_model_outputs_v2_full.parquet present","Present, 14280896 bytes","PASS",FALSE
+"V621AFIX-009","4b Forecast Parquet committed","forecast_forward_outputs_v6_17_full.parquet present","Present, 6210430 bytes","PASS",FALSE
+"V621AFIX-010","4c Six rejected files absent from the new commit","0 of 6 present","0 of 6 present","PASS",FALSE
+"V621AFIX-011","4c Six rejected files ignored by .gitignore","All 6 ignored","All 6 confirmed ignored by git check-ignore","PASS",FALSE
+"V621AFIX-012","4d Six rejected files still on disk","All 6 present and unchanged","All 6 present with original sizes, pre-session timestamps and readable first lines","PASS",FALSE
+"V621AFIX-013","4d No file deleted from disk","Zero deletions","No delete operation was executed at any point","PASS",FALSE
+"V621AFIX-014","4e Nothing outside V6 staged or committed","0","0 paths outside V6 in the diff between 3d94b06 and HEAD","PASS",FALSE
+"V621AFIX-015","4f V6.19 governance artifacts committed","10 files","10 files","PASS",FALSE
+"V621AFIX-016","4f V6.20 governance artifacts committed","11 files","11 files","PASS",FALSE
+"V621AFIX-017","Broad staging commands avoided","No git add . or -A or --all","Only git add -- V6/ as prescribed","PASS",FALSE
+"V621AFIX-018","Git LFS not used","Not used","Not used","PASS",FALSE
+"V621AFIX-019","Single unpushed commit after remediation","1","1","PASS",FALSE
+"V621AFIX-020","Bundle refreshed outside OneDrive","Created and verified","214678700 bytes; the bundle records a complete history","PASS",FALSE
+"V621AFIX-021","Push status","Not pushed","Not pushed; ready for Oscar","PASS",FALSE
+"V621AFIX-022","Non-V6 root files after remediation","Returned to uncommitted state","2 modified and 2 untracked, including the Master Catalog folder","REPORTED",FALSE
+"V621AFIX-023","No model, SQL or Tesseract execution","None","None","PASS",FALSE
+"V621AFIX-024","V6/data/processed still unprotected","Reported","24 files and about 138 MiB remain ignored","REPORTED",TRUE

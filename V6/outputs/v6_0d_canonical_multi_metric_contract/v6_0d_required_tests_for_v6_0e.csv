@@ -1,0 +1,36 @@
+test_id,test_name,area,purpose,method,expected_result,blocks_v6_0e,status
+T01,registry_drives_the_build,architecture,Prove no metric name is hardcoded in the builder,Static scan of the V6.0E modules for literal table names metric names and scenario strings outside the registry,Zero literals outside the registry and its loader,yes,REQUIRED
+T02,normalized_schema_valid,schema,Prove the normalized artifact matches the canonical contract,Compare the header against canonical_metric_columns.csv and type check each column,All 44 columns present in order with valid types,yes,REQUIRED
+T03,no_blank_scenario,contract,Prove scenario is never blank or null,Assert on the scenario column,Zero blank or null values,yes,REQUIRED
+T04,scenario_not_applicable_accepted,contract,Prove sources without a scenario column are accepted,Build from the four metrics tables,All rows carry scenario=not_applicable and scenario_status=not_applicable with no error,yes,REQUIRED
+T05,no_inherited_scenario,contract,Prove Enterprise is never defaulted onto a source lacking the column,Assert scenario=Enterprise only where the source physically has a Scenario column,Zero violations,yes,REQUIRED
+T06,legacy_files_unchanged,regression,Prove every frozen artifact is byte identical,Rehash the 14 entries of hdd_baseline_freeze.csv,All hashes match the freeze,yes,REQUIRED
+T07,lvwe_lvne_isolation,isolation,Prove SSD variants never merge,Assert source_object_count equals one for every ranking row unless merge_sources_allowed is true,Zero blended ranking rows where the legacy build produced 137,yes,REQUIRED
+T08,region_forest_isolation,isolation,Prove granularities never merge,Assert every ranking group resolves to a single key_namespace,Zero groups spanning namespaces,yes,REQUIRED
+T09,no_cross_unit_aggregation,units,Prove units never mix inside a group,Assert exactly one distinct unit per ranking group,Zero groups with more than one unit,yes,REQUIRED
+T10,ranking_key_uniqueness,ranking,Prove the identity tuple is a true key,Assert uniqueness on the six part tuple,Zero duplicate tuples,yes,REQUIRED
+T11,availability_gate_respected,contract,Prove rows are only emitted for available sources,Assert availability_status of every emitted row,Only local_ingested or partially_available appear,yes,REQUIRED
+T12,single_version_not_marked_as_drift,contract,Prove one version never yields drift,Assert drift_computable and cross_plan_computable for single version sources,Both false and status equals single_version_accuracy_only,yes,REQUIRED
+T13,filter_options_from_artifacts,shiny_readiness,Prove options are data driven,Assert every option in metric_filter_options.csv resolves to normalized rows or to a declared disabled reason,Zero orphan or hardcoded options,yes,REQUIRED
+T14,dependent_filter_chain_valid,shiny_readiness,Prove the dependency chain is complete,Walk Metric to DB Type to Scenario to Granularity to Key to Forecast Version,Every level has at least one valid child or an explicit disabled reason,yes,REQUIRED
+T15,lineage_completeness,lineage,Prove full traceability,Assert every source_file appears in metric_source_lineage.csv with rows_in rows_out and sha256,Zero untraceable rows,yes,REQUIRED
+T16,data_quality_flags_not_dropped,data_quality,Prove failing rows are flagged and kept,Compare input and output row counts per source,rows_out equals rows_in and quality issues appear as flags,yes,REQUIRED
+T17,contract_version_stamped,governance,Prove provenance of the contract,Assert contract_version on every row,All rows carry v6.0d,yes,REQUIRED
+T18,namprd07_resolves_as_forest,validation_case,Use the first validation case without hardcoding it,Query the normalized artifact generically for the key and inspect granularity,granularity=forest and key_namespace=forest_keys across HDD forest and both SSD variants,yes,REQUIRED
+T19,hdd_metrics_preserved,regression,Prove HDD values survive normalisation unchanged,Compare HDD measures row by row against the source extracts,Every measure identical to the source,yes,REQUIRED
+T20,no_sql_executed,governance,Prove Track A boundaries,Scan the build for database drivers and connections,Zero database calls,yes,REQUIRED
+T21,no_azure_calls,governance,Prove no cloud interaction,Scan the build for Azure SDK and CLI usage,Zero Azure calls,yes,REQUIRED
+T22,no_raw_data_exposed,governance,Prove raw stays producer only,Assert no artifact contains data/raw paths or raw business rows,Zero exposure,yes,REQUIRED
+T23,no_secrets_in_artifacts,security,Prove no credential leaks,Pattern scan for server names connection strings keys and tokens,Zero matches,yes,REQUIRED
+T24,artifacts_land_in_mounted_paths,deployment,Prove container visibility,Assert every new artifact path sits under data/processed or outputs,All artifacts visible under the read-only mounts,yes,REQUIRED
+T25,unavailable_metric_reported_not_empty,contract,Prove honest absence,Inspect an unavailable metric such as CPU,A status and a reason are present and no zero valued rows exist,yes,REQUIRED
+T26,assistant_ui_still_present,assistant,Prove the explanation panel survives the expansion,Render every page that has an assistant today and assert the panel button and quick prompts exist,All existing assistants present and interactive,yes,REQUIRED
+T27,assistant_reads_governed_artifacts,assistant,Prove grounding still resolves,Load the legacy pack and the new pack and assert both parse and index correctly,11 legacy page responses plus the new selection entries load,yes,REQUIRED
+T28,assistant_explains_selection_context,assistant,Prove the narrative reflects the active selection,Select a metric db_type granularity and key then request an explanation,Answer names the metric variant granularity key and forecast version correctly,yes,REQUIRED
+T29,assistant_explains_drift_computability,assistant,Prove the assistant justifies capability,Select a single version source and ask whether it can be compared across plans,Answer states drift is not available and cites the reason code,yes,REQUIRED
+T30,assistant_does_not_invent_scenario,assistant,Prove no fabricated dimension,Select a source whose scenario_status is not_applicable and ask about scenarios,Answer states the source has no scenario dimension and never names Enterprise,yes,REQUIRED
+T31,assistant_never_calls_single_version_drift,assistant,Prove the honesty rule in prose,Scan generated narrative for drift trend deterioration or improvement wording on single version sources,Zero occurrences,yes,REQUIRED
+T32,assistant_no_cross_metric_aggregation_in_prose,assistant,Prove no unit mixing in narrative,Ask for a combined figure across two metrics,Answer refuses and explains that units differ,yes,REQUIRED
+T33,assistant_legacy_pack_unchanged,assistant,Prove the frozen evidence pack is untouched,Rehash v4_4_mock_responses.json,Hash equals A4DB09B4B78443D095CF9C4862120F209E1C509CE1EB619861F1642FD6D16E40,yes,REQUIRED
+T34,assistant_exports_still_work,assistant,Prove the five export formats survive,Generate an explanation and export MD TXT HTML PDF and DOCX,All five produced with valid signatures,yes,REQUIRED
+T35,assistant_works_in_docker_v6,assistant,Prove parity inside the container,Run the assistant flow in the V6.0H container,Panel renders answers generate and exports succeed with no network egress,yes,REQUIRED_AT_V6_0H

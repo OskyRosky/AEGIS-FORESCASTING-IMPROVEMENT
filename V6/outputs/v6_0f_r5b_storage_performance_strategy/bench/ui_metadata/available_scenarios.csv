@@ -1,0 +1,15 @@
+metric,scenario_ui_label,granularity,page
+HDD - EDB,Enterprise,Region,viewer
+HDD - EDB,Consumer,Region,viewer
+HDD - Basilisk,Basilisk,Region,viewer
+HDD - EDB,Enterprise,Forest,viewer
+HDD - EDB,Consumer,Forest,viewer
+HDD - Basilisk,Basilisk,Forest,viewer
+HDD - EDB,Enterprise,Region,forecast
+HDD - EDB,Consumer,Region,forecast
+HDD - Basilisk,Basilisk,Region,forecast
+HDD - EDB,Enterprise,Forest,forecast
+HDD - EDB,Consumer,Forest,forecast
+HDD - Basilisk,Basilisk,Forest,forecast
+SSD - Phoenix,Low Volume No Efficiency,Forest,forecast
+SSD - Phoenix,Low Volume With Efficiency,Forest,forecast

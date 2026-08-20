@@ -1,0 +1,22 @@
+table_name,schema,table_type,key_col,date_col,version_col,scenario_col,dbtype_col,value_col,actual_marker_col,has_actual_values
+SubstrateBE_Ssd_MCDB_ForecastForestSKU,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+forecast_substrateBE_SSD_Phoenix_Organic,dbo,BASE TABLE,Forest,DateTime,ForecastVersion,Scenario,,Value,ModelVersion,False
+forecast_substrateBE_SSD_TotalForecast,dbo,BASE TABLE,Key,Datetime,ForecastVersion,Scenario,Resource,Value,Type,False
+forecast_substrateBE_cpu,dbo,BASE TABLE,Forest_SKU,datadate,forecastdate,CPU_type,,forecast,type,False
+forecast_substrateBE_cpu_byDB_forest,dbo,BASE TABLE,MyKey,Datetime,ForecastVersion,Scenario,DBType,Value,ModelVersion,False
+forecast_substrateBE_cpu_byDB_region,dbo,BASE TABLE,MyKey,Datetime,ForecastVersion,Scenario,DBType,Value,ModelVersion,False
+forecast_substrateBE_cpu_region,dbo,BASE TABLE,Key,Datetime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+forecast_substrateBE_hdd,dbo,BASE TABLE,forest_name,target_date,execution_time,data_type,,forecast_mean,type,True
+forecast_substrateBE_hdd_region,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,True
+forecast_substrateBE_iops,dbo,BASE TABLE,Forest_SKU,datadate,forecastdate,IOPS_type,,forecast,type,False
+forecast_substrateBE_iops_region,dbo,BASE TABLE,Key,Datetime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+SubstrateBE_SSD_Demand_History,dbo,BASE TABLE,Forest,DataDate,,,,,,False
+SubstrateBE_Ssd_PhoenixDB_ForecastForest,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+SubstrateBE_Ssd_PhoenixDB_ForecastRegion,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+SubstrateBE_Ssd_MCDB_ForecastRegion,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+SubstrateBE_SsdForecastForestSKU,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+SubstrateBE_SsdForecastRegion,dbo,BASE TABLE,Key,DateTime,ForecastVersion,Scenario,Resource,Value,ModelVersion,False
+forecast_substrateBE_hdd_region_metrics,dbo,BASE TABLE,Key,,Execution_Date,,,,,False
+forecast_substrateBE_hdd_forest_metrics,dbo,BASE TABLE,Key,,Execution_Date,,,,,False
+forecast_substrateBE_ssd_phx_lvwe_metrics,dbo,BASE TABLE,Key,,Execution_Date,,,,,False
+forecast_substrateBE_ssd_phx_lvne_metrics,dbo,BASE TABLE,Key,,Execution_Date,,,,,False

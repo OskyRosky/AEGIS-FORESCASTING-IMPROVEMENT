@@ -1,0 +1,826 @@
+source_table,column_name,raw_value,row_count
+forecast_substrateBE_hdd,type,Arima                                                                                                                                                 ,6416434
+forecast_substrateBE_hdd,type,actual                                                                                                                                                ,4372036
+forecast_substrateBE_hdd,type,"Arima+Fixed_0.015(0.5,0.5)                                                                                                                            ",4286323
+forecast_substrateBE_hdd,type,Fixed_0.015                                                                                                                                           ,2858966
+forecast_substrateBE_hdd,type,Linear                                                                                                                                                ,2682438
+forecast_substrateBE_hdd,type,bsts_trend                                                                                                                                            ,2287040
+forecast_substrateBE_hdd,type,"Arima+Linear(0.5,0.5)                                                                                                                                 ",2031501
+forecast_substrateBE_hdd,type,ETS_AAZ180HaLb                                                                                                                                        ,1790015
+forecast_substrateBE_hdd,type,Fixed_0.01                                                                                                                                            ,1743979
+forecast_substrateBE_hdd,type,"Arima+Prophet(0.5,0.5)                                                                                                                                ",1485994
+forecast_substrateBE_hdd,type,"Arima+bsts_trend(0.5,0.5)                                                                                                                             ",1270940
+forecast_substrateBE_hdd,type,Prophet                                                                                                                                               ,1264180
+forecast_substrateBE_hdd,type,"Arima+Fixed_0.04(0.5,0.5)                                                                                                                             ",1188350
+forecast_substrateBE_hdd,type,"Prophet+Linear(0.5,0.5)                                                                                                                               ",1107495
+forecast_substrateBE_hdd,type,"Arima+Fixed_0.02(0.5,0.5)                                                                                                                             ",1106469
+forecast_substrateBE_hdd,type,"bsts_trend+Linear(0.5,0.5)                                                                                                                            ",1092043
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Linear(0.5,0.5)                                                                                                                        ",870713
+forecast_substrateBE_hdd,type,FixedGrowth1%                                                                                                                                         ,834439
+forecast_substrateBE_hdd,type,Fixed_0.04                                                                                                                                            ,772492
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+bsts_trend(0.5,0.5)                                                                                                                    ",553450
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Fixed_0.015(0.5,0.5)                                                                                                                   ",530995
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Fixed_0.015(0.5,0.5)                                                                                                                   ",499717
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Fixed_0.04(0.5,0.5)                                                                                                                    ",472899
+forecast_substrateBE_hdd,type,"Arima+Fixed_0.03(0.5,0.5)                                                                                                                             ",466066
+forecast_substrateBE_hdd,type,"Prophet+bsts_trend(0.5,0.5)                                                                                                                           ",406333
+forecast_substrateBE_hdd,type,"Arima+Fixed_0.05(0.5,0.5)                                                                                                                             ",396060
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Fixed_0.02(0.5,0.5)                                                                                                                    ",364411
+forecast_substrateBE_hdd,type,Fixed_0.02                                                                                                                                            ,360646
+forecast_substrateBE_hdd,type,"Prophet+Fixed_0.04(0.5,0.5)                                                                                                                           ",359844
+forecast_substrateBE_hdd,type,"bsts_trend+Fixed_0.04(0.5,0.5)                                                                                                                        ",334056
+forecast_substrateBE_hdd,type,"Arima+Fixed_0.06(0.5,0.5)                                                                                                                             ",331850
+forecast_substrateBE_hdd,type,ETS_AAZ180HaHb                                                                                                                                        ,330320
+forecast_substrateBE_hdd,type,Fixed_0.017                                                                                                                                           ,297368
+forecast_substrateBE_hdd,type,"Fixed_0.015+Linear(0.5,0.5)                                                                                                                           ",293325
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Fixed_0.03(0.5,0.5)                                                                                                                    ",281861
+forecast_substrateBE_hdd,type,FixedGrowth2%                                                                                                                                         ,281455
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Arima(0.5,0.5)                                                                                                                         ",259930
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Fixed_0.05(0.5,0.5)                                                                                                                    ",245647
+forecast_substrateBE_hdd,type,Fixed_0.026                                                                                                                                           ,238853
+forecast_substrateBE_hdd,type,"Prophet+Fixed_0.05(0.5,0.5)                                                                                                                           ",227797
+forecast_substrateBE_hdd,type,FixedGrowth1.5%                                                                                                                                       ,224595
+forecast_substrateBE_hdd,type,Fixed_0.007                                                                                                                                           ,223219
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+ETS_AAZ180La(0.5,0.5)                                                                                                                  ",213111
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Fixed_0.04(0.5,0.5)                                                                                                                    ",201879
+forecast_substrateBE_hdd,type,Fixed_0.05                                                                                                                                            ,193179
+forecast_substrateBE_hdd,type,Fixed_0.03                                                                                                                                            ,192187
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+ETS_AAZ180La(0.5,0.5)                                                                                                                  ",175714
+forecast_substrateBE_hdd,type,Fixed_0.011                                                                                                                                           ,172601
+forecast_substrateBE_hdd,type,Fixed_0.018                                                                                                                                           ,172098
+forecast_substrateBE_hdd,type,"Fixed_0.015+Fixed_0.02(0.5,0.5)                                                                                                                       ",171909
+forecast_substrateBE_hdd,type,ETS_AAZ180La                                                                                                                                          ,169840
+forecast_substrateBE_hdd,type,"bsts_regression+Fixed_0.015(0.5,0.5)                                                                                                                  ",168303
+forecast_substrateBE_hdd,type,FixedGrowth2%_ARIMA_Ensemble                                                                                                                          ,167806
+forecast_substrateBE_hdd,type,ExponentialSmoothing                                                                                                                                  ,167610
+forecast_substrateBE_hdd,type,"Fixed_0.02+Fixed_0.03(0.5,0.5)                                                                                                                        ",167036
+forecast_substrateBE_hdd,type,FixedGrowth3%                                                                                                                                         ,166209
+forecast_substrateBE_hdd,type,Fixed_0.019                                                                                                                                           ,163380
+forecast_substrateBE_hdd,type,bsts_regression                                                                                                                                       ,156328
+forecast_substrateBE_hdd,type,FixedGrowth1%_ExponentialSmoothing_Ensemble                                                                                                           ,149017
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Arima(0.5,0.5)                                                                                                                         ",133959
+forecast_substrateBE_hdd,type,FixedGrowth4%                                                                                                                                         ,131505
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Prophet(0.5,0.5)                                                                                                                       ",131038
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Fixed_0.06(0.5,0.5)                                                                                                                    ",121453
+forecast_substrateBE_hdd,type,Fixed_0.006                                                                                                                                           ,120408
+forecast_substrateBE_hdd,type,FixedGrowth5%                                                                                                                                         ,108572
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Prophet(0.5,0.5)                                                                                                                         ",104795
+forecast_substrateBE_hdd,type,FixedGrowth2%_ExponentialSmoothing_Ensemble                                                                                                           ,101260
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Fixed_0.04(0.5,0.5)                                                                                                                      ",88738
+forecast_substrateBE_hdd,type,"Fixed_0.015+Fixed_0.03(0.5,0.5)                                                                                                                       ",88200
+forecast_substrateBE_hdd,type,FixedGrowth1%_ARIMA_Ensemble                                                                                                                          ,88198
+forecast_substrateBE_hdd,type,Fixed_0.005                                                                                                                                           ,86725
+forecast_substrateBE_hdd,type,ExponentialSmoothing_ARIMA_Ensemble                                                                                                                   ,79532
+forecast_substrateBE_hdd,type,"bsts_trend+bsts_regression(0.5,0.5)                                                                                                                   ",74075
+forecast_substrateBE_hdd,type,"bsts+Fixed_0.03(0.5,0.5)                                                                                                                              ",73328
+forecast_substrateBE_hdd,type,"bsts_regression+Fixed_0.02(0.5,0.5)                                                                                                                   ",72339
+forecast_substrateBE_hdd,type,"Fixed_0.03+Fixed_0.04(0.5,0.5)                                                                                                                        ",71831
+forecast_substrateBE_hdd,type,"Fixed_0.04+Linear(0.5,0.5)                                                                                                                            ",69568
+forecast_substrateBE_hdd,type,Fixed_0.06                                                                                                                                            ,65264
+forecast_substrateBE_hdd,type,FixedGrowth1%_FixedGrowth2%_Ensemble                                                                                                                  ,63637
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Fixed_0.02(0.5,0.5)                                                                                                                      ",60905
+forecast_substrateBE_hdd,type,Fixed_0.003                                                                                                                                           ,60277
+forecast_substrateBE_hdd,type,"bsts_reg+Fixed_0.03(0.5,0.5)                                                                                                                          ",53633
+forecast_substrateBE_hdd,type,"Fixed_0.05+Linear(0.5,0.5)                                                                                                                            ",53483
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Fixed_0.015(0.5,0.5)                                                                                                                     ",52152
+forecast_substrateBE_hdd,type,"Prophet+Fixed_0.015(0.5,0.5)                                                                                                                          ",50906
+forecast_substrateBE_hdd,type,FixedGrowth3%_ARIMA_Ensemble                                                                                                                          ,50612
+forecast_substrateBE_hdd,type,FixedGrowth2%_FixedGrowth1%_Ensemble                                                                                                                  ,49164
+forecast_substrateBE_hdd,type,Fixed_0.09                                                                                                                                            ,46780
+forecast_substrateBE_hdd,type,Fixed_0.027                                                                                                                                           ,46532
+forecast_substrateBE_hdd,type,FixedGrowth5%_ExponentialSmoothing_Ensemble                                                                                                           ,46233
+forecast_substrateBE_hdd,type,Fixed_0.034                                                                                                                                           ,42739
+forecast_substrateBE_hdd,type,"bsts_trend+Fixed_0.06(0.5,0.5)                                                                                                                        ",42040
+forecast_substrateBE_hdd,type,FixedGrowth5%_ARIMA_Ensemble                                                                                                                          ,41859
+forecast_substrateBE_hdd,type,"ETS+Fixed_0.03(0.5,0.5)                                                                                                                               ",40984
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Linear(0.5,0.5)                                                                                                                          ",39686
+forecast_substrateBE_hdd,type,"bsts_regression+Fixed_0.04(0.5,0.5)                                                                                                                   ",39282
+forecast_substrateBE_hdd,type,FixedGrowth3%_ExponentialSmoothing_Ensemble                                                                                                           ,39035
+forecast_substrateBE_hdd,type,Fixed_0                                                                                                                                               ,38988
+forecast_substrateBE_hdd,type,Fixed_0.001                                                                                                                                           ,38552
+forecast_substrateBE_hdd,type,Fixed_0.002                                                                                                                                           ,37932
+forecast_substrateBE_hdd,type,Fixed_0.024                                                                                                                                           ,37835
+forecast_substrateBE_hdd,type,"Fixed_0.06+Linear(0.5,0.5)                                                                                                                            ",36940
+forecast_substrateBE_hdd,type,"Fixed_0.02+Linear(0.5,0.5)                                                                                                                            ",36735
+forecast_substrateBE_hdd,type,Fixed_0.004                                                                                                                                           ,33386
+forecast_substrateBE_hdd,type,FixedGrowth4%_ExponentialSmoothing_Ensemble                                                                                                           ,30365
+forecast_substrateBE_hdd,type,"Arima+bsts_regression(0.5,0.5)                                                                                                                        ",27872
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Prophet(0.5,0.5)                                                                                                                       ",27386
+forecast_substrateBE_hdd,type,"bsts_trend+Fixed_0.02(0.5,0.5)                                                                                                                        ",26010
+forecast_substrateBE_hdd,type,"bsts_trend+Fixed_0.05(0.5,0.5)                                                                                                                        ",22240
+forecast_substrateBE_hdd,type,Fixed_0.012                                                                                                                                           ,21267
+forecast_substrateBE_hdd,type,Fixed_0.014                                                                                                                                           ,21235
+forecast_substrateBE_hdd,type,Fixed_0.008                                                                                                                                           ,21226
+forecast_substrateBE_hdd,type,"Prophet+Fixed_0.03(0.5,0.5)                                                                                                                           ",18835
+forecast_substrateBE_hdd,type,FixedGrowth1%_FixedGrowth3%_Ensemble                                                                                                                  ,18803
+forecast_substrateBE_hdd,type,Fixed_0.009                                                                                                                                           ,17832
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+Fixed_0.03(0.5,0.5)                                                                                                                    ",17825
+forecast_substrateBE_hdd,type,FixedGrowth2%_FixedGrowth3%_Ensemble                                                                                                                  ,17345
+forecast_substrateBE_hdd,type,FixedGrowth3%_FixedGrowth1%_Ensemble                                                                                                                  ,13010
+forecast_substrateBE_hdd,type,Fixed_0.025                                                                                                                                           ,12705
+forecast_substrateBE_hdd,type,Fixed_0.031                                                                                                                                           ,12064
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+Linear(0.5,0.5)                                                                                                                        ",11324
+forecast_substrateBE_hdd,type,Fixed_0.022                                                                                                                                           ,10143
+forecast_substrateBE_hdd,type,Fixed_0.013                                                                                                                                           ,9326
+forecast_substrateBE_hdd,type,"Fixed_0.04+Fixed_0.05(0.5,0.5)                                                                                                                        ",9158
+forecast_substrateBE_hdd,type,"Fixed_0.03+Linear(0.5,0.5)                                                                                                                            ",8760
+forecast_substrateBE_hdd,type,FixedGrowth4%_ARIMA_Ensemble                                                                                                                          ,8687
+forecast_substrateBE_hdd,type,Fixed_NA                                                                                                                                              ,8512
+forecast_substrateBE_hdd,type,Fixed_0.033                                                                                                                                           ,8512
+forecast_substrateBE_hdd,type,Fixed_0.036                                                                                                                                           ,8203
+forecast_substrateBE_hdd,type,Fixed_0.016                                                                                                                                           ,7871
+forecast_substrateBE_hdd,type,FixedGrowth4%_FixedGrowth3%_Ensemble                                                                                                                  ,7224
+forecast_substrateBE_hdd,type,"Prophet+bsts_regression(0.5,0.5)                                                                                                                      ",7096
+forecast_substrateBE_hdd,type,"bsts_regression+Fixed_0.03(0.5,0.5)                                                                                                                   ",6646
+forecast_substrateBE_hdd,type,Fixed_0.023                                                                                                                                           ,6246
+forecast_substrateBE_hdd,type,"Prophet+Fixed_0.02(0.5,0.5)                                                                                                                           ",4669
+forecast_substrateBE_hdd,type,"bsts_regression+Linear(0.5,0.5)                                                                                                                       ",4411
+forecast_substrateBE_hdd,type,FixedGrowth3%_FixedGrowth2%_Ensemble                                                                                                                  ,4355
+forecast_substrateBE_hdd,type,Fixed_0.032                                                                                                                                           ,4256
+forecast_substrateBE_hdd,type,Fixed_0.043                                                                                                                                           ,4256
+forecast_substrateBE_hdd,type,Fixed_0.028                                                                                                                                           ,4256
+forecast_substrateBE_hdd,type,Fixed_0.021                                                                                                                                           ,4197
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+bsts_regression(0.5,0.5)                                                                                                               ",3954
+forecast_substrateBE_hdd,type,Fixed_0.055                                                                                                                                           ,3898
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaHb+bsts_trend(0.5,0.5)                                                                                                                    ",3769
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Fixed_0.03(0.5,0.5)                                                                                                                      ",2949
+forecast_substrateBE_hdd,type,FixedGrowth4%_FixedGrowth5%_Ensemble                                                                                                                  ,2901
+forecast_substrateBE_hdd,type,FixedGrowth1%_FixedGrowth4%_Ensemble                                                                                                                  ,2892
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+bsts_trend(0.5,0.5)                                                                                                                      ",2463
+forecast_substrateBE_hdd,type,"Prophet+Fixed_0.06(0.5,0.5)                                                                                                                           ",2196
+forecast_substrateBE_hdd,type,Extrapolated                                                                                                                                          ,2048
+forecast_substrateBE_hdd,type,Fixed_0.039                                                                                                                                           ,2039
+forecast_substrateBE_hdd,type,"bsts_reg+Fixed_0.04(0.5,0.5)                                                                                                                          ",1949
+forecast_substrateBE_hdd,type,"bsts_trend+Fixed_0.015(0.5,0.5)                                                                                                                       ",1905
+forecast_substrateBE_hdd,type,"ETS+Fixed_0.015(0.5,0.5)                                                                                                                              ",1653
+forecast_substrateBE_hdd,type,stubbed                                                                                                                                               ,1597
+forecast_substrateBE_hdd,type,AAZ90HaLb                                                                                                                                             ,1582
+forecast_substrateBE_hdd,type,"ETS_AAZ180HaLb+ETS_AAZ180HaHb(0.5,0.5)                                                                                                                ",1460
+forecast_substrateBE_hdd,type,"ETS_AAZ180La+Arima(0.5,0.5)                                                                                                                           ",1460
+forecast_substrateBE_hdd,type,"Fixed_0.015+Fixed_0.04(0.5,0.5)                                                                                                                       ",1460
+forecast_substrateBE_hdd,type,FixedGrowth1%_FixedGrowth5%_Ensemble                                                                                                                  ,1454
+forecast_substrateBE_hdd,type,FixedGrowth5%_FixedGrowth2%_Ensemble                                                                                                                  ,1454
+forecast_substrateBE_hdd,type,FixedGrowth5%_FixedGrowth4%_Ensemble                                                                                                                  ,1445
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.01,929680
+forecast_substrateBE_hdd_region,ModelVersion,actual,830299
+forecast_substrateBE_hdd_region,ModelVersion,ETS_AAZ180HaLb,596005
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.02,450123
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.05,426254
+forecast_substrateBE_hdd_region,ModelVersion,ARIMA,281453
+forecast_substrateBE_hdd_region,ModelVersion,Linear,277726
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Linear(0.5,0.5)",197075
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.04,196473
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.015,187630
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.011,160765
+forecast_substrateBE_hdd_region,ModelVersion,bsts_trend,156003
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Linear(0.5,0.5)",151218
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Linear(0.5,0.5)",147843
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Fixed_0.01(0.5,0.5)",146847
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%,143239
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Fixed_0.04(0.5,0.5)",134411
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.012,133318
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.016,132852
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.007,132543
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.01+Fixed_0.02(0.5,0.5)",129788
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.006,118770
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.04+Linear(0.5,0.5)",114855
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.014,114055
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Linear(0.5,0.5)",111128
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+bsts_trend(0.5,0.5)",105795
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Prophet(0.5,0.5)",105070
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.013,99577
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Fixed_0.04(0.5,0.5)",95028
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Fixed_0.01(0.5,0.5)",86979
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Arima(0.5,0.5)",86871
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+bsts_trend(0.5,0.5)",83431
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.02+Linear(0.5,0.5)",81432
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.09,80713
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.009,77610
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.008,76446
+forecast_substrateBE_hdd_region,ModelVersion,ExponentialSmoothing,73652
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Fixed_0.04(0.5,0.5)",71566
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.017,69733
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1.5%,67398
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.06+Linear(0.5,0.5)",66732
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Fixed_0.01(0.5,0.5)",64698
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Fixed_0.02(0.5,0.5)",60001
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.06,55821
+forecast_substrateBE_hdd_region,ModelVersion,Prophet,55476
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.03,55121
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.01+Fixed_0.03(0.5,0.5)",53492
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.01+Linear(0.5,0.5)",53366
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.019,51621
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.018,50238
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Prophet(0.5,0.5)",49824
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Fixed_0.04(0.5,0.5)",49579
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Fixed_0.01(0.5,0.5)",47202
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Prophet(0.5,0.5)",47170
+forecast_substrateBE_hdd_region,ModelVersion,,46490
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.002,45493
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_regression+Fixed_0.02(0.5,0.5)",45389
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Fixed_0.02(0.5,0.5)",44279
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Fixed_0.06(0.5,0.5)",44250
+forecast_substrateBE_hdd_region,ModelVersion,ETS_AAZ180HaHb,40601
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth2%_ARIMA_Ensemble,40545
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.03+Linear(0.5,0.5)",37533
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.031,36835
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Fixed_0.06(0.5,0.5)",36468
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth5%_ExponentialSmoothing_Ensemble,36128
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Fixed_0.05(0.5,0.5)",34205
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.026,34050
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.05+Linear(0.5,0.5)",32671
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Fixed_0.01(0.5,0.5)",32407
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.04+Fixed_0.05(0.5,0.5)",31160
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Prophet(0.5,0.5)",31091
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Fixed_0.01(0.5,0.5)",30742
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Fixed_0.03(0.5,0.5)",30215
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.004,29691
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth5%,28950
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth5%_ARIMA_Ensemble,28880
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+bsts_trend(0.5,0.5)",28328
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.02+Fixed_0.03(0.5,0.5)",28249
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth2%,27512
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth4%,27458
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.024,27434
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+Fixed_0.02(0.5,0.5)",26046
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Fixed_0.06(0.5,0.5)",25871
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.025,25871
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Fixed_0.02(0.5,0.5)",25767
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.022,25212
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Arima(0.5,0.5)",24916
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.01+Fixed_0.04(0.5,0.5)",23854
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.035,23554
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.027,23388
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Linear(0.5,0.5)",23158
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.021,21953
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.023,21952
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth4%_ARIMA_Ensemble,21716
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.03+Fixed_0.04(0.5,0.5)",20364
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.033,18797
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Fixed_0.05(0.5,0.5)",18790
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Fixed_0.02(0.5,0.5)",18712
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Fixed_0.05(0.5,0.5)",18501
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Linear(0.5,0.5)",18374
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Fixed_0.06(0.5,0.5)",17939
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+bsts_regression(0.5,0.5)",17628
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth3%,17326
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+bsts_regression(0.5,0.5)",17322
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.032,16810
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Fixed_0.05(0.5,0.5)",16442
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.034,16416
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.003,16294
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+bsts_regression(0.5,0.5)",16202
+forecast_substrateBE_hdd_region,ModelVersion,"Prophet+Fixed_0.03(0.5,0.5)",16095
+forecast_substrateBE_hdd_region,ModelVersion,"Arima+Fixed_0.03(0.5,0.5)",16093
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+Fixed_0.03(0.5,0.5)",15957
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth3%_ExponentialSmoothing_Ensemble,15920
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth3%_ARIMA_Ensemble,15915
+forecast_substrateBE_hdd_region,ModelVersion,ExponentialSmoothing_ARIMA_Ensemble,15915
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.001,13041
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth2%_FixedGrowth1%_Ensemble,13003
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.029,12771
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.037,12745
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.05+Fixed_0.06(0.5,0.5)",12479
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Fixed_0.04(0.5,0.5)",12311
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.038,12039
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.048,11887
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%_ExponentialSmoothing_Ensemble,11612
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+ETS_AAZ180La(0.5,0.5)",11579
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth2%_ExponentialSmoothing_Ensemble,11567
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.02+Fixed_0.04(0.5,0.5)",11421
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Fixed_0.03(0.5,0.5)",11267
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Fixed_0.03(0.5,0.5)",10970
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_regression+Fixed_0.01(0.5,0.5)",9936
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.02+Fixed_0.05(0.5,0.5)",9846
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+bsts_regression(0.5,0.5)",9693
+forecast_substrateBE_hdd_region,ModelVersion,ETS_AAZ180La,9689
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.087,9513
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%_FixedGrowth2%_Ensemble,8691
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.036,8597
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+bsts_trend(0.5,0.5)",8480
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.041,8375
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.076,7961
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.039,7909
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_NA,7782
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.054,7585
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+ETS_AAZ180La(0.5,0.5)",7400
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_regression+Fixed_0.04(0.5,0.5)",7294
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.046,6939
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.005,6141
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.082,6138
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.028,5952
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaLb+ETS_AAZ180HaHb(0.5,0.5)",5630
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.045,5416
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.089,4802
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.083,4682
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth4%_FixedGrowth5%_Ensemble,4348
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%_ARIMA_Ensemble,4336
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth3%_FixedGrowth1%_Ensemble,4335
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.062,4313
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.078,3784
+forecast_substrateBE_hdd_region,ModelVersion,bsts_regression,3707
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.079,3643
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.057,3475
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.058,3405
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.061,3338
+forecast_substrateBE_hdd_region,ModelVersion,"Fixed_0.04+Fixed_0.06(0.5,0.5)",3324
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Arima(0.5,0.5)",3223
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180La+Fixed_0.02(0.5,0.5)",3222
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+bsts_trend(0.5,0.5)",3161
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.107,3152
+forecast_substrateBE_hdd_region,ModelVersion,"bsts_trend+bsts_regression(0.5,0.5)",3130
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%_FixedGrowth4%_Ensemble,2900
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth4%_ExponentialSmoothing_Ensemble,2892
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth3%_FixedGrowth5%_Ensemble,2888
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth2%_FixedGrowth3%_Ensemble,2888
+forecast_substrateBE_hdd_region,ModelVersion,"ETS_AAZ180HaHb+Fixed_0.04(0.5,0.5)",2759
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.056,2667
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.07,2646
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.055,2579
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.071,2487
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.077,2402
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.042,1873
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.053,1753
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.044,1706
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.047,1706
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.066,1661
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.072,1631
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.085,1619
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.064,1615
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.065,1615
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_NaN,1594
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.088,1571
+forecast_substrateBE_hdd_region,ModelVersion,Fixed_0.073,1534
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%_FixedGrowth5%_Ensemble,1455
+forecast_substrateBE_hdd_region,ModelVersion,FixedGrowth1%_FixedGrowth3%_Ensemble,1455
+forecast_substrateBE_cpu,type,Fixed_0.02,11878238
+forecast_substrateBE_cpu,type,Fixed_0.04,6439105
+forecast_substrateBE_cpu,type,Linear,5369021
+forecast_substrateBE_cpu,type,DeepForesee,2709750
+forecast_substrateBE_cpu,type,"Fixed_0.02+Fixed_0.04(0.5,0.5)",2417415
+forecast_substrateBE_cpu,type,Fixed_0.03,2353949
+forecast_substrateBE_cpu,type,"Fixed_0.04+Linear(0.5,0.5)",2160257
+forecast_substrateBE_cpu,type,"Fixed_0.02+Arima(0.5,0.5)",1792349
+forecast_substrateBE_cpu,type,Arima,1588386
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Fixed_0.02(0.5,0.5)",1437792
+forecast_substrateBE_cpu,type,"Fixed_0.02+Fixed_0.03(0.5,0.5)",1349300
+forecast_substrateBE_cpu,type,"Linear+Arima(0.5,0.5)",1203520
+forecast_substrateBE_cpu,type,fixed_seasonal,1166045
+forecast_substrateBE_cpu,type,"Fixed_0.02+Linear(0.5,0.5)",1105417
+forecast_substrateBE_cpu,type,"Fixed_0.04+Arima(0.5,0.5)",1032120
+forecast_substrateBE_cpu,type,"Fixed_0+Fixed_0.02(0.5,0.5)",1013889
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Linear(0.5,0.5)",655881
+forecast_substrateBE_cpu,type,"Fixed_0.03+Linear(0.5,0.5)",444237
+forecast_substrateBE_cpu,type,"Fixed_0+Linear(0.5,0.5)",364762
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Fixed_0.04(0.5,0.5)",364329
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Fixed_0.01(0.5,0.5)",336456
+forecast_substrateBE_cpu,type,"Linear+Prophet(0.5,0.5)",314048
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Arima(0.5,0.5)",305570
+forecast_substrateBE_cpu,type,mixed,255264
+forecast_substrateBE_cpu,type,"Fixed_0.03+Arima(0.5,0.5)",241506
+forecast_substrateBE_cpu,type,"Fixed_0.03+Fixed_0.04(0.5,0.5)",210847
+forecast_substrateBE_cpu,type,"Arima+Prophet(0.5,0.5)",185053
+forecast_substrateBE_cpu,type,Prophet,184293
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Fixed_0.03(0.5,0.5)",138906
+forecast_substrateBE_cpu,type,BSTS_reg,125830
+forecast_substrateBE_cpu,type,"Arima+BSTS_reg(0.5,0.5)",112956
+forecast_substrateBE_cpu,type,"Fixed_0.01+Arima(0.5,0.5)",110028
+forecast_substrateBE_cpu,type,Fixed_0.01,98894
+forecast_substrateBE_cpu,type,"Fixed_0.04+BSTS_reg(0.5,0.5)",96336
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Fixed_0.01(0.5,0.5)",91980
+forecast_substrateBE_cpu,type,"Fixed_0.04+Prophet(0.5,0.5)",91305
+forecast_substrateBE_cpu,type,"Fixed_0.02+Prophet(0.5,0.5)",87709
+forecast_substrateBE_cpu,type,"Fixed_0.02+BSTS_reg(0.5,0.5)",82102
+forecast_substrateBE_cpu,type,"Fixed_0.03+BSTS_reg(0.5,0.5)",64042
+forecast_substrateBE_cpu,type,"Fixed_0+Arima(0.5,0.5)",61763
+forecast_substrateBE_cpu,type,"Fixed_0+Fixed_0.03(0.5,0.5)",52390
+forecast_substrateBE_cpu,type,"Fixed_0.01+BSTS_reg(0.5,0.5)",49990
+forecast_substrateBE_cpu,type,"Fixed_0.03+Prophet(0.5,0.5)",42248
+forecast_substrateBE_cpu,type,"Linear+BSTS_reg(0.5,0.5)",39782
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+BSTS_reg(0.5,0.5)",39594
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+Prophet(0.5,0.5)",35195
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Fixed_0.04(0.5,0.5)",28470
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Fixed_0.02(0.5,0.5)",28470
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+BSTS_reg(0.5,0.5)",24820
+forecast_substrateBE_cpu,type,"BSTS_trend+BSTS_reg(0.5,0.5)",23360
+forecast_substrateBE_cpu,type,"Prophet+BSTS_reg(0.5,0.5)",23171
+forecast_substrateBE_cpu,type,"Fixed_0.02+ETS_MAdA365Ma(0.5,0.5)",22630
+forecast_substrateBE_cpu,type,"Fixed_0.02+ETS_MAdA365Ha(0.5,0.5)",21900
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+Fixed_0.02(0.5,0.5)",21900
+forecast_substrateBE_cpu,type,"Fixed_0.015+BSTS_reg(0.5,0.5)",20440
+forecast_substrateBE_cpu,type,ETS_MAdA365Ha,20074
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Fixed_0.02(0.5,0.5)",18980
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Fixed_0.02(0.5,0.5)",18980
+forecast_substrateBE_cpu,type,"rdmwk+BSTS_reg(0.5,0.5)",17520
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Fixed_0.01(0.5,0.5)",16060
+forecast_substrateBE_cpu,type,"Fixed_0.01+Prophet(0.5,0.5)",15510
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Fixed_0.03(0.5,0.5)",15330
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Linear(0.5,0.5)",15330
+forecast_substrateBE_cpu,type,Fixed_0.015,15330
+forecast_substrateBE_cpu,type,Fixed_0,15205
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Fixed_0.015(0.5,0.5)",13140
+forecast_substrateBE_cpu,type,"Prophet+BSTS_trend(0.5,0.5)",13140
+forecast_substrateBE_cpu,type,"Arima+BSTS_trend(0.5,0.5)",12410
+forecast_substrateBE_cpu,type,"Fixed_0.015+Arima(0.5,0.5)",11680
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Prophet(0.5,0.5)",10950
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+BSTS_reg(0.5,0.5)",10220
+forecast_substrateBE_cpu,type,ETS_MAdA365Ma,10220
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+BSTS_reg(0.5,0.5)",9490
+forecast_substrateBE_cpu,type,"rdmwk+Arima(0.5,0.5)",9490
+forecast_substrateBE_cpu,type,"Fixed_0.04+BSTS_trend(0.5,0.5)",9490
+forecast_substrateBE_cpu,type,"Fixed_0.01+Linear(0.5,0.5)",8942
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+Fixed_0.04(0.5,0.5)",8030
+forecast_substrateBE_cpu,type,"Fixed_0.02+rdmwk(0.5,0.5)",7300
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+BSTS_reg(0.5,0.5)",7300
+forecast_substrateBE_cpu,type,"rdmwk+Prophet(0.5,0.5)",7300
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+ETS_MAdA365Ma(0.5,0.5)",7300
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+ETS_MAdA365Ma(0.5,0.5)",7300
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+BSTS_trend(0.5,0.5)",7300
+forecast_substrateBE_cpu,type,"Fixed_0+Fixed_0.04(0.5,0.5)",7171
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Fixed_0.04(0.5,0.5)",6570
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+Fixed_0.01(0.5,0.5)",6570
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+Arima(0.5,0.5)",6570
+forecast_substrateBE_cpu,type,"Fixed_0.04+rdmwk(0.5,0.5)",6570
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+ETS_MAdA365Ha(0.5,0.5)",6570
+forecast_substrateBE_cpu,type,"Fixed_0+Prophet(0.5,0.5)",6018
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ma+rdmwk(0.5,0.5)",5840
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+BSTS_reg(0.5,0.5)",5840
+forecast_substrateBE_cpu,type,"Linear+BSTS_trend(0.5,0.5)",5840
+forecast_substrateBE_cpu,type,"Fixed_0.015+Linear(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Prophet(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+Prophet(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"Fixed_0.02+BSTS_trend(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"rdmwk+BSTS_trend(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+BSTS_reg(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"Linear+ETS_MAdA365Ha(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"Fixed_0.01+Fixed_0.03(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"Fixed_0.03+rdmwk(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Linear(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+ETS_MAdA365Ha(0.5,0.5)",5110
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Fixed_0.01(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+BSTS_trend(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Fixed_0.015(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+rdmwk(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+ETS_MAdA365Ma(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Linear(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_MAdA365Ha+rdmwk(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"Arima+ETS_MAdA365Ha(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Fixed_0.015(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Prophet(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Fixed_0.04(0.5,0.5)",4380
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Linear(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"Fixed_0.015+Prophet(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"Fixed_0.01+BSTS_trend(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+ETS_MAdA365Ha(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+rdmwk(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"Fixed_0.03+BSTS_trend(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"Fixed_0.04+ETS_MAdA365Ma(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+BSTS_reg(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"Fixed_0.05+BSTS_reg(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,ETS_AAdN180HaLb,3650
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Fixed_0.04(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,BSTS_trend,3650
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Fixed_0.05(0.5,0.5)",3650
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Fixed_0.02(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+Fixed_0.03(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+Fixed_0.03(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,"Fixed_0.04+ETS_MAdA365Ha(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,ETS_AAdN180Ma,2920
+forecast_substrateBE_cpu,type,"rdmwk+ETS_MAdA365Ha(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,ETS_AAdN180HaHb,2920
+forecast_substrateBE_cpu,type,"Fixed_0.02+ETS_AAA365Ha(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+Fixed_0.02(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,Fixed_0.05,2920
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+Linear(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,"Fixed_0.05+Linear(0.5,0.5)",2920
+forecast_substrateBE_cpu,type,"Fixed_0.01+Fixed_0.02(0.5,0.5)",2554
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Fixed_0.03(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+Prophet(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Arima(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+rdmwk(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Arima(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+BSTS_trend(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Fixed_0.05+BSTS_trend(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+Fixed_0.03(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Arima+ETS_AAA365Ha(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+Linear(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Fixed_0.03+ETS_MAdA365Ma(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+BSTS_trend(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Fixed_0.01+Fixed_0.04(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Fixed_0.04+ETS_AAA365Ma(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Fixed_0.05+Arima(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+Arima(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Arima+ETS_MAdA365Ma(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,rdmwk,2190
+forecast_substrateBE_cpu,type,"Fixed_0.05+rdmwk(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"Fixed_0.03+ETS_MAdA365Ha(0.5,0.5)",2190
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+Fixed_0.015(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+Fixed_0.03(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+Fixed_0.01(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+BSTS_trend(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"rdmwk+ETS_MAdA365Ma(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Prophet(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,ETS_AAA365Ha,1460
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+Prophet(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+rdmwk(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+Arima(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Linear+ETS_MAdA365Ma(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAdN180Ma+Linear(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Fixed_0.02+ETS_AAA365Ma(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Fixed_0.01+rdmwk(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+Arima(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Fixed_0.015+rdmwk(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Fixed_0.015+Fixed_0.02(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Fixed_0.03+Fixed_0.05(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Linear+rdmwk(0.5,0.5)",1460
+forecast_substrateBE_cpu,type,"Linear+ETS_AAA365Ha(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+Fixed_0.04(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"Fixed_0.015+Fixed_0.03(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+Fixed_0.03(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"Fixed_0.015+BSTS_trend(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"rdmwk+ETS_AAA365Ha(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+Fixed_0.04(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+BSTS_reg(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"Fixed_0.03+ETS_AAA365Ha(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+Fixed_0.04(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"Fixed_0.015+Fixed_0.04(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAA365Ma+BSTS_trend(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaMb+ETS_AAdN180HaLb(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"Linear+ETS_AAA365Ma(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaHb+BSTS_trend(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+ETS_MAdA365Ma(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAA365Ha+Linear(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+rdmwk(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_AAdN180HaLb+BSTS_trend(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"Fixed_0.05+Prophet(0.5,0.5)",730
+forecast_substrateBE_cpu,type,"ETS_MAM365Ma+Fixed_0.02(0.5,0.5)",730
+forecast_substrateBE_iops,type,Fixed_0.02,5004139
+forecast_substrateBE_iops,type,"tbats+Fixed_0.02(0.5,0.5)",3237977
+forecast_substrateBE_iops,type,"tbats+Fixed_0.06(0.5,0.5)",1882713
+forecast_substrateBE_iops,type,"Arima+Fixed_0.02(0.5,0.5)",1680441
+forecast_substrateBE_iops,type,"Fixed_0+Fixed_0.02(0.5,0.5)",1661647
+forecast_substrateBE_iops,type,Linear,1410486
+forecast_substrateBE_iops,type,Prophet,1311496
+forecast_substrateBE_iops,type,Fixed_0.06,1152476
+forecast_substrateBE_iops,type,"Arima+Fixed_0.06(0.5,0.5)",985944
+forecast_substrateBE_iops,type,Fixed_0.01,944307
+forecast_substrateBE_iops,type,"Fixed_0.04+Fixed_0.02(0.5,0.5)",936375
+forecast_substrateBE_iops,type,"Linear+Fixed_0.06(0.5,0.5)",834715
+forecast_substrateBE_iops,type,"Prophet+Fixed_0.06(0.5,0.5)",802552
+forecast_substrateBE_iops,type,"Prophet+tbats(0.5,0.5)",752665
+forecast_substrateBE_iops,type,"Linear+Fixed_0.02(0.5,0.5)",682465
+forecast_substrateBE_iops,type,"Linear+Fixed_0.04(0.5,0.5)",660733
+forecast_substrateBE_iops,type,"Prophet+Fixed_0.02(0.5,0.5)",631332
+forecast_substrateBE_iops,type,tbats,552568
+forecast_substrateBE_iops,type,"Prophet+Fixed_0.04(0.5,0.5)",548714
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+tbats(0.5,0.5)",499561
+forecast_substrateBE_iops,type,"tbats+Linear(0.5,0.5)",482551
+forecast_substrateBE_iops,type,Fixed_0.04,469194
+forecast_substrateBE_iops,type,"Arima+Prophet(0.5,0.5)",399894
+forecast_substrateBE_iops,type,Fixed_0.05,354187
+forecast_substrateBE_iops,type,"Prophet+Fixed_0(0.5,0.5)",320499
+forecast_substrateBE_iops,type,"Arima+Linear(0.5,0.5)",295727
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Prophet(0.5,0.5)",291658
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Linear(0.5,0.5)",285975
+forecast_substrateBE_iops,type,ETS_MAM365HaLb,257717
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Arima(0.5,0.5)",222305
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Fixed_0(0.5,0.5)",205259
+forecast_substrateBE_iops,type,"Linear+Fixed_0(0.5,0.5)",201217
+forecast_substrateBE_iops,type,"Prophet+Linear(0.5,0.5)",196204
+forecast_substrateBE_iops,type,Linear_sz,177380
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+tbats(0.5,0.5)",176666
+forecast_substrateBE_iops,type,"tbats+Fixed_0.04(0.5,0.5)",163013
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Linear(0.5,0.5)",161367
+forecast_substrateBE_iops,type,ETS_MAM180HaLb,143552
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Fixed_0.02(0.5,0.5)",143468
+forecast_substrateBE_iops,type,bsts_trend,129760
+forecast_substrateBE_iops,type,Fixed_0,120343
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Prophet(0.5,0.5)",117623
+forecast_substrateBE_iops,type,"Fixed_0.04+Fixed_0.06(0.5,0.5)",93419
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Fixed_0.06(0.5,0.5)",80844
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Arima(0.5,0.5)",71042
+forecast_substrateBE_iops,type,"Arima+Fixed_0.04(0.5,0.5)",68000
+forecast_substrateBE_iops,type,"ETS_MAM365HaLb+Fixed_0.04(0.5,0.5)",66899
+forecast_substrateBE_iops,type,"Fixed_0.02+Fixed_0.06(0.5,0.5)",66292
+forecast_substrateBE_iops,type,"tbats+Linear_sz(0.5,0.5)",62980
+forecast_substrateBE_iops,type,Arima,58098
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Fixed_0.06(0.5,0.5)",49903
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Fixed_0.02(0.5,0.5)",49747
+forecast_substrateBE_iops,type,"tbats+Fixed_0(0.5,0.5)",47860
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Fixed_0.04(0.5,0.5)",41450
+forecast_substrateBE_iops,type,"Arima+tbats(0.5,0.5)",39854
+forecast_substrateBE_iops,type,"bsts_trend+tbats(0.5,0.5)",26250
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+Linear_sz(0.5,0.5)",17340
+forecast_substrateBE_iops,type,"Prophet+Linear_sz(0.5,0.5)",16900
+forecast_substrateBE_iops,type,"Prophet+bsts_trend(0.5,0.5)",13835
+forecast_substrateBE_iops,type,"Linear_sz+Fixed_0(0.5,0.5)",13440
+forecast_substrateBE_iops,type,"Linear_sz+Fixed_0.02(0.5,0.5)",13440
+forecast_substrateBE_iops,type,"Linear_sz+Fixed_0.05(0.5,0.5)",12600
+forecast_substrateBE_iops,type,"Arima+Fixed_0(0.5,0.5)",8763
+forecast_substrateBE_iops,type,Fixed_0.017,8266
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+bsts_trend(0.5,0.5)",8243
+forecast_substrateBE_iops,type,Fixed_0.005,7587
+forecast_substrateBE_iops,type,"Prophet+Fixed_0.05(0.5,0.5)",7560
+forecast_substrateBE_iops,type,"Fixed_0.01+Fixed_0.02(0.5,0.5)",7560
+forecast_substrateBE_iops,type,Fixed_0.002,7418
+forecast_substrateBE_iops,type,Fixed_0.007,7418
+forecast_substrateBE_iops,type,Fixed_0.028,6997
+forecast_substrateBE_iops,type,"bsts_trend+Linear_sz(0.5,0.5)",6790
+forecast_substrateBE_iops,type,Fixed_0.018,6434
+forecast_substrateBE_iops,type,"bsts_trend+Fixed_0(0.5,0.5)",5880
+forecast_substrateBE_iops,type,"bsts_trend+Fixed_0.02(0.5,0.5)",5880
+forecast_substrateBE_iops,type,Fixed_0.014,5805
+forecast_substrateBE_iops,type,Fixed_0.011,5652
+forecast_substrateBE_iops,type,"bsts_regression+tbats(0.5,0.5)",5110
+forecast_substrateBE_iops,type,"tbats+Fixed_0.01(0.5,0.5)",5040
+forecast_substrateBE_iops,type,Fixed_0.013,4660
+forecast_substrateBE_iops,type,Fixed_0.016,4549
+forecast_substrateBE_iops,type,Fixed_0.003,4491
+forecast_substrateBE_iops,type,Fixed_0.039,4441
+forecast_substrateBE_iops,type,"tbats+Fixed_0.05(0.5,0.5)",4200
+forecast_substrateBE_iops,type,Fixed_0.006,4075
+forecast_substrateBE_iops,type,Fixed_0.009,3709
+forecast_substrateBE_iops,type,"Arima+bsts_trend(0.5,0.5)",3472
+forecast_substrateBE_iops,type,Fixed_0.048,3038
+forecast_substrateBE_iops,type,Fixed_0.026,3038
+forecast_substrateBE_iops,type,Fixed_0.029,3038
+forecast_substrateBE_iops,type,Fixed_0.022,2980
+forecast_substrateBE_iops,type,Fixed_0.047,2980
+forecast_substrateBE_iops,type,Fixed_0.034,2980
+forecast_substrateBE_iops,type,Fixed_0.045,2980
+forecast_substrateBE_iops,type,Fixed_0.004,2614
+forecast_substrateBE_iops,type,Fixed_0.001,2614
+forecast_substrateBE_iops,type,Fixed_0.024,2556
+forecast_substrateBE_iops,type,"Fixed_0+Fixed_0.01(0.5,0.5)",2520
+forecast_substrateBE_iops,type,Fixed_0.015,2359
+forecast_substrateBE_iops,type,Fixed_0.021,2301
+forecast_substrateBE_iops,type,Fixed_0.012,2190
+forecast_substrateBE_iops,type,"ETS_MAM180HaLb+bsts_regression(0.5,0.5)",2190
+forecast_substrateBE_iops,type,"bsts_regression+Linear_sz(0.5,0.5)",2190
+forecast_substrateBE_iops,type,Fixed_0.036,1935
+forecast_substrateBE_iops,type,"Fixed_0.02+Fixed_0.05(0.5,0.5)",1680
+forecast_substrateBE_iops,type,"Linear_sz+Fixed_0.01(0.5,0.5)",1680
+forecast_substrateBE_iops,type,"Prophet+Fixed_0.01(0.5,0.5)",1680
+forecast_substrateBE_iops,type,Fixed_0.035,1680
+forecast_substrateBE_iops,type,Fixed_0.03,1519
+forecast_substrateBE_iops,type,Fixed_0.032,1519
+forecast_substrateBE_iops,type,Fixed_0.041,1519
+forecast_substrateBE_iops,type,"Fixed_0+Fixed_0.04(0.5,0.5)",1519
+forecast_substrateBE_iops,type,Fixed_0.019,1461
+forecast_substrateBE_iops,type,Fixed_0.044,1461
+forecast_substrateBE_iops,type,bsts_regression,1460
+forecast_substrateBE_iops,type,Fixed_0.046,1095
+forecast_substrateBE_iops,type,Fixed_0.031,1095
+forecast_substrateBE_iops,type,Fixed_0.023,1095
+forecast_substrateBE_iops,type,"bsts_trend+Linear(0.5,0.5)",868
+forecast_substrateBE_iops,type,"bsts_trend+Fixed_0.06(0.5,0.5)",868
+forecast_substrateBE_iops,type,Fixed_0.043,840
+forecast_substrateBE_iops,type,"Fixed_0+Fixed_0.05(0.5,0.5)",840
+forecast_substrateBE_iops,type,Fixed_0.027,840
+forecast_substrateBE_iops,type,"bsts_trend+Fixed_0.01(0.5,0.5)",840
+forecast_substrateBE_iops,type,Fixed_0.025,840
+forecast_substrateBE_iops,type,"bsts_trend+bsts_regression(0.5,0.5)",730
+forecast_substrateBE_SSD_TotalForecast,Type,TotalPerturbed,19364856
+forecast_substrateBE_SSD_TotalForecast,Type,Total,7359098
+forecast_substrateBE_cpu_region,ModelVersion,Fixed_0.02,1522642
+forecast_substrateBE_cpu_region,ModelVersion,Fixed_0.04,1314708
+forecast_substrateBE_cpu_region,ModelVersion,"ETS_MAdA365Ha+Fixed_0.02(0.5,0.5)",1029988
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.02+Arima(0.5,0.5)",930604
+forecast_substrateBE_cpu_region,ModelVersion,Linear,642470
+forecast_substrateBE_cpu_region,ModelVersion,Arima,429862
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.04+Arima(0.5,0.5)",349140
+forecast_substrateBE_cpu_region,ModelVersion,Fixed_0.03,306838
+forecast_substrateBE_cpu_region,ModelVersion,"Linear+Arima(0.5,0.5)",286950
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.04+Linear(0.5,0.5)",243290
+forecast_substrateBE_cpu_region,ModelVersion,"ETS_MAdA365Ha+Linear(0.5,0.5)",239028
+forecast_substrateBE_cpu_region,ModelVersion,"ETS_MAdA365Ha+Fixed_0.04(0.5,0.5)",161006
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0+Fixed_0.02(0.5,0.5)",144540
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.03+Arima(0.5,0.5)",113932
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.02+Linear(0.5,0.5)",103380
+forecast_substrateBE_cpu_region,ModelVersion,fixed_seasonal,93116
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.03+Fixed_0.04(0.5,0.5)",91796
+forecast_substrateBE_cpu_region,ModelVersion,"ETS_MAdA365Ha+Fixed_0.03(0.5,0.5)",89628
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.02+Fixed_0.04(0.5,0.5)",88146
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.02+Fixed_0.03(0.5,0.5)",83766
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.03+Linear(0.5,0.5)",68834
+forecast_substrateBE_cpu_region,ModelVersion,"ETS_MAdA365Ha+Arima(0.5,0.5)",49832
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0+Fixed_0.03(0.5,0.5)",32850
+forecast_substrateBE_cpu_region,ModelVersion,"Linear+Prophet(0.5,0.5)",24304
+forecast_substrateBE_cpu_region,ModelVersion,Prophet,18228
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0+Linear(0.5,0.5)",15330
+forecast_substrateBE_cpu_region,ModelVersion,"Arima+Prophet(0.5,0.5)",15190
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0+Fixed_0.04(0.5,0.5)",6570
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.04+Prophet(0.5,0.5)",6076
+forecast_substrateBE_cpu_region,ModelVersion,"Fixed_0.02+Prophet(0.5,0.5)",6076
+forecast_substrateBE_iops_region,ModelVersion,"tbats+Fixed_0.02(0.5,0.5)",951622
+forecast_substrateBE_iops_region,ModelVersion,"Fixed_0+Fixed_0.02(0.5,0.5)",896112
+forecast_substrateBE_iops_region,ModelVersion,"Arima+Fixed_0.02(0.5,0.5)",842696
+forecast_substrateBE_iops_region,ModelVersion,"Prophet+Fixed_0.02(0.5,0.5)",239640
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.05,236034
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.02,214540
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.01,182840
+forecast_substrateBE_iops_region,ModelVersion,"Prophet+tbats(0.5,0.5)",174478
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Fixed_0.02(0.5,0.5)",158580
+forecast_substrateBE_iops_region,ModelVersion,"Arima+Prophet(0.5,0.5)",145654
+forecast_substrateBE_iops_region,ModelVersion,"tbats+Fixed_0.04(0.5,0.5)",141790
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Prophet(0.5,0.5)",129712
+forecast_substrateBE_iops_region,ModelVersion,"Arima+Fixed_0.06(0.5,0.5)",129328
+forecast_substrateBE_iops_region,ModelVersion,"Prophet+Fixed_0.04(0.5,0.5)",123658
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+tbats(0.5,0.5)",121822
+forecast_substrateBE_iops_region,ModelVersion,"Prophet+Fixed_0(0.5,0.5)",118054
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Fixed_0.06(0.5,0.5)",99590
+forecast_substrateBE_iops_region,ModelVersion,"Prophet+Fixed_0.06(0.5,0.5)",95564
+forecast_substrateBE_iops_region,ModelVersion,"tbats+Fixed_0.06(0.5,0.5)",92570
+forecast_substrateBE_iops_region,ModelVersion,ETS_MAM365HaLb,89724
+forecast_substrateBE_iops_region,ModelVersion,"Arima+Fixed_0.04(0.5,0.5)",80536
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Fixed_0(0.5,0.5)",78678
+forecast_substrateBE_iops_region,ModelVersion,Prophet,78398
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Arima(0.5,0.5)",76842
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Fixed_0.04(0.5,0.5)",73052
+forecast_substrateBE_iops_region,ModelVersion,"Fixed_0.02+Fixed_0.06(0.5,0.5)",67514
+forecast_substrateBE_iops_region,ModelVersion,"Fixed_0.04+Fixed_0.02(0.5,0.5)",60826
+forecast_substrateBE_iops_region,ModelVersion,"Prophet+Linear(0.5,0.5)",60332
+forecast_substrateBE_iops_region,ModelVersion,"Linear+Fixed_0.02(0.5,0.5)",47664
+forecast_substrateBE_iops_region,ModelVersion,"Linear+Fixed_0(0.5,0.5)",44250
+forecast_substrateBE_iops_region,ModelVersion,"Linear+Fixed_0.04(0.5,0.5)",42672
+forecast_substrateBE_iops_region,ModelVersion,"Fixed_0.04+Fixed_0.06(0.5,0.5)",38078
+forecast_substrateBE_iops_region,ModelVersion,"Arima+tbats(0.5,0.5)",33934
+forecast_substrateBE_iops_region,ModelVersion,"tbats+Linear(0.5,0.5)",31368
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+Linear(0.5,0.5)",31014
+forecast_substrateBE_iops_region,ModelVersion,"tbats+Fixed_0(0.5,0.5)",30262
+forecast_substrateBE_iops_region,ModelVersion,"Linear+Fixed_0.06(0.5,0.5)",29908
+forecast_substrateBE_iops_region,ModelVersion,Linear,28330
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.04,23714
+forecast_substrateBE_iops_region,ModelVersion,"Fixed_0+Fixed_0.04(0.5,0.5)",22254
+forecast_substrateBE_iops_region,ModelVersion,"Arima+Linear(0.5,0.5)",21760
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.06,20440
+forecast_substrateBE_iops_region,ModelVersion,"Fixed_0+Fixed_0.06(0.5,0.5)",19828
+forecast_substrateBE_iops_region,ModelVersion,tbats,11798
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.045,10950
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.014,10950
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.025,8266
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.011,8266
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.015,8266
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.007,8266
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.008,7418
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.033,7418
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.039,7418
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.019,7418
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.026,7418
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.034,6570
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.044,6076
+forecast_substrateBE_iops_region,ModelVersion,"Arima+Fixed_0(0.5,0.5)",6076
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.018,5228
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.021,5228
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.024,5228
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.001,5228
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.031,5228
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.002,5228
+forecast_substrateBE_iops_region,ModelVersion,"bsts_trend+Linear(0.5,0.5)",4380
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.038,4380
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.032,4380
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.035,4380
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.004,4380
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.028,3038
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.046,3038
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.027,3038
+forecast_substrateBE_iops_region,ModelVersion,Arima,3038
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.03,3038
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.037,3038
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.005,2920
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.049,2920
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.017,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.009,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.048,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.036,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.016,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.029,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.042,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.047,2190
+forecast_substrateBE_iops_region,ModelVersion,"ETS_MAM365HaLb+bsts_trend(0.5,0.5)",2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.003,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.012,2190
+forecast_substrateBE_iops_region,ModelVersion,Fixed_0.043,2190
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,Fixed_0.02,19452315
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,Fixed_0.04,6336210
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,Linear,6316002
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0.04+Arima(0.5,0.5)",2479008
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,fixed_seasonal,2153942
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Linear+Arima(0.5,0.5)",1130136
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0.02+Arima(0.5,0.5)",1020768
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"ETS_MAdA30Ha+Fixed_0.04(0.5,0.5)",929628
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"ETS_MAdA30Ha+Linear(0.5,0.5)",747348
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,Arima,723044
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0.04+Linear(0.5,0.5)",650132
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0.02+Fixed_0.04(0.5,0.5)",631904
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"ETS_MAdA30Ha+Fixed_0.02(0.5,0.5)",455700
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0+Fixed_0.02(0.5,0.5)",425320
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0.02+Linear(0.5,0.5)",273420
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0+Linear(0.5,0.5)",249116
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,Fixed_0,164052
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"Fixed_0+Fixed_0.04(0.5,0.5)",85064
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,ETS_MAdA30Ha,27342
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,"ETS_MAdA30Ha+Arima(0.5,0.5)",6076
+forecast_substrateBE_cpu_byDB_forest,ModelVersion,,2
+forecast_substrateBE_SSD_Phoenix_Organic,ModelVersion,Combined,707069
+SubstrateBE_Ssd_MCDB_ForecastForestSKU,ModelVersion,prophet,30966833

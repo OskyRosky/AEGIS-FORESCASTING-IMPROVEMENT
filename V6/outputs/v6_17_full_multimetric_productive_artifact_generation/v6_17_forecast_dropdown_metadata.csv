@@ -1,0 +1,897 @@
+metric,scenario,granularity,series_key,has_actuals,forecast_only,forecast_available
+HDD - Basilisk,Basilisk,Forest,apcp150,True,False,True
+HDD - Basilisk,Basilisk,Forest,apcp153,True,False,True
+HDD - Basilisk,Basilisk,Forest,apcprd01,True,False,True
+HDD - Basilisk,Basilisk,Forest,apcprd02,True,False,True
+HDD - Basilisk,Basilisk,Forest,apcprd03,True,False,True
+HDD - Basilisk,Basilisk,Forest,apcprd04,True,False,True
+HDD - Basilisk,Basilisk,Forest,apcprd06,True,False,True
+HDD - Basilisk,Basilisk,Forest,arep273,True,False,True
+HDD - Basilisk,Basilisk,Forest,ausp282,True,False,True
+HDD - Basilisk,Basilisk,Forest,ausp300,True,False,True
+HDD - Basilisk,Basilisk,Forest,ausprd01,True,False,True
+HDD - Basilisk,Basilisk,Forest,autp296,True,False,True
+HDD - Basilisk,Basilisk,Forest,brap284,True,False,True
+HDD - Basilisk,Basilisk,Forest,canp288,True,False,True
+HDD - Basilisk,Basilisk,Forest,canprd01,True,False,True
+HDD - Basilisk,Basilisk,Forest,chep278,True,False,True
+HDD - Basilisk,Basilisk,Forest,chlp298,True,False,True
+HDD - Basilisk,Basilisk,Forest,chnpr01,True,False,True
+HDD - Basilisk,Basilisk,Forest,deup281,True,False,True
+HDD - Basilisk,Basilisk,Forest,dnkp307,True,False,True
+HDD - Basilisk,Basilisk,Forest,espp292,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp107,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp119,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp120,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp121,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp122,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp137,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp138,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp174,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp175,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp176,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp177,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp178,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp179,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp180,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp189,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp190,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp191,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp192,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp193,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp194,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp195,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp250,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp251,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurp309,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd01,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd02,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd03,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd04,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd05,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd06,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd07,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd08,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd09,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd10,True,False,True
+HDD - Basilisk,Basilisk,Forest,eurprd83,True,False,True
+HDD - Basilisk,Basilisk,Forest,frap264,True,False,True
+HDD - Basilisk,Basilisk,Forest,gbrp123,True,False,True
+HDD - Basilisk,Basilisk,Forest,gbrp265,True,False,True
+HDD - Basilisk,Basilisk,Forest,gbrp267,True,False,True
+HDD - Basilisk,Basilisk,Forest,gbrp302,True,False,True
+HDD - Basilisk,Basilisk,Forest,idnp305,True,False,True
+HDD - Basilisk,Basilisk,Forest,indp287,True,False,True
+HDD - Basilisk,Basilisk,Forest,indprd01,True,False,True
+HDD - Basilisk,Basilisk,Forest,isrp290,True,False,True
+HDD - Basilisk,Basilisk,Forest,itap293,True,False,True
+HDD - Basilisk,Basilisk,Forest,jpnp286,True,False,True
+HDD - Basilisk,Basilisk,Forest,jpnp301,True,False,True
+HDD - Basilisk,Basilisk,Forest,jpnprd01,True,False,True
+HDD - Basilisk,Basilisk,Forest,korp216,True,False,True
+HDD - Basilisk,Basilisk,Forest,lamp152,True,False,True
+HDD - Basilisk,Basilisk,Forest,lamp215,True,False,True
+HDD - Basilisk,Basilisk,Forest,lamprd80,True,False,True
+HDD - Basilisk,Basilisk,Forest,mexp297,True,False,True
+HDD - Basilisk,Basilisk,Forest,mysp306,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp100,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp101,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp102,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp103,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp104,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp105,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp106,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp108,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp109,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp110,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp111,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp113,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp114,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp115,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp116,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp118,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp125,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp126,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp128,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp129,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp130,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp131,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp132,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp133,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp134,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp135,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp136,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp154,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp157,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp158,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp159,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp161,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp162,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp163,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp164,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp166,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp167,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp169,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp170,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp171,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp172,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp173,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp197,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp220,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp221,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp222,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp223,True,False,True
+HDD - Basilisk,Basilisk,Forest,namp283,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd00,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd02,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd03,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd04,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd05,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd06,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd07,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd08,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd09,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd10,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd11,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd12,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd13,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd14,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd15,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd16,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd17,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd18,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd19,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd20,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd21,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd22,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd84,True,False,True
+HDD - Basilisk,Basilisk,Forest,namprd85,True,False,True
+HDD - Basilisk,Basilisk,Forest,norp279,True,False,True
+HDD - Basilisk,Basilisk,Forest,nzlp299,True,False,True
+HDD - Basilisk,Basilisk,Forest,polp291,True,False,True
+HDD - Basilisk,Basilisk,Forest,qatp289,True,False,True
+HDD - Basilisk,Basilisk,Forest,sgpp274,True,False,True
+HDD - Basilisk,Basilisk,Forest,swep280,True,False,True
+HDD - Basilisk,Basilisk,Forest,twnp295,True,False,True
+HDD - Basilisk,Basilisk,Forest,zafp275,True,False,True
+HDD - Basilisk,Basilisk,Region,DNK-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,ESP-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,EUR-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,GBR-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,ISR-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,ITA-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,MEX-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,POL-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,apc-Dedicated,True,False,True
+HDD - Basilisk,Basilisk,Region,apc-MSIT,True,False,True
+HDD - Basilisk,Basilisk,Region,apc-Multitenant,True,False,True
+HDD - Basilisk,Basilisk,Region,are-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,aus-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,aut-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,bra-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,can-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,che-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,chl-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,chn-Gallatin,True,False,True
+HDD - Basilisk,Basilisk,Region,deu-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,eur-Dedicated,True,False,True
+HDD - Basilisk,Basilisk,Region,eur-MSIT,True,False,True
+HDD - Basilisk,Basilisk,Region,eur-Multitenant,True,False,True
+HDD - Basilisk,Basilisk,Region,fra-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,gbr-Dedicated,True,False,True
+HDD - Basilisk,Basilisk,Region,gbr-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,idn-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,ind-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,jpn-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,kor-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,lam-Multitenant,True,False,True
+HDD - Basilisk,Basilisk,Region,mys-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-Dedicated,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-GCC Low,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-ITAR DoD,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-ITAR GCCH,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-MSIT,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-Multitenant,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-SDF,True,False,True
+HDD - Basilisk,Basilisk,Region,nam-TDF,True,False,True
+HDD - Basilisk,Basilisk,Region,nor-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,nzl-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,qat-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,sgp-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,swe-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,twn-Go Local,True,False,True
+HDD - Basilisk,Basilisk,Region,zaf-Go Local,True,False,True
+HDD - EDB,Consumer,Forest,APCP150,True,False,True
+HDD - EDB,Consumer,Forest,APCP153,True,False,True
+HDD - EDB,Consumer,Forest,APCPRD01,True,False,True
+HDD - EDB,Consumer,Forest,APCPRD02,True,False,True
+HDD - EDB,Consumer,Forest,APCPRD03,True,False,True
+HDD - EDB,Consumer,Forest,APCPRD04,True,False,True
+HDD - EDB,Consumer,Forest,APCPRD06,True,False,True
+HDD - EDB,Consumer,Forest,AREP273,True,False,True
+HDD - EDB,Consumer,Forest,AUSP282,True,False,True
+HDD - EDB,Consumer,Forest,AUSP300,True,False,True
+HDD - EDB,Consumer,Forest,AUSPRD01,True,False,True
+HDD - EDB,Consumer,Forest,AUTP296,True,False,True
+HDD - EDB,Consumer,Forest,BRAP284,True,False,True
+HDD - EDB,Consumer,Forest,CANP288,True,False,True
+HDD - EDB,Consumer,Forest,CANPRD01,True,False,True
+HDD - EDB,Consumer,Forest,CHEP278,True,False,True
+HDD - EDB,Consumer,Forest,CHLP298,True,False,True
+HDD - EDB,Consumer,Forest,CHNPR01,True,False,True
+HDD - EDB,Consumer,Forest,DEUP281,True,False,True
+HDD - EDB,Consumer,Forest,DNKP307,True,False,True
+HDD - EDB,Consumer,Forest,ESPP292,True,False,True
+HDD - EDB,Consumer,Forest,EURP107,True,False,True
+HDD - EDB,Consumer,Forest,EURP119,True,False,True
+HDD - EDB,Consumer,Forest,EURP120,True,False,True
+HDD - EDB,Consumer,Forest,EURP121,True,False,True
+HDD - EDB,Consumer,Forest,EURP122,True,False,True
+HDD - EDB,Consumer,Forest,EURP137,True,False,True
+HDD - EDB,Consumer,Forest,EURP138,True,False,True
+HDD - EDB,Consumer,Forest,EURP175,True,False,True
+HDD - EDB,Consumer,Forest,EURP176,True,False,True
+HDD - EDB,Consumer,Forest,EURP177,True,False,True
+HDD - EDB,Consumer,Forest,EURP178,True,False,True
+HDD - EDB,Consumer,Forest,EURP179,True,False,True
+HDD - EDB,Consumer,Forest,EURP180,True,False,True
+HDD - EDB,Consumer,Forest,EURP189,True,False,True
+HDD - EDB,Consumer,Forest,EURP190,True,False,True
+HDD - EDB,Consumer,Forest,EURP191,True,False,True
+HDD - EDB,Consumer,Forest,EURP192,True,False,True
+HDD - EDB,Consumer,Forest,EURP193,True,False,True
+HDD - EDB,Consumer,Forest,EURP194,True,False,True
+HDD - EDB,Consumer,Forest,EURP195,True,False,True
+HDD - EDB,Consumer,Forest,EURP250,True,False,True
+HDD - EDB,Consumer,Forest,EURP251,True,False,True
+HDD - EDB,Consumer,Forest,EURP309,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD01,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD02,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD03,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD04,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD05,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD06,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD07,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD08,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD09,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD10,True,False,True
+HDD - EDB,Consumer,Forest,EURPRD83,True,False,True
+HDD - EDB,Consumer,Forest,FRAP264,True,False,True
+HDD - EDB,Consumer,Forest,GBRP123,True,False,True
+HDD - EDB,Consumer,Forest,GBRP265,True,False,True
+HDD - EDB,Consumer,Forest,GBRP267,True,False,True
+HDD - EDB,Consumer,Forest,GBRP302,True,False,True
+HDD - EDB,Consumer,Forest,IDNP305,True,False,True
+HDD - EDB,Consumer,Forest,INDP287,True,False,True
+HDD - EDB,Consumer,Forest,INDPRD01,True,False,True
+HDD - EDB,Consumer,Forest,ISRP290,True,False,True
+HDD - EDB,Consumer,Forest,ITAP293,True,False,True
+HDD - EDB,Consumer,Forest,JPNP286,True,False,True
+HDD - EDB,Consumer,Forest,JPNP301,True,False,True
+HDD - EDB,Consumer,Forest,JPNPRD01,True,False,True
+HDD - EDB,Consumer,Forest,KORP216,True,False,True
+HDD - EDB,Consumer,Forest,LAMP152,True,False,True
+HDD - EDB,Consumer,Forest,LAMP215,True,False,True
+HDD - EDB,Consumer,Forest,LAMPRD80,True,False,True
+HDD - EDB,Consumer,Forest,MEXP297,True,False,True
+HDD - EDB,Consumer,Forest,MYSP306,True,False,True
+HDD - EDB,Consumer,Forest,NAMP100,True,False,True
+HDD - EDB,Consumer,Forest,NAMP101,True,False,True
+HDD - EDB,Consumer,Forest,NAMP103,True,False,True
+HDD - EDB,Consumer,Forest,NAMP104,True,False,True
+HDD - EDB,Consumer,Forest,NAMP105,True,False,True
+HDD - EDB,Consumer,Forest,NAMP106,True,False,True
+HDD - EDB,Consumer,Forest,NAMP108,True,False,True
+HDD - EDB,Consumer,Forest,NAMP109,True,False,True
+HDD - EDB,Consumer,Forest,NAMP113,True,False,True
+HDD - EDB,Consumer,Forest,NAMP114,True,False,True
+HDD - EDB,Consumer,Forest,NAMP115,True,False,True
+HDD - EDB,Consumer,Forest,NAMP116,True,False,True
+HDD - EDB,Consumer,Forest,NAMP118,True,False,True
+HDD - EDB,Consumer,Forest,NAMP125,True,False,True
+HDD - EDB,Consumer,Forest,NAMP126,True,False,True
+HDD - EDB,Consumer,Forest,NAMP128,True,False,True
+HDD - EDB,Consumer,Forest,NAMP129,True,False,True
+HDD - EDB,Consumer,Forest,NAMP130,True,False,True
+HDD - EDB,Consumer,Forest,NAMP131,True,False,True
+HDD - EDB,Consumer,Forest,NAMP132,True,False,True
+HDD - EDB,Consumer,Forest,NAMP133,True,False,True
+HDD - EDB,Consumer,Forest,NAMP134,True,False,True
+HDD - EDB,Consumer,Forest,NAMP135,True,False,True
+HDD - EDB,Consumer,Forest,NAMP136,True,False,True
+HDD - EDB,Consumer,Forest,NAMP154,True,False,True
+HDD - EDB,Consumer,Forest,NAMP157,True,False,True
+HDD - EDB,Consumer,Forest,NAMP158,True,False,True
+HDD - EDB,Consumer,Forest,NAMP159,True,False,True
+HDD - EDB,Consumer,Forest,NAMP161,True,False,True
+HDD - EDB,Consumer,Forest,NAMP162,True,False,True
+HDD - EDB,Consumer,Forest,NAMP163,True,False,True
+HDD - EDB,Consumer,Forest,NAMP164,True,False,True
+HDD - EDB,Consumer,Forest,NAMP166,True,False,True
+HDD - EDB,Consumer,Forest,NAMP167,True,False,True
+HDD - EDB,Consumer,Forest,NAMP169,True,False,True
+HDD - EDB,Consumer,Forest,NAMP170,True,False,True
+HDD - EDB,Consumer,Forest,NAMP171,True,False,True
+HDD - EDB,Consumer,Forest,NAMP172,True,False,True
+HDD - EDB,Consumer,Forest,NAMP173,True,False,True
+HDD - EDB,Consumer,Forest,NAMP197,True,False,True
+HDD - EDB,Consumer,Forest,NAMP220,True,False,True
+HDD - EDB,Consumer,Forest,NAMP221,True,False,True
+HDD - EDB,Consumer,Forest,NAMP222,True,False,True
+HDD - EDB,Consumer,Forest,NAMP223,True,False,True
+HDD - EDB,Consumer,Forest,NAMP283,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD00,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD01,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD02,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD03,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD04,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD05,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD06,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD07,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD08,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD09,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD10,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD11,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD12,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD13,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD14,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD15,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD16,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD17,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD18,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD19,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD20,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD21,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD22,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD84,True,False,True
+HDD - EDB,Consumer,Forest,NAMPRD85,True,False,True
+HDD - EDB,Consumer,Forest,NORP279,True,False,True
+HDD - EDB,Consumer,Forest,NZLP299,True,False,True
+HDD - EDB,Consumer,Forest,POLP291,True,False,True
+HDD - EDB,Consumer,Forest,QATP289,True,False,True
+HDD - EDB,Consumer,Forest,SGPP274,True,False,True
+HDD - EDB,Consumer,Forest,SWEP280,True,False,True
+HDD - EDB,Consumer,Forest,TWNP295,True,False,True
+HDD - EDB,Consumer,Forest,ZAFP275,True,False,True
+HDD - EDB,Consumer,Region,APC-Dedicated,True,False,True
+HDD - EDB,Consumer,Region,APC-MSIT,True,False,True
+HDD - EDB,Consumer,Region,APC-Multitenant,True,False,True
+HDD - EDB,Consumer,Region,ARE-Go Local,True,False,True
+HDD - EDB,Consumer,Region,AUS-Go Local,True,False,True
+HDD - EDB,Consumer,Region,AUT-Go Local,True,False,True
+HDD - EDB,Consumer,Region,BRA-Go Local,True,False,True
+HDD - EDB,Consumer,Region,CAN-Go Local,True,False,True
+HDD - EDB,Consumer,Region,CHE-Go Local,True,False,True
+HDD - EDB,Consumer,Region,CHL-Go Local,True,False,True
+HDD - EDB,Consumer,Region,DEU-Go Local,True,False,True
+HDD - EDB,Consumer,Region,DNK-Go Local,True,False,True
+HDD - EDB,Consumer,Region,ESP-Go Local,True,False,True
+HDD - EDB,Consumer,Region,EUR-Dedicated,True,False,True
+HDD - EDB,Consumer,Region,EUR-Go Local,True,False,True
+HDD - EDB,Consumer,Region,EUR-MSIT,True,False,True
+HDD - EDB,Consumer,Region,EUR-Multitenant,True,False,True
+HDD - EDB,Consumer,Region,FRA-Go Local,True,False,True
+HDD - EDB,Consumer,Region,GBR-Dedicated,True,False,True
+HDD - EDB,Consumer,Region,GBR-Go Local,True,False,True
+HDD - EDB,Consumer,Region,IDN-Go Local,True,False,True
+HDD - EDB,Consumer,Region,IND-Go Local,True,False,True
+HDD - EDB,Consumer,Region,ISR-Go Local,True,False,True
+HDD - EDB,Consumer,Region,ITA-Go Local,True,False,True
+HDD - EDB,Consumer,Region,JPN-Go Local,True,False,True
+HDD - EDB,Consumer,Region,KOR-Go Local,True,False,True
+HDD - EDB,Consumer,Region,LAM-Multitenant,True,False,True
+HDD - EDB,Consumer,Region,MEX-Go Local,True,False,True
+HDD - EDB,Consumer,Region,MYS-Go Local,True,False,True
+HDD - EDB,Consumer,Region,NAM-Dedicated,True,False,True
+HDD - EDB,Consumer,Region,NAM-GCC Low,True,False,True
+HDD - EDB,Consumer,Region,NAM-ITAR DoD,True,False,True
+HDD - EDB,Consumer,Region,NAM-ITAR GCCH,True,False,True
+HDD - EDB,Consumer,Region,NAM-MSIT,True,False,True
+HDD - EDB,Consumer,Region,NAM-Multitenant,True,False,True
+HDD - EDB,Consumer,Region,NAM-SDF,True,False,True
+HDD - EDB,Consumer,Region,NAM-TDF,True,False,True
+HDD - EDB,Consumer,Region,NOR-Go Local,True,False,True
+HDD - EDB,Consumer,Region,NZL-Go Local,True,False,True
+HDD - EDB,Consumer,Region,POL-Go Local,True,False,True
+HDD - EDB,Consumer,Region,QAT-Go Local,True,False,True
+HDD - EDB,Consumer,Region,SGP-Go Local,True,False,True
+HDD - EDB,Consumer,Region,SWE-Go Local,True,False,True
+HDD - EDB,Consumer,Region,TWN-Go Local,True,False,True
+HDD - EDB,Consumer,Region,ZAF-Go Local,True,False,True
+HDD - EDB,Enterprise,Forest,APCP150,True,False,True
+HDD - EDB,Enterprise,Forest,APCP153,True,False,True
+HDD - EDB,Enterprise,Forest,APCPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,APCPRD02,True,False,True
+HDD - EDB,Enterprise,Forest,APCPRD03,True,False,True
+HDD - EDB,Enterprise,Forest,APCPRD04,True,False,True
+HDD - EDB,Enterprise,Forest,APCPRD06,True,False,True
+HDD - EDB,Enterprise,Forest,AREP273,True,False,True
+HDD - EDB,Enterprise,Forest,AUSP282,True,False,True
+HDD - EDB,Enterprise,Forest,AUSP300,True,False,True
+HDD - EDB,Enterprise,Forest,AUSPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,AUTP296,True,False,True
+HDD - EDB,Enterprise,Forest,BRAP284,True,False,True
+HDD - EDB,Enterprise,Forest,CANP288,True,False,True
+HDD - EDB,Enterprise,Forest,CANPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,CHEP278,True,False,True
+HDD - EDB,Enterprise,Forest,CHLP298,True,False,True
+HDD - EDB,Enterprise,Forest,CHNPR01,True,False,True
+HDD - EDB,Enterprise,Forest,DEUP281,True,False,True
+HDD - EDB,Enterprise,Forest,DNKP307,True,False,True
+HDD - EDB,Enterprise,Forest,ESPP292,True,False,True
+HDD - EDB,Enterprise,Forest,EURP107,True,False,True
+HDD - EDB,Enterprise,Forest,EURP119,True,False,True
+HDD - EDB,Enterprise,Forest,EURP120,True,False,True
+HDD - EDB,Enterprise,Forest,EURP121,True,False,True
+HDD - EDB,Enterprise,Forest,EURP122,True,False,True
+HDD - EDB,Enterprise,Forest,EURP137,True,False,True
+HDD - EDB,Enterprise,Forest,EURP138,True,False,True
+HDD - EDB,Enterprise,Forest,EURP175,True,False,True
+HDD - EDB,Enterprise,Forest,EURP176,True,False,True
+HDD - EDB,Enterprise,Forest,EURP177,True,False,True
+HDD - EDB,Enterprise,Forest,EURP178,True,False,True
+HDD - EDB,Enterprise,Forest,EURP179,True,False,True
+HDD - EDB,Enterprise,Forest,EURP180,True,False,True
+HDD - EDB,Enterprise,Forest,EURP189,True,False,True
+HDD - EDB,Enterprise,Forest,EURP190,True,False,True
+HDD - EDB,Enterprise,Forest,EURP191,True,False,True
+HDD - EDB,Enterprise,Forest,EURP192,True,False,True
+HDD - EDB,Enterprise,Forest,EURP193,True,False,True
+HDD - EDB,Enterprise,Forest,EURP194,True,False,True
+HDD - EDB,Enterprise,Forest,EURP195,True,False,True
+HDD - EDB,Enterprise,Forest,EURP250,True,False,True
+HDD - EDB,Enterprise,Forest,EURP251,True,False,True
+HDD - EDB,Enterprise,Forest,EURP309,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD02,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD03,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD04,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD05,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD06,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD07,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD08,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD09,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD10,True,False,True
+HDD - EDB,Enterprise,Forest,EURPRD83,True,False,True
+HDD - EDB,Enterprise,Forest,FRAP264,True,False,True
+HDD - EDB,Enterprise,Forest,GBRP123,True,False,True
+HDD - EDB,Enterprise,Forest,GBRP265,True,False,True
+HDD - EDB,Enterprise,Forest,GBRP267,True,False,True
+HDD - EDB,Enterprise,Forest,GBRP302,True,False,True
+HDD - EDB,Enterprise,Forest,IDNP305,True,False,True
+HDD - EDB,Enterprise,Forest,INDP287,True,False,True
+HDD - EDB,Enterprise,Forest,INDPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,ISRP290,True,False,True
+HDD - EDB,Enterprise,Forest,ITAP293,True,False,True
+HDD - EDB,Enterprise,Forest,JPNP286,True,False,True
+HDD - EDB,Enterprise,Forest,JPNP301,True,False,True
+HDD - EDB,Enterprise,Forest,JPNPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,KORP216,True,False,True
+HDD - EDB,Enterprise,Forest,LAMP152,True,False,True
+HDD - EDB,Enterprise,Forest,LAMP215,True,False,True
+HDD - EDB,Enterprise,Forest,LAMPRD80,True,False,True
+HDD - EDB,Enterprise,Forest,MEXP297,True,False,True
+HDD - EDB,Enterprise,Forest,MYSP306,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP100,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP101,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP103,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP104,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP105,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP106,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP108,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP109,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP113,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP114,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP115,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP116,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP118,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP125,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP126,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP128,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP129,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP130,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP131,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP132,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP133,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP134,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP135,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP136,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP154,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP157,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP158,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP159,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP161,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP162,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP163,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP164,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP166,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP167,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP169,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP170,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP171,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP172,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP173,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP197,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP220,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP221,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP222,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP223,True,False,True
+HDD - EDB,Enterprise,Forest,NAMP283,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD00,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD01,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD02,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD03,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD04,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD05,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD06,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD07,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD08,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD09,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD10,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD11,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD12,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD13,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD14,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD15,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD16,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD17,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD18,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD19,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD20,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD21,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD22,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD84,True,False,True
+HDD - EDB,Enterprise,Forest,NAMPRD85,True,False,True
+HDD - EDB,Enterprise,Forest,NORP279,True,False,True
+HDD - EDB,Enterprise,Forest,NZLP299,True,False,True
+HDD - EDB,Enterprise,Forest,POLP291,True,False,True
+HDD - EDB,Enterprise,Forest,QATP289,True,False,True
+HDD - EDB,Enterprise,Forest,SGPP274,True,False,True
+HDD - EDB,Enterprise,Forest,SWEP280,True,False,True
+HDD - EDB,Enterprise,Forest,TWNP295,True,False,True
+HDD - EDB,Enterprise,Forest,ZAFP275,True,False,True
+HDD - EDB,Enterprise,Region,APC-Dedicated,True,False,True
+HDD - EDB,Enterprise,Region,APC-MSIT,True,False,True
+HDD - EDB,Enterprise,Region,APC-Multitenant,True,False,True
+HDD - EDB,Enterprise,Region,ARE-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,AUS-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,AUT-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,BRA-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,CAN-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,CHE-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,CHL-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,DEU-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,DNK-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,ESP-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,EUR-Dedicated,True,False,True
+HDD - EDB,Enterprise,Region,EUR-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,EUR-MSIT,True,False,True
+HDD - EDB,Enterprise,Region,EUR-Multitenant,True,False,True
+HDD - EDB,Enterprise,Region,FRA-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,GBR-Dedicated,True,False,True
+HDD - EDB,Enterprise,Region,GBR-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,IDN-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,IND-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,ISR-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,ITA-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,JPN-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,KOR-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,LAM-Multitenant,True,False,True
+HDD - EDB,Enterprise,Region,MEX-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,MYS-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,NAM-Dedicated,True,False,True
+HDD - EDB,Enterprise,Region,NAM-GCC Low,True,False,True
+HDD - EDB,Enterprise,Region,NAM-ITAR DoD,True,False,True
+HDD - EDB,Enterprise,Region,NAM-ITAR GCCH,True,False,True
+HDD - EDB,Enterprise,Region,NAM-MSIT,True,False,True
+HDD - EDB,Enterprise,Region,NAM-Multitenant,True,False,True
+HDD - EDB,Enterprise,Region,NAM-SDF,True,False,True
+HDD - EDB,Enterprise,Region,NAM-TDF,True,False,True
+HDD - EDB,Enterprise,Region,NOR-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,NZL-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,POL-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,QAT-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,SGP-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,SWE-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,TWN-Go Local,True,False,True
+HDD - EDB,Enterprise,Region,ZAF-Go Local,True,False,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCP150,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD02,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD03,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD04,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD06,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,AREP273,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUSP282,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUSP300,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUSPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUTP296,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,BRAP284,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,CANP288,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,CANPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,CHEP278,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,CHLP298,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,DEUP281,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,DNKP307,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,ESPP292,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP107,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP119,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP120,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP121,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP122,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP137,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP138,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP174,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP175,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP176,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP177,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP178,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP179,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP180,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP189,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP190,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP191,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP192,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP193,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP194,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP195,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP250,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP251,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP309,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD02,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD03,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD04,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD05,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD06,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD07,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD08,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD09,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD10,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,FRAP264,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP123,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP265,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP267,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP302,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,IDNP305,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,INDP287,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,INDPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,ISRP290,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,ITAP293,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,JPNP286,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,JPNP301,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,JPNPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,KORP216,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,LAMP152,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,LAMP215,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,LAMPRD80,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,MEXP297,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,MYSP306,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP100,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP101,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP102,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP103,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP104,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP105,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP106,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP108,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP109,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP113,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP114,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP115,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP116,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP118,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP125,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP126,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP128,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP129,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP130,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP131,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP132,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP133,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP134,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP135,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP136,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP154,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP157,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP158,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP159,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP161,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP162,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP163,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP164,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP166,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP167,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP169,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP170,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP171,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP172,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP173,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP197,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP220,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP221,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP222,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP223,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD01,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD02,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD03,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD04,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD05,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD06,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD08,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD10,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD11,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD12,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD13,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD14,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD15,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD16,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD17,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD18,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD19,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD20,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD22,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD84,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD85,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NORP279,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,NZLP299,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,POLP291,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,PROD,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,QATP289,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,SGPP274,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,SWEP280,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,TWNP295,False,True,True
+SSD - Phoenix,Low Volume No Efficiency,Forest,ZAFP275,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCP150,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD02,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD03,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD04,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD06,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,AREP273,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUSP282,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUSP300,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUSPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUTP296,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,BRAP284,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,CANP288,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,CANPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,CHEP278,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,CHLP298,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,CHNPR01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,DEUP281,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,DNKP307,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,ESPP292,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP107,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP119,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP120,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP121,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP122,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP137,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP138,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP174,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP175,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP176,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP177,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP178,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP179,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP180,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP189,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP190,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP191,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP192,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP193,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP194,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP195,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP250,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP251,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP309,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD02,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD03,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD04,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD05,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD06,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD07,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD08,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD09,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD10,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,FRAP264,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP123,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP265,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP267,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP302,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,IDNP305,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,INDP287,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,INDPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,ISRP290,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,ITAP293,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,JPNP286,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,JPNP301,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,JPNPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,KORP216,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,LAMP152,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,LAMP215,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,LAMPRD80,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,MEXP297,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,MYSP306,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP100,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP101,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP102,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP103,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP104,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP105,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP106,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP108,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP109,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP113,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP114,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP115,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP116,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP118,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP125,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP126,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP128,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP129,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP130,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP131,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP132,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP133,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP134,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP135,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP136,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP154,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP156,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP157,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP158,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP159,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP161,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP162,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP163,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP164,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP166,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP167,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP169,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP170,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP171,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP172,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP173,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP197,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP220,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP221,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP222,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP223,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP242,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP243,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD01,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD02,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD03,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD04,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD05,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD06,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD08,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD10,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD11,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD12,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD13,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD14,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD15,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD16,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD17,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD18,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD19,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD20,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD22,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD84,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD85,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NORP279,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,NZLP299,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,POLP291,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,PROD,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,QATP289,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,SGPP274,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,SWEP280,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,TWNP295,False,True,True
+SSD - Phoenix,Low Volume With Efficiency,Forest,ZAFP275,False,True,True

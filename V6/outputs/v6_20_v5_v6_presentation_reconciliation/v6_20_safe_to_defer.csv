@@ -1,0 +1,8 @@
+"area","feature","reason_safe_to_defer","risk","notes"
+"Codebase hygiene","Dead section_explorer and section_forecast in ui/tabs.R","They are shadowed at runtime and cannot affect the rendered product.","Developer confusion; already caused edits with no visible effect.","Keep as evidence until V6.18 is formally closed."
+"Codebase hygiene","Disabled if (FALSE) blocks in server/server.R","Not evaluated at runtime.","Low; slightly larger file and reader confusion.","Remove together with the dead UI sections."
+"Scenario resolver","R/scenario_resolver.R","Never sourced by global.R, so it cannot influence behavior.","None while unwired.","Deliberately unwired since R7."
+"TTL","Legacy CSV data source","TTL is a documented prototype and is out of the Viewer/Forecast contract.","Medium if the owner later expects TTL over the new universe.","No V6.17 TTL input exists today."
+"Model universe, Tournament, Champion, Risks, Audit, Artifacts, Methodology, Version","Pages still served from tabs.R","Not shadowed and unchanged from V5; they read stable governed CSVs.","Low.","Only Viewer and Forecast were redefined."
+"Viewer","In-session row download","Generates a CSV from already prepared rows and never mutates artifacts.","Low.","Independent of the governed registry downloads."
+"Forecast","Prediction interval rendering","Code is conditional and inert while the artifact has no bounds.","Low; would become relevant only after regeneration.","Verified against the current Parquet schema."

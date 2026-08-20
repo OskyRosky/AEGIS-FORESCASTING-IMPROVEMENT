@@ -1,0 +1,10 @@
+item,reason,blocks_v6_0f,owner_next_stage,status
+T35 assistant works in Docker V6,Requires the container which is out of scope for this stage,no,V6.0H,DEFERRED
+Child select shows its default label when a parent value is set programmatically,Shiny re-renders the child selectInput and displays its first option while the previously set reactive value persists. Only observed when driving inputs from code; normal click-through navigation stays in sync,no,V6.0F follow-up or V6.0G,OPEN_COSMETIC
+llm_explain_ui accepts a button_label argument that it never renders,Pre-existing dead parameter in the legacy assistant module. Not fixed here because the assistant files must stay untouched in this stage,no,V6.0G,OPEN_PREEXISTING
+Assistant prose for the new pages reads slightly awkward,The legacy deterministic composer joins claim sentences with a fixed lead-in so the summary reads as Based on the governed artifacts currently available Each metric keeps a separate identity,no,V6.0G,OPEN_COSMETIC
+Assistant answers are page-scoped rather than per-selection,The legacy assistant resolves one response per page_id. Per-selection narrative would require modifying llm_explain.R which this stage deliberately avoided. assistant_metric_context.csv already carries the per-selection facts for that future change,no,V6.0G,OPEN_BY_DESIGN
+readr parsing warning at startup,Pre-existing warning raised by the legacy governed loader before this stage. Not introduced by the multi-metric work,no,V6.0G,OPEN_PREEXISTING
+Key and Forecast Version selects hold 474 and 873 options,Acceptable today but will need a server-side selectize or a search box if more metrics are onboarded,no,V6.0F follow-up,OPEN_SCALABILITY
+Units remain UNKNOWN across all metrics,Blocked by stakeholder decision D5. The UI blocks raw cross-metric aggregation and states the limitation,no,Stakeholders,OPEN_BLOCKED
+Screenshot evidence is low resolution,The integrated browser returned thumbnail captures. Full DOM text evidence was captured instead and is more precise,no,V6.0F,ACCEPTED

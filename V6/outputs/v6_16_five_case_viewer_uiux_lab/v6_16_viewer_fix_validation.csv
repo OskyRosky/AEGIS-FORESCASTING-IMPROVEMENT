@@ -1,0 +1,15 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V616VF-001,Viewer HTTP availability,"HTTP 200","HTTP 200 on port 8081",PASS,TRUE
+V616VF-002,Viewer page load,"Viewer opens from Forecasting navigation","Viewer section loaded and active",PASS,TRUE
+V616VF-003,Unified setup sequence,"Metric through Analyze Backtest in one setup panel","All eight steps remain in one panel",PASS,TRUE
+V616VF-004,Viewer metric scope,"Actual-bearing HDD metrics only","HDD - EDB and HDD - Basilisk; SSD-Phoenix absent",PASS,TRUE
+V616VF-005,Unavailable key options,"No status text represented as a key","HDD - Basilisk / Basilisk / Region has zero key options and blank value",PASS,TRUE
+V616VF-006,Unavailable message location,"Pilot limit shown outside dropdown","External message reads Backtest not available for this pilot",PASS,TRUE
+V616VF-007,Available pilot key,"Prepared case restores its real key","HDD - Basilisk / Basilisk / Forest resolves namprd07",PASS,TRUE
+V616VF-008,Model universe,"Exactly 15 verified AEGIS models","15 model checkboxes for an available case",PASS,TRUE
+V616VF-009,Horizon preservation,"Horizon remains available","5 through 30-day pilot controls remain",PASS,TRUE
+V616VF-010,Viewer chart,"Actual versus selected model forecasts","Actual and selected model series rendered",PASS,TRUE
+V616VF-011,Viewer data notes,"Required dimensions and counts","Metric, scenario, granularity, key, horizon, models, actual points, forecast points, and date range shown",PASS,TRUE
+V616VF-012,Rejected controls,"No Scenario Explorer, Multi-Metric, Forecast Version, or SSD-Phoenix","All absent from Viewer",PASS,TRUE
+V616VF-013,Prepared Viewer input,"Viewer reads only the five-case v2 pilot artifact","forecast_viewer_model_outputs_v2_pilot.csv is the only Viewer provider input",PASS,TRUE
+V616VF-014,Full-run guardrail,"No full HDD backtest","No 557-key or 596-key execution started",PASS,TRUE

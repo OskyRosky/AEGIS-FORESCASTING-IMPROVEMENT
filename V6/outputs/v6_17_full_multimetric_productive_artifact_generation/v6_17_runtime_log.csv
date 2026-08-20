@@ -1,0 +1,24 @@
+timestamp,phase,event,status,elapsed_minutes,remaining_minutes,details
+2026-08-14T15:08:57.870-06:00,Phase 0,TIMER_START,PASS,0.0,240.0,"Hard deadline 2026-08-14T19:08:57.870-06:00"
+2026-08-14T15:09:43.430-06:00,Phase 0,PRIMARY_WORKTREE_GATE,PASS,0.8,239.2,"Primary repository on main; closure and inventory gates present"
+2026-08-14T15:16:00.000-06:00,Phase 0,LOCAL_SCOPE_PROFILE,PASS,7.0,233.0,"596 Viewer series; 557 missing; HDD and SSD Forecast local; CPU/IOPS unavailable locally"
+2026-08-14T15:16:21-06:00,Phase A,PHASE_START,RUNNING,7.39,232.61,12 models; safe-stop reserve 38 minutes
+2026-08-14T15:16:24-06:00,Phase A,INPUT_PROFILE,PASS,7.44,232.56,"{""conflicting_revision_dates"": 1772, ""prepared_keys"": 557, ""reconciliation"": ""median of observed governed revisions at key/date grain"", ""scope_counts"": {""HDD - Basilisk/Basilisk/Forest"": 155, ""HDD - Basilisk/Basilisk/Region"": 47, ""HDD - EDB/Consumer/Forest"": 152, ""HDD - EDB/Consumer/Region"": 45, ""HDD - EDB/Enterprise/Forest"": 152, ""HDD - EDB/Enterprise/Region"": 6}, ""series_origin_units"": 4915}"
+2026-08-14T16:09:20-06:00,Phase A,PHASE_COMPLETE,PASS,60.38,179.62,58980 fits; 1769400 rows
+2026-08-14T16:09:37-06:00,Phase B,PHASE_START,RUNNING,60.67,179.33,3 models; safe-stop reserve 38 minutes
+2026-08-14T16:09:41-06:00,Phase B,INPUT_PROFILE,PASS,60.73,179.27,"{""conflicting_revision_dates"": 1772, ""prepared_keys"": 557, ""reconciliation"": ""median of observed governed revisions at key/date grain"", ""scope_counts"": {""HDD - Basilisk/Basilisk/Forest"": 155, ""HDD - Basilisk/Basilisk/Region"": 47, ""HDD - EDB/Consumer/Forest"": 152, ""HDD - EDB/Consumer/Region"": 45, ""HDD - EDB/Enterprise/Forest"": 152, ""HDD - EDB/Enterprise/Region"": 6}, ""series_origin_units"": 4915}"
+2026-08-14T16:10:04-06:00,Phase B,MODEL_FAILURE,FAIL,61.11,178.89,HDD - Basilisk|Basilisk|Forest|apcprd03|2026-03-07|FNAR-V2: FNAR-V2 produced invalid 30-row predictions
+2026-08-14T16:10:04-06:00,Phase B,PHASE_ABORT,FAIL,61.11,178.89,FNAR-V2 produced invalid 30-row predictions
+2026-08-14T16:13:23-06:00,Phase B,PHASE_START,RUNNING,64.43,175.57,3 models; safe-stop reserve 38 minutes
+2026-08-14T16:13:27-06:00,Phase B,INPUT_PROFILE,PASS,64.49,175.51,"{""conflicting_revision_dates"": 1772, ""prepared_keys"": 557, ""reconciliation"": ""median of observed governed revisions at key/date grain"", ""scope_counts"": {""HDD - Basilisk/Basilisk/Forest"": 155, ""HDD - Basilisk/Basilisk/Region"": 47, ""HDD - EDB/Consumer/Forest"": 152, ""HDD - EDB/Consumer/Region"": 45, ""HDD - EDB/Enterprise/Forest"": 152, ""HDD - EDB/Enterprise/Region"": 6}, ""series_origin_units"": 4915}"
+2026-08-14T16:14:30-06:00,Phase B,MODEL_FAILURE,FAIL,65.54,174.46,HDD - Basilisk|Basilisk|Forest|namprd00|2026-03-19|FNAR-V2: FNAR-V2 produced invalid 30-row predictions
+2026-08-14T16:14:30-06:00,Phase B,PHASE_ABORT,FAIL,65.54,174.46,FNAR-V2 produced invalid 30-row predictions
+2026-08-14T16:15:35-06:00,Phase B,PHASE_START,RUNNING,66.63,173.37,3 models; safe-stop reserve 38 minutes
+2026-08-14T16:15:39-06:00,Phase B,INPUT_PROFILE,PASS,66.69,173.31,"{""conflicting_revision_dates"": 1772, ""prepared_keys"": 557, ""reconciliation"": ""median of observed governed revisions at key/date grain"", ""scope_counts"": {""HDD - Basilisk/Basilisk/Forest"": 155, ""HDD - Basilisk/Basilisk/Region"": 47, ""HDD - EDB/Consumer/Forest"": 152, ""HDD - EDB/Consumer/Region"": 45, ""HDD - EDB/Enterprise/Forest"": 152, ""HDD - EDB/Enterprise/Region"": 6}, ""series_origin_units"": 4915}"
+2026-08-14T16:23:56-06:00,Phase B,PHASE_COMPLETE,PASS,74.98,165.02,14745 fits; 442350 rows
+"2026-08-14T16:23:56-06:00","Phase B","NUMERICAL_STABILITY_FINAL","PASS","74.98","165.02","Failed checkpoints archived; normalized neural targets and bounded FNAR-V2 tanh rerun passed 14745/14745 fits"
+"2026-08-14T16:24:23-06:00","Phase C","FORECAST_ASSEMBLY_COMPLETE","PASS","75.42","164.58","818980 rows; 896 local combinations; SSD-Phoenix forecast-only; CPU/IOPS not fabricated"
+"2026-08-14T16:25:27-06:00","Phase D","PRODUCTIVE_CSV_ASSEMBLY_COMPLETE","PASS","76.49","163.51","Viewer 2416050 rows; Forecast 818980 rows; duplicate and required-null checks passed"
+"2026-08-14T16:26:28-06:00","Phase D","PARQUET_STORAGE_COMPLETE","PASS","77.5","162.5","CSV and Parquet row counts reconciled for Viewer and Forecast"
+"2026-08-14T16:37:14-06:00","Phase E","DASHBOARD_LIVE_VALIDATION","PASS","88.27","151.73","HTTP 200; Viewer and Forecast rendered; 15 models; SSD-Phoenix forecast-only; Shiny reads prepared Parquet"
+"2026-08-14T16:37:14-06:00","Closure","AVAILABLE_SCOPE_COMPLETE","BLOCKED_SCOPE","88.27","151.73","All locally available productive scope complete; CPU/IOPS remain BLOCKED_NOT_AVAILABLE; V6.18 not started"

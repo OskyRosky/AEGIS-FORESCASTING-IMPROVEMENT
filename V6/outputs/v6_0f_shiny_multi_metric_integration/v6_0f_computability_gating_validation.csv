@@ -1,0 +1,5 @@
+"case","computability_status","expected_ui_behavior","observed_ui_behavior","status"
+"HDD-EDB region","accuracy_only","accuracy and cross-version enabled, curve off","views=accuracy_table,accuracy_heatmap,cross_version_trend,plan_to_plan; curve=False","PASS"
+"HDD-EDB forest","accuracy_only","accuracy and cross-version enabled, curve off","views=accuracy_table,accuracy_heatmap,cross_version_trend,plan_to_plan; curve=False","PASS"
+"SSD-Phoenix LVWE","single_version_accuracy_only","accuracy only, drift and curve off with reason","views=accuracy_table,accuracy_heatmap; drift=False; not_drift_notice=TRUE","PASS"
+"SSD-Phoenix LVNE","single_version_accuracy_only","accuracy only, drift and curve off with reason","views=accuracy_table,accuracy_heatmap; drift=False; not_drift_notice=TRUE","PASS"

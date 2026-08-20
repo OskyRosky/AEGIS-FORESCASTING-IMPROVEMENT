@@ -1,0 +1,8 @@
+case,expected_message,observed_message_or_logic,status,notes
+Memory selected,Out of scope: Memory has no populated forecast source in Tesseract.,status=OUT_OF_SCOPE -> VSX_EMPTY_MESSAGES$out_of_scope,PASS,Memory is not selectable so this is defensive
+Scenario documented but not exposed,Scenario documented in the inventory but not exposed in this release.,status=NOT_EXPOSED -> VSX_EMPTY_MESSAGES$not_exposed,PASS,""
+Metric not available in Phase 1,Metric not available in Phase 1. CPU and IOPS are scheduled for the next extraction.,status=NOT_AVAILABLE_IN_PHASE1 -> VSX_EMPTY_MESSAGES$not_in_phase1,PASS,""
+Blocked scenario mapping,Blocked: the scenario mapping for this metric is still undefined.,status=BLOCKED_O1 -> VSX_EMPTY_MESSAGES$blocked,PASS,""
+Forecast-only metric on the Viewer,Forecast-only: actuals are not available in Phase 1 for this metric and scenario.,expected_mode=FORECAST_ONLY -> amber notice,PASS,""
+Key with no data,No data for the selected combination in the current snapshot.,rows=0 -> VSX_EMPTY_MESSAGES$no_data,PASS,""
+Storage missing,Governed storage is not available. Run the R7 build step...,sr_storage_ready()=TRUE guards every output,PASS,storage present so the guard is not triggered

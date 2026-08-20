@@ -1,0 +1,15 @@
+{
+  "status_token": "V6_16_PILOT_BACKTEST_BUILD_COMPLETED",
+  "run_id": "V6_16_PILOT_20260814T111027",
+  "started_at": "2026-08-14T11:10:27",
+  "completed_at": "2026-08-14T11:10:37",
+  "cases": 5,
+  "origins_per_case": 3,
+  "models": 15,
+  "horizons": 30,
+  "rows": 6750,
+  "legacy_rows_reused": 1350,
+  "new_rows_generated": 5400,
+  "full_557_key_run_started": false,
+  "tesseract_accessed": false
+}

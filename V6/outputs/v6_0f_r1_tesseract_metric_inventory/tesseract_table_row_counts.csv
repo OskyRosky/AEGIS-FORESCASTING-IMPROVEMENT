@@ -1,0 +1,22 @@
+table_name,schema,table_type,row_count,date_column,min_date,max_date,distinct_versions,max_version
+SubstrateBE_Ssd_MCDB_ForecastForestSKU,dbo,BASE TABLE,30966833,DateTime,2023-07-30,2030-04-29,32,2026-03-01
+forecast_substrateBE_SSD_Phoenix_Organic,dbo,BASE TABLE,707069,DateTime,2025-08-08 00:00:00,2030-07-02 00:00:00,3,2026-03-05
+forecast_substrateBE_SSD_TotalForecast,dbo,BASE TABLE,26723954,Datetime,2024-02-08,2030-07-02,29,2026-03-12
+forecast_substrateBE_cpu,dbo,BASE TABLE,51194194,datadate,2020-11-27,2030-08-27,65,2026-07-02
+forecast_substrateBE_cpu_byDB_forest,dbo,BASE TABLE,44256529,Datetime,2024-11-16,2030-05-28,11,2026-04-01
+forecast_substrateBE_cpu_byDB_region,dbo,BASE TABLE,6221824,Datetime,2024-11-13,2030-03-27,12,2026-01-29
+forecast_substrateBE_cpu_region,dbo,BASE TABLE,8508120,Datetime,2022-02-01,2030-08-27,42,2026-07-02
+forecast_substrateBE_hdd,dbo,BASE TABLE,53922502,target_date,2019-07-01 00:00:00,2031-02-27 00:00:00,30998,2026-07-23 20:26:01
+forecast_substrateBE_hdd_region,dbo,BASE TABLE,10485054,DateTime,2017-01-01,2030-07-16,50,2026-07-22
+forecast_substrateBE_iops,dbo,BASE TABLE,32620690,datadate,2021-09-01,2030-02-26,43,2025-12-30
+forecast_substrateBE_iops_region,dbo,BASE TABLE,6451852,Datetime,2022-01-28,2030-02-27,37,2026-01-01
+SubstrateBE_SSD_Demand_History,dbo,BASE TABLE,54757,DataDate,2021-06-10,2021-11-08,,
+SubstrateBE_Ssd_PhoenixDB_ForecastForest,dbo,BASE TABLE,1614543,DateTime,2023-10-23,2028-09-29,11,2024-08-01
+SubstrateBE_Ssd_PhoenixDB_ForecastRegion,dbo,BASE TABLE,426246,DateTime,2023-11-16,2028-09-29,10,2024-08-01
+SubstrateBE_Ssd_MCDB_ForecastRegion,dbo,BASE TABLE,1074841,DateTime,2022-03-31,2028-09-29,31,2024-08-01
+SubstrateBE_SsdForecastForestSKU,dbo,BASE TABLE,1234534,DateTime,2023-07-30,2026-10-30,4,2023-11-01
+SubstrateBE_SsdForecastRegion,dbo,BASE TABLE,580213,DateTime,2022-03-31,2028-08-27,22,2023-11-01
+forecast_substrateBE_hdd_region_metrics,dbo,BASE TABLE,5317,,,,120,2026-08-12 13:07:12.429844
+forecast_substrateBE_hdd_forest_metrics,dbo,BASE TABLE,18414,,,,120,2026-08-12 13:07:12.682247
+forecast_substrateBE_ssd_phx_lvwe_metrics,dbo,BASE TABLE,16158,,,,120,2026-08-12 13:07:13.198956
+forecast_substrateBE_ssd_phx_lvne_metrics,dbo,BASE TABLE,16295,,,,121,2026-08-12 13:07:13.417194

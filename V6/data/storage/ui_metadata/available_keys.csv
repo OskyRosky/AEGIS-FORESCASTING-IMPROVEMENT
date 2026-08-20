@@ -1,0 +1,897 @@
+metric,scenario_ui_label,granularity,key,key_lower
+HDD - Basilisk,Basilisk,Forest,apcp150,apcp150
+HDD - Basilisk,Basilisk,Forest,apcp153,apcp153
+HDD - Basilisk,Basilisk,Forest,apcprd01,apcprd01
+HDD - Basilisk,Basilisk,Forest,apcprd02,apcprd02
+HDD - Basilisk,Basilisk,Forest,apcprd03,apcprd03
+HDD - Basilisk,Basilisk,Forest,apcprd04,apcprd04
+HDD - Basilisk,Basilisk,Forest,apcprd06,apcprd06
+HDD - Basilisk,Basilisk,Forest,arep273,arep273
+HDD - Basilisk,Basilisk,Forest,ausp282,ausp282
+HDD - Basilisk,Basilisk,Forest,ausp300,ausp300
+HDD - Basilisk,Basilisk,Forest,ausprd01,ausprd01
+HDD - Basilisk,Basilisk,Forest,autp296,autp296
+HDD - Basilisk,Basilisk,Forest,brap284,brap284
+HDD - Basilisk,Basilisk,Forest,canp288,canp288
+HDD - Basilisk,Basilisk,Forest,canprd01,canprd01
+HDD - Basilisk,Basilisk,Forest,chep278,chep278
+HDD - Basilisk,Basilisk,Forest,chlp298,chlp298
+HDD - Basilisk,Basilisk,Forest,chnpr01,chnpr01
+HDD - Basilisk,Basilisk,Forest,deup281,deup281
+HDD - Basilisk,Basilisk,Forest,dnkp307,dnkp307
+HDD - Basilisk,Basilisk,Forest,espp292,espp292
+HDD - Basilisk,Basilisk,Forest,eurp107,eurp107
+HDD - Basilisk,Basilisk,Forest,eurp119,eurp119
+HDD - Basilisk,Basilisk,Forest,eurp120,eurp120
+HDD - Basilisk,Basilisk,Forest,eurp121,eurp121
+HDD - Basilisk,Basilisk,Forest,eurp122,eurp122
+HDD - Basilisk,Basilisk,Forest,eurp137,eurp137
+HDD - Basilisk,Basilisk,Forest,eurp138,eurp138
+HDD - Basilisk,Basilisk,Forest,eurp174,eurp174
+HDD - Basilisk,Basilisk,Forest,eurp175,eurp175
+HDD - Basilisk,Basilisk,Forest,eurp176,eurp176
+HDD - Basilisk,Basilisk,Forest,eurp177,eurp177
+HDD - Basilisk,Basilisk,Forest,eurp178,eurp178
+HDD - Basilisk,Basilisk,Forest,eurp179,eurp179
+HDD - Basilisk,Basilisk,Forest,eurp180,eurp180
+HDD - Basilisk,Basilisk,Forest,eurp189,eurp189
+HDD - Basilisk,Basilisk,Forest,eurp190,eurp190
+HDD - Basilisk,Basilisk,Forest,eurp191,eurp191
+HDD - Basilisk,Basilisk,Forest,eurp192,eurp192
+HDD - Basilisk,Basilisk,Forest,eurp193,eurp193
+HDD - Basilisk,Basilisk,Forest,eurp194,eurp194
+HDD - Basilisk,Basilisk,Forest,eurp195,eurp195
+HDD - Basilisk,Basilisk,Forest,eurp250,eurp250
+HDD - Basilisk,Basilisk,Forest,eurp251,eurp251
+HDD - Basilisk,Basilisk,Forest,eurp309,eurp309
+HDD - Basilisk,Basilisk,Forest,eurprd01,eurprd01
+HDD - Basilisk,Basilisk,Forest,eurprd02,eurprd02
+HDD - Basilisk,Basilisk,Forest,eurprd03,eurprd03
+HDD - Basilisk,Basilisk,Forest,eurprd04,eurprd04
+HDD - Basilisk,Basilisk,Forest,eurprd05,eurprd05
+HDD - Basilisk,Basilisk,Forest,eurprd06,eurprd06
+HDD - Basilisk,Basilisk,Forest,eurprd07,eurprd07
+HDD - Basilisk,Basilisk,Forest,eurprd08,eurprd08
+HDD - Basilisk,Basilisk,Forest,eurprd09,eurprd09
+HDD - Basilisk,Basilisk,Forest,eurprd10,eurprd10
+HDD - Basilisk,Basilisk,Forest,eurprd83,eurprd83
+HDD - Basilisk,Basilisk,Forest,frap264,frap264
+HDD - Basilisk,Basilisk,Forest,gbrp123,gbrp123
+HDD - Basilisk,Basilisk,Forest,gbrp265,gbrp265
+HDD - Basilisk,Basilisk,Forest,gbrp267,gbrp267
+HDD - Basilisk,Basilisk,Forest,gbrp302,gbrp302
+HDD - Basilisk,Basilisk,Forest,idnp305,idnp305
+HDD - Basilisk,Basilisk,Forest,indp287,indp287
+HDD - Basilisk,Basilisk,Forest,indprd01,indprd01
+HDD - Basilisk,Basilisk,Forest,isrp290,isrp290
+HDD - Basilisk,Basilisk,Forest,itap293,itap293
+HDD - Basilisk,Basilisk,Forest,jpnp286,jpnp286
+HDD - Basilisk,Basilisk,Forest,jpnp301,jpnp301
+HDD - Basilisk,Basilisk,Forest,jpnprd01,jpnprd01
+HDD - Basilisk,Basilisk,Forest,korp216,korp216
+HDD - Basilisk,Basilisk,Forest,lamp152,lamp152
+HDD - Basilisk,Basilisk,Forest,lamp215,lamp215
+HDD - Basilisk,Basilisk,Forest,lamprd80,lamprd80
+HDD - Basilisk,Basilisk,Forest,mexp297,mexp297
+HDD - Basilisk,Basilisk,Forest,mysp306,mysp306
+HDD - Basilisk,Basilisk,Forest,namp100,namp100
+HDD - Basilisk,Basilisk,Forest,namp101,namp101
+HDD - Basilisk,Basilisk,Forest,namp102,namp102
+HDD - Basilisk,Basilisk,Forest,namp103,namp103
+HDD - Basilisk,Basilisk,Forest,namp104,namp104
+HDD - Basilisk,Basilisk,Forest,namp105,namp105
+HDD - Basilisk,Basilisk,Forest,namp106,namp106
+HDD - Basilisk,Basilisk,Forest,namp108,namp108
+HDD - Basilisk,Basilisk,Forest,namp109,namp109
+HDD - Basilisk,Basilisk,Forest,namp110,namp110
+HDD - Basilisk,Basilisk,Forest,namp111,namp111
+HDD - Basilisk,Basilisk,Forest,namp113,namp113
+HDD - Basilisk,Basilisk,Forest,namp114,namp114
+HDD - Basilisk,Basilisk,Forest,namp115,namp115
+HDD - Basilisk,Basilisk,Forest,namp116,namp116
+HDD - Basilisk,Basilisk,Forest,namp118,namp118
+HDD - Basilisk,Basilisk,Forest,namp125,namp125
+HDD - Basilisk,Basilisk,Forest,namp126,namp126
+HDD - Basilisk,Basilisk,Forest,namp128,namp128
+HDD - Basilisk,Basilisk,Forest,namp129,namp129
+HDD - Basilisk,Basilisk,Forest,namp130,namp130
+HDD - Basilisk,Basilisk,Forest,namp131,namp131
+HDD - Basilisk,Basilisk,Forest,namp132,namp132
+HDD - Basilisk,Basilisk,Forest,namp133,namp133
+HDD - Basilisk,Basilisk,Forest,namp134,namp134
+HDD - Basilisk,Basilisk,Forest,namp135,namp135
+HDD - Basilisk,Basilisk,Forest,namp136,namp136
+HDD - Basilisk,Basilisk,Forest,namp154,namp154
+HDD - Basilisk,Basilisk,Forest,namp157,namp157
+HDD - Basilisk,Basilisk,Forest,namp158,namp158
+HDD - Basilisk,Basilisk,Forest,namp159,namp159
+HDD - Basilisk,Basilisk,Forest,namp161,namp161
+HDD - Basilisk,Basilisk,Forest,namp162,namp162
+HDD - Basilisk,Basilisk,Forest,namp163,namp163
+HDD - Basilisk,Basilisk,Forest,namp164,namp164
+HDD - Basilisk,Basilisk,Forest,namp166,namp166
+HDD - Basilisk,Basilisk,Forest,namp167,namp167
+HDD - Basilisk,Basilisk,Forest,namp169,namp169
+HDD - Basilisk,Basilisk,Forest,namp170,namp170
+HDD - Basilisk,Basilisk,Forest,namp171,namp171
+HDD - Basilisk,Basilisk,Forest,namp172,namp172
+HDD - Basilisk,Basilisk,Forest,namp173,namp173
+HDD - Basilisk,Basilisk,Forest,namp197,namp197
+HDD - Basilisk,Basilisk,Forest,namp220,namp220
+HDD - Basilisk,Basilisk,Forest,namp221,namp221
+HDD - Basilisk,Basilisk,Forest,namp222,namp222
+HDD - Basilisk,Basilisk,Forest,namp223,namp223
+HDD - Basilisk,Basilisk,Forest,namp283,namp283
+HDD - Basilisk,Basilisk,Forest,namprd00,namprd00
+HDD - Basilisk,Basilisk,Forest,namprd02,namprd02
+HDD - Basilisk,Basilisk,Forest,namprd03,namprd03
+HDD - Basilisk,Basilisk,Forest,namprd04,namprd04
+HDD - Basilisk,Basilisk,Forest,namprd05,namprd05
+HDD - Basilisk,Basilisk,Forest,namprd06,namprd06
+HDD - Basilisk,Basilisk,Forest,namprd07,namprd07
+HDD - Basilisk,Basilisk,Forest,namprd08,namprd08
+HDD - Basilisk,Basilisk,Forest,namprd09,namprd09
+HDD - Basilisk,Basilisk,Forest,namprd10,namprd10
+HDD - Basilisk,Basilisk,Forest,namprd11,namprd11
+HDD - Basilisk,Basilisk,Forest,namprd12,namprd12
+HDD - Basilisk,Basilisk,Forest,namprd13,namprd13
+HDD - Basilisk,Basilisk,Forest,namprd14,namprd14
+HDD - Basilisk,Basilisk,Forest,namprd15,namprd15
+HDD - Basilisk,Basilisk,Forest,namprd16,namprd16
+HDD - Basilisk,Basilisk,Forest,namprd17,namprd17
+HDD - Basilisk,Basilisk,Forest,namprd18,namprd18
+HDD - Basilisk,Basilisk,Forest,namprd19,namprd19
+HDD - Basilisk,Basilisk,Forest,namprd20,namprd20
+HDD - Basilisk,Basilisk,Forest,namprd21,namprd21
+HDD - Basilisk,Basilisk,Forest,namprd22,namprd22
+HDD - Basilisk,Basilisk,Forest,namprd84,namprd84
+HDD - Basilisk,Basilisk,Forest,namprd85,namprd85
+HDD - Basilisk,Basilisk,Forest,norp279,norp279
+HDD - Basilisk,Basilisk,Forest,nzlp299,nzlp299
+HDD - Basilisk,Basilisk,Forest,polp291,polp291
+HDD - Basilisk,Basilisk,Forest,qatp289,qatp289
+HDD - Basilisk,Basilisk,Forest,sgpp274,sgpp274
+HDD - Basilisk,Basilisk,Forest,swep280,swep280
+HDD - Basilisk,Basilisk,Forest,twnp295,twnp295
+HDD - Basilisk,Basilisk,Forest,zafp275,zafp275
+HDD - Basilisk,Basilisk,Region,DNK-Go Local,dnk-go local
+HDD - Basilisk,Basilisk,Region,ESP-Go Local,esp-go local
+HDD - Basilisk,Basilisk,Region,EUR-Go Local,eur-go local
+HDD - Basilisk,Basilisk,Region,GBR-Go Local,gbr-go local
+HDD - Basilisk,Basilisk,Region,ISR-Go Local,isr-go local
+HDD - Basilisk,Basilisk,Region,ITA-Go Local,ita-go local
+HDD - Basilisk,Basilisk,Region,MEX-Go Local,mex-go local
+HDD - Basilisk,Basilisk,Region,POL-Go Local,pol-go local
+HDD - Basilisk,Basilisk,Region,apc-Dedicated,apc-dedicated
+HDD - Basilisk,Basilisk,Region,apc-MSIT,apc-msit
+HDD - Basilisk,Basilisk,Region,apc-Multitenant,apc-multitenant
+HDD - Basilisk,Basilisk,Region,are-Go Local,are-go local
+HDD - Basilisk,Basilisk,Region,aus-Go Local,aus-go local
+HDD - Basilisk,Basilisk,Region,aut-Go Local,aut-go local
+HDD - Basilisk,Basilisk,Region,bra-Go Local,bra-go local
+HDD - Basilisk,Basilisk,Region,can-Go Local,can-go local
+HDD - Basilisk,Basilisk,Region,che-Go Local,che-go local
+HDD - Basilisk,Basilisk,Region,chl-Go Local,chl-go local
+HDD - Basilisk,Basilisk,Region,chn-Gallatin,chn-gallatin
+HDD - Basilisk,Basilisk,Region,deu-Go Local,deu-go local
+HDD - Basilisk,Basilisk,Region,eur-Dedicated,eur-dedicated
+HDD - Basilisk,Basilisk,Region,eur-MSIT,eur-msit
+HDD - Basilisk,Basilisk,Region,eur-Multitenant,eur-multitenant
+HDD - Basilisk,Basilisk,Region,fra-Go Local,fra-go local
+HDD - Basilisk,Basilisk,Region,gbr-Dedicated,gbr-dedicated
+HDD - Basilisk,Basilisk,Region,gbr-Go Local,gbr-go local
+HDD - Basilisk,Basilisk,Region,idn-Go Local,idn-go local
+HDD - Basilisk,Basilisk,Region,ind-Go Local,ind-go local
+HDD - Basilisk,Basilisk,Region,jpn-Go Local,jpn-go local
+HDD - Basilisk,Basilisk,Region,kor-Go Local,kor-go local
+HDD - Basilisk,Basilisk,Region,lam-Multitenant,lam-multitenant
+HDD - Basilisk,Basilisk,Region,mys-Go Local,mys-go local
+HDD - Basilisk,Basilisk,Region,nam-Dedicated,nam-dedicated
+HDD - Basilisk,Basilisk,Region,nam-GCC Low,nam-gcc low
+HDD - Basilisk,Basilisk,Region,nam-ITAR DoD,nam-itar dod
+HDD - Basilisk,Basilisk,Region,nam-ITAR GCCH,nam-itar gcch
+HDD - Basilisk,Basilisk,Region,nam-MSIT,nam-msit
+HDD - Basilisk,Basilisk,Region,nam-Multitenant,nam-multitenant
+HDD - Basilisk,Basilisk,Region,nam-SDF,nam-sdf
+HDD - Basilisk,Basilisk,Region,nam-TDF,nam-tdf
+HDD - Basilisk,Basilisk,Region,nor-Go Local,nor-go local
+HDD - Basilisk,Basilisk,Region,nzl-Go Local,nzl-go local
+HDD - Basilisk,Basilisk,Region,qat-Go Local,qat-go local
+HDD - Basilisk,Basilisk,Region,sgp-Go Local,sgp-go local
+HDD - Basilisk,Basilisk,Region,swe-Go Local,swe-go local
+HDD - Basilisk,Basilisk,Region,twn-Go Local,twn-go local
+HDD - Basilisk,Basilisk,Region,zaf-Go Local,zaf-go local
+HDD - EDB,Consumer,Forest,APCP150,apcp150
+HDD - EDB,Consumer,Forest,APCP153,apcp153
+HDD - EDB,Consumer,Forest,APCPRD01,apcprd01
+HDD - EDB,Consumer,Forest,APCPRD02,apcprd02
+HDD - EDB,Consumer,Forest,APCPRD03,apcprd03
+HDD - EDB,Consumer,Forest,APCPRD04,apcprd04
+HDD - EDB,Consumer,Forest,APCPRD06,apcprd06
+HDD - EDB,Consumer,Forest,AREP273,arep273
+HDD - EDB,Consumer,Forest,AUSP282,ausp282
+HDD - EDB,Consumer,Forest,AUSP300,ausp300
+HDD - EDB,Consumer,Forest,AUSPRD01,ausprd01
+HDD - EDB,Consumer,Forest,AUTP296,autp296
+HDD - EDB,Consumer,Forest,BRAP284,brap284
+HDD - EDB,Consumer,Forest,CANP288,canp288
+HDD - EDB,Consumer,Forest,CANPRD01,canprd01
+HDD - EDB,Consumer,Forest,CHEP278,chep278
+HDD - EDB,Consumer,Forest,CHLP298,chlp298
+HDD - EDB,Consumer,Forest,CHNPR01,chnpr01
+HDD - EDB,Consumer,Forest,DEUP281,deup281
+HDD - EDB,Consumer,Forest,DNKP307,dnkp307
+HDD - EDB,Consumer,Forest,ESPP292,espp292
+HDD - EDB,Consumer,Forest,EURP107,eurp107
+HDD - EDB,Consumer,Forest,EURP119,eurp119
+HDD - EDB,Consumer,Forest,EURP120,eurp120
+HDD - EDB,Consumer,Forest,EURP121,eurp121
+HDD - EDB,Consumer,Forest,EURP122,eurp122
+HDD - EDB,Consumer,Forest,EURP137,eurp137
+HDD - EDB,Consumer,Forest,EURP138,eurp138
+HDD - EDB,Consumer,Forest,EURP175,eurp175
+HDD - EDB,Consumer,Forest,EURP176,eurp176
+HDD - EDB,Consumer,Forest,EURP177,eurp177
+HDD - EDB,Consumer,Forest,EURP178,eurp178
+HDD - EDB,Consumer,Forest,EURP179,eurp179
+HDD - EDB,Consumer,Forest,EURP180,eurp180
+HDD - EDB,Consumer,Forest,EURP189,eurp189
+HDD - EDB,Consumer,Forest,EURP190,eurp190
+HDD - EDB,Consumer,Forest,EURP191,eurp191
+HDD - EDB,Consumer,Forest,EURP192,eurp192
+HDD - EDB,Consumer,Forest,EURP193,eurp193
+HDD - EDB,Consumer,Forest,EURP194,eurp194
+HDD - EDB,Consumer,Forest,EURP195,eurp195
+HDD - EDB,Consumer,Forest,EURP250,eurp250
+HDD - EDB,Consumer,Forest,EURP251,eurp251
+HDD - EDB,Consumer,Forest,EURP309,eurp309
+HDD - EDB,Consumer,Forest,EURPRD01,eurprd01
+HDD - EDB,Consumer,Forest,EURPRD02,eurprd02
+HDD - EDB,Consumer,Forest,EURPRD03,eurprd03
+HDD - EDB,Consumer,Forest,EURPRD04,eurprd04
+HDD - EDB,Consumer,Forest,EURPRD05,eurprd05
+HDD - EDB,Consumer,Forest,EURPRD06,eurprd06
+HDD - EDB,Consumer,Forest,EURPRD07,eurprd07
+HDD - EDB,Consumer,Forest,EURPRD08,eurprd08
+HDD - EDB,Consumer,Forest,EURPRD09,eurprd09
+HDD - EDB,Consumer,Forest,EURPRD10,eurprd10
+HDD - EDB,Consumer,Forest,EURPRD83,eurprd83
+HDD - EDB,Consumer,Forest,FRAP264,frap264
+HDD - EDB,Consumer,Forest,GBRP123,gbrp123
+HDD - EDB,Consumer,Forest,GBRP265,gbrp265
+HDD - EDB,Consumer,Forest,GBRP267,gbrp267
+HDD - EDB,Consumer,Forest,GBRP302,gbrp302
+HDD - EDB,Consumer,Forest,IDNP305,idnp305
+HDD - EDB,Consumer,Forest,INDP287,indp287
+HDD - EDB,Consumer,Forest,INDPRD01,indprd01
+HDD - EDB,Consumer,Forest,ISRP290,isrp290
+HDD - EDB,Consumer,Forest,ITAP293,itap293
+HDD - EDB,Consumer,Forest,JPNP286,jpnp286
+HDD - EDB,Consumer,Forest,JPNP301,jpnp301
+HDD - EDB,Consumer,Forest,JPNPRD01,jpnprd01
+HDD - EDB,Consumer,Forest,KORP216,korp216
+HDD - EDB,Consumer,Forest,LAMP152,lamp152
+HDD - EDB,Consumer,Forest,LAMP215,lamp215
+HDD - EDB,Consumer,Forest,LAMPRD80,lamprd80
+HDD - EDB,Consumer,Forest,MEXP297,mexp297
+HDD - EDB,Consumer,Forest,MYSP306,mysp306
+HDD - EDB,Consumer,Forest,NAMP100,namp100
+HDD - EDB,Consumer,Forest,NAMP101,namp101
+HDD - EDB,Consumer,Forest,NAMP103,namp103
+HDD - EDB,Consumer,Forest,NAMP104,namp104
+HDD - EDB,Consumer,Forest,NAMP105,namp105
+HDD - EDB,Consumer,Forest,NAMP106,namp106
+HDD - EDB,Consumer,Forest,NAMP108,namp108
+HDD - EDB,Consumer,Forest,NAMP109,namp109
+HDD - EDB,Consumer,Forest,NAMP113,namp113
+HDD - EDB,Consumer,Forest,NAMP114,namp114
+HDD - EDB,Consumer,Forest,NAMP115,namp115
+HDD - EDB,Consumer,Forest,NAMP116,namp116
+HDD - EDB,Consumer,Forest,NAMP118,namp118
+HDD - EDB,Consumer,Forest,NAMP125,namp125
+HDD - EDB,Consumer,Forest,NAMP126,namp126
+HDD - EDB,Consumer,Forest,NAMP128,namp128
+HDD - EDB,Consumer,Forest,NAMP129,namp129
+HDD - EDB,Consumer,Forest,NAMP130,namp130
+HDD - EDB,Consumer,Forest,NAMP131,namp131
+HDD - EDB,Consumer,Forest,NAMP132,namp132
+HDD - EDB,Consumer,Forest,NAMP133,namp133
+HDD - EDB,Consumer,Forest,NAMP134,namp134
+HDD - EDB,Consumer,Forest,NAMP135,namp135
+HDD - EDB,Consumer,Forest,NAMP136,namp136
+HDD - EDB,Consumer,Forest,NAMP154,namp154
+HDD - EDB,Consumer,Forest,NAMP157,namp157
+HDD - EDB,Consumer,Forest,NAMP158,namp158
+HDD - EDB,Consumer,Forest,NAMP159,namp159
+HDD - EDB,Consumer,Forest,NAMP161,namp161
+HDD - EDB,Consumer,Forest,NAMP162,namp162
+HDD - EDB,Consumer,Forest,NAMP163,namp163
+HDD - EDB,Consumer,Forest,NAMP164,namp164
+HDD - EDB,Consumer,Forest,NAMP166,namp166
+HDD - EDB,Consumer,Forest,NAMP167,namp167
+HDD - EDB,Consumer,Forest,NAMP169,namp169
+HDD - EDB,Consumer,Forest,NAMP170,namp170
+HDD - EDB,Consumer,Forest,NAMP171,namp171
+HDD - EDB,Consumer,Forest,NAMP172,namp172
+HDD - EDB,Consumer,Forest,NAMP173,namp173
+HDD - EDB,Consumer,Forest,NAMP197,namp197
+HDD - EDB,Consumer,Forest,NAMP220,namp220
+HDD - EDB,Consumer,Forest,NAMP221,namp221
+HDD - EDB,Consumer,Forest,NAMP222,namp222
+HDD - EDB,Consumer,Forest,NAMP223,namp223
+HDD - EDB,Consumer,Forest,NAMP283,namp283
+HDD - EDB,Consumer,Forest,NAMPRD00,namprd00
+HDD - EDB,Consumer,Forest,NAMPRD01,namprd01
+HDD - EDB,Consumer,Forest,NAMPRD02,namprd02
+HDD - EDB,Consumer,Forest,NAMPRD03,namprd03
+HDD - EDB,Consumer,Forest,NAMPRD04,namprd04
+HDD - EDB,Consumer,Forest,NAMPRD05,namprd05
+HDD - EDB,Consumer,Forest,NAMPRD06,namprd06
+HDD - EDB,Consumer,Forest,NAMPRD07,namprd07
+HDD - EDB,Consumer,Forest,NAMPRD08,namprd08
+HDD - EDB,Consumer,Forest,NAMPRD09,namprd09
+HDD - EDB,Consumer,Forest,NAMPRD10,namprd10
+HDD - EDB,Consumer,Forest,NAMPRD11,namprd11
+HDD - EDB,Consumer,Forest,NAMPRD12,namprd12
+HDD - EDB,Consumer,Forest,NAMPRD13,namprd13
+HDD - EDB,Consumer,Forest,NAMPRD14,namprd14
+HDD - EDB,Consumer,Forest,NAMPRD15,namprd15
+HDD - EDB,Consumer,Forest,NAMPRD16,namprd16
+HDD - EDB,Consumer,Forest,NAMPRD17,namprd17
+HDD - EDB,Consumer,Forest,NAMPRD18,namprd18
+HDD - EDB,Consumer,Forest,NAMPRD19,namprd19
+HDD - EDB,Consumer,Forest,NAMPRD20,namprd20
+HDD - EDB,Consumer,Forest,NAMPRD21,namprd21
+HDD - EDB,Consumer,Forest,NAMPRD22,namprd22
+HDD - EDB,Consumer,Forest,NAMPRD84,namprd84
+HDD - EDB,Consumer,Forest,NAMPRD85,namprd85
+HDD - EDB,Consumer,Forest,NORP279,norp279
+HDD - EDB,Consumer,Forest,NZLP299,nzlp299
+HDD - EDB,Consumer,Forest,POLP291,polp291
+HDD - EDB,Consumer,Forest,QATP289,qatp289
+HDD - EDB,Consumer,Forest,SGPP274,sgpp274
+HDD - EDB,Consumer,Forest,SWEP280,swep280
+HDD - EDB,Consumer,Forest,TWNP295,twnp295
+HDD - EDB,Consumer,Forest,ZAFP275,zafp275
+HDD - EDB,Consumer,Region,APC-Dedicated,apc-dedicated
+HDD - EDB,Consumer,Region,APC-MSIT,apc-msit
+HDD - EDB,Consumer,Region,APC-Multitenant,apc-multitenant
+HDD - EDB,Consumer,Region,ARE-Go Local,are-go local
+HDD - EDB,Consumer,Region,AUS-Go Local,aus-go local
+HDD - EDB,Consumer,Region,AUT-Go Local,aut-go local
+HDD - EDB,Consumer,Region,BRA-Go Local,bra-go local
+HDD - EDB,Consumer,Region,CAN-Go Local,can-go local
+HDD - EDB,Consumer,Region,CHE-Go Local,che-go local
+HDD - EDB,Consumer,Region,CHL-Go Local,chl-go local
+HDD - EDB,Consumer,Region,DEU-Go Local,deu-go local
+HDD - EDB,Consumer,Region,DNK-Go Local,dnk-go local
+HDD - EDB,Consumer,Region,ESP-Go Local,esp-go local
+HDD - EDB,Consumer,Region,EUR-Dedicated,eur-dedicated
+HDD - EDB,Consumer,Region,EUR-Go Local,eur-go local
+HDD - EDB,Consumer,Region,EUR-MSIT,eur-msit
+HDD - EDB,Consumer,Region,EUR-Multitenant,eur-multitenant
+HDD - EDB,Consumer,Region,FRA-Go Local,fra-go local
+HDD - EDB,Consumer,Region,GBR-Dedicated,gbr-dedicated
+HDD - EDB,Consumer,Region,GBR-Go Local,gbr-go local
+HDD - EDB,Consumer,Region,IDN-Go Local,idn-go local
+HDD - EDB,Consumer,Region,IND-Go Local,ind-go local
+HDD - EDB,Consumer,Region,ISR-Go Local,isr-go local
+HDD - EDB,Consumer,Region,ITA-Go Local,ita-go local
+HDD - EDB,Consumer,Region,JPN-Go Local,jpn-go local
+HDD - EDB,Consumer,Region,KOR-Go Local,kor-go local
+HDD - EDB,Consumer,Region,LAM-Multitenant,lam-multitenant
+HDD - EDB,Consumer,Region,MEX-Go Local,mex-go local
+HDD - EDB,Consumer,Region,MYS-Go Local,mys-go local
+HDD - EDB,Consumer,Region,NAM-Dedicated,nam-dedicated
+HDD - EDB,Consumer,Region,NAM-GCC Low,nam-gcc low
+HDD - EDB,Consumer,Region,NAM-ITAR DoD,nam-itar dod
+HDD - EDB,Consumer,Region,NAM-ITAR GCCH,nam-itar gcch
+HDD - EDB,Consumer,Region,NAM-MSIT,nam-msit
+HDD - EDB,Consumer,Region,NAM-Multitenant,nam-multitenant
+HDD - EDB,Consumer,Region,NAM-SDF,nam-sdf
+HDD - EDB,Consumer,Region,NAM-TDF,nam-tdf
+HDD - EDB,Consumer,Region,NOR-Go Local,nor-go local
+HDD - EDB,Consumer,Region,NZL-Go Local,nzl-go local
+HDD - EDB,Consumer,Region,POL-Go Local,pol-go local
+HDD - EDB,Consumer,Region,QAT-Go Local,qat-go local
+HDD - EDB,Consumer,Region,SGP-Go Local,sgp-go local
+HDD - EDB,Consumer,Region,SWE-Go Local,swe-go local
+HDD - EDB,Consumer,Region,TWN-Go Local,twn-go local
+HDD - EDB,Consumer,Region,ZAF-Go Local,zaf-go local
+HDD - EDB,Enterprise,Forest,APCP150,apcp150
+HDD - EDB,Enterprise,Forest,APCP153,apcp153
+HDD - EDB,Enterprise,Forest,APCPRD01,apcprd01
+HDD - EDB,Enterprise,Forest,APCPRD02,apcprd02
+HDD - EDB,Enterprise,Forest,APCPRD03,apcprd03
+HDD - EDB,Enterprise,Forest,APCPRD04,apcprd04
+HDD - EDB,Enterprise,Forest,APCPRD06,apcprd06
+HDD - EDB,Enterprise,Forest,AREP273,arep273
+HDD - EDB,Enterprise,Forest,AUSP282,ausp282
+HDD - EDB,Enterprise,Forest,AUSP300,ausp300
+HDD - EDB,Enterprise,Forest,AUSPRD01,ausprd01
+HDD - EDB,Enterprise,Forest,AUTP296,autp296
+HDD - EDB,Enterprise,Forest,BRAP284,brap284
+HDD - EDB,Enterprise,Forest,CANP288,canp288
+HDD - EDB,Enterprise,Forest,CANPRD01,canprd01
+HDD - EDB,Enterprise,Forest,CHEP278,chep278
+HDD - EDB,Enterprise,Forest,CHLP298,chlp298
+HDD - EDB,Enterprise,Forest,CHNPR01,chnpr01
+HDD - EDB,Enterprise,Forest,DEUP281,deup281
+HDD - EDB,Enterprise,Forest,DNKP307,dnkp307
+HDD - EDB,Enterprise,Forest,ESPP292,espp292
+HDD - EDB,Enterprise,Forest,EURP107,eurp107
+HDD - EDB,Enterprise,Forest,EURP119,eurp119
+HDD - EDB,Enterprise,Forest,EURP120,eurp120
+HDD - EDB,Enterprise,Forest,EURP121,eurp121
+HDD - EDB,Enterprise,Forest,EURP122,eurp122
+HDD - EDB,Enterprise,Forest,EURP137,eurp137
+HDD - EDB,Enterprise,Forest,EURP138,eurp138
+HDD - EDB,Enterprise,Forest,EURP175,eurp175
+HDD - EDB,Enterprise,Forest,EURP176,eurp176
+HDD - EDB,Enterprise,Forest,EURP177,eurp177
+HDD - EDB,Enterprise,Forest,EURP178,eurp178
+HDD - EDB,Enterprise,Forest,EURP179,eurp179
+HDD - EDB,Enterprise,Forest,EURP180,eurp180
+HDD - EDB,Enterprise,Forest,EURP189,eurp189
+HDD - EDB,Enterprise,Forest,EURP190,eurp190
+HDD - EDB,Enterprise,Forest,EURP191,eurp191
+HDD - EDB,Enterprise,Forest,EURP192,eurp192
+HDD - EDB,Enterprise,Forest,EURP193,eurp193
+HDD - EDB,Enterprise,Forest,EURP194,eurp194
+HDD - EDB,Enterprise,Forest,EURP195,eurp195
+HDD - EDB,Enterprise,Forest,EURP250,eurp250
+HDD - EDB,Enterprise,Forest,EURP251,eurp251
+HDD - EDB,Enterprise,Forest,EURP309,eurp309
+HDD - EDB,Enterprise,Forest,EURPRD01,eurprd01
+HDD - EDB,Enterprise,Forest,EURPRD02,eurprd02
+HDD - EDB,Enterprise,Forest,EURPRD03,eurprd03
+HDD - EDB,Enterprise,Forest,EURPRD04,eurprd04
+HDD - EDB,Enterprise,Forest,EURPRD05,eurprd05
+HDD - EDB,Enterprise,Forest,EURPRD06,eurprd06
+HDD - EDB,Enterprise,Forest,EURPRD07,eurprd07
+HDD - EDB,Enterprise,Forest,EURPRD08,eurprd08
+HDD - EDB,Enterprise,Forest,EURPRD09,eurprd09
+HDD - EDB,Enterprise,Forest,EURPRD10,eurprd10
+HDD - EDB,Enterprise,Forest,EURPRD83,eurprd83
+HDD - EDB,Enterprise,Forest,FRAP264,frap264
+HDD - EDB,Enterprise,Forest,GBRP123,gbrp123
+HDD - EDB,Enterprise,Forest,GBRP265,gbrp265
+HDD - EDB,Enterprise,Forest,GBRP267,gbrp267
+HDD - EDB,Enterprise,Forest,GBRP302,gbrp302
+HDD - EDB,Enterprise,Forest,IDNP305,idnp305
+HDD - EDB,Enterprise,Forest,INDP287,indp287
+HDD - EDB,Enterprise,Forest,INDPRD01,indprd01
+HDD - EDB,Enterprise,Forest,ISRP290,isrp290
+HDD - EDB,Enterprise,Forest,ITAP293,itap293
+HDD - EDB,Enterprise,Forest,JPNP286,jpnp286
+HDD - EDB,Enterprise,Forest,JPNP301,jpnp301
+HDD - EDB,Enterprise,Forest,JPNPRD01,jpnprd01
+HDD - EDB,Enterprise,Forest,KORP216,korp216
+HDD - EDB,Enterprise,Forest,LAMP152,lamp152
+HDD - EDB,Enterprise,Forest,LAMP215,lamp215
+HDD - EDB,Enterprise,Forest,LAMPRD80,lamprd80
+HDD - EDB,Enterprise,Forest,MEXP297,mexp297
+HDD - EDB,Enterprise,Forest,MYSP306,mysp306
+HDD - EDB,Enterprise,Forest,NAMP100,namp100
+HDD - EDB,Enterprise,Forest,NAMP101,namp101
+HDD - EDB,Enterprise,Forest,NAMP103,namp103
+HDD - EDB,Enterprise,Forest,NAMP104,namp104
+HDD - EDB,Enterprise,Forest,NAMP105,namp105
+HDD - EDB,Enterprise,Forest,NAMP106,namp106
+HDD - EDB,Enterprise,Forest,NAMP108,namp108
+HDD - EDB,Enterprise,Forest,NAMP109,namp109
+HDD - EDB,Enterprise,Forest,NAMP113,namp113
+HDD - EDB,Enterprise,Forest,NAMP114,namp114
+HDD - EDB,Enterprise,Forest,NAMP115,namp115
+HDD - EDB,Enterprise,Forest,NAMP116,namp116
+HDD - EDB,Enterprise,Forest,NAMP118,namp118
+HDD - EDB,Enterprise,Forest,NAMP125,namp125
+HDD - EDB,Enterprise,Forest,NAMP126,namp126
+HDD - EDB,Enterprise,Forest,NAMP128,namp128
+HDD - EDB,Enterprise,Forest,NAMP129,namp129
+HDD - EDB,Enterprise,Forest,NAMP130,namp130
+HDD - EDB,Enterprise,Forest,NAMP131,namp131
+HDD - EDB,Enterprise,Forest,NAMP132,namp132
+HDD - EDB,Enterprise,Forest,NAMP133,namp133
+HDD - EDB,Enterprise,Forest,NAMP134,namp134
+HDD - EDB,Enterprise,Forest,NAMP135,namp135
+HDD - EDB,Enterprise,Forest,NAMP136,namp136
+HDD - EDB,Enterprise,Forest,NAMP154,namp154
+HDD - EDB,Enterprise,Forest,NAMP157,namp157
+HDD - EDB,Enterprise,Forest,NAMP158,namp158
+HDD - EDB,Enterprise,Forest,NAMP159,namp159
+HDD - EDB,Enterprise,Forest,NAMP161,namp161
+HDD - EDB,Enterprise,Forest,NAMP162,namp162
+HDD - EDB,Enterprise,Forest,NAMP163,namp163
+HDD - EDB,Enterprise,Forest,NAMP164,namp164
+HDD - EDB,Enterprise,Forest,NAMP166,namp166
+HDD - EDB,Enterprise,Forest,NAMP167,namp167
+HDD - EDB,Enterprise,Forest,NAMP169,namp169
+HDD - EDB,Enterprise,Forest,NAMP170,namp170
+HDD - EDB,Enterprise,Forest,NAMP171,namp171
+HDD - EDB,Enterprise,Forest,NAMP172,namp172
+HDD - EDB,Enterprise,Forest,NAMP173,namp173
+HDD - EDB,Enterprise,Forest,NAMP197,namp197
+HDD - EDB,Enterprise,Forest,NAMP220,namp220
+HDD - EDB,Enterprise,Forest,NAMP221,namp221
+HDD - EDB,Enterprise,Forest,NAMP222,namp222
+HDD - EDB,Enterprise,Forest,NAMP223,namp223
+HDD - EDB,Enterprise,Forest,NAMP283,namp283
+HDD - EDB,Enterprise,Forest,NAMPRD00,namprd00
+HDD - EDB,Enterprise,Forest,NAMPRD01,namprd01
+HDD - EDB,Enterprise,Forest,NAMPRD02,namprd02
+HDD - EDB,Enterprise,Forest,NAMPRD03,namprd03
+HDD - EDB,Enterprise,Forest,NAMPRD04,namprd04
+HDD - EDB,Enterprise,Forest,NAMPRD05,namprd05
+HDD - EDB,Enterprise,Forest,NAMPRD06,namprd06
+HDD - EDB,Enterprise,Forest,NAMPRD07,namprd07
+HDD - EDB,Enterprise,Forest,NAMPRD08,namprd08
+HDD - EDB,Enterprise,Forest,NAMPRD09,namprd09
+HDD - EDB,Enterprise,Forest,NAMPRD10,namprd10
+HDD - EDB,Enterprise,Forest,NAMPRD11,namprd11
+HDD - EDB,Enterprise,Forest,NAMPRD12,namprd12
+HDD - EDB,Enterprise,Forest,NAMPRD13,namprd13
+HDD - EDB,Enterprise,Forest,NAMPRD14,namprd14
+HDD - EDB,Enterprise,Forest,NAMPRD15,namprd15
+HDD - EDB,Enterprise,Forest,NAMPRD16,namprd16
+HDD - EDB,Enterprise,Forest,NAMPRD17,namprd17
+HDD - EDB,Enterprise,Forest,NAMPRD18,namprd18
+HDD - EDB,Enterprise,Forest,NAMPRD19,namprd19
+HDD - EDB,Enterprise,Forest,NAMPRD20,namprd20
+HDD - EDB,Enterprise,Forest,NAMPRD21,namprd21
+HDD - EDB,Enterprise,Forest,NAMPRD22,namprd22
+HDD - EDB,Enterprise,Forest,NAMPRD84,namprd84
+HDD - EDB,Enterprise,Forest,NAMPRD85,namprd85
+HDD - EDB,Enterprise,Forest,NORP279,norp279
+HDD - EDB,Enterprise,Forest,NZLP299,nzlp299
+HDD - EDB,Enterprise,Forest,POLP291,polp291
+HDD - EDB,Enterprise,Forest,QATP289,qatp289
+HDD - EDB,Enterprise,Forest,SGPP274,sgpp274
+HDD - EDB,Enterprise,Forest,SWEP280,swep280
+HDD - EDB,Enterprise,Forest,TWNP295,twnp295
+HDD - EDB,Enterprise,Forest,ZAFP275,zafp275
+HDD - EDB,Enterprise,Region,APC-Dedicated,apc-dedicated
+HDD - EDB,Enterprise,Region,APC-MSIT,apc-msit
+HDD - EDB,Enterprise,Region,APC-Multitenant,apc-multitenant
+HDD - EDB,Enterprise,Region,ARE-Go Local,are-go local
+HDD - EDB,Enterprise,Region,AUS-Go Local,aus-go local
+HDD - EDB,Enterprise,Region,AUT-Go Local,aut-go local
+HDD - EDB,Enterprise,Region,BRA-Go Local,bra-go local
+HDD - EDB,Enterprise,Region,CAN-Go Local,can-go local
+HDD - EDB,Enterprise,Region,CHE-Go Local,che-go local
+HDD - EDB,Enterprise,Region,CHL-Go Local,chl-go local
+HDD - EDB,Enterprise,Region,DEU-Go Local,deu-go local
+HDD - EDB,Enterprise,Region,DNK-Go Local,dnk-go local
+HDD - EDB,Enterprise,Region,ESP-Go Local,esp-go local
+HDD - EDB,Enterprise,Region,EUR-Dedicated,eur-dedicated
+HDD - EDB,Enterprise,Region,EUR-Go Local,eur-go local
+HDD - EDB,Enterprise,Region,EUR-MSIT,eur-msit
+HDD - EDB,Enterprise,Region,EUR-Multitenant,eur-multitenant
+HDD - EDB,Enterprise,Region,FRA-Go Local,fra-go local
+HDD - EDB,Enterprise,Region,GBR-Dedicated,gbr-dedicated
+HDD - EDB,Enterprise,Region,GBR-Go Local,gbr-go local
+HDD - EDB,Enterprise,Region,IDN-Go Local,idn-go local
+HDD - EDB,Enterprise,Region,IND-Go Local,ind-go local
+HDD - EDB,Enterprise,Region,ISR-Go Local,isr-go local
+HDD - EDB,Enterprise,Region,ITA-Go Local,ita-go local
+HDD - EDB,Enterprise,Region,JPN-Go Local,jpn-go local
+HDD - EDB,Enterprise,Region,KOR-Go Local,kor-go local
+HDD - EDB,Enterprise,Region,LAM-Multitenant,lam-multitenant
+HDD - EDB,Enterprise,Region,MEX-Go Local,mex-go local
+HDD - EDB,Enterprise,Region,MYS-Go Local,mys-go local
+HDD - EDB,Enterprise,Region,NAM-Dedicated,nam-dedicated
+HDD - EDB,Enterprise,Region,NAM-GCC Low,nam-gcc low
+HDD - EDB,Enterprise,Region,NAM-ITAR DoD,nam-itar dod
+HDD - EDB,Enterprise,Region,NAM-ITAR GCCH,nam-itar gcch
+HDD - EDB,Enterprise,Region,NAM-MSIT,nam-msit
+HDD - EDB,Enterprise,Region,NAM-Multitenant,nam-multitenant
+HDD - EDB,Enterprise,Region,NAM-SDF,nam-sdf
+HDD - EDB,Enterprise,Region,NAM-TDF,nam-tdf
+HDD - EDB,Enterprise,Region,NOR-Go Local,nor-go local
+HDD - EDB,Enterprise,Region,NZL-Go Local,nzl-go local
+HDD - EDB,Enterprise,Region,POL-Go Local,pol-go local
+HDD - EDB,Enterprise,Region,QAT-Go Local,qat-go local
+HDD - EDB,Enterprise,Region,SGP-Go Local,sgp-go local
+HDD - EDB,Enterprise,Region,SWE-Go Local,swe-go local
+HDD - EDB,Enterprise,Region,TWN-Go Local,twn-go local
+HDD - EDB,Enterprise,Region,ZAF-Go Local,zaf-go local
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCP150,apcp150
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD01,apcprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD02,apcprd02
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD03,apcprd03
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD04,apcprd04
+SSD - Phoenix,Low Volume No Efficiency,Forest,APCPRD06,apcprd06
+SSD - Phoenix,Low Volume No Efficiency,Forest,AREP273,arep273
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUSP282,ausp282
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUSP300,ausp300
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUSPRD01,ausprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,AUTP296,autp296
+SSD - Phoenix,Low Volume No Efficiency,Forest,BRAP284,brap284
+SSD - Phoenix,Low Volume No Efficiency,Forest,CANP288,canp288
+SSD - Phoenix,Low Volume No Efficiency,Forest,CANPRD01,canprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,CHEP278,chep278
+SSD - Phoenix,Low Volume No Efficiency,Forest,CHLP298,chlp298
+SSD - Phoenix,Low Volume No Efficiency,Forest,DEUP281,deup281
+SSD - Phoenix,Low Volume No Efficiency,Forest,DNKP307,dnkp307
+SSD - Phoenix,Low Volume No Efficiency,Forest,ESPP292,espp292
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP107,eurp107
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP119,eurp119
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP120,eurp120
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP121,eurp121
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP122,eurp122
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP137,eurp137
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP138,eurp138
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP174,eurp174
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP175,eurp175
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP176,eurp176
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP177,eurp177
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP178,eurp178
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP179,eurp179
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP180,eurp180
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP189,eurp189
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP190,eurp190
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP191,eurp191
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP192,eurp192
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP193,eurp193
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP194,eurp194
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP195,eurp195
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP250,eurp250
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP251,eurp251
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURP309,eurp309
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD01,eurprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD02,eurprd02
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD03,eurprd03
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD04,eurprd04
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD05,eurprd05
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD06,eurprd06
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD07,eurprd07
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD08,eurprd08
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD09,eurprd09
+SSD - Phoenix,Low Volume No Efficiency,Forest,EURPRD10,eurprd10
+SSD - Phoenix,Low Volume No Efficiency,Forest,FRAP264,frap264
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP123,gbrp123
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP265,gbrp265
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP267,gbrp267
+SSD - Phoenix,Low Volume No Efficiency,Forest,GBRP302,gbrp302
+SSD - Phoenix,Low Volume No Efficiency,Forest,IDNP305,idnp305
+SSD - Phoenix,Low Volume No Efficiency,Forest,INDP287,indp287
+SSD - Phoenix,Low Volume No Efficiency,Forest,INDPRD01,indprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,ISRP290,isrp290
+SSD - Phoenix,Low Volume No Efficiency,Forest,ITAP293,itap293
+SSD - Phoenix,Low Volume No Efficiency,Forest,JPNP286,jpnp286
+SSD - Phoenix,Low Volume No Efficiency,Forest,JPNP301,jpnp301
+SSD - Phoenix,Low Volume No Efficiency,Forest,JPNPRD01,jpnprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,KORP216,korp216
+SSD - Phoenix,Low Volume No Efficiency,Forest,LAMP152,lamp152
+SSD - Phoenix,Low Volume No Efficiency,Forest,LAMP215,lamp215
+SSD - Phoenix,Low Volume No Efficiency,Forest,LAMPRD80,lamprd80
+SSD - Phoenix,Low Volume No Efficiency,Forest,MEXP297,mexp297
+SSD - Phoenix,Low Volume No Efficiency,Forest,MYSP306,mysp306
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP100,namp100
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP101,namp101
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP102,namp102
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP103,namp103
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP104,namp104
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP105,namp105
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP106,namp106
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP108,namp108
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP109,namp109
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP113,namp113
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP114,namp114
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP115,namp115
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP116,namp116
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP118,namp118
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP125,namp125
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP126,namp126
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP128,namp128
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP129,namp129
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP130,namp130
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP131,namp131
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP132,namp132
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP133,namp133
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP134,namp134
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP135,namp135
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP136,namp136
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP154,namp154
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP157,namp157
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP158,namp158
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP159,namp159
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP161,namp161
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP162,namp162
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP163,namp163
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP164,namp164
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP166,namp166
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP167,namp167
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP169,namp169
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP170,namp170
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP171,namp171
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP172,namp172
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP173,namp173
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP197,namp197
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP220,namp220
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP221,namp221
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP222,namp222
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMP223,namp223
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD01,namprd01
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD02,namprd02
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD03,namprd03
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD04,namprd04
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD05,namprd05
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD06,namprd06
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD07,namprd07
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD08,namprd08
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD10,namprd10
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD11,namprd11
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD12,namprd12
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD13,namprd13
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD14,namprd14
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD15,namprd15
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD16,namprd16
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD17,namprd17
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD18,namprd18
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD19,namprd19
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD20,namprd20
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD22,namprd22
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD84,namprd84
+SSD - Phoenix,Low Volume No Efficiency,Forest,NAMPRD85,namprd85
+SSD - Phoenix,Low Volume No Efficiency,Forest,NORP279,norp279
+SSD - Phoenix,Low Volume No Efficiency,Forest,NZLP299,nzlp299
+SSD - Phoenix,Low Volume No Efficiency,Forest,POLP291,polp291
+SSD - Phoenix,Low Volume No Efficiency,Forest,PROD,prod
+SSD - Phoenix,Low Volume No Efficiency,Forest,QATP289,qatp289
+SSD - Phoenix,Low Volume No Efficiency,Forest,SGPP274,sgpp274
+SSD - Phoenix,Low Volume No Efficiency,Forest,SWEP280,swep280
+SSD - Phoenix,Low Volume No Efficiency,Forest,TWNP295,twnp295
+SSD - Phoenix,Low Volume No Efficiency,Forest,ZAFP275,zafp275
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCP150,apcp150
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD01,apcprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD02,apcprd02
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD03,apcprd03
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD04,apcprd04
+SSD - Phoenix,Low Volume With Efficiency,Forest,APCPRD06,apcprd06
+SSD - Phoenix,Low Volume With Efficiency,Forest,AREP273,arep273
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUSP282,ausp282
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUSP300,ausp300
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUSPRD01,ausprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,AUTP296,autp296
+SSD - Phoenix,Low Volume With Efficiency,Forest,BRAP284,brap284
+SSD - Phoenix,Low Volume With Efficiency,Forest,CANP288,canp288
+SSD - Phoenix,Low Volume With Efficiency,Forest,CANPRD01,canprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,CHEP278,chep278
+SSD - Phoenix,Low Volume With Efficiency,Forest,CHLP298,chlp298
+SSD - Phoenix,Low Volume With Efficiency,Forest,CHNPR01,chnpr01
+SSD - Phoenix,Low Volume With Efficiency,Forest,DEUP281,deup281
+SSD - Phoenix,Low Volume With Efficiency,Forest,DNKP307,dnkp307
+SSD - Phoenix,Low Volume With Efficiency,Forest,ESPP292,espp292
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP107,eurp107
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP119,eurp119
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP120,eurp120
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP121,eurp121
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP122,eurp122
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP137,eurp137
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP138,eurp138
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP174,eurp174
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP175,eurp175
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP176,eurp176
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP177,eurp177
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP178,eurp178
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP179,eurp179
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP180,eurp180
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP189,eurp189
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP190,eurp190
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP191,eurp191
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP192,eurp192
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP193,eurp193
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP194,eurp194
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP195,eurp195
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP250,eurp250
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP251,eurp251
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURP309,eurp309
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD01,eurprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD02,eurprd02
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD03,eurprd03
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD04,eurprd04
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD05,eurprd05
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD06,eurprd06
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD07,eurprd07
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD08,eurprd08
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD09,eurprd09
+SSD - Phoenix,Low Volume With Efficiency,Forest,EURPRD10,eurprd10
+SSD - Phoenix,Low Volume With Efficiency,Forest,FRAP264,frap264
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP123,gbrp123
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP265,gbrp265
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP267,gbrp267
+SSD - Phoenix,Low Volume With Efficiency,Forest,GBRP302,gbrp302
+SSD - Phoenix,Low Volume With Efficiency,Forest,IDNP305,idnp305
+SSD - Phoenix,Low Volume With Efficiency,Forest,INDP287,indp287
+SSD - Phoenix,Low Volume With Efficiency,Forest,INDPRD01,indprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,ISRP290,isrp290
+SSD - Phoenix,Low Volume With Efficiency,Forest,ITAP293,itap293
+SSD - Phoenix,Low Volume With Efficiency,Forest,JPNP286,jpnp286
+SSD - Phoenix,Low Volume With Efficiency,Forest,JPNP301,jpnp301
+SSD - Phoenix,Low Volume With Efficiency,Forest,JPNPRD01,jpnprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,KORP216,korp216
+SSD - Phoenix,Low Volume With Efficiency,Forest,LAMP152,lamp152
+SSD - Phoenix,Low Volume With Efficiency,Forest,LAMP215,lamp215
+SSD - Phoenix,Low Volume With Efficiency,Forest,LAMPRD80,lamprd80
+SSD - Phoenix,Low Volume With Efficiency,Forest,MEXP297,mexp297
+SSD - Phoenix,Low Volume With Efficiency,Forest,MYSP306,mysp306
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP100,namp100
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP101,namp101
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP102,namp102
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP103,namp103
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP104,namp104
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP105,namp105
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP106,namp106
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP108,namp108
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP109,namp109
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP113,namp113
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP114,namp114
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP115,namp115
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP116,namp116
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP118,namp118
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP125,namp125
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP126,namp126
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP128,namp128
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP129,namp129
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP130,namp130
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP131,namp131
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP132,namp132
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP133,namp133
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP134,namp134
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP135,namp135
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP136,namp136
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP154,namp154
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP156,namp156
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP157,namp157
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP158,namp158
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP159,namp159
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP161,namp161
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP162,namp162
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP163,namp163
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP164,namp164
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP166,namp166
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP167,namp167
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP169,namp169
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP170,namp170
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP171,namp171
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP172,namp172
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP173,namp173
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP197,namp197
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP220,namp220
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP221,namp221
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP222,namp222
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP223,namp223
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP242,namp242
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMP243,namp243
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD01,namprd01
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD02,namprd02
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD03,namprd03
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD04,namprd04
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD05,namprd05
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD06,namprd06
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD07,namprd07
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD08,namprd08
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD10,namprd10
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD11,namprd11
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD12,namprd12
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD13,namprd13
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD14,namprd14
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD15,namprd15
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD16,namprd16
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD17,namprd17
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD18,namprd18
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD19,namprd19
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD20,namprd20
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD22,namprd22
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD84,namprd84
+SSD - Phoenix,Low Volume With Efficiency,Forest,NAMPRD85,namprd85
+SSD - Phoenix,Low Volume With Efficiency,Forest,NORP279,norp279
+SSD - Phoenix,Low Volume With Efficiency,Forest,NZLP299,nzlp299
+SSD - Phoenix,Low Volume With Efficiency,Forest,POLP291,polp291
+SSD - Phoenix,Low Volume With Efficiency,Forest,PROD,prod
+SSD - Phoenix,Low Volume With Efficiency,Forest,QATP289,qatp289
+SSD - Phoenix,Low Volume With Efficiency,Forest,SGPP274,sgpp274
+SSD - Phoenix,Low Volume With Efficiency,Forest,SWEP280,swep280
+SSD - Phoenix,Low Volume With Efficiency,Forest,TWNP295,twnp295
+SSD - Phoenix,Low Volume With Efficiency,Forest,ZAFP275,zafp275

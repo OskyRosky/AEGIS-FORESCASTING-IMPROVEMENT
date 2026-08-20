@@ -1,0 +1,11 @@
+decision_id,decision,options,recommendation,blocks_stage,status
+D1,Which combinations get a new backtest,A: all 6 HDD combinations / B: Region only (3) / C: only the Boon slice (Enterprise Region + Forest),A if compute allows; otherwise C then expand,R8-FIX-3,OPEN
+D2,Rolling origin cadence for the new runs,A: monthly like the current 12 origins / B: fewer origins to cut compute / C: match the number of months of actuals per scenario,C; Basilisk only has 5 months so forcing 12 would invent origins,R8-FIX-2,OPEN
+D3,Compute budget for 73725 model fits,A: run everything / B: run the cheap 12 models first and add the 3 neural ones later / C: reduce the key universe,B; FNAR-V2 SMLP-TCN and NLIN-DLIN_FIXED dominate the cost,R8-FIX-3,OPEN
+D4,What the Viewer shows while a combination has no backtest,A: hide the combination / B: show it disabled with an explicit reason / C: block the whole page,B; consistent with the honesty rules already applied,R8-FIX-5,OPEN
+D5,SSD - Phoenix in the Viewer,A: remove from the Viewer metric list / B: show it disabled with the reason,A for the metric list plus a note; it is forecast-only and belongs on the Forecast page,R8-FIX-5,RECOMMENDED
+D6,Champion flag per scenario,A: recompute is_selected_champion per combination / B: copy the current champion,A; the champion is scenario dependent and copying it would be an invention,R8-FIX-3,RECOMMENDED
+D7,Backfill labels on the existing 204300 rows,A: tag as HDD - EDB / Enterprise / Region / B: regenerate them,A; verified by a 96.6 percent exact actual-value match,R8-FIX-4,RECOMMENDED
+D8,Where the v2 artifact lives,A: CSV in data/processed / B: a table in the DuckDB store / C: both,C; CSV as the immutable record and DuckDB as what Shiny reads,R8-FIX-4,RECOMMENDED
+D9,Six Enterprise Region keys have no backtest,A: top them up / B: leave the combination at 39 of 45,A; otherwise the key dropdown silently drops 6 keys,R8-FIX-3,RECOMMENDED
+D10,Horizon control stays in the Viewer,A: keep 1 to 30 / B: remove,A; horizon is the backtest lead time and is the reason the page exists,R8-FIX-5,RECOMMENDED

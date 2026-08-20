@@ -1,0 +1,597 @@
+metric,scenario,granularity,series_key,has_actuals,viewer_available,model_count
+HDD - Basilisk,Basilisk,Forest,apcp150,True,True,15
+HDD - Basilisk,Basilisk,Forest,apcp153,True,True,15
+HDD - Basilisk,Basilisk,Forest,apcprd01,True,True,15
+HDD - Basilisk,Basilisk,Forest,apcprd02,True,True,15
+HDD - Basilisk,Basilisk,Forest,apcprd03,True,True,15
+HDD - Basilisk,Basilisk,Forest,apcprd04,True,True,15
+HDD - Basilisk,Basilisk,Forest,apcprd06,True,True,15
+HDD - Basilisk,Basilisk,Forest,arep273,True,True,15
+HDD - Basilisk,Basilisk,Forest,ausp282,True,True,15
+HDD - Basilisk,Basilisk,Forest,ausp300,True,True,15
+HDD - Basilisk,Basilisk,Forest,ausprd01,True,True,15
+HDD - Basilisk,Basilisk,Forest,autp296,True,True,15
+HDD - Basilisk,Basilisk,Forest,brap284,True,True,15
+HDD - Basilisk,Basilisk,Forest,canp288,True,True,15
+HDD - Basilisk,Basilisk,Forest,canprd01,True,True,15
+HDD - Basilisk,Basilisk,Forest,chep278,True,True,15
+HDD - Basilisk,Basilisk,Forest,chlp298,True,True,15
+HDD - Basilisk,Basilisk,Forest,chnpr01,True,True,15
+HDD - Basilisk,Basilisk,Forest,deup281,True,True,15
+HDD - Basilisk,Basilisk,Forest,dnkp307,True,True,15
+HDD - Basilisk,Basilisk,Forest,espp292,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp107,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp119,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp120,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp121,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp122,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp137,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp138,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp174,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp175,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp176,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp177,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp178,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp179,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp180,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp189,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp190,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp191,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp192,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp193,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp194,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp195,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp250,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp251,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurp309,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd01,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd02,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd03,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd04,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd05,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd06,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd07,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd08,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd09,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd10,True,True,15
+HDD - Basilisk,Basilisk,Forest,eurprd83,True,True,15
+HDD - Basilisk,Basilisk,Forest,frap264,True,True,15
+HDD - Basilisk,Basilisk,Forest,gbrp123,True,True,15
+HDD - Basilisk,Basilisk,Forest,gbrp265,True,True,15
+HDD - Basilisk,Basilisk,Forest,gbrp267,True,True,15
+HDD - Basilisk,Basilisk,Forest,gbrp302,True,True,15
+HDD - Basilisk,Basilisk,Forest,idnp305,True,True,15
+HDD - Basilisk,Basilisk,Forest,indp287,True,True,15
+HDD - Basilisk,Basilisk,Forest,indprd01,True,True,15
+HDD - Basilisk,Basilisk,Forest,isrp290,True,True,15
+HDD - Basilisk,Basilisk,Forest,itap293,True,True,15
+HDD - Basilisk,Basilisk,Forest,jpnp286,True,True,15
+HDD - Basilisk,Basilisk,Forest,jpnp301,True,True,15
+HDD - Basilisk,Basilisk,Forest,jpnprd01,True,True,15
+HDD - Basilisk,Basilisk,Forest,korp216,True,True,15
+HDD - Basilisk,Basilisk,Forest,lamp152,True,True,15
+HDD - Basilisk,Basilisk,Forest,lamp215,True,True,15
+HDD - Basilisk,Basilisk,Forest,lamprd80,True,True,15
+HDD - Basilisk,Basilisk,Forest,mexp297,True,True,15
+HDD - Basilisk,Basilisk,Forest,mysp306,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp100,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp101,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp102,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp103,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp104,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp105,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp106,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp108,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp109,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp110,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp111,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp113,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp114,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp115,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp116,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp118,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp125,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp126,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp128,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp129,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp130,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp131,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp132,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp133,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp134,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp135,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp136,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp154,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp157,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp158,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp159,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp161,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp162,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp163,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp164,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp166,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp167,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp169,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp170,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp171,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp172,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp173,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp197,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp220,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp221,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp222,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp223,True,True,15
+HDD - Basilisk,Basilisk,Forest,namp283,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd00,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd02,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd03,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd04,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd05,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd06,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd07,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd08,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd09,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd10,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd11,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd12,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd13,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd14,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd15,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd16,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd17,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd18,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd19,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd20,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd21,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd22,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd84,True,True,15
+HDD - Basilisk,Basilisk,Forest,namprd85,True,True,15
+HDD - Basilisk,Basilisk,Forest,norp279,True,True,15
+HDD - Basilisk,Basilisk,Forest,nzlp299,True,True,15
+HDD - Basilisk,Basilisk,Forest,polp291,True,True,15
+HDD - Basilisk,Basilisk,Forest,qatp289,True,True,15
+HDD - Basilisk,Basilisk,Forest,sgpp274,True,True,15
+HDD - Basilisk,Basilisk,Forest,swep280,True,True,15
+HDD - Basilisk,Basilisk,Forest,twnp295,True,True,15
+HDD - Basilisk,Basilisk,Forest,zafp275,True,True,15
+HDD - Basilisk,Basilisk,Region,DNK-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,ESP-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,EUR-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,GBR-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,ISR-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,ITA-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,MEX-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,POL-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,apc-Dedicated,True,True,15
+HDD - Basilisk,Basilisk,Region,apc-MSIT,True,True,15
+HDD - Basilisk,Basilisk,Region,apc-Multitenant,True,True,15
+HDD - Basilisk,Basilisk,Region,are-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,aus-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,aut-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,bra-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,can-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,che-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,chl-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,chn-Gallatin,True,True,15
+HDD - Basilisk,Basilisk,Region,deu-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,eur-Dedicated,True,True,15
+HDD - Basilisk,Basilisk,Region,eur-MSIT,True,True,15
+HDD - Basilisk,Basilisk,Region,eur-Multitenant,True,True,15
+HDD - Basilisk,Basilisk,Region,fra-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,gbr-Dedicated,True,True,15
+HDD - Basilisk,Basilisk,Region,gbr-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,idn-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,ind-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,jpn-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,kor-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,lam-Multitenant,True,True,15
+HDD - Basilisk,Basilisk,Region,mys-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-Dedicated,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-GCC Low,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-ITAR DoD,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-ITAR GCCH,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-MSIT,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-Multitenant,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-SDF,True,True,15
+HDD - Basilisk,Basilisk,Region,nam-TDF,True,True,15
+HDD - Basilisk,Basilisk,Region,nor-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,nzl-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,qat-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,sgp-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,swe-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,twn-Go Local,True,True,15
+HDD - Basilisk,Basilisk,Region,zaf-Go Local,True,True,15
+HDD - EDB,Consumer,Forest,APCP150,True,True,15
+HDD - EDB,Consumer,Forest,APCP153,True,True,15
+HDD - EDB,Consumer,Forest,APCPRD01,True,True,15
+HDD - EDB,Consumer,Forest,APCPRD02,True,True,15
+HDD - EDB,Consumer,Forest,APCPRD03,True,True,15
+HDD - EDB,Consumer,Forest,APCPRD04,True,True,15
+HDD - EDB,Consumer,Forest,APCPRD06,True,True,15
+HDD - EDB,Consumer,Forest,AREP273,True,True,15
+HDD - EDB,Consumer,Forest,AUSP282,True,True,15
+HDD - EDB,Consumer,Forest,AUSP300,True,True,15
+HDD - EDB,Consumer,Forest,AUSPRD01,True,True,15
+HDD - EDB,Consumer,Forest,AUTP296,True,True,15
+HDD - EDB,Consumer,Forest,BRAP284,True,True,15
+HDD - EDB,Consumer,Forest,CANP288,True,True,15
+HDD - EDB,Consumer,Forest,CANPRD01,True,True,15
+HDD - EDB,Consumer,Forest,CHEP278,True,True,15
+HDD - EDB,Consumer,Forest,CHLP298,True,True,15
+HDD - EDB,Consumer,Forest,CHNPR01,True,True,15
+HDD - EDB,Consumer,Forest,DEUP281,True,True,15
+HDD - EDB,Consumer,Forest,DNKP307,True,True,15
+HDD - EDB,Consumer,Forest,ESPP292,True,True,15
+HDD - EDB,Consumer,Forest,EURP107,True,True,15
+HDD - EDB,Consumer,Forest,EURP119,True,True,15
+HDD - EDB,Consumer,Forest,EURP120,True,True,15
+HDD - EDB,Consumer,Forest,EURP121,True,True,15
+HDD - EDB,Consumer,Forest,EURP122,True,True,15
+HDD - EDB,Consumer,Forest,EURP137,True,True,15
+HDD - EDB,Consumer,Forest,EURP138,True,True,15
+HDD - EDB,Consumer,Forest,EURP175,True,True,15
+HDD - EDB,Consumer,Forest,EURP176,True,True,15
+HDD - EDB,Consumer,Forest,EURP177,True,True,15
+HDD - EDB,Consumer,Forest,EURP178,True,True,15
+HDD - EDB,Consumer,Forest,EURP179,True,True,15
+HDD - EDB,Consumer,Forest,EURP180,True,True,15
+HDD - EDB,Consumer,Forest,EURP189,True,True,15
+HDD - EDB,Consumer,Forest,EURP190,True,True,15
+HDD - EDB,Consumer,Forest,EURP191,True,True,15
+HDD - EDB,Consumer,Forest,EURP192,True,True,15
+HDD - EDB,Consumer,Forest,EURP193,True,True,15
+HDD - EDB,Consumer,Forest,EURP194,True,True,15
+HDD - EDB,Consumer,Forest,EURP195,True,True,15
+HDD - EDB,Consumer,Forest,EURP250,True,True,15
+HDD - EDB,Consumer,Forest,EURP251,True,True,15
+HDD - EDB,Consumer,Forest,EURP309,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD01,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD02,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD03,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD04,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD05,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD06,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD07,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD08,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD09,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD10,True,True,15
+HDD - EDB,Consumer,Forest,EURPRD83,True,True,15
+HDD - EDB,Consumer,Forest,FRAP264,True,True,15
+HDD - EDB,Consumer,Forest,GBRP123,True,True,15
+HDD - EDB,Consumer,Forest,GBRP265,True,True,15
+HDD - EDB,Consumer,Forest,GBRP267,True,True,15
+HDD - EDB,Consumer,Forest,GBRP302,True,True,15
+HDD - EDB,Consumer,Forest,IDNP305,True,True,15
+HDD - EDB,Consumer,Forest,INDP287,True,True,15
+HDD - EDB,Consumer,Forest,INDPRD01,True,True,15
+HDD - EDB,Consumer,Forest,ISRP290,True,True,15
+HDD - EDB,Consumer,Forest,ITAP293,True,True,15
+HDD - EDB,Consumer,Forest,JPNP286,True,True,15
+HDD - EDB,Consumer,Forest,JPNP301,True,True,15
+HDD - EDB,Consumer,Forest,JPNPRD01,True,True,15
+HDD - EDB,Consumer,Forest,KORP216,True,True,15
+HDD - EDB,Consumer,Forest,LAMP152,True,True,15
+HDD - EDB,Consumer,Forest,LAMP215,True,True,15
+HDD - EDB,Consumer,Forest,LAMPRD80,True,True,15
+HDD - EDB,Consumer,Forest,MEXP297,True,True,15
+HDD - EDB,Consumer,Forest,MYSP306,True,True,15
+HDD - EDB,Consumer,Forest,NAMP100,True,True,15
+HDD - EDB,Consumer,Forest,NAMP101,True,True,15
+HDD - EDB,Consumer,Forest,NAMP103,True,True,15
+HDD - EDB,Consumer,Forest,NAMP104,True,True,15
+HDD - EDB,Consumer,Forest,NAMP105,True,True,15
+HDD - EDB,Consumer,Forest,NAMP106,True,True,15
+HDD - EDB,Consumer,Forest,NAMP108,True,True,15
+HDD - EDB,Consumer,Forest,NAMP109,True,True,15
+HDD - EDB,Consumer,Forest,NAMP113,True,True,15
+HDD - EDB,Consumer,Forest,NAMP114,True,True,15
+HDD - EDB,Consumer,Forest,NAMP115,True,True,15
+HDD - EDB,Consumer,Forest,NAMP116,True,True,15
+HDD - EDB,Consumer,Forest,NAMP118,True,True,15
+HDD - EDB,Consumer,Forest,NAMP125,True,True,15
+HDD - EDB,Consumer,Forest,NAMP126,True,True,15
+HDD - EDB,Consumer,Forest,NAMP128,True,True,15
+HDD - EDB,Consumer,Forest,NAMP129,True,True,15
+HDD - EDB,Consumer,Forest,NAMP130,True,True,15
+HDD - EDB,Consumer,Forest,NAMP131,True,True,15
+HDD - EDB,Consumer,Forest,NAMP132,True,True,15
+HDD - EDB,Consumer,Forest,NAMP133,True,True,15
+HDD - EDB,Consumer,Forest,NAMP134,True,True,15
+HDD - EDB,Consumer,Forest,NAMP135,True,True,15
+HDD - EDB,Consumer,Forest,NAMP136,True,True,15
+HDD - EDB,Consumer,Forest,NAMP154,True,True,15
+HDD - EDB,Consumer,Forest,NAMP157,True,True,15
+HDD - EDB,Consumer,Forest,NAMP158,True,True,15
+HDD - EDB,Consumer,Forest,NAMP159,True,True,15
+HDD - EDB,Consumer,Forest,NAMP161,True,True,15
+HDD - EDB,Consumer,Forest,NAMP162,True,True,15
+HDD - EDB,Consumer,Forest,NAMP163,True,True,15
+HDD - EDB,Consumer,Forest,NAMP164,True,True,15
+HDD - EDB,Consumer,Forest,NAMP166,True,True,15
+HDD - EDB,Consumer,Forest,NAMP167,True,True,15
+HDD - EDB,Consumer,Forest,NAMP169,True,True,15
+HDD - EDB,Consumer,Forest,NAMP170,True,True,15
+HDD - EDB,Consumer,Forest,NAMP171,True,True,15
+HDD - EDB,Consumer,Forest,NAMP172,True,True,15
+HDD - EDB,Consumer,Forest,NAMP173,True,True,15
+HDD - EDB,Consumer,Forest,NAMP197,True,True,15
+HDD - EDB,Consumer,Forest,NAMP220,True,True,15
+HDD - EDB,Consumer,Forest,NAMP221,True,True,15
+HDD - EDB,Consumer,Forest,NAMP222,True,True,15
+HDD - EDB,Consumer,Forest,NAMP223,True,True,15
+HDD - EDB,Consumer,Forest,NAMP283,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD00,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD01,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD02,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD03,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD04,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD05,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD06,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD07,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD08,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD09,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD10,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD11,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD12,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD13,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD14,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD15,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD16,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD17,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD18,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD19,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD20,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD21,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD22,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD84,True,True,15
+HDD - EDB,Consumer,Forest,NAMPRD85,True,True,15
+HDD - EDB,Consumer,Forest,NORP279,True,True,15
+HDD - EDB,Consumer,Forest,NZLP299,True,True,15
+HDD - EDB,Consumer,Forest,POLP291,True,True,15
+HDD - EDB,Consumer,Forest,QATP289,True,True,15
+HDD - EDB,Consumer,Forest,SGPP274,True,True,15
+HDD - EDB,Consumer,Forest,SWEP280,True,True,15
+HDD - EDB,Consumer,Forest,TWNP295,True,True,15
+HDD - EDB,Consumer,Forest,ZAFP275,True,True,15
+HDD - EDB,Consumer,Region,APC-Dedicated,True,True,15
+HDD - EDB,Consumer,Region,APC-MSIT,True,True,15
+HDD - EDB,Consumer,Region,APC-Multitenant,True,True,15
+HDD - EDB,Consumer,Region,ARE-Go Local,True,True,15
+HDD - EDB,Consumer,Region,AUS-Go Local,True,True,15
+HDD - EDB,Consumer,Region,AUT-Go Local,True,True,15
+HDD - EDB,Consumer,Region,BRA-Go Local,True,True,15
+HDD - EDB,Consumer,Region,CAN-Go Local,True,True,15
+HDD - EDB,Consumer,Region,CHE-Go Local,True,True,15
+HDD - EDB,Consumer,Region,CHL-Go Local,True,True,15
+HDD - EDB,Consumer,Region,DEU-Go Local,True,True,15
+HDD - EDB,Consumer,Region,DNK-Go Local,True,True,15
+HDD - EDB,Consumer,Region,ESP-Go Local,True,True,15
+HDD - EDB,Consumer,Region,EUR-Dedicated,True,True,15
+HDD - EDB,Consumer,Region,EUR-Go Local,True,True,15
+HDD - EDB,Consumer,Region,EUR-MSIT,True,True,15
+HDD - EDB,Consumer,Region,EUR-Multitenant,True,True,15
+HDD - EDB,Consumer,Region,FRA-Go Local,True,True,15
+HDD - EDB,Consumer,Region,GBR-Dedicated,True,True,15
+HDD - EDB,Consumer,Region,GBR-Go Local,True,True,15
+HDD - EDB,Consumer,Region,IDN-Go Local,True,True,15
+HDD - EDB,Consumer,Region,IND-Go Local,True,True,15
+HDD - EDB,Consumer,Region,ISR-Go Local,True,True,15
+HDD - EDB,Consumer,Region,ITA-Go Local,True,True,15
+HDD - EDB,Consumer,Region,JPN-Go Local,True,True,15
+HDD - EDB,Consumer,Region,KOR-Go Local,True,True,15
+HDD - EDB,Consumer,Region,LAM-Multitenant,True,True,15
+HDD - EDB,Consumer,Region,MEX-Go Local,True,True,15
+HDD - EDB,Consumer,Region,MYS-Go Local,True,True,15
+HDD - EDB,Consumer,Region,NAM-Dedicated,True,True,15
+HDD - EDB,Consumer,Region,NAM-GCC Low,True,True,15
+HDD - EDB,Consumer,Region,NAM-ITAR DoD,True,True,15
+HDD - EDB,Consumer,Region,NAM-ITAR GCCH,True,True,15
+HDD - EDB,Consumer,Region,NAM-MSIT,True,True,15
+HDD - EDB,Consumer,Region,NAM-Multitenant,True,True,15
+HDD - EDB,Consumer,Region,NAM-SDF,True,True,15
+HDD - EDB,Consumer,Region,NAM-TDF,True,True,15
+HDD - EDB,Consumer,Region,NOR-Go Local,True,True,15
+HDD - EDB,Consumer,Region,NZL-Go Local,True,True,15
+HDD - EDB,Consumer,Region,POL-Go Local,True,True,15
+HDD - EDB,Consumer,Region,QAT-Go Local,True,True,15
+HDD - EDB,Consumer,Region,SGP-Go Local,True,True,15
+HDD - EDB,Consumer,Region,SWE-Go Local,True,True,15
+HDD - EDB,Consumer,Region,TWN-Go Local,True,True,15
+HDD - EDB,Consumer,Region,ZAF-Go Local,True,True,15
+HDD - EDB,Enterprise,Forest,APCP150,True,True,15
+HDD - EDB,Enterprise,Forest,APCP153,True,True,15
+HDD - EDB,Enterprise,Forest,APCPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,APCPRD02,True,True,15
+HDD - EDB,Enterprise,Forest,APCPRD03,True,True,15
+HDD - EDB,Enterprise,Forest,APCPRD04,True,True,15
+HDD - EDB,Enterprise,Forest,APCPRD06,True,True,15
+HDD - EDB,Enterprise,Forest,AREP273,True,True,15
+HDD - EDB,Enterprise,Forest,AUSP282,True,True,15
+HDD - EDB,Enterprise,Forest,AUSP300,True,True,15
+HDD - EDB,Enterprise,Forest,AUSPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,AUTP296,True,True,15
+HDD - EDB,Enterprise,Forest,BRAP284,True,True,15
+HDD - EDB,Enterprise,Forest,CANP288,True,True,15
+HDD - EDB,Enterprise,Forest,CANPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,CHEP278,True,True,15
+HDD - EDB,Enterprise,Forest,CHLP298,True,True,15
+HDD - EDB,Enterprise,Forest,CHNPR01,True,True,15
+HDD - EDB,Enterprise,Forest,DEUP281,True,True,15
+HDD - EDB,Enterprise,Forest,DNKP307,True,True,15
+HDD - EDB,Enterprise,Forest,ESPP292,True,True,15
+HDD - EDB,Enterprise,Forest,EURP107,True,True,15
+HDD - EDB,Enterprise,Forest,EURP119,True,True,15
+HDD - EDB,Enterprise,Forest,EURP120,True,True,15
+HDD - EDB,Enterprise,Forest,EURP121,True,True,15
+HDD - EDB,Enterprise,Forest,EURP122,True,True,15
+HDD - EDB,Enterprise,Forest,EURP137,True,True,15
+HDD - EDB,Enterprise,Forest,EURP138,True,True,15
+HDD - EDB,Enterprise,Forest,EURP175,True,True,15
+HDD - EDB,Enterprise,Forest,EURP176,True,True,15
+HDD - EDB,Enterprise,Forest,EURP177,True,True,15
+HDD - EDB,Enterprise,Forest,EURP178,True,True,15
+HDD - EDB,Enterprise,Forest,EURP179,True,True,15
+HDD - EDB,Enterprise,Forest,EURP180,True,True,15
+HDD - EDB,Enterprise,Forest,EURP189,True,True,15
+HDD - EDB,Enterprise,Forest,EURP190,True,True,15
+HDD - EDB,Enterprise,Forest,EURP191,True,True,15
+HDD - EDB,Enterprise,Forest,EURP192,True,True,15
+HDD - EDB,Enterprise,Forest,EURP193,True,True,15
+HDD - EDB,Enterprise,Forest,EURP194,True,True,15
+HDD - EDB,Enterprise,Forest,EURP195,True,True,15
+HDD - EDB,Enterprise,Forest,EURP250,True,True,15
+HDD - EDB,Enterprise,Forest,EURP251,True,True,15
+HDD - EDB,Enterprise,Forest,EURP309,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD02,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD03,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD04,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD05,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD06,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD07,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD08,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD09,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD10,True,True,15
+HDD - EDB,Enterprise,Forest,EURPRD83,True,True,15
+HDD - EDB,Enterprise,Forest,FRAP264,True,True,15
+HDD - EDB,Enterprise,Forest,GBRP123,True,True,15
+HDD - EDB,Enterprise,Forest,GBRP265,True,True,15
+HDD - EDB,Enterprise,Forest,GBRP267,True,True,15
+HDD - EDB,Enterprise,Forest,GBRP302,True,True,15
+HDD - EDB,Enterprise,Forest,IDNP305,True,True,15
+HDD - EDB,Enterprise,Forest,INDP287,True,True,15
+HDD - EDB,Enterprise,Forest,INDPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,ISRP290,True,True,15
+HDD - EDB,Enterprise,Forest,ITAP293,True,True,15
+HDD - EDB,Enterprise,Forest,JPNP286,True,True,15
+HDD - EDB,Enterprise,Forest,JPNP301,True,True,15
+HDD - EDB,Enterprise,Forest,JPNPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,KORP216,True,True,15
+HDD - EDB,Enterprise,Forest,LAMP152,True,True,15
+HDD - EDB,Enterprise,Forest,LAMP215,True,True,15
+HDD - EDB,Enterprise,Forest,LAMPRD80,True,True,15
+HDD - EDB,Enterprise,Forest,MEXP297,True,True,15
+HDD - EDB,Enterprise,Forest,MYSP306,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP100,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP101,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP103,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP104,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP105,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP106,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP108,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP109,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP113,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP114,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP115,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP116,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP118,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP125,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP126,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP128,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP129,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP130,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP131,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP132,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP133,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP134,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP135,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP136,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP154,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP157,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP158,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP159,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP161,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP162,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP163,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP164,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP166,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP167,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP169,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP170,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP171,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP172,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP173,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP197,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP220,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP221,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP222,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP223,True,True,15
+HDD - EDB,Enterprise,Forest,NAMP283,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD00,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD01,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD02,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD03,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD04,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD05,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD06,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD07,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD08,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD09,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD10,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD11,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD12,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD13,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD14,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD15,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD16,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD17,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD18,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD19,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD20,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD21,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD22,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD84,True,True,15
+HDD - EDB,Enterprise,Forest,NAMPRD85,True,True,15
+HDD - EDB,Enterprise,Forest,NORP279,True,True,15
+HDD - EDB,Enterprise,Forest,NZLP299,True,True,15
+HDD - EDB,Enterprise,Forest,POLP291,True,True,15
+HDD - EDB,Enterprise,Forest,QATP289,True,True,15
+HDD - EDB,Enterprise,Forest,SGPP274,True,True,15
+HDD - EDB,Enterprise,Forest,SWEP280,True,True,15
+HDD - EDB,Enterprise,Forest,TWNP295,True,True,15
+HDD - EDB,Enterprise,Forest,ZAFP275,True,True,15
+HDD - EDB,Enterprise,Region,APC-Dedicated,True,True,15
+HDD - EDB,Enterprise,Region,APC-MSIT,True,True,15
+HDD - EDB,Enterprise,Region,APC-Multitenant,True,True,15
+HDD - EDB,Enterprise,Region,ARE-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,AUS-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,AUT-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,BRA-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,CAN-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,CHE-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,CHL-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,DEU-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,DNK-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,ESP-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,EUR-Dedicated,True,True,15
+HDD - EDB,Enterprise,Region,EUR-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,EUR-MSIT,True,True,15
+HDD - EDB,Enterprise,Region,EUR-Multitenant,True,True,15
+HDD - EDB,Enterprise,Region,FRA-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,GBR-Dedicated,True,True,15
+HDD - EDB,Enterprise,Region,GBR-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,IDN-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,IND-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,ISR-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,ITA-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,JPN-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,KOR-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,LAM-Multitenant,True,True,15
+HDD - EDB,Enterprise,Region,MEX-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,MYS-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,NAM-Dedicated,True,True,15
+HDD - EDB,Enterprise,Region,NAM-GCC Low,True,True,15
+HDD - EDB,Enterprise,Region,NAM-ITAR DoD,True,True,15
+HDD - EDB,Enterprise,Region,NAM-ITAR GCCH,True,True,15
+HDD - EDB,Enterprise,Region,NAM-MSIT,True,True,15
+HDD - EDB,Enterprise,Region,NAM-Multitenant,True,True,15
+HDD - EDB,Enterprise,Region,NAM-SDF,True,True,15
+HDD - EDB,Enterprise,Region,NAM-TDF,True,True,15
+HDD - EDB,Enterprise,Region,NOR-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,NZL-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,POL-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,QAT-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,SGP-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,SWE-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,TWN-Go Local,True,True,15
+HDD - EDB,Enterprise,Region,ZAF-Go Local,True,True,15

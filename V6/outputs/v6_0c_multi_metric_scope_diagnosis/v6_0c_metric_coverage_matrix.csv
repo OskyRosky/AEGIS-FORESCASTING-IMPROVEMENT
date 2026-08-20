@@ -1,0 +1,15 @@
+metric_id,db_type,scenario,granularity,coverage_status,local_data_present,versions_available,keys,dashboard_exposed,blocking_reason,next_stage
+hdd_edb,EDB,Enterprise,region,COVERED_FACT_SINGLE_VERSION,yes,1,45,partial,Local fact extract holds one ForecastVersion so cross-plan work is impossible without re-ingestion,V6.0E
+hdd_edb,EDB,not_applicable,region,COVERED_METRICS,yes,3,45,no,Official metrics exist but Shiny Accuracy does not consume them,V6.0F
+hdd_edb,EDB,not_applicable,forest,COVERED_METRICS,yes,3,155,no,Official metrics exist but Shiny Accuracy does not consume them,V6.0F
+ssd_phoenix,lv_with_efficiency,not_applicable,forest,PARTIAL_SINGLE_VERSION,yes,1,137,no,Single version and no target-date grain so only point accuracy is possible,V6.0E
+ssd_phoenix,lv_no_efficiency,not_applicable,forest,PARTIAL_SINGLE_VERSION,yes,1,137,no,Single version and no target-date grain so only point accuracy is possible,V6.0E
+ssd_phoenix,phx_total,PENDING_CONFIRMATION,PENDING_CONFIRMATION,NOT_COVERED_SOURCE_MISSING,no,0,0,no,Source table not located and classification undecided,BLOCKED_D2_D10
+ssd_phoenix,phx_organic,PENDING_CONFIRMATION,PENDING_CONFIRMATION,NOT_COVERED_SOURCE_MISSING,no,0,0,no,Source table not located and classification undecided,BLOCKED_D2
+ssd_mcdb,mcdb_total,PENDING_CONFIRMATION,PENDING_CONFIRMATION,NOT_COVERED_SOURCE_MISSING,no,0,0,no,Possibly shared table with no confirmed discriminator column,BLOCKED_D10
+ssd_mcdb,mcdb_organic,PENDING_CONFIRMATION,forest_sku,NOT_COVERED_SOURCE_MISSING,no,0,0,no,SKU grain is not modelled by the current taxonomy,BLOCKED_D4
+cpu,PENDING_CONFIRMATION,PENDING_CONFIRMATION,region,NOT_COVERED_UNPROFILED,no,0,0,no,Family exists but exact tables units and canonical key are undecided,BLOCKED_D3_D4
+cpu,PENDING_CONFIRMATION,PENDING_CONFIRMATION,forest_by_db,NOT_COVERED_UNPROFILED,no,0,0,no,Fleet and Workload dimensions have no agreed placement,BLOCKED_D3
+iops,PENDING_CONFIRMATION,PENDING_CONFIRMATION,unknown,DEFERRED,no,0,0,no,No table name documented and explicitly deferred by prior stages,DEFERRED
+hdd_edb,EDB,Consumer,region,NOT_COVERED_NOT_INGESTED,no,0,0,no,Pipeline hardcodes Scenario=Enterprise,V6.0E
+hdd_basilisk,EDB,Basilisk,region,OUT_OF_SCOPE_PHASED_OUT,no,0,0,no,Scenario is being retired upstream,NONE

@@ -1,0 +1,12 @@
+scope,metric,scenario,granularity,keys,usable_origins,models,horizons,estimated_rows,model_fits,priority,notes
+EXISTING,HDD - EDB,Enterprise,Region,39,12,15,30,204300,already run,-,Current artifact; 6 of 45 keys still uncovered
+TOP_UP,HDD - EDB,Enterprise,Region,6,11,15,30,29700,990,1,Completes the combination that already partly exists
+NEW,HDD - EDB,Enterprise,Forest,152,11,15,30,752400,25080,2,Largest single block; includes NAMPRD07
+NEW,HDD - EDB,Consumer,Region,45,11,15,30,222750,7425,3,
+NEW,HDD - EDB,Consumer,Forest,152,11,15,30,752400,25080,4,
+NEW,HDD - Basilisk,Basilisk,Region,47,5,15,30,105750,3525,5,Only 5 months of actuals so fewer origins
+NEW,HDD - Basilisk,Basilisk,Forest,155,5,15,30,348750,11625,6,Only 5 months of actuals
+EXCLUDED,SSD - Phoenix,Low Volume No Efficiency,Forest,148,0,0,0,0,0,-,Not backtestable: no actual series exists
+EXCLUDED,SSD - Phoenix,Low Volume With Efficiency,Forest,152,0,0,0,0,0,-,Not backtestable: no actual series exists
+TOTAL_NEW,-,-,-,557,-,15,30,2211750,73725,-,Approximately 11x the current artifact
+TOTAL_FINAL,-,-,-,596,-,15,30,2416050,-,-,Existing plus new; the unified Viewer artifact

@@ -1,0 +1,27 @@
+check_id,check_name,expected,observed,result
+R4V01,Multi-Metric absent from sidebar,not rendered,CONTAINS[Multi-Metric]=False,PASS
+R4V02,Multi-Metric section absent from body,not rendered,CONTAINS[multimetric]=False,PASS
+R4V03,Shiny app starts,no startup error,Listening on http://127.0.0.1:8081,PASS
+R4V04,HTTP 200,200,200,PASS
+R4V05,Viewer still visible,present,PRESENT[Viewer]=True,PASS
+R4V06,Forecast still visible,present,PRESENT[Forecast]=True,PASS
+R4V07,Accuracy still visible,present,PRESENT[Accuracy]=True,PASS
+R4V08,Assistant still visible,assistant markup present,101 llm_ references in served HTML,PASS
+R4V09,Downloads still available,same handler count as HEAD,11 downloadHandler definitions unchanged,PASS
+R4V10,Legacy evidence pack intact,SHA256 A4DB09B4...,A4DB09B4B78443D095CF9C4862120F209E1C509CE1EB619861F1642FD6D16E40,PASS
+R4V11,Evidence pack still loads 11 pages,11,11,PASS
+R4V12,No multi_metric page in the assistant index,absent,LLM_HAS_MULTIMETRIC=FALSE,PASS
+R4V13,llm_explain.R untouched,unchanged,git status empty,PASS
+R4V14,llm_compose.R untouched,unchanged,git status empty,PASS
+R4V15,llm_client.R untouched,unchanged,git status empty,PASS
+R4V16,modules/llm_summary untouched,unchanged,git status empty,PASS
+R4V17,No changes in V1 to V5,unchanged,git status empty,PASS
+R4V18,shiny_app identical to git HEAD,empty porcelain output,empty,PASS
+R4V19,Zero residual references in code,0 matches,0 matches for multi_metric multimetric mm_init metrics_multi,PASS
+R4V20,Removed files preserved as backup,3 files backed up,3 files in reverted_files_backup,PASS
+R4V21,No SQL executed,0 queries,0 queries,PASS
+R4V22,No Azure action,none,none,PASS
+R4V23,No Docker action,none,none,PASS
+R4V24,No data extracted or modified,none,none,PASS
+R4V25,outputs/metrics_multi left untouched on disk,not deleted,still present and now unreferenced by the app,PASS
+R4V26,Not advanced to R3 R5 R5b R6 R7 R8 R9 R9b R9c R10 G1 G2,no work started,no work started,PASS

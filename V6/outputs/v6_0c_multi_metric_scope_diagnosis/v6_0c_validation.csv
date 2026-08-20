@@ -1,0 +1,21 @@
+check_id,area,check,expected,observed,status
+V1,scope,Stage produced diagnosis only with no functional code change,no source file modified,git status shows no modified tracked file under V6/python V6/shiny_app V6/data or V6/outputs/metrics,PASS
+V2,immutability,data/processed not modified,hashes unchanged,forecasts actuals forecast_comparison and forecast_viewer_model_outputs all rehash UNCHANGED,PASS
+V3,immutability,outputs/metrics legacy not modified or overwritten,hashes unchanged,baseline_metrics and baseline_rankings rehash UNCHANGED,PASS
+V4,immutability,Shiny not modified,no change under shiny_app,no modified entries in git status,PASS
+V5,execution,No SQL executed,zero database connections,no pyodbc call issued; all evidence read from local CSV,PASS
+V6,execution,No Azure resource created,zero resources,no Azure CLI or SDK call issued,PASS
+V7,immutability,V1 to V5 untouched,no change,git status shows no modification under V1 V2 V3 V4 V5,PASS
+V8,design,Scenario treated as optional,not_applicable used where no column exists,four of six local sources recorded as not_applicable; Enterprise recorded only for the fact table,PASS
+V9,design,No NAMPRD07 hardcoding,key used only as validation case,NAMPRD07 appears as an evidence column and worked example only; no logic keyed to it,PASS
+V10,design,No SSD-Phoenix specific fix,metric agnostic treatment,every artifact is keyed by metric_id and db_type across 17 inventory rows covering HDD SSD CPU and IOPS,PASS
+V11,diagnosis,Ranking defect diagnosed and not corrected,defect documented with evidence,D-02 records 137 mixed groups and 15689 folded rows; no producer re-run,PASS
+V12,evidence,HDD baseline freeze exists,freeze artifact present,hdd_baseline_freeze.csv records 14 artifacts with SHA256 rows columns and key counts,PASS
+V13,evidence,Open questions separate data gaps from stakeholder decisions,typed questions,18 questions typed across DATA_GAP STAKEHOLDER_DECISION METHODOLOGY_DECISION SOURCE_AVAILABILITY UNIT_MAPPING SHINY_PRODUCT_DECISION and DEPLOYMENT_IMPACT,PASS
+V14,coverage,Inventory covers the full known universe not just local files,all known metrics represented,17 rows covering hdd_edb ssd_phoenix ssd_mcdb cpu iops and hdd_basilisk,PASS
+V15,units,Cross metric raw aggregation prohibited,explicit rule recorded,metric_unit_contract.csv CROSS_METRIC row sets raw aggregation to no,PASS
+V16,granularity,SSD-Phoenix grain classified with evidence,verified or flagged as inference,137 of 137 SSD keys are a subset of forest keys and 0 match region keys so grain recorded as VERIFIED_LOCAL,PASS
+V17,governance,Champion and model scope untouched,no governance change,no governance artifact read path modified and no promote executed,PASS
+V18,markers,Stale markers identified,documented not silently changed,VERSION_INFO.md and project_root_policy.json divergences recorded in D-08 and proposed in the stage map,PASS
+V19,deliverables,All ten required artifacts created,10 files,10 files present in V6/outputs/v6_0c_multi_metric_scope_diagnosis,PASS
+V20,boon,Draft for Boon prepared but not declared final,draft only,draft delivered in chat and explicitly marked as not the evidence pack; V6.0G still open,PASS

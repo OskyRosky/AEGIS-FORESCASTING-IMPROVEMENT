@@ -1,0 +1,13 @@
+check_id,check_name,expected,observed,result
+DQ-001,Viewer row count,2416050,2416050,PASS
+DQ-002,Forecast row count,>0,818980,PASS
+DQ-003,Viewer required-grain duplicates,0,0,PASS
+DQ-004,Forecast required-grain duplicates,0,0,PASS
+DQ-005,Viewer required nulls,0,0,PASS
+DQ-006,Forecast required nulls,0,0,PASS
+DQ-007,Viewer model failures,0,0,PASS
+DQ-008,Viewer scope failures,0,0,PASS
+DQ-009,Forecast local scope failures,0,0,PASS
+DQ-010,Silent zero fill operations,0,0,PASS
+DQ-011,SSD-Phoenix Viewer rows,0,0,PASS
+DQ-012,Actual revision policy,Explicit,Median of observed governed revisions,PASS

@@ -1,0 +1,2 @@
+server,database,auth_mode,user_context,connected,query_mode,timestamp,status
+tesseractearth.database.windows.net,TesseractEarthDW,Entra token from Azure CLI session,oscarau@microsoft.com,yes,read_only_select_and_catalog_views,2026-08-12T08:59:35,PASS

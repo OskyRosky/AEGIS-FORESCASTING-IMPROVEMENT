@@ -1,0 +1,22 @@
+{
+  "phase": "Phase B",
+  "status": "PASS",
+  "models": [
+    "FNAR-V2",
+    "NLIN-DLIN_FIXED",
+    "SMLP-TCN"
+  ],
+  "keys": 557,
+  "series_origin_units": 4915,
+  "fits": 14745,
+  "rows": 442350,
+  "new_fits_this_invocation": 14745,
+  "new_rows_this_invocation": 442350,
+  "runtime_seconds_by_model_this_invocation": {
+    "FNAR-V2": 420.5267033997952,
+    "NLIN-DLIN_FIXED": 7.240543599895318,
+    "SMLP-TCN": 3.0906365991249913
+  },
+  "completed_at": "2026-08-14T16:23:56-06:00",
+  "remaining_minutes": 165.02
+}

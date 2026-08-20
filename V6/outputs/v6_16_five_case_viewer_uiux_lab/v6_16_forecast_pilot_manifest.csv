@@ -1,0 +1,4 @@
+metric,scenario,granularity,key_count,actual_rows,forecast_rows,forecast_versions,has_actuals,forecast_only,date_min,date_max,validation_status
+HDD - EDB,Enterprise,Region,45,16042,8100,1,TRUE,FALSE,2025-04-28,2026-10-24,PASS
+SSD - Phoenix,Low Volume No Efficiency,Forest,148,0,26640,1,FALSE,TRUE,2026-08-12,2027-02-07,PASS
+SSD - Phoenix,Low Volume With Efficiency,Forest,152,0,27360,2,FALSE,TRUE,2026-08-12,2027-02-07,PASS

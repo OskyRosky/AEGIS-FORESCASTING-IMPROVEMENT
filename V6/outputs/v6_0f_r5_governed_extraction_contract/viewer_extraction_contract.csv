@@ -1,0 +1,18 @@
+metric,scenario_ui_label,granularity,supports_actuals,supports_forecast,viewer_mode,actual_filter,forecast_filter,type_filter_rule,notes
+HDD - EDB,Enterprise,Region,yes,yes,FULL,ModelVersion = 'actual',ModelVersion <> 'actual' and ModelVersion <> '',group ModelVersion by model_family; unify ARIMA and Arima,46490 rows have a blank ModelVersion and go to an Unspecified bucket
+HDD - EDB,Enterprise,Forest,yes,yes,FULL,TRIM(type) = 'actual',TRIM(type) not in ('actual' 'stubbed' 'Extrapolated' 'Fixed_NA'),TRIM(type) then group by model_family; 162 values never shown flat,type is a CHAR column; TRIM is mandatory
+HDD - EDB,Consumer,Region,yes,yes,FULL,ModelVersion = 'actual',ModelVersion <> 'actual' and ModelVersion <> '',same as Enterprise,
+HDD - EDB,Consumer,Forest,yes,yes,FULL,TRIM(type) = 'actual',TRIM(type) not in ('actual' 'stubbed' 'Extrapolated' 'Fixed_NA'),same as Enterprise,scenario match must be case-insensitive on data_type
+HDD - Basilisk,Basilisk,Region,yes,yes,FULL,ModelVersion = 'actual',ModelVersion <> 'actual' and ModelVersion <> '',same as Enterprise,
+HDD - Basilisk,Basilisk,Forest,yes,yes,FULL,TRIM(type) = 'actual',TRIM(type) not in ('actual' 'stubbed' 'Extrapolated' 'Fixed_NA'),same as Enterprise,only one execution_time exists for Basilisk
+SSD - Phoenix,Low Volume No Efficiency,Forest,no,yes,FORECAST_ONLY,none,Resource='SSD-Phoenix' and Scenario='Low Volume No Efficiency',no model dimension; Type holds only Total and TotalPerturbed,amber notice required
+SSD - Phoenix,Low Volume With Efficiency,Forest,no,yes,FORECAST_ONLY,none,Resource='SSD-Phoenix' and Scenario='Low Volume With Efficiency',no model dimension,amber notice required
+CPU,Consumed,Region,no,yes,FORECAST_ONLY,none,Scenario='Consumed',ModelVersion available as a model dimension (30 values),amber notice required
+CPU Failover,Failover,Region,no,yes,FORECAST_ONLY,none,Scenario='Failover',ModelVersion available (30 values),amber notice required
+CPU,Consumed,Forest,no,yes,FORECAST_ONLY,none,CPU_type='consumed',type available (201 values) group by family,amber notice required
+CPU Failover,Failover,Forest,no,yes,FORECAST_ONLY,none,CPU_type='failover',type available (201 values) group by family,amber notice required
+IOPS,Consumed,Region,no,yes,FORECAST_ONLY,none,Scenario='Consumed',ModelVersion available (89 values),amber notice required
+IOPS Failover,Failover,Region,no,yes,FORECAST_ONLY,none,Scenario='Failover',ModelVersion available (89 values),amber notice required
+IOPS,Consumed,Forest,no,yes,FORECAST_ONLY,none,IOPS_type='consumed',type available (126 values) group by family,amber notice required
+IOPS Failover,Failover,Forest,no,yes,FORECAST_ONLY,none,IOPS_type='failover',type available (126 values) group by family,amber notice required
+Memory,not available,none,no,no,OUT_OF_SCOPE,none,none,none,not selectable; notice only

@@ -1,0 +1,26 @@
+check_id,check_name,expected,validation_method,blocks_next_stage
+V2V01,Exact v2 schema,All 25 contract columns are present with no unexpected replacement or renamed columns,Compare artifact header to backtest_v2_artifact_contract.csv,TRUE
+V2V02,Column types,Every populated value parses as its contracted type,Read-only schema and parse validation,TRUE
+V2V03,Required fields,No null or blank value in a required column,Column-level null and blank counts,TRUE
+V2V04,Eligible Viewer scope,Only approved HDD metric/scenario/granularity combinations are present,Distinct combination comparison to backtest_v2_scope_matrix.csv,TRUE
+V2V05,SSD-Phoenix exclusion,Zero SSD-Phoenix rows exist in the backtest artifact,Filter and count metric equal to SSD - Phoenix,TRUE
+V2V06,Scenario mapping,Enterprise and Consumer map only to HDD - EDB and Basilisk maps only to HDD - Basilisk,Distinct mapping check,TRUE
+V2V07,Approved key inventory,Distinct keys per combination reconcile to the approved scope and R6 inventory,Grouped distinct count and anti-join to R6 key inventory,TRUE
+V2V08,All 15 models,Every completed in-scope unit contains exactly the 15 authorized model names,Grouped distinct model set comparison to backtest_v2_model_contract.csv,TRUE
+V2V09,Model family mapping,Every model has exactly its contracted family and origin,Anti-join to backtest_v2_model_contract.csv,TRUE
+V2V10,Horizon domain,Horizon is an integer from 1 through 30 and equals date minus forecast_start_date,Range and date-difference checks,TRUE
+V2V11,History Window support,Available date ranges are derived from real observations and support only honest selectable windows,Grouped min/max date comparison to governed actual coverage,TRUE
+V2V12,Actual integrity,Every actual value reconciles to governed R6 data and none is simulated padded or zero-filled,Key/date/value anti-join with tolerance documented before execution,TRUE
+V2V13,Extraction lineage,Every extraction_run_id resolves to the governed extraction record for its actual row,Join to R6 closure and lineage evidence,TRUE
+V2V14,Backtest semantics,Every forecast_type equals backtest,Distinct value check,TRUE
+V2V15,Finite numeric values,Required actual_value and forecast_value fields contain finite numeric values,NA NaN infinity and parse checks,TRUE
+V2V16,Row grain uniqueness,No duplicate metric/scenario/granularity/series_key/date/model_name/forecast_start_date/horizon_days rows,Grouped duplicate count,TRUE
+V2V17,Legacy preservation,The verified 204300 legacy rows retain their original model results and gain only approved metadata,Checksum and keyed field-by-field comparison to the legacy artifact,TRUE
+V2V18,Enterprise Region top-up,The six previously uncovered governed keys are generated rather than copied and the combination reaches 45 keys,Key inventory difference and provenance check,TRUE
+V2V19,Basilisk short history,Basilisk begins at its real first observation and contains no padded earlier dates,Minimum date and anti-padding validation against R6 actuals,TRUE
+V2V20,Rolling-origin cadence,Origins match the approved cadence and never exceed available actual history,Per-combination origin inventory comparison to the authorized run manifest,TRUE
+V2V21,Champion recomputation,Champion flags are evaluated per approved scope and are not copied from Enterprise Region,Per-combination champion uniqueness and evaluation provenance check,TRUE
+V2V22,Interval consistency,Intervals are either entirely absent or contain ordered bounds and a valid level,Null-pair bounds ordering and interval-level checks,TRUE
+V2V23,Run provenance,Every run_id and source_artifact resolves to an authorized output and manifest,Anti-join to R8-FIX-3 run manifest,TRUE
+V2V24,Marker exclusion,No stubbed Extrapolated or Fixed_NA model row exists,Case-normalized model-name exclusion check,TRUE
+V2V25,Explicit execution authorization,R8-FIX-3 approval and resolved decisions are recorded before any model command,Review authorization and decision register before execution,TRUE

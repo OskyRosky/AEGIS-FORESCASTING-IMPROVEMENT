@@ -1,0 +1,8 @@
+test_id,query_elapsed_seconds,render_elapsed_seconds_if_measured,rows_returned,status
+V1,0.0903,,1097,PASS
+V2,0.0793,,1097,PASS
+V3,0.0781,,954,PASS
+V4,0.0758,,954,PASS
+V5,0.0798,,2196,PASS
+V6,0.0811,,2196,PASS
+V7,0.0835,,3291,PASS

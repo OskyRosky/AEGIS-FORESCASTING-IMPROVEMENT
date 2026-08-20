@@ -1,0 +1,37 @@
+metric,scenario_ui_label,granularity,status,viewer_status,forecast_status,badge,viewer_table,forecast_table,has_actuals,has_forecast,reason
+HDD - EDB,Enterprise,Region,AVAILABLE,FULL,FULL,GREEN,viewer_hdd,forecast_hdd,TRUE,TRUE,Extracted and validated in R6 Phase 1
+HDD - EDB,Consumer,Region,AVAILABLE,FULL,FULL,GREEN,viewer_hdd,forecast_hdd,TRUE,TRUE,Extracted and validated in R6 Phase 1
+HDD - Basilisk,Basilisk,Region,AVAILABLE,FULL,FULL,GREEN,viewer_hdd,forecast_hdd,TRUE,TRUE,Extracted and validated in R6 Phase 1
+HDD - EDB,Enterprise,Forest,AVAILABLE,FULL,FULL,GREEN,viewer_hdd,forecast_hdd,TRUE,TRUE,Extracted and validated in R6 Phase 1
+HDD - EDB,Consumer,Forest,AVAILABLE,FULL,FULL,GREEN,viewer_hdd,forecast_hdd,TRUE,TRUE,Extracted and validated in R6 Phase 1
+HDD - Basilisk,Basilisk,Forest,AVAILABLE,FULL,FULL,GREEN,viewer_hdd,forecast_hdd,TRUE,TRUE,Extracted and validated in R6 Phase 1
+SSD - Phoenix,Low Volume No Efficiency,Forest,AVAILABLE,FORECAST_ONLY,FULL,AMBER,,forecast_ssd,FALSE,TRUE,Extracted and validated in R6 Phase 1
+SSD - Phoenix,Low Volume With Efficiency,Forest,AVAILABLE,FORECAST_ONLY,FULL,AMBER,,forecast_ssd,FALSE,TRUE,Extracted and validated in R6 Phase 1
+Memory,not available,none,OUT_OF_SCOPE,OUT_OF_SCOPE,OUT_OF_SCOPE,GREY,,,FALSE,FALSE,No populated forecast source in Tesseract (D1)
+SSD - Phoenix,Data Driven,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Data Driven With Efficiency,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Data Driven Without Efficiency,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Data Driven-7day Attachment Offloading,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Gov Clouds,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume 35.4M,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume No Efficiency,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume With Efficiency,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume-30day Attachment Offloading,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume-30day Attachment Offloading-BESTLA,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume-7day Attachment Offloading,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,High Volume-7day Attachment Offloading-BESTLA,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume BP Only,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume Without Efficiency,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume-30day Attachment Offloading,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume-30day Attachment Offloading-BESTLA,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume-7day Attachment Offloading,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Low Volume-7day Attachment Offloading-BESTLA,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,Medium Volume,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+SSD - Phoenix,MSIT,Forest,NOT_EXPOSED,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Documented in R1 but not exposed in the first release (D2)
+CPU,Consumed,Region and Forest,NOT_AVAILABLE_IN_PHASE1,FORECAST_ONLY,FULL,AMBER,,,FALSE,TRUE,Scheduled for R6 Phase 2; not extracted yet
+CPU Failover,Failover,Region and Forest,NOT_AVAILABLE_IN_PHASE1,FORECAST_ONLY,FULL,AMBER,,,FALSE,TRUE,Scheduled for R6 Phase 2; not extracted yet
+IOPS,Consumed,Region and Forest,NOT_AVAILABLE_IN_PHASE1,FORECAST_ONLY,FULL,AMBER,,,FALSE,TRUE,Scheduled for R6 Phase 2; not extracted yet
+IOPS Failover,Failover,Region and Forest,NOT_AVAILABLE_IN_PHASE1,FORECAST_ONLY,FULL,AMBER,,,FALSE,TRUE,Scheduled for R6 Phase 2; not extracted yet
+SSD - MCDB,pending definition,Forest,BLOCKED_O1,NOT_EXPOSED,NOT_EXPOSED,GREY,,,FALSE,TRUE,Scenario mapping ambiguous; blocked by O1

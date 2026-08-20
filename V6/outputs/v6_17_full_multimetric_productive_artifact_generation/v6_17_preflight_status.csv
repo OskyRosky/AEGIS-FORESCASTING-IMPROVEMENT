@@ -1,0 +1,13 @@
+check_id,check_name,expected,observed,status,blocks_execution,notes
+PF-001,Primary worktree,"Primary repository on main","C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT on main",PASS,TRUE,"Isolated inspection worktree is not used"
+PF-002,V6.16 closure gate,"V6_16_FIVE_CASE_VIEWER_UIUX_LAB_FIX_COMPLETED","Token present in V6.16 closure summary",PASS,TRUE,
+PF-003,V6.15 inventory gate,"V6.15 inventory and growth budget present","v6_15_artifact_csv_inventory_growth_budget exists",PASS,TRUE,
+PF-004,Model universe,"Exactly 15 verified models","15 contract rows: 12 non-neural and 3 neural",PASS,TRUE,"No 16th model"
+PF-005,Viewer scope,"596 actual-bearing HDD key-combinations","596 local governed series across six combinations",PASS,TRUE,"39 legacy keys reused; 557 missing keys require generation"
+PF-006,Viewer history continuity,"Real daily histories without padding","596 series have continuous daily dates after date-grain reconciliation",PASS,TRUE,"Basilisk retains 140-144 real days"
+PF-007,Actual revision conflicts,"Explicit non-fabricating reconciliation","1772 Region key/date groups contain multiple governed revisions; median of observed revisions is frozen outside Shiny",PASS,TRUE,"No null is converted to zero"
+PF-008,HDD Forecast source,"Six forecast combinations local","r6_phase1_forecast_hdd.csv exists with all six combinations",PASS,TRUE,
+PF-009,SSD-Phoenix Forecast source,"Two forecast-only scenarios local","r6_phase1_forecast_ssd_phoenix.csv exists for both required scenarios",PASS,TRUE,
+PF-010,CPU/IOPS local source,"Governed local artifacts or explicit block","No CPU/IOPS productive data files in frozen V6.15 inventory or R6 manifest",BLOCKED_NOT_AVAILABLE,FALSE,"Excluded from generation; never fabricated"
+PF-011,Runtime budget,"Hard stop no later than 2026-08-14T19:08:57.870-06:00","Timer started 2026-08-14T15:08:57.870-06:00",PASS,TRUE,"Checkpoint and stop before deadline if required"
+PF-012,SQL policy,"No SQL writes","Only CSV/artifact writes planned; DuckDB remains read-only",PASS,TRUE,

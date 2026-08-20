@@ -1,0 +1,10 @@
+metric_id,metric_label,in_scope,selectable_in_viewer,selectable_in_forecast,badge,scenarios_available_in_tesseract,scenarios_exposed_first_release,source_confirmed,decision_ref,reason
+M1,HDD - EDB,yes,yes,yes,GREEN,2,2,yes,D3,Only metric family with actual and forecast in the same fact table
+M2,HDD - Basilisk,yes,yes,yes,GREEN,1,1,yes,D3,Same tables as HDD - EDB; Basilisk is a Scenario value
+M3,CPU,yes,no,yes,AMBER,1,1,yes,D3,No actual marker found in the CPU fact tables
+M4,CPU Failover,yes,no,yes,AMBER,1,1,yes,D3,No actual marker found
+M5,IOPS,yes,no,yes,AMBER,1,1,yes,D3,No actual marker found
+M6,IOPS Failover,yes,no,yes,AMBER,1,1,yes,D3,No actual marker found
+M7,SSD - Phoenix,yes,no,yes,AMBER,24,2,yes,D2 and D3,Only the 2 portal scenarios exposed initially
+M8,SSD - MCDB,yes,no,no,AMBER,24 plus blank,0,yes,O1,Source confirmed but scenario selection undefined
+M9,Memory,no,no,no,GREY,0,0,no,D1,Demand views return 0 rows; only raw telemetry exists

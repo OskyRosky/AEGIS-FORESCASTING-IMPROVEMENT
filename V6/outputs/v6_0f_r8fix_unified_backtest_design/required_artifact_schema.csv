@@ -1,0 +1,26 @@
+column,type,status_in_v1,required_in_v2,source,notes
+metric,character,MISSING,yes,R6 viewer_hdd,NEW. Existing 204300 rows are backfilled with 'HDD - EDB' (verified by actual-value match)
+scenario,character,MISSING,yes,R6 viewer_hdd,NEW. Existing rows are backfilled with 'Enterprise' (verified)
+granularity,character,MISSING,yes,R6 viewer_hdd,NEW. Existing rows are backfilled with 'Region' (verified)
+series_key,character,present,yes,R6 viewer_hdd key column,Keep the raw casing; matching stays case-insensitive
+series_label,character,present,yes,derived,Display label
+date,date,present,yes,R6 viewer_hdd date,Target date of the observation
+actual_value,numeric,present,yes,R6 viewer_hdd series_type='actual',Never invented and never zero filled
+model_name,character,present,yes,AEGIS run,One of the 15 authorised models
+model_origin,character,present,yes,AEGIS run,baseline or challenger
+model_family,character,present,yes,AEGIS run,growth_baseline / statistical / machine_learning / lightweight_neural
+forecast_value,numeric,present,yes,AEGIS run,Backtest point forecast
+forecast_type,character,present,yes,constant,Always 'backtest'
+horizon_days,integer,present,yes,AEGIS run,1 to 30
+forecast_start_date,date,present,yes,AEGIS run,Rolling origin
+run_id,character,present,yes,AEGIS run,New run id per execution
+source_artifact,character,present,yes,AEGIS run,Provenance path
+is_baseline,logical,present,yes,AEGIS run,
+is_challenger,logical,present,yes,AEGIS run,
+is_deferred,logical,present,yes,AEGIS run,
+is_selected_champion,logical,present,yes,AEGIS run,Champion may differ per scenario; must be recomputed not copied
+risk_status,character,present,yes,AEGIS run,
+lower_bound,numeric,present but all NA,optional,AEGIS run,Intervals are absent in v1; keep the column for compatibility
+upper_bound,numeric,present but all NA,optional,AEGIS run,
+interval_level,numeric,present but all NA,optional,AEGIS run,
+extraction_run_id,character,MISSING,yes,R6,NEW. Links each actual back to the governed extraction

@@ -1,0 +1,8 @@
+dashboard_section,input_artifact,input_type,productive_runtime_input,cooked_outside_dashboard,loaded_by_shiny,notes
+"Viewer - setup, chart, notes, download","V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_viewer_model_outputs_v2_pilot.csv",CSV,TRUE,TRUE,TRUE,"Only productive Viewer input; contains five actual-bearing cases and 15 verified models."
+"Forecast - setup, chart, notes","V6/outputs/v6_16_five_case_viewer_uiux_lab/forecast_forward_outputs_v6_16_pilot.csv",CSV,TRUE,TRUE,TRUE,"Only productive Forecast input; contains prepared HDD actual/forecast rows and SSD-Phoenix forecast-only rows."
+"Forecast builder source - HDD actuals","V6/data/processed/actuals.csv",CSV,FALSE,TRUE,FALSE,"External builder input only; trailing prepared history is copied into the Forecast pilot artifact."
+"Forecast builder source - HDD forecasts","V6/data/processed/forecasts.csv",CSV,FALSE,TRUE,FALSE,"External builder input only; first 180 prepared forward days are copied into the Forecast pilot artifact."
+"Forecast builder source - SSD-Phoenix","V6/outputs/v6_0f_r6_phase1_governed_extraction/r6_phase1_forecast_ssd_phoenix.csv",CSV,FALSE,TRUE,FALSE,"External builder input only; latest version per scenario/key is frozen outside Shiny."
+"Viewer evidence","V6/outputs/v6_16_five_case_viewer_uiux_lab/v6_16_pilot_backtest_manifest.csv",CSV,FALSE,TRUE,FALSE,"Evidence and validation metadata; not a dashboard runtime input."
+"Forecast evidence","V6/outputs/v6_16_five_case_viewer_uiux_lab/v6_16_forecast_pilot_manifest.csv",CSV,FALSE,TRUE,FALSE,"Evidence and validation metadata; not a dashboard runtime input."

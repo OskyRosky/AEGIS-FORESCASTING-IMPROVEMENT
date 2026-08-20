@@ -4,3 +4,14 @@ data/raw/
 data/processed/
 __pycache__/
 *.pyc
+
+# Large derived data - regenerable. Parquet is the source, CSV is a view.
+outputs/**/*_full.csv
+outputs/**/viewer_backtest_phase_*.csv
+outputs/**/r6_phase1_*.csv
+outputs/**/*_BACKUP_*.csv
+outputs/**/backups/
+outputs/**/_backup/
+outputs/**/_state_backup/
+outputs/**/*.log
+data/storage/*.duckdb

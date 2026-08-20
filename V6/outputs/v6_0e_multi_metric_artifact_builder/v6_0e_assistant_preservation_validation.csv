@@ -1,0 +1,19 @@
+check,expected,observed,status
+llm_explain.R present,present,present,PASS
+llm_compose.R present,present,present,PASS
+llm_client.R present,present,present,PASS
+llm_summary_ui.R present,present,present,PASS
+llm_summary_server.R present,present,present,PASS
+assistant files unmodified,0,0,PASS
+legacy evidence pack unchanged,UNCHANGED,UNCHANGED,PASS
+assistant_metric_context.csv created,True,True,PASS
+metric_assistant_evidence_pack.json created,True,True,PASS
+pack keeps legacy shape,True,True,PASS
+pack declares no real llm,False,False,PASS
+pack declares no azure,False,False,PASS
+allowed claims present,0,0,PASS
+disallowed claims present,0,0,PASS
+no single-version accuracy called drift,0,0,PASS
+no invented scenario,0,0,PASS
+claims traceable,0,0,PASS
+limitations present,0,0,PASS

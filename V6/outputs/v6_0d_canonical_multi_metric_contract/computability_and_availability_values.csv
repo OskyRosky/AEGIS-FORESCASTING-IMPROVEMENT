@@ -1,0 +1,35 @@
+field,value,meaning,allowed_for_shiny,ui_treatment,status
+availability_status,local_ingested,Source is present locally with usable rows,yes,Enabled and selectable,DEFINED
+availability_status,partially_available,Present but limited in depth or scope such as a single retained version,yes,Enabled with an explicit limitation badge,DEFINED
+availability_status,not_ingested,Exists upstream but is not extracted into this repository,yes,Disabled with the reason shown,DEFINED
+availability_status,source_not_found,Searched for and not present anywhere in the evidence,yes,Disabled with the reason shown,DEFINED
+availability_status,source_not_updated,Located but not refreshed upstream,yes,Disabled with the reason and last known date,DEFINED
+availability_status,deferred,Explicitly out of scope by decision,yes,Disabled and labelled deferred,DEFINED
+availability_status,pending_stakeholder_mapping,Blocked awaiting a classification decision,yes,Disabled and labelled pending decision,DEFINED
+availability_status,unknown,Cannot be determined from available evidence,yes,Disabled and labelled unknown,DEFINED
+computability_status,fully_computable,Accuracy plus cross plan plus curve and horizon analysis are all supported,yes,All views enabled,DEFINED
+computability_status,accuracy_only,Point accuracy across two or more versions but no target date grain,yes,Accuracy and cross version trend enabled. Curve and horizon views hidden,DEFINED
+computability_status,single_version_accuracy_only,Point accuracy for exactly one forecast version,yes,Accuracy enabled with a single-version notice. Drift and curve views hidden not emptied,DEFINED
+computability_status,not_computable,No analysis is supported,yes,All analytical views hidden with the reason shown,DEFINED
+computability_status,blocked_by_data,Blocked by missing or insufficient data,yes,Hidden with the reason shown,DEFINED
+computability_status,blocked_by_mapping,Blocked by an unresolved stakeholder classification,yes,Hidden with the reason shown,DEFINED
+computability_status,blocked_by_methodology,Blocked by an undecided methodology question,yes,Hidden with the reason shown,DEFINED
+computability_status,blocked_by_unit,Blocked because the unit is unverified and a comparison would be unsafe,yes,Hidden with the reason shown,DEFINED
+computability_status,blocked_by_dashboard_integration,Data is fine but the dashboard is not wired to it yet,yes,Hidden and tracked as product work,DEFINED
+not_computable_reason,SINGLE_VERSION_ONLY,Only one forecast version is retained so nothing can be compared,yes,Shown verbatim in the limitation notice,DEFINED
+not_computable_reason,NO_TARGET_DATE_GRAIN,The source has no target date so curves and horizon errors are impossible,yes,Shown verbatim,DEFINED
+not_computable_reason,NO_ACTUALS,No realised actuals overlap the forecast window,yes,Shown verbatim,DEFINED
+not_computable_reason,NO_FORECAST_FACT_TABLE,No fact table exists for this metric,yes,Shown verbatim,DEFINED
+not_computable_reason,NO_SCENARIO_COLUMN,The source has no scenario dimension,yes,Used to justify hiding the scenario filter,DEFINED
+not_computable_reason,UNKNOWN_UNIT,The raw unit is unverified,yes,Shown verbatim and blocks raw comparison,DEFINED
+not_computable_reason,SOURCE_NOT_UPDATED_IN_EARTH,The upstream object is stale,yes,Shown verbatim,DEFINED
+not_computable_reason,PENDING_STAKEHOLDER_MAPPING,A classification decision is required first,yes,Shown verbatim,DEFINED
+not_computable_reason,LEGACY_HDD_ONLY_ARTIFACT,The consuming artifact only covers HDD,yes,Shown verbatim,DEFINED
+not_computable_reason,SHINY_NOT_CONNECTED,The data exists but the dashboard does not read it,yes,Tracked as product work,DEFINED
+not_computable_reason,MIXED_SOURCE_IDENTITY,Rows from different sources were blended and identity was lost,no,Must never appear in a published artifact. It is a build failure,DEFINED
+not_computable_reason,CROSS_UNIT_AGGREGATION_BLOCKED,An aggregation was refused because units differ,yes,Shown verbatim,DEFINED
+not_computable_reason,SOURCE_NOT_LOCATED,The named object could not be found,yes,Shown verbatim,DEFINED
+scenario_status,present,The source physically exposes a scenario column,yes,Scenario filter visible and enabled,DEFINED
+scenario_status,not_applicable,The source has no scenario dimension,yes,Scenario filter hidden or shown as Not applicable,DEFINED
+scenario_status,pending_mapping,Scenario cannot be resolved until a decision is made,yes,Scenario filter disabled with the reason,DEFINED
+scenario_status,unknown,Cannot be determined,yes,Scenario filter disabled with the reason,DEFINED

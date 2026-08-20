@@ -1,0 +1,9 @@
+metric,scenario,granularity,expected_keys,completed_keys,has_actuals,forecast_only,status
+HDD - EDB,Enterprise,Region,45,45,True,False,PASS
+HDD - EDB,Enterprise,Forest,152,152,True,False,PASS
+HDD - EDB,Consumer,Region,45,45,True,False,PASS
+HDD - EDB,Consumer,Forest,152,152,True,False,PASS
+HDD - Basilisk,Basilisk,Region,47,47,True,False,PASS
+HDD - Basilisk,Basilisk,Forest,155,155,True,False,PASS
+SSD - Phoenix,Low Volume No Efficiency,Forest,148,148,False,True,PASS
+SSD - Phoenix,Low Volume With Efficiency,Forest,152,152,False,True,PASS

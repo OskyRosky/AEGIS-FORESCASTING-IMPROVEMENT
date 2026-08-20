@@ -1,0 +1,17 @@
+"check_id","check_name","expected","observed","result","blocks_next_stage"
+"V619-001","Primary repository searched","Complete recursive filename and reference search","Completed","PASS",FALSE
+"V619-002","Nearby project folders searched","Parent project, sibling worktrees and nearby AEGIS/Tesseract folders","Completed","PASS",FALSE
+"V619-003","E11 cohort file exists","evidence/E11/E11_initial_delivery_cohort.csv","NOT_FOUND","BLOCKED",TRUE
+"V619-004","E11 route summary exists","evidence/E11/E11_initial_delivery_route_summary.csv","NOT_FOUND","BLOCKED",TRUE
+"V619-005","Series universe exists","AEGIS_series_universe.csv","NOT_FOUND","BLOCKED",TRUE
+"V619-006","Documented E11 aggregate recovered","130 cases and 29 route artifacts","130 cases and 29 route artifacts documented","PASS",FALSE
+"V619-007","Exact E11 case manifest available","130 verified case rows","0 rows","BLOCKED",TRUE
+"V619-008","Current SSD-Phoenix counts measured","Exact prepared key counts","148 No Efficiency; 152 With Efficiency; union 152","PASS",FALSE
+"V619-009","Discovery SSD-Phoenix counts documented","Organic 144 and Inorganic 133 Forest keys","Organic 144; Inorganic 133","PASS",FALSE
+"V619-010","SSD-Phoenix semantic crosswalk","Governed mapping between variant and demand-nature labels","No mapping found","BLOCKED",TRUE
+"V619-011","Generation scope approved","One owner-approved A/B/C/D/E option","No option approved","BLOCKED",TRUE
+"V619-012","Blocked cohort manifest remains empty","Headers and zero rows","Headers and zero rows","PASS",FALSE
+"V619-013","Blocked final generation manifest remains empty","Headers and zero rows","Headers and zero rows","PASS",FALSE
+"V619-014","Productive artifacts unchanged","No productive CSV/Parquet mutation","No productive artifact written or modified","PASS",FALSE
+"V619-015","Prohibited execution absent","No models, forecasts, backtests, SQL or Tesseract extraction","None executed","PASS",FALSE
+"V619-016","V6.20 gate","V6.20 blocked until source and decisions resolve","BLOCKED","PASS",TRUE

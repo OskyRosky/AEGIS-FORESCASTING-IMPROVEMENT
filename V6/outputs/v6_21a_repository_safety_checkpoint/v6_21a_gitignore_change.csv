@@ -1,0 +1,11 @@
+"pattern_added","purpose","files_matched","total_bytes_excluded"
+"outputs/**/*_full.csv","Exclude CSV views of committed Parquet artifacts","2",944756439
+"outputs/**/viewer_backtest_phase_*.csv","Exclude phase A and phase B backtest intermediates and their failed attempts","5",657168866
+"outputs/**/r6_phase1_*.csv","Exclude R6 phase 1 governed extraction slices","3",441810965
+"outputs/**/*_BACKUP_*.csv","Exclude timestamped backup copies of viewer outputs","0",0
+"outputs/**/backups/","Exclude promote and rollback backup folders","0",0
+"outputs/**/_backup/","Exclude benchmark backup folders","0",0
+"outputs/**/_state_backup/","Exclude benchmark state backup folders","0",0
+"outputs/**/*.log","Exclude run and console logs","6",40209836
+"data/storage/*.duckdb","Exclude the intermediate DuckDB database","1",27013120
+"TOTAL","All patterns combined","17",2110959226

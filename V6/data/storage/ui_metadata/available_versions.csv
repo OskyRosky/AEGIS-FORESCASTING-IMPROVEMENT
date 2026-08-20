@@ -1,0 +1,17 @@
+metric,scenario_ui_label,granularity,forecast_version,page,version_count,single_version
+HDD - Basilisk,Basilisk,Forest,2026-05-29 21:17:55,forecast,1,TRUE
+HDD - Basilisk,Basilisk,Region,2026-05-29,forecast,1,TRUE
+HDD - EDB,Consumer,Forest,2026-07-23 20:26:01,forecast,1,TRUE
+HDD - EDB,Consumer,Region,2026-07-22,forecast,3,FALSE
+HDD - EDB,Consumer,Region,2026-05-01,forecast,3,FALSE
+HDD - EDB,Consumer,Region,2026-04-16,forecast,3,FALSE
+HDD - EDB,Enterprise,Forest,2026-07-23 20:24:48,forecast,1,TRUE
+HDD - EDB,Enterprise,Region,2026-07-22,forecast,3,FALSE
+HDD - EDB,Enterprise,Region,2026-05-01,forecast,3,FALSE
+HDD - EDB,Enterprise,Region,2026-04-16,forecast,3,FALSE
+SSD - Phoenix,Low Volume No Efficiency,Forest,2026-03-12,forecast,3,FALSE
+SSD - Phoenix,Low Volume No Efficiency,Forest,2026-02-04,forecast,3,FALSE
+SSD - Phoenix,Low Volume No Efficiency,Forest,2025-12-17,forecast,3,FALSE
+SSD - Phoenix,Low Volume With Efficiency,Forest,2026-03-12,forecast,3,FALSE
+SSD - Phoenix,Low Volume With Efficiency,Forest,2026-02-04,forecast,3,FALSE
+SSD - Phoenix,Low Volume With Efficiency,Forest,2025-11-14,forecast,3,FALSE

@@ -1,0 +1,40 @@
+{
+  "phase": "Phase A",
+  "status": "PASS",
+  "models": [
+    "FixedGrowth_1_5",
+    "FixedGrowth_3",
+    "FixedGrowth_4",
+    "FixedGrowth_6",
+    "ARIMA_Fixed",
+    "ETS_Current",
+    "LinearRegression",
+    "AutoARIMA",
+    "ETS Explicit",
+    "Theta",
+    "LightGBM",
+    "XGBoost"
+  ],
+  "keys": 557,
+  "series_origin_units": 4915,
+  "fits": 58980,
+  "rows": 1769400,
+  "new_fits_this_invocation": 58980,
+  "new_rows_this_invocation": 1769400,
+  "runtime_seconds_by_model_this_invocation": {
+    "FixedGrowth_1_5": 4.314015900119557,
+    "FixedGrowth_3": 3.952915300091263,
+    "FixedGrowth_4": 3.861614899811684,
+    "FixedGrowth_6": 3.8176939996046713,
+    "ARIMA_Fixed": 4.779534599845647,
+    "ETS_Current": 5.122305399941979,
+    "LinearRegression": 6.765098599367775,
+    "AutoARIMA": 2446.4145593001012,
+    "ETS Explicit": 81.3434034994425,
+    "Theta": 99.24931869949796,
+    "LightGBM": 127.18324529996607,
+    "XGBoost": 246.55750009979238
+  },
+  "completed_at": "2026-08-14T16:09:20-06:00",
+  "remaining_minutes": 179.62
+}

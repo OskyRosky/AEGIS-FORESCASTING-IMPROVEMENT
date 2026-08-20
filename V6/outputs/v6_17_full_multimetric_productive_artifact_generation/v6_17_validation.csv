@@ -1,0 +1,15 @@
+check_id,check_name,expected,observed,result,blocks_closure
+VAL-001,Exactly 15 Viewer models,15,15,PASS,True
+VAL-002,No 16th model,Absent,Absent,PASS,True
+VAL-003,Viewer actual-bearing only,HDD six combinations,HDD six combinations,PASS,True
+VAL-004,SSD-Phoenix absent from Viewer,0 rows,0 rows,PASS,True
+VAL-005,SSD-Phoenix present in Forecast,300 key-combinations,300 key-combinations,PASS,True
+VAL-006,All local Forecast scope complete,8 combinations,8 combinations,PASS,True
+VAL-007,CPU/IOPS honest status,Explicitly blocked,BLOCKED_NOT_AVAILABLE,PASS,False
+VAL-008,No fake actuals or forecasts,No fabrication,No fabrication,PASS,True
+VAL-009,No duplicate required grain,0,0,PASS,True
+VAL-010,No silent missing-to-zero,0 operations,0 operations,PASS,True
+VAL-011,Cooked outside Shiny,TRUE,TRUE,PASS,True
+VAL-012,Four-hour budget,<=240 minutes,88.27 minutes,PASS,True
+VAL-013,HTTP 200,200,200,PASS,True
+VAL-014,Viewer and Forecast load,Both,Both loaded and rendered prepared charts,PASS,True
