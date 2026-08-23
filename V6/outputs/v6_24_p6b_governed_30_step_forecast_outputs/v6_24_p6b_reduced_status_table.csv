@@ -1,0 +1,11 @@
+stage,name,expected,observed,status
+V6.24-P4,Cohort Normalization / Manifest Freeze,closed,closed,CLOSED
+V6.24-P5A,Backtest Execution Plan / Window Contract,closed,closed,CLOSED
+V6.24-P5B,Smoke Test,closed,45/45 model fits OK,CLOSED
+V6.24-P5,15-Model Backtest Generation,closed,"614,190 rows",CLOSED
+V6.24-P5C,Independent Backtest Audit,closed,37/37 PASS,CLOSED
+V6.24-P6,Accuracy + Rankings,accuracy_metrics + model_rankings,"2,100 + 2,100 rows delivered; forecast_outputs was blocked",SUPERSEDED_BY_P6B
+V6.24-P6B,Governed 30-Step Forecast Outputs,"63,000 rows","63,000 rows, 0 failures, 1.05 min",CLOSED
+V6.24-P6 (overall),Forecast + Accuracy + Rankings,all three artifacts present,accuracy_metrics + model_rankings + forecast_outputs all present,COMPLETE
+V6.24-P6C,Ranking tie-order correction,not started,REQUIRED: 16 misranked champions found by P6B,RECOMMENDED
+V6.24-P7,Navigation Contract / Taxonomy Counts,not started,not started - awaiting owner decision on Q1,PENDING

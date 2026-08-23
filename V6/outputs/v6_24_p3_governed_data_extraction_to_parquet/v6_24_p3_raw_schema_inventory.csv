@@ -1,0 +1,83 @@
+file_name,column_name,data_type,nullable,inferred_role,notes
+ssd_lvwe_raw.parquet,metric,large_string,True,taxonomy_metric,Constant per file.
+ssd_lvwe_raw.parquet,db_type,large_string,True,taxonomy_db_type,Phoenix for SSD; explicit placeholder for CPU/IOPS.
+ssd_lvwe_raw.parquet,variant,large_string,True,taxonomy_variant,LVWE or LVNE forecast variant. NOT_APPLICABLE elsewhere.
+ssd_lvwe_raw.parquet,scenario,large_string,True,taxonomy_scenario,Consumed/Failover for CPU and IOPS; NOT_APPLICABLE for SSD.
+ssd_lvwe_raw.parquet,segment,large_string,True,taxonomy_segment,NOT_APPLICABLE for every extracted metric.
+ssd_lvwe_raw.parquet,demand_nature,large_string,True,taxonomy_demand_nature,Source Type column for CPU/IOPS; Organic for SSD.
+ssd_lvwe_raw.parquet,granularity,large_string,True,taxonomy_granularity,Forest for SSD; Region for CPU and IOPS.
+ssd_lvwe_raw.parquet,series_key,large_string,True,series_key,The series identity. Forest key or region-environment key.
+ssd_lvwe_raw.parquet,window_start,timestamp[us],True,window_start,SSD rolling window start. Not the series date.
+ssd_lvwe_raw.parquet,series_date,timestamp[us],True,series_date,THE series date. SSD End_Date; CPU/IOPS DateTime.
+ssd_lvwe_raw.parquet,window_obs_count,int64,True,window_size,"SSD observations inside the rolling window, 1..7."
+ssd_lvwe_raw.parquet,actual_value,double,True,actual_value,The observed value. SSD: TRY_CAST of a varchar column.
+ssd_lvwe_raw.parquet,actual_value_source_text,large_string,True,actual_value_provenance,"Original varchar Mean_Actual, retained so the cast is auditable rather than trusted. No silent coercion."
+ssd_lvwe_raw.parquet,forecast_value,double,True,forecast_value,SSD Mean_Forecast. Absent for CPU and IOPS.
+ssd_lvwe_raw.parquet,mae,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,rmse,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,bias,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,bias_pct,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,mape,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,smape,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,accuracy,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvwe_raw.parquet,forecast_version,large_string,True,forecast_version,SSD: single value 2026-03-12.
+ssd_lvwe_raw.parquet,source_object,large_string,True,provenance,Originating SQL table.
+ssd_lvne_raw.parquet,metric,large_string,True,taxonomy_metric,Constant per file.
+ssd_lvne_raw.parquet,db_type,large_string,True,taxonomy_db_type,Phoenix for SSD; explicit placeholder for CPU/IOPS.
+ssd_lvne_raw.parquet,variant,large_string,True,taxonomy_variant,LVWE or LVNE forecast variant. NOT_APPLICABLE elsewhere.
+ssd_lvne_raw.parquet,scenario,large_string,True,taxonomy_scenario,Consumed/Failover for CPU and IOPS; NOT_APPLICABLE for SSD.
+ssd_lvne_raw.parquet,segment,large_string,True,taxonomy_segment,NOT_APPLICABLE for every extracted metric.
+ssd_lvne_raw.parquet,demand_nature,large_string,True,taxonomy_demand_nature,Source Type column for CPU/IOPS; Organic for SSD.
+ssd_lvne_raw.parquet,granularity,large_string,True,taxonomy_granularity,Forest for SSD; Region for CPU and IOPS.
+ssd_lvne_raw.parquet,series_key,large_string,True,series_key,The series identity. Forest key or region-environment key.
+ssd_lvne_raw.parquet,window_start,timestamp[us],True,window_start,SSD rolling window start. Not the series date.
+ssd_lvne_raw.parquet,series_date,timestamp[us],True,series_date,THE series date. SSD End_Date; CPU/IOPS DateTime.
+ssd_lvne_raw.parquet,window_obs_count,int64,True,window_size,"SSD observations inside the rolling window, 1..7."
+ssd_lvne_raw.parquet,actual_value,double,True,actual_value,The observed value. SSD: TRY_CAST of a varchar column.
+ssd_lvne_raw.parquet,actual_value_source_text,large_string,True,actual_value_provenance,"Original varchar Mean_Actual, retained so the cast is auditable rather than trusted. No silent coercion."
+ssd_lvne_raw.parquet,forecast_value,double,True,forecast_value,SSD Mean_Forecast. Absent for CPU and IOPS.
+ssd_lvne_raw.parquet,mae,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,rmse,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,bias,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,bias_pct,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,mape,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,smape,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,accuracy,double,True,accuracy_metric,Precomputed source accuracy metric.
+ssd_lvne_raw.parquet,forecast_version,large_string,True,forecast_version,SSD: single value 2026-03-12.
+ssd_lvne_raw.parquet,source_object,large_string,True,provenance,Originating SQL table.
+cpu_actuals_raw.parquet,metric,large_string,True,taxonomy_metric,Constant per file.
+cpu_actuals_raw.parquet,db_type,large_string,True,taxonomy_db_type,Phoenix for SSD; explicit placeholder for CPU/IOPS.
+cpu_actuals_raw.parquet,variant,large_string,True,taxonomy_variant,LVWE or LVNE forecast variant. NOT_APPLICABLE elsewhere.
+cpu_actuals_raw.parquet,scenario,large_string,True,taxonomy_scenario,Consumed/Failover for CPU and IOPS; NOT_APPLICABLE for SSD.
+cpu_actuals_raw.parquet,segment,large_string,True,taxonomy_segment,NOT_APPLICABLE for every extracted metric.
+cpu_actuals_raw.parquet,demand_nature,large_string,True,taxonomy_demand_nature,Source Type column for CPU/IOPS; Organic for SSD.
+cpu_actuals_raw.parquet,granularity,large_string,True,taxonomy_granularity,Forest for SSD; Region for CPU and IOPS.
+cpu_actuals_raw.parquet,series_key,large_string,True,series_key,The series identity. Forest key or region-environment key.
+cpu_actuals_raw.parquet,series_date,date32[day],True,series_date,THE series date. SSD End_Date; CPU/IOPS DateTime.
+cpu_actuals_raw.parquet,actual_value,double,True,actual_value,The observed value. SSD: TRY_CAST of a varchar column.
+cpu_actuals_raw.parquet,value_reference,double,True,value_reference,CPU/IOPS ValueRef. Semantics not established.
+cpu_actuals_raw.parquet,model_version,large_string,True,actual_marker,Always 'Actual'. The filter that isolates observed history.
+cpu_actuals_raw.parquet,forecast_version,date32[day],True,forecast_version,SSD: single value 2026-03-12.
+cpu_actuals_raw.parquet,Fleet,large_string,True,unclassified,Source column.
+cpu_actuals_raw.parquet,Workload,large_string,True,unclassified,Source column.
+cpu_actuals_raw.parquet,Resource,large_string,True,unclassified,Source column.
+cpu_actuals_raw.parquet,Unit,large_string,True,unclassified,Source column.
+cpu_actuals_raw.parquet,source_object,large_string,True,provenance,Originating SQL table.
+iops_actuals_raw.parquet,metric,large_string,True,taxonomy_metric,Constant per file.
+iops_actuals_raw.parquet,db_type,large_string,True,taxonomy_db_type,Phoenix for SSD; explicit placeholder for CPU/IOPS.
+iops_actuals_raw.parquet,variant,large_string,True,taxonomy_variant,LVWE or LVNE forecast variant. NOT_APPLICABLE elsewhere.
+iops_actuals_raw.parquet,scenario,large_string,True,taxonomy_scenario,Consumed/Failover for CPU and IOPS; NOT_APPLICABLE for SSD.
+iops_actuals_raw.parquet,segment,large_string,True,taxonomy_segment,NOT_APPLICABLE for every extracted metric.
+iops_actuals_raw.parquet,demand_nature,large_string,True,taxonomy_demand_nature,Source Type column for CPU/IOPS; Organic for SSD.
+iops_actuals_raw.parquet,granularity,large_string,True,taxonomy_granularity,Forest for SSD; Region for CPU and IOPS.
+iops_actuals_raw.parquet,series_key,large_string,True,series_key,The series identity. Forest key or region-environment key.
+iops_actuals_raw.parquet,series_date,date32[day],True,series_date,THE series date. SSD End_Date; CPU/IOPS DateTime.
+iops_actuals_raw.parquet,actual_value,double,True,actual_value,The observed value. SSD: TRY_CAST of a varchar column.
+iops_actuals_raw.parquet,value_reference,double,True,value_reference,CPU/IOPS ValueRef. Semantics not established.
+iops_actuals_raw.parquet,model_version,large_string,True,actual_marker,Always 'Actual'. The filter that isolates observed history.
+iops_actuals_raw.parquet,forecast_version,date32[day],True,forecast_version,SSD: single value 2026-03-12.
+iops_actuals_raw.parquet,Fleet,large_string,True,unclassified,Source column.
+iops_actuals_raw.parquet,Workload,large_string,True,unclassified,Source column.
+iops_actuals_raw.parquet,Resource,large_string,True,unclassified,Source column.
+iops_actuals_raw.parquet,Unit,large_string,True,unclassified,Source column.
+iops_actuals_raw.parquet,source_object,large_string,True,provenance,Originating SQL table.

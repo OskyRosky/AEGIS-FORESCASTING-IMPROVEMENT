@@ -1,0 +1,78 @@
+{
+ "LVWE": {
+  "rows": 6550,
+  "grain": "series_key+series_date",
+  "duplicate_grain_rows": 100,
+  "distinct_grain": 6500,
+  "distinct_keys": 50,
+  "distinct_scenarios": [
+   "NOT_APPLICABLE"
+  ],
+  "series_count": 50,
+  "dup_groups": 50,
+  "dup_groups_with_same_value": 50,
+  "dup_groups_with_different_value": 0,
+  "dup_groups_with_different_window_start": 0,
+  "rows_per_key": [
+   131,
+   131
+  ],
+  "dates_per_key": [
+   130,
+   130
+  ],
+  "keys_with_rows_gt_dates": 50
+ },
+ "LVNE": {
+  "rows": 6600,
+  "grain": "series_key+series_date",
+  "duplicate_grain_rows": 100,
+  "distinct_grain": 6550,
+  "distinct_keys": 50,
+  "distinct_scenarios": [
+   "NOT_APPLICABLE"
+  ],
+  "series_count": 50,
+  "dup_groups": 50,
+  "dup_groups_with_same_value": 50,
+  "dup_groups_with_different_value": 0,
+  "dup_groups_with_different_window_start": 0,
+  "rows_per_key": [
+   132,
+   132
+  ],
+  "dates_per_key": [
+   131,
+   131
+  ],
+  "keys_with_rows_gt_dates": 50
+ },
+ "CPU": {
+  "rows": 11228,
+  "grain": "scenario+series_key+series_date",
+  "duplicate_grain_rows": 0,
+  "distinct_grain": 11228,
+  "distinct_keys": 10,
+  "distinct_scenarios": [
+   "Consumed",
+   "Failover"
+  ],
+  "series_count": 20,
+  "keys_in_both_scenarios": 10,
+  "keys_in_one_scenario": 0
+ },
+ "IOPS": {
+  "rows": 20501,
+  "grain": "scenario+series_key+series_date",
+  "duplicate_grain_rows": 0,
+  "distinct_grain": 20501,
+  "distinct_keys": 10,
+  "distinct_scenarios": [
+   "Consumed",
+   "Failover"
+  ],
+  "series_count": 20,
+  "keys_in_both_scenarios": 10,
+  "keys_in_one_scenario": 0
+ }
+}

@@ -1,0 +1,4 @@
+metric,granularity,total_combinations,with_actuals,over_50_actuals,with_15_models,with_forecast,product_complete
+HDD,Forest,459,459,459,459,459,459
+HDD,Region,137,137,137,137,137,137
+SSD,Forest,300,0,0,0,300,0

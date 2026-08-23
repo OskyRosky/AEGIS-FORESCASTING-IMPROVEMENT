@@ -1,0 +1,20 @@
+check_id,check_name,expected,observed,result
+V1,SSD object sweep covers all discovered SSD-related objects,all 102 SSD objects reviewed,102 objects swept and scored,PASS
+V2,LVWE and LVNE both explicitly checked,both present in the assessment,"LVWE=True, LVNE=True",PASS
+V3,The confirmed SSD actual-bearing source is identified,>= 1 confirmed source,"4 confirmed: LVWE and LVNE current, Greenland and Demand_History historic",PASS
+V4,"Date, key, actual and forecast columns identified",all four populated for the current sources,End_Date / Key / Mean_Actual / Mean_Forecast on both LVWE and LVNE,PASS
+V5,Non-null actual counts measured,null count reported,"P1B005 and P1B007: null Mean_Actual = 0 in both LVWE (17,596 rows) and LVNE (17,733 rows)",PASS
+V6,Number of SSD keys with more than 50 observations reported,explicit count,LVWE 136 of 137; LVNE 136 of 137; distinct observed combinations = 136 because the two variants share one actual series,PASS
+V7,AX4 reconciliation performed for NAMPRD07 or NAMPRD08,both keys reconciled,2 MATCH rows: NAMPRD08 actual 11219.51 / forecast 11917.44 / acc 93.78; NAMPRD07 actual 9996.28 / forecast 10905.34 / acc 90.91,PASS
+V8,Report distinguishes raw daily actuals from rolling-window metrics,distinct classifications used,DASHBOARD_AGGREGATED_ACTUALS_SOURCE for LVWE/LVNE; RAW_DAILY_ACTUALS_SOURCE_CONFIRMED for Greenland and Demand_History,PASS
+V9,P1's 'SSD has no actuals' conclusion explicitly corrected,correction stated in the closure summary,closure summary present=True with a dedicated correction section,PASS
+V10,P2 readiness updated to include SSD,"SSD, CPU and IOPS included; HDD and Memory not","included=['CPU', 'IOPS', 'SSD']",PASS
+V11,No full extraction performed,no data query returns more than 1000 rows,max data-query result = 137 rows (the 137-key vocabulary listing),PASS
+V12,No Parquet written,0 parquet files,0 parquet files,PASS
+V13,No models run,only .csv/.md/.json/.py/.txt artifacts,"suffixes: ['.csv', '.json', '.md', '.py', '.txt']",PASS
+V14,No Shiny files modified,0 shiny_app entries,0 entries,PASS
+V15,V1 through V5 untouched,0 entries,0 entries,PASS
+V16,Query budget respected,<= 25 SQL queries,18 queries executed against a budget of 25,PASS
+V17,Unresolved questions documented rather than guessed,>= 1 logged,6 open questions logged,PASS
+V18,Auth mode and any auth incident recorded in the ledger,auth_mode populated on every row,auth modes present: ['ActiveDirectoryIntegrated'],PASS
+V19,The 272 figure from the preliminary P1B report is corrected,"136 distinct observed combinations, not 272","P1B012 returned 0 rows differing on Mean_Actual, proving LVWE and LVNE share one observed series. Corrected to 136.",PASS

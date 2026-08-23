@@ -1,0 +1,5 @@
+metric,source_rows,processed_rows,matched_rows,source_only_rows,processed_only_rows,expected_row_delta,observed_row_delta,max_abs_value_delta,changed_value_count,missing_series_count,duplicate_rows_removed,validation_status,notes
+SSD,6500,6500,6500,0,0,-50,-50,1.1102230246251565e-16,0,0,50,PASS,"actual_value re-derived independently with pd.to_numeric on the retained source text, then compared. 50 exact duplicates removed as audited."
+CPU,11228,11228,11228,0,0,0,0,0.0,0,0,0,PASS,No transformation applied. Values carried through verbatim.
+IOPS,20501,20501,20501,0,0,0,0,0.0,0,0,0,PASS,No transformation applied. Values carried through verbatim.
+HDD,10687,10687,10687,0,0,0,0,0.0,0,0,193613,PASS,"Local artifact repeats each observation once per model and run. 193,613 repetitions collapsed to one row per series-date. Max value spread inside a grain group: 0.0000000009 (float representation noise, not a data conflict)."

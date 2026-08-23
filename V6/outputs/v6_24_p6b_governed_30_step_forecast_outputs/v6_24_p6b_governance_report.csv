@@ -1,0 +1,14 @@
+invariant,expected,observed,result
+Shiny untouched,no diff,clean,PASS
+V1 through V5 untouched,no diff,clean,PASS
+raw Parquet untouched,no diff,clean,PASS
+Frozen P4/P5/P6 artifacts unmodified,0 modified,12 artifacts verified by mtime+size before and after,PASS
+No SQL / no new extraction,none,none - P6B read only local parquet artifacts,PASS
+navigation_contract not created,absent,absent,PASS
+taxonomy_counts not created,absent,absent,PASS
+Rankings not recalculated,unchanged,model_rankings untouched; 16 misranked champions REPORTED ONLY,PASS
+Accuracy not recalculated,unchanged,accuracy_metrics untouched,PASS
+HDD backtests not re-run,unchanged,model_backtests_15_models untouched; P6B did forward generation only,PASS
+No git add . / -A / --all,not used,no staging performed by P6B,PASS
+No push,none,none,PASS
+Only governed model names,15 exactly,"15 distinct, set equality with the catalog: True",PASS

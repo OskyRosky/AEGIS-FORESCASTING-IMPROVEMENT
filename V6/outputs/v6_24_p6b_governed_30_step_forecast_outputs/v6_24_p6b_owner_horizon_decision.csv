@@ -1,0 +1,8 @@
+decision_id,decision,value,reason,authorised_by,result
+D1,Forecast horizon semantics,GOVERNED_30_STEP_DAILY_FORECAST,The only forecast capability empirically verified across all 15 governed models: the P6 probe fitted 15/15 models and every one emitted exactly 30 steps,"Owner, P6B prompt section 0",ACCEPTED
+D2,Forecast step count,30 daily steps,"HORIZON_DAYS=30 is a module constant and, for the neural models, the output dimension of the trained network",Owner,ACCEPTED
+D3,"Reject the 1,440-day horizon",REJECTED,"No governed model can emit 1,440 steps; adopting it would require inventing data",Owner,REJECTED_AS_PLANNED
+D4,Reject recursive multi-step forecasting,NOT USED,Recursion feeds predictions back as inputs; error compounding was never validated by P5B,Owner,REJECTED_AS_PLANNED
+D5,Reject reuse of the legacy HDD forward artifact,NOT REUSED,It carries 30 non-governed model names with zero overlap with the governed 15,Owner,REJECTED_AS_PLANNED
+D6,Generate HDD forward forecasts under the governed vocabulary,INCLUDED,Forward generation only; HDD backtests were NOT re-run and remain the P5 reused artifact,Owner,APPLIED
+D7,Expected row count,"140 x 15 x 30 = 63,000",Deterministic consequence of the accepted horizon,Owner,"MET (63,000 rows)"

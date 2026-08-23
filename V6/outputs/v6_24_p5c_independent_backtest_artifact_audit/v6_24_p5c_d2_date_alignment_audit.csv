@@ -1,0 +1,11 @@
+check,expected,observed,severity,result
+prediction_date equals target_date on every row,0 offsets,"0 of 614,190",CRITICAL,PASS
+train_end_date < target_date on every GENERATED_P5 row,0 violations,"0 of 409,890",CRITICAL,PASS
+train_end_date < target_date across the whole artifact,0 violations,"0 of 614,190",CRITICAL,PASS
+horizon_steps equals target_date minus train_end_date,0 mismatches,0,HIGH,PASS
+horizon_steps within 1..30,0 out of range,0,HIGH,PASS
+No invented GENERATED_P5 target dates,0 outside actuals_normalized,0,CRITICAL,PASS
+No filled dates,targets are a subset of observed dates,0 outside,CRITICAL,PASS
+No resampled dates,targets are a subset of observed dates,0 outside,CRITICAL,PASS
+No interpolated dates,targets are a subset of observed dates,0 outside,CRITICAL,PASS
+D2 policy tagged on generated rows,D2_SPARSE_OBSERVED_BACKTEST,['D2_SPARSE_OBSERVED_BACKTEST'],HIGH,PASS

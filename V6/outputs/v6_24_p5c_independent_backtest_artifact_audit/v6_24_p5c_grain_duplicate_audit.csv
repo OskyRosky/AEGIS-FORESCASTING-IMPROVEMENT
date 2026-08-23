@@ -1,0 +1,7 @@
+check,grain,expected,observed,result
+No duplicate rows at the full grain,series_id+model_name+target_date+train_end_date+source_generation_status,0,0,PASS
+No duplicate rows at the natural grain,series_id+model_name+target_date+train_end_date,0,0,PASS
+No duplicate GENERATED_P5 rows,series_id+model_name+target_date+train_end_date,0,0,PASS
+No duplicate reused HDD rows after mapping,series_id+model_name+target_date+train_end_date,0,0,PASS
+No accidental duplication from mixed HDD lineage,series_id+model_name+target_date+train_end_date,0,0 duplicates across 5 distinct run_id values,PASS
+No key-only join implied,key+route_path maps to exactly one series_id,0,0 key+route combinations mapping to more than one series_id; 17 keys spanning multiple series_id (expected: 4 HDD keys appear under two routes each),PASS

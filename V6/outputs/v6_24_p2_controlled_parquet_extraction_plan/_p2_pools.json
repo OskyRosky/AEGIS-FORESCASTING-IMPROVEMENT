@@ -1,0 +1,1930 @@
+{
+ "ssd": [
+  {
+   "key": "APCP150",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 0.51
+  },
+  {
+   "key": "APCPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3278.07
+  },
+  {
+   "key": "APCPRD02",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5344.64
+  },
+  {
+   "key": "APCPRD03",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5697.27
+  },
+  {
+   "key": "APCPRD04",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3551.55
+  },
+  {
+   "key": "APCPRD06",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 4273.3
+  },
+  {
+   "key": "AREP273",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1318.41
+  },
+  {
+   "key": "AUSP282",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5121.29
+  },
+  {
+   "key": "AUSP300",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2231.16
+  },
+  {
+   "key": "AUSPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 7070.91
+  },
+  {
+   "key": "AUTP296",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 22.55
+  },
+  {
+   "key": "BRAP284",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2466.99
+  },
+  {
+   "key": "CANP288",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2366.43
+  },
+  {
+   "key": "CANPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6814.49
+  },
+  {
+   "key": "CHEP278",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2719.74
+  },
+  {
+   "key": "CHLP298",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 18.79
+  },
+  {
+   "key": "DEUP281",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6585.22
+  },
+  {
+   "key": "DNKP307",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1.95
+  },
+  {
+   "key": "ESPP292",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 115.22
+  },
+  {
+   "key": "EURP107",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 125.03
+  },
+  {
+   "key": "EURP119",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 4.85
+  },
+  {
+   "key": "EURP120",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 395.17
+  },
+  {
+   "key": "EURP121",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 22.4
+  },
+  {
+   "key": "EURP122",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 245.67
+  },
+  {
+   "key": "EURP137",
+   "obs": 128,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-19",
+   "mean_actual_avg": 5.1
+  },
+  {
+   "key": "EURP138",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 489.24
+  },
+  {
+   "key": "EURP175",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 0.0
+  },
+  {
+   "key": "EURP176",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 292.12
+  },
+  {
+   "key": "EURP177",
+   "obs": 24,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-05-05",
+   "mean_actual_avg": 2.75
+  },
+  {
+   "key": "EURP178",
+   "obs": 64,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-06-16",
+   "mean_actual_avg": 0.13
+  },
+  {
+   "key": "EURP179",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 56.53
+  },
+  {
+   "key": "EURP180",
+   "obs": 64,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-06-16",
+   "mean_actual_avg": 0.03
+  },
+  {
+   "key": "EURP189",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3494.7
+  },
+  {
+   "key": "EURP190",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2261.54
+  },
+  {
+   "key": "EURP191",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3132.13
+  },
+  {
+   "key": "EURP192",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3900.95
+  },
+  {
+   "key": "EURP193",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2738.42
+  },
+  {
+   "key": "EURP194",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2303.92
+  },
+  {
+   "key": "EURP195",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3883.39
+  },
+  {
+   "key": "EURP250",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1800.75
+  },
+  {
+   "key": "EURP251",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 582.11
+  },
+  {
+   "key": "EURPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10708.6
+  },
+  {
+   "key": "EURPRD02",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10169.64
+  },
+  {
+   "key": "EURPRD03",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 8324.07
+  },
+  {
+   "key": "EURPRD04",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 12057.13
+  },
+  {
+   "key": "EURPRD05",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 11466.25
+  },
+  {
+   "key": "EURPRD06",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 7841.12
+  },
+  {
+   "key": "EURPRD07",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10095.25
+  },
+  {
+   "key": "EURPRD08",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10766.33
+  },
+  {
+   "key": "EURPRD09",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10428.87
+  },
+  {
+   "key": "EURPRD10",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 11834.26
+  },
+  {
+   "key": "FRAP264",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6007.25
+  },
+  {
+   "key": "GBRP123",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5271.36
+  },
+  {
+   "key": "GBRP265",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6733.82
+  },
+  {
+   "key": "GBRP267",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3.31
+  },
+  {
+   "key": "GBRP302",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6741.45
+  },
+  {
+   "key": "IDNP305",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1.14
+  },
+  {
+   "key": "INDP287",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3612.59
+  },
+  {
+   "key": "INDPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 4864.49
+  },
+  {
+   "key": "ISRP290",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 87.43
+  },
+  {
+   "key": "ITAP293",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 406.17
+  },
+  {
+   "key": "JPNP286",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10005.95
+  },
+  {
+   "key": "JPNP301",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3997.0
+  },
+  {
+   "key": "JPNPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 16529.16
+  },
+  {
+   "key": "KORP216",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1415.86
+  },
+  {
+   "key": "LAMP152",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 3345.12
+  },
+  {
+   "key": "LAMP215",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1123.67
+  },
+  {
+   "key": "LAMPRD80",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2166.37
+  },
+  {
+   "key": "MEXP297",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 21.52
+  },
+  {
+   "key": "MYSP306",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 20.51
+  },
+  {
+   "key": "NAMP100",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 356.57
+  },
+  {
+   "key": "NAMP101",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 23.46
+  },
+  {
+   "key": "NAMP104",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 215.29
+  },
+  {
+   "key": "NAMP105",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 16.26
+  },
+  {
+   "key": "NAMP106",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 502.1
+  },
+  {
+   "key": "NAMP108",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 245.5
+  },
+  {
+   "key": "NAMP109",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 279.3
+  },
+  {
+   "key": "NAMP113",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 38.19
+  },
+  {
+   "key": "NAMP114",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 4872.7
+  },
+  {
+   "key": "NAMP115",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 25.46
+  },
+  {
+   "key": "NAMP118",
+   "obs": 83,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-07-05",
+   "mean_actual_avg": 3.9
+  },
+  {
+   "key": "NAMP125",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 9.67
+  },
+  {
+   "key": "NAMP128",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 20.89
+  },
+  {
+   "key": "NAMP129",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 73.6
+  },
+  {
+   "key": "NAMP130",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1148.1
+  },
+  {
+   "key": "NAMP131",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 23.85
+  },
+  {
+   "key": "NAMP132",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 92.99
+  },
+  {
+   "key": "NAMP133",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 17.66
+  },
+  {
+   "key": "NAMP134",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 23.84
+  },
+  {
+   "key": "NAMP136",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 88.53
+  },
+  {
+   "key": "NAMP154",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 9.31
+  },
+  {
+   "key": "NAMP157",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 8.02
+  },
+  {
+   "key": "NAMP158",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 49.55
+  },
+  {
+   "key": "NAMP161",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 232.84
+  },
+  {
+   "key": "NAMP162",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 315.72
+  },
+  {
+   "key": "NAMP163",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 70.67
+  },
+  {
+   "key": "NAMP164",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 176.4
+  },
+  {
+   "key": "NAMP166",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 34.86
+  },
+  {
+   "key": "NAMP167",
+   "obs": 104,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-07-26",
+   "mean_actual_avg": 0.24
+  },
+  {
+   "key": "NAMP169",
+   "obs": 99,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-07-21",
+   "mean_actual_avg": 0.0
+  },
+  {
+   "key": "NAMP170",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 100.3
+  },
+  {
+   "key": "NAMP171",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 92.9
+  },
+  {
+   "key": "NAMP173",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 9.67
+  },
+  {
+   "key": "NAMP220",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1749.6
+  },
+  {
+   "key": "NAMP221",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 2263.49
+  },
+  {
+   "key": "NAMP222",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1687.69
+  },
+  {
+   "key": "NAMP223",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1297.0
+  },
+  {
+   "key": "NAMPRD01",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10191.67
+  },
+  {
+   "key": "NAMPRD02",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 12547.87
+  },
+  {
+   "key": "NAMPRD03",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 7601.86
+  },
+  {
+   "key": "NAMPRD04",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5757.0
+  },
+  {
+   "key": "NAMPRD05",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 9791.26
+  },
+  {
+   "key": "NAMPRD06",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 8559.94
+  },
+  {
+   "key": "NAMPRD07",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 9426.34
+  },
+  {
+   "key": "NAMPRD08",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 10438.46
+  },
+  {
+   "key": "NAMPRD10",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 7583.3
+  },
+  {
+   "key": "NAMPRD11",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6117.42
+  },
+  {
+   "key": "NAMPRD12",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 7702.54
+  },
+  {
+   "key": "NAMPRD13",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 8554.35
+  },
+  {
+   "key": "NAMPRD14",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 8498.15
+  },
+  {
+   "key": "NAMPRD15",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6607.46
+  },
+  {
+   "key": "NAMPRD16",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5287.63
+  },
+  {
+   "key": "NAMPRD17",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5661.27
+  },
+  {
+   "key": "NAMPRD18",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 5464.93
+  },
+  {
+   "key": "NAMPRD19",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 13870.17
+  },
+  {
+   "key": "NAMPRD20",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 7152.18
+  },
+  {
+   "key": "NAMPRD22",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 6366.41
+  },
+  {
+   "key": "NAMPRD84",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 977.14
+  },
+  {
+   "key": "NAMPRD85",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 148.73
+  },
+  {
+   "key": "NORP279",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1263.81
+  },
+  {
+   "key": "NZLP299",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 51.5
+  },
+  {
+   "key": "POLP291",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 279.82
+  },
+  {
+   "key": "QATP289",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 253.51
+  },
+  {
+   "key": "SGPP274",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 281.52
+  },
+  {
+   "key": "SWEP280",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1497.84
+  },
+  {
+   "key": "TWNP295",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 49.25
+  },
+  {
+   "key": "ZAFP275",
+   "obs": 131,
+   "non_numeric": 0,
+   "min_date": "2026-04-07",
+   "max_date": "2026-08-22",
+   "mean_actual_avg": 1999.55
+  }
+ ],
+ "cpu": [
+  {
+   "scenario": "Consumed",
+   "key": "APC-MSIT",
+   "obs": 561,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "APC-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "ARE-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "AUS-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "BRA-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "CAN-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "CHE-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "CHN-Gallatin",
+   "obs": 556,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "DEU-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "EUR-MSIT",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "EUR-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "FRA-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "GBR-Dedicated",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "GBR-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "IND-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "JPN-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "KOR-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "LAM-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-Government",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-ITAR",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-MSIT",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-SDF",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-TDF",
+   "obs": 558,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NOR-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "POL-Go Local",
+   "obs": 220,
+   "min_date": "2022-12-13",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "QAT-Go Local",
+   "obs": 407,
+   "min_date": "2022-06-09",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "SGP-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "SWE-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "ZAF-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "APC-MSIT",
+   "obs": 561,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "APC-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "ARE-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "AUS-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "BRA-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "CAN-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "CHE-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "CHN-Gallatin",
+   "obs": 556,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "DEU-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "EUR-MSIT",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "EUR-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "FRA-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "GBR-Dedicated",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "GBR-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "IND-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "JPN-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "KOR-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "LAM-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-Government",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-ITAR",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-MSIT",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-Multitenant",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-SDF",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-TDF",
+   "obs": 558,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NOR-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "POL-Go Local",
+   "obs": 220,
+   "min_date": "2022-12-13",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "QAT-Go Local",
+   "obs": 407,
+   "min_date": "2022-06-09",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "SGP-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "SWE-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "ZAF-Go Local",
+   "obs": 562,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20"
+  }
+ ],
+ "iops": [
+  {
+   "scenario": "Consumed",
+   "key": "APC-MSIT",
+   "obs": 1096,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "APC-Multitenant",
+   "obs": 1103,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "ARE-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "AUS-Go Local",
+   "obs": 1103,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "BRA-Go Local",
+   "obs": 1009,
+   "min_date": "2020-09-22",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "CAN-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "CHE-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "CHN-Gallatin",
+   "obs": 429,
+   "min_date": "2022-05-10",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "DEU-Go Local",
+   "obs": 1100,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "EUR-MSIT",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "EUR-Multitenant",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "FRA-Go Local",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "GBR-Dedicated",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "GBR-Go Local",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "IND-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "JPN-Go Local",
+   "obs": 1103,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "KOR-Go Local",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "LAM-Multitenant",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-Government",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-ITAR",
+   "obs": 780,
+   "min_date": "2021-05-06",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-MSIT",
+   "obs": 1098,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-Multitenant",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NAM-SDF",
+   "obs": 1077,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "NOR-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "POL-Go Local",
+   "obs": 218,
+   "min_date": "2022-12-13",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "QAT-Go Local",
+   "obs": 402,
+   "min_date": "2022-06-09",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "SGP-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "SWE-Go Local",
+   "obs": 619,
+   "min_date": "2021-10-26",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Consumed",
+   "key": "ZAF-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "APC-MSIT",
+   "obs": 1096,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "APC-Multitenant",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "ARE-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "AUS-Go Local",
+   "obs": 1103,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "BRA-Go Local",
+   "obs": 1009,
+   "min_date": "2020-09-22",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "CAN-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "CHE-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "CHN-Gallatin",
+   "obs": 429,
+   "min_date": "2022-05-10",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "DEU-Go Local",
+   "obs": 1100,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "EUR-MSIT",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "EUR-Multitenant",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "FRA-Go Local",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "GBR-Dedicated",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "GBR-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "IND-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "JPN-Go Local",
+   "obs": 1103,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "KOR-Go Local",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "LAM-Multitenant",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-Government",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-ITAR",
+   "obs": 779,
+   "min_date": "2021-05-06",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-MSIT",
+   "obs": 1098,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-Multitenant",
+   "obs": 1102,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NAM-SDF",
+   "obs": 1060,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "NOR-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "POL-Go Local",
+   "obs": 218,
+   "min_date": "2022-12-13",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "QAT-Go Local",
+   "obs": 402,
+   "min_date": "2022-06-09",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "SGP-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "SWE-Go Local",
+   "obs": 619,
+   "min_date": "2021-10-26",
+   "max_date": "2023-07-20"
+  },
+  {
+   "scenario": "Failover",
+   "key": "ZAF-Go Local",
+   "obs": 1101,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20"
+  }
+ ]
+}

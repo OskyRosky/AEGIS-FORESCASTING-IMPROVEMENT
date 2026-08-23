@@ -1,0 +1,22 @@
+check_id,check_name,expected,observed,result
+V1_SSD,SSD explicitly checked in SQL,>= 1 query,32 queries,PASS
+V1_CPU,CPU explicitly checked in SQL,>= 1 query,17 queries,PASS
+V1_IOPS,IOPS explicitly checked in SQL,>= 1 query,14 queries,PASS
+V1_MEMORY,MEMORY explicitly checked in SQL,>= 1 query,8 queries,PASS
+V1_HDD,HDD explicitly checked in SQL,>= 1 query,11 queries,PASS
+V2,Query ledger exists and records every attempt,>= 1 row,87 rows,PASS
+V2b,Failed queries recorded rather than hidden,failures present in ledger,"3 FAILED rows recorded (Q019, Q028, Q069)",PASS
+V3,Candidate object inventory exists,>= 1 row,17 rows,PASS
+V4,Column mapping exists,>= 1 row,99 rows,PASS
+V5,Actuals source assessment exists,>= 1 row,25 rows,PASS
+V6,combinations_over_50 reported where safely measurable,measured for all rows except explicitly unresolved ones,23 of 25 rows measured; the rest marked UNKNOWN,PASS
+V7,No full extraction performed,no business-data query returns more than 1000 rows,"max data-query result = 234 rows (a GROUP BY vocabulary); the largest result overall was 1214 rows from sys.objects, which is catalogue metadata",PASS
+V8,No Parquet written in this stage,0 parquet files,0 parquet files in the P1 folder,PASS
+V9,No models were run,only .csv/.md/.json/.py/.txt artifacts,"suffixes present: ['.csv', '.json', '.md', '.py', '.txt']",PASS
+V10,No Shiny files modified,0 shiny_app entries,0 shiny_app entries,PASS
+V11,V1 through V5 untouched,0 entries under V1-V5,0 entries,PASS
+V12,Report states which metrics are ready for controlled extraction,ready and blocked sets both explicit,"ready=['CPU', 'IOPS', 'SSD'] blocked=['MEMORY']",PASS
+V13,Actuals marker identified for every confirmed source,"all confirmed rows carry date, value and key columns","14 confirmed rows, all with date/value/key populated",PASS
+V14,Mixed cohort of 130-150 achievable from confirmed sources,">= 150 combinations over 50 obs, across >= 3 metrics","994 combinations across 4 metrics (HDD 604, SSD 272, CPU 60, IOPS 58)",PASS
+V16,"P1's incorrect SSD conclusion is documented, not silently rewritten",correction memo exists and UQ02 marked RESOLVED,correction memo present=True; UQ02 status recorded in unresolved questions,PASS
+V15,Every figure traces to a ledger query id,unknowns written as UNKNOWN rather than guessed,11 unresolved questions logged; UNKNOWN markers used in the assessment instead of estimates,PASS

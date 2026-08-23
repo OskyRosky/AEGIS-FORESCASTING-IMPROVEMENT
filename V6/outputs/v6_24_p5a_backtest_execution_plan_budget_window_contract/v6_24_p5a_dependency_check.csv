@@ -1,0 +1,9 @@
+dependency,required_by,import_status,version,notes
+numpy,all models,OK,2.4.6,
+pandas,all models,OK,3.0.3,
+sklearn,"LinearRegression, FNAR-V2, SMLP-TCN, NLIN-DLIN_FIXED",OK,1.9.0,
+statsmodels,"ARIMA_Fixed, AutoARIMA, ETS Explicit, ETS_Current, Theta",OK,0.14.6,
+lightgbm,LightGBM,OK,4.6.0,
+xgboost,XGBoost,OK,3.2.0,
+pmdarima,AutoARIMA (optional path),OK,2.1.1,
+pyarrow,Parquet IO,OK,25.0.1,

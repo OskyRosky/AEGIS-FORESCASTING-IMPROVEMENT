@@ -1,0 +1,99 @@
+{
+ "forecast_substrateBE_hdd_region": {
+  "metric": "HDD",
+  "catalogue_rows": 4411852,
+  "value_types": [
+   {
+    "value_type": "Forecast-Mean",
+    "rows": 11095802,
+    "min_date": "2017-01-01",
+    "max_date": "2030-08-15",
+    "distinct_keys": 52
+   }
+  ],
+  "scenario_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_cpu_region": {
+  "metric": "CPU",
+  "catalogue_rows": 2654280,
+  "value_types": [
+   {
+    "value_type": "Forecast-Mean",
+    "rows": 9042808,
+    "min_date": "2022-02-01",
+    "max_date": "2030-09-27",
+    "distinct_keys": 46
+   }
+  ],
+  "scenario_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_cpu_actual_region": {
+  "metric": "CPU",
+  "catalogue_rows": 32704,
+  "value_types": [
+   {
+    "value_type": "Forecast-Mean",
+    "rows": 32704,
+    "min_date": "2022-01-04",
+    "max_date": "2023-07-20",
+    "distinct_keys": 30
+   }
+  ],
+  "scenario_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_iops_region": {
+  "metric": "IOPS",
+  "catalogue_rows": 6451852,
+  "value_types": [
+   {
+    "value_type": "Forecast-Mean",
+    "rows": 6451852,
+    "min_date": "2022-01-28",
+    "max_date": "2030-02-27",
+    "distinct_keys": 46
+   }
+  ],
+  "scenario_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_iops_actual_region": {
+  "metric": "IOPS",
+  "catalogue_rows": 57496,
+  "value_types": [
+   {
+    "value_type": "Forecast-Mean",
+    "rows": 57496,
+    "min_date": "2020-06-23",
+    "max_date": "2023-07-20",
+    "distinct_keys": 29
+   }
+  ],
+  "scenario_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_ssd_region": {
+  "metric": "SSD",
+  "catalogue_rows": 309213,
+  "value_types": [
+   {
+    "value_type": "Forecast-Mean",
+    "rows": 309213,
+    "min_date": "2022-03-31",
+    "max_date": "2025-05-30",
+    "distinct_keys": 29
+   }
+  ],
+  "scenario_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_SSD_Phoenix_Organic": {
+  "metric": "SSD",
+  "catalogue_rows": 707069,
+  "value_types": [],
+  "scenario_types": [],
+  "date_range": null
+ }
+}

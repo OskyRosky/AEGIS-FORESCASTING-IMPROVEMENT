@@ -1,0 +1,37 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V01,P5C audit passed before P6 started,37/37 PASS,37/37 PASS,PASS,NO
+V02,Backtest input row count unchanged,"614,190","614,190",PASS,NO
+V03,Backtest input series count,140,140,PASS,NO
+V04,Backtest input model count,15,15,PASS,NO
+V05,"Readiness derived from the artifact, not the manifest flag",140 ready,140/140 ready,PASS,NO
+V06,Stale manifest flag detected and overridden,>0 corrected,90 series corrected,PASS,NO
+V07,accuracy_metrics row count,2100,2100,PASS,NO
+V08,accuracy_metrics series count,140,140,PASS,NO
+V09,accuracy_metrics model count,15,15,PASS,NO
+V10,Every series has all 15 models,15 each,min=15 max=15,PASS,NO
+V11,mae finite and non-negative,all rows,2100/2100,PASS,NO
+V12,rmse >= mae everywhere,always,2100/2100,PASS,NO
+V13,Accuracy computed per series before aggregation,per-series,all summaries aggregate per-series values,PASS,NO
+V14,model_rankings row count,2100,2100,PASS,NO
+V15,Exactly one champion per series,140,140,PASS,NO
+V16,Ranks 1..15 complete in every series,all 140,140/140,PASS,NO
+V17,No model dropped when wape is not computable,fallback used,"{'wape': 1860, 'mae': 195, 'smape': 45}",PASS,NO
+V18,Champion model name matches the registry verbatim,'ETS Explicit',present verbatim,PASS,NO
+V19,forecast_outputs exists,per the forecast horizon contract,NOT PRODUCED - forecast horizon unresolved,BLOCKED,YES
+V20,forecast_outputs covers 140 series,per the forecast horizon contract,NOT PRODUCED - forecast horizon unresolved,BLOCKED,YES
+V21,forecast_outputs covers 15 models,per the forecast horizon contract,NOT PRODUCED - forecast horizon unresolved,BLOCKED,YES
+V22,forecast_outputs horizon matches the contract,per the forecast horizon contract,NOT PRODUCED - forecast horizon unresolved,BLOCKED,YES
+V23,All 15 governed models probed for horizon capability,15,15/15 probed OK,PASS,NO
+V24,Every governed model emits exactly 30 steps,30 for all 15,distinct emitted step counts = [30],PASS,NO
+V25,"No governed model reaches the assumed 1,440-step horizon",none reach it,"0 of 15 reach 1,440",PASS,NO
+V26,Legacy HDD forward artifact is disjoint from the governed models,0 governed overlap,0 of 15 governed names present,PASS,NO
+V27,forecast_outputs NOT fabricated,absent,absent,PASS,NO
+V28,"Negative predictions reported, not clipped",reported,"7,531 preserved",PASS,NO
+V29,Extreme ratios reported with median alongside mean,both reported,mean and median present for every metric in the summary,PASS,NO
+V35,Degenerate wape outliers detected and documented,documented,11 series-model pairs exceed wape=100 (max 1.25e+23); DQ11 records the median-only aggregation rule for P7/P8,PASS,NO
+V36,Degenerate outliers do not corrupt champion selection,0 champions,0 champions exceed wape=100 (max champion value 9.9634),PASS,NO
+V30,P4/P5 artifacts unmodified,0 modified,8 verified unmodified,PASS,NO
+V31,Shiny untouched,0 files,0 files,PASS,NO
+V32,No navigation_contract or taxonomy_counts created (P7 scope),absent,absent,PASS,NO
+V33,Shiny-facing artifacts live only under processed/v6_24_mvp_cohort,single folder,accuracy_metrics + model_rankings written there only,PASS,NO
+V34,"No SQL, no Tesseract, no commit, no push",none,none - local parquet reads only,PASS,NO

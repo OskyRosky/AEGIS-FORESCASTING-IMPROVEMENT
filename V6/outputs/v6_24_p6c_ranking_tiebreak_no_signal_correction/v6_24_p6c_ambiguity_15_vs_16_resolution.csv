@@ -1,0 +1,5 @@
+population,definition,derived_from,count,series_listed,note
+A. No-signal series,every observation in the FULL history is zero (|v| <= 1e-12),actuals_normalized.parquet,15,see no_signal_series_detail,This is the 15 quoted by P6B
+B. WAPE-not-computable series,sum of |actual| over the BACKTEST EVALUATION WINDOW is exactly 0,accuracy_metrics.parquet wape_status,16,superset of A,This is the 16 quoted by P6B
+C. Misranked champions under P6,champion crowned by P6 was not the most accurate model,model_rankings (pre-P6C) vs accuracy_metrics,16,identical to B,Corrected by P6C
+B minus A,"has real signal in history, but its backtest window is all zeros",set difference,1,SSD__Phoenix__Forest__GBRP267,This single series explains the entire 15 vs 16 gap

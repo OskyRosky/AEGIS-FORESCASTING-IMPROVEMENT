@@ -1,0 +1,7 @@
+query_id,auth_mode,object_name,purpose,query_type,started_at,status,row_count_returned,duration_seconds,notes
+P2Q001,ActiveDirectoryIntegrated,forecast_substrateBE_ssd_phx_lvwe_metrics,Per-key observation counts and date ranges for the SSD candidate pool,aggregate,2026-08-23T12:41:53,FAILED,0,4.63,"('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Operand data type varchar is invalid for avg operator. (8117) (SQLExecDirectW)')"
+P2Q002,ActiveDirectoryIntegrated,forecast_substrateBE_cpu_actual_region,Per-scenario-per-key observation counts for the CPU candidate pool,aggregate,2026-08-23T12:41:58,OK,60,1.58,
+P2Q003,ActiveDirectoryIntegrated,forecast_substrateBE_iops_actual_region,Per-scenario-per-key observation counts for the IOPS candidate pool,aggregate,2026-08-23T12:42:00,OK,58,1.43,
+P2Q004,ActiveDirectoryIntegrated,forecast_substrateBE_ssd_phx_lvwe_metrics,"Per-key observation counts, date ranges and non-numeric Mean_Actual detection",aggregate,2026-08-23T12:42:52,OK,137,4.99,
+P2Q005,ActiveDirectoryIntegrated,forecast_substrateBE_cpu_actual_region,Per-scenario-per-key observation counts for the CPU candidate pool,aggregate,2026-08-23T12:42:57,OK,60,0.75,
+P2Q006,ActiveDirectoryIntegrated,forecast_substrateBE_iops_actual_region,Per-scenario-per-key observation counts for the IOPS candidate pool,aggregate,2026-08-23T12:42:57,OK,58,1.03,

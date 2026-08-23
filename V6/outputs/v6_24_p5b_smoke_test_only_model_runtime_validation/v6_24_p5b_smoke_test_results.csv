@@ -1,0 +1,4 @@
+metric,series_id,models_attempted,models_passed,models_failed,origins_run,prediction_rows,runtime_seconds,result
+CPU,CPU__Consumed__Region__CHN-Gallatin,15,15,0,10,4455,4.02,PASS
+IOPS,IOPS__Consumed__Region__APC-Multitenant,15,15,0,11,4845,4.66,PASS
+SSD,SSD__Phoenix__Forest__NAMPRD08,15,15,0,10,4500,3.76,PASS

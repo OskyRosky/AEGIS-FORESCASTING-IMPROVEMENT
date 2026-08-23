@@ -1,0 +1,425 @@
+{
+ "vw_SubstrateBE_Demand_Cpu_Region": {
+  "metric": "CPU",
+  "demand_types": [
+   "Organic",
+   "Perturbation"
+  ],
+  "sample": [
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU",
+    "GCYCLES",
+    "Organic",
+    "2026-09-03",
+    "APC",
+    "Dedicated",
+    "2729.770723667346",
+    "2026-08-02"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU",
+    "GCYCLES",
+    "Organic",
+    "2026-10-13",
+    "APC",
+    "Dedicated",
+    "2774.9046090520965",
+    "2026-08-02"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU",
+    "GCYCLES",
+    "Organic",
+    "2026-11-12",
+    "APC",
+    "Dedicated",
+    "2808.7550230906595",
+    "2026-08-02"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU",
+    "GCYCLES",
+    "Organic",
+    "2026-10-04",
+    "APC",
+    "Dedicated",
+    "2764.7494848405277",
+    "2026-08-02"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU",
+    "GCYCLES",
+    "Organic",
+    "2027-10-17",
+    "APC",
+    "Dedicated",
+    "3191.2647017264217",
+    "2026-08-02"
+   ]
+  ]
+ },
+ "vw_SubstrateBE_Demand_CpuPhoenix_Region": {
+  "metric": "CPU",
+  "demand_types": [
+   "Organic",
+   "Perturbation"
+  ],
+  "sample": [
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU Phoenix",
+    "GCYCLES",
+    "Organic",
+    "2028-11-03",
+    "IDN",
+    "Go Local",
+    "154.23594274798364",
+    "2026-01-29"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU Phoenix",
+    "GCYCLES",
+    "Organic",
+    "2029-10-25",
+    "KOR",
+    "Go Local",
+    "59063.77999483631",
+    "2026-01-29"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU Phoenix",
+    "GCYCLES",
+    "Organic",
+    "2029-10-30",
+    "KOR",
+    "Go Local",
+    "59127.18590660089",
+    "2026-01-29"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU Phoenix",
+    "GCYCLES",
+    "Organic",
+    "2029-11-03",
+    "KOR",
+    "Go Local",
+    "59177.91063601256",
+    "2026-01-29"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "CPU Phoenix",
+    "GCYCLES",
+    "Organic",
+    "2028-11-20",
+    "IDN",
+    "Go Local",
+    "155.1630058369784",
+    "2026-01-29"
+   ]
+  ]
+ },
+ "vw_SubstrateBE_Demand_HddEdbEnterprise_Region": {
+  "metric": "HDD",
+  "demand_types": [
+   "Organic"
+  ],
+  "sample": [
+   [
+    "SubstrateBE",
+    "Backend",
+    "HDD - EDB Enterprise",
+    "TB",
+    "Organic",
+    "2026-08-21",
+    "CHE",
+    "GO LOCAL",
+    "36934.09752748295",
+    "2026-08-21"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "HDD - EDB Enterprise",
+    "TB",
+    "Organic",
+    "2027-07-03",
+    "CHE",
+    "GO LOCAL",
+    "43366.16992768693",
+    "2026-08-21"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "HDD - EDB Enterprise",
+    "TB",
+    "Organic",
+    "2029-01-17",
+    "CHE",
+    "GO LOCAL",
+    "54846.19788248139",
+    "2026-08-21"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "HDD - EDB Enterprise",
+    "TB",
+    "Organic",
+    "2030-07-06",
+    "CHE",
+    "GO LOCAL",
+    "65735.94071194068",
+    "2026-08-21"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "HDD - EDB Enterprise",
+    "TB",
+    "Organic",
+    "2028-01-27",
+    "ARE",
+    "GO LOCAL",
+    "50219.854967326224",
+    "2026-08-21"
+   ]
+  ]
+ },
+ "vw_SubstrateBE_Demand_HddBasilisk_Region": {
+  "metric": "HDD",
+  "demand_types": [],
+  "sample": []
+ },
+ "vw_SubstrateBE_Demand_Iops_Region": {
+  "metric": "IOPS",
+  "demand_types": [
+   "Organic",
+   "Perturbation"
+  ],
+  "sample": [
+   [
+    "SubstrateBE",
+    "Backend",
+    "IOPS",
+    "IOPS",
+    "Organic",
+    "2029-07-16",
+    "POL",
+    "Go Local",
+    "367085.59045033786",
+    "2026-01-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "IOPS",
+    "IOPS",
+    "Organic",
+    "2029-07-20",
+    "POL",
+    "Go Local",
+    "367354.8321627317",
+    "2026-01-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "IOPS",
+    "IOPS",
+    "Organic",
+    "2028-03-27",
+    "CHE",
+    "Go Local",
+    "2588555.372423059",
+    "2026-01-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "IOPS",
+    "IOPS",
+    "Organic",
+    "2028-03-31",
+    "CHE",
+    "Go Local",
+    "2590993.225585029",
+    "2026-01-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "IOPS",
+    "IOPS",
+    "Organic",
+    "2029-08-02",
+    "POL",
+    "Go Local",
+    "368229.8677280118",
+    "2026-01-01"
+   ]
+  ]
+ },
+ "vw_SubstrateBE_Demand_Memory_Region": {
+  "metric": "MEMORY",
+  "demand_types": [],
+  "sample": []
+ },
+ "vw_SubstrateBE_Demand_Ssd_Region": {
+  "metric": "SSD",
+  "demand_types": [
+   "Organic",
+   "Perturbation"
+  ],
+  "sample": [
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD",
+    "TB",
+    "Organic",
+    "2026-09-03",
+    "CHN",
+    "Gallatin",
+    "1021.4420932130196",
+    "2026-03-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD",
+    "TB",
+    "Organic",
+    "2026-10-13",
+    "CHN",
+    "Gallatin",
+    "1041.2174959109277",
+    "2026-03-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD",
+    "TB",
+    "Organic",
+    "2026-11-12",
+    "CHN",
+    "Gallatin",
+    "1056.0490479343584",
+    "2026-03-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD",
+    "TB",
+    "Organic",
+    "2026-10-04",
+    "CHN",
+    "Gallatin",
+    "1036.7680303038983",
+    "2026-03-01"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD",
+    "TB",
+    "Organic",
+    "2027-10-17",
+    "CHN",
+    "Gallatin",
+    "1223.6455857991289",
+    "2026-03-01"
+   ]
+  ]
+ },
+ "vw_SubstrateBE_Demand_SsdPhoenix_Region": {
+  "metric": "SSD",
+  "demand_types": [
+   "Organic",
+   "Perturbation"
+  ],
+  "sample": [
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD - Phoenix",
+    "TB",
+    "Organic",
+    "2026-09-03",
+    "NAM",
+    "ITAR DoD",
+    "1660.61418669707",
+    "2026-03-05"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD - Phoenix",
+    "TB",
+    "Organic",
+    "2026-10-13",
+    "NAM",
+    "ITAR DoD",
+    "1709.4705743362194",
+    "2026-03-05"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD - Phoenix",
+    "TB",
+    "Organic",
+    "2026-11-12",
+    "NAM",
+    "ITAR DoD",
+    "1746.112865065582",
+    "2026-03-05"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD - Phoenix",
+    "TB",
+    "Organic",
+    "2026-10-04",
+    "NAM",
+    "ITAR DoD",
+    "1698.4778871174112",
+    "2026-03-05"
+   ],
+   [
+    "SubstrateBE",
+    "Backend",
+    "SSD - Phoenix",
+    "TB",
+    "Organic",
+    "2027-10-17",
+    "NAM",
+    "ITAR DoD",
+    "2160.170750307374",
+    "2026-03-05"
+   ]
+  ]
+ }
+}

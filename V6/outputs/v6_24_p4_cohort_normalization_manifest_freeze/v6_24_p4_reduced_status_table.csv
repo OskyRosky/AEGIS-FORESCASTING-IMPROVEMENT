@@ -1,0 +1,9 @@
+stage,name,current_status,notes
+V6.24-P3,Governed Data Extraction to Parquet,CLOSED,"90 series, 4 raw Parquet."
+V6.24-P3B,Raw Extraction Inventory + Diversity Review,CLOSED,Owner chose KEEP_CURRENT_MVP for CPU/IOPS.
+V6.24-P4,Cohort Normalization / Manifest Freeze,CLOSED (this stage),"First official processed layer. 140 series frozen, 48,916 normalized actual rows."
+V6.24-P5,15-Model Backtest Generation,NEXT,Required for the 90 non-HDD series. HDD already has its 15 governed backtests.
+V6.24-P6,Forecast Generation,PENDING,Also produces accuracy_metrics and model_rankings.
+V6.24-P7,Product Completeness Gate,PENDING,"Produces validation_summary, navigation_contract and taxonomy_counts AFTER the gate."
+V6.24-P8,Shiny Integration,PENDING,Repoint Shiny to processed/ only.
+V6.24-P9,Visual QA / Demo Readiness,PENDING,

@@ -1,0 +1,71 @@
+check,scope,observed,severity,result,notes
+NaN predicted_value,all rows,0,CRITICAL,PASS,
+Infinite predicted_value,all rows,0,CRITICAL,PASS,
+Non-numeric predicted_value,all rows,0,CRITICAL,PASS,
+Negative predicted_value,all rows,7531,MEDIUM,REVIEW,Demand metrics should not be negative. Baselines clip at zero; some challengers do not.
+Zero predicted_value where actual is non-zero,all rows,807,MEDIUM,REVIEW,"Reported for P6 accuracy review, not a failure condition."
+All-zero model output,per metric+model,0 metric-model combinations predict zero everywhere,HIGH,PASS,
+prediction distribution,CPU | ARIMA_Fixed,min=-3.099e+06 median=9.961e+04 max=1.506e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | AutoARIMA,min=7612 median=1.041e+05 max=1.016e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | ETS Explicit,min=7512 median=1.044e+05 max=1.046e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | ETS_Current,min=-1.317e+05 median=1.015e+05 max=1.184e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | FNAR-V2,min=6970 median=1.018e+05 max=1.004e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | FixedGrowth_1_5,min=7506 median=1.013e+05 max=1.032e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | FixedGrowth_3,min=7510 median=1.021e+05 max=1.047e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | FixedGrowth_4,min=7512 median=1.027e+05 max=1.057e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | FixedGrowth_6,min=7517 median=1.038e+05 max=1.078e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | LightGBM,min=7264 median=1.013e+05 max=9.947e+05,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | LinearRegression,min=7671 median=1.035e+05 max=1.03e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | NLIN-DLIN_FIXED,min=7632 median=1.06e+05 max=1.035e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | SMLP-TCN,min=6691 median=1.073e+05 max=1.155e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | Theta,min=7506 median=1.021e+05 max=1.02e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,CPU | XGBoost,min=7032 median=1.012e+05 max=1.013e+06,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,HDD | ARIMA_Fixed,min=-1.13e+07 median=671 max=2.395e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | AutoARIMA,min=-7.165e+04 median=1819 max=2.264e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | ETS Explicit,min=-4.613e+04 median=1219 max=2.273e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | ETS_Current,min=-1.037e+06 median=1166 max=2.313e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | FNAR-V2,min=0 median=1296 max=1.075e+08,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | FixedGrowth_1_5,min=-0.001579 median=1920 max=2.284e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | FixedGrowth_3,min=-0.001603 median=1935 max=2.317e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | FixedGrowth_4,min=-0.001618 median=1945 max=2.34e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | FixedGrowth_6,min=-0.001649 median=1964 max=2.385e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | LightGBM,min=-30.42 median=1257 max=2.234e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | LinearRegression,min=-2.042e+13 median=1796 max=1.067e+26,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | NLIN-DLIN_FIXED,min=0 median=1248 max=2.302e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | SMLP-TCN,min=0 median=1439 max=2.424e+06,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | Theta,min=-2233 median=1903 max=2.261e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,HDD | XGBoost,min=-97 median=1038 max=2.243e+06,INFO,INFO,15 of 50 series where this model predicts a single constant value
+prediction distribution,IOPS | ARIMA_Fixed,min=-2.801e+07 median=3.356e+06 max=1.318e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | AutoARIMA,min=-1.974e+06 median=3.458e+06 max=1.235e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | ETS Explicit,min=1.187e+05 median=3.513e+06 max=1.259e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | ETS_Current,min=4.621e+04 median=3.633e+06 max=1.384e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | FNAR-V2,min=1.185e+05 median=3.309e+06 max=1.241e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | FixedGrowth_1_5,min=1.167e+05 median=3.476e+06 max=1.254e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | FixedGrowth_3,min=1.168e+05 median=3.5e+06 max=1.272e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | FixedGrowth_4,min=1.168e+05 median=3.514e+06 max=1.285e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | FixedGrowth_6,min=1.169e+05 median=3.548e+06 max=1.309e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | LightGBM,min=1.163e+05 median=3.34e+06 max=1.217e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | LinearRegression,min=-1.596e+10 median=3.457e+06 max=8.649e+09,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | NLIN-DLIN_FIXED,min=6.678e+04 median=3.488e+06 max=1.263e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | SMLP-TCN,min=1.129e+05 median=3.453e+06 max=1.352e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | Theta,min=1.185e+05 median=3.474e+06 max=1.242e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,IOPS | XGBoost,min=1.141e+05 median=3.302e+06 max=1.206e+08,INFO,INFO,0 of 20 series where this model predicts a single constant value
+prediction distribution,SSD | ARIMA_Fixed,min=-494.6 median=1550 max=2.284e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | AutoARIMA,min=-1.835 median=1544 max=2.025e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | ETS Explicit,min=-51.73 median=1555 max=2.268e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | ETS_Current,min=-87.14 median=1577 max=2.141e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | FNAR-V2,min=0 median=1375 max=1.729e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | FixedGrowth_1_5,min=0 median=1464 max=1.856e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | FixedGrowth_3,min=0 median=1478 max=1.883e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | FixedGrowth_4,min=0 median=1488 max=1.902e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | FixedGrowth_6,min=0 median=1507 max=1.938e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | LightGBM,min=-0.003297 median=1424 max=1.746e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | LinearRegression,min=-7.308e+05 median=1759 max=3.738e+06,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | NLIN-DLIN_FIXED,min=0 median=1591 max=2.201e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | SMLP-TCN,min=0 median=1525 max=2.009e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | Theta,min=-6.086 median=1493 max=1.891e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+prediction distribution,SSD | XGBoost,min=8.459e-05 median=1451 max=1.828e+04,INFO,INFO,0 of 50 series where this model predicts a single constant value
+actual distribution,CPU,min=5821 median=1.092e+05 max=1.031e+06,INFO,INFO,
+actual distribution,HDD,min=-0.001824 median=1243 max=2.319e+06,INFO,INFO,
+actual distribution,IOPS,min=1.128e+05 median=3.502e+06 max=1.238e+08,INFO,INFO,
+actual distribution,SSD,min=0 median=1496 max=2.014e+04,INFO,INFO,

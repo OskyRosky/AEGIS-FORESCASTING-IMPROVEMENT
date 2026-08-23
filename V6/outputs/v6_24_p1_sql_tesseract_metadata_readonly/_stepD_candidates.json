@@ -1,0 +1,550 @@
+{
+ "forecast_substrateBE_hdd_region": {
+  "metric": "HDD",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "DateTime",
+    "date"
+   ],
+   [
+    "Key",
+    "varchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ModelVersion",
+    "varchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ],
+   [
+    "Fleet",
+    "varchar"
+   ],
+   [
+    "Workload",
+    "varchar"
+   ],
+   [
+    "Resource",
+    "varchar"
+   ],
+   [
+    "Unit",
+    "varchar"
+   ],
+   [
+    "Type",
+    "varchar"
+   ],
+   [
+    "Scenario",
+    "varchar"
+   ],
+   [
+    "ValueType",
+    "varchar"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_hdd": {
+  "metric": "HDD",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "forest_name",
+    "char"
+   ],
+   [
+    "target_date",
+    "datetime"
+   ],
+   [
+    "forecast_mean",
+    "float"
+   ],
+   [
+    "forecast_p90",
+    "float"
+   ],
+   [
+    "forecast_p95",
+    "float"
+   ],
+   [
+    "write_time",
+    "datetime"
+   ],
+   [
+    "type",
+    "nchar"
+   ],
+   [
+    "execution_time",
+    "datetime"
+   ],
+   [
+    "data_type",
+    "varchar"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_cpu_actual_region": {
+  "metric": "CPU",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "DateTime",
+    "date"
+   ],
+   [
+    "Key",
+    "varchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ValueRef",
+    "float"
+   ],
+   [
+    "ModelVersion",
+    "varchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ],
+   [
+    "Fleet",
+    "varchar"
+   ],
+   [
+    "Workload",
+    "varchar"
+   ],
+   [
+    "Resource",
+    "varchar"
+   ],
+   [
+    "Unit",
+    "varchar"
+   ],
+   [
+    "Type",
+    "varchar"
+   ],
+   [
+    "Scenario",
+    "varchar"
+   ],
+   [
+    "ValueType",
+    "varchar"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_cpu_region": {
+  "metric": "CPU",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "Fleet",
+    "varchar"
+   ],
+   [
+    "Workload",
+    "varchar"
+   ],
+   [
+    "Resource",
+    "varchar"
+   ],
+   [
+    "Unit",
+    "varchar"
+   ],
+   [
+    "Type",
+    "varchar"
+   ],
+   [
+    "Scenario",
+    "varchar"
+   ],
+   [
+    "Datetime",
+    "date"
+   ],
+   [
+    "Key",
+    "varchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ValueType",
+    "varchar"
+   ],
+   [
+    "ModelVersion",
+    "varchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_cpu": {
+  "metric": "CPU",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "datadate",
+    "date"
+   ],
+   [
+    "Forest_SKU",
+    "nvarchar"
+   ],
+   [
+    "forecast",
+    "float"
+   ],
+   [
+    "type",
+    "nvarchar"
+   ],
+   [
+    "forecastdate",
+    "date"
+   ],
+   [
+    "CPU_type",
+    "nvarchar"
+   ],
+   [
+    "forecast_adjust",
+    "float"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_iops_actual_region": {
+  "metric": "IOPS",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "DateTime",
+    "date"
+   ],
+   [
+    "Key",
+    "varchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ValueRef",
+    "float"
+   ],
+   [
+    "ModelVersion",
+    "varchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ],
+   [
+    "Fleet",
+    "varchar"
+   ],
+   [
+    "Workload",
+    "varchar"
+   ],
+   [
+    "Resource",
+    "varchar"
+   ],
+   [
+    "Unit",
+    "varchar"
+   ],
+   [
+    "Type",
+    "varchar"
+   ],
+   [
+    "Scenario",
+    "varchar"
+   ],
+   [
+    "ValueType",
+    "varchar"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_iops_region": {
+  "metric": "IOPS",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "Fleet",
+    "varchar"
+   ],
+   [
+    "Workload",
+    "varchar"
+   ],
+   [
+    "Resource",
+    "varchar"
+   ],
+   [
+    "Unit",
+    "varchar"
+   ],
+   [
+    "Type",
+    "varchar"
+   ],
+   [
+    "Scenario",
+    "varchar"
+   ],
+   [
+    "Datetime",
+    "date"
+   ],
+   [
+    "Key",
+    "varchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ValueType",
+    "varchar"
+   ],
+   [
+    "ModelVersion",
+    "varchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_iops": {
+  "metric": "IOPS",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "datadate",
+    "date"
+   ],
+   [
+    "Forest_SKU",
+    "varchar"
+   ],
+   [
+    "forecast",
+    "float"
+   ],
+   [
+    "type",
+    "varchar"
+   ],
+   [
+    "forecastdate",
+    "date"
+   ],
+   [
+    "IOPS_type",
+    "varchar"
+   ],
+   [
+    "forecast_adjust",
+    "float"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_ssd_region": {
+  "metric": "SSD",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "Fleet",
+    "nvarchar"
+   ],
+   [
+    "Workload",
+    "nvarchar"
+   ],
+   [
+    "Resource",
+    "nvarchar"
+   ],
+   [
+    "Unit",
+    "nvarchar"
+   ],
+   [
+    "Type",
+    "nvarchar"
+   ],
+   [
+    "Scenario",
+    "nvarchar"
+   ],
+   [
+    "DateTime",
+    "date"
+   ],
+   [
+    "Key",
+    "nvarchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ValueType",
+    "nvarchar"
+   ],
+   [
+    "ModelVersion",
+    "nvarchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_ssd": {
+  "metric": "SSD",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "DataDate",
+    "date"
+   ],
+   [
+    "Environment",
+    "nvarchar"
+   ],
+   [
+    "Region",
+    "nvarchar"
+   ],
+   [
+    "Forest",
+    "nvarchar"
+   ],
+   [
+    "SKU",
+    "nvarchar"
+   ],
+   [
+    "forecast",
+    "float"
+   ],
+   [
+    "ForecastDate",
+    "date"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ },
+ "forecast_substrateBE_SSD_Phoenix_Organic": {
+  "metric": "SSD",
+  "catalogue_rows": 0,
+  "columns": [
+   [
+    "Workload",
+    "nvarchar"
+   ],
+   [
+    "Fleet",
+    "nvarchar"
+   ],
+   [
+    "Unit",
+    "nvarchar"
+   ],
+   [
+    "Type",
+    "nvarchar"
+   ],
+   [
+    "Scenario",
+    "nvarchar"
+   ],
+   [
+    "DateTime",
+    "datetime2"
+   ],
+   [
+    "Forest",
+    "nvarchar"
+   ],
+   [
+    "Value",
+    "float"
+   ],
+   [
+    "ValueType",
+    "nvarchar"
+   ],
+   [
+    "ModelVersion",
+    "nvarchar"
+   ],
+   [
+    "ForecastVersion",
+    "date"
+   ]
+  ],
+  "value_types": [],
+  "date_range": null
+ }
+}

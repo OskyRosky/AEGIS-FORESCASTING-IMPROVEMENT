@@ -1,0 +1,25 @@
+metric,axis_name,axis_value,applies_to_ui,source,count,notes
+SSD,db_type,Phoenix,YES,raw column db_type,50,Rendered only for SSD. CPU and IOPS carry an explicit placeholder that must never become a selectable filter option.
+SSD,variant,LVWE,YES,raw column variant,6550,Forecast variant.
+SSD,scenario,NOT_APPLICABLE,NO,raw column scenario,50,SSD has no scenario axis in source.
+SSD,segment,NOT_APPLICABLE,NO,constant,0,No segment axis for any extracted metric. Only HDD has one.
+SSD,granularity,Forest,YES,raw column granularity,1,"Single value, so informational rather than selectable."
+SSD,key,50 distinct keys,YES,raw column series_key,50,The only high-cardinality axis.
+SSD,demand_nature,Organic,NO,raw column demand_nature,6550,Informational. Not a product filter.
+CPU,db_type,UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE,NO,raw column db_type,10,Rendered only for SSD. CPU and IOPS carry an explicit placeholder that must never become a selectable filter option.
+CPU,variant,NOT_APPLICABLE,NO,raw column variant,11228,No variant axis for this metric.
+CPU,scenario,Consumed,YES,raw column scenario,10,10 keys available under this scenario.
+CPU,scenario,Failover,YES,raw column scenario,10,10 keys available under this scenario.
+CPU,segment,NOT_APPLICABLE,NO,constant,0,No segment axis for any extracted metric. Only HDD has one.
+CPU,granularity,Region,YES,raw column granularity,1,"Single value, so informational rather than selectable."
+CPU,key,10 distinct keys,YES,raw column series_key,10,The only high-cardinality axis.
+CPU,demand_nature,Organic,NO,raw column demand_nature,11228,Informational. Not a product filter.
+IOPS,db_type,NOT_APPLICABLE,NO,raw column db_type,10,Rendered only for SSD. CPU and IOPS carry an explicit placeholder that must never become a selectable filter option.
+IOPS,variant,NOT_APPLICABLE,NO,raw column variant,20501,No variant axis for this metric.
+IOPS,scenario,Consumed,YES,raw column scenario,10,10 keys available under this scenario.
+IOPS,scenario,Failover,YES,raw column scenario,10,10 keys available under this scenario.
+IOPS,segment,NOT_APPLICABLE,NO,constant,0,No segment axis for any extracted metric. Only HDD has one.
+IOPS,granularity,Region,YES,raw column granularity,1,"Single value, so informational rather than selectable."
+IOPS,key,10 distinct keys,YES,raw column series_key,10,The only high-cardinality axis.
+IOPS,demand_nature,Organic,NO,raw column demand_nature,20501,Informational. Not a product filter.
+SSD,variant,LVNE,YES,raw file ssd_lvne_raw.parquet,50,Second forecast variant over the same 50 observed series.

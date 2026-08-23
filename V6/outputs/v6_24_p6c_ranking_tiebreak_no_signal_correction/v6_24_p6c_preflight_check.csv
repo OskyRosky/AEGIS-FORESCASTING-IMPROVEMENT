@@ -1,0 +1,6 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P6B validation passed,all PASS,40/40 PASS,PASS,V6_24_P6C_BLOCKED_P6B_NOT_PASS
+PF02,accuracy_metrics exists,present,present,PASS,V6_24_P6C_BLOCKED_ACCURACY_METRICS_MISSING
+PF03,model_rankings exists,present,present,PASS,V6_24_P6C_BLOCKED_MODEL_RANKINGS_MISSING
+PF04,navigation_contract absent,absent,absent,PASS,V6_24_P6C_BLOCKED_SCOPE_VIOLATION
+PF05,taxonomy_counts absent,absent,absent,PASS,V6_24_P6C_BLOCKED_SCOPE_VIOLATION

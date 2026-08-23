@@ -1,0 +1,9 @@
+check,expected,observed,result
+cohort_manifest.parquet exists,present,140 rows,PASS
+actuals_normalized.parquet exists,present,"48,916 rows",PASS
+D2 approved window contract exists,present,True,PASS
+D2 approved window policy exists,present,True,PASS
+P5B smoke test PASS confirmed,results + validation + closure present,"results=True, validation=True, closure=True",PASS
+Model catalog resolves to exactly 15,15,15 distinct model names in the artifact,PASS
+Workload SSD 50 / CPU 20 / IOPS 20,90 non-HDD,"{'CPU': np.int64(20), 'IOPS': np.int64(20), 'SSD': np.int64(50)}",PASS
+No final P5 artifact existed before the run,absent at preflight,0 model_backtests files in processed/ at preflight,PASS

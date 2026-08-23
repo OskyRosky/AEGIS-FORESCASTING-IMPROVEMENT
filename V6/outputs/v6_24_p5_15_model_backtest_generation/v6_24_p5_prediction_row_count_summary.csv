@@ -1,0 +1,6 @@
+metric,series,models,series_model_pairs,prediction_rows,rows_per_series_min,rows_per_series_max,distinct_target_dates,min_target_date,max_target_date,origins_min,origins_max
+HDD,50,15,750,204300,2250,5400,443,2025-05-03,2026-07-19,5,12
+SSD,50,15,750,225000,4500,4500,63,2026-06-21,2026-08-22,10,10
+CPU,20,15,300,89910,4455,4500,300,2022-04-26,2023-07-20,10,10
+IOPS,20,15,300,94980,4395,4845,686,2020-08-27,2023-07-20,10,11
+TOTAL,140,15,2100,614190,,,1207,2020-08-27,2026-08-22,,

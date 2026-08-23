@@ -1,0 +1,3264 @@
+{
+ "DemandPlan_SubstrateBE_CPU_Demand_Region_History": [
+  {
+   "ordinal": 1,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Region",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 3,
+   "column_name": "CPU_type",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 4,
+   "column_name": "demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 6,
+   "column_name": "CreatedDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "DemandPlan_SubstrateBE_HDD_Demand_Region_History": [
+  {
+   "ordinal": 1,
+   "column_name": "DataDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Region",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 3,
+   "column_name": "demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 4,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "CreatedDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "DemandPlan_SubstrateBE_IOPS_Demand_Region_History": [
+  {
+   "ordinal": 1,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Region",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 3,
+   "column_name": "IOPS_type",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 4,
+   "column_name": "demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 6,
+   "column_name": "CreatedDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "DemandPlan_SubstrateBE_SSD_Demand_Region_History": [
+  {
+   "ordinal": 1,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Region",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 3,
+   "column_name": "demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 4,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "CreatedDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "forecast_substrateBE_cpu_actual_region": [
+  {
+   "ordinal": 1,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 4,
+   "column_name": "ValueRef",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "ModelVersion",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 6,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 10,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 11,
+   "column_name": "Type",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 12,
+   "column_name": "Scenario",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 13,
+   "column_name": "ValueType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  }
+ ],
+ "forecast_substrateBE_iops_actual_region": [
+  {
+   "ordinal": 1,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 4,
+   "column_name": "ValueRef",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "ModelVersion",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 6,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 10,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 11,
+   "column_name": "Type",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 12,
+   "column_name": "Scenario",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 13,
+   "column_name": "ValueType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  }
+ ],
+ "vw_SubstrateBE_Demand_Cpu_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Cpu_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuBasilisk_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuBasilisk_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuBasiliskFailover_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 21
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuBasiliskFailover_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 21
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuFailover_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuFailover_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuNonPhoenix_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 14
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuNonPhoenix_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 14
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 23
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 23
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuPhoenix_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuPhoenix_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuPhoenixFailover_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 20
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_CpuPhoenixFailover_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 20
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Forest_Current": [
+  {
+   "ordinal": 1,
+   "column_name": "Resource",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 10
+  },
+  {
+   "ordinal": 3,
+   "column_name": "DemandType",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 204
+  },
+  {
+   "ordinal": 4,
+   "column_name": "DataDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "Forest",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 6,
+   "column_name": "Demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Forest_V3": [
+  {
+   "ordinal": 1,
+   "column_name": "ForecastGroupId",
+   "data_type": "uniqueidentifier",
+   "is_nullable": "NO",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 50
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 20
+  },
+  {
+   "ordinal": 4,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 200
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "NO",
+   "max_len": null
+  },
+  {
+   "ordinal": 6,
+   "column_name": "Region",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Forest",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Demand",
+   "data_type": "float",
+   "is_nullable": "NO",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "CreatedDate",
+   "data_type": "datetime",
+   "is_nullable": "NO",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "Source",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  }
+ ],
+ "vw_SubstrateBE_Demand_Hdd_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 10
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 30
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Hdd_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 10
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 30
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 100
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddBasilisk_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 30
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 10
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 30
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 100
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddBasilisk_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 20
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 30
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 10
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 30
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 100
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddEdb_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 9
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddEdb_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 9
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddEdbConsumer_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 18
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 9
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddEdbConsumer_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 18
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddEdbEnterprise_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 20
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 9
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_HddEdbEnterprise_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 20
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_History": [
+  {
+   "ordinal": 1,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Region",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Forest",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Alias",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 5,
+   "column_name": "Stripe",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 6,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 7,
+   "column_name": "DagType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 8,
+   "column_name": "SKU",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 9,
+   "column_name": "MetricName",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 23
+  },
+  {
+   "ordinal": 10,
+   "column_name": "MetricValue",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Iops_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 4
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 4
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Iops_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 4
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 4
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_IopsFailover_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 13
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 4
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 255
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_IopsFailover_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 13
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 4
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 3
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Memory_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 6
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Memory_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 6
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Region_Current": [
+  {
+   "ordinal": 1,
+   "column_name": "Resource",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 10
+  },
+  {
+   "ordinal": 3,
+   "column_name": "DemandType",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 204
+  },
+  {
+   "ordinal": 4,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 5,
+   "column_name": "Region",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 6,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Region_V3": [
+  {
+   "ordinal": 1,
+   "column_name": "ForecastGroupId",
+   "data_type": "uniqueidentifier",
+   "is_nullable": "NO",
+   "max_len": null
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 50
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 20
+  },
+  {
+   "ordinal": 4,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 200
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DataDate",
+   "data_type": "date",
+   "is_nullable": "NO",
+   "max_len": null
+  },
+  {
+   "ordinal": 6,
+   "column_name": "Region",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 50
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Environment",
+   "data_type": "varchar",
+   "is_nullable": "YES",
+   "max_len": 200
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Demand",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "CreatedDate",
+   "data_type": "datetime",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "Source",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  }
+ ],
+ "vw_SubstrateBE_Demand_Ssd_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_Ssd_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 3
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_SsdMcdb_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 10
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 128
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_SsdMcdb_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 10
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_SsdPhoenix_Forest": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 13
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 4000
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 9,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ],
+ "vw_SubstrateBE_Demand_SsdPhoenix_Region": [
+  {
+   "ordinal": 1,
+   "column_name": "Fleet",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 11
+  },
+  {
+   "ordinal": 2,
+   "column_name": "Workload",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 7
+  },
+  {
+   "ordinal": 3,
+   "column_name": "Resource",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 13
+  },
+  {
+   "ordinal": 4,
+   "column_name": "Unit",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 2
+  },
+  {
+   "ordinal": 5,
+   "column_name": "DemandType",
+   "data_type": "varchar",
+   "is_nullable": "NO",
+   "max_len": 12
+  },
+  {
+   "ordinal": 6,
+   "column_name": "DateTime",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 7,
+   "column_name": "Key",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": -1
+  },
+  {
+   "ordinal": 8,
+   "column_name": "Environment",
+   "data_type": "nvarchar",
+   "is_nullable": "YES",
+   "max_len": 50
+  },
+  {
+   "ordinal": 9,
+   "column_name": "Value",
+   "data_type": "float",
+   "is_nullable": "YES",
+   "max_len": null
+  },
+  {
+   "ordinal": 10,
+   "column_name": "ForecastVersion",
+   "data_type": "date",
+   "is_nullable": "YES",
+   "max_len": null
+  }
+ ]
+}

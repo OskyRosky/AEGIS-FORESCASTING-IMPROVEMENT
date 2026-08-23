@@ -1,0 +1,9 @@
+check,expected,observed,result,notes
+LVWE observed series count,50,50,PASS,Unique forest keys in the LVWE extraction.
+LVNE observed series count,50,50,PASS,Same 50 keys.
+Combined observed series,"50, not 100",50,PASS,LVWE and LVNE are forecast variants over one observed series.
+Mean_Actual identical on matched rows,100 percent,6650 of 6650 rows identical,PASS,Zero differing rows. Confirms P1B012 on the extracted subset.
+Mean_Actual differing rows,0,0,PASS,
+Mean_Forecast differs where expected,> 0 differing rows,2520 of 6650 differ (37.9 percent),PASS,"The two variants diverge on roughly a third of rows for these 50 keys, and agree on the rest. Both are retained as forecast baselines."
+SSD max date,2026-08-22,2026-08-22,PASS,Matches the AX4 dashboard window. Source unchanged since P1B.
+Non-parseable Mean_Actual,0,0,PASS,Every varchar source value produced a numeric cast. No silent loss.

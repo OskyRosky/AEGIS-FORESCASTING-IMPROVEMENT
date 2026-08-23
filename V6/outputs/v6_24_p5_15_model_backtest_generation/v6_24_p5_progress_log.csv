@@ -1,0 +1,12 @@
+timestamp,percent_complete,elapsed_minutes,estimated_remaining_minutes,completed_model_series,total_model_series,completed_prediction_rows,current_metric,current_model,current_batch,failures_so_far,latest_checkpoint_path
+2026-08-23T21:18:54+00:00,10,0.61,5.5,135,1350,40500,SSD,FixedGrowth_4,SSD_A_02,0,data/model_runs/v6_24_p5_work/checkpoints/SSD_A_02.parquet
+2026-08-23T21:19:23+00:00,20,1.09,4.34,270,1350,81000,SSD,AutoARIMA,SSD_A_03,0,data/model_runs/v6_24_p5_work/checkpoints/SSD_A_03.parquet
+2026-08-23T21:19:52+00:00,30,1.58,3.68,405,1350,121500,SSD,Theta,SSD_A_04,0,data/model_runs/v6_24_p5_work/checkpoints/SSD_A_04.parquet
+2026-08-23T21:20:24+00:00,40,2.11,3.16,540,1350,162000,SSD,XGBoost,SSD_A_05,0,data/model_runs/v6_24_p5_work/checkpoints/SSD_A_05.parquet
+2026-08-23T21:20:57+00:00,50,2.65,2.65,675,1350,202491,CPU,FixedGrowth_4,CPU_A_01,0,data/model_runs/v6_24_p5_work/checkpoints/CPU_A_01.parquet
+2026-08-23T21:21:38+00:00,60,3.34,2.23,810,1350,242928,CPU,AutoARIMA,CPU_A_02,0,data/model_runs/v6_24_p5_work/checkpoints/CPU_A_02.parquet
+2026-08-23T21:22:14+00:00,70,3.94,1.69,945,1350,285090,IOPS,Theta,IOPS_A_01,0,data/model_runs/v6_24_p5_work/checkpoints/IOPS_A_01.parquet
+2026-08-23T21:22:53+00:00,80,4.59,1.15,1080,1350,327912,IOPS,XGBoost,IOPS_A_02,0,data/model_runs/v6_24_p5_work/checkpoints/IOPS_A_02.parquet
+2026-08-23T21:23:17+00:00,90,4.99,0.55,1215,1350,368412,SSD,SMLP-TCN,SSD_B_09,0,data/model_runs/v6_24_p5_work/checkpoints/SSD_B_09.parquet
+2026-08-23T21:24:09+00:00,100,5.85,0.0,1350,1350,409890,IOPS,SMLP-TCN,IOPS_B_04,0,data/model_runs/v6_24_p5_work/checkpoints/IOPS_B_04.parquet
+2026-08-23T21:24:09+00:00,100,5.85,0.0,1350,1350,409890,ALL,ALL,COMPLETE,0,all checkpoints written

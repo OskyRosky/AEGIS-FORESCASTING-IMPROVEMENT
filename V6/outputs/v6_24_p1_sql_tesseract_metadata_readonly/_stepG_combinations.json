@@ -1,0 +1,83 @@
+{
+ "forecast_substrateBE_hdd_region": {
+  "metric": "HDD",
+  "predicate": "ModelVersion = 'actual'",
+  "by_scenario": [
+   {
+    "scenario": "Basilisk",
+    "combinations": 46,
+    "combinations_over_50": 46,
+    "min_obs": 144,
+    "max_obs": 284,
+    "date_min": "2026-01-02",
+    "date_max": "2026-05-25"
+   },
+   {
+    "scenario": "Consumer",
+    "combinations": 46,
+    "combinations_over_50": 46,
+    "min_obs": 1625,
+    "max_obs": 20025,
+    "date_min": "2019-07-01",
+    "date_max": "2026-08-17"
+   },
+   {
+    "scenario": "Enterprise",
+    "combinations": 45,
+    "combinations_over_50": 45,
+    "min_obs": 1105,
+    "max_obs": 14488,
+    "date_min": "2019-07-01",
+    "date_max": "2026-08-17"
+   }
+  ]
+ },
+ "forecast_substrateBE_cpu_actual_region": {
+  "metric": "CPU",
+  "predicate": "ModelVersion = 'Actual'",
+  "by_scenario": [
+   {
+    "scenario": "Consumed",
+    "combinations": 30,
+    "combinations_over_50": 30,
+    "min_obs": 220,
+    "max_obs": 562,
+    "date_min": "2022-01-04",
+    "date_max": "2023-07-20"
+   },
+   {
+    "scenario": "Failover",
+    "combinations": 30,
+    "combinations_over_50": 30,
+    "min_obs": 220,
+    "max_obs": 562,
+    "date_min": "2022-01-04",
+    "date_max": "2023-07-20"
+   }
+  ]
+ },
+ "forecast_substrateBE_iops_actual_region": {
+  "metric": "IOPS",
+  "predicate": "ModelVersion = 'Actual'",
+  "by_scenario": [
+   {
+    "scenario": "Consumed",
+    "combinations": 29,
+    "combinations_over_50": 29,
+    "min_obs": 218,
+    "max_obs": 1103,
+    "date_min": "2020-06-23",
+    "date_max": "2023-07-20"
+   },
+   {
+    "scenario": "Failover",
+    "combinations": 29,
+    "combinations_over_50": 29,
+    "min_obs": 218,
+    "max_obs": 1103,
+    "date_min": "2020-06-23",
+    "date_max": "2023-07-20"
+   }
+  ]
+ }
+}

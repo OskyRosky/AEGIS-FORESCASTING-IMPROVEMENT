@@ -1,0 +1,19 @@
+model_name,model_family,expected_in_catalog,present_in_forecast_outputs,series_covered,rows,forecast_steps_per_series,failures,result
+FixedGrowth_1_5,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+FixedGrowth_3,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+FixedGrowth_4,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+FixedGrowth_6,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+ARIMA_Fixed,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+AutoARIMA,Challenger,TRUE,TRUE,140,4200,30,0,PASS
+ETS Explicit,Challenger,TRUE,TRUE,140,4200,30,0,PASS
+ETS_Current,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+Theta,Challenger,TRUE,TRUE,140,4200,30,0,PASS
+LightGBM,Challenger,TRUE,TRUE,140,4200,30,0,PASS
+LinearRegression,Baseline,TRUE,TRUE,140,4200,30,0,PASS
+XGBoost,Challenger,TRUE,TRUE,140,4200,30,0,PASS
+FNAR-V2,Neural,TRUE,TRUE,140,4200,30,0,PASS
+NLIN-DLIN_FIXED,Neural,TRUE,TRUE,140,4200,30,0,PASS
+SMLP-TCN,Neural,TRUE,TRUE,140,4200,30,0,PASS
+NBEATS,PROHIBITED,FALSE,FALSE,0,0,0,0,PASS
+NHITS,PROHIBITED,FALSE,FALSE,0,0,0,0,PASS
+FastNeuralAR_MLP,PROHIBITED,FALSE,FALSE,0,0,0,0,PASS

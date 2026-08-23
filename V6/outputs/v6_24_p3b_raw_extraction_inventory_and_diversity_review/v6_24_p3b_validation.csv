@@ -1,0 +1,24 @@
+check_id,check_name,expected,observed,result
+V1,Observed-series inventory has exactly 90 rows,90,90,PASS
+V2,Raw-extraction-unit inventory distinguishes SSD LVWE and LVNE,"50 LVWE + 50 LVNE, flagged distinctly",50 LVWE and 50 LVNE; is_duplicate_physical_variant TRUE on 50 rows; total units 140,PASS
+V3,"SSD observed series count remains 50, not 100",50,"50 observed rows over 50 unique keys, stored as 100 physical units",PASS
+V4,CPU observed series count is 20,20,20,PASS
+V5,IOPS observed series count is 20,20,20,PASS
+V6,"UI filter tree preview covers SSD, CPU, IOPS, HDD context and the Memory gap",5 metrics,"['CPU', 'HDD', 'IOPS', 'Memory', 'SSD']",PASS
+V7,Every inventory row has all nine axes populated with explicit values,0 blank cells across 230 rows,0 blank cells across 230 rows,PASS
+V8,CPU scenario/key matrix exists,>= 1 row,10 keys; 10 shared by both scenarios,PASS
+V9,IOPS scenario/key matrix exists,>= 1 row,10 keys; 10 shared by both scenarios,PASS
+V10,CPU/IOPS diversity issue is clearly documented,"every key shown as shared, and the achievable alternative quantified","CPU 10 keys x 2 scenarios = 20 series; IOPS 10 keys x 2 = 20. Pool holds 30 CPU and 29 IOPS distinct keys, so 20 distinct keys is achievable.",PASS
+V11,Decision table contains both options,KEEP_CURRENT_MVP and PATCH_DIVERSITY_BEFORE_P4,"['KEEP_CURRENT_MVP', 'PATCH_DIVERSITY_BEFORE_P4']",PASS
+V12,No new SQL extraction performed,no query ledger in this stage,0 ledgers; P3B read only local Parquet and CSV,PASS
+V13,No new raw Parquet written and none overwritten,"4 files, every sha256 identical to the value P3 recorded",4 raw parquet files; 0 with a checksum differing from P3 (4 checksums on record),PASS
+V14,No processed Parquet written,no v6_24_mvp_cohort folder and no processed file touched,cohort folder exists=False; 0 of 24 processed files touched (the rest are legacy artifacts from June 2026),PASS
+V15,No models run,only .csv/.md/.py artifacts,"['.csv', '.md', '.py']",PASS
+V16,No forecasts generated,no forecast artifact,0 artifacts,PASS
+V17,No accuracy or rankings calculated,no accuracy or ranking artifact,0 artifacts,PASS
+V18,No Shiny files modified,0 entries,0 entries,PASS
+V19,V1 through V5 untouched,0 entries,0 entries,PASS
+V20,Closure summary states whether P3 data is acceptable for MVP P4,explicit statement plus the owner decision needed,present=True; states acceptability=True,PASS
+V21,The two views reconcile: 140 physical units minus 50 SSD duplicates equals 90,140 - 50 = 90,140 units - 50 LVNE duplicate-variant units = 90 observed series,PASS
+V22,Full 140 context marks all HDD rows ALREADY_LOCAL_NOT_EXTRACTED,"140 rows, 50 HDD all marked","140 rows, 50 HDD, 50 marked",PASS
+V23,No extracted series claims to have 15 governed backtests,all 90 extracted rows marked FALSE; only the 50 local HDD rows are TRUE,"50 TRUE (expected 50, all HDD)",PASS

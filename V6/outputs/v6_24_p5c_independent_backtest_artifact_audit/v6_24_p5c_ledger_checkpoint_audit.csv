@@ -1,0 +1,13 @@
+check,expected,observed,result
+"Execution ledger has 1,350 non-HDD model-series entries",1350,"1350 entries, 3 metrics, 0 HDD entries=True",PASS
+"All 1,350 marked OK",1350 OK,1350 OK,PASS
+Zero failed entries,0,0,PASS
+Execution ledger rows sum to the generated row count,409890,"409,890",PASS
+Batch runtime ledger has the expected batches,27 (9 phase A + 18 phase B),27 batches: 9 A + 18 B,PASS
+A checkpoint file exists for every batch,27 files,27 checkpoint files; batches referencing a checkpoint=27,PASS
+"Checkpoint rows sum to 409,890",409890,"409,890",PASS
+"Batch ledger rows sum to 409,890",409890,"409,890",PASS
+Final generated subset equals the checkpoint union,0 rows on either side only,"0 checkpoint-only, 0 final-only",PASS
+Checkpoint predicted values match the promoted artifact,0 differences,"0 of 409,890 shared rows differ; max delta 0.000e+00",PASS
+"Checkpoint series-model pairs equal 1,350",1350,1350,PASS
+Failure ledger exists,"file present, 0 blocking failures","present=True, 0 rows",PASS

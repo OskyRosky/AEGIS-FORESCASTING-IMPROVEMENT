@@ -1,0 +1,12 @@
+invariant,expected,observed,result
+Shiny not modified,0 files touched,0 files touched (P6 wrote only to outputs/ and processed/),PASS
+No SQL / Tesseract access,0 connections,0 - P6 read only local parquet artifacts,PASS
+P4/P5 artifacts unmodified,0 modified,8 frozen artifacts verified unmodified by mtime,PASS
+Predictions not clipped,no clipping,"7,531 negative predictions preserved",PASS
+"Readiness derived from artifact, not the stale flag",derived,90 series corrected from a stale manifest FALSE,PASS
+15 governed models only,15,"15 distinct models, no substitutions",PASS
+Champion 'ETS Explicit' spelled with a space,exact registry name,'ETS Explicit' present verbatim,PASS
+navigation_contract / taxonomy_counts NOT created (P7 scope),absent,absent,PASS
+"forecast_outputs NOT created (blocked, not faked)",absent,absent,PASS
+No git commit or push,none,none - working tree left for owner review,PASS
+All Shiny-facing artifacts under processed/v6_24_mvp_cohort,single folder,accuracy_metrics and model_rankings written there only,PASS

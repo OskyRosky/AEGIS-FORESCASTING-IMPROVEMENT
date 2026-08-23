@@ -1,0 +1,5 @@
+metric,series_count,model_count,expected_rows,row_count,failures,runtime_seconds,reconciles,checkpoint_path
+HDD,50,15,22500,22500,0,18.72,TRUE,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V6\data\model_runs\v6_24_p6b_forecast_work\checkpoints\p6b_checkpoint_HDD.parquet
+SSD,50,15,22500,22500,0,17.91,TRUE,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V6\data\model_runs\v6_24_p6b_forecast_work\checkpoints\p6b_checkpoint_SSD.parquet
+CPU,20,15,9000,9000,0,11.56,TRUE,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V6\data\model_runs\v6_24_p6b_forecast_work\checkpoints\p6b_checkpoint_CPU.parquet
+IOPS,20,15,9000,9000,0,12.81,TRUE,C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V6\data\model_runs\v6_24_p6b_forecast_work\checkpoints\p6b_checkpoint_IOPS.parquet

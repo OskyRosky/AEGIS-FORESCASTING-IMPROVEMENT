@@ -1,0 +1,11 @@
+item_id,item,rule,observed,result
+C01,forecast_type,constant = GOVERNED_30_STEP_DAILY_FORECAST,GOVERNED_30_STEP_DAILY_FORECAST,PASS
+C02,forecast_steps,exactly 30 per series-model,30-30,PASS
+C03,forecast_step domain,"1..30 complete, no gaps",2100/2100 pairs complete,PASS
+C04,forecast_horizon_days,equals forecast_step,"63,000/63,000 rows",PASS
+C05,train_end_date,max observed series_date per series,derived from actuals_normalized per series_id,PASS
+C06,forecast_date,train_end_date + forecast_step days,"63,000/63,000 rows",PASS
+C07,forecast_date is strictly future,> train_end_date,"63,000/63,000 rows",PASS
+C08,Training input,"full observed history, no fill/resample/interpolate","actuals_normalized read as-is, sorted by series_date ascending",PASS
+C09,Forecast dates not written to actuals,actuals_normalized untouched,"actuals rows unchanged at 48,916",PASS
+C10,Recursive forecasting,not used,"single-shot vector forecast per model, identical to the P5 call path",PASS

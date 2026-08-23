@@ -1,0 +1,6 @@
+artifact,path,exists,size_bytes,rows,columns,sha256_prefix,notes
+final backtests (parquet),data/processed/v6_24_mvp_cohort/model_backtests_15_models.parquet,True,5213433,614190,26,a83afe20e271d21b,The promoted artifact
+final backtests (csv),data/processed/v6_24_mvp_cohort/model_backtests_15_models.csv,True,316821705,614190,26,92d92cc4d3dc7058,Row count must match the parquet
+actuals_normalized,data/processed/v6_24_mvp_cohort/actuals_normalized.parquet,True,1457223,48916,21,43b2491cc6abcfdb,Reference truth for reconciliation
+cohort_manifest,data/processed/v6_24_mvp_cohort/cohort_manifest.parquet,True,30967,140,37,1e4ad9ae66903bde,Cohort definition
+P5 checkpoints,data/model_runs/v6_24_p5_work/checkpoints,True,4415504,see ledger audit,-,-,27 checkpoint files

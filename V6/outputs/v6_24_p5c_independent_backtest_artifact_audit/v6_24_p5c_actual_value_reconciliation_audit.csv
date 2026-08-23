@@ -1,0 +1,6 @@
+metric,checked_rows,joined_rows,orphan_rows,mismatches,max_abs_delta,result,notes
+SSD,225000,225000,0,0,0.000e+00,PASS,Independently re-joined to actuals_normalized.
+CPU,89910,89910,0,0,0.000e+00,PASS,Independently re-joined to actuals_normalized.
+IOPS,94980,94980,0,0,0.000e+00,PASS,Independently re-joined to actuals_normalized.
+HDD (overlap only),204300,204300,NOT_APPLICABLE,0,9.313e-10,PASS,"Reused rows carry their own actual_value from the v6_17 artifact and span a different origin grid, so a full join is not expected. Where dates DO overlap actuals_normalized the values are compared."
+ALL GENERATED_P5,409890,409890,0,0,0.000e+00,PASS,

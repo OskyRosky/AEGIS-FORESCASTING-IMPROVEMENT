@@ -1,0 +1,3 @@
+metric,source_object,earliest_date,latest_date,expected_latest_date,source_changed,days_behind_ssd,caveat,result
+CPU,forecast_substrateBE_cpu_actual_region,2022-01-04,2023-07-20,2023-07-20,NO,1129,"STALE_ACTUALS_SOURCE, latest date 2023-07-20",PASS
+IOPS,forecast_substrateBE_iops_actual_region,2020-06-23,2023-07-20,2023-07-20,NO,1129,"STALE_ACTUALS_SOURCE, latest date 2023-07-20",PASS

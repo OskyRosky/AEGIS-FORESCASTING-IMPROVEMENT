@@ -1,0 +1,19 @@
+model_number,governed_model_name,registered_name_in_code,model_family,implementation_path,implementation_status,cost_class,is_champion,name_matches_governed_list,notes
+1,FixedGrowth_1_5,FixedGrowth_1_5,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+2,FixedGrowth_3,FixedGrowth_3,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+3,FixedGrowth_4,FixedGrowth_4,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+4,FixedGrowth_6,FixedGrowth_6,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+5,ARIMA_Fixed,ARIMA_Fixed,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+6,AutoARIMA,AutoARIMA,Challenger,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,MEDIUM,FALSE,TRUE,Registered in Challenger group.
+7,ETS_Explicit,ETS Explicit,Challenger,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,MEDIUM,TRUE,FALSE,"Registered in code and in the existing HDD artifact as 'ETS Explicit' with a SPACE, not an underscore. Same model, different spelling. P5 must map the name explicitly rather than substitute silently."
+8,ETS_Current,ETS_Current,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+9,Theta,Theta,Challenger,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,MEDIUM,FALSE,TRUE,Registered in Challenger group.
+10,LightGBM,LightGBM,Challenger,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,MEDIUM,FALSE,TRUE,Registered in Challenger group.
+11,LinearRegression,LinearRegression,Baseline,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,LOW,FALSE,TRUE,Registered in Baseline group.
+12,XGBoost,XGBoost,Challenger,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,MEDIUM,FALSE,TRUE,Registered in Challenger group.
+13,FNAR-V2,FNAR-V2,Neural,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,HIGH,FALSE,TRUE,Registered in Neural group.
+14,NLIN-DLIN_FIXED,NLIN-DLIN_FIXED,Neural,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,HIGH,FALSE,TRUE,Registered in Neural group.
+15,SMLP-TCN,SMLP-TCN,Neural,V6/outputs/v6_16_five_case_viewer_uiux_lab/build_v6_16_pilot_backtest.py,RESOLVED,HIGH,FALSE,TRUE,Registered in Neural group.
+-,PROHIBITED: NBEATS,NOT_REGISTERED,NOT_APPLICABLE,NOT_APPLICABLE,CORRECTLY_ABSENT,NOT_APPLICABLE,FALSE,NOT_APPLICABLE,Confirmed absent from the registry. Must never be introduced.
+-,PROHIBITED: NHITS,NOT_REGISTERED,NOT_APPLICABLE,NOT_APPLICABLE,CORRECTLY_ABSENT,NOT_APPLICABLE,FALSE,NOT_APPLICABLE,Confirmed absent from the registry. Must never be introduced.
+-,PROHIBITED: FastNeuralAR_MLP,NOT_REGISTERED,NOT_APPLICABLE,NOT_APPLICABLE,CORRECTLY_ABSENT,NOT_APPLICABLE,FALSE,NOT_APPLICABLE,Confirmed absent from the registry. Must never be introduced.

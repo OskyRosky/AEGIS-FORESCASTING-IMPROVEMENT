@@ -1,0 +1,5 @@
+variant,key,date,actual_value,forecast_value,accuracy_value,dashboard_match_status,notes
+LVWE,NAMPRD07,2026-08-22,9996.28,10905.34,90.91,MATCH,"Owner dashboard shows NAMPRD07 actual near 10,000 and forecast near 10,900 in August 2026. SQL returns 9996.28 and 10905.34. Match confirmed."
+LVWE,NAMPRD08,2026-08-22,11219.51,11917.44,93.78,MATCH,"Owner dashboard shows actual near 11,200 and forecast near 11,900 for NAMPRD08 in August 2026. SQL returns 11219.51 and 11917.44. Match confirmed."
+LVNE,NAMPRD07,2026-08-22,9996.28,12145.83,78.5,VARIANT_DIFFERS,"Same actual 9996.28 as LVWE, but forecast 12145.83 and accuracy 78.50."
+LVNE,NAMPRD08,2026-08-22,11219.51,13766.18,77.3,VARIANT_DIFFERS,"Same actual 11219.51 as LVWE, but forecast 13766.18 and accuracy 77.30. The dashboard was showing the w/ Efficiency variant, so LVNE is the alternative."

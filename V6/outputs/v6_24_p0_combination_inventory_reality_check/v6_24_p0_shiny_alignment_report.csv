@@ -1,0 +1,6 @@
+page,exposed_combinations,product_complete_combinations,incomplete_exposed,complete_hidden,result
+Viewer,596,596,0,0,ALIGNED: every exposed case is product-complete.
+Forecast,894,596,298,0,"NOT ALIGNED: exposes 298 forecast-only SSD cases that the Viewer cannot show, breaking Viewer/Forecast parity."
+Viewer forecast-only callout,300,0,0,0,"Informational only: listed, not selectable."
+"Metric selector, Viewer",1,1,0,0,"Only HDD is offered. CPU, IOPS and SSD are not visible in the Viewer."
+"Metric selector, Forecast",5,1,4,0,"HDD, SSD, CPU, IOPS and Memory are offered. CPU, IOPS, SSD-MCDB and Memory stop at an explicit backend-gap state."

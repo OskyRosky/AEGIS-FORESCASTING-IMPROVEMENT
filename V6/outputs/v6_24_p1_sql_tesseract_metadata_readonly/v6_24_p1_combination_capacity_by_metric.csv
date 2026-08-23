@@ -1,0 +1,6 @@
+metric,candidate_routes,total_candidate_combinations,combinations_with_actuals,combinations_over_50,source_confirmed,main_gap,recommended_next_action
+HDD,6,604,604,604,YES,None. Region and Forest actuals both confirmed and current (to 2026-08-17).,Already local in V6. Use as the anchor of the mixed cohort; select a representative subset.
+CPU,2,60,60,60,YES,"History stops 2023-07-20, roughly three years stale versus HDD. Region granularity only; no Forest actuals.",Extract all 60 Region combinations in P2. Flag staleness to the owner before generation.
+IOPS,2,58,58,58,YES,History stops 2023-07-20. Region granularity only; no Forest actuals.,Extract all 58 Region combinations in P2. Flag staleness to the owner before generation.
+SSD,4,559,559,272,YES,Current actuals (2026-08-22) exist only as rolling-window aggregates in the lvwe/lvne metrics tables. The raw daily sources closed in 2021.,Extract the 272 lvwe+lvne Forest combinations in P2. Confirm with the owner that Mean_Actual over a 6-7 day window is an acceptable observed series.
+MEMORY,2,0,0,0,NO,Governed Demand views exist but are empty. Only 54.6M rows of ungoverned raw telemetry.,Exclude Memory from the cohort. Ask the data owner whether the Demand_Memory views are scheduled to be populated.

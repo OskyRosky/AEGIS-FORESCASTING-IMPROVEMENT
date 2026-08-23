@@ -1,0 +1,32 @@
+artifact,column_name,dtype,required,present,null_count,distinct_count,example_value,description
+model_rankings,cohort_id,str,TRUE,TRUE,0,140,V6_24_MVP_0101,
+model_rankings,series_id,str,TRUE,TRUE,0,140,CPU__Consumed__Region__APC-Multitenant,
+model_rankings,metric,str,TRUE,TRUE,0,4,CPU,
+model_rankings,db_type,str,TRUE,TRUE,0,5,UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE,
+model_rankings,scenario,str,TRUE,TRUE,0,3,Consumed,
+model_rankings,segment,str,TRUE,TRUE,0,3,NOT_APPLICABLE,
+model_rankings,granularity,str,TRUE,TRUE,0,2,Region,
+model_rankings,key,str,TRUE,TRUE,0,102,APC-Multitenant,
+model_rankings,route_path,str,TRUE,TRUE,0,11,CPU|Organic|Consumed|Region,
+model_rankings,model_name,str,TRUE,TRUE,0,15,FixedGrowth_1_5,
+model_rankings,primary_rank_metric,str,TRUE,TRUE,0,3,wape,Metric that actually decided the ordering for this series
+model_rankings,primary_rank_value,float64,TRUE,TRUE,0,1882,0.03915818146559877,
+model_rankings,primary_rank_status,str,TRUE,TRUE,0,1,COMPUTED,"COMPUTED, or why the metric was unavailable"
+model_rankings,secondary_rank_metric,str,TRUE,TRUE,0,3,smape,
+model_rankings,secondary_rank_value,float64,TRUE,TRUE,0,1877,0.03944915129956143,
+model_rankings,secondary_rank_status,str,TRUE,TRUE,0,1,COMPUTED,
+model_rankings,tertiary_rank_metric,str,TRUE,TRUE,0,2,rmse,
+model_rankings,tertiary_rank_value,float64,TRUE,TRUE,0,1873,26847.821632313426,
+model_rankings,tertiary_rank_status,str,TRUE,TRUE,0,1,COMPUTED,
+model_rankings,rank_within_series,int64,TRUE,TRUE,0,15,1,
+model_rankings,is_series_champion,str,TRUE,TRUE,0,2,TRUE,
+model_rankings,champion_validity,str,TRUE,TRUE,0,3,MEANINGFUL_ACCURACY_RANKING,MEANINGFUL_ACCURACY_RANKING or NOT_MEANINGFUL_NO_SIGNAL
+model_rankings,champion_reason,str,TRUE,TRUE,0,3,LOWEST_VALID_ERROR_BY_P6C_POLICY,
+model_rankings,signal_quality_status,str,TRUE,TRUE,0,3,SIGNAL_PRESENT,SIGNAL_PRESENT / TRAILING_ZERO_LATEST_ACTUAL / NO_SIGNAL_ALL_ZERO_ACTUALS
+model_rankings,n_backtest_rows,int64,TRUE,TRUE,0,9,300,
+model_rankings,negative_prediction_count,int64,TRUE,TRUE,0,47,0,
+model_rankings,extreme_ratio_count,int64,TRUE,TRUE,0,28,0,
+model_rankings,source_generation_status,str,TRUE,TRUE,0,2,GENERATED_P5,
+model_rankings,ranking_policy_version,str,TRUE,TRUE,0,1,P6C_RANKING_POLICY_V2,Always P6C_RANKING_POLICY_V2
+model_rankings,caveat,str,TRUE,TRUE,0,4,"STALE_ACTUALS_SOURCE, latest date 2023-07-20; 15 governed mo",
+model_rankings,model_family,str,FALSE,TRUE,0,3,,additional column carried forward for P7 convenience

@@ -1,0 +1,44 @@
+object_name,column_name,inferred_role,data_type,nullable,confidence,notes
+forecast_substrateBE_ssd_phx_lvwe_metrics,Key,key,varchar,YES,HIGH,"Forest identity. 137 distinct values, all forest-shaped (APCPRD01, NAMPRD07, NAMPRD08, EURP107). Confirmed by P1B011."
+forecast_substrateBE_ssd_phx_lvwe_metrics,Count,window_size,varchar,YES,HIGH,"Observations inside the window. Range 1..7, mean 5.22 (P1B005). Proves the row is an aggregate, not a raw daily point."
+forecast_substrateBE_ssd_phx_lvwe_metrics,Mean_Actual,actual_value,varchar,YES,HIGH,Mean observed value over the window. Zero nulls in either table (P1B005/P1B007). Matches the AX4 dashboard.
+forecast_substrateBE_ssd_phx_lvwe_metrics,Mean_Forecast,forecast_value,float,YES,HIGH,"Mean forecast over the window. Differs between LVWE and LVNE in 6,720 rows (P1B013)."
+forecast_substrateBE_ssd_phx_lvwe_metrics,MAE,accuracy_metric,varchar,YES,HIGH,"Mean absolute error, precomputed."
+forecast_substrateBE_ssd_phx_lvwe_metrics,RMSE,accuracy_metric,varchar,YES,HIGH,"Root mean squared error, precomputed."
+forecast_substrateBE_ssd_phx_lvwe_metrics,Bias,accuracy_metric,varchar,YES,HIGH,"Signed error, precomputed."
+forecast_substrateBE_ssd_phx_lvwe_metrics,Bias_Pct,accuracy_metric,float,YES,HIGH,Signed percentage error.
+forecast_substrateBE_ssd_phx_lvwe_metrics,MAPE,accuracy_metric,float,YES,HIGH,Mean absolute percentage error.
+forecast_substrateBE_ssd_phx_lvwe_metrics,SMAPE,accuracy_metric,float,YES,HIGH,Symmetric MAPE.
+forecast_substrateBE_ssd_phx_lvwe_metrics,Accuracy,accuracy_metric,float,YES,HIGH,100 minus MAPE. The metric shown on the AX4 dashboard.
+forecast_substrateBE_ssd_phx_lvwe_metrics,Forecast_Version,forecast_version,varchar,YES,HIGH,Single value 2026-03-12 in both tables (P1B005/P1B007).
+forecast_substrateBE_ssd_phx_lvwe_metrics,Start_Date,window_start,datetime,YES,HIGH,Start of the rolling accuracy window.
+forecast_substrateBE_ssd_phx_lvwe_metrics,End_Date,window_end,datetime,YES,HIGH,End of the rolling window. Acts as the series date: 130 distinct values over 132 calendar days (P1B014).
+forecast_substrateBE_ssd_phx_lvwe_metrics,Execution_Date,audit,varchar,YES,MEDIUM,Pipeline execution timestamp.
+forecast_substrateBE_ssd_phx_lvne_metrics,Key,key,varchar,YES,HIGH,"Forest identity. 137 distinct values, all forest-shaped (APCPRD01, NAMPRD07, NAMPRD08, EURP107). Confirmed by P1B011."
+forecast_substrateBE_ssd_phx_lvne_metrics,Count,window_size,varchar,YES,HIGH,"Observations inside the window. Range 1..7, mean 5.22 (P1B005). Proves the row is an aggregate, not a raw daily point."
+forecast_substrateBE_ssd_phx_lvne_metrics,Mean_Actual,actual_value,varchar,YES,HIGH,Mean observed value over the window. Zero nulls in either table (P1B005/P1B007). Matches the AX4 dashboard.
+forecast_substrateBE_ssd_phx_lvne_metrics,Mean_Forecast,forecast_value,float,YES,HIGH,"Mean forecast over the window. Differs between LVWE and LVNE in 6,720 rows (P1B013)."
+forecast_substrateBE_ssd_phx_lvne_metrics,MAE,accuracy_metric,varchar,YES,HIGH,"Mean absolute error, precomputed."
+forecast_substrateBE_ssd_phx_lvne_metrics,RMSE,accuracy_metric,varchar,YES,HIGH,"Root mean squared error, precomputed."
+forecast_substrateBE_ssd_phx_lvne_metrics,Bias,accuracy_metric,varchar,YES,HIGH,"Signed error, precomputed."
+forecast_substrateBE_ssd_phx_lvne_metrics,Bias_Pct,accuracy_metric,float,YES,HIGH,Signed percentage error.
+forecast_substrateBE_ssd_phx_lvne_metrics,MAPE,accuracy_metric,float,YES,HIGH,Mean absolute percentage error.
+forecast_substrateBE_ssd_phx_lvne_metrics,SMAPE,accuracy_metric,float,YES,HIGH,Symmetric MAPE.
+forecast_substrateBE_ssd_phx_lvne_metrics,Accuracy,accuracy_metric,float,YES,HIGH,100 minus MAPE. The metric shown on the AX4 dashboard.
+forecast_substrateBE_ssd_phx_lvne_metrics,Forecast_Version,forecast_version,varchar,YES,HIGH,Single value 2026-03-12 in both tables (P1B005/P1B007).
+forecast_substrateBE_ssd_phx_lvne_metrics,Start_Date,window_start,datetime,YES,HIGH,Start of the rolling accuracy window.
+forecast_substrateBE_ssd_phx_lvne_metrics,End_Date,window_end,datetime,YES,HIGH,End of the rolling window. Acts as the series date: 130 distinct values over 132 calendar days (P1B014).
+forecast_substrateBE_ssd_phx_lvne_metrics,Execution_Date,audit,varchar,YES,MEDIUM,Pipeline execution timestamp.
+Greenland_SSD_HDD_Forest_Daily_Raw,DataDate,date,date,YES,HIGH,Raw daily observation date. Window 2020-07-10..2021-06-15 (P1B016).
+Greenland_SSD_HDD_Forest_Daily_Raw,Forest,key,nvarchar,YES,HIGH,Forest identity. 116 of these forests also appear in LVWE (P1B018).
+Greenland_SSD_HDD_Forest_Daily_Raw,Region,route_axis,nvarchar,YES,HIGH,Region axis.
+Greenland_SSD_HDD_Forest_Daily_Raw,SSDDemandTB,actual_value,float,YES,HIGH,"Raw daily observed SSD demand. The cleanest shape of any SSD source, but the window closed in 2021."
+Greenland_SSD_HDD_Forest_Daily_Raw,SSDTotalTB,capacity,float,YES,MEDIUM,"Total space, not demand."
+Greenland_SSD_HDD_Forest_Daily_Raw,HDDTB,other_metric,float,YES,LOW,HDD column in a shared table.
+SubstrateBE_SSD_Demand_History,DataDate,date,date,YES,HIGH,Observation date. Window 2021-06-10..2021-11-08 (P1B017).
+SubstrateBE_SSD_Demand_History,Forest,key,nvarchar,YES,HIGH,"Forest identity, 143 distinct."
+SubstrateBE_SSD_Demand_History,Region,route_axis,nvarchar,YES,HIGH,Region axis.
+SubstrateBE_SSD_Demand_History,Environment,route_axis,nvarchar,YES,HIGH,Environment axis.
+SubstrateBE_SSD_Demand_History,SKU,route_axis,nvarchar,YES,MEDIUM,SKU axis.
+SubstrateBE_SSD_Demand_History,SubstrateSSDDemandTB,actual_value,float,YES,HIGH,Observed demand. Window closed in 2021.
+SubstrateBE_SSD_Demand_History,SubstrateSSDTotalSpaceTB,capacity,float,YES,MEDIUM,"Total space, not demand."

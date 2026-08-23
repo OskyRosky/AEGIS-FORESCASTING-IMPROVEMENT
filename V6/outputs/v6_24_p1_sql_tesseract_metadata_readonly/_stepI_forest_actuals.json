@@ -1,0 +1,28 @@
+{
+ "forecast_substrateBE_cpu": [],
+ "forecast_substrateBE_iops": [],
+ "forecast_substrateBE_cpu_byDB_forest": [],
+ "hdd_forest_combos": [
+  [
+   "basilisk",
+   155,
+   155,
+   144,
+   144
+  ],
+  [
+   "consumer",
+   156,
+   156,
+   1905,
+   24905
+  ],
+  [
+   "enterprise",
+   156,
+   156,
+   1407,
+   16224
+  ]
+ ]
+}

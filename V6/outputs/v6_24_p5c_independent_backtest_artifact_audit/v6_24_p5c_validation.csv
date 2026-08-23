@@ -1,0 +1,38 @@
+check_id,check_name,expected,observed,result
+V1,P5 final artifact exists,parquet and csv present,"parquet=True, csv=True, 5,213,433 bytes",PASS
+V2,"Artifact has exactly 614,190 rows",614190,"parquet 614,190, csv 614,190",PASS
+V3,Artifact has exactly 140 series,140,140,PASS
+V4,Artifact has exactly 15 governed models,15,15; unexpected=[],PASS
+V5,"Artifact has exactly 2,100 series-model pairs",2100,2100,PASS
+V6,"GENERATED_P5 has exactly 409,890 rows",409890,"409,890",PASS
+V7,"REUSED_HDD_EXISTING_ARTIFACT has exactly 204,300 rows",204300,"204,300",PASS
+V8,"SSD has 50 series and 225,000 rows",50 / 225000,"50 series, 225,000 rows",PASS
+V9,"CPU has 20 series and 89,910 rows",20 / 89910,"20 series, 89,910 rows",PASS
+V10,"IOPS has 20 series and 94,980 rows",20 / 94980,"20 series, 94,980 rows",PASS
+V11,"HDD has 50 series and 204,300 rows",50 / 204300,"50 series, 204,300 rows",PASS
+V12,Every series has all 15 governed models,15 for all 140,"min 15, max 15, 0 series failing",PASS
+V13,No prohibited model appears,0,0 rows,PASS
+V14,prediction_date equals target_date on every row,0 offsets,"0 of 614,190",PASS
+V15,train_end_date < target_date on every GENERATED_P5 row,0 violations,0 across the whole artifact,PASS
+V16,GENERATED_P5 actual values reconcile to actuals_normalized,0 mismatches,"0 mismatches, max delta 0.000e+00",PASS
+V17,Every GENERATED_P5 target_date exists in actuals_normalized,0 orphans,0,PASS
+V18,No invented GENERATED_P5 target dates,0,0,PASS
+V19,Newest observation preserved for 90 of 90 generated series,90,90 of 90,PASS
+V20,No duplicate grain rows,0 at every grain tested,0 duplicate checks failing,PASS
+V21,No NaN predicted_value,0,0,PASS
+V22,No infinite predicted_value,0,0,PASS
+V23,Failure ledger exists with 0 blocking failures,"present, 0 rows","present=True, 0 rows",PASS
+V24,"Execution ledger has exactly 1,350 OK non-HDD entries",1350 OK,"1350 entries, 1350 OK, 0 HDD entries",PASS
+V25,"Checkpoints reconcile to 409,890 generated rows",409890,"409,890 rows across 27 checkpoint files",PASS
+V26,Final generated rows reconcile to checkpoints,0 rows on either side only,"0 checkpoint-only, 0 final-only",PASS
+V27,Progress log has all 10% milestones,10 through 100,0 progress checks failing,PASS
+V28,Runtime plausibility conclusion,PLAUSIBLE or clearly justified,"PLAUSIBLE: smoke 37.4 fits/s vs full 39.1 fits/s, ratio 1.05x",PASS
+V29,No forbidden forecast/accuracy/ranking/navigation/taxonomy artifacts,0,0 governance checks failing,PASS
+V30,Shiny files untouched,0 entries,0 entries,PASS
+V31,V1 through V5 untouched,0 entries,0 entries,PASS
+V32,No models were rerun during P5C,0 model artifacts written by the audit,0 parquet files in the audit folder,PASS
+V33,No processed artifacts were modified during P5C,processed/ file count unchanged at 10,10 files in processed/,PASS
+V34,"Closure summary states accept, accept with caveats, or blocked",explicit decision,present=True; states a decision=True,PASS
+V35,Parquet and CSV siblings agree exactly,identical row counts,"parquet 614,190 vs csv 614,190",PASS
+V36,Reused HDD actuals also reconcile where dates overlap,0 mismatches on overlapping dates,"204,300 overlapping rows, 0 mismatches, max delta 9.313e-10",PASS
+V37,Row-count reconciliation has no failures across 71 breakdowns,0 failing breakdowns,0 failing,PASS

@@ -1,0 +1,5 @@
+check,expected,observed,result
+Every non-HDD row joins to actuals_normalized,0 orphans,0,PASS
+Non-HDD actual_value matches actuals_normalized,0 mismatches,"0, max delta 0.00e+00",PASS
+No NaN predicted_value,0,0,PASS
+HDD actual_value preserved from the source artifact,unchanged,"204,300 rows carried verbatim, never recomputed",PASS

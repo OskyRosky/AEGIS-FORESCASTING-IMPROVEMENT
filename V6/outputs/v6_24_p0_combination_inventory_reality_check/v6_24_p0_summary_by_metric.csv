@@ -1,0 +1,3 @@
+metric,total_combinations,with_actuals,over_50_actuals,with_15_models,with_forecast,product_complete,forecast_only,actuals_only,missing_backtest,missing_forecast,sql_required
+HDD,596,596,596,596,596,596,0,0,0,0,0
+SSD,300,0,0,0,300,0,300,0,300,0,300

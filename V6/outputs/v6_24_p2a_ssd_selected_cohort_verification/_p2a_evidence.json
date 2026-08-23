@@ -1,0 +1,1511 @@
+{
+ "p2_keys": [
+  "APCP150",
+  "APCPRD01",
+  "APCPRD02",
+  "AREP273",
+  "AUSP282",
+  "AUSP300",
+  "AUSPRD01",
+  "AUTP296",
+  "BRAP284",
+  "CANP288",
+  "CANPRD01",
+  "CHEP278",
+  "CHLP298",
+  "DEUP281",
+  "DNKP307",
+  "ESPP292",
+  "EURP107",
+  "EURP119",
+  "EURP120",
+  "FRAP264",
+  "GBRP123",
+  "GBRP265",
+  "GBRP267",
+  "IDNP305",
+  "INDP287",
+  "INDPRD01",
+  "ISRP290",
+  "ITAP293",
+  "JPNP286",
+  "JPNP301",
+  "JPNPRD01",
+  "KORP216",
+  "LAMP152",
+  "LAMP215",
+  "LAMPRD80",
+  "MEXP297",
+  "MYSP306",
+  "NAMP100",
+  "NAMP101",
+  "NAMP104",
+  "NAMPRD07",
+  "NAMPRD08",
+  "NORP279",
+  "NZLP299",
+  "POLP291",
+  "QATP289",
+  "SGPP274",
+  "SWEP280",
+  "TWNP295",
+  "ZAFP275"
+ ],
+ "lvwe": [
+  {
+   "key": "APCP150",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "APCPRD01",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "APCPRD02",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "AREP273",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "AUSP282",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "AUSP300",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "AUSPRD01",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "AUTP296",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "BRAP284",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "CANP288",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "CANPRD01",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "CHEP278",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "CHLP298",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "DEUP281",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "DNKP307",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "ESPP292",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "EURP107",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "EURP119",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "EURP120",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "FRAP264",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "GBRP123",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "GBRP265",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "GBRP267",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "IDNP305",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "INDP287",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "INDPRD01",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "ISRP290",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "ITAP293",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "JPNP286",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "JPNP301",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "JPNPRD01",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "KORP216",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "LAMP152",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "LAMP215",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "LAMPRD80",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "MEXP297",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "MYSP306",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NAMP100",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NAMP101",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NAMP104",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NAMPRD07",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NAMPRD08",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NORP279",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "NZLP299",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "POLP291",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "QATP289",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "SGPP274",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "SWEP280",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "TWNP295",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  },
+  {
+   "key": "ZAFP275",
+   "total_rows": 131,
+   "parseable": 131,
+   "non_parseable": 0,
+   "null_actual": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "distinct_dates": 130
+  }
+ ],
+ "lvne_differing_actual_rows": 0,
+ "pool": [
+  {
+   "key": "APCP150",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "APCPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "APCPRD02",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "APCPRD03",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "APCPRD04",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "APCPRD06",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "AREP273",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "AUSP282",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "AUSP300",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "AUSPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "AUTP296",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "BRAP284",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "CANP288",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "CANPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "CHEP278",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "CHLP298",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "DEUP281",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "DNKP307",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "ESPP292",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP107",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP119",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP120",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP121",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP122",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP137",
+   "parseable": 128,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-19"
+  },
+  {
+   "key": "EURP138",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP175",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP176",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP178",
+   "parseable": 64,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-06-16"
+  },
+  {
+   "key": "EURP179",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP180",
+   "parseable": 64,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-06-16"
+  },
+  {
+   "key": "EURP189",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP190",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP191",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP192",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP193",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP194",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP195",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP250",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURP251",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD02",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD03",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD04",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD05",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD06",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD07",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD08",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD09",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "EURPRD10",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "FRAP264",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "GBRP123",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "GBRP265",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "GBRP267",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "GBRP302",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "IDNP305",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "INDP287",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "INDPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "ISRP290",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "ITAP293",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "JPNP286",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "JPNP301",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "JPNPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "KORP216",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "LAMP152",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "LAMP215",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "LAMPRD80",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "MEXP297",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "MYSP306",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP100",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP101",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP104",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP105",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP106",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP108",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP109",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP113",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP114",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP115",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP118",
+   "parseable": 83,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-07-05"
+  },
+  {
+   "key": "NAMP125",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP128",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP129",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP130",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP131",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP132",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP133",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP134",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP136",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP154",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP157",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP158",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP161",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP162",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP163",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP164",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP166",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP167",
+   "parseable": 104,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-07-26"
+  },
+  {
+   "key": "NAMP169",
+   "parseable": 99,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-07-21"
+  },
+  {
+   "key": "NAMP170",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP171",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP173",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP220",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP221",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP222",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMP223",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD01",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD02",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD03",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD04",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD05",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD06",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD07",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD08",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD10",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD11",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD12",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD13",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD14",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD15",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD16",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD17",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD18",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD19",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD20",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD22",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD84",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NAMPRD85",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NORP279",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "NZLP299",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "POLP291",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "QATP289",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "SGPP274",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "SWEP280",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "TWNP295",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  },
+  {
+   "key": "ZAFP275",
+   "parseable": 131,
+   "non_parseable": 0,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+check,expected,observed,result
+No forecast_outputs.parquet or .csv in processed/,0 files,0 matching,PASS
+No accuracy_metrics.parquet or .csv in processed/,0 files,0 matching,PASS
+No model_rankings.parquet or .csv in processed/,0 files,0 matching,PASS
+No navigation_contract.parquet or .csv in processed/,0 files,0 matching,PASS
+No taxonomy_counts.parquet or .csv in processed/,0 files,0 matching,PASS
+Shiny files untouched,0 entries,0 entries,PASS
+V1 through V5 untouched,0 entries,0 entries,PASS
+Raw Parquet unchanged,0 modified raw files,0 raw entries in git status; 4 raw parquet files present,PASS
+No SQL evidence in P5 logs,no connection or query artifacts,0 query ledgers in the P5 report folder,PASS
+processed/ contains exactly the expected artifacts,10 files,"10 files: ['actuals_normalized.csv', 'actuals_normalized.parquet', 'cohort_manifest.csv', 'cohort_manifest.parquet']...",PASS
+No push performed,no push evidence,13 uncommitted working-tree entries; branch state unchanged by P5C,PASS
+P5C modified no processed artifact,checksums unchanged during the audit,P5C opened every processed file read-only and wrote only under its own report folder,PASS
+P5C ran no models,no model artifacts produced,0 parquet files written by P5C,PASS

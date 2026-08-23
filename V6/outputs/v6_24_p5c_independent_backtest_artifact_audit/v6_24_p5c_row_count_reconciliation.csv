@@ -1,0 +1,72 @@
+dimension,value,series,models,series_model_pairs,rows,expected_rows,delta,result
+source_generation_status,GENERATED_P5,90,15,1350,409890,409890,0,PASS
+source_generation_status,REUSED_HDD_EXISTING_ARTIFACT,50,15,750,204300,204300,0,PASS
+metric,HDD,50,15,750,204300,204300,0,PASS
+metric,SSD,50,15,750,225000,225000,0,PASS
+metric,CPU,20,15,300,89910,89910,0,PASS
+metric,IOPS,20,15,300,94980,94980,0,PASS
+metric+status,CPU | GENERATED_P5,20,15,300,89910,89910,0,PASS
+metric+status,HDD | REUSED_HDD_EXISTING_ARTIFACT,50,15,750,204300,204300,0,PASS
+metric+status,IOPS | GENERATED_P5,20,15,300,94980,94980,0,PASS
+metric+status,SSD | GENERATED_P5,50,15,750,225000,225000,0,PASS
+metric+model,CPU | ARIMA_Fixed,20,1,20,5994,,,PASS
+metric+model,CPU | AutoARIMA,20,1,20,5994,,,PASS
+metric+model,CPU | ETS Explicit,20,1,20,5994,,,PASS
+metric+model,CPU | ETS_Current,20,1,20,5994,,,PASS
+metric+model,CPU | FNAR-V2,20,1,20,5994,,,PASS
+metric+model,CPU | FixedGrowth_1_5,20,1,20,5994,,,PASS
+metric+model,CPU | FixedGrowth_3,20,1,20,5994,,,PASS
+metric+model,CPU | FixedGrowth_4,20,1,20,5994,,,PASS
+metric+model,CPU | FixedGrowth_6,20,1,20,5994,,,PASS
+metric+model,CPU | LightGBM,20,1,20,5994,,,PASS
+metric+model,CPU | LinearRegression,20,1,20,5994,,,PASS
+metric+model,CPU | NLIN-DLIN_FIXED,20,1,20,5994,,,PASS
+metric+model,CPU | SMLP-TCN,20,1,20,5994,,,PASS
+metric+model,CPU | Theta,20,1,20,5994,,,PASS
+metric+model,CPU | XGBoost,20,1,20,5994,,,PASS
+metric+model,HDD | ARIMA_Fixed,50,1,50,13620,,,PASS
+metric+model,HDD | AutoARIMA,50,1,50,13620,,,PASS
+metric+model,HDD | ETS Explicit,50,1,50,13620,,,PASS
+metric+model,HDD | ETS_Current,50,1,50,13620,,,PASS
+metric+model,HDD | FNAR-V2,50,1,50,13620,,,PASS
+metric+model,HDD | FixedGrowth_1_5,50,1,50,13620,,,PASS
+metric+model,HDD | FixedGrowth_3,50,1,50,13620,,,PASS
+metric+model,HDD | FixedGrowth_4,50,1,50,13620,,,PASS
+metric+model,HDD | FixedGrowth_6,50,1,50,13620,,,PASS
+metric+model,HDD | LightGBM,50,1,50,13620,,,PASS
+metric+model,HDD | LinearRegression,50,1,50,13620,,,PASS
+metric+model,HDD | NLIN-DLIN_FIXED,50,1,50,13620,,,PASS
+metric+model,HDD | SMLP-TCN,50,1,50,13620,,,PASS
+metric+model,HDD | Theta,50,1,50,13620,,,PASS
+metric+model,HDD | XGBoost,50,1,50,13620,,,PASS
+metric+model,IOPS | ARIMA_Fixed,20,1,20,6332,,,PASS
+metric+model,IOPS | AutoARIMA,20,1,20,6332,,,PASS
+metric+model,IOPS | ETS Explicit,20,1,20,6332,,,PASS
+metric+model,IOPS | ETS_Current,20,1,20,6332,,,PASS
+metric+model,IOPS | FNAR-V2,20,1,20,6332,,,PASS
+metric+model,IOPS | FixedGrowth_1_5,20,1,20,6332,,,PASS
+metric+model,IOPS | FixedGrowth_3,20,1,20,6332,,,PASS
+metric+model,IOPS | FixedGrowth_4,20,1,20,6332,,,PASS
+metric+model,IOPS | FixedGrowth_6,20,1,20,6332,,,PASS
+metric+model,IOPS | LightGBM,20,1,20,6332,,,PASS
+metric+model,IOPS | LinearRegression,20,1,20,6332,,,PASS
+metric+model,IOPS | NLIN-DLIN_FIXED,20,1,20,6332,,,PASS
+metric+model,IOPS | SMLP-TCN,20,1,20,6332,,,PASS
+metric+model,IOPS | Theta,20,1,20,6332,,,PASS
+metric+model,IOPS | XGBoost,20,1,20,6332,,,PASS
+metric+model,SSD | ARIMA_Fixed,50,1,50,15000,,,PASS
+metric+model,SSD | AutoARIMA,50,1,50,15000,,,PASS
+metric+model,SSD | ETS Explicit,50,1,50,15000,,,PASS
+metric+model,SSD | ETS_Current,50,1,50,15000,,,PASS
+metric+model,SSD | FNAR-V2,50,1,50,15000,,,PASS
+metric+model,SSD | FixedGrowth_1_5,50,1,50,15000,,,PASS
+metric+model,SSD | FixedGrowth_3,50,1,50,15000,,,PASS
+metric+model,SSD | FixedGrowth_4,50,1,50,15000,,,PASS
+metric+model,SSD | FixedGrowth_6,50,1,50,15000,,,PASS
+metric+model,SSD | LightGBM,50,1,50,15000,,,PASS
+metric+model,SSD | LinearRegression,50,1,50,15000,,,PASS
+metric+model,SSD | NLIN-DLIN_FIXED,50,1,50,15000,,,PASS
+metric+model,SSD | SMLP-TCN,50,1,50,15000,,,PASS
+metric+model,SSD | Theta,50,1,50,15000,,,PASS
+metric+model,SSD | XGBoost,50,1,50,15000,,,PASS
+TOTAL,ALL,140,15,2100,614190,614190,0,PASS

@@ -1,0 +1,2 @@
+artifact,path,rows,columns,file_sha256,content_sha256,captured_at,note
+model_rankings (pre-P6C),C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V6\data\processed\v6_24_mvp_cohort\model_rankings.parquet,2100,27,8656a884101886e8456bc70bf154f5b3ed238f75d7a95c69c606034a6a09cea4,cbe6f59fe63351498ce58da858cc02a1bf41ec6f216c138ac9eacd440ca30b20,2026-08-23T22:23:49Z,Immutable audit snapshot taken BEFORE the canonical artifact was overwritten

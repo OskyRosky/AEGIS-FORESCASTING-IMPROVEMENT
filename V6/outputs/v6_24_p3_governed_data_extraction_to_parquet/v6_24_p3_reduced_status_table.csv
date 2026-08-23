@@ -1,0 +1,13 @@
+stage,name,current_status,notes
+V6.24-P0,Combination Inventory,CLOSED,
+V6.24-P1,SQL/Tesseract Metadata Read-Only,CLOSED,SSD corrected by P1B.
+V6.24-P1B,SSD Actuals Source Trace,CLOSED,
+V6.24-P2,Controlled Parquet Extraction Plan,CLOSED,140-series cohort planned.
+V6.24-P2A,SSD Selected Cohort Verification,CLOSED,"50 SSD keys verified, 0 replacements."
+V6.24-P3,Governed Data Extraction to Parquet,CLOSED (this stage),90 non-HDD series extracted to 4 raw Parquet files. HDD not extracted.
+V6.24-P4,Candidate Cohort Selection / Normalization,NEXT,Builds cohort_manifest and actuals_normalized. Must dedupe the SSD 2026-04-22 duplicate.
+V6.24-P5,15-Model Backtest Generation,PENDING,"Mandatory for SSD, CPU and IOPS: none has governed backtests."
+V6.24-P6,Forecast Generation,PENDING,Also produces accuracy_metrics and model_rankings.
+V6.24-P7,Product Completeness Gate,PENDING,"Produces validation_summary, navigation_contract and taxonomy_counts AFTER the gate."
+V6.24-P8,Shiny Integration,PENDING,Repoint Shiny to processed/ only.
+V6.24-P9,Visual QA / Demo Readiness,PENDING,

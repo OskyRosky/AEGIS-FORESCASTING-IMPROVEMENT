@@ -1,0 +1,6 @@
+check,expected,observed,result
+prediction_date equals target_date on every row,0 offsets,0 rows where they differ,PASS
+train_end_date strictly less than target_date,0 violations,0 rows where train_end_date >= target_date,PASS
+horizon_steps within 1..30,0 out of range,0 rows out of range,PASS
+horizon_steps equals target_date minus train_end_date,0 mismatches,0 rows where the arithmetic disagrees,PASS
+No duplicate series/model/target/origin rows,0 duplicates,0 duplicates,PASS

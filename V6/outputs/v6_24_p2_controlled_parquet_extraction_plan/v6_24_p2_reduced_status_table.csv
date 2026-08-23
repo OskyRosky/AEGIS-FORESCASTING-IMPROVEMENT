@@ -1,0 +1,12 @@
+stage,name,current_status,notes
+V6.24-P0,Combination Inventory / Artifact Reality Check,CLOSED,596 HDD product-complete measured locally.
+V6.24-P1,SQL/Tesseract Metadata Read-Only,CLOSED,HDD/CPU/IOPS/Memory confirmed. SSD conclusion was wrong and was corrected by P1B.
+V6.24-P1B,SSD Actuals Source Trace / AX4 Reconciliation,CLOSED,"SSD actuals confirmed in LVWE/LVNE, 136 keys over 50, reconciled with AX4."
+V6.24-P2,Controlled Parquet Extraction Plan,CLOSED (this stage),140-series cohort planned; 90 series scheduled for P3. No data extracted.
+V6.24-P3,Governed Data Extraction to Parquet,NEXT,THE EXTRACTION STAGE. Executes the templates produced here.
+V6.24-P4,Candidate Cohort Selection 130-150,PENDING,
+V6.24-P5,15-Model Backtest Generation,PENDING,"Mandatory for SSD, CPU and IOPS: none of them has governed backtests yet."
+V6.24-P6,Forecast Generation,PENDING,
+V6.24-P7,Product Completeness Gate,PENDING,Enforces Viewer = Forecast parity.
+V6.24-P8,Shiny Integration,PENDING,Shiny must read processed cohort artifacts only.
+V6.24-P9,Visual QA / Demo Readiness,PENDING,

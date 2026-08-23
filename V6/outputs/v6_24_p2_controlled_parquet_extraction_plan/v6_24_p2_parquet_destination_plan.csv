@@ -1,0 +1,14 @@
+stage,path,artifact,format,written_by,contents,status
+P3,V6/data/raw/v6_24_mvp_cohort/ssd/,ssd_lvwe_actuals_raw.parquet,parquet,P3,"Raw LVWE rows for the 50 selected forest keys, untransformed",PLANNED
+P3,V6/data/raw/v6_24_mvp_cohort/ssd/,ssd_lvne_actuals_raw.parquet,parquet,P3,"Raw LVNE rows for the same 50 keys, for the second forecast variant",PLANNED
+P3,V6/data/raw/v6_24_mvp_cohort/cpu/,cpu_actuals_raw.parquet,parquet,P3,Raw CPU actuals for the 20 selected scenario-key series,PLANNED
+P3,V6/data/raw/v6_24_mvp_cohort/iops/,iops_actuals_raw.parquet,parquet,P3,Raw IOPS actuals for the 20 selected scenario-key series,PLANNED
+P3,V6/data/raw/v6_24_mvp_cohort/manifests/,extraction_manifest.csv,csv,P3,"Per-query row counts, filters, timestamps and checksums",PLANNED
+P4,V6/data/processed/v6_24_mvp_cohort/,cohort_manifest.parquet,parquet,P4,"The frozen 140-series cohort, all four metrics unified",PLANNED
+P4,V6/data/processed/v6_24_mvp_cohort/,actuals_normalized.parquet,parquet,P4,"Long format: metric, route, granularity, key, date, actual_value",PLANNED
+P5,V6/data/processed/v6_24_mvp_cohort/,model_backtests_15_models.parquet,parquet,P5,15 governed model backtests for all 140 series,PLANNED
+P6,V6/data/processed/v6_24_mvp_cohort/,forecast_outputs.parquet,parquet,P6,Forward forecast for all 140 series,PLANNED
+P6,V6/data/processed/v6_24_mvp_cohort/,accuracy_metrics.parquet,parquet,P6,Accuracy per series per model per horizon,PLANNED
+P4,V6/data/processed/v6_24_mvp_cohort/,data_dictionary.csv,csv,P4,Column contract for every processed artifact,PLANNED
+P7,V6/data/processed/v6_24_mvp_cohort/,validation_summary.csv,csv,P7,Completeness gate results enforcing Viewer = Forecast parity,PLANNED
+P2,V6/outputs/v6_24_p2_controlled_parquet_extraction_plan/,plan CSV/MD/SQL,csv/md/sql,P2,"This stage. Plan artifacts only, zero data files",CREATED

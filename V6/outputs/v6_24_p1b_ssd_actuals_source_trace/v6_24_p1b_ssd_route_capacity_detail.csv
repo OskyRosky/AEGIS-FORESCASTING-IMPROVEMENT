@@ -1,0 +1,5 @@
+variant,route_path,granularity,total_keys,keys_over_50,min_observations,max_observations,min_date,max_date,ready_for_extraction
+LVWE,SSD-Phoenix / Low Vol. w Efficiency,Forest,137,136,24,131,2026-04-07,2026-08-22,TRUE
+LVNE,SSD-Phoenix / Low Vol. no Efficiency,Forest,137,136,25,132,2026-04-03,2026-08-22,TRUE
+RAW_GREENLAND,SSD Daily Raw / Region x Forest,Forest,142,139,8,340,2020-07-10,2021-06-15,FALSE
+RAW_DEMAND_HISTORY,SSD Demand History / Forest,Forest,143,142,16,596,2021-06-10,2021-11-08,FALSE

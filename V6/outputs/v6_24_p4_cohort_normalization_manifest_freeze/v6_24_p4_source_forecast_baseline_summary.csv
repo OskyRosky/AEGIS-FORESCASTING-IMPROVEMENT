@@ -1,0 +1,6 @@
+forecast_variant,metric,series,rows,min_date,max_date,source_forecast_column,source_object,is_15_model_output,notes
+LVNE,SSD,50,6550,2026-04-09,2026-08-22,Mean_Forecast,forecast_substrateBE_ssd_phx_lvne_metrics,FALSE,Source-provided external baseline. NOT a 15-model backtest and NOT P6 forecast_outputs.
+LVWE,SSD,50,6500,2026-04-13,2026-08-22,Mean_Forecast,forecast_substrateBE_ssd_phx_lvwe_metrics,FALSE,Source-provided external baseline. NOT a 15-model backtest and NOT P6 forecast_outputs.
+NOT_APPLICABLE,CPU,0,0,NOT_APPLICABLE,NOT_APPLICABLE,NOT_PRESENT_IN_SOURCE,NOT_APPLICABLE,FALSE,No source-provided forecast baseline exists for this metric.
+NOT_APPLICABLE,IOPS,0,0,NOT_APPLICABLE,NOT_APPLICABLE,NOT_PRESENT_IN_SOURCE,NOT_APPLICABLE,FALSE,No source-provided forecast baseline exists for this metric.
+NOT_APPLICABLE,HDD,0,0,NOT_APPLICABLE,NOT_APPLICABLE,NOT_PRESENT_IN_SOURCE,NOT_APPLICABLE,FALSE,HDD forecast lives in local artifacts and is not re-normalized in P4.

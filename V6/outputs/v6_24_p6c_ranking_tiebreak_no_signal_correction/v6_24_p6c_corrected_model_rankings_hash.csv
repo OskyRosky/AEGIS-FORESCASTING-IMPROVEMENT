@@ -1,0 +1,2 @@
+artifact,path,rows,columns,file_sha256,content_sha256,captured_at,note
+model_rankings (post-P6C),C:\Users\oscarau\OneDrive - Microsoft\Desktop\Forecast Generation Codebase Improvement\AEGIS-FORESCASTING-IMPROVEMENT\V6\data\processed\v6_24_mvp_cohort\model_rankings.parquet,2100,31,a35d530d76bf540c668fdf1d081bb4fd4b6205f3d991495cde3c9df2fa9b01c0,f92ced6ded8b91284ed1944c399660086b436ed8811b5aba90e5514716af304d,2026-08-23T22:23:49Z,Canonical artifact rewritten under P6C_RANKING_POLICY_V2

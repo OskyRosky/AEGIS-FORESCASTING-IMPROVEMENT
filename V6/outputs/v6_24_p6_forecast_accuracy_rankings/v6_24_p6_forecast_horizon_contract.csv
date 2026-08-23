@@ -1,0 +1,9 @@
+item_id,item,candidate_semantics,value,evidence_source,measured_or_asserted,compatible_with_governed_models,verdict
+H01,Prompt default assumption,48 forward steps x 30 days each,1440 days,V6.24-P6 prompt,ASSERTED,NO,"REJECTED - no governed model can emit 1,440 steps"
+H02,Existing HDD forward artifact,"daily steps, one row per calendar day",732 daily steps,forecast_forward_outputs_v6_17_full.parquet (measured),MEASURED,NO,REJECTED - produced by 30 model names of which only 0 are governed
+H03,Proven capability of the 15 governed models,single-shot vector forecast,exactly 30 daily steps,v6_24_p6_forecast_horizon_probe.csv (15/15 models fitted and measured),MEASURED,YES,ONLY VERIFIED OPTION - but 30 days may not meet the product requirement
+H04,Registry constant HORIZON_DAYS,module-level constant,30,model_lab/run_v3_2c_subset_dry_run.py imported by the 15-model registry,MEASURED,YES,Hardcoded; no call site accepts a horizon argument
+H05,Neural output dimension,"build_xy(values, LAGS, HORIZON_DAYS) fixes the network output width",30,build_v6_16_pilot_backtest.py line 251,MEASURED,YES,Changing the horizon requires retraining a different architecture
+H06,Horizon-parameterised challenger variant,"_forecast_*(values, horizon)",exists but ungoverned,model_lab/run_backtest_60d.py,MEASURED,PARTIAL,Covers only the 5 challengers; the 7 baselines and 3 neural models remain fixed at 30. Not the governed import path
+H07,Model names in the HDD forward artifact vs the governed 15,set overlap,0 of 15 governed names present,measured set intersection,MEASURED,NO,The legacy forward artifact is DISJOINT from the governed model set and cannot be reused as governed forecast_outputs
+H08,P6 forecast_outputs decision,n/a,NOT PRODUCED,this contract,DECIDED,n/a,BLOCKED - three mutually incompatible semantics; owner must choose

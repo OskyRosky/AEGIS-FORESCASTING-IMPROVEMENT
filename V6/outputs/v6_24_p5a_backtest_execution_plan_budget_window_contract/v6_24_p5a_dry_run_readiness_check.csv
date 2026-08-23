@@ -1,0 +1,9 @@
+check,expected,observed,result
+Processed actuals available,actuals_normalized.parquet exists,exists=True,PASS
+Cohort manifest available,cohort_manifest.parquet exists,exists=True,PASS
+Model registry imports,15 models registered,15 registered: 7 baseline + 5 challenger + 3 neural,PASS
+Dependencies importable,0 missing,0 missing,PASS
+Every P5 series has at least one valid origin,0 series with zero origins,0 of 90 series with zero valid origins,PASS
+Work directory scaffold,5 subfolders,5 subfolders created,PASS
+Newest observation preserved for every series,90 of 90,90 of 90 under the approved D2 Option B policy (was 68 under strict contiguity),PASS
+Owner-approved window policy recorded,policy artifact exists with all 8 rules,"v6_24_p5a_owner_approved_p5_window_policy.csv, 8 rules, id V6_24_P5_WINDOW_POLICY_D2_OPTION_B",PASS

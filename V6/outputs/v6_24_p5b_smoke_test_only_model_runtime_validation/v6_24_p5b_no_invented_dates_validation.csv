@@ -1,0 +1,4 @@
+series_id,metric,observed_dates_in_actuals,distinct_target_dates_used,target_dates_not_observed,min_target,max_target,max_observed,newest_observation_reached,result,notes
+CPU__Consumed__Region__CHN-Gallatin,CPU,556,297,0,2022-04-26,2023-07-20,2023-07-20,TRUE,PASS,"Every target date is a real observed date. No filling, resampling or interpolation."
+IOPS__Consumed__Region__APC-Multitenant,IOPS,1103,323,0,2020-08-27,2023-07-20,2023-07-20,TRUE,PASS,"Every target date is a real observed date. No filling, resampling or interpolation."
+SSD__Phoenix__Forest__NAMPRD08,SSD,130,63,0,2026-06-21,2026-08-22,2026-08-22,TRUE,PASS,"Every target date is a real observed date. No filling, resampling or interpolation."

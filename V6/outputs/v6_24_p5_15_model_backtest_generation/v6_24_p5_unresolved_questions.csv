@@ -1,0 +1,4 @@
+question_id,topic,question,impact,recommendation,blocks_p6
+P5-UQ01,HDD burn-in provenance,Should P6 reconstruct train_start_date and burn_in_count for the reused HDD rows?,LOW. Accuracy does not need them.,Leave as NOT_PRESENT_IN_SOURCE. Reconstructing would mean inferring values the artifact never recorded.,NO
+P5-UQ02,Cross-metric accuracy weighting,Should accuracy be weighted by row count when comparing metrics with different backtest densities?,"MEDIUM. HDD, SSD, CPU and IOPS have different rows per series.","P6 should report per-series accuracy first and aggregate second, so density does not silently drive the ranking.",NO
+P5-UQ03,SSD windowed actuals,"SSD actuals are rolling-window means, so models may score better than on raw daily data.",MEDIUM. Carried from P4.,State the caveat wherever SSD accuracy is reported. The caveat already travels on every SSD row.,NO

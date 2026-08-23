@@ -1,0 +1,100 @@
+metric,object_name,column_name,inferred_role,data_type,nullable,confidence,notes
+HDD,forecast_substrateBE_hdd_region,DateTime,date,date,UNKNOWN,HIGH,Observation date. Confirmed by MIN/MAX aggregates.
+HDD,forecast_substrateBE_hdd_region,Key,key,varchar,UNKNOWN,HIGH,Series identity. Region code at Region granularity.
+HDD,forecast_substrateBE_hdd_region,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+HDD,forecast_substrateBE_hdd_region,ModelVersion,actual_forecast_marker,varchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+HDD,forecast_substrateBE_hdd_region,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+HDD,forecast_substrateBE_hdd_region,Fleet,route_axis,varchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+HDD,forecast_substrateBE_hdd_region,Workload,route_axis,varchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+HDD,forecast_substrateBE_hdd_region,Resource,route_axis,varchar,UNKNOWN,HIGH,"Metric label, e.g. 'HDD - EDB Enterprise', 'CPU', 'IOPS'."
+HDD,forecast_substrateBE_hdd_region,Unit,unit,varchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+HDD,forecast_substrateBE_hdd_region,Type,route_axis,varchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+HDD,forecast_substrateBE_hdd_region,Scenario,route_axis,varchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+HDD,forecast_substrateBE_hdd_region,ValueType,unclassified,varchar,UNKNOWN,LOW,Role not established in P1.
+CPU,forecast_substrateBE_cpu_actual_region,DateTime,date,date,UNKNOWN,HIGH,Observation date. Confirmed by MIN/MAX aggregates.
+CPU,forecast_substrateBE_cpu_actual_region,Key,key,varchar,UNKNOWN,HIGH,Series identity. Region code at Region granularity.
+CPU,forecast_substrateBE_cpu_actual_region,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+CPU,forecast_substrateBE_cpu_actual_region,ValueRef,value_reference,float,UNKNOWN,MEDIUM,"Secondary value, semantics not established in P1."
+CPU,forecast_substrateBE_cpu_actual_region,ModelVersion,actual_forecast_marker,varchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+CPU,forecast_substrateBE_cpu_actual_region,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+CPU,forecast_substrateBE_cpu_actual_region,Fleet,route_axis,varchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+CPU,forecast_substrateBE_cpu_actual_region,Workload,route_axis,varchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+CPU,forecast_substrateBE_cpu_actual_region,Resource,route_axis,varchar,UNKNOWN,HIGH,"Metric label, e.g. 'HDD - EDB Enterprise', 'CPU', 'IOPS'."
+CPU,forecast_substrateBE_cpu_actual_region,Unit,unit,varchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+CPU,forecast_substrateBE_cpu_actual_region,Type,route_axis,varchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+CPU,forecast_substrateBE_cpu_actual_region,Scenario,route_axis,varchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+CPU,forecast_substrateBE_cpu_actual_region,ValueType,unclassified,varchar,UNKNOWN,LOW,Role not established in P1.
+CPU,forecast_substrateBE_cpu_region,Fleet,route_axis,varchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+CPU,forecast_substrateBE_cpu_region,Workload,route_axis,varchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+CPU,forecast_substrateBE_cpu_region,Resource,route_axis,varchar,UNKNOWN,HIGH,"Metric label, e.g. 'HDD - EDB Enterprise', 'CPU', 'IOPS'."
+CPU,forecast_substrateBE_cpu_region,Unit,unit,varchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+CPU,forecast_substrateBE_cpu_region,Type,route_axis,varchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+CPU,forecast_substrateBE_cpu_region,Scenario,route_axis,varchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+CPU,forecast_substrateBE_cpu_region,Datetime,date,date,UNKNOWN,HIGH,Observation date (lower-case variant).
+CPU,forecast_substrateBE_cpu_region,Key,key,varchar,UNKNOWN,HIGH,Series identity. Region code at Region granularity.
+CPU,forecast_substrateBE_cpu_region,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+CPU,forecast_substrateBE_cpu_region,ValueType,unclassified,varchar,UNKNOWN,LOW,Role not established in P1.
+CPU,forecast_substrateBE_cpu_region,ModelVersion,actual_forecast_marker,varchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+CPU,forecast_substrateBE_cpu_region,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+IOPS,forecast_substrateBE_iops_actual_region,DateTime,date,date,UNKNOWN,HIGH,Observation date. Confirmed by MIN/MAX aggregates.
+IOPS,forecast_substrateBE_iops_actual_region,Key,key,varchar,UNKNOWN,HIGH,Series identity. Region code at Region granularity.
+IOPS,forecast_substrateBE_iops_actual_region,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+IOPS,forecast_substrateBE_iops_actual_region,ValueRef,value_reference,float,UNKNOWN,MEDIUM,"Secondary value, semantics not established in P1."
+IOPS,forecast_substrateBE_iops_actual_region,ModelVersion,actual_forecast_marker,varchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+IOPS,forecast_substrateBE_iops_actual_region,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+IOPS,forecast_substrateBE_iops_actual_region,Fleet,route_axis,varchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+IOPS,forecast_substrateBE_iops_actual_region,Workload,route_axis,varchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+IOPS,forecast_substrateBE_iops_actual_region,Resource,route_axis,varchar,UNKNOWN,HIGH,"Metric label, e.g. 'HDD - EDB Enterprise', 'CPU', 'IOPS'."
+IOPS,forecast_substrateBE_iops_actual_region,Unit,unit,varchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+IOPS,forecast_substrateBE_iops_actual_region,Type,route_axis,varchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+IOPS,forecast_substrateBE_iops_actual_region,Scenario,route_axis,varchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+IOPS,forecast_substrateBE_iops_actual_region,ValueType,unclassified,varchar,UNKNOWN,LOW,Role not established in P1.
+IOPS,forecast_substrateBE_iops_region,Fleet,route_axis,varchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+IOPS,forecast_substrateBE_iops_region,Workload,route_axis,varchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+IOPS,forecast_substrateBE_iops_region,Resource,route_axis,varchar,UNKNOWN,HIGH,"Metric label, e.g. 'HDD - EDB Enterprise', 'CPU', 'IOPS'."
+IOPS,forecast_substrateBE_iops_region,Unit,unit,varchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+IOPS,forecast_substrateBE_iops_region,Type,route_axis,varchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+IOPS,forecast_substrateBE_iops_region,Scenario,route_axis,varchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+IOPS,forecast_substrateBE_iops_region,Datetime,date,date,UNKNOWN,HIGH,Observation date (lower-case variant).
+IOPS,forecast_substrateBE_iops_region,Key,key,varchar,UNKNOWN,HIGH,Series identity. Region code at Region granularity.
+IOPS,forecast_substrateBE_iops_region,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+IOPS,forecast_substrateBE_iops_region,ValueType,unclassified,varchar,UNKNOWN,LOW,Role not established in P1.
+IOPS,forecast_substrateBE_iops_region,ModelVersion,actual_forecast_marker,varchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+IOPS,forecast_substrateBE_iops_region,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+SSD,forecast_substrateBE_ssd_region,Fleet,route_axis,nvarchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+SSD,forecast_substrateBE_ssd_region,Workload,route_axis,nvarchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+SSD,forecast_substrateBE_ssd_region,Resource,route_axis,nvarchar,UNKNOWN,HIGH,"Metric label, e.g. 'HDD - EDB Enterprise', 'CPU', 'IOPS'."
+SSD,forecast_substrateBE_ssd_region,Unit,unit,nvarchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+SSD,forecast_substrateBE_ssd_region,Type,route_axis,nvarchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+SSD,forecast_substrateBE_ssd_region,Scenario,route_axis,nvarchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+SSD,forecast_substrateBE_ssd_region,DateTime,date,date,UNKNOWN,HIGH,Observation date. Confirmed by MIN/MAX aggregates.
+SSD,forecast_substrateBE_ssd_region,Key,key,nvarchar,UNKNOWN,HIGH,Series identity. Region code at Region granularity.
+SSD,forecast_substrateBE_ssd_region,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+SSD,forecast_substrateBE_ssd_region,ValueType,unclassified,nvarchar,UNKNOWN,LOW,Role not established in P1.
+SSD,forecast_substrateBE_ssd_region,ModelVersion,actual_forecast_marker,nvarchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+SSD,forecast_substrateBE_ssd_region,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Workload,route_axis,nvarchar,UNKNOWN,HIGH,Constant 'Backend' in all samples.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Fleet,route_axis,nvarchar,UNKNOWN,HIGH,Constant 'SubstrateBE' in all samples.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Unit,unit,nvarchar,UNKNOWN,HIGH,TB / GCYCLES / IOPS.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Type,route_axis,nvarchar,UNKNOWN,MEDIUM,Organic / Organic_adjust / Organic (Without SubstrateBlobShard).
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Scenario,route_axis,nvarchar,UNKNOWN,HIGH,Route axis: HDD Enterprise/Consumer/Basilisk; CPU+IOPS Consumed/Failover.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,DateTime,date,datetime2,UNKNOWN,HIGH,Observation date. Confirmed by MIN/MAX aggregates.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Forest,unclassified,nvarchar,UNKNOWN,LOW,Role not established in P1.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,Value,value,float,UNKNOWN,HIGH,Numeric measure.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,ValueType,unclassified,nvarchar,UNKNOWN,LOW,Role not established in P1.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,ModelVersion,actual_forecast_marker,nvarchar,UNKNOWN,HIGH,Decisive column: 'actual'/'Actual' marks observed history.
+SSD,forecast_substrateBE_SSD_Phoenix_Organic,ForecastVersion,forecast_version,date,UNKNOWN,HIGH,Vintage of the forecast run.
+HDD,forecast_substrateBE_hdd,forest_name,key,char,UNKNOWN,HIGH,Forest identity.
+HDD,forecast_substrateBE_hdd,target_date,date,datetime,UNKNOWN,HIGH,Observation date.
+HDD,forecast_substrateBE_hdd,forecast_mean,value,float,UNKNOWN,HIGH,Measure; carries actuals when type='actual'.
+HDD,forecast_substrateBE_hdd,forecast_p90,value_band,float,UNKNOWN,MEDIUM,Upper band.
+HDD,forecast_substrateBE_hdd,forecast_p95,value_band,float,UNKNOWN,MEDIUM,Upper band.
+HDD,forecast_substrateBE_hdd,type,actual_forecast_marker,nchar,UNKNOWN,HIGH,TRIM(type)='actual' marks observed history.
+HDD,forecast_substrateBE_hdd,data_type,route_axis,varchar,UNKNOWN,HIGH,"enterprise/consumer/basilisk. Case-inconsistent, needs TRIM+LOWER."
+HDD,forecast_substrateBE_hdd,execution_time,run_id,datetime,UNKNOWN,HIGH,Extraction run discriminator used by V6 R6.
+HDD,forecast_substrateBE_hdd,write_time,audit,datetime,UNKNOWN,LOW,Audit timestamp.
+MEMORY,vw_SubstrateBE_MemoryRawData,DataDate,date,UNKNOWN,UNKNOWN,MEDIUM,Telemetry date.
+MEMORY,vw_SubstrateBE_MemoryRawData,Forest,key,UNKNOWN,UNKNOWN,MEDIUM,"Candidate key, unverified."
+MEMORY,vw_SubstrateBE_MemoryRawData,ConsumedRate,value,UNKNOWN,UNKNOWN,LOW,"Rate, not a governed demand measure."
+MEMORY,vw_SubstrateBE_MemoryRawData,InstalledMemoryGBPerServer,capacity,UNKNOWN,UNKNOWN,LOW,"Capacity, not demand."
+MEMORY,vw_SubstrateBE_MemoryRawData,Dagname,route_axis,UNKNOWN,UNKNOWN,LOW,"DAG identity, no route mapping established."

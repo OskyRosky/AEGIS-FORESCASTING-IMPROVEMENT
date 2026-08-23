@@ -1,0 +1,34 @@
+check_id,check_name,expected,observed,result
+V1,Exactly 90 non-HDD series extracted,90,90 = SSD 50 + CPU 20 + IOPS 20,PASS
+V2,Exactly 50 SSD observed series extracted,50,50,PASS
+V3,SSD LVWE and LVNE not double-counted as 100 observed series,50 observed series across 2 forecast variants,"LVWE 50 keys, LVNE 50 keys, union 50; consistency check found 0 differing actual rows",PASS
+V4,Exactly 20 CPU series extracted,20,20,PASS
+V5,Exactly 20 IOPS series extracted,20,20,PASS
+V6,HDD not extracted,"no HDD parquet, no HDD rows","0 HDD files; metrics present in raw = ['CPU', 'IOPS', 'SSD']",PASS
+V7,All raw Parquet files exist,4 files,4 of 4 exist,PASS
+V8,No files written under V6/data/processed by P3,no v6_24_mvp_cohort folder and no file touched during P3,cohort folder exists=False; 0 of 24 processed files touched during P3 (the rest are legacy artifacts from June 2026),PASS
+V9,LVWE raw Parquet exists and is non-empty,"exists, rows > 0","exists=True, rows=6,550, bytes=376,692",PASS
+V10,LVNE raw Parquet exists and is non-empty,"exists, rows > 0","exists=True, rows=6,600, bytes=382,009",PASS
+V11,CPU raw Parquet exists and is non-empty,"exists, rows > 0","exists=True, rows=11,228, bytes=234,785",PASS
+V12,IOPS raw Parquet exists and is non-empty,"exists, rows > 0","exists=True, rows=20,501, bytes=437,922",PASS
+V13,Every extracted SSD key has more than 50 parseable actual observations,> 50,min=131 max=131; 50 of 50 keys pass,PASS
+V14,SSD non-parseable Mean_Actual count is 0,0,0 rows where source text is present but the cast is null,PASS
+V15,LVWE and LVNE Mean_Actual consistency passes for selected keys,0 differing rows,"6650 of 6650 matched rows identical, 0 differing",PASS
+V16,CPU selected series all present,20 of 20,20 of 20 present; missing=[],PASS
+V17,IOPS selected series all present,20 of 20,20 of 20 present; missing=[],PASS
+V18,No unexpected keys present in any raw Parquet,0 across all four files,0 unexpected keys total,PASS
+V19,No selected keys missing from any raw Parquet,0 across all four files,0 missing keys total,PASS
+V20,Full taxonomy report exists with all conditional axes populated,"140 rows, zero blank axis cells","140 rows, 0 blank axis cells",PASS
+V21,Full 140-cohort context report marks HDD as ALREADY_LOCAL_NOT_EXTRACTED,"140 rows, 50 HDD all marked","140 rows, 50 HDD rows, 50 marked",PASS
+V22,CPU and IOPS carry the STALE_ACTUALS_SOURCE caveat,all 40 rows,40 of 40 rows,PASS
+V23,Shiny files untouched,0 entries,0 entries,PASS
+V24,V1 through V5 untouched,0 entries,0 entries,PASS
+V25,No models run,no model artifacts produced,0 model artifacts,PASS
+V26,No forecasts generated,no forecast artifacts produced,0 artifacts,PASS
+V27,No accuracy or rankings calculated,"source accuracy columns copied verbatim, none computed",MAPE/SMAPE/Accuracy in the SSD files are precomputed SOURCE columns extracted as-is; no ranking artifact exists,PASS
+V28,No navigation_contract or taxonomy_counts processed artifacts generated in P3,none under processed/,0 banned processed artifacts,PASS
+V29,Query ledger exists and records every extraction query,4 queries,"4 rows, all ['OK']",PASS
+V30,Closure summary states P3 extraction completed and P4 is next,both statements present,"present=True, mentions P4=True",PASS
+V31,Row counts in Parquet match the SQL result exactly,no row lost on write,LVWE: sql=6550 parquet=6550; LVNE: sql=6600 parquet=6600; CPU: sql=11228 parquet=11228; IOPS: sql=20501 parquet=20501,PASS
+V32,Every raw file carries a sha256 checksum,4 checksums,4 of 4,PASS
+V33,Data quality anomalies are reported rather than silently cleaned,the SSD duplicate and the CPU/IOPS key-diversity finding are both logged,5 findings logged; raw files left unmodified,PASS

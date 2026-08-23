@@ -1,0 +1,5 @@
+check,expected,observed,result
+Every backtest row joins to actuals_normalized,0 orphan rows,"0 rows with no matching (series_id, target_date)",PASS
+actual_value matches actuals_normalized exactly,0 mismatches,0 mismatched rows; max absolute delta 0.00e+00,PASS
+No NaN predicted_value,0 NaN,0 NaN predictions,PASS
+predicted_value is finite on every row,all finite,0 non-finite,PASS

@@ -1,0 +1,8 @@
+deliverable,path,expected,observed,status
+accuracy_metrics,V6/data/processed/v6_24_mvp_cohort/accuracy_metrics.parquet,"2,100 series-model rows","2,100 rows",DELIVERED
+model_rankings,V6/data/processed/v6_24_mvp_cohort/model_rankings.parquet,"2,100 rows, 140 champions","2,100 rows, 140 champions",DELIVERED
+forecast_outputs,V6/data/processed/v6_24_mvp_cohort/forecast_outputs.parquet,140 series x 15 models x horizon,NOT PRODUCED,BLOCKED
+forecast horizon contract,V6/outputs/v6_24_p6_forecast_accuracy_rankings/v6_24_p6_forecast_horizon_contract.csv,conflict documented with evidence,"8 items, 3 semantics compared",DELIVERED
+horizon capability probe,V6/outputs/v6_24_p6_forecast_accuracy_rankings/v6_24_p6_forecast_horizon_probe.csv,15 models measured,"15/15 measured, all 30 steps",DELIVERED
+derived backtest readiness,V6/outputs/v6_24_p6_forecast_accuracy_rankings/v6_24_p6_derived_backtest_readiness.csv,"140 series, stale flag overridden","140 ready, 90 corrected",DELIVERED
+validation,V6/outputs/v6_24_p6_forecast_accuracy_rankings/v6_24_p6_validation.csv,34 checks,32 PASS / 4 BLOCKED / 0 FAIL,DELIVERED

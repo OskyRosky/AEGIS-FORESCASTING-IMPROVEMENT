@@ -1,0 +1,39 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P6B PASS confirmed,all PASS,40/40 PASS,PASS,NO
+V2,accuracy_metrics exists and is unchanged after P6C,sha256 identical,verified byte-identical (12 artifacts fingerprinted),PASS,NO
+V3,forecast_outputs exists and is unchanged after P6C,sha256 identical,verified byte-identical (12 artifacts fingerprinted),PASS,NO
+V4,model_backtests_15_models exists and is unchanged after P6C,sha256 identical,verified byte-identical (12 artifacts fingerprinted),PASS,NO
+V5,actuals_normalized exists and is unchanged after P6C,sha256 identical,verified byte-identical (12 artifacts fingerprinted),PASS,NO
+V6,cohort_manifest exists and is unchanged after P6C,sha256 identical,verified byte-identical (12 artifacts fingerprinted),PASS,NO
+V7,Original model_rankings snapshot exists,present,snapshot parquet + csv + sha256 captured before the overwrite,PASS,NO
+V8,Corrected model_rankings.parquet exists,present,"present, 80 KB",PASS,NO
+V9,Corrected model_rankings.csv exists,present,present,PASS,NO
+V10,"Corrected model_rankings has exactly 2,100 rows",2100,2100,PASS,NO
+V11,Exactly 140 series,140,140,PASS,NO
+V12,Exactly 15 governed models,15,15,PASS,NO
+V13,Every series has all 15 models,15 each,2100 pairs; per-series model count 15-15,PASS,NO
+V14,Exactly one technical champion per series,140,"140 champions, one per series: True",PASS,NO
+V15,series_signal_quality exists,present,"present in processed, 140 rows",PASS,NO
+V16,No-signal series derived from actuals_normalized,derived,"derived with tolerance 1e-12; counts {'SIGNAL_PRESENT': 121, 'NO_SIGNAL_ALL_ZERO_ACTUALS': 15, 'TRAILING_ZERO_LATEST_ACTUAL': 4}",PASS,NO
+V17,All no-signal series have sum_abs_actual == 0,all,max sum_abs_actual among the 15 no-signal series = 0,PASS,NO
+V18,No signal-present series has sum_abs_actual == 0,none,min sum_abs_actual among signal-bearing series = 0.00343857,PASS,NO
+V19,No-signal series use MAE as primary_rank_metric,mae,['mae'],PASS,NO
+V20,Signal-bearing series use WAPE when computable,wape,['wape'] across 124 series with computable wape,PASS,NO
+V21,No-signal champions have champion_validity = NOT_MEANINGFUL_NO_SIGNAL,NOT_MEANINGFUL_NO_SIGNAL,['NOT_MEANINGFUL_NO_SIGNAL'],PASS,NO
+V22,Signal-bearing champions have champion_validity = MEANINGFUL_ACCURACY_RANKING,MEANINGFUL_ACCURACY_RANKING,['MEANINGFUL_ACCURACY_RANKING'],PASS,NO
+V23,No-signal champions selected from minimum-MAE candidates,all 15,all 15 verified against min-MAE candidates,PASS,NO
+V24,ETS Explicit wins no-signal ties when tied for minimum MAE,ETS Explicit,{'ETS Explicit': 15},PASS,NO
+V25,FNAR-V2 does not win no-signal series unless uniquely minimum MAE,0 wins,0 no-signal wins (was 15 under P6),PASS,NO
+V26,All model names are governed,15 exactly,set equality: True,PASS,NO
+V27,No prohibited model appears,none,none,PASS,NO
+V28,ranking_policy_version = P6C_RANKING_POLICY_V2 on every row,P6C_RANKING_POLICY_V2,['P6C_RANKING_POLICY_V2'],PASS,NO
+V29,ranking_delta exists and explains all champion changes,16 changes explained,16 delta rows covering 16 changed champions,PASS,NO
+V30,The 15 vs 16 ambiguity is resolved from artifacts,explained,15 no-signal series (full history) vs 16 wape-NC series (backtest window); the gap is exactly 1 series: SSD__Phoenix__Forest__GBRP267,PASS,NO
+V31,No navigation_contract created,absent,absent,PASS,NO
+V32,No taxonomy_counts created,absent,absent,PASS,NO
+V33,Shiny files untouched,no diff,clean,PASS,NO
+V34,V1 through V5 untouched,no diff,clean,PASS,NO
+V35,raw Parquet untouched,no diff,clean,PASS,NO
+V36,Closure summary states P7 readiness,stated,closure states READY_FOR_P7_WITH_CAVEATS,PASS,NO
+V37,No unintended champion changes outside the wape-NC population,0,0 changed series outside the wape-NC population,PASS,YES
+V38,Required output schema complete,30 required columns,all present: True,PASS,NO

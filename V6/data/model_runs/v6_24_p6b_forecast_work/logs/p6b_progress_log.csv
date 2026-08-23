@@ -1,0 +1,6 @@
+timestamp,percent_complete,elapsed_minutes,estimated_remaining_minutes,completed_model_series,total_model_series,current_metric,failures_so_far
+2026-08-23T22:09:03+00:00,0,0.01,0.0,0,2100,START,0
+2026-08-23T22:09:14+00:00,25,0.2,0.59,525,2100,HDD,0
+2026-08-23T22:09:30+00:00,50,0.46,0.46,1050,2100,SSD,0
+2026-08-23T22:09:43+00:00,75,0.67,0.22,1575,2100,CPU,0
+2026-08-23T22:10:05+00:00,100,1.04,0.0,2100,2100,IOPS,0

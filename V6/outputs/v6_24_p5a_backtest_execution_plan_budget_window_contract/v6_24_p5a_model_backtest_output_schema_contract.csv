@@ -1,0 +1,26 @@
+column_name,data_type,required,source,definition,invariant,notes
+cohort_id,string,TRUE,cohort_manifest,Frozen cohort identifier.,Must exist in cohort_manifest.,
+series_id,string,TRUE,cohort_manifest,Series identity and join key.,Must exist in cohort_manifest; 90 distinct values in P5 output.,
+metric,string,TRUE,cohort_manifest,SSD | CPU | IOPS.,"HDD must NOT appear: it is reused, not regenerated.",
+db_type,string,TRUE,cohort_manifest,DB branch axis.,Explicit placeholder where the source has none.,
+scenario,string,TRUE,cohort_manifest,Consumed | Failover | NOT_APPLICABLE.,,
+segment,string,TRUE,cohort_manifest,NOT_APPLICABLE for all P5 metrics.,,
+granularity,string,TRUE,cohort_manifest,Forest | Region.,,
+key,string,TRUE,cohort_manifest,Series entity.,,
+route_path,string,TRUE,cohort_manifest,Taxonomy route.,,
+model_name,string,TRUE,model registry,Governed model name.,Exactly 15 distinct values; must match the governed catalog.,Write 'ETS Explicit' with a space to stay consistent with the HDD artifact.
+model_family,string,TRUE,model registry,Baseline | Challenger | Neural.,,
+target_date,date,TRUE,computed,The date being predicted.,Must exist in actuals_normalized for this series_id.,
+prediction_date,date,TRUE,computed,The date the prediction refers to.,MUST EQUAL target_date.,Guards against a visual offset between actual and estimate.
+train_start_date,date,TRUE,computed,First date in the training window.,Equals the series min date. Burn-in is left-side only.,
+train_end_date,date,TRUE,computed,Origin date. Last date used for training.,MUST BE STRICTLY LESS THAN target_date.,Guards against leakage of future actuals.
+horizon_steps,int,TRUE,computed,Days ahead: target_date - train_end_date.,Between 1 and 30.,
+actual_value,double,TRUE,actuals_normalized,Observed value at target_date.,"MUST EQUAL actuals_normalized for (series_id, target_date).","Joined, never recomputed."
+predicted_value,double,TRUE,model,Model estimate for target_date.,"Must be finite. NaN rows are rejected, not written.",
+backtest_type,string,TRUE,constant,Always 'backtest'.,Matches the HDD artifact's forecast_type.,
+burn_in_count,int,TRUE,window contract,Oldest observations reserved as warm-up.,Taken from the LEFT of the series only.,
+source_actuals_artifact,string,TRUE,constant,processed/v6_24_mvp_cohort/actuals_normalized.parquet,,
+model_run_id,string,TRUE,runtime,Identifier for the P5 execution.,Stable within one run.,
+model_status,string,TRUE,runtime,OK | FAILED.,Only OK rows may be promoted to processed/.,
+runtime_seconds,double,TRUE,runtime,Fit plus predict time for the unit.,,
+caveat,string,TRUE,cohort_manifest,Carried from the manifest.,STALE_ACTUALS_SOURCE must survive onto CPU and IOPS rows.,

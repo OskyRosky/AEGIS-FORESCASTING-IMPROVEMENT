@@ -1,0 +1,13 @@
+check_id,dimension,check,expected,observed,result,note
+DQ01,completeness,accuracy_metrics covers 140 series,140,140,PASS,
+DQ02,completeness,every series has all 15 models,15 for all,min=15 max=15,PASS,
+DQ03,completeness,accuracy_metrics row count,2100,2100,PASS,
+DQ04,validity,mae is finite and non-negative everywhere,all rows,2100 of 2100,PASS,
+DQ05,validity,rmse >= mae for every series-model,always true,2100 of 2100,PASS,Mathematical identity; a violation would indicate a computation bug
+DQ06,validity,wape computable for every series-model,2100,1860,WARN,Not computable only where sum(|actual|)=0
+DQ07,uniqueness,one champion per series,140,140,PASS,
+DQ08,consistency,ranks 1..15 complete within every series,all series,140 of 140,PASS,
+DQ09,traceability,every accuracy row carries source_generation_status,0 nulls,0 nulls,PASS,
+DQ10,integrity,"negative predictions reported, not clipped",reported,"7,531 reported",PASS,P5C caveat honoured
+DQ11,distribution,wape has degenerate outliers that destroy mean-based aggregation,documented,"11 of 2100 series-model pairs exceed wape=100 (max 1.25e+23), all in metric HDD, across 5 series",WARN,"MANDATORY RULE FOR P7/P8: aggregate wape by MEDIAN, never by mean. The mean wape for HDD is ~2.4e20 and is meaningless. Per-series wape remains valid."
+DQ12,robustness,degenerate wape does not corrupt champion selection,no champion degenerate,max champion rank value = 9.9634; 0 champions exceed 100,PASS,"Degenerate models always lose their within-series ranking, so rankings are unaffected by the outliers flagged in DQ11"

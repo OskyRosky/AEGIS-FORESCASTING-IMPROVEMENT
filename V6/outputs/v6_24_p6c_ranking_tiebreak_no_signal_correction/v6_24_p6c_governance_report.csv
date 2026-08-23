@@ -1,0 +1,20 @@
+artifact_or_invariant,expected,observed,result
+accuracy_metrics,unchanged,sha256 identical before and after P6C,PASS
+forecast_outputs,unchanged,sha256 identical before and after P6C,PASS
+model_backtests_15_models,unchanged,sha256 identical before and after,PASS
+actuals_normalized,unchanged,sha256 identical before and after,PASS
+cohort_manifest,unchanged,sha256 identical before and after,PASS
+source_forecast_baselines_normalized,unchanged,sha256 identical,PASS
+model_rankings,overwritten under P6C policy,"rewritten, 2,100 rows, P6C_RANKING_POLICY_V2",PASS
+series_signal_quality,new support artifact,"created, 140 rows",PASS
+Pre-P6C snapshot retained,immutable audit copy,snapshot parquet + csv + sha256 hash captured before the overwrite,PASS
+raw Parquet,unchanged,clean,PASS
+Shiny,untouched,clean,PASS
+V1 through V5,untouched,clean,PASS
+navigation_contract,not created,absent,PASS
+taxonomy_counts,not created,absent,PASS
+Models re-run,none,none - P6C only reordered existing accuracy rows,PASS
+Accuracy recalculated,no,no - accuracy_metrics read-only,PASS
+SQL / new extraction,none,none,PASS
+git add . / -A / --all,not used,not used,PASS
+push,none,none,PASS

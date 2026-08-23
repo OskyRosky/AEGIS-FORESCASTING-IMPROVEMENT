@@ -1,0 +1,20 @@
+metric,route_path,granularity,total_combinations,combinations_over_50,min_observations,max_observations,date_min,date_max,extraction_candidate
+CPU,CPU / Consumed,Region,30,30,220,562,2022-01-04,2023-07-20,TRUE
+CPU,CPU / Failover,Region,30,30,220,562,2022-01-04,2023-07-20,TRUE
+CPU,CPU / any,Forest,0,0,0,0,,,FALSE
+HDD,HDD-Basilisk / Basilisk,Region,46,46,144,284,2026-01-02,2026-05-25,TRUE
+HDD,HDD-Basilisk / Basilisk,Forest,155,155,144,144,UNKNOWN,UNKNOWN,REVIEW
+HDD,HDD-EDB / Consumer,Region,46,46,1625,20025,2019-07-01,2026-08-17,TRUE
+HDD,HDD-EDB / Consumer,Forest,156,156,1905,24905,2019-07-01,2026-08-17,TRUE
+HDD,HDD-EDB / Enterprise,Region,45,45,1105,14488,2019-07-01,2026-08-17,TRUE
+HDD,HDD-EDB / Enterprise,Forest,156,156,1407,16224,2019-07-01,2026-08-17,TRUE
+IOPS,IOPS / Consumed,Region,29,29,218,1103,2020-06-23,2023-07-20,TRUE
+IOPS,IOPS / Failover,Region,29,29,218,1103,2020-06-23,2023-07-20,TRUE
+IOPS,IOPS / any,Forest,0,0,0,0,,,FALSE
+MEMORY,Memory / any,Region,0,0,0,0,,,FALSE
+MEMORY,Memory / any,Forest,0,0,0,0,,,FALSE
+SSD,SSD / None,Region,0,0,0,0,,,FALSE
+SSD,SSD Daily Raw / Region x Forest,Forest,142,139,8,340,2020-07-10,2021-06-15,REVIEW
+SSD,SSD Demand History / Forest,Forest,143,142,16,596,2021-06-10,2021-11-08,REVIEW
+SSD,SSD-Phoenix / Low Vol. no Efficiency,Forest,137,136,25,132,2026-04-03,2026-08-22,TRUE
+SSD,SSD-Phoenix / Low Vol. w Efficiency,Forest,137,136,24,131,2026-04-07,2026-08-22,TRUE

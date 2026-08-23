@@ -1,0 +1,4 @@
+query_id,auth_mode,object_name,purpose,query_type,started_at,status,row_count_returned,duration_seconds,notes
+P2AQ001,ActiveDirectoryIntegrated,forecast_substrateBE_ssd_phx_lvwe_metrics,Per-key parseable/non-parseable actual counts and date coverage for the 50 selected keys,aggregate,2026-08-23T13:02:21,OK,50,5.54,
+P2AQ002,ActiveDirectoryIntegrated,forecast_substrateBE_ssd_phx_lvwe_metrics EXCEPT forecast_substrateBE_ssd_phx_lvne_metrics,Confirm LVNE Mean_Actual is identical to LVWE for the 50 selected keys,aggregate,2026-08-23T13:02:27,OK,1,1.78,
+P2AQ003,ActiveDirectoryIntegrated,forecast_substrateBE_ssd_phx_lvwe_metrics,Full eligible replacement pool: keys with more than 50 parseable actuals,aggregate,2026-08-23T13:02:29,OK,136,1.08,

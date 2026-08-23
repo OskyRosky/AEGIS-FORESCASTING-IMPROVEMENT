@@ -1,0 +1,21 @@
+artifact_path,type,exists,size_bytes,purpose,inspection_status,notes
+outputs/v6_17_full_multimetric_productive_artifact_generation/forecast_viewer_model_outputs_v2_full.parquet,parquet,True,14280896,Viewer backtest: actuals + model estimates,READ,"Source of actual_observation_count, governed_model_count and backtest_row_count."
+outputs/v6_17_full_multimetric_productive_artifact_generation/forecast_forward_outputs_v6_17_full.parquet,parquet,True,6210430,Forward forecast,READ,"Source of forecast_row_count, forecast model names and forecast dates."
+outputs/v6_21b_registry_accuracy_hardening/v6_21b_accuracy_metrics.parquet,parquet,True,13069854,Precomputed accuracy metrics,LISTED,Derived from the Viewer artifact; not an independent data source.
+outputs/v6_18_shiny_dynamic_taxonomy_ui/v6_18_navigation_contract.csv,csv,True,368593,Shiny navigation contract,READ,901 rows: 896 operational combinations plus 5 informational routes.
+outputs/v6_0f_r6_phase1_governed_extraction/r6_phase1_extraction_manifest.csv,csv,True,2984,R6 phase 1 extraction manifest,READ,Names the real SQL source tables actually used for HDD and SSD-Phoenix.
+outputs/v6_0f_r6_phase1_governed_extraction/r6_phase1_key_inventory.csv,csv,True,551,R6 phase 1 key inventory,READ,Key counts per route as extracted from SQL.
+outputs/v6_0f_r6_phase1_governed_extraction/r6_phase1_viewer_hdd.csv,csv,True,196576818,"R6 HDD viewer extraction, 187.5 MiB",HEADER_READ,Carries series_type = actual. Source of HDD observed history.
+outputs/v6_0f_r6_phase1_governed_extraction/r6_phase1_forecast_hdd.csv,csv,True,143882557,"R6 HDD forecast extraction, 137.2 MiB",HEADER_READ,Forecast rows only.
+outputs/v6_0f_r6_phase1_governed_extraction/r6_phase1_forecast_ssd_phoenix.csv,csv,True,101351590,"R6 SSD-Phoenix forecast extraction, 96.7 MiB",HEADER_READ,Columns are forecast_date and forecast_value only. NO actuals column exists.
+outputs/v6_0f_r1_tesseract_metric_inventory/tesseract_related_tables_search.csv,csv,True,18118,Tesseract table discovery,READ,"Lists the real CPU, IOPS and SSD source tables available in SQL."
+data/storage/r6_phase1.duckdb,duckdb,True,27013120,"R6 phase 1 database, 25.8 MiB",LISTED,Intermediate store from the R6 extraction.
+outputs/v6_0f_r5b_storage_performance_strategy/bench/r6_phase1.duckdb,duckdb,True,24653824,"Benchmark copy, 23.5 MiB",LISTED,Benchmark artifact.
+data/processed/forecast_viewer_model_outputs.csv,csv,True,51467614,"Legacy Viewer artifact, 49.1 MiB",LISTED,"Single-route HDD, 39 series. Superseded by the V6.17 Parquet."
+outputs/v6_17_full_multimetric_productive_artifact_generation/forecast_viewer_model_outputs_v2_full.csv,csv,True,689512463,"CSV twin of the Viewer Parquet, 657.6 MiB",LISTED,Same content as the Parquet; not read separately.
+outputs/v6_17_full_multimetric_productive_artifact_generation/forecast_forward_outputs_v6_17_full.csv,csv,True,255243976,"CSV twin of the forward Parquet, 243.4 MiB",LISTED,Same content as the Parquet; not read separately.
+outputs/v6_17_full_multimetric_productive_artifact_generation/viewer_backtest_phase_a_nonneural.csv,csv,True,499976685,"Phase A backtest intermediate, 476.8 MiB",LISTED,Intermediate that fed the V6.17 assembly.
+outputs/v6_17_full_multimetric_productive_artifact_generation/viewer_backtest_phase_b_neural.csv,csv,True,125753909,"Phase B neural backtest intermediate, 119.9 MiB",LISTED,Intermediate that fed the V6.17 assembly.
+shiny_app/R/taxonomy_navigation.R,R,True,19202,Shiny selector module,READ,Reads the navigation contract; filters on viewer_visible / forecast_visible.
+shiny_app/R/viewer_pilot.R,R,True,17702,Viewer provider,READ,Lazily reads the Viewer Parquet.
+shiny_app/R/forecast_pilot.R,R,True,19842,Forecast provider,READ,Lazily reads the forward Parquet.

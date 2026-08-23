@@ -1,0 +1,5 @@
+file_name,relative_path,metric,source_object,row_count,column_count,file_size_bytes,created_at,checksum_if_available
+ssd_lvwe_raw.parquet,data/raw/v6_24_mvp_cohort/ssd/ssd_lvwe_raw.parquet,SSD,forecast_substrateBE_ssd_phx_lvwe_metrics,6550,23,376692,2026-08-23T19:39:55+00:00,sha256:fd10b8efd52bdb5680a1384e562e53833b80a3fd8cf9622c37f6a77281f7bef5
+ssd_lvne_raw.parquet,data/raw/v6_24_mvp_cohort/ssd/ssd_lvne_raw.parquet,SSD,forecast_substrateBE_ssd_phx_lvne_metrics,6600,23,382009,2026-08-23T19:39:55+00:00,sha256:5e92734b1422ab056cea6c60e59deaa8c5cdf52315a7165fd3c7fc813bfb14e6
+cpu_actuals_raw.parquet,data/raw/v6_24_mvp_cohort/cpu/cpu_actuals_raw.parquet,CPU,forecast_substrateBE_cpu_actual_region,11228,18,234785,2026-08-23T19:39:55+00:00,sha256:83fcc745b65e42fd35595835b07b5fcf6a42c9e0510e0edc8b9703348011f53c
+iops_actuals_raw.parquet,data/raw/v6_24_mvp_cohort/iops/iops_actuals_raw.parquet,IOPS,forecast_substrateBE_iops_actual_region,20501,18,437922,2026-08-23T19:39:55+00:00,sha256:1d33882979c6cfcb66ea7bf1d5333f0688fb46d71c0b11d3b3615156cd2b24b8

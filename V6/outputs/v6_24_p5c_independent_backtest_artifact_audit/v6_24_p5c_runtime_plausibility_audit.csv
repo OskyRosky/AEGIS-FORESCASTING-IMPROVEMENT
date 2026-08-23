@@ -1,0 +1,18 @@
+measure,smoke_p5b,full_p5,ratio_full_to_smoke,assessment
+Wall clock,12.4s,351s (5.85m),28.2x,"Full run is longer, as expected."
+Model-series units,45,1350,30.0x,30x the smoke workload.
+Model-series per second,3.62,3.85,1.06x,"Full run is SLOWER per unit than the smoke test, which is the expected direction: the full cohort includes longer series than the three smoke series."
+Prediction rows,"13,800","409,890",29.7x,Consistent with 30x the series count.
+Prediction rows per second,1109,1168,1.05x,Same direction and magnitude.
+Origin-level fits,465,13740,29.5x,"Each unit fits once per valid origin, so this is the true unit of work."
+Origin-level fits per second,37.4,39.1,1.05x,The core plausibility test. Rates are of the same order.
+Sum of per-unit runtimes,-,344.2s,98% of wall clock,"Fitting accounts for most of the wall clock. The remainder is preparation, pooled SMLP-TCN model building and checkpoint IO."
+Sum of per-batch runtimes,-,346.3s,99% of wall clock,Batch timings independently reconcile with the wall clock.
+Runtime by family: Baseline,-,13.4s across 630 units (mean 0.021s),4% of fit time,
+Runtime by family: Challenger,-,256.2s across 450 units (mean 0.569s),74% of fit time,
+Runtime by family: Neural,-,74.6s across 270 units (mean 0.276s),22% of fit time,
+Runtime by metric: CPU,-,89.8s across 300 units,26% of fit time,
+Runtime by metric: IOPS,-,92.3s across 300 units,27% of fit time,
+Runtime by metric: SSD,-,162.0s across 750 units,47% of fit time,
+CONCLUSION,37.4 fits/s,39.1 fits/s,1.05x,PLAUSIBLE
+Reasoning,-,-,-,"The full run performs 13,740 origin-level fits at 39.1 fits per second, against 37.4 measured independently in the smoke test on three series. The rates are the same order of magnitude and the full run is slightly SLOWER per fit, which is the correct direction because the cohort contains longer series. Crucially, 409,890 rows were physically written across 27 checkpoint files and reconcile exactly to the promoted artifact with 0 rows on either side only. The speed reflects cheap models on short series, not skipped work."

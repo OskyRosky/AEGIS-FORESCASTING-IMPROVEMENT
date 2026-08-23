@@ -1,0 +1,41 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P5C PASS confirmed,all PASS,37/37 PASS,PASS,NO
+V2,P6 accuracy_metrics exists,present,"2,100 rows",PASS,NO
+V3,P6 model_rankings exists,present,"2,100 rows",PASS,NO
+V4,forecast_outputs replacement was explicit and idempotent,P6B-owned only,preflight PF04 allowed only forecast_outputs.parquet/.csv to be replaced,PASS,NO
+V5,forecast_outputs.parquet exists,present,"present, 484 KB",PASS,NO
+V6,forecast_outputs.csv exists,present,"present, 27,578 KB",PASS,NO
+V7,"forecast_outputs has exactly 63,000 rows",63000,"63,000",PASS,NO
+V8,forecast_outputs has exactly 140 series,140,140,PASS,NO
+V9,forecast_outputs has exactly 15 governed models,15,15,PASS,NO
+V10,"forecast_outputs has exactly 2,100 series-model pairs",2100,2100,PASS,NO
+V11,Every series-model pair has exactly 30 steps,30 each,min=30 max=30,PASS,NO
+V12,forecast_step is always 1..30,1..30 complete,"2100/2100 pairs complete, global range 1..30",PASS,NO
+V13,forecast_horizon_days equals forecast_step,all rows,"63,000/63,000",PASS,NO
+V14,forecast_date = train_end_date + forecast_step days,all rows,"63,000/63,000",PASS,NO
+V15,forecast_date > train_end_date,all rows,"63,000/63,000",PASS,NO
+V16,No forecast_date was inserted into actuals_normalized,0 rows,"0 forecast rows share a (series_id, date) with actuals",PASS,NO
+V17,actuals_normalized not modified,unchanged,"48,916 rows, verified unmodified by mtime+size",PASS,NO
+V18,model_backtests_15_models not modified,unchanged,verified unmodified by mtime+size,PASS,NO
+V19,accuracy_metrics not modified,unchanged,verified unmodified by mtime+size,PASS,NO
+V20,model_rankings not modified,unchanged,verified unmodified by mtime+size,PASS,NO
+V21,cohort_manifest not modified,unchanged,verified unmodified by mtime+size,PASS,NO
+V22,No HDD legacy non-governed model names appear,0,0 non-governed names present,PASS,NO
+V23,No prohibited models appear,0,none,PASS,NO
+V24,All predicted_value values are finite,all rows,"63,000/63,000",PASS,NO
+V25,negative_forecast_flag exists,present,"present, values ['FALSE', 'TRUE']",PASS,NO
+V26,extreme_forecast_flag exists,present,"present, values ['FALSE', 'STRUCTURALLY_NOT_COMPUTABLE', 'TRUE']",PASS,NO
+V27,"Negative/extreme forecasts reported, not clipped",reported,573 negative and 84 extreme preserved,PASS,NO
+V28,forecast_type constant,GOVERNED_30_STEP_DAILY_FORECAST,GOVERNED_30_STEP_DAILY_FORECAST,PASS,NO
+V29,source_generation_status constant,GENERATED_P6B_GOVERNED_30_STEP_FORECAST,GENERATED_P6B_GOVERNED_30_STEP_FORECAST,PASS,NO
+V30,Checkpoint rows reconcile to final forecast_outputs,63000,"63,000 across 4 metric checkpoints",PASS,NO
+V31,Failure ledger exists even if empty,present,"present, 0 rows",PASS,NO
+V32,No unresolved model failures,0,0 failed of 2100 units,PASS,NO
+V33,No navigation_contract created,absent,absent,PASS,NO
+V34,No taxonomy_counts created,absent,absent,PASS,NO
+V35,Shiny files untouched,no diff,clean,PASS,NO
+V36,V1 through V5 untouched,no diff,clean,PASS,NO
+V37,raw Parquet untouched,no diff,clean,PASS,NO
+V38,Closure states P6 complete for all three artifacts,accuracy_metrics + model_rankings + forecast_outputs,stated in v6_24_p6b_closure_summary.md and the P6 completion addendum,PASS,NO
+V39,"P6 ranking defect detected and reported, not silently inherited",documented,16 misranked champions recorded in v6_24_p6b_p6_ranking_defect_finding.csv,PASS,YES
+V40,Zero-signal series identified,documented,15 all-zero series identified and reported,PASS,NO

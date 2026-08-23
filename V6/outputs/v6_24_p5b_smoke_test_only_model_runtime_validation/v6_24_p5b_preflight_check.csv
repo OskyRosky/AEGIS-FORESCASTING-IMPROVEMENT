@@ -1,0 +1,8 @@
+check,expected,observed,result
+cohort_manifest.parquet exists,present,"present=True, 140 rows",PASS
+actuals_normalized.parquet exists,present,"present=True, 48,916 rows",PASS
+D2 approved window contract exists,present,present=True,PASS
+D2 approved window policy exists,present,present=True,PASS
+Model catalog resolves to exactly 15,15,"15 governed names, 15 distinct in output",PASS
+No final P5 artifact already exists,absent,0 model_backtests files in processed/,PASS
+Smoke work directory exists,present,present=True,PASS

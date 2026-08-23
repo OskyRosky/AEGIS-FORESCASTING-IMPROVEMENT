@@ -1,0 +1,488 @@
+{
+ "forecast_substrateBE_hdd": [
+  {
+   "data_type": "consumer",
+   "type": "Arima+Fixed_0.015(0.5,0.5)",
+   "rows": 4286323,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2029-01-29 00:00:00",
+   "forests": 57
+  },
+  {
+   "data_type": "Consumer",
+   "type": "actual",
+   "rows": 3489406,
+   "min_date": "2019-07-01 00:00:00",
+   "max_date": "2026-08-17 00:00:00",
+   "forests": 156
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Arima",
+   "rows": 3263619,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 134
+  },
+  {
+   "data_type": "Consumer",
+   "type": "ARIMA",
+   "rows": 3216580,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 127
+  },
+  {
+   "data_type": "consumer",
+   "type": "Fixed_0.015",
+   "rows": 2849350,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 80
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Linear",
+   "rows": 2636727,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 75
+  },
+  {
+   "data_type": "enterprise",
+   "type": "bsts_trend",
+   "rows": 2287040,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 73
+  },
+  {
+   "data_type": "Enterprise",
+   "type": "actual",
+   "rows": 2279938,
+   "min_date": "2019-07-01 00:00:00",
+   "max_date": "2026-08-17 00:00:00",
+   "forests": 156
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Arima+Linear(0.5,0.5)",
+   "rows": 1949704,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 42
+  },
+  {
+   "data_type": "consumer",
+   "type": "Fixed_0.01",
+   "rows": 1560101,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 53
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Arima+bsts_trend(0.5,0.5)",
+   "rows": 1268477,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 29
+  },
+  {
+   "data_type": "consumer",
+   "type": "Arima+Fixed_0.02(0.5,0.5)",
+   "rows": 1106469,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2029-07-30 00:00:00",
+   "forests": 39
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Prophet+Linear(0.5,0.5)",
+   "rows": 1100379,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 25
+  },
+  {
+   "data_type": "enterprise",
+   "type": "bsts_trend+Linear(0.5,0.5)",
+   "rows": 1092043,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 24
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Arima+Prophet(0.5,0.5)",
+   "rows": 1068820,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 25
+  },
+  {
+   "data_type": "enterprise",
+   "type": "ETS_AAZ180HaLb",
+   "rows": 1021619,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 62
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Prophet",
+   "rows": 784090,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 45
+  },
+  {
+   "data_type": "enterprise",
+   "type": "ETS_AAZ180HaLb+Linear(0.5,0.5)",
+   "rows": 773136,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 37
+  },
+  {
+   "data_type": "consumer",
+   "type": "ETS_AAZ180HaLb",
+   "rows": 768396,
+   "min_date": "2019-07-01 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 145
+  },
+  {
+   "data_type": "Consumer",
+   "type": "FixedGrowth1%",
+   "rows": 736247,
+   "min_date": "2026-03-01 00:00:00",
+   "max_date": "2030-08-11 00:00:00",
+   "forests": 92
+  },
+  {
+   "data_type": "enterprise",
+   "type": "Arima+Fixed_0.04(0.5,0.5)",
+   "rows": 670578,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2029-01-29 00:00:00",
+   "forests": 32
+  },
+  {
+   "data_type": "consumer",
+   "type": "Fixed_0.04",
+   "rows": 581984,
+   "min_date": "2019-07-05 00:00:00",
+   "max_date": "2031-02-27 00:00:00",
+   "forests": 48
+  },
+  {
+   "data_type": "enterprise",
+   "type": "ETS_AAZ180HaLb+bsts_trend(0.5,0.5)",
+   "rows": 553450,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2030-05-30 00:00:00",
+   "forests": 12
+  },
+  {
+   "data_type": "consumer",
+   "type": "ETS_AAZ180HaLb+Fixed_0.015(0.5,0.5)",
+   "rows": 530995,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2027-09-29 00:00:00",
+   "forests": 7
+  },
+  {
+   "data_type": "consumer",
+   "type": "Arima+Fixed_0.04(0.5,0.5)",
+   "rows": 517772,
+   "min_date": "2021-01-01 00:00:00",
+   "max_date": "2027-07-10 00:00:00",
+   "forests": 23
+  }
+ ],
+ "forecast_substrateBE_cpu": [
+  {
+   "type": "Fixed_0.02",
+   "rows": 11878238,
+   "min_date": "2021-02-15",
+   "max_date": "2030-08-27",
+   "keys": 492
+  },
+  {
+   "type": "Fixed_0.04",
+   "rows": 6439105,
+   "min_date": "2021-02-15",
+   "max_date": "2030-08-27",
+   "keys": 457
+  },
+  {
+   "type": "Linear",
+   "rows": 5369021,
+   "min_date": "2021-03-23",
+   "max_date": "2030-08-27",
+   "keys": 423
+  },
+  {
+   "type": "DeepForesee",
+   "rows": 2709750,
+   "min_date": "2021-12-12",
+   "max_date": "2024-01-22",
+   "keys": 456
+  },
+  {
+   "type": "Fixed_0.02+Fixed_0.04(0.5,0.5)",
+   "rows": 2417415,
+   "min_date": "2021-04-29",
+   "max_date": "2029-08-27",
+   "keys": 256
+  },
+  {
+   "type": "Fixed_0.03",
+   "rows": 2353949,
+   "min_date": "2021-03-23",
+   "max_date": "2030-08-27",
+   "keys": 344
+  },
+  {
+   "type": "Fixed_0.04+Linear(0.5,0.5)",
+   "rows": 2160257,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 260
+  },
+  {
+   "type": "Fixed_0.02+Arima(0.5,0.5)",
+   "rows": 1792349,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 298
+  },
+  {
+   "type": "Arima",
+   "rows": 1588386,
+   "min_date": "2021-03-23",
+   "max_date": "2030-08-27",
+   "keys": 253
+  },
+  {
+   "type": "ETS_MAdA365Ha+Fixed_0.02(0.5,0.5)",
+   "rows": 1437792,
+   "min_date": "2021-09-27",
+   "max_date": "2029-08-27",
+   "keys": 359
+  },
+  {
+   "type": "Fixed_0.02+Fixed_0.03(0.5,0.5)",
+   "rows": 1349300,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 240
+  },
+  {
+   "type": "Linear+Arima(0.5,0.5)",
+   "rows": 1203520,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 212
+  },
+  {
+   "type": "fixed_seasonal",
+   "rows": 1166045,
+   "min_date": "2022-05-01",
+   "max_date": "2030-08-27",
+   "keys": 272
+  },
+  {
+   "type": "Fixed_0.02+Linear(0.5,0.5)",
+   "rows": 1105417,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 191
+  },
+  {
+   "type": "Fixed_0.04+Arima(0.5,0.5)",
+   "rows": 1032120,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 262
+  },
+  {
+   "type": "Fixed_0+Fixed_0.02(0.5,0.5)",
+   "rows": 1013889,
+   "min_date": "2023-04-14",
+   "max_date": "2029-08-27",
+   "keys": 240
+  },
+  {
+   "type": "ETS_MAdA365Ha+Linear(0.5,0.5)",
+   "rows": 655881,
+   "min_date": "2021-08-21",
+   "max_date": "2029-08-27",
+   "keys": 190
+  },
+  {
+   "type": "Fixed_0.03+Linear(0.5,0.5)",
+   "rows": 444237,
+   "min_date": "2021-03-23",
+   "max_date": "2029-08-27",
+   "keys": 153
+  },
+  {
+   "type": "Fixed_0+Linear(0.5,0.5)",
+   "rows": 364762,
+   "min_date": "2023-05-01",
+   "max_date": "2029-08-27",
+   "keys": 105
+  },
+  {
+   "type": "ETS_MAdA365Ha+Fixed_0.04(0.5,0.5)",
+   "rows": 364329,
+   "min_date": "2021-08-21",
+   "max_date": "2029-08-27",
+   "keys": 148
+  }
+ ],
+ "forecast_substrateBE_iops": [
+  {
+   "type": "Fixed_0.02",
+   "rows": 5004139,
+   "min_date": "2021-12-08",
+   "max_date": "2030-02-26",
+   "keys": 487
+  },
+  {
+   "type": "tbats+Fixed_0.02(0.5,0.5)",
+   "rows": 3237977,
+   "min_date": "2021-12-08",
+   "max_date": "2029-06-27",
+   "keys": 378
+  },
+  {
+   "type": "tbats+Fixed_0.06(0.5,0.5)",
+   "rows": 1882713,
+   "min_date": "2022-03-01",
+   "max_date": "2029-06-27",
+   "keys": 272
+  },
+  {
+   "type": "Arima+Fixed_0.02(0.5,0.5)",
+   "rows": 1680441,
+   "min_date": "2022-05-01",
+   "max_date": "2029-06-27",
+   "keys": 339
+  },
+  {
+   "type": "Fixed_0+Fixed_0.02(0.5,0.5)",
+   "rows": 1661647,
+   "min_date": "2022-01-04",
+   "max_date": "2029-06-27",
+   "keys": 252
+  },
+  {
+   "type": "Linear",
+   "rows": 1410486,
+   "min_date": "2022-03-01",
+   "max_date": "2030-02-26",
+   "keys": 255
+  },
+  {
+   "type": "Prophet",
+   "rows": 1311496,
+   "min_date": "2021-09-02",
+   "max_date": "2030-02-26",
+   "keys": 285
+  },
+  {
+   "type": "Fixed_0.06",
+   "rows": 1152476,
+   "min_date": "2022-03-01",
+   "max_date": "2030-02-26",
+   "keys": 236
+  },
+  {
+   "type": "Arima+Fixed_0.06(0.5,0.5)",
+   "rows": 985944,
+   "min_date": "2022-01-13",
+   "max_date": "2029-06-27",
+   "keys": 235
+  },
+  {
+   "type": "Fixed_0.01",
+   "rows": 944307,
+   "min_date": "2021-12-08",
+   "max_date": "2030-02-26",
+   "keys": 277
+  },
+  {
+   "type": "Fixed_0.04+Fixed_0.02(0.5,0.5)",
+   "rows": 936375,
+   "min_date": "2022-01-13",
+   "max_date": "2029-06-27",
+   "keys": 227
+  },
+  {
+   "type": "Linear+Fixed_0.06(0.5,0.5)",
+   "rows": 834715,
+   "min_date": "2022-02-28",
+   "max_date": "2029-06-27",
+   "keys": 227
+  },
+  {
+   "type": "Prophet+Fixed_0.06(0.5,0.5)",
+   "rows": 802552,
+   "min_date": "2022-03-01",
+   "max_date": "2029-06-27",
+   "keys": 234
+  },
+  {
+   "type": "Prophet+tbats(0.5,0.5)",
+   "rows": 752665,
+   "min_date": "2021-09-02",
+   "max_date": "2029-06-27",
+   "keys": 208
+  },
+  {
+   "type": "Linear+Fixed_0.02(0.5,0.5)",
+   "rows": 682465,
+   "min_date": "2022-01-13",
+   "max_date": "2029-06-27",
+   "keys": 213
+  },
+  {
+   "type": "Linear+Fixed_0.04(0.5,0.5)",
+   "rows": 660733,
+   "min_date": "2022-03-01",
+   "max_date": "2029-06-27",
+   "keys": 197
+  },
+  {
+   "type": "Prophet+Fixed_0.02(0.5,0.5)",
+   "rows": 631332,
+   "min_date": "2021-12-08",
+   "max_date": "2029-06-27",
+   "keys": 194
+  },
+  {
+   "type": "tbats",
+   "rows": 552568,
+   "min_date": "2021-09-02",
+   "max_date": "2029-06-27",
+   "keys": 206
+  },
+  {
+   "type": "Prophet+Fixed_0.04(0.5,0.5)",
+   "rows": 548714,
+   "min_date": "2022-03-01",
+   "max_date": "2029-06-27",
+   "keys": 200
+  },
+  {
+   "type": "ETS_MAM365HaLb+tbats(0.5,0.5)",
+   "rows": 499561,
+   "min_date": "2023-05-01",
+   "max_date": "2029-06-27",
+   "keys": 158
+  }
+ ]
+}

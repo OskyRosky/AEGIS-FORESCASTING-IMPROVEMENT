@@ -1,0 +1,6 @@
+metric,series,models,expected_model_series,completed_model_series,failed_model_series,prediction_rows,source_generation_status,result
+SSD,50,15,750,750,0,225000,GENERATED_P5,PASS
+CPU,20,15,300,300,0,89910,GENERATED_P5,PASS
+IOPS,20,15,300,300,0,94980,GENERATED_P5,PASS
+HDD,50,15,750,REUSED_NOT_RUN,0,204300,REUSED_HDD_EXISTING_ARTIFACT,PASS
+TOTAL,140,15,2100,1350 generated + 750 reused,0,614190,MIXED,PASS

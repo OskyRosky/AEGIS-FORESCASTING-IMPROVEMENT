@@ -1,0 +1,7 @@
+check,expected,observed,result
+Progress log covers every 10% milestone,10 through 100,"[np.int64(10), np.int64(20), np.int64(30), np.int64(40), np.int64(50), np.int64(60), np.int64(70), np.int64(80), np.int64(90), np.int64(100)]",PASS
+"Final entry reports 1,350 model-series",1350,1350,PASS
+"Final entry reports 409,890 rows",409890,"409,890",PASS
+Final entry reports 0 failures,0,0,PASS
+Elapsed time increases monotonically,strictly non-decreasing,yes; 0.61m to 5.85m,PASS
+Completed counts increase monotonically,strictly non-decreasing,yes,PASS

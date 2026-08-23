@@ -1,0 +1,61 @@
+{
+ "run_id": "P6B_20260823T220902",
+ "rows": 63000,
+ "series": 140,
+ "models": 15,
+ "failures": 0,
+ "runtime_min": 1.049,
+ "frozen_unmodified": 12,
+ "checkpoints": [
+  {
+   "metric": "HDD",
+   "series_count": 50,
+   "model_count": 15,
+   "expected_rows": 22500,
+   "row_count": 22500,
+   "failures": 0,
+   "runtime_seconds": 18.72,
+   "checkpoint_path": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V6\\data\\model_runs\\v6_24_p6b_forecast_work\\checkpoints\\p6b_checkpoint_HDD.parquet"
+  },
+  {
+   "metric": "SSD",
+   "series_count": 50,
+   "model_count": 15,
+   "expected_rows": 22500,
+   "row_count": 22500,
+   "failures": 0,
+   "runtime_seconds": 17.91,
+   "checkpoint_path": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V6\\data\\model_runs\\v6_24_p6b_forecast_work\\checkpoints\\p6b_checkpoint_SSD.parquet"
+  },
+  {
+   "metric": "CPU",
+   "series_count": 20,
+   "model_count": 15,
+   "expected_rows": 9000,
+   "row_count": 9000,
+   "failures": 0,
+   "runtime_seconds": 11.56,
+   "checkpoint_path": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V6\\data\\model_runs\\v6_24_p6b_forecast_work\\checkpoints\\p6b_checkpoint_CPU.parquet"
+  },
+  {
+   "metric": "IOPS",
+   "series_count": 20,
+   "model_count": 15,
+   "expected_rows": 9000,
+   "row_count": 9000,
+   "failures": 0,
+   "runtime_seconds": 12.81,
+   "checkpoint_path": "C:\\Users\\oscarau\\OneDrive - Microsoft\\Desktop\\Forecast Generation Codebase Improvement\\AEGIS-FORESCASTING-IMPROVEMENT\\V6\\data\\model_runs\\v6_24_p6b_forecast_work\\checkpoints\\p6b_checkpoint_IOPS.parquet"
+  }
+ ],
+ "p5c_pass": 37,
+ "p5c_total": 37,
+ "npass": 40,
+ "nfail": 0,
+ "total_checks": 40,
+ "misranked": 16,
+ "allzero": 15,
+ "neg": 573,
+ "ext": 84,
+ "ncflag": 8550
+}

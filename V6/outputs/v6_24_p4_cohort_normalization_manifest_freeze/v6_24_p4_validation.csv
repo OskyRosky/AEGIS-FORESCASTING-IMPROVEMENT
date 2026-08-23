@@ -1,0 +1,39 @@
+check_id,check_name,expected,observed,result
+V1,cohort_manifest has exactly 140 rows,140,140,PASS
+V2,"cohort_manifest has 50 HDD, 50 SSD, 20 CPU, 20 IOPS",50/50/20/20,"HDD 50, SSD 50, CPU 20, IOPS 20",PASS
+V3,All 140 rows have a stable non-null unique series_id,140 unique non-null,"140 unique, 0 null",PASS
+V4,All 140 rows have every axis populated with explicit values,0 blanks,0 blank axis cells across 8 axes x 140 rows,PASS
+V5,actuals_normalized exists and is non-empty,> 0 rows,"48,916 rows x 21 cols",PASS
+V6,actuals_normalized contains all 140 selected series,140,140 distinct series_id; 0 manifest series missing,PASS
+V7,actuals_normalized has no duplicate series_id + series_date rows,0,0 duplicates,PASS
+V8,"SSD observed series count is 50, not 100",50,50 series over 50 keys,PASS
+V9,SSD LVNE actuals are not double-counted,actuals sourced from LVWE only,source files in SSD actuals: ['data/raw/v6_24_mvp_cohort/ssd/ssd_lvwe_raw.parquet'],PASS
+V10,"SSD duplicates removed only if exact, and audited",50 audited exact removals,50 audited rows; 50 with a single distinct actual; 0 conflicts,PASS
+V11,SSD processed actual values equal source values,"0 changed values, 0 missing series","max_abs_delta=1.1102230246251565e-16, changed=0, missing_series=0, source_only=0, processed_only=0",PASS
+V12,CPU processed actual values equal source values,"0 changed values, 0 missing series","max_abs_delta=0.0, changed=0, missing_series=0, source_only=0, processed_only=0",PASS
+V13,IOPS processed actual values equal source values,"0 changed values, 0 missing series","max_abs_delta=0.0, changed=0, missing_series=0, source_only=0, processed_only=0",PASS
+V14,HDD processed actual values equal source values,"0 changed values, 0 missing series","max_abs_delta=0.0, changed=0, missing_series=0, source_only=0, processed_only=0",PASS
+V15,No actual values changed during processing,0 across all four metrics,total changed values = 0,PASS
+V16,No missing dates were filled,processed row count never exceeds source,"{'CPU': 11228, 'HDD': 10687, 'IOPS': 20501, 'SSD': 6500}; every metric's processed rows <= its deduplicated source rows",PASS
+V17,No interpolation performed,distinct_date_count equals observation_count,0 series where they differ,PASS
+V18,No scaling or statistical normalization performed,value_transformation is NONE or a documented cast,"['CAST_VARCHAR_TO_FLOAT', 'NONE']",PASS
+V19,source_forecast_baselines preserves SSD LVWE and LVNE variants,both present,"variants=['LVNE', 'LVWE']; rows per variant={'LVNE': 6550, 'LVWE': 6500}",PASS
+V20,source_forecast_baselines is not labeled as 15-model forecast output,caveat states it explicitly on every row,13050 of 13050 rows carry the disclaimer,PASS
+V21,"SSD, CPU and IOPS are marked p5_required TRUE",all 90,90 of 90,PASS
+V22,"SSD, CPU and IOPS are not marked viewer_visible_now",all 90 FALSE,90 of 90 FALSE; HDD TRUE=50,PASS
+V23,No model_backtests_15_models artifact created,0 files,0 files matching in processed/,PASS
+V24,No forecast_outputs artifact created,0 files,0 files matching in processed/,PASS
+V25,No accuracy_metrics artifact created,0 files,0 files matching in processed/,PASS
+V26,No model_rankings artifact created,0 files,0 files matching in processed/,PASS
+V27,No navigation_contract artifact created,0 files,0 files matching in processed/,PASS
+V28,No taxonomy_counts artifact created,0 files,0 files matching in processed/,PASS
+V29,Raw Parquet files remain unchanged,all 4 sha256 identical to the values P3 recorded,4 raw files; 0 with a differing checksum,PASS
+V30,Shiny files untouched,0 entries,0 entries,PASS
+V31,V1 through V5 untouched,0 entries,0 entries,PASS
+V32,Closure summary states P5 is next,explicit statement,"present=True, mentions P5=True",PASS
+V33,Data dictionary exists and explains every processed column,0 undocumented columns,46 dictionary rows covering 48 distinct columns; 0 undocumented,PASS
+V34,Full 140 manifest readable report exists,exists with 140 series,"present=True, size=27,968 bytes",PASS
+V35,Unresolved questions file exists even if empty,file present,"present=True, rows=4",PASS
+V36,Every series clears the 50-observation threshold,min > 50,min=75 max=1103,PASS
+V37,Parquet and CSV siblings hold identical row counts,3 matched pairs,cohort_manifest: 140 vs 140; actuals_normalized: 48916 vs 48916; source_forecast_baselines_normalized: 13050 vs 13050,PASS
+V38,Only HDD is marked as already having 15 governed backtests,"50 TRUE, all HDD","50 TRUE, of which 50 are HDD",PASS

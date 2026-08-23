@@ -1,0 +1,4 @@
+metric,series_id,selection_reason,actual_rows,min_date,max_date,missing_calendar_days,expected_valid_origins,expected_target_dates,actual_valid_origins,burn_in_count
+SSD,SSD__Phoenix__Forest__NAMPRD08,PREFERRED_SERIES_PRESENT,130,2026-04-13,2026-08-22,2,10,300,10,62
+CPU,CPU__Consumed__Region__CHN-Gallatin,PREFERRED_SERIES_PRESENT,556,2022-01-04,2023-07-20,7,10,297,10,61
+IOPS,IOPS__Consumed__Region__APC-Multitenant,PREFERRED_SERIES_PRESENT,1103,2020-06-23,2023-07-20,20,11,323,11,64

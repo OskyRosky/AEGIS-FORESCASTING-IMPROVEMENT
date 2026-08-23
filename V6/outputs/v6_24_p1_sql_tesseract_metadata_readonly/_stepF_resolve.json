@@ -1,0 +1,137 @@
+{
+ "forecast_substrateBE_cpu_region::actual_probe": [],
+ "forecast_substrateBE_iops_region::actual_probe": [],
+ "forecast_substrateBE_ssd_region::actual_probe": [],
+ "forecast_substrateBE_SSD_Phoenix_Organic::columns": [
+  [
+   "Workload",
+   "nvarchar"
+  ],
+  [
+   "Fleet",
+   "nvarchar"
+  ],
+  [
+   "Unit",
+   "nvarchar"
+  ],
+  [
+   "Type",
+   "nvarchar"
+  ],
+  [
+   "Scenario",
+   "nvarchar"
+  ],
+  [
+   "DateTime",
+   "datetime2"
+  ],
+  [
+   "Forest",
+   "nvarchar"
+  ],
+  [
+   "Value",
+   "float"
+  ],
+  [
+   "ValueType",
+   "nvarchar"
+  ],
+  [
+   "ModelVersion",
+   "nvarchar"
+  ],
+  [
+   "ForecastVersion",
+   "date"
+  ]
+ ],
+ "forecast_substrateBE_SSD_Phoenix_Organic::ModelVersion": [
+  {
+   "value": "Combined",
+   "rows": 707069,
+   "min_date": "2025-08-08 00:00:00",
+   "max_date": "2030-07-02 00:00:00",
+   "keys": 149
+  }
+ ],
+ "forecast_substrateBE_SSD_TotalForecast::columns": [
+  [
+   "Fleet",
+   "varchar"
+  ],
+  [
+   "Workload",
+   "varchar"
+  ],
+  [
+   "Resource",
+   "varchar"
+  ],
+  [
+   "Unit",
+   "varchar"
+  ],
+  [
+   "Type",
+   "varchar"
+  ],
+  [
+   "Datetime",
+   "date"
+  ],
+  [
+   "Key",
+   "varchar"
+  ],
+  [
+   "Value",
+   "float"
+  ],
+  [
+   "ForecastVersion",
+   "date"
+  ],
+  [
+   "Scenario",
+   "varchar"
+  ],
+  [
+   "ScenarioId",
+   "varchar"
+  ]
+ ],
+ "DemandPlan_SubstrateBE_SSD_Demand_Region_History::columns": [
+  [
+   "DataDate",
+   "date"
+  ],
+  [
+   "Region",
+   "nvarchar"
+  ],
+  [
+   "demand",
+   "float"
+  ],
+  [
+   "ForecastVersion",
+   "date"
+  ],
+  [
+   "CreatedDate",
+   "datetime"
+  ]
+ ],
+ "DemandPlan_SubstrateBE_SSD_Demand_Region_History::range": [
+  406805,
+  "2023-09-18",
+  "2028-09-29",
+  25
+ ],
+ "vw_SubstrateBE_MemoryRawData::count": 54599306,
+ "vw_SubstrateBE_Demand_Memory_Region::count": 0,
+ "vw_SubstrateBE_Demand_Memory_Forest::count": 0
+}

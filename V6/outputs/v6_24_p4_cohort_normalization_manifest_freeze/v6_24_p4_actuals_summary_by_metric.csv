@@ -1,0 +1,5 @@
+metric,series,unique_keys,actuals_rows,min_date,max_date,min_obs_per_series,max_obs_per_series,duplicate_rows_removed,has_source_forecast_baseline,has_15_model_backtests,viewer_visible_now,p5_required,caveat
+HDD,50,46,10687,2025-05-03,2026-07-19,75,360,0,FALSE,TRUE,TRUE,FALSE,"None. Actuals, all 15 governed backtests and forecast already local."
+SSD,50,50,6500,2026-04-13,2026-08-22,130,130,50,TRUE (LVWE + LVNE),FALSE,FALSE,TRUE,AGGREGATED_WINDOW_ACTUALS (rolling window 1-7 days); 15 governed model backtests DO NOT exist yet; must be generated in P5
+CPU,20,10,11228,2022-01-04,2023-07-20,556,562,0,FALSE,FALSE,FALSE,TRUE,"STALE_ACTUALS_SOURCE, latest date 2023-07-20; 15 governed model backtests DO NOT exist yet; must be generated in P5"
+IOPS,20,10,20501,2020-06-23,2023-07-20,429,1103,0,FALSE,FALSE,FALSE,TRUE,"STALE_ACTUALS_SOURCE, latest date 2023-07-20; 15 governed model backtests DO NOT exist yet; must be generated in P5"

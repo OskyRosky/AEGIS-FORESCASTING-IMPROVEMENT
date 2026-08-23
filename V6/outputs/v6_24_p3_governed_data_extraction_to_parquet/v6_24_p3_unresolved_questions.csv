@@ -1,0 +1,4 @@
+question_id,metric,question,impact,recommendation,blocks_p4
+P3-UQ01,CPU/IOPS,Should the CPU and IOPS cohorts be reselected to span 20 distinct regions instead of 10 regions across 2 scenarios?,"MEDIUM. Affects how broad the demo looks geographically, not data validity.",Owner decision in P4. Reselection is cheap: the pools hold 30 and 29 keys per scenario.,NO
+P3-UQ02,SSD,Confirm keep-first deduplication of the 2026-04-22 duplicate is acceptable.,"LOW. The duplicate rows are byte-identical, so no information is lost.","P4 should dedupe on (series_key, series_date) and record the row delta in its manifest.",NO
+P3-UQ03,CPU/IOPS,Do CPU and IOPS need an external forecast baseline for the MVP?,MEDIUM. SSD has two; CPU and IOPS have none.,"Accept for the MVP and state it in the Viewer, or source a baseline later.",NO

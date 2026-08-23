@@ -1,0 +1,88 @@
+[15:18:18] P5 FULL RUN START
+[15:18:18] cohort: 140 series | P5 workload: 90 non-HDD series
+[15:18:19] prepared 90 series | total valid origins 916
+[15:18:19] building SMLP-TCN pooled global models across all 90 series...
+[15:18:22] 11 pooled models built (0.1m)
+[15:18:22] === PHASE A START | 12 models | batch size 10 series ===
+[15:18:22] BATCH START SSD_A_01 | 10 series x 12 models
+[15:18:51] BATCH END   SSD_A_01 | rows=36,000 | failures=0 | 28.8s | cumulative 120/1350
+[15:18:51] BATCH START SSD_A_02 | 10 series x 12 models
+[PROGRESS] P5 10% | elapsed=0.6m | eta=5.5m | metric=SSD | batch=SSD_A_02 | model_series=135/1350 | rows=40500 | failures=0
+[15:19:14] BATCH END   SSD_A_02 | rows=36,000 | failures=0 | 23.5s | cumulative 240/1350
+[15:19:14] BATCH START SSD_A_03 | 10 series x 12 models
+[PROGRESS] P5 20% | elapsed=1.1m | eta=4.3m | metric=SSD | batch=SSD_A_03 | model_series=270/1350 | rows=81000 | failures=0
+[15:19:41] BATCH END   SSD_A_03 | rows=36,000 | failures=0 | 27.0s | cumulative 360/1350
+[15:19:41] BATCH START SSD_A_04 | 10 series x 12 models
+[PROGRESS] P5 30% | elapsed=1.6m | eta=3.7m | metric=SSD | batch=SSD_A_04 | model_series=405/1350 | rows=121500 | failures=0
+[15:20:11] BATCH END   SSD_A_04 | rows=36,000 | failures=0 | 29.3s | cumulative 480/1350
+[15:20:11] BATCH START SSD_A_05 | 10 series x 12 models
+[PROGRESS] P5 40% | elapsed=2.1m | eta=3.2m | metric=SSD | batch=SSD_A_05 | model_series=540/1350 | rows=162000 | failures=0
+[15:20:39] BATCH END   SSD_A_05 | rows=36,000 | failures=0 | 28.0s | cumulative 600/1350
+[15:20:39] BATCH START CPU_A_01 | 10 series x 12 models
+[PROGRESS] P5 50% | elapsed=2.6m | eta=2.6m | metric=CPU | batch=CPU_A_01 | model_series=675/1350 | rows=202491 | failures=0
+[15:21:15] BATCH END   CPU_A_01 | rows=35,964 | failures=0 | 36.4s | cumulative 720/1350
+[15:21:15] BATCH START CPU_A_02 | 10 series x 12 models
+[PROGRESS] P5 60% | elapsed=3.3m | eta=2.2m | metric=CPU | batch=CPU_A_02 | model_series=810/1350 | rows=242928 | failures=0
+[15:21:49] BATCH END   CPU_A_02 | rows=35,964 | failures=0 | 33.5s | cumulative 840/1350
+[15:21:49] BATCH START IOPS_A_01 | 10 series x 12 models
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+[PROGRESS] P5 70% | elapsed=3.9m | eta=1.7m | metric=IOPS | batch=IOPS_A_01 | model_series=945/1350 | rows=285090 | failures=0
+[15:22:18] BATCH END   IOPS_A_01 | rows=37,992 | failures=0 | 29.6s | cumulative 960/1350
+[15:22:18] BATCH START IOPS_A_02 | 10 series x 12 models
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+C:\Users\oscarau\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\statsmodels\tsa\holtwinters\model.py:903: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+[PROGRESS] P5 80% | elapsed=4.6m | eta=1.1m | metric=IOPS | batch=IOPS_A_02 | model_series=1080/1350 | rows=327912 | failures=0
+[15:22:53] BATCH END   IOPS_A_02 | rows=37,992 | failures=0 | 35.0s | cumulative 1080/1350
+[15:22:53] === PHASE B START | 3 models | batch size 5 series ===
+[15:22:53] BATCH START SSD_B_01 | 5 series x 3 models
+[15:22:56] BATCH END   SSD_B_01 | rows=4,500 | failures=0 | 2.6s | cumulative 1095/1350
+[15:22:56] BATCH START SSD_B_02 | 5 series x 3 models
+[15:22:58] BATCH END   SSD_B_02 | rows=4,500 | failures=0 | 2.5s | cumulative 1110/1350
+[15:22:58] BATCH START SSD_B_03 | 5 series x 3 models
+[15:23:01] BATCH END   SSD_B_03 | rows=4,500 | failures=0 | 2.6s | cumulative 1125/1350
+[15:23:01] BATCH START SSD_B_04 | 5 series x 3 models
+[15:23:04] BATCH END   SSD_B_04 | rows=4,500 | failures=0 | 2.9s | cumulative 1140/1350
+[15:23:04] BATCH START SSD_B_05 | 5 series x 3 models
+[15:23:07] BATCH END   SSD_B_05 | rows=4,500 | failures=0 | 2.6s | cumulative 1155/1350
+[15:23:07] BATCH START SSD_B_06 | 5 series x 3 models
+[15:23:09] BATCH END   SSD_B_06 | rows=4,500 | failures=0 | 2.5s | cumulative 1170/1350
+[15:23:09] BATCH START SSD_B_07 | 5 series x 3 models
+[15:23:12] BATCH END   SSD_B_07 | rows=4,500 | failures=0 | 2.9s | cumulative 1185/1350
+[15:23:12] BATCH START SSD_B_08 | 5 series x 3 models
+[15:23:14] BATCH END   SSD_B_08 | rows=4,500 | failures=0 | 2.4s | cumulative 1200/1350
+[15:23:14] BATCH START SSD_B_09 | 5 series x 3 models
+[PROGRESS] P5 90% | elapsed=5.0m | eta=0.6m | metric=SSD | batch=SSD_B_09 | model_series=1215/1350 | rows=368412 | failures=0
+[15:23:17] BATCH END   SSD_B_09 | rows=4,500 | failures=0 | 2.8s | cumulative 1215/1350
+[15:23:17] BATCH START SSD_B_10 | 5 series x 3 models
+[15:23:20] BATCH END   SSD_B_10 | rows=4,500 | failures=0 | 2.8s | cumulative 1230/1350
+[15:23:20] BATCH START CPU_B_01 | 5 series x 3 models
+[15:23:25] BATCH END   CPU_B_01 | rows=4,500 | failures=0 | 5.1s | cumulative 1245/1350
+[15:23:25] BATCH START CPU_B_02 | 5 series x 3 models
+[15:23:30] BATCH END   CPU_B_02 | rows=4,491 | failures=0 | 5.2s | cumulative 1260/1350
+[15:23:30] BATCH START CPU_B_03 | 5 series x 3 models
+[15:23:35] BATCH END   CPU_B_03 | rows=4,500 | failures=0 | 5.3s | cumulative 1275/1350
+[15:23:35] BATCH START CPU_B_04 | 5 series x 3 models
+[15:23:40] BATCH END   CPU_B_04 | rows=4,491 | failures=0 | 4.8s | cumulative 1290/1350
+[15:23:40] BATCH START IOPS_B_01 | 5 series x 3 models
+[15:23:48] BATCH END   IOPS_B_01 | rows=4,755 | failures=0 | 7.5s | cumulative 1305/1350
+[15:23:48] BATCH START IOPS_B_02 | 5 series x 3 models
+[15:23:55] BATCH END   IOPS_B_02 | rows=4,743 | failures=0 | 7.2s | cumulative 1320/1350
+[15:23:55] BATCH START IOPS_B_03 | 5 series x 3 models
+[15:24:02] BATCH END   IOPS_B_03 | rows=4,755 | failures=0 | 6.9s | cumulative 1335/1350
+[15:24:02] BATCH START IOPS_B_04 | 5 series x 3 models
+[PROGRESS] P5 100% | elapsed=5.8m | eta=0.0m | metric=IOPS | batch=IOPS_B_04 | model_series=1350/1350 | rows=409890 | failures=0
+[15:24:09] BATCH END   IOPS_B_04 | rows=4,743 | failures=0 | 6.6s | cumulative 1350/1350
+[PROGRESS] P5 100% | elapsed=5.8m | eta=0.0m | metric=ALL | batch=COMPLETE | model_series=1350/1350 | rows=409890 | failures=0
+[15:24:09] GENERATION COMPLETE | 1350/1350 model-series | 409,890 rows | 5.85m | 0 failures
+[15:24:09] ledgers written; generation phase done

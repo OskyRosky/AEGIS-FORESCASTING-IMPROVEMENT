@@ -1,0 +1,6 @@
+metric,series,champions_changed,no_signal_changes,trailing_zero_changes,signal_present_changes,unchanged,result
+CPU,20,0,0,0,0,20,NO_CHANGE_REQUIRED
+HDD,50,15,15,0,0,35,CORRECTED
+IOPS,20,0,0,0,0,20,NO_CHANGE_REQUIRED
+SSD,50,1,0,1,0,49,CORRECTED
+ALL,140,16,15,1,0,124,CORRECTED

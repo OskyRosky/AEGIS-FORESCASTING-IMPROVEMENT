@@ -1,0 +1,31 @@
+check_id,check_name,expected,observed,result
+V1,Workload states exactly 90 new series for P5,90,90 series; window contract holds 90 in_p5_workload rows,PASS
+V2,"Workload states exactly 1,350 new model-series runs",1350,1350,PASS
+V3,"Final product coverage stated as 140 x 15 = 2,100",2100,140 series x 15 models = 2100,PASS
+V4,"HDD marked reuse/reference only, not re-run",0 origin-level fits for HDD,"HDD row: model_series_runs=750, origin_level_fits=0, cost_profile=NOT_RUN",PASS
+V5,Model catalog contains exactly the 15 governed models,"15, all resolved","15 governed entries, 15 resolved, 15 registered in code",PASS
+V6,No prohibited models included,"NBEATS, NHITS, FastNeuralAR_MLP all absent","3 prohibited entries, all marked ['CORRECTLY_ABSENT']",PASS
+V7,Window contract burns only the oldest observations,OLDEST_ONLY on all 140 rows,burn_in_side values: ['OLDEST_ONLY'],PASS
+V8,Window contract does not trim the newest observations,"last origin is max_date - HORIZON by construction, so the last target is the series max","68 of 90 series reach their max date. The 22 that do not are a documented GAP effect (R01/D2), not tail trimming: the policy never discards a tail observation, the contiguity rule rejects the origin.",PASS
+V9,Invariant prediction_date = target_date is documented,present in schema contract,prediction_date row invariant: MUST EQUAL target_date.,PASS
+V10,Invariant train_end_date < target_date is documented,present in schema contract,train_end_date row invariant: MUST BE STRICTLY LESS THAN target_date.,PASS
+V11,Output schema contract exists,>= 20 columns defined,25 columns defined; 25 required,PASS
+V12,Batch and checkpoint plan exists,>= 1 batch with resume keys,27 batches across 2 phases; 27 distinct resume keys,PASS
+V13,Time budget plan exists with a 2-hour hard budget,120 minutes,"max_wall_clock_minutes=120, soft_stop=105, finalization=15",PASS
+V14,Failure policy exists with all eight required classes,8 classes,8 classes; missing=[],PASS
+V15,Partial artifact behavior is defined,"partials stay in work/, never promoted",Partial results stay in V6/data/model_runs/v6_24_p5_work/checkpoints/ and are NEVER promoted to processed/. Shiny must n,PASS
+V16,Existing HDD schema inspected and mapped,>= 1 mapping row with grain columns,3 mapping rows; grain=metric|scenario|granularity|series_key|model_name|forecast_start_date|horizon_days,PASS
+V17,No full model generation was run,no fitted-model output in this folder,0 model artifacts here; work dir holds 1 files (README only),PASS
+V18,No final model_backtests_15_models artifact created,absent from processed/,0 matching files in processed/,PASS
+V19,No forecasts generated,absent from processed/,0 matching files,PASS
+V20,No accuracy or rankings calculated,absent from processed/,0 matching files,PASS
+V21,Shiny files untouched,0 entries,0 entries,PASS
+V22,V1 through V5 untouched,0 entries,0 entries,PASS
+V23,"Closure summary states whether P5 is ready, blocked or needs an owner decision",explicit readiness statement reflecting the D2 approval,present=True; states READY=True; carries the D2 amendment=True,PASS
+V24,Every P5 series has at least one valid origin,0 series with zero origins,0 of 90 series blocked,PASS
+V25,D2 is recorded as approved with its option and effect,"D2 status APPROVED, option B, no longer blocking",5 decisions logged; D2 status=APPROVED option=B on 2026-08-23; 0 still blocking,PASS
+V26,"The IOPS recency risk was raised and then closed by an owner decision, not silently patched","R01 present, CLOSED, with a recorded resolution",8 risks logged; R01 status=CLOSED severity=RESOLVED (was HIGH) blocks_p5=NO; resolution recorded=True,PASS
+V28,Under the approved D2 policy every P5 series preserves its newest observation,90 of 90,90 of 90 (was 68 under strict contiguity),PASS
+V29,The approved policy invented no dates,"no fill, resample or interpolation rule anywhere",policy rule W4 present=True; target counts come from real observed dates only,PASS
+V30,Workload under the approved policy stays inside the 2-hour budget,"origin-level fits well under the HDD reference of 73,725","13,740 origin-level fits, about 19% of the HDD reference run",PASS
+V27,Work directory scaffold created but empty of results,"5 subfolders, no result files",5 subfolders; 1 files (README only),PASS

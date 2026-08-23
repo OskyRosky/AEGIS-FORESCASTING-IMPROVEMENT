@@ -1,0 +1,2469 @@
+{
+ "SSD": [
+  {
+   "schema_name": "dbo",
+   "object_name": "CADW_PhoenixDagsHDD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-11-08 03:09:44.163000",
+   "modify_date": "2024-11-08 03:09:44.163000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_SSD_Demand_Region_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:56.407000",
+   "modify_date": "2024-04-11 03:19:59.863000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_SSD_Demand_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:55.943000",
+   "modify_date": "2024-04-11 03:20:04.513000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_SSDMCDB_Demand_Region_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:57.310000",
+   "modify_date": "2024-04-11 03:20:10.760000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_SSDMCDB_Demand_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:56.843000",
+   "modify_date": "2024-04-11 03:20:18.020000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_SSDPhoenixDB_Demand_Region_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:58.167000",
+   "modify_date": "2024-04-11 03:21:56.350000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_SSDPhoenixDB_Demand_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:57.760000",
+   "modify_date": "2024-04-11 03:22:44.763000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_SSD_Demand_Forecast_Scenarios",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-24 06:06:41.837000",
+   "modify_date": "2024-08-05 07:16:46.080000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "dbo.forecast_substrateBE_SSD_Phoenix_Inorganic_ADSSignal",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-21 23:53:09.277000",
+   "modify_date": "2026-08-21 23:53:09.293000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SSD_Forecast",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 19:07:45.870000",
+   "modify_date": "2022-03-23 22:48:38.930000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SSD_Sellable",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-15 19:51:11.637000",
+   "modify_date": "2022-03-15 20:32:57.427000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SSD_Supply",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 20:40:41.500000",
+   "modify_date": "2022-03-23 22:52:14.880000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSD_Demand",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-17 10:00:45.213000",
+   "modify_date": "2024-01-17 10:00:45.230000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSD_Demand_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 07:57:56.100000",
+   "modify_date": "2023-09-13 06:50:51.880000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSD_Demand_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 08:01:02.293000",
+   "modify_date": "2023-09-13 06:50:31.673000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSDMCDB_Demand",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-17 10:04:52.483000",
+   "modify_date": "2024-01-17 10:04:52.493000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSDMCDB_Demand_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-15 05:52:26.653000",
+   "modify_date": "2024-01-15 05:52:26.683000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSDPhoenixDB_Demand",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-17 10:06:55.677000",
+   "modify_date": "2024-01-17 10:06:55.703000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_SSDPhoenixDB_Demand_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-15 05:57:56.380000",
+   "modify_date": "2024-01-15 05:57:56.413000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_Greenland_HDD_SSD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-05-11 22:00:51.930000",
+   "modify_date": "2021-05-11 22:00:51.960000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_agent_SSD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-05-22 19:23:50.220000",
+   "modify_date": "2026-05-22 19:23:50.237000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_agent_SSD_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-05-22 19:23:50.713000",
+   "modify_date": "2026-05-22 19:23:50.737000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_inorganic_ssd",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-23 23:56:42.143000",
+   "modify_date": "2024-07-23 23:56:42.160000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_ssd",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-10 07:20:48.923000",
+   "modify_date": "2022-02-10 07:20:48.937000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_SSD_Phoenix_Inorganic_ADSSignal",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-21 23:37:43.413000",
+   "modify_date": "2026-08-21 23:37:43.427000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_SSD_Phoenix_Organic",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-03-12 04:57:57.477000",
+   "modify_date": "2026-03-12 04:57:57.503000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_ssd_phx_lvne_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-04-09 20:33:19.300000",
+   "modify_date": "2026-04-09 20:33:19.313000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_ssd_phx_lvwe_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-04-09 20:32:55.350000",
+   "modify_date": "2026-04-09 20:32:55.363000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_ssd_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-06-15 03:21:28.773000",
+   "modify_date": "2023-06-15 03:21:28.787000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_SSD_TotalForecast",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-08 23:27:59.637000",
+   "modify_date": "2024-03-09 00:04:41.313000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_SSD_TotalForecast_UserScenario",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-09 00:36:44.760000",
+   "modify_date": "2024-03-09 00:36:44.773000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Greenland_SSD_HDD_Forest_Daily_Raw",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-06-18 02:17:55.597000",
+   "modify_date": "2021-06-18 02:17:55.610000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Greenland_SSD_Region_Fcst_Result",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-06-22 08:35:27.040000",
+   "modify_date": "2021-06-22 08:35:27.053000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "HLC_BE_SSDLimit",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-09-22 07:37:16.507000",
+   "modify_date": "2021-09-22 07:37:16.523000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "M2CP_Demand_SSD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-17 21:08:50.920000",
+   "modify_date": "2022-04-28 00:11:54.060000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "MA_PhoenixOnlyStamps",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-02-26 09:18:47.640000",
+   "modify_date": "2024-10-25 07:12:36.120000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SemanticFabric_PhoenixDBCountByForest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-15 06:23:36.197000",
+   "modify_date": "2024-07-15 06:23:36.207000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SemanticFabric_PhoenixUsageByForest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-06-27 11:49:28.210000",
+   "modify_date": "2024-06-27 11:49:28.227000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SM_MLBPhoenixStatsGlobal",
+   "type_desc": "USER_TABLE",
+   "create_date": "2025-10-23 09:06:01.323000",
+   "modify_date": "2025-10-23 09:06:01.323000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_Ssd_MCDB_ForestSKU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-07-13 22:30:32.793000",
+   "modify_date": "2026-07-13 22:30:32.807000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_Ssd_MCDB_ForestSKU_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-07-22 22:40:57.390000",
+   "modify_date": "2026-07-22 22:40:57.407000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_Ssd_MCDB_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-07-21 17:02:14.967000",
+   "modify_date": "2026-07-21 17:02:14.980000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_Ssd_MCDB_Region_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-07-23 20:57:38.767000",
+   "modify_date": "2026-07-23 20:57:38.783000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_SSDPhoenix",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-18 00:27:41.240000",
+   "modify_date": "2026-08-18 00:27:41.253000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_SSDPhoenix_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:12:18.510000",
+   "modify_date": "2026-08-20 20:12:18.523000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_SSD_Demand_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-11-08 08:41:56.953000",
+   "modify_date": "2021-11-08 08:41:56.970000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_Ssd_MCDB_ForecastForestSKU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-11-07 07:15:43.307000",
+   "modify_date": "2023-11-07 07:15:43.320000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_Ssd_MCDB_ForecastRegion",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-11-20 03:10:40.053000",
+   "modify_date": "2023-11-20 03:10:40.103000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_SSD_MCDB_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-12 19:24:59.050000",
+   "modify_date": "2024-01-12 19:24:59.083000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_SSD_Phoenix_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-12 19:26:15.740000",
+   "modify_date": "2024-01-12 19:26:15.770000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_Ssd_PhoenixDB_ForecastForest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-10-25 08:01:25.580000",
+   "modify_date": "2023-10-25 08:01:25.597000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_Ssd_PhoenixDB_ForecastRegion",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-11-21 06:31:26.010000",
+   "modify_date": "2023-11-21 06:31:26.040000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_SSD_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:39:12.507000",
+   "modify_date": "2022-02-28 08:39:12.523000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_SsdForecastForestSKU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-08-01 03:26:01.630000",
+   "modify_date": "2023-08-01 03:26:01.643000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_SsdForecastRegion",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-07-20 07:14:36.833000",
+   "modify_date": "2023-07-20 07:14:36.863000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_DemandPlan_SubstrateBE_SSD_Demand",
+   "type_desc": "VIEW",
+   "create_date": "2024-01-19 21:08:54.583000",
+   "modify_date": "2024-01-19 21:08:54.583000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_DemandPlan_SubstrateBE_SSD_Demand_Region",
+   "type_desc": "VIEW",
+   "create_date": "2024-01-19 21:05:26.680000",
+   "modify_date": "2024-01-19 21:12:18.750000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_HLC_GCyclesPerPhoenixTBPerDay",
+   "type_desc": "VIEW",
+   "create_date": "2025-04-24 06:54:30.207000",
+   "modify_date": "2025-09-08 08:37:23.157000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_HLC_GCyclesPerPhoenixTBPerDayPerForest",
+   "type_desc": "VIEW",
+   "create_date": "2025-07-03 05:33:41.473000",
+   "modify_date": "2025-09-08 08:38:24.673000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenix_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:24:27.573000",
+   "modify_date": "2026-05-26 16:01:01.220000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenix_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:34:38.557000",
+   "modify_date": "2026-05-26 16:01:58"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:24:54.900000",
+   "modify_date": "2026-05-26 16:01:09.803000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:35:06.250000",
+   "modify_date": "2026-05-26 16:02:07.127000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenix_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:30:38.620000",
+   "modify_date": "2026-05-26 16:00:42.447000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenix_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:35:34.420000",
+   "modify_date": "2026-05-26 16:01:38.440000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenixFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:31:07.137000",
+   "modify_date": "2026-05-26 16:00:52.820000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenixFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:35:59.287000",
+   "modify_date": "2026-05-26 16:01:48.357000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Ssd_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-04-14 21:39:49.130000",
+   "modify_date": "2026-04-14 21:39:49.130000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Ssd_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-04-14 21:39:57.430000",
+   "modify_date": "2026-04-14 21:39:57.430000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_SsdMcdb_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:31:34.400000",
+   "modify_date": "2026-05-22 00:35:37.493000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_SsdMcdb_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:36:28.017000",
+   "modify_date": "2026-05-15 23:36:28.017000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_SsdPhoenix_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:32:00.310000",
+   "modify_date": "2026-05-22 00:35:37.500000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_SsdPhoenix_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:36:55.110000",
+   "modify_date": "2026-05-15 23:36:55.110000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Demand_Actual_Forecast",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-06 02:08:20.200000",
+   "modify_date": "2023-07-06 02:08:20.200000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Demand_Supply_Region",
+   "type_desc": "VIEW",
+   "create_date": "2024-01-11 20:33:04.087000",
+   "modify_date": "2024-01-11 20:33:04.087000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_Efficiency_Changes",
+   "type_desc": "VIEW",
+   "create_date": "2023-04-20 03:52:14.890000",
+   "modify_date": "2023-06-23 02:35:55.867000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_Efficiencys",
+   "type_desc": "VIEW",
+   "create_date": "2023-08-28 08:22:06.867000",
+   "modify_date": "2024-02-08 23:53:14.750000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_Forecast_With_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-14 02:54:38.443000",
+   "modify_date": "2023-09-14 02:54:38.443000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_Forecast_With_Perturbation_old",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-14 02:52:01.270000",
+   "modify_date": "2023-09-14 02:52:01.270000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_Forest_Efficiencys",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-07 02:13:36.950000",
+   "modify_date": "2023-11-15 03:12:18.467000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Latest_Total_Forecast_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-07 07:35:22.967000",
+   "modify_date": "2023-09-14 03:29:15.600000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Latest_Total_Forecast_Forest_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-07 07:53:43.877000",
+   "modify_date": "2023-09-07 07:53:43.877000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Latest_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-06 07:30:31.637000",
+   "modify_date": "2023-09-19 09:10:17.877000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-06 08:24:13.493000",
+   "modify_date": "2023-09-06 08:24:13.493000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCDB_Demand_Supply_Region",
+   "type_desc": "VIEW",
+   "create_date": "2024-01-11 23:25:04.913000",
+   "modify_date": "2024-01-11 23:25:04.913000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2023-10-31 08:38:26.230000",
+   "modify_date": "2023-12-05 09:41:16.670000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Forest_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-01 01:51:46.273000",
+   "modify_date": "2024-01-30 06:08:31.517000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-22 09:09:00.217000",
+   "modify_date": "2023-11-22 09:09:00.217000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-28 03:03:21.337000",
+   "modify_date": "2023-12-05 09:28:56.477000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_MCDB_Region_Efficiencys",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-22 08:17:48.067000",
+   "modify_date": "2023-11-22 08:17:48.067000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCPhoenixDB_Latest_Total_Forecast_Forest_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-07 07:43:19.280000",
+   "modify_date": "2023-11-07 07:43:19.280000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_MCPhoenixDB_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-28 03:15:17.130000",
+   "modify_date": "2023-11-28 03:15:17.130000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_PhoenixDB_Demand_Supply_Region",
+   "type_desc": "VIEW",
+   "create_date": "2024-01-11 23:31:23.827000",
+   "modify_date": "2024-01-11 23:31:23.827000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2023-10-26 05:49:47.897000",
+   "modify_date": "2024-08-06 22:45:37.593000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Forest_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-10-26 09:39:35.473000",
+   "modify_date": "2024-03-04 21:02:04.723000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-27 08:51:39.243000",
+   "modify_date": "2023-11-27 08:51:39.243000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-28 03:08:57.473000",
+   "modify_date": "2023-12-05 09:30:07.660000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_PhoenixDB_Region_Efficiencys",
+   "type_desc": "VIEW",
+   "create_date": "2023-11-27 08:44:31.050000",
+   "modify_date": "2024-08-14 06:46:59.420000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_Region_Efficiencys",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-06 06:12:11.637000",
+   "modify_date": "2023-11-16 06:49:05.400000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Region_Env_Forecast_Accuracy",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-27 09:14:48.670000",
+   "modify_date": "2023-06-27 09:14:48.670000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_SSD_Region_Env_Forecast_Accuracy_for_HotBuffer",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-27 09:25:32.813000",
+   "modify_date": "2023-07-03 08:21:55.520000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ssd_SKURatio",
+   "type_desc": "VIEW",
+   "create_date": "2023-08-28 07:39:09.010000",
+   "modify_date": "2023-08-28 07:39:09.010000"
+  }
+ ],
+ "CPU": [
+  {
+   "schema_name": "dbo",
+   "object_name": "Cosmic_Service_vCore_Prod_Forecast_Metric",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-05-05 05:24:41.783000",
+   "modify_date": "2023-05-05 05:24:41.820000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_CPU_Demand_Region_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:43:31.517000",
+   "modify_date": "2024-04-11 03:19:27.303000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_CPU_Demand_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:40:22.290000",
+   "modify_date": "2024-04-11 03:19:35.203000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_CPU_Forecast",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 19:02:24.753000",
+   "modify_date": "2022-03-23 22:48:20.907000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_CPU_Sellable",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-15 19:51:25.333000",
+   "modify_date": "2022-03-15 20:32:42.493000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_CPU_Supply",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 20:45:43.420000",
+   "modify_date": "2022-03-23 22:52:32.303000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_CPU_Demand",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-09 05:32:28.990000",
+   "modify_date": "2024-01-09 07:30:42.230000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_CPU_Demand_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 06:58:42.213000",
+   "modify_date": "2023-09-13 06:50:59.340000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_CPU_Demand_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 07:05:40.427000",
+   "modify_date": "2023-09-13 06:50:26.313000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_exo_cpu_Greenland_organic",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-10-24 06:03:40.870000",
+   "modify_date": "2022-10-24 06:03:40.883000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_prod_JAWS_vCore_accuracy_metric",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-12-06 21:50:19.060000",
+   "modify_date": "2023-12-06 21:50:19.060000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_prod_JAWS_vCore_breakdown",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-10-05 20:34:36.900000",
+   "modify_date": "2023-10-05 20:34:36.900000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_prod_JAWS_vCore_breakdown_perturbation",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-11-10 04:40:58.690000",
+   "modify_date": "2023-11-10 04:40:58.690000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_agent_CPU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-05-22 19:23:48.877000",
+   "modify_date": "2026-05-22 19:23:48.890000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_agent_CPU_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-05-22 19:23:49.677000",
+   "modify_date": "2026-05-22 19:23:49.690000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_JAWS_vCore",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-10-31 22:23:45.303000",
+   "modify_date": "2023-10-31 22:23:45.303000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_JAWS_vCore_breakdown",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-10-31 22:48:16.453000",
+   "modify_date": "2023-10-31 22:48:16.453000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_cpu",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-04-29 22:07:13.240000",
+   "modify_date": "2022-05-17 22:36:23.180000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_cpu_actual_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-07-19 20:40:47.947000",
+   "modify_date": "2023-07-19 20:40:47.967000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_cpu_byDB_forest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-02-27 01:38:01.143000",
+   "modify_date": "2026-02-27 01:38:01.157000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_cpu_byDB_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-02-27 01:38:22.550000",
+   "modify_date": "2026-02-27 01:38:22.570000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_cpu_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-06-15 07:08:22.653000",
+   "modify_date": "2023-06-15 07:08:22.683000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_cpu_region_old",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-07-31 21:17:09.410000",
+   "modify_date": "2023-07-31 21:17:09.473000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "FutureCPUIOPSSellable_byRegion",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-10-28 03:47:34.527000",
+   "modify_date": "2022-09-15 18:21:47.463000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "JAWS_Azure_vCore_AZSC_Ratio",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-03-23 06:55:00.253000",
+   "modify_date": "2023-03-23 06:55:00.270000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "JAWS_Azure_vCore_cleaned",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-10-05 19:34:41.557000",
+   "modify_date": "2023-10-05 19:34:41.570000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "JAWS_Azure_vCore_ServiceGroup_AZSC_Ratio",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-10-05 19:55:45.257000",
+   "modify_date": "2023-10-05 19:55:45.270000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "M2CP_Demand_CPU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-17 21:08:45",
+   "modify_date": "2022-04-28 00:11:30.367000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "NRT_AZSC_CPU_Forecast",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-04-11 09:35:10.363000",
+   "modify_date": "2024-04-11 09:35:10.377000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "OS_OSTSCpuUtilizationData",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-06-25 06:29:00.237000",
+   "modify_date": "2024-06-25 06:29:00.253000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "PCM_StoreCPUms",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-09-02 10:45:10.963000",
+   "modify_date": "2022-09-02 10:45:10.963000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_CPU_Efficiency_Changes",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-08-05 20:14:53.833000",
+   "modify_date": "2022-07-12 21:40:08.573000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_CPU_Future_Supply",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-08-05 23:37:55.453000",
+   "modify_date": "2021-11-03 08:33:48.407000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_CPUConsumed_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-06-07 07:57:01.193000",
+   "modify_date": "2022-06-07 07:57:01.340000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_CPUEffi_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:40:17.700000",
+   "modify_date": "2022-02-28 08:40:17.713000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_CPUFailover_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:40:32.173000",
+   "modify_date": "2022-02-28 08:40:32.187000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_CPUFailoverEffi_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:40:44.620000",
+   "modify_date": "2022-02-28 08:40:44.633000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_CPU_Forest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-06 19:57:43.467000",
+   "modify_date": "2026-08-06 19:57:43.477000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_CPU_Forest_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:10:39.707000",
+   "modify_date": "2026-08-20 20:10:39.723000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_CPU_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-06 19:57:48.527000",
+   "modify_date": "2026-08-06 19:57:48.540000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_CPU_Region_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:10:56.590000",
+   "modify_date": "2026-08-20 20:10:56.603000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_Storage_CPU_IOPS_by_Forest_SKU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-09-15 19:57:44.010000",
+   "modify_date": "2021-11-03 08:14:46.607000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_CPUTime_Daily",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-01-16 04:53:25.443000",
+   "modify_date": "2021-01-16 04:53:27.320000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_CPUTime_Daily_ChatServiceAggregator",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-08-12 23:56:34.990000",
+   "modify_date": "2020-08-12 23:56:37.273000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_CPUTime_Daily_SettingsStore",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-08-13 00:15:29.340000",
+   "modify_date": "2020-08-13 00:15:32.363000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_CPUTime_Daily_TACO",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-08-13 01:27:53.473000",
+   "modify_date": "2020-08-13 01:27:56.517000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_CPUTime_Daily_WebHooks",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-08-13 00:49:21.723000",
+   "modify_date": "2020-08-13 00:49:24.410000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_CPUTime_PerMinute",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-05-01 21:45:16.100000",
+   "modify_date": "2020-05-01 21:45:17.917000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxAvg_CPUTime_Daily_ChatServiceAggregator",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-02-16 02:25:05.707000",
+   "modify_date": "2021-02-16 02:25:08.213000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxAvg_CPUTime_Daily_ChatServiceAggregator_AzSC",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-02-21 02:37:11.173000",
+   "modify_date": "2021-02-21 02:37:13.860000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxAvg_CPUTime_Daily_MT",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-10-21 23:12:15.983000",
+   "modify_date": "2020-10-21 23:12:17.847000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxAvg_CPUTime_Daily_MT_New",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-04-07 05:40:29.873000",
+   "modify_date": "2021-04-07 05:40:33.743000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxAvg_CPUTime_Daily_WebHooks",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-02-21 00:56:49.260000",
+   "modify_date": "2021-02-21 00:56:51.783000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxCount_CPU_Daily_Auth",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-10 22:15:04.290000",
+   "modify_date": "2022-03-10 22:19:06.843000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxCount_CPU_Daily_ChatServiceAggregator",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-02-21 02:37:07.723000",
+   "modify_date": "2021-02-21 02:37:09.957000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxCount_CPU_Daily_ChatServiceAggregator_AzSC",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-02-21 02:37:15.420000",
+   "modify_date": "2021-02-21 02:37:20.353000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxCount_CPU_Daily_MT",
+   "type_desc": "USER_TABLE",
+   "create_date": "2020-10-24 02:25:37.240000",
+   "modify_date": "2020-10-24 02:25:41.710000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxCount_CPU_Daily_MT_New",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-04-07 05:41:19.237000",
+   "modify_date": "2021-04-07 05:41:21.773000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Teams_MaxCount_CPU_Daily_WebHooks",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-02-21 00:56:53.203000",
+   "modify_date": "2021-02-21 00:56:55.717000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_DAG_CPU_Metrics",
+   "type_desc": "VIEW",
+   "create_date": "2025-04-28 07:10:28.470000",
+   "modify_date": "2025-08-28 07:58:07.793000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_DAG_CPU_Metrics_old",
+   "type_desc": "VIEW",
+   "create_date": "2025-07-15 06:13:41.817000",
+   "modify_date": "2025-07-15 06:13:41.817000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_Forecast_SubstrateBE_CPU",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-17 19:42:43.983000",
+   "modify_date": "2022-05-18 04:39:08.383000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_Future_Sellables_by_Region_CpuIops",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-28 04:04:36.707000",
+   "modify_date": "2023-01-23 23:33:40.570000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Demand_Actual_Forecast",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-23 21:48:49.800000",
+   "modify_date": "2023-07-23 21:57:37.320000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Demand_Supply_Cores",
+   "type_desc": "VIEW",
+   "create_date": "2023-08-03 05:54:26.257000",
+   "modify_date": "2023-08-08 22:42:43.297000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Demand_Supply_Region",
+   "type_desc": "VIEW",
+   "create_date": "2022-12-06 23:20:52.157000",
+   "modify_date": "2022-12-06 23:20:52.157000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Efficiencies",
+   "type_desc": "VIEW",
+   "create_date": "2022-07-14 16:39:30.920000",
+   "modify_date": "2022-12-06 19:57:25.300000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Forecast",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-29 22:05:04.703000",
+   "modify_date": "2023-06-15 22:09:11.783000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Forecast_Gap",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-26 08:03:16.550000",
+   "modify_date": "2023-07-13 21:24:47.877000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Forecast_with_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2021-11-10 22:45:51.317000",
+   "modify_date": "2024-06-10 17:23:08.403000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Forest_TTLs",
+   "type_desc": "VIEW",
+   "create_date": "2021-12-16 09:22:22.713000",
+   "modify_date": "2021-12-16 09:22:22.713000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Future_Supply",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-01 19:09:24.887000",
+   "modify_date": "2022-07-16 20:40:31.800000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_IOPS_Future_Supply",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-15 20:56:47.373000",
+   "modify_date": "2022-07-14 00:03:07.750000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Latest_Forecast_Perturbation_Forest-AggUpTo-Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-22 18:08:00.980000",
+   "modify_date": "2023-09-22 18:08:00.980000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Latest_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-03 23:01:37.400000",
+   "modify_date": "2023-09-20 22:33:08.423000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-04 02:10:53.970000",
+   "modify_date": "2024-01-23 02:07:28.437000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Limit_by_Forest_SKU",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-25 22:56:47.553000",
+   "modify_date": "2022-07-07 23:55:47.523000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Region_Env_Forecast_Accuracy",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-23 23:03:32.640000",
+   "modify_date": "2023-08-09 21:51:07.810000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Region_Env_Forecast_Accuracy_for_HotBuffer",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-24 03:21:43.453000",
+   "modify_date": "2023-08-09 22:29:12.853000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_SemanticIndex_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-20 22:12:34.570000",
+   "modify_date": "2023-09-20 22:12:34.570000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-23 01:22:33.467000",
+   "modify_date": "2023-07-23 01:22:33.467000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Cpu_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:23:41.603000",
+   "modify_date": "2026-05-26 16:00:26.207000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Cpu_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:33:40.303000",
+   "modify_date": "2026-05-26 16:01:19.527000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuBasilisk_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-17 23:58:39.040000",
+   "modify_date": "2026-03-17 23:58:39.040000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuBasilisk_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:02:57.197000",
+   "modify_date": "2026-03-26 22:09:24.167000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuBasiliskFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-17 23:58:41.387000",
+   "modify_date": "2026-03-17 23:58:41.387000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuBasiliskFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:02:59.157000",
+   "modify_date": "2026-03-26 22:09:48.600000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:24:04.680000",
+   "modify_date": "2026-05-26 16:00:34.587000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:34:08.643000",
+   "modify_date": "2026-05-26 16:01:28.597000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenix_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:24:27.573000",
+   "modify_date": "2026-05-26 16:01:01.220000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenix_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:34:38.557000",
+   "modify_date": "2026-05-26 16:01:58"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:24:54.900000",
+   "modify_date": "2026-05-26 16:01:09.803000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:35:06.250000",
+   "modify_date": "2026-05-26 16:02:07.127000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenix_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:30:38.620000",
+   "modify_date": "2026-05-26 16:00:42.447000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenix_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:35:34.420000",
+   "modify_date": "2026-05-26 16:01:38.440000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenixFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:31:07.137000",
+   "modify_date": "2026-05-26 16:00:52.820000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_CpuPhoenixFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:35:59.287000",
+   "modify_date": "2026-05-26 16:01:48.357000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_VCORE_HWUtilization",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-27 07:18:03.323000",
+   "modify_date": "2023-09-28 03:27:08.203000"
+  }
+ ],
+ "IOPS": [
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_IOPS_Demand_Region_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:55.533000",
+   "modify_date": "2024-04-11 03:19:50.313000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_IOPS_Demand_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:55.110000",
+   "modify_date": "2024-04-11 03:19:55.123000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_IOPS_Forecast",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 19:06:23.230000",
+   "modify_date": "2022-03-23 22:48:31.163000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_IOPS_Sellable",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-15 19:51:18.473000",
+   "modify_date": "2022-03-15 20:32:50.253000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_IOPS_Supply",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 20:43:39.767000",
+   "modify_date": "2022-03-23 22:52:40.547000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_IOPS_Demand",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-09 05:35:39.957000",
+   "modify_date": "2024-01-09 07:35:24.780000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_IOPS_Demand_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 07:41:51.297000",
+   "modify_date": "2023-09-13 06:43:18.910000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_IOPS_Demand_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 07:48:49.590000",
+   "modify_date": "2023-09-13 06:50:18.230000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_IOPS_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-05-03 03:09:31.483000",
+   "modify_date": "2021-05-03 03:09:31.530000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-09-10 20:37:05.240000",
+   "modify_date": "2022-05-10 22:26:53.707000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_actual_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-07-24 05:27:11.700000",
+   "modify_date": "2023-07-24 05:27:11.710000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_old",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-04-29 21:49:53.527000",
+   "modify_date": "2021-09-10 20:08:28.900000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_prod",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-05-09 20:58:23.200000",
+   "modify_date": "2022-05-12 23:19:56.613000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-06-16 21:26:58.737000",
+   "modify_date": "2023-06-16 21:26:58.757000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_region_old",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-07-31 21:24:36.637000",
+   "modify_date": "2023-07-31 21:24:36.647000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_test",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-05-11 21:59:41.400000",
+   "modify_date": "2022-05-11 23:00:48.027000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_iops_test2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-07-19 21:25:45.857000",
+   "modify_date": "2022-07-19 21:25:45.873000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_rops",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-02 20:11:38.173000",
+   "modify_date": "2022-03-02 20:11:38.190000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "FutureCPUIOPSSellable_byRegion",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-10-28 03:47:34.527000",
+   "modify_date": "2022-09-15 18:21:47.463000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "M2CP_Demand_IOPS",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-17 21:08:38.350000",
+   "modify_date": "2022-04-28 00:12:06.497000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_IOPS_Forest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-06 19:57:37.227000",
+   "modify_date": "2026-08-06 19:57:37.240000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_IOPS_Forest_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:11:44.800000",
+   "modify_date": "2026-08-20 20:11:44.813000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_IOPS_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-06 19:57:32.853000",
+   "modify_date": "2026-08-06 19:57:32.867000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_IOPS_Region_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:11:59.720000",
+   "modify_date": "2026-08-20 20:11:59.733000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_IOPS_Efficiency_Changes",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-09-13 05:04:26.293000",
+   "modify_date": "2022-07-12 18:59:51.580000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_IOPS_Future_Supply",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-09-13 05:31:20.893000",
+   "modify_date": "2022-05-04 00:00:31.437000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "substrateBE_iops_perturb_parameter",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-02 00:00:43.560000",
+   "modify_date": "2024-07-02 00:00:43.573000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "substrateBE_iops_perturbation_list",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-07-18 21:49:54.607000",
+   "modify_date": "2022-07-18 21:49:54.620000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_IOPSConsumed_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:41:45.103000",
+   "modify_date": "2022-02-28 08:41:45.117000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_IOPSEffi_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:41:31.017000",
+   "modify_date": "2022-02-28 08:41:31.030000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_IOPSFailover_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 12:17:46.770000",
+   "modify_date": "2022-02-28 12:17:46.800000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_IOPSFailoverEffi_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:41:03.680000",
+   "modify_date": "2022-02-28 08:41:03.710000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_M2CP_Rops_Smooth",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-09-16 12:21:33.683000",
+   "modify_date": "2022-09-16 12:21:33.710000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "substrateBE_SKU_DagIOPS",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-05 18:28:16.077000",
+   "modify_date": "2024-07-05 18:28:16.093000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "substrateBE_SKU_IOPS_DagMaxMountedDatabases",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-05 18:28:12.100000",
+   "modify_date": "2024-07-05 18:28:12.117000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "substrateBE_SKU_IOPS_Limit",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-07-05 18:28:08.183000",
+   "modify_date": "2024-07-05 18:28:08.200000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_Storage_CPU_IOPS_by_Forest_SKU",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-09-15 19:57:44.010000",
+   "modify_date": "2021-11-03 08:14:46.607000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_Forecast_SubstrateBE_IOPS",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-17 19:43:12.773000",
+   "modify_date": "2021-09-17 19:43:12.773000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_Future_Sellables_by_Region_CpuIops",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-28 04:04:36.707000",
+   "modify_date": "2023-01-23 23:33:40.570000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_CPU_IOPS_Future_Supply",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-15 20:56:47.373000",
+   "modify_date": "2022-07-14 00:03:07.750000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Iops_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:32:24.223000",
+   "modify_date": "2026-05-15 23:32:24.223000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Iops_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:37:19.547000",
+   "modify_date": "2026-05-15 23:37:19.547000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_IopsFailover_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:32:46.520000",
+   "modify_date": "2026-05-15 23:32:46.520000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_IopsFailover_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:37:44.777000",
+   "modify_date": "2026-05-15 23:37:44.777000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Demand_Actual_Forecast",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-24 05:52:42.500000",
+   "modify_date": "2023-07-24 05:52:42.500000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Demand_Supply_Region",
+   "type_desc": "VIEW",
+   "create_date": "2022-12-06 23:21:32.753000",
+   "modify_date": "2022-12-06 23:21:32.753000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Efficiencies",
+   "type_desc": "VIEW",
+   "create_date": "2022-07-14 16:37:22.390000",
+   "modify_date": "2022-07-14 16:50:07.180000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Forecast",
+   "type_desc": "VIEW",
+   "create_date": "2021-09-29 22:07:17.317000",
+   "modify_date": "2022-05-18 21:25:56.113000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Forecast_Gap",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-31 04:37:33.150000",
+   "modify_date": "2023-09-22 20:55:03.213000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Forecast_with_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2021-11-15 18:11:13.280000",
+   "modify_date": "2024-01-23 02:03:43.303000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Future_Supply",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-26 18:35:23.990000",
+   "modify_date": "2022-07-13 23:47:34.803000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Latest_Forecast_Perturbation_Forest-AggUpTo-Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-22 21:17:32.113000",
+   "modify_date": "2023-09-22 21:17:32.113000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Latest_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-04 02:32:35.677000",
+   "modify_date": "2023-09-04 02:32:35.677000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-09-04 03:14:02.960000",
+   "modify_date": "2024-01-23 02:08:49.287000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Limit_by_Forest_SKU",
+   "type_desc": "VIEW",
+   "create_date": "2021-10-26 18:09:37.700000",
+   "modify_date": "2023-02-13 06:13:42.430000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Region_Env_Forecast_Accuracy",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-24 06:02:00.100000",
+   "modify_date": "2023-08-09 22:32:39.513000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Region_Env_Forecast_Accuracy_for_HotBuffer",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-24 06:26:06.930000",
+   "modify_date": "2023-07-24 06:26:06.930000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_IOPS_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-07-24 05:47:59.960000",
+   "modify_date": "2023-07-24 05:47:59.960000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_Demand",
+   "type_desc": "VIEW",
+   "create_date": "2022-03-02 00:33:47.807000",
+   "modify_date": "2022-03-03 00:08:31.630000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_Forecast_with_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2022-03-02 21:19:36.637000",
+   "modify_date": "2022-08-04 00:27:35.243000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_Limits",
+   "type_desc": "VIEW",
+   "create_date": "2022-03-10 18:20:20.357000",
+   "modify_date": "2022-03-30 23:57:51.390000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_Limits_by_Dag",
+   "type_desc": "VIEW",
+   "create_date": "2022-03-10 21:59:29.087000",
+   "modify_date": "2022-03-10 22:48:57.193000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_Limits_by_Forest_Sku",
+   "type_desc": "VIEW",
+   "create_date": "2022-03-10 21:59:37.540000",
+   "modify_date": "2022-08-09 22:28:28.173000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_Telemetry",
+   "type_desc": "VIEW",
+   "create_date": "2022-02-28 18:21:08.357000",
+   "modify_date": "2022-08-09 19:16:16.750000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_ROPS_TimeSeries",
+   "type_desc": "VIEW",
+   "create_date": "2022-04-27 09:16:04.880000",
+   "modify_date": "2022-04-27 09:16:04.880000"
+  }
+ ],
+ "MEMORY": [
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Memory_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-17 23:58:43.247000",
+   "modify_date": "2026-03-17 23:58:43.247000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Memory_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:03:01.040000",
+   "modify_date": "2026-03-26 21:29:40.463000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_MemoryRawData",
+   "type_desc": "VIEW",
+   "create_date": "2023-08-24 18:33:07.527000",
+   "modify_date": "2023-08-24 18:33:07.527000"
+  }
+ ],
+ "HDD": [
+  {
+   "schema_name": "dbo",
+   "object_name": "CADW_PhoenixDagsHDD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-11-08 03:09:44.163000",
+   "modify_date": "2024-11-08 03:09:44.163000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_HDD_Demand_Region_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:59.027000",
+   "modify_date": "2024-04-11 03:19:40.730000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "CPG_DemandPlan_SubstrateBE_HDD_Demand_V2",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-03-22 23:48:58.613000",
+   "modify_date": "2024-04-11 03:19:45.430000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "dbo.forecast_substrateBE_hdd_region_metrics_test1",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-03-24 19:55:32.197000",
+   "modify_date": "2026-03-24 19:55:32.213000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_HDD_Forecast",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 17:57:16.800000",
+   "modify_date": "2022-03-23 20:56:37.177000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_HDD_Sellable",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-15 19:50:58.950000",
+   "modify_date": "2022-03-15 20:32:20.423000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_HDD_Supply",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-04 20:46:42.457000",
+   "modify_date": "2022-03-23 22:52:23.370000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_HDD_Demand",
+   "type_desc": "USER_TABLE",
+   "create_date": "2024-01-09 05:44:59.073000",
+   "modify_date": "2024-01-09 07:37:37.200000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_HDD_Demand_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 08:07:05.657000",
+   "modify_date": "2023-09-13 06:50:46.160000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "DemandPlan_SubstrateBE_HDD_Demand_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-07 08:19:01.973000",
+   "modify_date": "2023-09-13 06:50:37.310000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_Greenland_HDD_SSD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-05-11 22:00:51.930000",
+   "modify_date": "2021-05-11 22:00:51.960000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_agent_HDD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-05-22 19:23:47.883000",
+   "modify_date": "2026-05-22 19:23:47.897000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_staging_agent_HDD_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-05-22 19:23:48.400000",
+   "modify_date": "2026-05-22 19:23:48.413000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-01-10 06:50:02.063000",
+   "modify_date": "2022-01-10 07:20:47.743000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_accuracy",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-05-05 06:12:23.813000",
+   "modify_date": "2023-05-05 06:12:23.827000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_forest_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-04-09 20:32:26.510000",
+   "modify_date": "2026-04-09 20:32:26.523000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-06-19 21:46:25.633000",
+   "modify_date": "2023-06-19 21:46:25.653000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_region_metrics",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-04-09 20:23:15.320000",
+   "modify_date": "2026-04-09 20:23:15.337000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_region_metrics_test_bulk",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-03-24 21:21:25.023000",
+   "modify_date": "2026-03-24 21:21:25.130000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_region_staging",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-02-17 22:45:05.420000",
+   "modify_date": "2026-02-17 22:45:05.437000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_region_staging_raw",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-02-24 00:17:42.193000",
+   "modify_date": "2026-02-24 00:17:42.220000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "forecast_substrateBE_hdd_staging",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-02-17 22:44:39.373000",
+   "modify_date": "2026-02-17 22:44:39.390000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "Greenland_SSD_HDD_Forest_Daily_Raw",
+   "type_desc": "USER_TABLE",
+   "create_date": "2021-06-18 02:17:55.597000",
+   "modify_date": "2021-06-18 02:17:55.610000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "M2CP_Demand_HDD",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-03-17 21:08:30.167000",
+   "modify_date": "2022-04-28 00:11:42.907000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "PCM_StoreHDDIO",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-04-14 08:52:34.137000",
+   "modify_date": "2023-01-09 04:01:09.423000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_HDD_EDB_Forest",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-06 19:38:29.280000",
+   "modify_date": "2026-08-06 19:38:29.293000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_HDD_EDB_Forest_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:11:13.027000",
+   "modify_date": "2026-08-20 20:11:13.040000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_HDD_EDB_Region",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-06 19:38:25.183000",
+   "modify_date": "2026-08-06 19:38:25.197000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_DemandForecast_HDD_EDB_Region_Perturbed",
+   "type_desc": "USER_TABLE",
+   "create_date": "2026-08-20 20:11:24.480000",
+   "modify_date": "2026-08-20 20:11:24.493000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_Actual_Incremental_Growth",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-05-03 05:52:33.090000",
+   "modify_date": "2023-05-03 05:52:33.103000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_Forecast_Incremental_Growth",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-05-03 05:37:13.950000",
+   "modify_date": "2023-05-03 05:48:26.987000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_Forecast_Update_Event_Log",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-01-05 08:24:32.737000",
+   "modify_date": "2022-01-10 07:57:53.863000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_Multiplier_Perturbation_Adjustment",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-01-05 08:25:43.057000",
+   "modify_date": "2022-01-10 07:58:22.953000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_Overall_Forecast_Incremental_Growth",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-05-30 07:29:57.883000",
+   "modify_date": "2023-05-30 07:29:57.897000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_Perturbation_Adjustment",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-01-05 08:27:33.787000",
+   "modify_date": "2022-01-10 07:58:48.297000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-02-28 08:41:57.967000",
+   "modify_date": "2022-02-28 08:41:57.977000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_78",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:51:39.917000",
+   "modify_date": "2022-12-16 20:55:23.920000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_79",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:52:01.097000",
+   "modify_date": "2022-12-16 20:55:10.913000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_80",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:52:16.040000",
+   "modify_date": "2022-12-16 20:54:57.670000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_81",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:52:22.233000",
+   "modify_date": "2022-12-16 20:54:44.157000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_82",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:52:39.413000",
+   "modify_date": "2022-12-16 20:54:31.323000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_83",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:52:46.930000",
+   "modify_date": "2022-12-16 20:54:17.910000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_84",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:53:01.777000",
+   "modify_date": "2022-12-16 20:54:03.893000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_85",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:53:08.447000",
+   "modify_date": "2022-12-16 20:53:46.143000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_86",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:53:15.377000",
+   "modify_date": "2022-12-16 20:52:32.443000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_87",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:53:37.040000",
+   "modify_date": "2022-12-16 20:51:54.320000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_88",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:53:44.823000",
+   "modify_date": "2022-12-16 20:51:35.627000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_89",
+   "type_desc": "USER_TABLE",
+   "create_date": "2022-08-16 07:53:51.677000",
+   "modify_date": "2022-12-16 20:51:17.230000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_90",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-28 18:10:23.373000",
+   "modify_date": "2023-09-28 18:10:23.387000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_91",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-28 18:10:43.757000",
+   "modify_date": "2023-09-28 18:10:43.767000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_92",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-28 18:10:59.263000",
+   "modify_date": "2023-09-28 18:10:59.277000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_93",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-28 18:11:15.760000",
+   "modify_date": "2023-09-28 18:11:15.790000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HDD_TTL_Region_History_94",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-09-28 18:11:34.850000",
+   "modify_date": "2023-09-28 18:11:34.863000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "SubstrateBE_HddProdForecastRegion",
+   "type_desc": "USER_TABLE",
+   "create_date": "2023-07-13 23:01:54.783000",
+   "modify_date": "2023-07-13 23:01:54.797000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_Forecast_HDD_Aggregate_v2",
+   "type_desc": "VIEW",
+   "create_date": "2025-12-18 17:27:11.083000",
+   "modify_date": "2025-12-18 17:27:11.083000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_forecast_substrateBE_hdd_accuracy",
+   "type_desc": "VIEW",
+   "create_date": "2023-04-27 22:01:18.573000",
+   "modify_date": "2023-04-27 22:01:18.573000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Hdd_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-04-14 21:39:32.853000",
+   "modify_date": "2026-04-14 21:39:32.853000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_Hdd_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-04-14 21:39:41.127000",
+   "modify_date": "2026-04-14 21:39:41.127000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddBasilisk_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-17 23:58:36.590000",
+   "modify_date": "2026-03-17 23:58:36.590000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddBasilisk_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:02:54.860000",
+   "modify_date": "2026-03-27 00:55:51.590000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddEdb_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:33:11.543000",
+   "modify_date": "2026-05-15 23:33:11.543000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddEdb_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-05-15 23:38:11.137000",
+   "modify_date": "2026-05-15 23:38:11.137000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddEdbConsumer_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:00:34.777000",
+   "modify_date": "2026-03-24 21:47:15.777000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddEdbConsumer_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:03:34.840000",
+   "modify_date": "2026-03-27 00:54:26.373000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddEdbEnterprise_Forest",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:00:37.187000",
+   "modify_date": "2026-03-24 21:47:17.940000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_Demand_HddEdbEnterprise_Region",
+   "type_desc": "VIEW",
+   "create_date": "2026-03-18 00:03:37.243000",
+   "modify_date": "2026-03-27 00:53:58.423000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Consumer_Forecast_with_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2022-06-09 16:39:06.610000",
+   "modify_date": "2022-06-09 16:39:06.610000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Demand_Actual_Forecast",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-23 19:20:43.320000",
+   "modify_date": "2023-06-23 19:36:29.867000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Demand_Supply_Region",
+   "type_desc": "VIEW",
+   "create_date": "2022-12-16 20:19:38.410000",
+   "modify_date": "2023-06-12 19:18:07.013000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Enterprise_Forecast_with_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2022-06-09 16:43:46.500000",
+   "modify_date": "2022-06-09 16:43:46.500000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Forecasts_with_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-05-03 20:43:39.413000",
+   "modify_date": "2023-08-30 03:23:44.443000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Forecasts_with_Perturbation_v1_old",
+   "type_desc": "VIEW",
+   "create_date": "2023-05-03 16:42:52.137000",
+   "modify_date": "2023-05-03 16:42:52.137000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Forecasts_with_Perturbation_v2",
+   "type_desc": "VIEW",
+   "create_date": "2023-02-24 20:36:21.470000",
+   "modify_date": "2023-02-24 20:36:21.470000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Forecasts_with_Perturbation_v3",
+   "type_desc": "VIEW",
+   "create_date": "2023-05-03 18:00:03.420000",
+   "modify_date": "2024-02-23 00:47:01.463000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Forecasts_with_Perturbation_v5",
+   "type_desc": "VIEW",
+   "create_date": "2025-12-18 17:24:54.807000",
+   "modify_date": "2025-12-18 17:24:54.807000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_GoLocal_Mirgation_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-23 05:36:05.963000",
+   "modify_date": "2023-06-23 05:46:17.053000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Latest_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-08-24 19:13:23.490000",
+   "modify_date": "2023-08-25 06:46:43.143000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Latest_Total_Forecast_Region_Perturbation",
+   "type_desc": "VIEW",
+   "create_date": "2023-08-25 08:02:31.280000",
+   "modify_date": "2024-05-16 06:02:36.537000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_ODC_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-23 05:36:51.483000",
+   "modify_date": "2023-06-23 05:44:59.357000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Region_Env_Forecast_Accuracy",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-22 05:39:28.890000",
+   "modify_date": "2023-06-23 07:00:17.847000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Region_Env_Forecast_Accuracy_for_HotBuffer",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-22 07:09:52.473000",
+   "modify_date": "2023-06-22 07:09:52.473000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Region_Env_Scenario_Forecast_Accuracy",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-22 05:38:05.950000",
+   "modify_date": "2023-06-22 20:57:19.707000"
+  },
+  {
+   "schema_name": "dbo",
+   "object_name": "vw_SubstrateBE_HDD_Total_Forecast_Region",
+   "type_desc": "VIEW",
+   "create_date": "2023-06-23 05:58:21.207000",
+   "modify_date": "2023-08-24 18:42:13.053000"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "invented": 0,
+ "offset": 0,
+ "leak": 0,
+ "mismatch": 0,
+ "orphan": 0,
+ "newest_ok": 3,
+ "maxdelta": 0.0,
+ "fails": 0,
+ "checks": 35
+}

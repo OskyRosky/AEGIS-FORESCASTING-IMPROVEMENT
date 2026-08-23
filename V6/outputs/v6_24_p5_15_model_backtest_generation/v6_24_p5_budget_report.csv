@@ -1,0 +1,5 @@
+budget_name,expected_minutes,observed_minutes,utilisation,behavior,result
+Hard wall clock,120,5.85,4.9%,Not reached. Run completed normally.,PASS
+Soft stop,105,5.85,5.6%,Not reached.,PASS
+Finalization,15,included in the total,-,"Assembly, HDD mapping, promotion and validation.",PASS
+P5A forecast,20 to 40,5.85,19.5% of the 30-minute midpoint,Faster than forecast. The smoke extrapolation of about 7 minutes proved accurate.,PASS

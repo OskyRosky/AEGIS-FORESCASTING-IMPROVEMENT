@@ -1,0 +1,8 @@
+stage,name,expected,observed,status
+V6.24-P4,Cohort Normalization / Manifest Freeze,closed,closed,CLOSED
+V6.24-P5,15-Model Backtest Generation,closed,"614,190 rows",CLOSED
+V6.24-P5C,Independent Backtest Audit,closed,37/37 PASS,CLOSED
+V6.24-P6,Accuracy + Rankings,accuracy_metrics + model_rankings,"2,100 + 2,100 rows; ranking defect later found by P6B",CLOSED_THEN_CORRECTED
+V6.24-P6B,Governed 30-Step Forecast Outputs,"63,000 rows","63,000 rows, 40/40 PASS",CLOSED
+V6.24-P6C,Ranking Tie-Break / No-Signal Correction,corrected canonical model_rankings,"2,100 rows under P6C_RANKING_POLICY_V2; 16 champions corrected",CLOSED
+V6.24-P7,Navigation Contract / Taxonomy Counts,not started,not started,READY_WITH_CAVEATS

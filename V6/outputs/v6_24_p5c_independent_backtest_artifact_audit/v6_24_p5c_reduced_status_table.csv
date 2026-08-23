@@ -1,0 +1,6 @@
+stage,name,current_status,notes
+V6.24-P5,Full 15-Model Backtest Generation,CLOSED,"614,190 rows promoted."
+V6.24-P5C,Independent Backtest Artifact Audit,CLOSED (this stage),Every P5 claim recomputed from artifacts. Audit-only; nothing modified.
+V6.24-P6,Forecast Generation,NEXT,"Forward forecasts, then accuracy_metrics and model_rankings."
+V6.24-P7,Product Completeness Gate,PENDING,
+V6.24-P8,Shiny Integration,PENDING,

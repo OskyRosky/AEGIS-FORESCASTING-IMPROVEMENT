@@ -1,0 +1,42 @@
+{
+ "base": [
+  "FixedGrowth_1_5",
+  "FixedGrowth_3",
+  "FixedGrowth_4",
+  "FixedGrowth_6",
+  "ARIMA_Fixed",
+  "ETS_Current",
+  "LinearRegression"
+ ],
+ "chal": [
+  "AutoARIMA",
+  "ETS Explicit",
+  "Theta",
+  "LightGBM",
+  "XGBoost"
+ ],
+ "neural": [
+  "FNAR-V2",
+  "NLIN-DLIN_FIXED",
+  "SMLP-TCN"
+ ],
+ "LAGS": 30,
+ "HORIZON_DAYS": 30,
+ "all": [
+  "FixedGrowth_1_5",
+  "FixedGrowth_3",
+  "FixedGrowth_4",
+  "FixedGrowth_6",
+  "ARIMA_Fixed",
+  "ETS_Current",
+  "LinearRegression",
+  "AutoARIMA",
+  "ETS Explicit",
+  "Theta",
+  "LightGBM",
+  "XGBoost",
+  "FNAR-V2",
+  "NLIN-DLIN_FIXED",
+  "SMLP-TCN"
+ ]
+}

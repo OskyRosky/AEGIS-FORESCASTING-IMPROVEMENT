@@ -1,0 +1,8 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P5C independent audit passed,all PASS,37/37 PASS,PASS,V6_24_P6B_BLOCKED_P5C_NOT_PASS
+PF02,P6 accuracy_metrics exists,present,present,PASS,V6_24_P6B_BLOCKED_P6_ANALYTICS_MISSING
+PF03,P6 model_rankings exists,present,present,PASS,V6_24_P6B_BLOCKED_P6_ANALYTICS_MISSING
+PF04,Pre-existing forecast_outputs are P6B-owned (idempotent re-run),0 unexpected,0 unexpected; 0 P6B-owned present,PASS,V6_24_P6B_BLOCKED_GOVERNANCE_VIOLATION
+PF05,Frozen P4/P5/P6 artifacts tracked before run,6 artifact families,12 files tracked for mtime+size comparison,PASS,
+PF06,navigation_contract absent (P7 scope),absent,absent,PASS,V6_24_P6B_BLOCKED_GOVERNANCE_VIOLATION
+PF07,taxonomy_counts absent (P7 scope),absent,absent,PASS,V6_24_P6B_BLOCKED_GOVERNANCE_VIOLATION

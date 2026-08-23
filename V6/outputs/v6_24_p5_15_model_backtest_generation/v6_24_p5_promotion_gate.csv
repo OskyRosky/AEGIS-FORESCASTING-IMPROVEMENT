@@ -1,0 +1,15 @@
+condition,expected,observed,result
+90 non-HDD series completed,90,90,PASS
+"1,350 non-HDD model-series runs completed",1350,1350 in the execution ledger; 1350 distinct pairs in the artifact,PASS
+All 15 models present for every non-HDD series,15 per series,"min 15, max 15",PASS
+HDD reuse mapped safely,"50 series, 15 models, no re-run","50 series, 15 models, 204,300 rows reused",PASS
+Final artifact covers 140 MVP series,140,140,PASS
+15 models per series across the whole artifact,15,"min 15, max 15",PASS
+prediction_date equals target_date,0 offsets,0,PASS
+train_end_date < target_date,0 violations,0,PASS
+Every non-HDD target_date exists in actuals_normalized,0 orphans,0,PASS
+actual_value matches actuals_normalized,0 mismatches,"0, max delta 0.00e+00",PASS
+No NaN predicted_value,0,0,PASS
+No duplicate series/model/target/origin rows,0,0,PASS
+No unresolved model failures,0,0,PASS
+Budget respected,< 120 minutes,"5.85m, about 4.9% of the hard budget",PASS

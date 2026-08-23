@@ -1,0 +1,22 @@
+{
+ "policy": "P6C_RANKING_POLICY_V2",
+ "rows": 2100,
+ "changed": 16,
+ "counts": {
+  "SIGNAL_PRESENT": 121,
+  "NO_SIGNAL_ALL_ZERO_ACTUALS": 15,
+  "TRAILING_ZERO_LATEST_ACTUAL": 4
+ },
+ "frozen_verified": 12,
+ "p6b_pass": 40,
+ "p6b_total": 40,
+ "ts": "2026-08-23T22:23:49Z",
+ "npass": 38,
+ "nfail": 0,
+ "total": 38,
+ "allzero": 15,
+ "nc_series": 16,
+ "extra": [
+  "SSD__Phoenix__Forest__GBRP267"
+ ]
+}

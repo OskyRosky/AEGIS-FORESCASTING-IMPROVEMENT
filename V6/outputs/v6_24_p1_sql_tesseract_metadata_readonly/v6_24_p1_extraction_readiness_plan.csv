@@ -1,0 +1,12 @@
+metric,route_path,source_object,columns_to_extract,filter_predicate,estimated_rows,estimated_combinations,risk_level,ready_for_parquet_extraction
+CPU,CPU / Consumed / Region,forecast_substrateBE_cpu_actual_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='Actual' AND Scenario='Consumed',16352,30,LOW,TRUE
+CPU,CPU / Failover / Region,forecast_substrateBE_cpu_actual_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='Actual' AND Scenario='Failover',16352,30,LOW,TRUE
+HDD,HDD-Basilisk / Region,forecast_substrateBE_hdd_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='actual' AND Scenario='Basilisk',UNKNOWN,46,LOW,ALREADY_LOCAL
+HDD,HDD-EDB / Consumer / Region,forecast_substrateBE_hdd_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='actual' AND Scenario='Consumer',UNKNOWN,46,LOW,ALREADY_LOCAL
+HDD,HDD-EDB / Enterprise / Region,forecast_substrateBE_hdd_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='actual' AND Scenario='Enterprise',UNKNOWN,45,LOW,ALREADY_LOCAL
+IOPS,IOPS / Consumed / Region,forecast_substrateBE_iops_actual_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='Actual' AND Scenario='Consumed',28758,29,LOW,TRUE
+IOPS,IOPS / Failover / Region,forecast_substrateBE_iops_actual_region,"DateTime,Key,Value,ModelVersion,ForecastVersion,Fleet,Workload,Resource,Unit,Type,Scenario",ModelVersion='Actual' AND Scenario='Failover',28738,29,LOW,TRUE
+MEMORY,Memory / any,NONE,,,0,0,BLOCKED,FALSE
+SSD,SSD Daily Raw / Region x Forest,Greenland_SSD_HDD_Forest_Daily_Raw,"DataDate,Region,Forest,SSDDemandTB,SSDTotalTB",SSDDemandTB IS NOT NULL,46704,139,MEDIUM,REVIEW
+SSD,SSD-Phoenix / Low Vol. no Efficiency / Forest,forecast_substrateBE_ssd_phx_lvne_metrics,"Key,Start_Date,End_Date,Count,Mean_Actual,Mean_Forecast,MAE,RMSE,Bias,MAPE,Accuracy,Forecast_Version",Mean_Actual IS NOT NULL,17733,136,LOW,TRUE
+SSD,SSD-Phoenix / Low Vol. w Efficiency / Forest,forecast_substrateBE_ssd_phx_lvwe_metrics,"Key,Start_Date,End_Date,Count,Mean_Actual,Mean_Forecast,MAE,RMSE,Bias,MAPE,Accuracy,Forecast_Version",Mean_Actual IS NOT NULL,17596,136,LOW,TRUE

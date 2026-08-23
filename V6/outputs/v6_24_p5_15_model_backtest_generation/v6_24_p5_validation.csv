@@ -1,0 +1,43 @@
+check_id,check_name,expected,observed,result
+V1,P5B smoke test PASS confirmed before the full run,smoke validation all PASS,35/35 smoke checks PASS,PASS
+V2,Exactly 90 non-HDD series were run,90,90,PASS
+V3,"Exactly 1,350 non-HDD model-series runs completed",1350,1350 pairs in the artifact; 1350 OK in the execution ledger,PASS
+V4,HDD was not re-run,no HDD rows in the execution ledger,0 HDD entries in the ledger; HDD rows carry source_generation_status=['REUSED_HDD_EXISTING_ARTIFACT'],PASS
+V5,HDD backtests reused and mapped safely,"50 series, 15 models","50 series, 15 models, 204,300 rows; joined on the full route grain",PASS
+V6,All 15 governed models appear,15,15 distinct; missing=[],PASS
+V7,No prohibited models appear,0,0 rows,PASS
+V8,SSD has 50 series with all 15 models,50 series x 15 models,50 series; models per series 15..15,PASS
+V9,CPU has 20 series with all 15 models,20 series x 15 models,20 series; models per series 15..15,PASS
+V10,IOPS has 20 series with all 15 models,20 series x 15 models,20 series; models per series 15..15,PASS
+V11,Final artifact includes all 140 MVP series,140,140; manifest has 140; missing=0,PASS
+V12,15 governed models per series across the artifact,15 for every series,"min 15, max 15",PASS
+V13,source_generation_status distinguishes reused from generated,REUSED_HDD_EXISTING_ARTIFACT and GENERATED_P5,"['GENERATED_P5', 'REUSED_HDD_EXISTING_ARTIFACT']",PASS
+V14,prediction_date equals target_date on every row,0 offsets,"0 of 614,190",PASS
+V15,train_end_date less than target_date on every row,0 violations,0,PASS
+V16,Non-HDD actual_value matches actuals_normalized,0 mismatches,"0, max delta 0.00e+00",PASS
+V17,Every non-HDD target_date exists in actuals_normalized,0 orphans,0,PASS
+V18,No invented target dates,0 target dates outside the observed set,0 across 90 non-HDD series,PASS
+V19,"No filled, interpolated or resampled dates",0 target dates outside the observed set,0 across 90 non-HDD series,PASS
+V20,D2 sparse-observed policy was used,marked on every generated row,non-HDD backtest_type=['D2_SPARSE_OBSERVED_BACKTEST'],PASS
+V21,Newest observation preserved for all 90 non-HDD series,90 of 90,90 of 90,PASS
+V22,No duplicate series/model/target/origin rows,0,0,PASS
+V23,No silent NaN predicted_value rows,0,0,PASS
+V24,Failure ledger exists even if empty,file present,"present=True, 0 failures recorded",PASS
+V25,All failures explicitly recorded,ledger count equals FAILED count,"0 FAILED in the execution ledger, 0 in the failure ledger",PASS
+V26,Budget report exists,file present,present=True,PASS
+V27,Runtime stayed within the 120-minute hard budget,< 120 minutes,"5.85m, about 4.9% of the budget",PASS
+V28,Progress log covers every 10% milestone,10 through 100,"[np.int64(10), np.int64(20), np.int64(30), np.int64(40), np.int64(50), np.int64(60), np.int64(70), np.int64(80), np.int64(90), np.int64(100)]",PASS
+V29,Partial checkpoints were not promoted on failure,promotion only after every gate passed,"promotion gate: 14 conditions, all PASS; promoted=True",PASS
+V30,Final artifact exists only because validation passed,both files present,"parquet=True, csv=True, 614,190 rows",PASS
+V31,No forecast_outputs artifact was created,0 files,0 matching files in processed/,PASS
+V32,No accuracy_metrics artifact was created,0 files,0 matching files in processed/,PASS
+V33,No model_rankings artifact was created,0 files,0 matching files in processed/,PASS
+V34,No navigation_contract artifact was created,0 files,0 matching files in processed/,PASS
+V35,No taxonomy_counts artifact was created,0 files,0 matching files in processed/,PASS
+V36,Shiny files untouched,0 entries,0 entries,PASS
+V37,V1 through V5 untouched,0 entries,0 entries,PASS
+V38,"Closure summary states whether P5 is complete, blocked or incomplete",explicit completion statement,present=True; states COMPLETE=True,PASS
+V39,Backtests only: no forward-dated predictions,every target_date is a real observed date,0 non-HDD targets outside the observed set; max target 2026-08-22,PASS
+V40,Checkpoint total reconciles with the promoted artifact,27 checkpoints sum to the generated row count,"409,890 generated rows from checkpoints + 204,300 reused HDD = 614,190 final",PASS
+V41,Predicted row count matches the P5A forecast,"about 409,890 generated rows","409,890 generated, forecast was 409,890",PASS
+V42,Parquet and CSV siblings agree,identical row counts,"parquet 614,190 vs csv 614,190",PASS

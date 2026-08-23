@@ -1,0 +1,5 @@
+extraction_unit,metric,plan_count,sql_count,parquet_count,selected_keys_count,keys_in_parquet,unexpected_keys_count,missing_keys_count,series_expected,series_in_parquet,result
+LVWE,SSD,50,6550,6550,50,50,0,0,50,50,PASS
+LVNE,SSD,50,6600,6600,50,50,0,0,50,50,PASS
+CPU,CPU,20,11228,11228,10,10,0,0,20,20,PASS
+IOPS,IOPS,20,20501,20501,10,10,0,0,20,20,PASS

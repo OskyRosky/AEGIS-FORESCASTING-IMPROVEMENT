@@ -1,0 +1,20 @@
+check_id,check_name,expected,observed,result
+V1,Exactly 50 SSD keys verified,50,50,PASS
+V2,All 50 SSD keys are unique,50 unique,50 unique of 50,PASS
+V3,All 50 have metric SSD,all SSD,['SSD'],PASS
+V4,All 50 have DB Type Phoenix,all Phoenix,['Phoenix'],PASS
+V5,All 50 have granularity Forest,all Forest,['Forest'],PASS
+V6,All 50 have more than 50 parseable actual observations,> 50 for every key,min=131 max=131; 50 of 50 pass,PASS
+V7,All 50 have zero non-parseable actual observations,0 for every key,total non-parseable across all 50 keys = 0,PASS
+V8,All 50 have min_date and max_date recorded,both populated,50 of 50 populated,PASS
+V9,LVWE and LVNE are not double-counted as separate observed series,0 rows differing on Mean_Actual; one cohort row per key,P2AQ002 returned 0 differing rows; 50 verification rows for 50 unique keys,PASS
+V10,Any failed key was replaced and the replacement passed,"0 failures, so 0 replacements",0 failures; replacement pool held 136 eligible keys (86 spare) had any been needed,PASS
+V11,Corrected SSD extraction plan has exactly 50 rows,50,50,PASS
+V12,Corrected P3 extraction plan still has exactly 90 rows,90,90,PASS
+V13,No Parquet written,0 files,0 files,PASS
+V14,No full extraction performed,"only grouped counts, no time-series rows",largest result 136 rows (the 136-key grouped pool listing),PASS
+V15,No models run,only .csv/.md/.json/.py artifacts,"suffixes: ['.csv', '.json', '.md', '.py']",PASS
+V16,No Shiny files modified,0 entries,0 entries,PASS
+V17,V1 through V5 untouched,0 entries,0 entries,PASS
+V18,SQL query budget respected,<= 8 queries,3 queries of an 8 budget,PASS
+V19,The 24-131 ambiguity from the P2 closure is resolved,selected range measured independently and stated unambiguously,24-131 was the ELIGIBLE POOL range across 136 keys. The 50 SELECTED keys all have exactly 131 parseable actuals. No key at or below 50 was ever selected.,PASS

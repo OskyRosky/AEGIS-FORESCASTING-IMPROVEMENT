@@ -1,0 +1,17 @@
+{
+ "ready": 140,
+ "stale_corrected": 90,
+ "acc_rows": 2100,
+ "rk_rows": 2100,
+ "champ_series": 140,
+ "one_per_series": true,
+ "frozen_unmodified": 8,
+ "run_id": "P6_20260823T215226",
+ "npass": 32,
+ "nblock": 4,
+ "nfail": 0,
+ "hdd_steps": 732,
+ "fwd_models": 30,
+ "overlap": 0,
+ "ts": "2026-08-23T21:58:49Z"
+}

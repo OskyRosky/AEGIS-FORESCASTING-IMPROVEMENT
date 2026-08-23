@@ -1,0 +1,11 @@
+key,in_Consumed,in_Failover,rows_Consumed,rows_Failover,scenarios_present,shared_by_both_scenarios,series_contributed,notes
+APC-Multitenant,TRUE,TRUE,1103,1102,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+ARE-Go Local,TRUE,TRUE,1101,1101,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+AUS-Go Local,TRUE,TRUE,1103,1103,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+BRA-Go Local,TRUE,TRUE,1009,1009,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+CAN-Go Local,TRUE,TRUE,1101,1101,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+CHE-Go Local,TRUE,TRUE,1101,1101,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+CHN-Gallatin,TRUE,TRUE,429,429,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+DEU-Go Local,TRUE,TRUE,1100,1100,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+EUR-Multitenant,TRUE,TRUE,1102,1102,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.
+FRA-Go Local,TRUE,TRUE,1102,1102,2,TRUE,2,Contributes 2 of the 20 series: selected under both scenarios.

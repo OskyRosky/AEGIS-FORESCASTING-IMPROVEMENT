@@ -1,0 +1,8 @@
+stage,name,current_status,notes
+V6.24-P4,Cohort Normalization / Manifest Freeze,CLOSED,140 series frozen.
+V6.24-P5A,Backtest Execution Plan / Budget / Window Contract,CLOSED,D2 Option B approved and recorded.
+V6.24-P5B,Smoke Test Only / Model Runtime Validation,CLOSED (this stage),"3 series x 15 models = 45 model-series, 13,800 rows in 13.4s."
+V6.24-P5,Full 15-Model Backtest Generation,READY,"90 series x 15 models = 1,350 model-series runs."
+V6.24-P6,Forecast Generation,PENDING,
+V6.24-P7,Product Completeness Gate,PENDING,
+V6.24-P8,Shiny Integration,PENDING,

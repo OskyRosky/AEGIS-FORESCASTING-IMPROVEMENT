@@ -1,0 +1,47 @@
+{
+ "selection": [
+  {
+   "metric": "SSD",
+   "series_id": "SSD__Phoenix__Forest__NAMPRD08",
+   "selection_reason": "PREFERRED_SERIES_PRESENT",
+   "actual_rows": 130,
+   "min_date": "2026-04-13",
+   "max_date": "2026-08-22",
+   "missing_calendar_days": 2,
+   "expected_valid_origins": 10,
+   "expected_target_dates": 300,
+   "actual_valid_origins": 10,
+   "burn_in_count": 62
+  },
+  {
+   "metric": "CPU",
+   "series_id": "CPU__Consumed__Region__CHN-Gallatin",
+   "selection_reason": "PREFERRED_SERIES_PRESENT",
+   "actual_rows": 556,
+   "min_date": "2022-01-04",
+   "max_date": "2023-07-20",
+   "missing_calendar_days": 7,
+   "expected_valid_origins": 10,
+   "expected_target_dates": 297,
+   "actual_valid_origins": 10,
+   "burn_in_count": 61
+  },
+  {
+   "metric": "IOPS",
+   "series_id": "IOPS__Consumed__Region__APC-Multitenant",
+   "selection_reason": "PREFERRED_SERIES_PRESENT",
+   "actual_rows": 1103,
+   "min_date": "2020-06-23",
+   "max_date": "2023-07-20",
+   "missing_calendar_days": 20,
+   "expected_valid_origins": 11,
+   "expected_target_dates": 323,
+   "actual_valid_origins": 11,
+   "burn_in_count": 64
+  }
+ ],
+ "total_seconds": 13.4,
+ "run_id": "P5B_SMOKE_20260823T210435",
+ "rows": 13800,
+ "failures": 0
+}

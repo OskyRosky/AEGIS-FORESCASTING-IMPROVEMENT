@@ -1,0 +1,10 @@
+check,expected,observed,result
+P5C audit PASS,all checks PASS,37/37 PASS,PASS
+model_backtests_15_models.parquet exists,present,"614,190 rows",PASS
+Backtests contain 140 series,140,140,PASS
+Backtests contain 15 models,15,15,PASS
+"Backtests contain 2,100 series-model pairs",2100,2100,PASS
+actuals_normalized exists,present,"48,916 rows",PASS
+cohort_manifest exists,present,140 rows,PASS
+Pre-existing P6-named artifacts are all P6-owned (re-run is idempotent),0 unexpected,"0 unexpected; 4 P6-owned present: ['accuracy_metrics.csv', 'accuracy_metrics.parquet', 'model_rankings.csv', 'model_rankings.parquet']",PASS
+forecast_outputs absent (P6 forecast is blocked),absent,absent,PASS

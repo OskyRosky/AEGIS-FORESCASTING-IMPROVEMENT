@@ -1,0 +1,36 @@
+check_id,check_name,expected,observed,result
+V1,Only the smoke test was run,3 series only,"3 series, 45 model-series attempts",PASS
+V2,Full P5 was not started,"no 90-series run, no final artifact",3 series in output; 0 model_backtests files in processed/,PASS
+V3,Exactly 3 non-HDD series were selected,3,3,PASS
+V4,"Selection includes one SSD, one CPU and one IOPS","SSD, CPU, IOPS","['CPU', 'IOPS', 'SSD']",PASS
+V5,HDD was not run,no HDD rows,0 HDD rows,PASS
+V6,All 15 governed models attempted for each series,45 model-series attempts,45 attempts across 3 series; 15 models minimum per series,PASS
+V7,No prohibited model appears,0,0 prohibited rows,PASS
+V8,D2 Option B policy was used,backtest_type marks it on every row,backtest_type values: ['D2_SPARSE_OBSERVED_SMOKE_TEST'],PASS
+V9,Burn-in taken only from the oldest side,train_start_date equals the series minimum date for every series,train_start_date matches the series min for all 3 series,PASS
+V10,No newest observation discarded by the old contiguous-window policy,3 of 3 series reach their max observed date,3 of 3 series reach their newest observation,PASS
+V11,prediction_date equals target_date on every row,0 offsets,"0 offsets across 13,800 rows",PASS
+V12,train_end_date less than target_date on every row,0 violations,0 violations,PASS
+V13,actual_value matches actuals_normalized on every row,0 mismatches,"0 mismatches, max delta 0.00e+00",PASS
+V14,Every target_date exists in actuals_normalized for its series,0 orphans,0 orphan rows,PASS
+V15,No filled dates,0 target dates outside the observed set,0 target dates not present in actuals_normalized,PASS
+V16,No resampled dates,0 target dates outside the observed set,0 target dates not present in actuals_normalized,PASS
+V17,No interpolated dates,0 target dates outside the observed set,0 target dates not present in actuals_normalized,PASS
+V18,No invented dates,0 target dates outside the observed set,0 target dates not present in actuals_normalized,PASS
+V19,Output schema matches the P5 full schema contract,all 26 required columns present,26 of 26 present; missing=[]; extra=[],PASS
+V20,Failure ledger exists even if empty,file present,"present=True, 0 failures",PASS
+V21,Every model failure is explicitly logged,ledger count equals FAILED count,"0 FAILED in the runtime ledger, 0 rows in the failure ledger",PASS
+V22,Smoke output written only to smoke-test locations,work/smoke_test and the P5B report folder only,3 files in work/smoke_test; 8 processed files touched,PASS
+V23,No model_backtests_15_models artifact created,0 files,0 matching files in processed/,PASS
+V24,No forecast_outputs artifact created,0 files,0 matching files in processed/,PASS
+V25,No accuracy_metrics artifact created,0 files,0 matching files in processed/,PASS
+V26,No model_rankings artifact created,0 files,0 matching files in processed/,PASS
+V27,No navigation_contract artifact created,0 files,0 matching files in processed/,PASS
+V28,No taxonomy_counts artifact created,0 files,0 matching files in processed/,PASS
+V24,No processed artifact was promoted,processed/ unchanged at 8 files,8 files in processed/,PASS
+V30,Shiny files untouched,0 entries,0 entries,PASS
+V31,V1 through V5 untouched,0 entries,0 entries,PASS
+V32,"Closure summary states whether full P5 is ready, blocked or needs correction",explicit readiness statement,present=True; states READY=True,PASS
+V33,Smoke runtime stayed inside the 15-minute budget,< 900 seconds,"13.4s, about 1.5% of the budget",PASS
+V34,All 45 model-series attempts succeeded,45 of 45 OK,45 of 45 OK,PASS
+V35,Every governed model produced rows for all 3 series,15 models x 3 series,3 series minimum per model across 15 models,PASS

@@ -1,0 +1,8 @@
+stage,name,current_status,notes
+V6.24-P4,Cohort Normalization / Manifest Freeze,CLOSED,"140 series, 48,916 normalized actual rows."
+V6.24-P5A,Backtest Execution Plan / Budget / Window Contract,CLOSED (this stage),Plan only. Two blocking-grade findings raised for owner decision.
+V6.24-P5,15-Model Backtest Generation,READY PENDING OWNER DECISION,"1,350 model-series runs. Two decisions required first (see owner decisions file)."
+V6.24-P6,Forecast Generation,PENDING,Plus accuracy_metrics and model_rankings.
+V6.24-P7,Product Completeness Gate,PENDING,Produces navigation_contract and taxonomy_counts AFTER the gate.
+V6.24-P8,Shiny Integration,PENDING,
+V6.24-P9,Visual QA / Demo Readiness,PENDING,

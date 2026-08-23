@@ -1,0 +1,6 @@
+check,expected,observed,result
+prediction_date equals target_date,0 offsets,"0 of 614,190 rows",PASS
+train_end_date strictly less than target_date,0 violations,0,PASS
+horizon_steps equals target_date minus train_end_date,0 mismatches,0,PASS
+horizon_steps within 1..30,0 out of range,0,PASS
+No duplicate series/model/target/origin rows,0,0,PASS

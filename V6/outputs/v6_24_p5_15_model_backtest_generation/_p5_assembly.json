@@ -1,0 +1,14 @@
+{
+ "promoted": true,
+ "final_rows": 614190,
+ "hdd_rows": 204300,
+ "gen_rows": 409890,
+ "orphan": 0,
+ "mismatch": 0,
+ "offset": 0,
+ "leak": 0,
+ "nan": 0,
+ "dup": 0,
+ "hdd_dedup_removed": 0,
+ "hdd_horizon_recomputed": 0
+}

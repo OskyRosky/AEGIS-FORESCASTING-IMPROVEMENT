@@ -1,0 +1,16 @@
+model_name,model_family,call_site_accepts_horizon_argument,requested_steps,emitted_steps,matches_request,emitted_equals_30,probe_result,error,evidence
+FixedGrowth_1_5,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+FixedGrowth_3,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+FixedGrowth_4,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+FixedGrowth_6,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+ARIMA_Fixed,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+ETS_Current,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+LinearRegression,baseline,NO,1440,30,FALSE,TRUE,OK,,"_fit_baseline calls model.predict(HORIZON_DAYS); HORIZON_DAYS is a module constant, not a parameter"
+AutoARIMA,challenger,NO,1440,30,FALSE,TRUE,OK,,run_daily_clean_challengers._forecast_* signature is (values) only; the horizon is the module constant HORIZON_DAYS. A horizon-parameterised variant exists in model_lab/run_backtest_60d.py but is NOT the governed import path used by the 15-model registry
+ETS Explicit,challenger,NO,1440,30,FALSE,TRUE,OK,,run_daily_clean_challengers._forecast_* signature is (values) only; the horizon is the module constant HORIZON_DAYS. A horizon-parameterised variant exists in model_lab/run_backtest_60d.py but is NOT the governed import path used by the 15-model registry
+Theta,challenger,NO,1440,30,FALSE,TRUE,OK,,run_daily_clean_challengers._forecast_* signature is (values) only; the horizon is the module constant HORIZON_DAYS. A horizon-parameterised variant exists in model_lab/run_backtest_60d.py but is NOT the governed import path used by the 15-model registry
+LightGBM,challenger,NO,1440,30,FALSE,TRUE,OK,,run_daily_clean_challengers._forecast_* signature is (values) only; the horizon is the module constant HORIZON_DAYS. A horizon-parameterised variant exists in model_lab/run_backtest_60d.py but is NOT the governed import path used by the 15-model registry
+XGBoost,challenger,NO,1440,30,FALSE,TRUE,OK,,run_daily_clean_challengers._forecast_* signature is (values) only; the horizon is the module constant HORIZON_DAYS. A horizon-parameterised variant exists in model_lab/run_backtest_60d.py but is NOT the governed import path used by the 15-model registry
+FNAR-V2,neural,NO,1440,30,FALSE,TRUE,OK,,"build_xy(values, LAGS, HORIZON_DAYS) makes 30 the OUTPUT DIMENSION of the trained network; changing it requires retraining a new architecture"
+NLIN-DLIN_FIXED,neural,NO,1440,30,FALSE,TRUE,OK,,"build_xy(values, LAGS, HORIZON_DAYS) makes 30 the OUTPUT DIMENSION of the trained network; changing it requires retraining a new architecture"
+SMLP-TCN,neural,NO,1440,30,FALSE,TRUE,OK,,"build_xy(values, LAGS, HORIZON_DAYS) makes 30 the OUTPUT DIMENSION of the trained network; changing it requires retraining a new architecture"

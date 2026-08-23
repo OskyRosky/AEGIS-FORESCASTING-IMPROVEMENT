@@ -1,0 +1,30 @@
+check_id,check_name,expected,observed,result
+V1,Full MVP cohort plan has exactly 140 selected series,140,140,PASS
+V2,P3 extraction plan has exactly 90 selected series,90,90,PASS
+V3,HDD local reference plan has exactly 50 series,50,50,PASS
+V4,SSD extraction plan has exactly 50 series,50,50,PASS
+V5,CPU extraction plan has exactly 20 series,20,20,PASS
+V6,IOPS extraction plan has exactly 20 series,20,20,PASS
+V7,Memory has 0 selected series and is documented as gap only,"0 rows in cohort, present in axis contract as BLOCKED",0 cohort rows; axis contract status=BLOCKED_NO_USEFUL_ACTUALS_SOURCE,PASS
+V8,Every selected series has all seven required fields populated,0 rows with a blank required field,0 rows incomplete,PASS
+V9,Every SSD series has DB Type Phoenix and Granularity Forest,all 50 conform,0 non-conforming,PASS
+V10,Every selected SSD key is unique at the observed-series level,50 unique keys,50 unique of 50,PASS
+V11,LVWE and LVNE are not double-counted as separate observed series,"one cohort row per forest key, variant LVWE+LVNE",50 SSD rows for 50 keys; variants=['LVWE+LVNE'],PASS
+V12,CPU and IOPS carry the STALE_ACTUALS_SOURCE caveat,all 40 rows,40 of 40 rows carry it,PASS
+V13,Conditional axis contract contains all five metrics,"HDD, SSD, CPU, IOPS, Memory","['CPU', 'HDD', 'IOPS', 'Memory', 'SSD']",PASS
+V14,Parquet destination plan exists,>= 1 row,13 rows,PASS
+V15,SQL templates are SELECT-only and filtered to the selected keys,"no banned keyword, every statement a SELECT, keys embedded","4 statements, all SELECT=True, banned=NONE, sampled keys embedded=True",PASS
+V16,No data extraction performed,only grouped counts; no query returns raw time-series rows,6 queries of a 10 budget; largest result 137 rows (the 137-key grouped count),PASS
+V17,No Parquet written,0 parquet files,0 parquet files,PASS
+V18,No models run,only .csv/.md/.sql/.json/.py artifacts,"suffixes: ['.csv', '.json', '.md', '.py', '.sql']",PASS
+V19,No Shiny files modified,0 shiny_app entries,0 entries,PASS
+V20,V1 through V5 untouched,0 entries,0 entries,PASS
+V21,Selection methodology is deterministic and documented,methodology file exists and every row carries a selection_reason,methodology present=True; 59 distinct selection reasons across 140 rows; 0 rows selected by head-of-list,PASS
+V22,"Closure summary states P3 is the extraction stage, not P2",explicit statement present,closure summary present=True; states P3-is-extraction=True,PASS
+V23,All six HDD route families are represented,6 routes,"6 routes: ['HDD|Organic|Basilisk|Forest', 'HDD|Organic|Basilisk|Region', 'HDD|Organic|EDB|Consumer|Forest', 'HDD|Organic|EDB|Consumer|Region', 'HDD|Organic|EDB|Enterprise|Forest', 'HDD|Organic|EDB|Enterprise|Region']",PASS
+V24_CPU,CPU scenarios are balanced,10 Consumed + 10 Failover,"{'Consumed': 10, 'Failover': 10}",PASS
+V24_IOPS,IOPS scenarios are balanced,10 Consumed + 10 Failover,"{'Consumed': 10, 'Failover': 10}",PASS
+V25,SSD selection is geographically diverse,>= 20 distinct prefixes,32 distinct prefixes,PASS
+V26,AX4 dashboard reference keys are included in the SSD cohort,NAMPRD07 and NAMPRD08 present,"['NAMPRD07', 'NAMPRD08']",PASS
+V27,"Plan does not claim SSD, CPU or IOPS already have 15 model backtests",all 90 non-HDD rows state the backtests are absent,90 of 90 non-HDD rows carry the explicit disclaimer,PASS
+V28,No route axis is left blank,explicit placeholders everywhere,0 blank axis cells,PASS

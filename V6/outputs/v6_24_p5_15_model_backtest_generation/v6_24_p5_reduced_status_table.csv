@@ -1,0 +1,8 @@
+stage,name,current_status,notes
+V6.24-P4,Cohort Normalization / Manifest Freeze,CLOSED,140 series frozen.
+V6.24-P5A,Execution Plan / Budget / Window Contract,CLOSED,D2 Option B approved.
+V6.24-P5B,Smoke Test Only,CLOSED,"45/45 model-series, 0 failures."
+V6.24-P5,Full 15-Model Backtest Generation,CLOSED (this stage),"1,350 model-series generated, 409,890 rows; HDD 204,300 rows reused; final artifact 614,190 rows."
+V6.24-P6,Forecast Generation,NEXT,"Forward forecasts, then accuracy_metrics and model_rankings."
+V6.24-P7,Product Completeness Gate,PENDING,navigation_contract and taxonomy_counts AFTER the gate.
+V6.24-P8,Shiny Integration,PENDING,Repoint Shiny to processed/ only.

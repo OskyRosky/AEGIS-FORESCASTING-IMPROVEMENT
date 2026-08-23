@@ -1,0 +1,4 @@
+signal_quality_status,series_count,metrics_affected,accuracy_rows_affected,min_sum_abs_actual,max_sum_abs_actual,ranking_treatment,viewer_treatment
+NO_SIGNAL_ALL_ZERO_ACTUALS,15,HDD,225,0,0,MAE as primary (WAPE structurally undefined),Suppress champion as a recommendation
+TRAILING_ZERO_LATEST_ACTUAL,4,HDD|SSD,60,0.00343857,16595.3,WAPE as primary when computable for all 15 models,Champion is a meaningful recommendation
+SIGNAL_PRESENT,121,CPU|HDD|IOPS|SSD,1815,66.72,1.06511e+11,WAPE as primary when computable for all 15 models,Champion is a meaningful recommendation

@@ -1,0 +1,9 @@
+{
+ "run_id": "P5_FULL_20260823T211818",
+ "done_ms": 1350,
+ "expected_ms": 1350,
+ "rows": 409890,
+ "minutes": 5.85,
+ "failures": 0,
+ "complete": true
+}

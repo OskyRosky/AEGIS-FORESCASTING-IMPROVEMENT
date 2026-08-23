@@ -1,0 +1,19 @@
+model_name,in_governed_catalog,tie_break_position,rows,series_covered,championships_before,championships_after,championship_delta,result
+FixedGrowth_1_5,TRUE,12,140,140,16,17,1,PASS
+FixedGrowth_3,TRUE,9,140,140,4,4,0,PASS
+FixedGrowth_4,TRUE,10,140,140,4,4,0,PASS
+FixedGrowth_6,TRUE,11,140,140,21,21,0,PASS
+ARIMA_Fixed,TRUE,2,140,140,9,8,-1,PASS
+AutoARIMA,TRUE,3,140,140,16,16,0,PASS
+ETS Explicit,TRUE,1,140,140,6,21,15,PASS
+ETS_Current,TRUE,4,140,140,7,7,0,PASS
+Theta,TRUE,5,140,140,12,12,0,PASS
+LightGBM,TRUE,7,140,140,7,7,0,PASS
+LinearRegression,TRUE,6,140,140,2,2,0,PASS
+XGBoost,TRUE,8,140,140,13,13,0,PASS
+FNAR-V2,TRUE,15,140,140,15,0,-15,PASS
+NLIN-DLIN_FIXED,TRUE,13,140,140,7,7,0,PASS
+SMLP-TCN,TRUE,14,140,140,1,1,0,PASS
+NBEATS,FALSE,,0,0,0,0,0,PASS
+NHITS,FALSE,,0,0,0,0,0,PASS
+FastNeuralAR_MLP,FALSE,,0,0,0,0,0,PASS

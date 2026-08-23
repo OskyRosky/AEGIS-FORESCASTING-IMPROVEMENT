@@ -1,0 +1,9 @@
+metric,route_id,granularity,total_combinations,with_actuals,over_50_actuals,with_15_models,with_forecast,product_complete
+HDD,HDD|Organic|Basilisk|Forest,Forest,155,155,155,155,155,155
+HDD,HDD|Organic|Basilisk|Region,Region,47,47,47,47,47,47
+HDD,HDD|Organic|EDB|Consumer|Forest,Forest,152,152,152,152,152,152
+HDD,HDD|Organic|EDB|Consumer|Region,Region,45,45,45,45,45,45
+HDD,HDD|Organic|EDB|Enterprise|Forest,Forest,152,152,152,152,152,152
+HDD,HDD|Organic|EDB|Enterprise|Region,Region,45,45,45,45,45,45
+SSD,SSD|Phoenix|LEGACY_VARIANT|Low Volume No Efficiency|Forest,Forest,148,0,0,0,148,0
+SSD,SSD|Phoenix|LEGACY_VARIANT|Low Volume With Efficiency|Forest,Forest,152,0,0,0,152,0

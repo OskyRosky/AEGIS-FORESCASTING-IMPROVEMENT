@@ -1,0 +1,103 @@
+object_schema,object_name,object_type,row_count_estimate,relevant_columns,relevance_score,reason
+dbo,CADW_PhoenixDagsHDD,USER_TABLE,989,Forest|Dag|SnapshotTime,NONE,No actual-bearing column in its signature.
+dbo,CPG_DemandPlan_SubstrateBE_SSD_Demand_Region_V2,USER_TABLE,937575,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,CPG_DemandPlan_SubstrateBE_SSD_Demand_V2,USER_TABLE,369846,DataDate|Forest|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,CPG_DemandPlan_SubstrateBE_SSDMCDB_Demand_Region_V2,USER_TABLE,937575,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,CPG_DemandPlan_SubstrateBE_SSDMCDB_Demand_V2,USER_TABLE,369846,DataDate|Forest|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,CPG_DemandPlan_SubstrateBE_SSDPhoenixDB_Demand_Region_V2,USER_TABLE,330375,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,CPG_DemandPlan_SubstrateBE_SSDPhoenixDB_Demand_V2,USER_TABLE,364896,DataDate|Forest|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,CPG_SSD_Demand_Forecast_Scenarios,USER_TABLE,13,CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,dbo.forecast_substrateBE_SSD_Phoenix_Inorganic_ADSSignal,USER_TABLE,1000,Datetime|Forest,NONE,No actual-bearing column in its signature.
+dbo,DemandPlan_SSD_Forecast,USER_TABLE,86265,Datadate|Forest|Region,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SSD_Sellable,USER_TABLE,1000,Datadate|Forest|Region,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SSD_Supply,USER_TABLE,2268,Datadate|Forest|Region,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSD_Demand,USER_TABLE,117950,DataDate|Forest|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSD_Demand_Region,USER_TABLE,39420,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSD_Demand_Region_History,USER_TABLE,182931,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSDMCDB_Demand,USER_TABLE,318444,DataDate|Forest|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSDMCDB_Demand_Region,USER_TABLE,36200,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSDPhoenixDB_Demand,USER_TABLE,116320,DataDate|Forest|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,DemandPlan_SubstrateBE_SSDPhoenixDB_Demand_Region,USER_TABLE,34560,DataDate|Region|demand|CreatedDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,forecast_Greenland_HDD_SSD,USER_TABLE,419,Region|Forest|datadate|HDD_DemandTB|SSD_DemandTB|forecastdate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,forecast_staging_agent_SSD,USER_TABLE,1000,datadate|key|forecastdate,MEDIUM,Raw or staging candidate for a daily actuals series. Probed directly.
+dbo,forecast_staging_agent_SSD_metrics,USER_TABLE,1000,key|forecastdate,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_inorganic_ssd,USER_TABLE,591384,Datetime|Key,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_ssd,USER_TABLE,2696979,DataDate|Region|Forest|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_SSD_Phoenix_Inorganic_ADSSignal,USER_TABLE,4356,Datetime|Forest,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_SSD_Phoenix_Organic,USER_TABLE,707069,DateTime|Forest,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_ssd_phx_lvne_metrics,USER_TABLE,16950,Key|Mean_Actual|Start_Date|End_Date|Execution_Date,HIGH,Named after the AX4 dashboard scenario. Carries Mean_Actual plus a forest Key and a date window. Confirmed actuals source.
+dbo,forecast_substrateBE_ssd_phx_lvwe_metrics,USER_TABLE,16813,Key|Mean_Actual|Start_Date|End_Date|Execution_Date,HIGH,Named after the AX4 dashboard scenario. Carries Mean_Actual plus a forest Key and a date window. Confirmed actuals source.
+dbo,forecast_substrateBE_ssd_region,USER_TABLE,309213,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_SSD_TotalForecast,USER_TABLE,26723954,Datetime|Key,NONE,No actual-bearing column in its signature.
+dbo,forecast_substrateBE_SSD_TotalForecast_UserScenario,USER_TABLE,11199322,Datetime|Key,NONE,No actual-bearing column in its signature.
+dbo,Greenland_SSD_HDD_Forest_Daily_Raw,USER_TABLE,46704,DataDate|Region|Forest|SSDDemandTB,MEDIUM,Raw or staging candidate for a daily actuals series. Probed directly.
+dbo,Greenland_SSD_Region_Fcst_Result,USER_TABLE,1000,datadate|Region|FcstDate,NONE,No actual-bearing column in its signature.
+dbo,HLC_BE_SSDLimit,USER_TABLE,499,Region|Forest,NONE,No actual-bearing column in its signature.
+dbo,M2CP_Demand_SSD,USER_TABLE,1403,Datadate|Forest|DagsNeeded,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,MA_PhoenixOnlyStamps,USER_TABLE,38,ETADockDate|NumberOfDags,NONE,No actual-bearing column in its signature.
+dbo,SemanticFabric_PhoenixDBCountByForest,USER_TABLE,144,Forest|SnapShotDate,NONE,No actual-bearing column in its signature.
+dbo,SemanticFabric_PhoenixUsageByForest,USER_TABLE,142,Forest,NONE,No actual-bearing column in its signature.
+dbo,SM_MLBPhoenixStatsGlobal,USER_TABLE,6505117,Date|Forest,NONE,No actual-bearing column in its signature.
+dbo,SubstrateBE_DemandForecast_Ssd_MCDB_ForestSKU,USER_TABLE,677637,DemandType|DataDate|DagType,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_DemandForecast_Ssd_MCDB_ForestSKU_Perturbed,USER_TABLE,457702,DemandType|DataDate|DagType,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_DemandForecast_Ssd_MCDB_Region,USER_TABLE,133740,DemandType|DataDate|DagType,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_DemandForecast_Ssd_MCDB_Region_Perturbed,USER_TABLE,66870,DemandType|DataDate|DagType,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_DemandForecast_SSDPhoenix,USER_TABLE,233765,DemandType|DataDate|DagType,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_DemandForecast_SSDPhoenix_Perturbed,USER_TABLE,1000,DemandType|DataDate|DagType,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_SSD_Demand_History,USER_TABLE,54361,DataDate|Region|Forest|SubstrateSSDDemandTB,MEDIUM,Raw or staging candidate for a daily actuals series. Probed directly.
+dbo,SubstrateBE_Ssd_MCDB_ForecastForestSKU,USER_TABLE,30966833,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,SubstrateBE_Ssd_MCDB_ForecastRegion,USER_TABLE,1074841,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,SubstrateBE_SSD_MCDB_TTL_Region_History,USER_TABLE,48147,write_date|date|region|demand|ttlDateOfTheMonth,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_SSD_Phoenix_TTL_Region_History,USER_TABLE,1076043,write_date|date|region|demand|ttlDateOfTheMonth,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_Ssd_PhoenixDB_ForecastForest,USER_TABLE,1614543,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,SubstrateBE_Ssd_PhoenixDB_ForecastRegion,USER_TABLE,426246,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,SubstrateBE_SSD_TTL_Region_History,USER_TABLE,3633118,write_date|date|region|demand|ttlDateOfTheMonth,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,SubstrateBE_SsdForecastForestSKU,USER_TABLE,1234534,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,SubstrateBE_SsdForecastRegion,USER_TABLE,580213,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_DemandPlan_SubstrateBE_SSD_Demand,VIEW,VIEW_OR_UNKNOWN,DataDate|Forest|ssd_demand|ssd_mcdb_demand|ssd_phoenix_demand,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_DemandPlan_SubstrateBE_SSD_Demand_Region,VIEW,VIEW_OR_UNKNOWN,DataDate|Region|ssd_demand|ssd_mcdb_demand|ssd_phoenix_demand,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_HLC_GCyclesPerPhoenixTBPerDay,VIEW,VIEW_OR_UNKNOWN,datadate,NONE,No actual-bearing column in its signature.
+dbo,vw_HLC_GCyclesPerPhoenixTBPerDayPerForest,VIEW,VIEW_OR_UNKNOWN,DAGs|datadate|Forest,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_Demand_CpuNonPhoenix_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuNonPhoenix_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuNonPhoenixFailover_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuPhoenix_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuPhoenix_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuPhoenixFailover_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_CpuPhoenixFailover_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_Ssd_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_Ssd_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_SsdMcdb_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_SsdMcdb_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_SsdPhoenix_Forest,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_Demand_SsdPhoenix_Region,VIEW,VIEW_OR_UNKNOWN,DemandType|DateTime|Key,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_SSD_Demand_Actual_Forecast,VIEW,VIEW_OR_UNKNOWN,Key|DateTime,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_SSD_Demand_Supply_Region,VIEW,VIEW_OR_UNKNOWN,datadate|region|demand,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_ssd_Efficiency_Changes,VIEW,VIEW_OR_UNKNOWN,datadate|Region|Forest,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_Efficiencys,VIEW,VIEW_OR_UNKNOWN,datadate|Forest|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_Forecast_With_Perturbation,VIEW,VIEW_OR_UNKNOWN,Datadate|Region|Forest|Forest_L|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_Forecast_With_Perturbation_old,VIEW,VIEW_OR_UNKNOWN,Datadate|Region|Forest|Forest_L|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_Forest_Efficiencys,VIEW,VIEW_OR_UNKNOWN,datadate|Forest|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_Latest_Total_Forecast_Forest,VIEW,VIEW_OR_UNKNOWN,DataDate|Forest|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_Latest_Total_Forecast_Forest_Perturbation,VIEW,VIEW_OR_UNKNOWN,Datadate|Region|Forest|Forest_L|ForecastDate,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_Latest_Total_Forecast_Region,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_Latest_Total_Forecast_Region_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_MCDB_Demand_Supply_Region,VIEW,VIEW_OR_UNKNOWN,datadate|region|demand,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Forest,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Forest_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Region,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_MCDB_Latest_Total_Forecast_Region_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_MCDB_Region_Efficiencys,VIEW,VIEW_OR_UNKNOWN,datetime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_MCPhoenixDB_Latest_Total_Forecast_Forest_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_MCPhoenixDB_Latest_Total_Forecast_Region_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_PhoenixDB_Demand_Supply_Region,VIEW,VIEW_OR_UNKNOWN,datadate|region|demand,MEDIUM,Raw or staging candidate for a daily actuals series. Probed directly.
+dbo,vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Forest,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Forest_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Region,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_PhoenixDB_Latest_Total_Forecast_Region_Perturbation,VIEW,VIEW_OR_UNKNOWN,DateTime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_PhoenixDB_Region_Efficiencys,VIEW,VIEW_OR_UNKNOWN,datetime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_ssd_Region_Efficiencys,VIEW,VIEW_OR_UNKNOWN,datetime|Key,NONE,No actual-bearing column in its signature.
+dbo,vw_SubstrateBE_SSD_Region_Env_Forecast_Accuracy,VIEW,VIEW_OR_UNKNOWN,Env_Region|DateTime|ForecastDate|Demand,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_SSD_Region_Env_Forecast_Accuracy_for_HotBuffer,VIEW,VIEW_OR_UNKNOWN,Region|SnapshotDate|Actual|LagDate,LOW,"Carries an actual-shaped column but is forecast, perturbation or supply oriented."
+dbo,vw_SubstrateBE_ssd_SKURatio,VIEW,VIEW_OR_UNKNOWN,Forest|ForestSubstrateSSDTotalSpaceTB,NONE,No actual-bearing column in its signature.
