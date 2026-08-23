@@ -5,6 +5,9 @@ app_server <- function(input, output, session) {
   viewer_pilot_server(input, output, session)
   forecast_pilot_server(input, output, session)
 
+  # V6.24 | Read-only MVP pages over the governed P4-P7 artifacts.
+  v6_24_mvp_server(input, output, session)
+
   if (FALSE) {
   # --- Forecast Viewer SECTION 1 : BACKTEST COMPARISON (full artifact) ------
   # Read-only reactivity: filters / reshapes existing rows from the Stage 05H

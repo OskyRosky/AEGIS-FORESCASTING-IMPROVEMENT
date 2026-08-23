@@ -1,0 +1,4 @@
+product_status,definition,operational_rows,viewer_visible,forecast_visible,selectable,example_series,result
+AVAILABLE,product_ready and no material caveat,53,53,53,TRUE,CPU__Consumed__Region__AUS-Go-Local,PASS
+AVAILABLE_WITH_CAVEAT,product_ready but carries at least one caveat badge,87,87,87,TRUE,CPU__Consumed__Region__APC-Multitenant,PASS
+NOT_AVAILABLE,a required governed artifact is missing or incomplete,0,0,0,FALSE,,PASS

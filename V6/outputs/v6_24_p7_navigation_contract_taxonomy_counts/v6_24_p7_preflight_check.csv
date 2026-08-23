@@ -1,0 +1,10 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P6C validation passed,all PASS,38/38 PASS,PASS,V6_24_P7_BLOCKED_P6C_NOT_PASS
+PF02,cohort_manifest exists,present,present,PASS,
+PF03,actuals_normalized exists,present,present,PASS,
+PF04,model_backtests_15_models exists,present,present,PASS,
+PF05,accuracy_metrics exists,present,present,PASS,
+PF06,model_rankings exists,present,present,PASS,V6_24_P7_BLOCKED_MODEL_RANKINGS_MISSING
+PF07,forecast_outputs exists,present,present,PASS,V6_24_P7_BLOCKED_FORECAST_OUTPUTS_MISSING
+PF08,series_signal_quality exists,present,present,PASS,V6_24_P7_BLOCKED_SIGNAL_QUALITY_MISSING
+PF09,P6B validation passed,all PASS,40/40 PASS,PASS,

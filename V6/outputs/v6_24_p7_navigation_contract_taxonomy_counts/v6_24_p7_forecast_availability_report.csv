@@ -1,0 +1,6 @@
+forecast_type,metric,series,models,steps_per_series_model,forecast_rows_represented,forecast_start_min,forecast_end_max,negative_forecast_rows,extreme_forecast_rows,horizon_claim,result
+GOVERNED_30_STEP_DAILY_FORECAST,CPU,20,15,30,9000,2023-07-21,2023-08-19,13,1,"30 daily steps - no 1,440-day or 4-year claim anywhere",PASS
+GOVERNED_30_STEP_DAILY_FORECAST,HDD,50,15,30,22500,2026-04-27,2026-08-18,222,57,"30 daily steps - no 1,440-day or 4-year claim anywhere",PASS
+GOVERNED_30_STEP_DAILY_FORECAST,IOPS,20,15,30,9000,2023-07-21,2023-08-19,31,1,"30 daily steps - no 1,440-day or 4-year claim anywhere",PASS
+GOVERNED_30_STEP_DAILY_FORECAST,SSD,50,15,30,22500,2026-08-23,2026-09-21,307,25,"30 daily steps - no 1,440-day or 4-year claim anywhere",PASS
+GOVERNED_30_STEP_DAILY_FORECAST,ALL,140,15,30,63000,2023-07-21,2026-09-21,573,84,30 daily steps,PASS

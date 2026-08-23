@@ -20,6 +20,11 @@ source("R/viewer_pilot.R")
 # Version selection and artifact assembly happen outside Shiny.
 source("R/forecast_pilot.R")
 
+# V6.24 | Read-only loader for the governed MVP cohort (P4-P7 artifacts).
+# Everything is cooked outside Shiny; this only reads finished artifacts.
+source("R/v6_24_read_only_loader.R")
+source("server/v6_24_mvp_server.R")
+
 # V4.6 | Shiny Local On-Demand LLM explanation panel (mock, read-only)
 source("R/llm_explain.R")
 

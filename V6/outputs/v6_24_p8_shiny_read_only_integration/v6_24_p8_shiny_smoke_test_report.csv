@@ -1,0 +1,58 @@
+check_id,category,check,observed,result
+A1,app-level,app sources without fatal error,nan,PASS
+A2,app-level,app_ui() builds,nan,PASS
+A3_v24_overview,app-level,section present in UI: v24_overview,nan,PASS
+A3_v24_viewer,app-level,section present in UI: v24_viewer,nan,PASS
+A3_v24_forecast,app-level,section present in UI: v24_forecast,nan,PASS
+A3_v24_taxonomy,app-level,section present in UI: v24_taxonomy,nan,PASS
+A4_section_v24_overview,app-level,section_v24_overview builds,nan,PASS
+A4_section_v24_viewer,app-level,section_v24_viewer builds,nan,PASS
+A4_section_v24_forecast,app-level,section_v24_forecast builds,nan,PASS
+A4_section_v24_taxonomy,app-level,section_v24_taxonomy builds,nan,PASS
+B1,loader,loader validation all PASS,35/35,PASS
+B2,loader,nav_contract 140 rows,140,PASS
+B3,loader,tax_counts 192 rows,192,PASS
+B4,loader,forecast_outputs 63000 rows,63000,PASS
+B5,loader,model_rankings 2100 rows,2100,PASS
+C1,horizon honesty,no '4-year' claim in UI,nan,PASS
+C2,horizon honesty,"no '1,440' / '1440' horizon claim in UI",nan,PASS
+C3,horizon honesty,horizon label present in UI,nan,PASS
+D1,read-only,no write/mutation call in V6.24 code,none,PASS
+D2,read-only,no model/forecast call in V6.24 code,none,PASS
+D3,read-only,no SQL call in V6.24 code,nan,PASS
+D4,read-only,no hardcoded GBRP267 special case,nan,PASS
+D5,read-only,no hardcoded no-signal series list,nan,PASS
+D6,read-only,no mean-based tile in V6.24 code,nan,PASS
+E1,governance,governed artifacts byte-identical after load,22 files unchanged,PASS
+S1,reactive server,overview cards render,nan,PASS
+S2,reactive server,overview by-metric table renders,nan,PASS
+S3,reactive server,overview loader table renders,nan,PASS
+S4,reactive server,taxonomy scope selector renders,nan,PASS
+S5,reactive server,metric selector renders as first filter,nan,PASS
+S6,reactive server,key is NOT the first filter axis,metric,PASS
+S7,reactive server,key is the last filter axis,nan,PASS
+S8,reactive server,viewer identity shows the selected series,nan,PASS
+S9,reactive server,signal-present series shows champion as a recommendation,nan,PASS
+S10,reactive server,champion model name rendered,FixedGrowth_1_5,PASS
+S11,reactive server,viewer model selector renders,nan,PASS
+S12,reactive server,actual history chart renders,nan,PASS
+S13,reactive server,ranking table renders,nan,PASS
+S14,reactive server,full path resolves to exactly one series,nan,PASS
+S15,reactive server,backtest chart renders,nan,PASS
+S16,reactive server,no-signal series suppresses the champion recommendation,nan,PASS
+S17,reactive server,no-signal series labels its champion technical only,nan,PASS
+S18,reactive server,no-signal series carries the NO_SIGNAL badge,nan,PASS
+S19,reactive server,no-signal series is still selectable and rendered,nan,PASS
+S20,reactive server,low-confidence series shows its caveat badge,nan,PASS
+S21,reactive server,low-confidence caveat message explains the zero tail,nan,PASS
+S22,reactive server,forecast identity renders,nan,PASS
+S23,reactive server,forecast page labels the governed horizon,nan,PASS
+S24,reactive server,forecast page shows 30 steps,nan,PASS
+S25,reactive server,forecast model selector renders,nan,PASS
+S26,reactive server,forecast chart renders,nan,PASS
+S27,reactive server,forecast table renders,nan,PASS
+S28,reactive server,taxonomy table renders for GLOBAL,nan,PASS
+S29,reactive server,taxonomy table renders for BY_METRIC,nan,PASS
+S30,reactive server,caveat count table renders,nan,PASS
+S31,reactive server,filter option table renders,nan,PASS
+L1,app-level,app boots and serves over HTTP,"HTTP 200, 325,283 bytes from 127.0.0.1:7824; all four V6.24 sections present in the served HTML; no 4-year or 1,440-day string in the response",PASS

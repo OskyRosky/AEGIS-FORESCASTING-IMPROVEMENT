@@ -1,0 +1,10 @@
+stage,name,expected,observed,status
+V6.24-P4,Cohort Normalization / Manifest Freeze,closed,closed,CLOSED
+V6.24-P5,15-Model Backtest Generation,closed,"614,190 rows",CLOSED
+V6.24-P5C,Independent Backtest Audit,closed,37/37 PASS,CLOSED
+V6.24-P6,Accuracy + Rankings,closed,"2,100 + 2,100 rows",CLOSED
+V6.24-P6B,Governed 30-Step Forecast Outputs,closed,"63,000 rows, 40/40 PASS",CLOSED
+V6.24-P6C,Ranking Tie-Break / No-Signal Correction,closed,"38/38 PASS, 16 champions corrected",CLOSED
+V6.24-P7,Navigation Contract / Taxonomy Counts,closed,"51/51 PASS, 140 + 192 rows",CLOSED
+V6.24-P8,Shiny Read-Only Integration,four V6.24 pages consuming the contract read-only,"3 new files, 6 modified, 48/48 PASS, app serves HTTP 200",CLOSED
+V6.24-P9,Visual QA / UX review,not started,not started,READY_WITH_CAVEATS

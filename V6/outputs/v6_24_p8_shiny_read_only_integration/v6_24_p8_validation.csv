@@ -1,0 +1,49 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P7 PASS confirmed,all PASS,51/51 PASS,PASS,NO
+V2,navigation_contract exists and loads,loads,"loaded, 614,190 max rows across tables; all 35 loader checks PASS",PASS,NO
+V3,taxonomy_counts exists and loads,loads,"loaded, 614,190 max rows across tables; all 35 loader checks PASS",PASS,NO
+V4,forecast_outputs exists and loads,loads,"loaded, 614,190 max rows across tables; all 35 loader checks PASS",PASS,NO
+V5,model_rankings exists and loads,loads,"loaded, 614,190 max rows across tables; all 35 loader checks PASS",PASS,NO
+V6,accuracy_metrics exists and loads,loads,"loaded, 614,190 max rows across tables; all 35 loader checks PASS",PASS,NO
+V7,series_signal_quality exists and loads,loads,"loaded, 614,190 max rows across tables; all 35 loader checks PASS",PASS,NO
+V8,Shiny prechange hashes exist,present,53 files fingerprinted before modification,PASS,NO
+V9,Shiny postchange hashes exist,present,56 files fingerprinted after modification,PASS,NO
+V10,Modified Shiny files listed explicitly,listed,"9 entries: 3 added, 6 modified",PASS,NO
+V11,App starts and the V6.24 module loads without fatal error,no error,"app.R sourcing PASS, app_ui() builds, and a live launch returned HTTP 200 with all four V6.24 sections in the served HTML",PASS,NO
+V12,Loader validates all required row counts,all PASS,35/35 loader checks PASS,PASS,NO
+V13,Loader does not write or mutate any governed artifact,no writes,source scan found no write call; md5 comparison confirms 22/22 artifacts unchanged,PASS,YES
+V14,Filter flow uses navigation_contract as source of truth,navigation_contract,all 177 filter-option rows derive from navigation_contract (viewer_visible = TRUE),PASS,NO
+V15,Key is not exposed as first-level filter,metric first,V6_24_FILTER_AXES = metric > db_type > scenario > segment > granularity > key,PASS,YES
+V16,No empty filter options exposed,0,0 options with zero series across 177 rows,PASS,YES
+V17,Valid filter path resolves to one series_id,140/140,140.0,PASS,NO
+V18,Viewer uses the selected series_id from navigation_contract,yes,identity panel renders the resolved series and its contract fields,PASS,NO
+V19,Viewer does not calculate accuracy,read-only,ranking table merges model_rankings with accuracy_metrics; no arithmetic on errors anywhere in the module,PASS,NO
+V20,Viewer suppresses champion for no-signal rows,suppressed,no-signal series renders 'Champion is not meaningful' and labels the model 'not a recommendation',PASS,YES
+V21,Viewer shows the low-confidence backtest-window caveat,shown,badge LOW_CONFIDENCE_BACKTEST_WINDOW_ZERO and a zero-tail explanation render,PASS,NO
+V22,Forecast page uses forecast_outputs only,forecast_outputs,rows filtered from forecast_outputs by series_id and model_name; nothing generated,PASS,NO
+V23,Forecast page shows exactly 30 steps,30,min 30 max 30,PASS,NO
+V24,Forecast page labels GOVERNED_30_STEP_DAILY_FORECAST,labelled,persistent horizon banner on all four pages plus the forecast identity panel,PASS,NO
+V25,Forecast page does not claim a 4-year forecast,absent,no '4-year' string in the built UI or the served HTML,PASS,YES
+V26,"Forecast page does not claim a 1,440-day horizon",absent,"no '1,440' or '1440' string in the built UI or the served HTML",PASS,YES
+V27,Forecast page preserves negative/extreme flags,preserved,"573 negative and 84 extreme flags rendered verbatim, never clipped",PASS,NO
+V28,Taxonomy page uses taxonomy_counts,taxonomy_counts,all 10 scopes rendered directly from the artifact,PASS,NO
+V29,Taxonomy global count = 140,140,140.0,PASS,NO
+V30,"Taxonomy BY_METRIC = 50 HDD, 50 SSD, 20 CPU, 20 IOPS",50/50/20/20,HDD 50.0|SSD 50.0|CPU 20.0|IOPS 20.0,PASS,NO
+V31,"Summary cards use medians, not means",median,Overview renders median_wape from taxonomy_counts; the recommended statistic field reads 'median',PASS,NO
+V32,No mean WAPE tile exists,0,no mean column referenced in the V6.24 code and none exists in the artifacts,PASS,YES
+V33,No stale manifest flag used for readiness,not used,loader asserts manifest_flag_used_for_readiness = FALSE on all 140 rows,PASS,YES
+V34,No hardcoded no-signal list used,none,suppression reads the champion_visible field,PASS,YES
+V35,No hardcoded GBRP267 special case,none,low-confidence rows read the low_confidence_backtest_window_flag field,PASS,YES
+V36,No model is executed,none,"source scan found no model, forecast or metric computation; all values are read from the governed artifacts",PASS,YES
+V37,No forecast is generated in Shiny,none,"source scan found no model, forecast or metric computation; all values are read from the governed artifacts",PASS,YES
+V38,No backtest is generated in Shiny,none,"source scan found no model, forecast or metric computation; all values are read from the governed artifacts",PASS,YES
+V39,No accuracy metric is calculated in Shiny,none,"source scan found no model, forecast or metric computation; all values are read from the governed artifacts",PASS,YES
+V40,No ranking is calculated in Shiny,none,"source scan found no model, forecast or metric computation; all values are read from the governed artifacts",PASS,YES
+V41,Processed artifacts byte-identical before and after app load,all,22/22 md5-identical,PASS,YES
+V42,raw Parquet untouched,no diff,clean,PASS,NO
+V43,V1 through V5 untouched,no diff,clean,PASS,NO
+V44,No SQL was run,none,no DBI/odbc call in any V6.24 file,PASS,NO
+V45,No push performed,none,none,PASS,NO
+V46,Closure states P9 readiness,stated,closure states READY_FOR_P9_WITH_CAVEATS,PASS,NO
+V47,LLM / assistant components not broken,untouched,no llm_*.R file in the change set; app sources and serves with them intact,PASS,NO
+V48,"Reactive server behaviour verified, not merely inspected",tested,31/31 shiny::testServer checks PASS,PASS,NO

@@ -1,0 +1,13 @@
+check_id,check,expected,observed,result
+TI01,Six-level filter path uniquely identifies a series,140 unique,140 distinct paths for 140 series,PASS
+TI02,Key alone is NOT unique and is not a canonical axis,not unique,102 distinct keys across 140 series; 38 rows share a key with another row,PASS
+TI03,key_axis_status declares Key's role on every row,all rows,"['IDENTIFIER_VALUE_FOREST', 'ROUTING_VALUE_REGION']",PASS
+TI04,Conditional axes use NOT_APPLICABLE rather than a fake value,explicit,"db_type ['Basilisk', 'EDB', 'NOT_APPLICABLE']... ; scenario ['Consumed', 'Failover', 'NOT_APPLICABLE'] ; segment ['Consumer', 'Enterprise', 'NOT_APPLICABLE']",PASS
+TI05,No empty filter option is exposed,0,0 options with zero series,PASS
+TI06,No invented 'All' option,absent,False,PASS
+TI07,Every taxonomy scope partitions the cohort,sums to 140,all scopes reconcile: True,PASS
+TI08,GLOBAL operational_series_count,140,140,PASS
+TI09,BY_METRIC reconciles to 50/50/20/20,"HDD 50, SSD 50, CPU 20, IOPS 20",CPU 20|HDD 50|IOPS 20|SSD 50,PASS
+TI10,No metric outside the governed artifacts is operational,HDD|SSD|CPU|IOPS,CPU|HDD|IOPS|SSD,PASS
+TI11,Token case and value preserved from the artifacts,unchanged,"route_path, key and db_type carried verbatim from cohort_manifest",PASS
+TI12,No informational empty-state rows invented without evidence,0,0 non-operational rows; Memory and other unsupported metrics are absent from the governed artifacts so none were fabricated,PASS

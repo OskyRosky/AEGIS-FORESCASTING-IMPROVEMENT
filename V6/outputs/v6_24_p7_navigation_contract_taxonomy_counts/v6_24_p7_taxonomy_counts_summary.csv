@@ -1,0 +1,11 @@
+count_scope,rows,operational_series_total,reconciles_to_140,distinct_filter_values,notes
+GLOBAL,1,140,TRUE,1,Each scope is a complete partition of the 140 operational series
+BY_METRIC,4,140,TRUE,4,Each scope is a complete partition of the 140 operational series
+BY_METRIC_DB_TYPE,5,140,TRUE,5,Each scope is a complete partition of the 140 operational series
+BY_METRIC_DB_TYPE_SCENARIO,7,140,TRUE,3,Each scope is a complete partition of the 140 operational series
+BY_METRIC_DB_TYPE_SCENARIO_SEGMENT,8,140,TRUE,3,Each scope is a complete partition of the 140 operational series
+BY_METRIC_DB_TYPE_SCENARIO_SEGMENT_GRANULARITY,11,140,TRUE,2,Each scope is a complete partition of the 140 operational series
+BY_FULL_FILTER_PATH,140,140,TRUE,102,Each scope is a complete partition of the 140 operational series
+BY_ROUTE_PATH,11,140,TRUE,11,Each scope is a complete partition of the 140 operational series
+BY_SIGNAL_QUALITY,3,140,TRUE,3,Each scope is a complete partition of the 140 operational series
+BY_CHAMPION_VALIDITY,2,140,TRUE,2,Each scope is a complete partition of the 140 operational series

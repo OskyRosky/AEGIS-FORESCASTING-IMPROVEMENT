@@ -1,0 +1,52 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P6C PASS confirmed,all PASS,38/38 PASS,PASS,NO
+V2,forecast_outputs exists,present,present,PASS,NO
+V3,model_rankings exists,present,present,PASS,NO
+V4,series_signal_quality exists,present,present,PASS,NO
+V5,navigation_contract.parquet exists,present,"present, 61 KB",PASS,NO
+V6,navigation_contract.csv exists,present,"present, 167 KB",PASS,NO
+V7,taxonomy_counts.parquet exists,present,"present, 35 KB",PASS,NO
+V8,taxonomy_counts.csv exists,present,"present, 109 KB",PASS,NO
+V9,navigation_contract has exactly 140 OPERATIONAL_ENTITY rows,140,140,PASS,NO
+V10,Operational rows include all 140 MVP series,identical sets,140 of 140 matched,PASS,NO
+V11,Every operational row is product_ready,140 TRUE,140,PASS,NO
+V12,Every operational row is viewer_visible,140 TRUE,140,PASS,NO
+V13,Every operational row is forecast_visible,140 TRUE,140,PASS,NO
+V14,Viewer/Forecast parity holds,0 violations,0 viewer-visible rows lacking forecast visibility,PASS,YES
+V15,Readiness fields derived from governed artifacts,derived,['DERIVED_FROM_GOVERNED_ARTIFACTS'],PASS,NO
+V16,manifest_flag_used_for_readiness is FALSE everywhere,FALSE,['FALSE'],PASS,NO
+V17,Stale manifest flag not used for readiness,not used,the flag reads FALSE for 90 series that are in fact product_ready; it was recorded but never consulted,PASS,YES
+V18,Every operational row has exactly one champion_model_name,140,"140 non-null, 14 distinct models",PASS,NO
+V19,champion_visible = FALSE for no-signal rows,all FALSE,15/15,PASS,YES
+V20,champion_visible TRUE only when validity is meaningful,MEANINGFUL_ACCURACY_RANKING,['MEANINGFUL_ACCURACY_RANKING'],PASS,YES
+V21,All no-signal rows are AVAILABLE_WITH_CAVEAT,AVAILABLE_WITH_CAVEAT,['AVAILABLE_WITH_CAVEAT'],PASS,NO
+V22,All no-signal rows carry the NO_SIGNAL badge,all,15/15,PASS,NO
+V23,Low-confidence backtest-window rows are flagged,">=1, derived","1 flagged, derived from artifacts: ['SSD__Phoenix__Forest__GBRP267']",PASS,NO
+V24,Forecast horizon labelled correctly,GOVERNED_30_STEP_DAILY_FORECAST,['GOVERNED_30_STEP_DAILY_FORECAST'],PASS,NO
+V25,Forecast steps = 30 wherever forecast is visible,30,[30],PASS,NO
+V26,Taxonomy counts reconcile to navigation_contract,every scope sums to 140,all 10 scopes reconcile: True,PASS,YES
+V27,GLOBAL operational_series_count = 140,140,140,PASS,NO
+V28,BY_METRIC reconciles 50/50/20/20,"HDD 50, SSD 50, CPU 20, IOPS 20",HDD 50|SSD 50|CPU 20|IOPS 20,PASS,NO
+V29,No unsupported metric is operational,only governed metrics,CPU|HDD|IOPS|SSD,PASS,NO
+V30,"Key marked as routing/display, not a canonical axis",declared,"key_axis_status values ['IDENTIFIER_VALUE_FOREST', 'ROUTING_VALUE_REGION']; 102 keys for 140 series proves it is not unique",PASS,NO
+V31,Conditional axes use NOT_APPLICABLE,explicit,140 rows carry at least one NOT_APPLICABLE axis value,PASS,NO
+V32,No fake filter options created,0,every option derives from an operational row,PASS,NO
+V33,No empty operational choices exposed,0,0 options with zero series,PASS,NO
+V34,Aggregation policy uses median as primary,median,['median'],PASS,NO
+V35,Mean is not used as a primary dashboard aggregate,absent,no mean_* column exists in navigation_contract or taxonomy_counts,PASS,NO
+V36,"No row claims a 4-year or 1,440-day horizon",none,forecast_steps values [30],PASS,NO
+V37,No taxonomy row claims a horizon beyond the governed contract,none,taxonomy forecast_steps [30],PASS,NO
+V38,No Shiny files modified,no diff,clean,PASS,YES
+V39,V1 through V5 untouched,no diff,clean,PASS,NO
+V40,raw Parquet untouched,no diff,clean,PASS,NO
+V41,model_backtests_15_models unchanged,sha256 identical,verified byte-identical before and after P7,PASS,NO
+V42,accuracy_metrics unchanged,sha256 identical,verified byte-identical before and after P7,PASS,NO
+V43,model_rankings unchanged,sha256 identical,verified byte-identical before and after P7,PASS,NO
+V44,forecast_outputs unchanged,sha256 identical,verified byte-identical before and after P7,PASS,NO
+V45,series_signal_quality unchanged,sha256 identical,verified byte-identical before and after P7,PASS,NO
+V46,No SQL was run,none,none - local parquet reads only,PASS,NO
+V47,No push performed,none,none,PASS,NO
+V48,Closure states P8 readiness,stated,closure states READY_FOR_P8_WITH_CAVEATS,PASS,NO
+V49,navigation_contract schema complete,63 required columns,all present: True,PASS,NO
+V50,Champion visibility consistent across signal classes,consistent,per-class check: True,PASS,NO
+V51,Taxonomy integrity checks pass,all,True,PASS,NO

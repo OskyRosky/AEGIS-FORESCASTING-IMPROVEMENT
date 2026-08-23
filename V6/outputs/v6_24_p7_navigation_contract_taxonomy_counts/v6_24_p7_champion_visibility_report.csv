@@ -1,0 +1,4 @@
+signal_quality_status,series,champion_visible_true,champion_visible_false,champion_validity_values,distinct_champion_models,expected_visibility,result
+NO_SIGNAL_ALL_ZERO_ACTUALS,15,0,15,NOT_MEANINGFUL_NO_SIGNAL,1,hidden for every row,PASS
+SIGNAL_PRESENT,121,121,0,MEANINGFUL_ACCURACY_RANKING,14,visible for every row,PASS
+TRAILING_ZERO_LATEST_ACTUAL,4,4,0,MEANINGFUL_ACCURACY_RANKING,4,visible for every row,PASS

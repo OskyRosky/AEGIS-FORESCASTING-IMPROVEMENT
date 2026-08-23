@@ -1,0 +1,176 @@
+filter_stage,parent_filter_path,next_filter_axis,valid_option_value,option_series_count,option_visible_count,option_status,notes
+1. metric,GLOBAL,metric,CPU,20,20,AVAILABLE,Derived from operational rows only; never exposed when empty
+1. metric,GLOBAL,metric,HDD,50,50,AVAILABLE,Derived from operational rows only; never exposed when empty
+1. metric,GLOBAL,metric,IOPS,20,20,AVAILABLE,Derived from operational rows only; never exposed when empty
+1. metric,GLOBAL,metric,SSD,50,50,AVAILABLE,Derived from operational rows only; never exposed when empty
+2. db_type,CPU,db_type,UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE,20,20,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+2. db_type,HDD,db_type,Basilisk,17,17,AVAILABLE,Derived from operational rows only; never exposed when empty
+2. db_type,HDD,db_type,EDB,33,33,AVAILABLE,Derived from operational rows only; never exposed when empty
+2. db_type,IOPS,db_type,NOT_APPLICABLE,20,20,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+2. db_type,SSD,db_type,Phoenix,50,50,AVAILABLE,Derived from operational rows only; never exposed when empty
+3. scenario,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE,scenario,Consumed,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+3. scenario,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE,scenario,Failover,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+3. scenario,HDD|Basilisk,scenario,NOT_APPLICABLE,17,17,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+3. scenario,HDD|EDB,scenario,NOT_APPLICABLE,33,33,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+3. scenario,IOPS|NOT_APPLICABLE,scenario,Consumed,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+3. scenario,IOPS|NOT_APPLICABLE,scenario,Failover,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+3. scenario,SSD|Phoenix,scenario,NOT_APPLICABLE,50,50,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+4. segment,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed,segment,NOT_APPLICABLE,10,10,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+4. segment,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover,segment,NOT_APPLICABLE,10,10,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+4. segment,HDD|Basilisk|NOT_APPLICABLE,segment,NOT_APPLICABLE,17,17,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+4. segment,HDD|EDB|NOT_APPLICABLE,segment,Consumer,17,17,AVAILABLE,Derived from operational rows only; never exposed when empty
+4. segment,HDD|EDB|NOT_APPLICABLE,segment,Enterprise,16,16,AVAILABLE,Derived from operational rows only; never exposed when empty
+4. segment,IOPS|NOT_APPLICABLE|Consumed,segment,NOT_APPLICABLE,10,10,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+4. segment,IOPS|NOT_APPLICABLE|Failover,segment,NOT_APPLICABLE,10,10,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+4. segment,SSD|Phoenix|NOT_APPLICABLE,segment,NOT_APPLICABLE,50,50,AVAILABLE_CONDITIONAL_AXIS,This axis does not apply to this branch; the value is carried explicitly rather than dropped or faked
+5. granularity,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE,granularity,Region,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE,granularity,Region,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE,granularity,Forest,9,9,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE,granularity,Region,8,8,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,HDD|EDB|NOT_APPLICABLE|Consumer,granularity,Forest,9,9,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,HDD|EDB|NOT_APPLICABLE|Consumer,granularity,Region,8,8,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,HDD|EDB|NOT_APPLICABLE|Enterprise,granularity,Forest,8,8,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,HDD|EDB|NOT_APPLICABLE|Enterprise,granularity,Region,8,8,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE,granularity,Region,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE,granularity,Region,10,10,AVAILABLE,Derived from operational rows only; never exposed when empty
+5. granularity,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE,granularity,Forest,50,50,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,APC-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,ARE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,AUS-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,BRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,CAN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,CHE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,CHN-Gallatin,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,DEU-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,EUR-MSIT,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Consumed|NOT_APPLICABLE|Region,key,FRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,APC-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,ARE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,AUS-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,BRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,CAN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,CHE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,CHN-Gallatin,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,DEU-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,EUR-MSIT,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,CPU|UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE|Failover|NOT_APPLICABLE|Region,key,FRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,apcp150,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,chnpr01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,eurp180,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,eurprd07,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,jpnprd01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,namp113,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,namp157,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,namp222,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,namprd15,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,GBR-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,ITA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,are-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,chl-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,fra-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,kor-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,nam-ITAR GCCH,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|Basilisk|NOT_APPLICABLE|NOT_APPLICABLE|Region,key,nzl-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,CANPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,EURP179,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,EURP309,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,EURPRD07,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,JPNPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,NAMP115,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,NAMP159,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,NAMP283,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Forest,key,NAMPRD16,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,APC-MSIT,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,CAN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,EUR-Dedicated,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,IDN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,LAM-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,NAM-ITAR DoD,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,NAM-MSIT,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Consumer|Region,key,POL-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,CHNPR01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,EURP192,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,EURP309,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,GBRP265,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,NAMP103,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,NAMP134,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,NAMP220,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Forest,key,NAMPRD14,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,APC-MSIT,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,CAN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,CHL-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,EUR-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,EUR-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,ITA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,NAM-Dedicated,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,HDD|EDB|NOT_APPLICABLE|Enterprise|Region,key,NAM-SDF,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,APC-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,ARE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,AUS-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,BRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,CAN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,CHE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,CHN-Gallatin,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,DEU-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,EUR-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Consumed|NOT_APPLICABLE|Region,key,FRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,APC-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,ARE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,AUS-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,BRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,CAN-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,CHE-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,CHN-Gallatin,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,DEU-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,EUR-Multitenant,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,IOPS|NOT_APPLICABLE|Failover|NOT_APPLICABLE|Region,key,FRA-Go Local,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,APCP150,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,APCPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,APCPRD02,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,AREP273,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,AUSP282,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,AUSP300,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,AUSPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,AUTP296,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,BRAP284,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,CANP288,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,CANPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,CHEP278,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,CHLP298,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,DEUP281,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,DNKP307,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,ESPP292,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,EURP107,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,EURP119,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,EURP120,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,FRAP264,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,GBRP123,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,GBRP265,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,GBRP267,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,IDNP305,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,INDP287,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,INDPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,ISRP290,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,ITAP293,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,JPNP286,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,JPNP301,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,JPNPRD01,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,KORP216,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,LAMP152,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,LAMP215,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,LAMPRD80,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,MEXP297,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,MYSP306,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NAMP100,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NAMP101,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NAMP104,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NAMPRD07,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NAMPRD08,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NORP279,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,NZLP299,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,POLP291,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,QATP289,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,SGPP274,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,SWEP280,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,TWNP295,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty
+6. key,SSD|Phoenix|NOT_APPLICABLE|NOT_APPLICABLE|Forest,key,ZAFP275,1,1,AVAILABLE,Derived from operational rows only; never exposed when empty

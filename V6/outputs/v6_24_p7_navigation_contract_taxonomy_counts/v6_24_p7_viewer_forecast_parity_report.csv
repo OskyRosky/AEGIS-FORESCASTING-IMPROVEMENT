@@ -1,0 +1,7 @@
+check,expected,observed,result
+Viewer-visible rows without forecast visibility,0,0,PASS
+Forecast-visible rows without viewer visibility,0,0,PASS
+Viewer-visible count,140,140,PASS
+Forecast-visible count,140,140,PASS
+Both sides use the same 15 governed models,15,backtests/accuracy and forecasts both cover 15 governed models,PASS
+Both sides use the same series identity,identical sets,navigation series == forecast series: True,PASS

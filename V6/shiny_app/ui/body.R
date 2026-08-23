@@ -2,6 +2,7 @@
 source("ui/sidebar.R")
 source("ui/tabs.R")
 source("ui/tabs_v6_16_viewer.R")
+source("ui/tabs_v6_24_mvp.R")   # V6.24 | governed MVP pages (read-only)
 source("ui/footer.R")
 
 tess_help_overlay <- function() {

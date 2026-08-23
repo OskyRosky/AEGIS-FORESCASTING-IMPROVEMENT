@@ -1,0 +1,12 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P7 validation passed,all PASS,51/51 PASS,PASS,V6_24_P8_BLOCKED_P7_NOT_PASS
+PF02,navigation_contract exists,present,present,PASS,V6_24_P8_BLOCKED_NAVIGATION_CONTRACT_MISSING
+PF03,taxonomy_counts exists,present,present,PASS,V6_24_P8_BLOCKED_TAXONOMY_COUNTS_MISSING
+PF04,forecast_outputs exists,present,present,PASS,V6_24_P8_BLOCKED_FORECAST_OUTPUTS_MISSING
+PF05,model_rankings exists,present,present,PASS,V6_24_P8_BLOCKED_MODEL_RANKINGS_MISSING
+PF06,accuracy_metrics exists,present,present,PASS,
+PF07,series_signal_quality exists,present,present,PASS,
+PF08,actuals_normalized exists,present,present,PASS,
+PF09,model_backtests_15_models exists,present,present,PASS,
+PF10,Shiny app structure is legible,entrypoint + ui + server identified,"app.R, global.R, 53 files inventoried; sections keyed by data-section via app_sections()",PASS,
+PF11,R runtime and packages available,"shiny, arrow, dplyr, plotly, DT",R 4.6.0; all required packages present; none installed by P8,PASS,

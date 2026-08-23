@@ -1,0 +1,17 @@
+{
+ "npass": 48,
+ "nfail": 0,
+ "total": 48,
+ "added": 3,
+ "modified": 6,
+ "smoke": 25,
+ "smoke_n": 25,
+ "srv": 31,
+ "srv_n": 31,
+ "loader": 35,
+ "loader_n": 35,
+ "imm": 22,
+ "imm_n": 22,
+ "ff": 177,
+ "ts": "2026-08-23T23:08:58Z"
+}

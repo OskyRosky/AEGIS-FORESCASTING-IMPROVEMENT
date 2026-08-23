@@ -1,0 +1,17 @@
+invariant,expected,observed,result
+Governed processed artifacts unchanged,all identical,22/22 md5-identical after app load and full test run,PASS
+processed/ has no uncommitted modification from P8,no diff,clean,PASS
+raw Parquet untouched,no diff,clean,PASS
+V1 through V5 untouched,no diff,clean,PASS
+Only Shiny integration files modified,3 new + 6 modified,"3 added, 6 modified, 0 deleted",PASS
+LLM / assistant components preserved,untouched,no llm_*.R file appears in the change set,PASS
+scenario_resolver.R still unwired,untouched,not in the change set and not sourced by the V6.24 module,PASS
+No SQL run,none,no DBI/odbc call in any V6.24 file,PASS
+No model executed,none,source scan found no model/forecast call in V6.24 code,PASS
+No forecast generated in Shiny,none,"forecast_outputs read verbatim; 63,000 rows loaded, none produced",PASS
+No accuracy or ranking recalculated,none,accuracy_metrics and model_rankings read verbatim,PASS
+No mean-based tile,none,no mean column referenced anywhere in the V6.24 code,PASS
+No hardcoded no-signal or GBRP267 list,none,suppression driven by champion_visible and low_confidence_backtest_window_flag fields,PASS
+No package installed,none,arrow/shiny/DT/plotly already present; nothing installed,PASS
+No git add . / -A / --all,not used,not used,PASS
+No push,none,none,PASS

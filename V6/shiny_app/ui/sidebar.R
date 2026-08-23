@@ -19,6 +19,12 @@ stage07_menu <- function() {
       list(value = "forecast", label = "Forecast", title = "Forward Forecast", icon = "arrow-trend-up"),
       list(value = "ttl",      label = "TTL",      title = "TTL / Capacity View", icon = "hourglass-half", planned = TRUE)
     )),
+    list(group = "V6.24 MVP", icon = "cube", items = list(
+      list(value = "v24_overview", label = "Overview", title = "V6.24 MVP Overview",            icon = "gauge-high"),
+      list(value = "v24_viewer",   label = "Viewer",   title = "V6.24 Series Viewer",           icon = "chart-line"),
+      list(value = "v24_forecast", label = "Forecast", title = "V6.24 Governed 30-Step Forecast", icon = "arrow-trend-up"),
+      list(value = "v24_taxonomy", label = "Taxonomy", title = "V6.24 Taxonomy and Availability", icon = "sitemap")
+    )),
     list(group = "Governance", icon = "scale-balanced", items = list(
       list(value = "risks",      label = "Risks",      title = "Risk Register",       icon = "triangle-exclamation"),
       list(value = "audit",      label = "Audit",      title = "Audit Trail",         icon = "list-ol")

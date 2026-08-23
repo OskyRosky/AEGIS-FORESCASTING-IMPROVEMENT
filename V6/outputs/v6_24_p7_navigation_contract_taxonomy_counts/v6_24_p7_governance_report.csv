@@ -1,0 +1,19 @@
+invariant,expected,observed,result
+model_backtests_15_models unchanged,sha256 identical,verified byte-identical before and after,PASS
+accuracy_metrics unchanged,sha256 identical,verified byte-identical,PASS
+model_rankings unchanged,sha256 identical,verified byte-identical,PASS
+forecast_outputs unchanged,sha256 identical,verified byte-identical,PASS
+series_signal_quality unchanged,sha256 identical,verified byte-identical,PASS
+actuals_normalized unchanged,sha256 identical,verified byte-identical,PASS
+cohort_manifest unchanged,sha256 identical,verified byte-identical,PASS
+Frozen artifacts verified,16 files,16 fingerprinted by sha256 before and after,PASS
+navigation_contract created,new artifact,140 rows,PASS
+taxonomy_counts created,new artifact,192 rows,PASS
+Shiny untouched,no diff,clean,PASS
+V1 through V5 untouched,no diff,clean,PASS
+raw Parquet untouched,no diff,clean,PASS
+No SQL run,none,none - local parquet reads only,PASS
+No models re-run,none,none - P7 is a pure derivation layer,PASS
+No accuracy or ranking recalculation,none,accuracy_metrics and model_rankings read-only,PASS
+No git add . / -A / --all,not used,not used,PASS
+No push,none,none,PASS

@@ -1,0 +1,12 @@
+metric,route_path,granularity,series,distinct_keys,champion_visible,no_signal,median_wape,route_display_label
+CPU,CPU|Organic|Consumed|Region,Region,10,10,10,0,0.052699,CPU / CPU|Organic|Consumed|Region / APC-Multitenant
+CPU,CPU|Organic|Failover|Region,Region,10,10,10,0,0.048198,CPU / CPU|Organic|Failover|Region / APC-Multitenant
+HDD,HDD|Organic|Basilisk|Forest,Forest,9,9,5,4,0.059086,HDD / HDD|Organic|Basilisk|Forest / apcp150
+HDD,HDD|Organic|Basilisk|Region,Region,8,8,4,4,0.022802,HDD / HDD|Organic|Basilisk|Region / GBR-Go Local
+HDD,HDD|Organic|EDB|Consumer|Forest,Forest,9,9,5,4,0.102265,HDD / HDD|Organic|EDB|Consumer|Forest / CANPRD01
+HDD,HDD|Organic|EDB|Consumer|Region,Region,8,8,5,3,0.04687,HDD / HDD|Organic|EDB|Consumer|Region / APC-MSIT
+HDD,HDD|Organic|EDB|Enterprise|Forest,Forest,8,8,8,0,0.018869,HDD / HDD|Organic|EDB|Enterprise|Forest / CHNPR01
+HDD,HDD|Organic|EDB|Enterprise|Region,Region,8,8,8,0,0.052183,HDD / HDD|Organic|EDB|Enterprise|Region / APC-MSIT
+IOPS,IOPS|Organic|Consumed|Region,Region,10,10,10,0,0.066363,IOPS / IOPS|Organic|Consumed|Region / APC-Multitenant
+IOPS,IOPS|Organic|Failover|Region,Region,10,10,10,0,0.073776,IOPS / IOPS|Organic|Failover|Region / APC-Multitenant
+SSD,SSD|Phoenix|LowVolume|Forest,Forest,50,50,50,0,0.057384,SSD / SSD|Phoenix|LowVolume|Forest / APCP150
