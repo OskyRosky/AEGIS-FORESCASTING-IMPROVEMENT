@@ -1,0 +1,51 @@
+check_id,check,expected,observed,result
+V1,P9G closure exists and passed,TRUE,TRUE,PASS
+V2,Existing Accuracy studied,TRUE,TRUE,PASS
+V3,Existing setup documented,TRUE,TRUE,PASS
+V4,Existing summary documented,TRUE,TRUE,PASS
+V5,Existing heatmap documented,TRUE,TRUE,PASS
+V6,Existing metric table documented,TRUE,TRUE,PASS
+V7,Existing assistant/download documented,TRUE,TRUE,PASS
+V8,V6.24 Accuracy page exists,TRUE,TRUE,PASS
+V9,Sidebar includes Accuracy under V6.24 MVP,TRUE,TRUE,PASS
+V9b,Accuracy sits between Viewer and Forecast,TRUE,TRUE,PASS
+V10,Legacy Forecasting Accuracy intact,TRUE,TRUE,PASS
+V11,Setup controls render,TRUE,TRUE,PASS
+V12,Horizon disclosed rather than filtered (owner-approved),TRUE,TRUE,PASS
+V13,Metric selector uses governed accuracy fields,TRUE,TRUE,PASS
+V14,Model selector uses the governed 15 only,TRUE,TRUE,PASS
+V15,Analyze Accuracy button exists,TRUE,TRUE,PASS
+V16,Results update only after Analyze,TRUE,TRUE,PASS
+V17,Summary cards render,TRUE,TRUE,PASS
+V18,Worst derived from the selected metric,TRUE,TRUE,PASS
+V19,Best derived from the selected metric,TRUE,TRUE,PASS
+V20,Heatmap uses highcharter,TRUE,TRUE,PASS
+V21,Heatmap columns are governed measures,TRUE,TRUE,PASS
+V22,Heatmap rows are the governed models,TRUE,TRUE,PASS
+V23,Heatmap has tooltip and export,TRUE,TRUE,PASS
+V24,Heatmap does not use Plotly,TRUE,TRUE,PASS
+V25,Metric table uses DT,TRUE,TRUE,PASS
+V26,Table is sortable,TRUE,TRUE,PASS
+V27,Extreme values readable and flagged,TRUE,TRUE,PASS
+V28,Assistant panel renders,TRUE,TRUE,PASS
+V29,Assistant answers from accuracy evidence,TRUE,TRUE,PASS
+V30,Assistant refuses unsupported causes,TRUE,TRUE,PASS
+V31,Download assessment exists,TRUE,TRUE,PASS
+V32,Browser confirms the page is visible,TRUE,TRUE,PASS
+V33,Browser confirms the heatmap is visible,TRUE,TRUE,PASS
+V34,Browser confirms the table is visible,TRUE,TRUE,PASS
+V35,Browser confirms the assistant works,TRUE,TRUE,PASS
+V36,No processed artifacts modified,TRUE,TRUE,PASS
+V37,No raw artifacts modified,TRUE,TRUE,PASS
+V38,No SQL run,TRUE,TRUE,PASS
+V39,No model execution,TRUE,TRUE,PASS
+V40,No forecast regeneration,TRUE,TRUE,PASS
+V41,No backtest regeneration,TRUE,TRUE,PASS
+V42,No accuracy recalculation from backtest rows,TRUE,TRUE,PASS
+V43,No ranking recalculation,TRUE,TRUE,PASS
+V44,Existing Forecasting intact,TRUE,TRUE,PASS
+V45,No push performed,TRUE,TRUE,PASS
+V46,Closure states P9I readiness,TRUE,TRUE,PASS
+V47,Accuracy is scoped to the Viewer selection,TRUE,TRUE,PASS
+V48,No-signal series gets no best model,TRUE,TRUE,PASS
+V49,Every browser-shown number re-derived,TRUE,TRUE,PASS

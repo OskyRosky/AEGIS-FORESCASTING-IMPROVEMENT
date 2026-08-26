@@ -1,0 +1,9 @@
+before,after,result
+"Project (Home, Overview)","Project (Home, Overview) - unchanged",PASS
+"Models (Universe, Tournament, Champion) - legacy, visible","hidden from the sidebar, definition retained as 'Models (legacy)'",PASS
+"Forecasting (Viewer, Accuracy, Forecast, TTL) - legacy, visible","hidden from the sidebar, definition retained as 'Forecasting (legacy)'",PASS
+"V6.24 MVP (Overview, Viewer, Accuracy, Forecast, Taxonomy)","Forecasting (Overview, Viewer, Accuracy, Forecast) - Taxonomy hidden on request, definition retained",PASS
+"Models FULL (Universe, Ranking Diagnostics, Champion)","Models (Universe, Ranking Diagnostics, Champion)",PASS
+"Governance (Risks, Audit)","Governance (Risks, Audit) - unchanged",PASS
+"Reference (Artifacts, Methodology, Version)","Reference (Artifacts, Methodology, Version) - unchanged",PASS
+"Group order: Project, Models, Forecasting, V6.24 MVP, Models FULL, ...","Project, Models, Forecasting, Governance, Reference",PASS

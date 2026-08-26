@@ -1,0 +1,9 @@
+stage,name,status
+P9H,Accuracy parity,CLOSED
+P9J,Models FULL study,CLOSED
+P9K,Models FULL Universe,READY
+P9L,Models FULL Ranking diagnostics,READY WITH CAVEATS - no tournament possible
+P9M,Models FULL Champion,READY WITH CAVEATS - per-series only
+P9N,Models FULL assistant/downloads,PENDING
+P9F,Forecast champion polish,NOT RUN
+P9I,Final visual QA,PENDING

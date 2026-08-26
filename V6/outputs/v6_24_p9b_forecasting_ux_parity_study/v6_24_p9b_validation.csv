@@ -1,0 +1,38 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P9B output folder exists,present,27 files,PASS,NO
+V2,Preflight check exists,present,7 checks,PASS,NO
+V3,Existing Forecasting files inspected,all core files,"viewer_pilot, forecast_pilot, taxonomy_navigation, artifact_export, llm_explain, llm_compose, libraries, data_loader, helpers, constants, tabs_v6_16_viewer, tabs, sidebar, body, server",PASS,NO
+V4,Forecasting Viewer UX documented,documented,"Selection card, progressive axes, breadcrumb, route cards, forecast-only callout inventoried",PASS,NO
+V5,Forecasting Forecast UX documented,documented,"section_forecast, fvf_chart, boundary marker, shared taxonomy module",PASS,NO
+V6,Forecasting backtest configuration documented,documented,"horizon radios, disabled chips, family grouping, champion star, Analyze/Reset",PASS,NO
+V7,Forecasting Highcharts usage documented,documented,"18-row migration study covering constructor, axes, legend, export, tooltip, palette, data shape",PASS,NO
+V8,Forecasting LLM Assistant usage documented,documented,"9-row study: ui/server signature, quick prompts, page-keyed evidence, composer, disclosure",PASS,NO
+V9,Forecasting download/export usage documented,documented,"11-row study: artifact_export modal and formats, fvp_pilot_download_rows",PASS,NO
+V10,Current V6.24 MVP UX documented,documented,"20 elements across Overview, Viewer, Forecast, Taxonomy, caveats, loader",PASS,NO
+V11,Current V6.24 code map documented,documented,"9 files with roles, symbols and technical debt",PASS,NO
+V12,Parity map exists,27 elements,27 elements,PASS,NO
+V13,Parity map covers Selection,covered,present in the parity map,PASS,NO
+V14,Parity map covers Backtest Configuration,covered,present in the parity map,PASS,NO
+V15,Parity map covers Highcharts Backtest Results,covered,present in the parity map,PASS,NO
+V16,Parity map covers Forecast Page,covered,present in the parity map,PASS,NO
+V17,Parity map covers Assistant,covered,present in the parity map,PASS,NO
+V18,Parity map covers Downloads,covered,present in the parity map,PASS,NO
+V19,Highcharts migration study exists,present,18 rows,PASS,NO
+V20,Assistant reuse study exists,present,9 rows,PASS,NO
+V21,Download reuse study exists,present,11 rows,PASS,NO
+V22,Staged implementation plan exists,P9C..P10,8 stages,PASS,NO
+V23,Risk register exists,12+ risks,15 risks,PASS,NO
+V24,Governance notes exist,present,written,PASS,NO
+V25,P9C is defined as the next build stage,P9C,P9C Selection UX Parity is the first stage with code changes,PASS,NO
+V26,No Shiny code was modified,0 changed,"0 changed, 0 new",PASS,YES
+V27,No CSS was modified,unchanged,www/custom.css sha256 identical,PASS,YES
+V28,No processed artifact was modified,0 changed,0 of 22 changed,PASS,YES
+V29,No raw artifact was modified,no diff,clean,PASS,NO
+V30,No SQL was run,none,none - local file reads only,PASS,NO
+V31,No models were executed,none,none,PASS,NO
+V32,No forecasts were regenerated,none,none,PASS,NO
+V33,No accuracy or ranking was recalculated,none,none,PASS,NO
+V34,No push was performed,none,none,PASS,NO
+V35,Closure states P9B was STUDY ONLY,stated,stated in v6_24_p9b_closure_summary.md,PASS,NO
+V36,Closure states P9C readiness,stated,closure states READY_FOR_P9C_WITH_CAVEATS,PASS,NO
+V37,V1 through V5 untouched,no diff,clean,PASS,NO

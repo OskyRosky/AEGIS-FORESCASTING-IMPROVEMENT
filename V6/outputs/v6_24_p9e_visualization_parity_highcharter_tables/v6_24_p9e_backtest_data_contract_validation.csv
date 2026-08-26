@@ -1,0 +1,11 @@
+check_id,check,expected,observed,result
+BC1,Horizon filter uses equality,horizon_steps == horizon,equality,PASS
+BC2,No <= horizon anywhere,0 occurrences,0,PASS
+BC3,Rows come from model_backtests_15_models,artifact read,v6_24_backtest_rows,PASS
+BC4,No interpolation / smoothing / resampling,none,none,PASS
+BC5,"NA dropped, never filled",drop,drop,PASS
+BC6,Actual line read from the artifact column,unique() read,unique,PASS
+BC7,Chart never recomputes accuracy,0 metric maths,0,PASS
+BC8,Dates rendered UTC-safe,v6_24_as_date,v6_24_as_date,PASS
+BC9,Browser: chart subtitle and note state the same dates,identical,both 2022-04-30 → 2023-06-25,PASS
+BC10,Browser: applied horizon changes only on Analyze,unchanged until click,pending 5→20 left the chart at horizon 5,PASS

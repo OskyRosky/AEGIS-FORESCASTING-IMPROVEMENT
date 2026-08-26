@@ -1,0 +1,7 @@
+case,series_kind,expected,observed,result
+Signal-present series,SIGNAL_PRESENT,Backtest available,"4,500 rows with all 15 models",PASS
+No-signal series,NO_SIGNAL_ALL_ZERO_ACTUALS,available - a caveat is not missing data,"2,250 rows, 15 models",PASS
+Low-confidence series,LOW_CONFIDENCE_BACKTEST_WINDOW_ZERO,available - a caveat is not missing data,"4,500 rows",PASS
+Unknown series,n/a,not available,NOT_AVAILABLE,PASS
+No series selected,n/a,"pending, Analyze disabled",banner reads 'No series selected'; Analyze renders as a disabled span,PASS
+Browser check,NO_SIGNAL,Backtest available,the no-signal series showed the green 'Backtest available' banner,PASS

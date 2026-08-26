@@ -1,0 +1,53 @@
+check_id,check,expected,observed,result
+V1,P9L closure exists and passed,TRUE,TRUE,PASS
+V2,P9M output folder exists,TRUE,TRUE,PASS
+V3,Prechange hashes captured,TRUE,TRUE,PASS
+V4,Postchange hashes captured,TRUE,TRUE,PASS
+V5,Modified files report exists,TRUE,TRUE,PASS
+V6,Models FULL sidebar has all three entries,TRUE,TRUE,PASS
+V7,Champion FULL page exists,TRUE,TRUE,PASS
+V8,Models FULL Universe and Ranking still present,TRUE,TRUE,PASS
+V9,Legacy Models intact,TRUE,TRUE,PASS
+V10,V6.24 MVP pages intact,TRUE,TRUE,PASS
+V11,Uses V6.24 artifacts only,TRUE,TRUE,PASS
+V12,Does not use legacy HDD champion artifacts,TRUE,TRUE,PASS
+V13,Cohort is 140 series,TRUE,TRUE,PASS
+V14,Presentable series is 125,TRUE,TRUE,PASS
+V15,Suppressed series is 15,TRUE,TRUE,PASS
+V16,Distribution sums to 125,TRUE,TRUE,PASS
+V17,Distribution does not sum to 140,TRUE,TRUE,PASS
+V18,14 models lead at least one series,TRUE,TRUE,PASS
+V19,Leading model is a minority,TRUE,TRUE,PASS
+V20,"Champion read, never computed",TRUE,TRUE,PASS
+V21,"Visibility gate read, never computed",TRUE,TRUE,PASS
+V22,"Ranking read, never recomputed",TRUE,TRUE,PASS
+V23,No global champion computed,TRUE,TRUE,PASS
+V24,Page denies a cohort champion,TRUE,TRUE,PASS
+V25,ETS Explicit not presented as a global champion,TRUE,TRUE,PASS
+V26,Legacy champion claim quantified against V6.24,TRUE,TRUE,PASS
+V27,Leading model labelled a count,TRUE,TRUE,PASS
+V28,No-signal series excluded from the distribution,TRUE,TRUE,PASS
+V29,No-signal series get no champion,TRUE,TRUE,PASS
+V30,Suppressed branch avoids winner language,TRUE,TRUE,PASS
+V31,Cards render,TRUE,TRUE,PASS
+V32,Distribution chart uses highcharter,TRUE,TRUE,PASS
+V33,Distribution table uses DT,TRUE,TRUE,PASS
+V34,Per-series ranking uses DT,TRUE,TRUE,PASS
+V35,No Plotly in Champion FULL,TRUE,TRUE,PASS
+V36,Shared selection exposed by the MVP server,TRUE,TRUE,PASS
+V37,Shared selection threaded through server.R,TRUE,TRUE,PASS
+V38,Models FULL server accepts a NULL default,TRUE,TRUE,PASS
+V39,Fallback selector exists when nothing is selected,TRUE,TRUE,PASS
+V40,Per-series table opts out of DT lazy rendering,TRUE,TRUE,PASS
+V41,v6_24_dt supports lazy_render,TRUE,TRUE,PASS
+V42,Assistant answers from V6.24 evidence,TRUE,TRUE,PASS
+V43,Assistant refuses unsupported claims,TRUE,TRUE,PASS
+V44,Assistant declines forward-looking questions,TRUE,TRUE,PASS
+V45,No SQL run,TRUE,TRUE,PASS
+V46,No model execution,TRUE,TRUE,PASS
+V47,No backtest or forecast regeneration,TRUE,TRUE,PASS
+V48,No processed artifacts modified,TRUE,TRUE,PASS
+V49,No raw artifacts modified,TRUE,TRUE,PASS
+V50,No legacy logic file modified,TRUE,TRUE,PASS
+V51,Browser evidence captured,TRUE,TRUE,PASS
+V52,No push performed,TRUE,TRUE,PASS

@@ -1,0 +1,16 @@
+check_id,invariant,expected,observed,result
+G1,No Shiny .R file modified in this stage,0,0,PASS
+G2,No CSS modified,0,0,PASS
+G3,No JS modified,0,0,PASS
+G4,No file added to shiny_app,0,0,PASS
+G5,No processed artifact modified,0,0,PASS
+G6,No raw artifact modified,0,0,PASS
+G7,Old Models section intact,present,present,PASS
+G8,Legacy tournament artifacts untouched,0,0,PASS
+G9,No SQL run,0,0,PASS
+G10,No model execution,0,0,PASS
+G11,No forecast/backtest/accuracy regeneration,0,0,PASS
+G12,No ranking recalculation,0,0,PASS
+G13,No new tournament computed,0,0,PASS
+G14,No new champion computed,0,0,PASS
+G15,No push,0,0,PASS

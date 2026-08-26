@@ -1,0 +1,15 @@
+column,source,note,result
+Position,diagnostic_position,"reflects the chosen ordering, not an official rank",PASS
+Model,accuracy_metrics.model_name,governed spelling,PASS
+Display family,V6_24_DISPLAY_FAMILY,display-only,PASS
+Governed family,accuracy_metrics.model_family,3-valued,PASS
+Median (selected),median of the chosen governed column,median,PASS
+Median MAE / RMSE / WAPE / SMAPE,accuracy_metrics,medians,PASS
+Series led,"navigation_contract, gated",series-level,PASS
+Share of presentable,series led / 125,"share, not a probability",PASS
+Not computable,count excluded from the median,disclosed,PASS
+Extreme rows,count of |mae| >= 1e6,disclosed,PASS
+Rows,one per governed model after filter,15 with All,PASS
+No MASE/RMSSE column,absent,absent,PASS
+No p-value column,absent,absent,PASS
+No bootstrap interval column,absent,absent,PASS

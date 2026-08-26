@@ -1,0 +1,6 @@
+id,question,context,options,recommendation,blocks
+Q1,Should the backtest horizon filter stay on equality?,"Equality matches the legacy viewer. At horizon 5 a series yields only 10 target dates spread across 14 months, so the line is sparse by design.",equality (current) | horizon_steps <= h,keep equality; it compares models at one horizon instead of mixing step 1 and step 30,no
+Q2,Should the sparse backtest line show markers permanently?,Markers are on at radius 2.5-3. With 10 points per model this reads well; with a denser horizon it may crowd.,always on | density-based | off,keep on until P9H visual QA judges it on a dense series,no
+Q3,Is 6 default models still too many now that they are lines?,Six coloured lines plus the actual is seven series in the legend.,keep 6 | reduce to 4 | champion + reference only,judge in P9H with the owner looking at it,no
+Q4,Should the Overview artifact-load table stay on the product page?,It is a technical governance table now rendered in DT at the bottom.,keep at bottom | move to a technical section | drop,move it to a governance section in P9G,no
+Q5,Should the forecast history window stay at 120 days?,The chart shows the last 120 observed days before the 30 forecast steps.,120 | selectable | full history,keep 120 for now; a selector belongs to P9F,no

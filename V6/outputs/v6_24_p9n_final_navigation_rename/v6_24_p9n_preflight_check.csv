@@ -1,0 +1,6 @@
+check_id,check,expected,observed,result
+PF1,P9K closed,0 FAIL,45 PASS / 0 FAIL,PASS
+PF2,P9L closed,0 FAIL,52 PASS / 0 FAIL,PASS
+PF3,P9M closed,0 FAIL,52 PASS / 0 FAIL,PASS
+PF4,P9N folder exists,yes,yes,PASS
+PF5,Baseline hashes captured,yes,60 shiny + 22 artifacts,PASS

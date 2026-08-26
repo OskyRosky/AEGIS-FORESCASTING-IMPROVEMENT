@@ -1,0 +1,18 @@
+invariant,expected,observed,result
+Governed artifacts unchanged,0 modified,0 of 22 changed,PASS
+No legacy Forecasting file modified,0,0 changed,PASS
+Legacy Forecasting still renders,intact,no legacy file was touched; the section was verified in the browser,PASS
+raw Parquet untouched,no diff,clean,PASS
+V1 through V5 untouched,no diff,clean,PASS
+No SQL,none,source scan found none,PASS
+No write call,none,source scan found none,PASS
+No model execution,none,configuration filters prepared rows only,PASS
+No accuracy or ranking recomputation,none,no metric computation in the V6.24 code,PASS
+No hardcoded no-signal series,none,source scan found none,PASS
+No hardcoded GBRP267,none,source scan found none,PASS
+No Highcharts migration,P9E scope,no highchart call in V6.24 code,PASS
+No assistant implementation,P9G scope,no llm_explain call,PASS
+No download implementation,P9G scope,no downloadHandler,PASS
+Family map is display-only,declared,"V6_24_FAMILY_MAP_USE = DISPLAY_GROUPING_ONLY, never used for governance",PASS
+No push,none,none,PASS
+No git add . / -A / --all,not used,not used,PASS

@@ -1,0 +1,30 @@
+location,before,after,kind,result
+sidebar group,V6.24 MVP,Forecasting,visible label,PASS
+sidebar group,Models FULL,Models,visible label,PASS
+sidebar group,"Models (legacy, visible)",hidden,visibility,PASS
+sidebar group,"Forecasting (legacy, visible)",hidden,visibility,PASS
+page heading,V6.24 MVP - Overview,Forecasting - Overview,visible label,PASS
+page heading,V6.24 MVP - Series Viewer,Forecasting - Series Viewer,visible label,PASS
+page heading,V6.24 MVP - Accuracy,Forecasting - Accuracy,visible label,PASS
+page heading,V6.24 MVP - Forecast,Forecasting - Forecast,visible label,PASS
+page heading,V6.24 MVP - Taxonomy and Availability,Forecasting - Taxonomy and Availability,visible label,PASS
+page heading,Models FULL - Universe,Models - Universe,visible label,PASS
+page heading,Models FULL - Ranking Diagnostics,Models - Ranking Diagnostics,visible label,PASS
+page heading,Models FULL - Champion,Models - Champion,visible label,PASS
+shared selection,Change it from V6.24 MVP -> Viewer,Change it from Forecasting -> Viewer,navigation pointer,PASS
+shared selection,No series is selected in V6.24 MVP -> Viewer,No series is selected in Forecasting -> Viewer,navigation pointer,PASS
+shared selection,Open V6.24 MVP -> Viewer to choose a series,Open Forecasting -> Viewer to choose a series,navigation pointer,PASS
+champion policy,the other Models FULL pages,the other Models pages,visible label,PASS
+champion guide,How to read Champion FULL,How to read Champion,visible label,PASS
+universe guide,a later stage (Champion FULL),a later stage (Champion),visible label,PASS
+ranking guide,Champion FULL,Champion,visible label,PASS
+assistant prompt,Summarize Champion FULL,Summarize the Champion page,visible label,PASS
+assistant answer,Champion FULL reports which model leads,This page reports which model leads,visible label,PASS
+assistant answer,Open V6.24 MVP -> Forecast,Open Forecasting -> Forecast,navigation pointer,PASS
+assistant answer,Choose a series in V6.24 MVP - Viewer,Choose a series in Forecasting - Viewer,navigation pointer,PASS
+assistant answer,Caveats in the V6.24 MVP are informational,Caveats in this product are informational,visible label,PASS
+evidence note,The V6.24 selection is shared across the section,unchanged - V6.24 kept as a technical/evidence term,deliberate keep,PASS
+sidebar item,Forecasting > Taxonomy (visible),hidden on request; item definition and section retained,visibility,PASS
+internal ids,"v24_*, v24mf_*",unchanged,internal,PASS
+file names,tabs_v6_24_*.R,unchanged,internal,PASS
+code comments,V6.24-P9x headers,unchanged,internal,PASS

@@ -1,0 +1,8 @@
+stage,name,status
+P9C,Selection UX parity,CLOSED
+P9D,Backtest configuration parity,CLOSED
+P9E,Visualization parity,CLOSED
+P9F,Forecast champion polish,NOT RUN - skipped in the sequence
+P9G,Evidence-aware assistant,CLOSED
+P9G2,Downloads,DEFERRED
+P9H,Final visual QA,READY

@@ -1,0 +1,6 @@
+file,lines,what_it_does,entry_point,accepts_context,selection_aware,verdict
+R/llm_explain.R,860,Serves precomputed mock responses indexed by page_id from outputs/v4_4_mock_provider/v4_4_mock_responses.json,llm_explain_get(page_id),page_id only,no,No parameter can carry a selected series. Reusing it under V6.24 would show page-level text under a series-specific heading.
+R/llm_compose.R,282,Narrates the fixed mock response object into paragraphs,".comp_answer(resp, question)",resp = the page mock,no,"Composes from resp, not from arbitrary evidence. Its intent taxonomy is tournament-oriented (mase / rmsse) and does not match V6.24 fields."
+R/llm_client.R,9,Hardcoded placeholder string,get_llm_insight(),none,no,Returns one fixed sentence. No input at all.
+modules/llm_summary/*,5,Empty module stubs,n/a,none,no,No implementation.
+outputs/v4_4_mock_provider/v4_4_mock_responses.json,n/a,"Static provider payload, is_real_llm = FALSE",read at load,page_id,no,A V4.4 artifact. Extending it to 140 series is out of P9G scope and would still be precomputed rather than live evidence.

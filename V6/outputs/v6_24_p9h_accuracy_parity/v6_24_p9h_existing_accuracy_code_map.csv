@@ -1,0 +1,16 @@
+component,file,lines,library
+ACC_METRICS,R/helpers.R,1114-1115,base
+acc_horizon_choices,R/helpers.R,1118,base
+acc_data / acc_data_available,R/helpers.R,1126-1149,arrow
+acc_series_choices / acc_model_choices,R/helpers.R,1153-1189,base
+acc_standardize,R/helpers.R,1193-1210,stats
+acc_metric_column,R/helpers.R,1222-1231,base
+acc_compute,R/helpers.R,1243-1280,base
+acc_empty_plot,R/helpers.R,1283-1295,plotly
+acc_heatmap,R/helpers.R,1300-1359,plotly
+acc_table,R/helpers.R,1363-1398,DT
+acc_summary,R/helpers.R,1401-1416,base
+section_accuracy UI,ui/tabs.R,677-896,shiny
+acc_request / acc_result,server/server.R,259-276,shiny
+acc outputs,server/server.R,279-329,plotly + DT
+assistant mount,ui/tabs.R,894,llm_explain (page-keyed)

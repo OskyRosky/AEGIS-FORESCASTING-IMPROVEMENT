@@ -1,0 +1,4 @@
+item,implemented,reason,next_step
+Accuracy explanation download,no,"The legacy pattern (downloadHandler for MD/PDF/DOCX/HTML/TXT gated on local pandoc) is reusable, but P9H says not to block Accuracy on downloads and P9G already deferred the download contract.",P9G2
+Accuracy table export,no,Needs the same contract decision as the ranking export: whether a suppressed champion and no-signal badges travel with the file.,P9G2
+Heatmap image export,yes (built in),Highcharts exporting menu is enabled on the heatmap.,done

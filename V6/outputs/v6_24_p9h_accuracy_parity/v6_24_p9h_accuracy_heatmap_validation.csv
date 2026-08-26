@@ -1,0 +1,16 @@
+check_id,check,expected,observed,result
+H1,Library,highcharter,highcharter (type heatmap),PASS
+H2,Not Plotly,0 plotly nodes,0,PASS
+H3,Heatmap module loaded,present,hc_add_dependency('modules/heatmap.js'),PASS
+H4,Rows are models,15,15,PASS
+H5,Columns are governed measures,7,"MAE, RMSE, WAPE, SMAPE, MAPE, Median absolute error, Absolute bias",PASS
+H6,Cell count,105,105,PASS
+H7,Models ordered best-first,by selected metric,"LinearRegression, XGBoost, NLIN-DLIN_FIXED",PASS
+H8,Colour axis visible,present,"colorAxis present, legend enabled",PASS
+H9,Export menu,1,1 contextbutton,PASS
+H10,Tooltip carries the RAW value,raw + severity + status,point.raw / point.sev / point.status,PASS
+H11,Severity standardized per measure,per column,v6_24_acc_severity applied down each column,PASS
+H12,Severity capped for colour only,+/-3,cap = 3,PASS
+H13,"Non-computable cells are grey, not zero",nullColor,"nullColor #eef2f6, value NULL",PASS
+H14,Empty state before Analyze,message,"'Choose a metric and models, then click Analyze Accuracy.'",PASS
+H15,Severity labelled display-only,stamped,VISUALIZATION_ONLY + on-screen note,PASS

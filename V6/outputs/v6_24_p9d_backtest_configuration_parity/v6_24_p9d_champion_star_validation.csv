@@ -1,0 +1,6 @@
+case,champion_visible,expected,observed,result
+Signal-present series,TRUE,star shown beside the champion,FixedGrowth_1_5  ★ champion,PASS
+No-signal series,FALSE,no star anywhere,label is the bare model name; the browser showed no star in any family,PASS
+Any non-champion model,n/a,never a star,Theta,PASS
+Soft note when not meaningful,FALSE,'Champion is not meaningful for this no-signal series.',rendered in the browser,PASS
+Champion source,n/a,navigation_contract.champion_visible,no series and no model name is hardcoded,PASS

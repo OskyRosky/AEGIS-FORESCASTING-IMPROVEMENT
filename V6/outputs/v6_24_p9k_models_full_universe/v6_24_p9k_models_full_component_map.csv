@@ -1,0 +1,10 @@
+block,component,file,library,source_artifact,read_only
+A Scope disclosure,v24mf_scope_line,server/v6_24_models_full_server.R,shiny,accuracy_metrics + navigation_contract,yes
+B How to read,static accordion,ui/tabs_v6_24_models_full.R,shiny,-,yes
+C What changed,v24mf_changed,server/v6_24_models_full_server.R,shiny,V6_24_MF_LEGACY_SCOPE (P9J facts) vs live counts,yes
+D Families,v24mf_families,server/v6_24_models_full_server.R,shiny,V6_24_DISPLAY_FAMILY + accuracy_metrics.model_family,yes
+E Cards,v24mf_cards,server/v6_24_models_full_server.R,shiny,accuracy_metrics + navigation_contract,yes
+F Universe table,v24mf_table,server/v6_24_models_full_server.R,DT,accuracy_metrics,yes
+G Chart,v24mf_chart,server/v6_24_models_full_server.R,highcharter,navigation_contract,yes
+H Next stages,static,ui/tabs_v6_24_models_full.R,shiny,-,yes
+I Assistant,v24_mfu_asst_*,server/v6_24_models_full_server.R + R/v6_24_assistant_helpers.R,none (local deterministic),accuracy_metrics + navigation_contract,yes

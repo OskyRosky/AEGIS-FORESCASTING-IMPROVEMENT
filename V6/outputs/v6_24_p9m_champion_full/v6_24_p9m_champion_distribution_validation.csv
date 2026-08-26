@@ -1,0 +1,14 @@
+check,expected,observed,result
+Series in the cohort,140,140,PASS
+Presentable champion series,125,125,PASS
+No-signal suppressed series,15,15,PASS
+Models leading at least one series,14,14,PASS
+Distribution sums to presentable,125,125,PASS
+Distribution does NOT sum to 140,not 140,125,PASS
+Most series led,FixedGrowth_6,FixedGrowth_6,PASS
+Count for the leading model,21,21,PASS
+Leading share is a minority,< 50%,16.8%,PASS
+Gated on champion_visible,gated,True,PASS
+Browser chart sum,125,125,PASS
+Browser chart bars,14,14,PASS
+Browser distribution table rows,14,14,PASS

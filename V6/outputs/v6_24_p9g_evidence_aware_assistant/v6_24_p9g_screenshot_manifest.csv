@@ -1,0 +1,8 @@
+file,bytes,shows
+01_viewer_assistant_summary.png,151005,Viewer assistant summarising a signal-present series
+02_viewer_assistant_champion.png,148867,Champion explanation with ranks and policy citation
+03_viewer_assistant_no_signal_refusal.png,135598,Champion refusal on a no-signal series
+04_forecast_assistant_no_signal.png,137315,Forecast assistant on the suppressed series
+05_viewer_assistant_unsupported.png,119679,"Evidence-not-available response, amber panel"
+06_forecast_assistant_summary.png,126802,Forecast summary with 30 steps and window
+07_forecast_assistant_horizon.png,138019,30-step horizon explanation denying a longer horizon

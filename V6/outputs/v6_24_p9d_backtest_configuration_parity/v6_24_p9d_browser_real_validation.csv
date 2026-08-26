@@ -1,0 +1,19 @@
+check_id,check,expected,observed,result
+BR01,App starts locally,HTTP 200,"HTTP 200, 326,222 bytes on 127.0.0.1:7824",PASS
+BR02,Card B renders,visible,"kicker B, title BACKTEST CONFIGURATION, pill '15 governed models'",PASS
+BR03,Availability banner renders,green when available,'Backtest available - Prepared actual and 15 model backtest rows are available for this selected series.',PASS
+BR04,Horizon radios render,5/10/15/20/25/30,six radios with 5 days selected,PASS
+BR05,35 and 45 are visibly unavailable,struck through,both render as struck-through disabled chips with the note 'Prepared artifact covers 1-30 day horizons.',PASS
+BR06,Four model families render,4 groups,"GROWTH BASELINE, STATISTICAL, MACHINE LEARNING, DEEP LEARNING",PASS
+BR07,All 15 models render exactly once,15,4 + 5 + 3 + 3 checkboxes,PASS
+BR08,Champion star shown when meaningful,star,'FixedGrowth_1_5 * champion' rendered in orange for the CPU series,PASS
+BR09,Champion note explains the ranking,visible,"'Champion for this series is FixedGrowth_1_5, ranked by wape.'",PASS
+BR10,Default selection is 6 of 15,6 of 15,"'MODELS 6 of 15 selected' with the champion, ETS Explicit, FixedGrowth_3, LightGBM, XGBoost and SMLP-TCN checked",PASS
+BR11,No-signal series shows NO star,no star,no star in any of the four family groups for apcp150,PASS
+BR12,No-signal series shows the soft note,visible,'Champion is not meaningful for this no-signal series.',PASS
+BR13,No-signal series is still available,available,the green 'Backtest available' banner rendered,PASS
+BR14,Analyze is disabled without a series,disabled,rendered as a non-interactive span with an explanatory title,PASS
+BR15,Analyze applies on click,applied,'Analysed: 5 models at horizon 5 days - 19:32:03',PASS
+BR16,Reset Selection renders,visible,secondary button beside Analyze,PASS
+BR17,Legacy Forecasting still renders,intact,"verified after the P9C change and unaffected by P9D, which touched no legacy file",PASS
+BR18,No shared input/output ID warning,none,the horizon output was renamed to v24_bt_horizon_ui after Shiny warned about the collision,PASS

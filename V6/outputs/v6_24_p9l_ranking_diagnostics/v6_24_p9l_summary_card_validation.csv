@@ -1,0 +1,11 @@
+card,expected,observed,note,result
+Governed models,15,15,-,PASS
+Operational series,140,140,-,PASS
+Selected measure,MAE,MAE,-,PASS
+Evidence type,Diagnostic only,Diagnostic only,-,PASS
+Lowest diagnostic median,Theta,Theta (189.5908),labelled 'not a champion',PASS
+Most series led,FixedGrowth_6,FixedGrowth_6 (21),"labelled 'series-level count, not a global champion'",PASS
+No-signal suppressed,15,15,-,PASS
+Rows with no computable metric,0 for MAE,0,-,PASS
+Disagreement card appears,yes,'The two headlines disagree' card rendered,lowest median Theta vs most series led FixedGrowth_6,PASS
+Neither headline is a winner,explicit,both carry a disclaimer in the card,-,PASS

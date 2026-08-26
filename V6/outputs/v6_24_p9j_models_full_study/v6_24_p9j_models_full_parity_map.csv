@@ -1,0 +1,17 @@
+n,old_element,old_behavior,old_data_source,can_reuse_ux,can_reuse_data,v624_replacement,required_wording_change,risk,recommended_full_behavior,stage
+1,Models sidebar group,Universe / Tournament / Champion,static nav,yes,n/a,new group 'Models - FULL' alongside,-,low,Add a parallel group; leave the old one in place,P9K
+2,Universe landing,Title + 3 accordions + assistant,static,yes,n/a,"same shell, V6.24 wording",Drop 'the governed champion' singular,low,Rebuild with governed counts read from artifacts,P9K
+3,Model families,4 families described in prose,static,yes,n/a,P9D display map + governed 3-valued family,State that the 4-family split is display-only,medium,Show BOTH: governed model_family and the display grouping,P9K
+4,Current model universe table,"15 rows: origin, family, median MASE, champion eligibility, evidence source",tournament_scorecard,yes,NO,accuracy_metrics medians + championship counts,Replace median MASE with median MAE/WAPE; replace 'champion eligibility' with 'series won',HIGH,Rebuild the table from V6.24 medians; never show MASE,P9K
+5,Tournament guide,"Explains MASE, RMSSE, pairwise, champion",static,partly,NO,-,Must be rewritten: none of MASE/RMSSE/pairwise exist,HIGH,"Rewrite as a ranking-diagnostics guide, not a tournament guide",P9L
+6,Tournament standings,13 models by preliminary_position,tournament_preliminary_standings,layout only,NO,cohort-wide medians + championship counts,'Standings' must not imply a governed global tournament,HIGH,"Cohort ranking DIAGNOSTIC, explicitly not a tournament",P9L
+7,Pairwise evidence,78 pairs with bootstrap CI and BH p-values,tournament_pairwise_evidence,no,NO,NONE,-,BLOCKING,DO NOT BUILD. No artifact exists and computing one is forbidden.,deferred
+8,Challenger evaluation,6 models in a closed candidate study,challenger_metrics,no,NO,NONE,-,medium,Drop. In V6.24 all 15 models are scored identically.,n/a
+9,Champion guide,Explains the global champion decision,static,partly,NO,-,Must say champion is PER-SERIES,HIGH,Rewrite around per-series champions,P9M
+10,Champion at a glance,ETS Explicit + confidence + conditions,champion_conditions,layout only,NO,navigation_contract per-series champion fields,Cannot name one global champion,BLOCKING-IF-COPIED,Replace with a championship distribution across 14 models,P9M
+11,Why champion was selected,"MASE 6.90, RMSSE 1.86, 8-0 head-to-head",tournament + champion_decision,no,NO,NONE,-,HIGH,Replace with the governed ranking policy explanation,P9M
+12,Global champion wording,'ETS Explicit was selected as champion',champion_dashboard_language,no,NO,NONE,Would be FALSE in V6.24,BLOCKING,ETS Explicit wins 6 of 125 series. Never carry this claim.,P9M
+13,Per-series champion wording,did not exist,-,n/a,n/a,navigation_contract.champion_visible + champion_validity,New wording required,medium,Champion is per-series and suppressed on no-signal series,P9M
+14,Assistant,"page-keyed mock, 4 generic prompts",v4_4_mock_responses.json,pattern only,NO,P9G evidence-aware assistant,-,low,Add a models evidence builder like the accuracy one,P9K-P9M
+15,Download explanation,MD/PDF/DOCX/HTML/TXT via pandoc,llm_explain,yes,n/a,-,-,low,Defer with P9G2,P9N
+16,Governance / traceability,"run_id, created_timestamp, source artifact paths",all legacy artifacts,yes,n/a,"cohort_id, ranking_policy_version, readiness_source",-,low,Keep the same discipline with V6.24 provenance fields,P9K-P9M

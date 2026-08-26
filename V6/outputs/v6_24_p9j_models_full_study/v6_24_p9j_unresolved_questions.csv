@@ -1,0 +1,6 @@
+id,question,context,recommendation,blocks
+Q1,Will a governed MASE/RMSSE artifact ever be produced for V6.24?,The legacy tournament's primary metric and guardrail have no V6.24 successor.,Treat as a backend decision; FULL should use MAE/WAPE medians meanwhile,P9L
+Q2,Will a pairwise bootstrap be run on the 140-series cohort?,"Legacy ran C(13,2)=78 comparisons over 39 HDD entities.",Defer to a backend stage; do not emulate in Shiny,P9L
+Q3,Should the legacy Models section be archived rather than deleted?,"It holds a real governance record (conditions, approved language).",Keep it read-only as history until P9I decides,no
+Q4,Is 'Models - FULL' the final product name?,Owner used it in this prompt.,Confirm before P9K writes it into the sidebar,P9K
+Q5,P9F Forecast champion-first layout is still unbuilt,Skipped between P9E and P9G.,Decide whether it runs before or after the Models FULL series,no

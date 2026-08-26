@@ -1,0 +1,9 @@
+stage,name,expected,observed,status
+V6.24-P9B,Forecasting UX Parity Study,closed,37/37 PASS,CLOSED
+V6.24-P9C,Selection UX Parity,closed,43/43 PASS,CLOSED
+V6.24-P9D,Backtest Configuration Parity,Card B parity,"1 new file, 4 modified, 48/48 PASS, browser-verified",CLOSED
+V6.24-P9E,Highcharts Backtest Results,not started,applied_cfg() is ready to feed the chart,READY
+V6.24-P9F,Forecast Page Highcharts,not started,champion-first decision documented,PENDING
+V6.24-P9G,Assistant + Downloads,not started,-,PENDING
+V6.24-P9H,Visual QA Final,not started,-,PENDING
+V6.24-P10,Handoff,not started,blocked until P9H,PENDING

@@ -1,0 +1,8 @@
+element,legacy_behaviour,data_source,static_or_artifact,reuse_for_full,note
+Page title,"'Model Universe' + 'baselines, challengers and the governed champion'",static text,static,yes (reword),Wording must drop the single-champion framing.
+Accordion 1,'How to read this universe',static text,static,yes,Explains baseline vs challenger vs tournament vs champion.
+Accordion 2,'Model families compared' - four families,static text,static,yes (adapt),Legacy names 4 display families. V6.24 model_family is 3-valued (Baseline 7 / Challenger 5 / Neural 3); the 4-family split is the P9D DISPLAY_GROUPING_ONLY map.
+Accordion 3,"'Current model universe (15 models)' table with origin, family, median MASE, champion eligibility, evidence source",tournament_scorecard + standings,artifact,partly,Structure reusable. median MASE and champion eligibility do NOT exist in V6.24 and must be replaced or dropped.
+Model count,Header says 15 models,static text,static,no,The legacy tournament artifacts actually carry 13 model names. The '15' in the heading counts models the tournament did not all rank.
+Assistant,"llm_explain_ui('llm_models_universe','Model Universe')",v4_4_mock_responses.json by page_id,page-keyed,no,Cannot receive model evidence. Use the P9G evidence-aware assistant.
+Download,Download explanation inside the assistant panel,llm_explain downloadHandler,n/a,deferred,Defer with P9G2.

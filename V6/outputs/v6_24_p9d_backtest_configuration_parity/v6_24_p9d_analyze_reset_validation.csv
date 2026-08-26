@@ -1,0 +1,7 @@
+control,expected_behaviour,observed,result
+Analyze Backtest,applies the pending configuration only on click,before the first click the panel reads 'Nothing analysed yet'; after the click it reads 'Analysed: 5 models at horizon 5 days',PASS
+Analyze Backtest,disabled when no series or no models,"renders as a non-interactive span with an explanatory title when no series is resolved, verified in the browser",PASS
+Results panel,"reads the applied configuration, not the pending one",the chart and notes are driven by applied_cfg(),PASS
+Reset Selection,restores default horizon and models,"<span class=""v24-model-count"">5 of 15 selected</span>list()",PASS
+Series change,clears the previous analysis,nan,PASS
+Config change,does not redraw until Analyze,cfg holds pending state; only the Analyze observer writes cfg$applied,PASS

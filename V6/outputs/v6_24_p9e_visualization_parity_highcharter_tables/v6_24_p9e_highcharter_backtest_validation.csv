@@ -1,0 +1,15 @@
+check_id,check,expected,observed,result
+BT1,Viewer backtest output is highcharter,renderHighchart,renderHighchart,PASS
+BT2,Viewer backtest UI is highchartOutput,highchartOutput,highchartOutput,PASS
+BT3,Actual drawn as a line series,"type = ""line""",line,PASS
+BT4,Model estimates drawn as line series,"type = ""line""",line,PASS
+BT5,No plotly scatter/markers mode in V6.24 charts,no scatter/markers mode,none,PASS
+BT6,Legend enabled,hc_legend(enabled = TRUE),enabled,PASS
+BT7,Export menu enabled,hc_exporting(enabled = TRUE),enabled,PASS
+BT8,Consumes applied_cfg() not pending inputs,applied_cfg(),applied_cfg(),PASS
+BT9,"Subtitle carries key, horizon, model count, date range",all four,all four,PASS
+BT10,Browser: 7 series all type line with a graph path,7/7 line,"7/7 line (Actual + 6 models, hasGraph true)",PASS
+BT11,Browser: legend interactive,>0 items,7 legend items,PASS
+BT12,Browser: export button rendered,1,1 highcharts-contextbutton,PASS
+BT13,Browser: champion star shown on signal-present series,star present,LinearRegression ★,PASS
+BT14,Browser: no star on champion-suppressed series,no star,0 series names contain ★,PASS

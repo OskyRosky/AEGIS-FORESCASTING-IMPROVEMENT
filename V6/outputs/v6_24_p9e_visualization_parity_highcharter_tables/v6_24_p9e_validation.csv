@@ -1,0 +1,51 @@
+check_id,check,expected,observed,result
+V1,P9D closure exists and passed,TRUE,TRUE,PASS
+V2,P9E output folder exists,TRUE,TRUE,PASS
+V3,Prechange hashes captured,TRUE,TRUE,PASS
+V4,Postchange hashes captured,TRUE,TRUE,PASS
+V5,Modified files report exists,TRUE,TRUE,PASS
+V6,Visualization inventory exists,TRUE,TRUE,PASS
+V7,Plotly audit exists,TRUE,TRUE,PASS
+V8,V6.24 plotly usages replaced,TRUE,TRUE,PASS
+V9,Viewer backtest chart uses highcharter,TRUE,TRUE,PASS
+V10,Viewer actual is a line,TRUE,TRUE,PASS
+V11,Viewer model estimates are lines,TRUE,TRUE,PASS
+V12,Viewer chart is not points-only,TRUE,TRUE,PASS
+V13,Viewer legend enabled,TRUE,TRUE,PASS
+V14,Viewer export menu enabled,TRUE,TRUE,PASS
+V15,Viewer chart uses applied_cfg(),TRUE,TRUE,PASS
+V16,Horizon uses equality,TRUE,TRUE,PASS
+V17,Horizon never uses <=,TRUE,TRUE,PASS
+V18,Chart does not move before Analyze,TRUE,TRUE,PASS
+V19,Forecast chart uses highcharter,TRUE,TRUE,PASS
+V20,Forecast actual history line,TRUE,TRUE,PASS
+V21,Forecast line,TRUE,TRUE,PASS
+V22,Forecast not points-only,TRUE,TRUE,PASS
+V23,Forecast legend enabled,TRUE,TRUE,PASS
+V24,Forecast export menu enabled,TRUE,TRUE,PASS
+V25,Forecast default is champion when visible,TRUE,TRUE,PASS
+V26,No winner presented when champion_visible FALSE,TRUE,TRUE,PASS
+V27,Forecast shows the governed 30 steps,TRUE,TRUE,PASS
+V28,"No 4-year / 1,440-day wording",TRUE,TRUE,PASS
+V29,Negative / extreme caveats preserved,TRUE,TRUE,PASS
+V30,Tables use DT,TRUE,TRUE,PASS
+V31,Ranking table readable,TRUE,TRUE,PASS
+V32,Forecast table readable,TRUE,TRUE,PASS
+V33,Taxonomy tables readable,TRUE,TRUE,PASS
+V34,Product summaries use medians,TRUE,TRUE,PASS
+V35,No invented / interpolated / smoothed / clipped data,TRUE,TRUE,PASS
+V36,No processed artifact modified,TRUE,TRUE,PASS
+V37,No raw artifact modified,TRUE,TRUE,PASS
+V38,No SQL run,TRUE,TRUE,PASS
+V39,No model execution,TRUE,TRUE,PASS
+V40,No forecast regeneration,TRUE,TRUE,PASS
+V41,No accuracy / ranking recalculation,TRUE,TRUE,PASS
+V42,No assistant implementation,TRUE,TRUE,PASS
+V43,No download implementation,TRUE,TRUE,PASS
+V44,Legacy Forecasting intact,TRUE,TRUE,PASS
+V45,App launched and served,TRUE,TRUE,PASS
+V46,Browser-real validation confirms Highcharts visible,TRUE,TRUE,PASS
+V47,Browser-real validation confirms tables render,TRUE,TRUE,PASS
+V48,Screenshot evidence exists,TRUE,TRUE,PASS
+V49,No push performed,TRUE,TRUE,PASS
+V50,Closure summary states the next stage,TRUE,TRUE,PASS

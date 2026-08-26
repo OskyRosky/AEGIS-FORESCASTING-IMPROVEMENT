@@ -1,0 +1,21 @@
+check_id,value_shown_in_browser,expected,recomputed_from_artifact,result
+G1,champion name,LinearRegression,LinearRegression,PASS
+G2,champion rank metric,wape,wape,PASS
+G3,champion rank value 0.093749,0.093749,0.093749,PASS
+G4,median WAPE 0.115369,0.115369,0.115369,PASS
+G5,median MAE 992.7933,992.7933,992.7933,PASS
+G6,observed points 562,562,562,PASS
+G7,actual range 2022-01-04 to 2023-07-20,2022-01-04 / 2023-07-20,2022-01-04 / 2023-07-20,PASS
+G8,latest actual 8987.777,8987.777,8987.777,PASS
+G9,rank 2 XGBoost 0.094226,XGBoost 0.094226,XGBoost 0.094226,PASS
+G10,rank 3 NLIN-DLIN_FIXED 0.10002,NLIN-DLIN_FIXED 0.100020,NLIN-DLIN_FIXED 0.100020,PASS
+G11,forecast window 2023-07-21 to 2023-08-19,2023-07-21 / 2023-08-19,2023-07-21 / 2023-08-19,PASS
+G12,forecast steps 30,30,30,PASS
+G13,forecast rows drawn 30,30,30,PASS
+G14,forecast range 8579.356 to 8839.495,8579.356 / 8839.495,8579.356 / 8839.495,PASS
+G15,backtest rows at h=5 for 6 models,60,60,PASS
+G16,caveat badge,NEGATIVE_BACKTEST_PREDICTIONS_PRESENT,NEGATIVE_BACKTEST_PREDICTIONS_PRESENT,PASS
+G17,ranking policy,P6C_RANKING_POLICY_V2,P6C_RANKING_POLICY_V2,PASS
+G18,no-signal champion_visible FALSE,FALSE,FALSE,PASS
+G19,no-signal champion reason,NO_SIGNAL_ALL_ZERO_ACTUALS_TECHNICAL_TIE_BREAK,NO_SIGNAL_ALL_ZERO_ACTUALS_TECHNICAL_TIE_BREAK,PASS
+G20,no-signal trailing_zero flag FALSE (by design),FALSE,FALSE,PASS

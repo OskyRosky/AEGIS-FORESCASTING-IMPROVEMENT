@@ -1,0 +1,16 @@
+check_id,check,expected,observed,result
+B1,App reachable,HTTP 200,HTTP 200,PASS
+B2,Sidebar order,"Overview, Viewer, Accuracy, Forecast, Taxonomy","v24_overview, v24_viewer, v24_accuracy, v24_forecast, v24_taxonomy",PASS
+B3,Accuracy page renders,active section,is-active true,PASS
+B4,Shared selection banner shows the Viewer series,series,CPU / CPU|Organic|Consumed|Region / EUR-MSIT,PASS
+B5,No cohort Top-N control,absent,hasTopN false,PASS
+B6,No scope control,absent,0 scope radios,PASS
+B7,Analyze commits the request,applied line,'Analysed: MAE over 15 models - CPU / ... - 10:30:27',PASS
+B8,Heatmap renders as Highcharts,heatmap,"type heatmap, 105 cells",PASS
+B9,Table renders,15 rows,15 rows,PASS
+B10,Assistant answers,evidence-grounded,top-3 models + champion note,PASS
+B11,No-signal series refuses a best model,refused,'not meaningful - no signal' on both cards,PASS
+B12,Switching series clears the analysis,cleared,'Nothing analysed yet.',PASS
+B13,No Plotly on the page,0,0,PASS
+B14,No JS console errors,0,0,PASS
+B15,Legacy Forecasting Accuracy still present,intact,section_accuracy untouched in ui/tabs.R,PASS

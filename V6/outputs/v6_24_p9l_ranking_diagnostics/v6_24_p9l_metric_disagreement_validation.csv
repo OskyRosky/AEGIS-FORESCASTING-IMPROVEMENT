@@ -1,0 +1,7 @@
+check,expected,observed,result
+Table renders,15 rows,15,PASS
+Columns,one position per measure,"MAE, RMSE, WAPE, SMAPE, MAPE, Median absolute error + best/worst/spread",PASS
+Disagreement is real,spread > 0,max spread 10 (ARIMA_Fixed),PASS
+Example,ARIMA_Fixed moves,"position 10 on MAE, 15 on WAPE and SMAPE",PASS
+Purpose stated,diagnostic only,card lead explains why no single ordering is the answer,PASS
+No winner implied,none,"no rank column, no winner language",PASS

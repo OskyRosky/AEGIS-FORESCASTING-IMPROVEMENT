@@ -1,0 +1,23 @@
+check_id,check,expected,observed,result
+B1,App reachable,HTTP 200,"HTTP 200, 355,205 bytes",PASS
+B2,'Models FULL' sidebar group exists,present,group 'Models FULL' with item v24mf_universe,PASS
+B3,Legacy 'Models' group intact,universe/tournament/champion,all three present,PASS
+B4,V6.24 MVP group intact,5 items,"v24_overview, v24_viewer, v24_accuracy, v24_forecast, v24_taxonomy",PASS
+B5,Universe FULL page renders,active + content,"is-active true, 8,730 chars with accordions open",PASS
+B6,Scope line renders,5 facts,"15 models / 140 series / 2,100 rows / 7 measures / sources",PASS
+B7,Three accordions render,3,How to read / What changed / Model families,PASS
+B8,Four display families render,4,"Growth Baseline 4, Statistical 5, Machine Learning 3, Deep Learning 3",PASS
+B9,All 15 models listed,15,15,PASS
+B10,Summary cards render,8,8,PASS
+B11,Universe table renders with DT,15 rows,"15 rows, first = Theta / Statistical / Challenger / 140 / 140 / 189.5908",PASS
+B12,Champion chart renders as Highcharts,"bar, 14 models","type bar, 14 bars",PASS
+B13,Assistant renders and answers,6 prompts,"all 6 answered, guard clean",PASS
+B14,No Plotly on the new page,0,0,PASS
+B15,No JS console errors,0,0,PASS
+B16,Legacy Universe still renders,content,802 chars,PASS
+B17,Legacy Tournament still renders,content,"3,655 chars",PASS
+B18,Legacy Champion still renders,content + chart,"5,355 chars, 1 Plotly chart (its own)",PASS
+B19,V6.24 Viewer still renders,charts + table,"2 Highcharts, 1 DT",PASS
+B20,V6.24 Accuracy still renders,chart + table,"1 Highcharts, 1 DT",PASS
+B21,V6.24 Forecast still renders,chart + table,"1 Highcharts, 1 DT",PASS
+B22,Screenshots captured,>=7,7,PASS

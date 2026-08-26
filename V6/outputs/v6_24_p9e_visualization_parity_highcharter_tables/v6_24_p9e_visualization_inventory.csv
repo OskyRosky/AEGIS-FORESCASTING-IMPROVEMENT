@@ -1,0 +1,16 @@
+visual_element,page,current_library,target_library,current_file,target_file,needs_change,notes
+Observed history chart,Viewer,plotly (lines),highcharter,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_hc_actuals,yes,"Single actual line, markers off for a 562-point series."
+Backtest comparison chart,Viewer,plotly (markers only),highcharter,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_hc_backtest,yes,Was a point cloud; now one actual line plus one line per model.
+Forecast chart,Forecast,plotly (lines+markers),highcharter,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_hc_forecast,yes,"Actual blue vs forecast green, dashed, Forecast start boundary."
+Coverage by metric table,Overview,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,
+Availability / signal table,Overview,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,
+Artifact load status table,Overview,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,Technical table; kept at the bottom of the page and labelled as such.
+Model ranking table,Viewer,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,Gained Family and SMAPE; champion cell is a badge gated on champion_visible.
+Forecast rows table,Forecast,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,"Gained Model; negative/extreme are badges, never clipped values."
+Taxonomy scope table,Taxonomy,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,Sortable and searchable; medians preserved.
+Caveat counts table,Taxonomy,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,
+Filter option contract table,Taxonomy,plain HTML (v24_table),DT,server/v6_24_mvp_server.R,R/v6_24_viz_helpers.R::v6_24_dt,yes,
+Selection navigator,Viewer,shiny inputs,shiny inputs,R/v6_24_selection_helpers.R,unchanged,no,P9C UI. Out of P9E scope.
+Backtest configuration card,Viewer,shiny inputs,shiny inputs,R/v6_24_backtest_config_helpers.R,unchanged,no,P9D UI. Only the date fields were corrected.
+Legacy Forecasting charts,Forecasting (legacy),highcharter,highcharter,R/helpers.R,unchanged,no,Reference implementation. Not touched.
+Legacy governance charts,Legacy sections,plotly,plotly,"R/helpers.R, server/server.R",unchanged,no,Out of V6.24 scope; plotly stays in libraries.R for them.

@@ -1,0 +1,10 @@
+aspect,existing_implementation,location,reusable,v624_target,constraint,stage
+UI function,"llm_explain_ui(id, page_title, button_label, panel_title, panel_sub, quick_prompts)",R/llm_explain.R line 200,"YES, as-is",Mount on the V6.24 Viewer and Forecast sections,Fully parameterised; no change needed,P9G
+Server function,"llm_explain_server(id, page_id, quick_prompts)",R/llm_explain.R line 745,"YES, as-is",Register llm_v24_viewer and llm_v24_forecast in app_server(),One line each in server/server.R,P9G
+Quick prompts,.LLM_DEFAULT_QUICK_PROMPTS: Summarize the key takeaway / Explain what changed / Explain the main risk / What should I pay attention to?,R/llm_explain.R line 167,"YES, as-is",Use the defaults; they match the owner's screenshot exactly,None,P9G
+Evidence lookup,llm_explain_get(page_id) reads a preloaded response keyed by page id,R/llm_explain.R line 77,PARTIAL,V6.24 needs its own entries,"BLOCKING DESIGN POINT: the evidence pack is STATIC PER PAGE, not per selection. A V6.24 assistant that says nothing about the selected series would be worse than none.",P9G
+Composer,llm_compose builds a question-adaptive answer from the evidence pack; deterministic and local,R/llm_compose.R,"YES, as-is",Reuse unchanged,Local mock only; adding a real model is out of scope,P9G
+Thinking animation,Four-step timed status then the rendered panel,R/llm_explain.R,"YES, as-is",Reuse,None,P9G
+Explanation download,Modal offering MD/TXT/HTML and PDF/DOCX when pandoc is present,R/llm_explain.R,"YES, as-is",Reuse,None,P9G
+Disclosure,'Local mock - governed evidence only - no model or champion changes.',R/llm_explain.R,"YES, as-is",Reuse verbatim,"Must stay: it is an honesty statement, not decoration",P9G
+V6.24 evidence content,n/a,n/a,NEW,"series_id, route display label, the six axes, champion model and validity when visible, primary rank metric and value, median WAPE/MAE with computability status, signal_quality_status, caveat badges, forecast type and 30-step horizon, forecast window dates, negative and extreme counts, latest actual date and value",Every item must be READ from an artifact; nothing computed and nothing invented,P9G

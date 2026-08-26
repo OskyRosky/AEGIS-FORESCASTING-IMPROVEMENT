@@ -1,0 +1,11 @@
+file,bytes,shows
+01_champion_full_page.png,667446,Full Champion FULL page for a presentable series
+02_champion_cards.png,62899,Eight cards including 'Champion for the whole cohort = Not defined in V6.24'
+03_champion_distribution_chart.png,48018,"Highcharter bar chart, 14 models, summing to 125"
+04_champion_distribution_table.png,116388,"DT champion distribution, one row per leading model"
+05_selected_series_champion.png,113877,Presentable per-series champion with full contract evidence
+06_selected_series_top5.png,51340,Top-5 ranking for the selected series with the star badge
+07_sidebar_models_full.png,63730,Sidebar with Models FULL beside the untouched legacy Models
+08_no_signal_suppressed.png,137519,"No-signal series: no presentable champion, tie-break disclosed"
+09_no_signal_ranking.png,41055,"No-signal ranking labelled a tie-break, champion_visible FALSE"
+10_selection_banner_shared.png,137519,Shared selection banner driven by the V6.24 Viewer

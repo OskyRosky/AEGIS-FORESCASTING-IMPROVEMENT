@@ -1,0 +1,11 @@
+element,legacy_behaviour,data_source,exists_in_v624,note
+Meaning of 'tournament',"Bootstrap pairwise head-to-head over a fixed backtest, with sign test and BH-adjusted p-values",tournament_pairwise_evidence.csv,NO,"78 pairwise rows, 16 columns including bootstrap_ci_low/high, sign_test_p_value, bh_adjusted_p_value. V6.24 has no equivalent."
+Primary metric,Median MASE (lower is better),tournament_scorecard,NO,accuracy_metrics carries mae/rmse/wape/smape/mape/bias. No MASE column.
+Guardrail metric,Median RMSSE,tournament_scorecard,NO,No RMSSE column.
+Standings,13 models ranked by preliminary_position,tournament_preliminary_standings.csv,NO,"V6.24 model_rankings is per-series (2,100 rows = 140 x 15); rank_within_series only, no global position."
+Pairwise matrix,"78 ordered pairs = C(13,2); each pair supported_better / supported_worse / inconclusive",tournament_pairwise_evidence.csv,NO,No pairwise artifact exists anywhere under V6.24.
+Evidence summary,"comparisons_tested=12 per model, net_supported_evidence",tournament_model_evidence_summary.csv,NO,No equivalent.
+Challenger evaluation,6 models scored separately in a closed candidate study; deep-learning challengers did not enter the bootstrap,challenger_metrics_by_model_diagnostic.csv,NO,In V6.24 all 15 models are scored identically on all 140 series.
+Scope,"39 entities, HDD only",tournament_model_scorecard.entity_count,N/A,"entity_count is [np.int64(39)] for every model. V6.24 covers 140 series across ['CPU', 'HDD', 'IOPS', 'SSD']."
+Model coverage,13 models,tournament artifacts,partial,"12 overlap. Legacy-only: ['FastNeuralAR_MLP']. V6.24-only: ['FNAR-V2', 'NLIN-DLIN_FIXED', 'SMLP-TCN']."
+Computation,Precomputed outside Shiny by the tournament engine; Shiny only loads and orders,R/helpers.R tournament_league_data(),n/a,yes,The read-only discipline is exactly what V6.24 should keep.

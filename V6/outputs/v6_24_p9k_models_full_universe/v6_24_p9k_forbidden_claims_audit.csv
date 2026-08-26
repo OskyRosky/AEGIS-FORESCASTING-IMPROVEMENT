@@ -1,0 +1,13 @@
+term,must_not_appear_as,browser_occurrences,context_verified,result
+MASE,current V6.24 metric,1,"'The previous section also relied on MASE, RMSSE ... None of those has a successor artifact in V6.24' - labelled historical",PASS
+RMSSE,current V6.24 metric,1,same sentence as MASE,PASS
+global champion,a claim,3,'does not select a global champion'; 'no global winner'; listed under what the previous section relied on,PASS
+head-to-head,a claim,2,'No head-to-head result'; 'not a head-to-head tournament',PASS
+pairwise evidence,a claim,1,'because V6.24 carries no pairwise evidence',PASS
+bootstrap support,a claim,1,'No bootstrap support',PASS
+tournament winner,anywhere,0,-,PASS
+ETS Explicit is the champion,anywhere,0,-,PASS
+Page states it is not a tournament,required,yes,'It does not compute a tournament',PASS
+Page states no global champion,required,yes,'does not select a global champion',PASS
+Page names the later stages,required,yes,Ranking Diagnostics and Champion FULL both named,PASS
+Assistant answers pass the guard,0 assertive hits,0,context-aware guard run over all 6 prompt answers,PASS

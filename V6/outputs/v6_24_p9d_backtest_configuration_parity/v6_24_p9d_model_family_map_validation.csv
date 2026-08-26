@@ -1,0 +1,8 @@
+family,models,model_count,source,use,governed_check,result
+Growth Baseline,FixedGrowth_1_5 | FixedGrowth_3 | FixedGrowth_4 | FixedGrowth_6,4,forecast_viewer_model_outputs.csv (legacy display source),DISPLAY_GROUPING_ONLY,all names are governed,PASS
+Statistical,ARIMA_Fixed | AutoARIMA | ETS Explicit | ETS_Current | Theta,5,forecast_viewer_model_outputs.csv (legacy display source),DISPLAY_GROUPING_ONLY,all names are governed,PASS
+Machine Learning,LightGBM | LinearRegression | XGBoost,3,forecast_viewer_model_outputs.csv (legacy display source),DISPLAY_GROUPING_ONLY,all names are governed,PASS
+Deep Learning,FNAR-V2 | NLIN-DLIN_FIXED | SMLP-TCN,3,forecast_viewer_model_outputs.csv (legacy display source),DISPLAY_GROUPING_ONLY,all names are governed,PASS
+TOTAL,-,15,validated against the legacy source at runtime,DISPLAY_GROUPING_ONLY,"15 governed, 0 missing, 0 extra, each model exactly once",PASS
+NOT USED FOR,rankings | accuracy | forecast generation | champion selection | governance truth,0,-,EXCLUDED,the governed three-family model_family is unchanged and untouched,PASS
+WHY NOT DERIVED,the governed 3-family partition cuts across the 4 display families,0,accuracy_metrics.model_family,-,ETS Explicit is Challenger but displays under Statistical; LinearRegression is Baseline but displays under Machine Learning,PASS

@@ -1,0 +1,8 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P7 validation passed,all PASS,51/51 PASS,PASS,
+PF02,P8 validation passed,all PASS,48/48 PASS,PASS,V6_24_P9B_BLOCKED_P8_OUTPUTS_MISSING
+PF03,Core Shiny files present,20 files,20/20 present,PASS,V6_24_P9B_BLOCKED_SHINY_FILES_MISSING
+PF04,Shiny files fingerprinted before study,all files,56 files sha256-fingerprinted so the no-modification claim is provable,PASS,
+PF05,Governed artifacts fingerprinted,22 files,22 artifacts fingerprinted,PASS,
+PF06,Existing Forecasting structure is legible,understandable,fv_/fvp_/fvf_/acc_/ttl_ helper convention in helpers.R; section_explorer and section_forecast in tabs_v6_16_viewer.R; taxonomy_navigation module shared by Viewer and Forecast,PASS,V6_24_P9B_BLOCKED_FORECASTING_STRUCTURE_UNCLEAR
+PF07,V6.24 MVP structure is legible,understandable,"loader + 4 panel() sections + one server module, all authored in P8",PASS,V6_24_P9B_BLOCKED_V624_STRUCTURE_UNCLEAR

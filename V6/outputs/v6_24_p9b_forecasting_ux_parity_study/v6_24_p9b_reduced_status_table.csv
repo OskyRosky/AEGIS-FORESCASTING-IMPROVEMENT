@@ -1,0 +1,8 @@
+stage,name,expected,observed,status
+V6.24-P4..P6C,"Data, backtests, forecasts, rankings",closed,"614,190 backtest rows, 63,000 forecast rows, rankings corrected",CLOSED
+V6.24-P7,Navigation Contract / Taxonomy Counts,closed,"140 contract rows, 192 taxonomy rows, 51/51 PASS",CLOSED
+V6.24-P8,Shiny Read-Only Integration,closed,"48/48 PASS, plus a browser-render fix found by the owner",CLOSED
+V6.24-P9B,Forecasting UX Parity Study,"study only, no code","22 deliverables, 27-element parity map, 37/37 PASS, 0 files modified",CLOSED
+V6.24-P9C,Selection UX Parity,not started,planned and scoped; first stage with code changes,READY_WITH_CAVEATS
+V6.24-P9D..P9H,"Config, charts, assistant, visual QA",not started,planned in the staged implementation plan,PENDING
+V6.24-P10,Final Handoff,not started,blocked until P9H accepts the experience,PENDING

@@ -1,0 +1,6 @@
+id,question,context,recommendation,blocks
+Q1,Should the universe table stay ordered by median MAE?,Median MAE and median WAPE give different orders.,Keep MAE ordering with the disclaimer; revisit if P9L adds a metric selector,no
+Q2,Should the champion-count chart move to Champion FULL?,It is championship evidence shown on the Universe page.,Keep here as a distribution; P9M owns the per-series detail,no
+Q3,Should legacy Models be archived once FULL is complete?,P9J recommended keeping it as history.,Decide at P9I after Champion FULL exists,no
+Q4,Assistant download for Models FULL?,Legacy has Download explanation.,Fold into the P9G2 download contract,no
+Q5,P9F Forecast champion-first layout still unbuilt,Skipped between P9E and P9G.,Decide before P9I,no

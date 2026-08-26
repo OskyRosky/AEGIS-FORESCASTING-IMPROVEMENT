@@ -1,0 +1,19 @@
+check_id,invariant,expected,observed,result
+G1,No processed artifact modified,0,0,PASS
+G2,No raw artifact modified,0,0,PASS
+G3,No V1-V5 modified,0,0,PASS
+G4,No legacy Shiny file modified,0,0,PASS
+G5,Assistant runs no SQL,0,0,PASS
+G6,Assistant executes no model,0,0,PASS
+G7,Assistant regenerates no forecast,0,0,PASS
+G8,Assistant recalculates no accuracy,0,0,PASS
+G9,Assistant creates no ranking,0,0,PASS
+G10,Assistant writes no file,0,0,PASS
+G11,No network call,0,0,PASS
+G12,No external API dependency added,0,0,PASS
+G13,Explicit no-evidence fallback exists,present,present,PASS
+G14,Champion language gated on champion_visible,gated,gated,PASS
+G15,Charts unchanged from P9E,highcharter,highcharter,PASS
+G16,Tables unchanged from P9E,DT,DT,PASS
+G17,No push performed,0,0,PASS
+G18,No git add -A / .,0,0,PASS

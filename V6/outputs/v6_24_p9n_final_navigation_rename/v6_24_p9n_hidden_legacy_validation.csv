@@ -1,0 +1,15 @@
+legacy_module,expected,observed,code_retained,result
+Legacy Models group,not in the sidebar,absent from the sidebar,retained as 'Models (legacy)' in stage07_menu(),PASS
+Legacy Forecasting group,not in the sidebar,absent from the sidebar,retained as 'Forecasting (legacy)' in stage07_menu(),PASS
+Legacy Universe section,"unreachable, not deleted",no sidebar link,section_universe() present in ui/tabs.R,PASS
+Legacy Tournament section,"unreachable, not deleted",no sidebar link,section_tournament() present in ui/tabs.R,PASS
+Legacy Champion section,"unreachable, not deleted",no sidebar link,section_champion() present in ui/tabs.R,PASS
+Legacy Viewer (explorer),"unreachable, not deleted",no sidebar link,section present in ui/tabs.R,PASS
+Legacy Accuracy,"unreachable, not deleted",no sidebar link,section present in ui/tabs.R,PASS
+Legacy Forecast,"unreachable, not deleted",no sidebar link,section present in ui/tabs.R,PASS
+Legacy TTL,"unreachable, not deleted",no sidebar link,section present in ui/tabs.R,PASS
+Forecasting Taxonomy,"hidden on request, not deleted",no sidebar link,item retained in stage07_menu() with hidden = TRUE; section still mounted,PASS
+Legacy sections still mounted,present in the DOM,"22 sections mounted, 7 of them legacy",body.R unchanged,PASS
+Legacy server logic,untouched,no legacy server file modified,0 legacy logic files in the modified list,PASS
+V6.24 MVP label,not visible anywhere,0 occurrences in document text,-,PASS
+Models FULL label,not visible anywhere,0 occurrences in document text,-,PASS

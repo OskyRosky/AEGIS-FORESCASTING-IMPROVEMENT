@@ -1,0 +1,53 @@
+check_id,check,expected,observed,result
+V1,P9K closure exists and passed,TRUE,TRUE,PASS
+V2,P9L output folder exists,TRUE,TRUE,PASS
+V3,Prechange hashes captured,TRUE,TRUE,PASS
+V4,Postchange hashes captured,TRUE,TRUE,PASS
+V5,Modified files report exists,TRUE,TRUE,PASS
+V6,Models FULL sidebar has Universe and Ranking Diagnostics,TRUE,TRUE,PASS
+V7,Ranking Diagnostics page exists,TRUE,TRUE,PASS
+V8,Models FULL Universe still works,TRUE,TRUE,PASS
+V9,Legacy Models intact,TRUE,TRUE,PASS
+V10,V6.24 MVP pages intact,TRUE,TRUE,PASS
+V11,Uses V6.24 artifacts only,TRUE,TRUE,PASS
+V12,Does not use legacy HDD tournament artifacts,TRUE,TRUE,PASS
+V13,Model list is exactly 15,TRUE,TRUE,PASS
+V14,Ranking table has one row per model with All family,TRUE,TRUE,PASS
+V15,Metric selector uses only available V6.24 metrics,TRUE,TRUE,PASS
+V16,Selected metric median from accuracy_metrics,TRUE,TRUE,PASS
+V17,"Medians used, not means",TRUE,TRUE,PASS
+V18,No MASE current claim,TRUE,TRUE,PASS
+V19,No RMSSE current claim,TRUE,TRUE,PASS
+V20,No p-value current claim,TRUE,TRUE,PASS
+V21,No BH-adjusted p-value claim,TRUE,TRUE,PASS
+V22,No pairwise/bootstrap/head-to-head current claim,TRUE,TRUE,PASS
+V23,No tournament winner claim,TRUE,TRUE,PASS
+V24,No global champion claim,TRUE,TRUE,PASS
+V25,ETS Explicit not presented as global champion,TRUE,TRUE,PASS
+V26,Diagnostic position not labelled an official rank,TRUE,TRUE,PASS
+V27,Champion count labelled series-level,TRUE,TRUE,PASS
+V28,Champion counts exclude no-signal series,TRUE,TRUE,PASS
+V29,Champion counts sum to 125,TRUE,TRUE,PASS
+V30,Summary cards render,TRUE,TRUE,PASS
+V31,Ranking table uses DT,TRUE,TRUE,PASS
+V32,Metric chart uses highcharter,TRUE,TRUE,PASS
+V33,Champion chart uses highcharter,TRUE,TRUE,PASS
+V34,No Plotly in Ranking Diagnostics,TRUE,TRUE,PASS
+V35,Assistant answers from V6.24 evidence,TRUE,TRUE,PASS
+V36,Assistant refuses unsupported claims,TRUE,TRUE,PASS
+V37,No SQL run,TRUE,TRUE,PASS
+V38,No model execution,TRUE,TRUE,PASS
+V39,No backtest regeneration,TRUE,TRUE,PASS
+V40,No forecast regeneration,TRUE,TRUE,PASS
+V41,No accuracy recomputed from backtest rows,TRUE,TRUE,PASS
+V42,No ranking recalculation,TRUE,TRUE,PASS
+V43,No processed artifacts modified,TRUE,TRUE,PASS
+V44,No raw artifacts modified,TRUE,TRUE,PASS
+V45,Browser confirms Ranking Diagnostics visible,TRUE,TRUE,PASS
+V46,Browser confirms old Models visible,TRUE,TRUE,PASS
+V47,Browser confirms V6.24 MVP visible,TRUE,TRUE,PASS
+V48,Screenshot evidence exists,TRUE,TRUE,PASS
+V49,No push performed,TRUE,TRUE,PASS
+V50,Closure states P9M readiness,TRUE,TRUE,PASS
+V51,No pairwise or bootstrap computation,TRUE,TRUE,PASS
+V52,"Metric disagreement is reported, not hidden",TRUE,TRUE,PASS

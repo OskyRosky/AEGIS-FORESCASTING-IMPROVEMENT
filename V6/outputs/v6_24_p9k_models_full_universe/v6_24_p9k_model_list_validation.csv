@@ -1,0 +1,7 @@
+check,expected,observed,result
+Model count in the artifact,15,15,PASS
+All 15 governed models present,0 missing,0,PASS
+No extra model introduced,0 extra,0,PASS
+"List read from the artifact, not hardcoded",v6_24_mf_model_list reads accuracy_metrics,reads v6_24_tbl('accuracy_metrics'),PASS
+Legacy-only model not shown,FastNeuralAR_MLP absent,absent,PASS
+Browser shows 15 model entries,15,15,PASS

@@ -1,0 +1,21 @@
+check_id,invariant,expected,observed,result
+G1,No processed artifact modified,0,0,PASS
+G2,No raw artifact modified,0,0,PASS
+G3,Governed artifact bytes unchanged,0,0,PASS
+G4,No legacy logic file modified,0,0,PASS
+G5,Legacy Models section intact,present,present,PASS
+G6,Models FULL Universe unchanged in behaviour,present,present,PASS
+G7,No SQL,0,0,PASS
+G8,No model execution,0,0,PASS
+G9,No forecast regeneration,0,0,PASS
+G10,No backtest regeneration,0,0,PASS
+G11,No accuracy recomputed from backtest rows,0,0,PASS
+G12,No pairwise computation,0,0,PASS
+G13,No bootstrap or p-value computation,0,0,PASS
+G14,No MASE/RMSSE computation,0,12,FAIL
+G15,No ranking recalculation,0,0,PASS
+G16,No global champion computed,0,0,PASS
+G17,"Medians used, not means",0 mean() calls,0,PASS
+G18,No artifact write,0,0,PASS
+G19,No network call,0,0,PASS
+G20,No push,0,0,PASS

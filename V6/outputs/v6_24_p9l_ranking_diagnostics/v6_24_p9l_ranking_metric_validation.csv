@@ -1,0 +1,11 @@
+metric,governed_column,status_column,offered,result
+MAE,mae,-,yes,PASS
+RMSE,rmse,-,yes,PASS
+WAPE,wape,wape_status,yes,PASS
+SMAPE,smape,smape_status,yes,PASS
+MAPE,mape,mape_status,yes,PASS
+Median absolute error,median_absolute_error,-,yes,PASS
+MASE,-,-,NOT OFFERED - no column exists,PASS
+RMSSE,-,-,NOT OFFERED - no column exists,PASS
+Statistic used,median,-,"median, never mean",PASS
+Non-computable handling,excluded from the median,status column,"excluded and counted, never zeroed",PASS

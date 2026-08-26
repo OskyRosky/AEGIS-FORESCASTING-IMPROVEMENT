@@ -1,0 +1,31 @@
+field_group,field,source_artifact,invented,result
+A. Selection,series_id,navigation_contract.series_id,no,PASS
+A. Selection,route_display_label,navigation_contract.route_display_label,no,PASS
+A. Selection,metric / db_type / scenario / segment / granularity,navigation_contract filter axes,no,PASS
+A. Selection,final_axis_label,derived from key_axis_status via v6_24_final_axis_label(),no,PASS
+A. Selection,product_status / product_ready,navigation_contract,no,PASS
+A. Selection,viewer_visible / forecast_visible / ranking_visible,navigation_contract,no,PASS
+A. Selection,champion_visible,navigation_contract.champion_visible,no,PASS
+B. Signal,signal_quality_status,navigation_contract / series_signal_quality,no,PASS
+B. Signal,no_signal,navigation_contract.no_signal_flag,no,PASS
+B. Signal,trailing_zero,navigation_contract.trailing_zero_latest_actual_flag,no,PASS
+B. Signal,low_confidence_window,navigation_contract.low_confidence_backtest_window_flag,no,PASS
+B. Signal,observation_count / nonzero / zero,series_signal_quality,no,PASS
+B. Signal,actual_min_date / actual_max_date,series_signal_quality (UTC-safe),no,PASS
+B. Signal,latest_actual_value,series_signal_quality,no,PASS
+C. Backtest,applied,applied_cfg() from P9D,no,PASS
+C. Backtest,horizon / models,applied_cfg(),no,PASS
+C. Backtest,rows / date_min / date_max,model_backtests_15_models (equality filter),no,PASS
+C. Backtest,ranking table,model_rankings joined to accuracy_metrics,no,PASS
+C. Backtest,champion model / validity / reason,navigation_contract,no,PASS
+C. Backtest,WAPE / SMAPE / RMSE / MAE,accuracy_metrics,no,PASS
+C. Backtest,negative / extreme backtest counts,navigation_contract,no,PASS
+D. Forecast,forecast_type / steps / horizon_label,navigation_contract,no,PASS
+D. Forecast,model / models_available,forecast_outputs,no,PASS
+D. Forecast,start_date / end_date,navigation_contract,no,PASS
+D. Forecast,min / max / last,forecast_outputs.predicted_value,no,PASS
+D. Forecast,negative_rows / extreme_rows,navigation_contract,no,PASS
+E. Caveats,badge / message / codes / severities,navigation_contract,no,PASS
+E. Caveats,blocking,P7 policy: MVP caveats are non-blocking,no,PASS
+F. Taxonomy,metric coverage counts,taxonomy_counts BY_METRIC,no,PASS
+F. Taxonomy,median_wape,"taxonomy_counts (median, not mean)",no,PASS

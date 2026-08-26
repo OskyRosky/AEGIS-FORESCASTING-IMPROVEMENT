@@ -1,0 +1,14 @@
+check_id,check,expected,observed,result
+BR01,App starts locally,HTTP 200,"HTTP 200, 323,079 bytes on 127.0.0.1:7824",PASS
+BR02,"V6.24 selection UI is visible, not blank",rendered,"Card A renders with kicker A, title Selection and the pill '140 operational series'",PASS
+BR03,Only Metric is offered before any choice,one control,the rail showed Metric alone; the route panel read 'Select a Metric',PASS
+BR04,Choosing Metric reveals the next axis,DB Type appears,"after HDD the rail showed DB Type with a Select... placeholder, and the badge read '50 series in scope'",PASS
+BR05,"Non-applicable axes render as context, not dropdowns",context,"after Basilisk, Scenario and Segment rendered as dashed italic context reading 'does not apply to this route'",PASS
+BR06,No raw NOT_APPLICABLE jargon in the rail,product wording,the token is replaced by 'does not apply to this route',PASS
+BR07,Final axis label is dynamic,FOREST,after Granularity=Forest the final control was labelled FOREST,PASS
+BR08,Scope count narrows as the path is built,monotonic,140 -> 50 -> 17 -> 9 -> resolved,PASS
+BR09,A complete path resolves to one series,one series,resolved to HDD__Basilisk__NA__Forest__apcp150,PASS
+BR10,Route cards render in the browser,12-cell grid,the full grid rendered with contract values,PASS
+BR11,No-signal context renders in the browser,visible,'Champion is not a recommendation for this series.',PASS
+BR12,Forecast page mirrors the shared selection,same series,the shared-selection banner showed the same series and breadcrumb,PASS
+BR13,Legacy Forecasting still renders,intact,"Forecast Viewer heading, Selection card with '596 Viewer-complete cases / 6 routes' and Backtest Configuration all present",PASS

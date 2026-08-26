@@ -1,0 +1,11 @@
+group,item,section_id,expected,observed,result
+Forecasting,Overview,v24_overview,visible,visible,PASS
+Forecasting,Viewer,v24_viewer,visible,visible,PASS
+Forecasting,Accuracy,v24_accuracy,visible,visible,PASS
+Forecasting,Forecast,v24_forecast,visible,visible,PASS
+Forecasting,Taxonomy,v24_taxonomy,hidden on request,no sidebar link; section still mounted,PASS
+Models,Universe,v24mf_universe,visible,visible,PASS
+Models,Ranking Diagnostics,v24mf_ranking,visible,visible,PASS
+Models,Champion,v24mf_champion,visible,visible,PASS
+Sidebar groups,-,-,"Project, Models, Forecasting, Governance, Reference","Project, Models, Forecasting, Governance, Reference",PASS
+Internal ids unchanged,-,v24_* and v24mf_*,unchanged,unchanged,PASS

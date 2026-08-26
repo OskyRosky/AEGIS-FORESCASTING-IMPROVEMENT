@@ -1,0 +1,6 @@
+question_id,question,options,recommendation,blocks,owner_decision
+Q1,The selector lives on the Viewer; Forecast shows a read-only mirror. Is that the right shape?,keep the mirror | put a full selector on both pages and sync them,"Keep the mirror. The prompt said Forecast must not own an independent series selector, and two synchronised selectors risk update loops for no product gain. Revisit in P9H if it feels awkward in use.",P9H polish,PENDING
+Q2,Should the Overview page also show the shared selection?,yes | no,"No. Overview answers 'what is in this product', not 'which series am I looking at'. Adding it would blur the two.",P9H,PENDING
+Q3,"Demand Nature is shown only in the route card, not in the rail.",keep in the card | add a muted rail row | omit,"Keep it in the card. It is constant Organic today, so a rail row would imply a choice that does not exist.",nothing,PENDING
+Q4,The final axis falls back to 'Operational Key' when granularity is still mixed. Acceptable?,acceptable | force a granularity choice first,"Acceptable. It only appears before granularity is chosen, and the wording is neutral rather than wrong.",nothing,PENDING
+Q5,Charts are still Plotly and still re-render on every change.,expected | fix now,"Expected. Charts are P9E and P9F. Fixing them here would have mixed two stages, which rule 6 forbids.","P9E, P9F",PENDING

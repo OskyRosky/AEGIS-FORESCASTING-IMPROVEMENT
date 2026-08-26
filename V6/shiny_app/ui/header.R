@@ -27,8 +27,9 @@ app_header <- function() {
       tags$div(
         class = "app-header-lastupdate",
         title = paste0(
-          "Last update: the most recent time Tesseract data was ingested ",
-          "and the forecasting models were computed for this release."
+          "Last update: the build date of the governed V6.24 artifacts this ",
+          "dashboard is serving. Derived from the artifacts themselves, not ",
+          "from when the page was opened."
         ),
         tess_icon("rotate"),
         tags$span(class = "lastupdate-label", "Last update"),

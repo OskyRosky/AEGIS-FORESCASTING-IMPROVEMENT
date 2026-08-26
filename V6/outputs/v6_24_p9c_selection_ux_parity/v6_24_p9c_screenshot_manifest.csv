@@ -1,0 +1,6 @@
+shot_id,page,selector,what_it_shows,evidence_for
+S1,V6.24 Viewer,.v24-card-section,"Card A after choosing Metric=HDD: DB Type revealed, breadcrumb chip, '50 series in scope'","BR03, BR04, BR08"
+S2,V6.24 Viewer,.v24-card-section,"After DB Type=Basilisk: Scenario and Segment as context, Granularity as the next choice, four breadcrumb chips, '17 series in scope'","BR05, BR06"
+S3,V6.24 Viewer,.v24-nav-rail,After Granularity=Forest: the final axis labelled FOREST,BR07
+S4,V6.24 Viewer,.v24-nav-route,"Resolved route panel: full breadcrumb, AVAILABLE_WITH_CAVEAT badge, NO_SIGNAL and CHAMPION_NOT_MEANINGFUL badges, 12-cell route grid and the champion-not-a-recommendation note","BR09, BR10, BR11"
+S5,V6.24 Forecast,.v24-shared-sel,Shared selection banner showing the same series chosen in the Viewer,"BR12, SS05"

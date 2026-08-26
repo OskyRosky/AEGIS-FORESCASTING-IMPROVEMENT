@@ -1,0 +1,11 @@
+file,change,sha256_before,sha256_after,purpose
+shiny_app/global.R,MODIFIED,cb3dec09dd71ddbe7eff9560b8780d074d783d19328d76a53fe18dd5a69c5d32,8d712a893dea6c2740f18925a5affef9fbf9165aa10ad7bdfb072dfde960e127,MODIFIED - two lines: sources helper and server
+shiny_app/R/v6_24_assistant_helpers.R,MODIFIED,2860eed2b133a298b861026745e09a2d6d374b9226dfdad69efb12be5388d22a,686481fa8b106e0da89a250009acec2264c245418e5c825169d4f8dd6eaa6a8a,MODIFIED - added the Universe evidence builder and composer
+shiny_app/R/v6_24_models_full_helpers.R,ADDED,,d8d726a5a8e71f60ef8dc27e2575af91049ed756b9020e7a416b615006ec5fec,"NEW - governed model list, family map, universe summary/table, champion counts, claim guard"
+shiny_app/server/server.R,MODIFIED,1240cf7a96cb3be695b3c937d90252355cc66ea850d375d08f5ac5e5fb2e33cf,930427999a9272ef9c43714e231a59fccce060dd8a47bcab614e493b02fd3d6a,MODIFIED - one line: calls the new server
+shiny_app/server/v6_24_models_full_server.R,ADDED,,3f984e7308b2d835a838f76139f24c2d6c5cab34b6d50a4c4a39344698428983,NEW - read-only server for the Universe page
+shiny_app/ui/body.R,MODIFIED,f57db0b042ed91f2ac93b1a53e831430b68b8706bd2f78605ad740e2ed181a81,45b5d8d9f761adeb300950ca1170dc4dcfe101e4cc741379249c0faaa179e069,MODIFIED - one line: sources the new ui file
+shiny_app/ui/sidebar.R,MODIFIED,666ddb76f6fe1d1ed93cfe4eff33344fb7e2825a04d27cc6cd49659956ee8d79,2e61a542e7e007eb8a7d8950608ff901b8569817a9c774d0c622345efe6631f0,MODIFIED - added the 'Models FULL' group (legacy 'Models' untouched)
+shiny_app/ui/tabs.R,MODIFIED,1d3e4bb21acd7c789c1b235631b5761823b260da35742bfafb7b38e30bb2dfe9,86229999d652b77cf00ad86fd446f1cc10037d5af95eb17e2567c7e4471dcf5f,MODIFIED - one line: mounts the new section
+shiny_app/ui/tabs_v6_24_models_full.R,ADDED,,8fd9a50f4e0432d8af277860b8653d51dcc8bf1057673c7a47a2bae72faa2093,NEW - Models FULL Universe page (isolated from legacy tabs.R)
+shiny_app/www/custom.css,MODIFIED,1cd21340681a29ab0eb807bd6c4c680a1b641dd352da5589d39d284205e5054c,45522896f039998ee30e86aa951d64e3e65588c24dc7c400de9d9840499b1500,MODIFIED - appended Models FULL styles only

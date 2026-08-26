@@ -1,0 +1,14 @@
+term,must_not_appear_as,occurrences,context_verified,result
+MASE,current V6.24 metric,0,not present on the page,PASS
+RMSSE,current V6.24 metric,0,not present on the page,PASS
+p-value,a claim,1,"'V6.24 does not contain pairwise or bootstrap evidence, p-values, or a global champion artifact'",PASS
+global champion,a claim,3,all inside the same absence sentence or 'no global champion decision',PASS
+head-to-head,a claim,2,'This is not a head-to-head tournament' (title and disclosure),PASS
+tournament winner,anywhere,0,-,PASS
+bootstrap support,a claim,0,-,PASS
+league standings,anywhere,0,-,PASS
+official global rank,anywhere,0,-,PASS
+'is the champion',anywhere,0,-,PASS
+Page states it is not a tournament,required,yes,'This is not a head-to-head tournament.',PASS
+Page states no winner is declared,required,yes,'No winner is declared.',PASS
+Assistant answers pass the guard,0 assertive hits,0,context-aware guard over all 7 answers,PASS

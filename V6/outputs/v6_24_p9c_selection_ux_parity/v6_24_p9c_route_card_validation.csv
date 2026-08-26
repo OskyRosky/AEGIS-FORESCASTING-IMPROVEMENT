@@ -1,0 +1,12 @@
+element,expected,observed,result
+Breadcrumb chips,one chip per resolved axis,METRIC HDD / DB TYPE Basilisk / SCENARIO does not apply / SEGMENT does not apply / GRANULARITY Forest / FOREST apcp150,PASS
+Context chips styled distinctly,muted and italic,conditional axes render in the is-context style,PASS
+Status badge,from product_status,AVAILABLE_WITH_CAVEAT in amber with an explanatory line,PASS
+Caveat badges,from caveat_badge,NO_SIGNAL and CHAMPION_NOT_MEANINGFUL rendered,PASS
+Route card grid,12 cells resolving to contract fields,"ROUTE, DISPLAY LABEL, ENTITY TYPE, FOREST, GRANULARITY, DEMAND NATURE, SERIES ID, SIGNAL QUALITY, VIEWER, FORECAST, CHAMPION SHOWN, FORECAST HORIZON",PASS
+Dynamic cell label,the entity cell is named for the granularity,"the cell is titled FOREST, not Key",PASS
+Demand nature cell,read from the artifact,"Organic, read from actuals_normalized",PASS
+Forecast horizon cell,30 daily steps,30 daily steps,PASS
+No-signal note,champion is not a recommendation,'Champion is not a recommendation for this series.',PASS
+Low-confidence note,"moderate, not alarming",'Accuracy for this series is low confidence.' in a blue moderate card,PASS
+Pre-resolution state,explains what is missing,'N series in scope - complete the remaining levels',PASS

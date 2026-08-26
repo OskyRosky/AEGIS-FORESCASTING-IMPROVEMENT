@@ -1,0 +1,6 @@
+id,question,context,recommendation,blocks
+Q1,Should the champion distribution live on both Ranking and Champion?,The same chart now appears on two Models FULL pages.,Keep on Champion; consider trimming Ranking at P9I,no
+Q2,Should other V6.24 tables also opt out of DT lazy rendering?,Only v24mfc_top5 changes while its section is hidden today. Any future table driven by the shared selection will hit the same defect.,Pass lazy_render = FALSE whenever a table follows selected_series(),no
+Q3,Should legacy Models be archived once Models FULL is accepted?,"Legacy Universe, Tournament and Champion still ship untouched.",Decide at P9I; legacy Champion is the last Plotly chart in the app,no
+Q4,P9F Forecast champion-first layout is still unbuilt,Skipped between P9E and P9G.,Champion FULL now supplies the per-series champion Forecast would show,no
+Q5,Downloads for Models FULL,Deferred with P9G2.,Any ranking export must carry the champion_visible gate,no

@@ -1,0 +1,23 @@
+check_id,check,expected,observed,result
+B1,App reachable,HTTP 200,"HTTP 200, 368,117 bytes",PASS
+B2,Models FULL has two entries,Universe + Ranking Diagnostics,"v24mf_universe, v24mf_ranking",PASS
+B3,Ranking page renders,active,"is-active, 8,659 chars",PASS
+B4,Setup controls render,metric/family/sort,"6 measures, 5 family options, 4 sort options",PASS
+B5,Pending state before Analyze,'Nothing analysed yet.',confirmed,PASS
+B6,Analyze commits,applied line,'Analysed: MAE - All - 14:10:31',PASS
+B7,Cards render,9,9 including the disagreement card,PASS
+B8,Ranking table renders,15 rows,"15 rows, 13 columns",PASS
+B9,Median chart renders,"bar, 15","bar, 15 bars, export present",PASS
+B10,Champion chart renders,"bar, 14, sum 125","bar, 14 bars, sum 125",PASS
+B11,Disagreement table renders,15 rows,15 rows,PASS
+B12,Assistant answers,7 prompts,"all 7, correct intents",PASS
+B13,No Plotly on the page,0,0,PASS
+B14,No JS console errors,0,0,PASS
+B15,Models FULL Universe still works,content,"6,010 chars, 2 DT, 1 chart",PASS
+B16,Legacy Universe intact,content,802 chars,PASS
+B17,Legacy Tournament intact,content,"3,655 chars",PASS
+B18,Legacy Champion intact,content,"5,355 chars",PASS
+B19,V6.24 Viewer intact,charts + table,"2 charts, 1 DT",PASS
+B20,V6.24 Accuracy intact,chart + table,"1 chart, 1 DT",PASS
+B21,V6.24 Forecast intact,chart + table,"1 chart, 1 DT",PASS
+B22,Screenshots captured,>=8,8,PASS

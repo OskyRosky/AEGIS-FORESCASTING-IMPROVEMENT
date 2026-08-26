@@ -1,0 +1,10 @@
+file,size_kb,role,key_symbols,technical_debt,stage_to_touch
+R/v6_24_read_only_loader.R,16.5,"read-only loader, filter helpers, caveat map, UI tag helpers","v6_24_load_all, v6_24_tbl, v6_24_operational, v6_24_axis_options, v6_24_resolve, v6_24_nav_row, v6_24_badges, v6_24_caveat_severity, v6_24_tax_scope, v6_24_fmt_median, v24_table, v24_card, v24_kv, v24_badge",UI helpers do not belong in a loader; split into v6_24_ui_helpers.R,P9C
+ui/tabs_v6_24_mvp.R,8.4,four V6.24 sections,"section_v24_overview/viewer/forecast/taxonomy, v24_filter_bar, v24_section_head, v24_horizon_banner, v24_resize_hook",v24_filter_bar renders six unconditional dropdowns; the resize hook exists only because plotly cannot measure itself in a hidden container,"P9C, P9D, P9E, P9F"
+server/v6_24_mvp_server.R,19.3,read-only server module,"v6_24_mvp_server, make_filter_flow, per-page reactives, 33 outputOptions un-suspensions",Two independent filter flows (v24_vw and v24_fc) duplicate state; the Viewer and Forecast selections should be shared,P9C
+www/custom.css,87.1,stylesheet incl. the appended v24- block,"v24-card, v24-tbl, v24-badge-*, v24-filterbar, v24-horizon-banner",Parallel visual language to fvx-/fvb-/fvtn-; should converge,P9H
+global.R,1.7,startup sourcing,two added source() lines,none,P9C (one more source line if split)
+ui/body.R,10.8,UI shell,one added source() line,none,P9C (one more source line if split)
+ui/sidebar.R,3.7,navigation,V6.24 MVP group with four items,Legacy vs V6.24 distinction is not visually explicit,P9H
+ui/tabs.R,126.6,section composition,four section_v24_* calls in app_sections(),none,-
+server/server.R,25.2,root server,one call to v6_24_mvp_server(),none,P9G (assistant server registrations will be added here)

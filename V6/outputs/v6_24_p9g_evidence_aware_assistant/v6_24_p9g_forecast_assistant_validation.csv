@@ -1,0 +1,11 @@
+check_id,check,expected,observed,result
+FC1,Assistant card renders in Forecast,present,present,PASS
+FC2,Quick prompt count,6,6,PASS
+FC3,Forecast summary states 30 steps,30,30 daily steps,PASS
+FC4,Forecast summary states the window,2023-07-21 to 2023-08-19,2023-07-21 to 2023-08-19,PASS
+FC5,Forecast summary states the value range,min/max,"8,579.356 to 8,839.495, ending at 8,666.093",PASS
+FC6,Horizon answer denies a longer horizon,explicit denial,'There is no longer governed horizon' + 'never produced',PASS
+FC7,Horizon answer does not assert 4-year,no assertion,mentions 4-year only inside the denial,PASS
+FC8,Recommended-model answer reads the champion gate,gated,refused on the suppressed series,PASS
+FC9,Flags answer reports counts without hiding,counts,negative and extreme counts printed,PASS
+FC10,Model selector still drives the evidence,yes,assistant reads input$v24_fc_model,PASS

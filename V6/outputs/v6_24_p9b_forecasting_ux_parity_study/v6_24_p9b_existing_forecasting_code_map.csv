@@ -1,0 +1,16 @@
+file,size_kb,role,key_symbols,consumed_by,v624_relevance
+R/libraries.R,0.3,package imports,library(highcharter) - declared for 'interactive forecast charting',global.R,HIGH - proves highcharter is already a dependency
+R/constants.R,1.1,app constants,"APP_CHAMPION = 'ETS Explicit', APP_COLORS, app_theme",global.R,MEDIUM - theme and colour tokens for visual parity
+R/helpers.R,143.7,all chart and data helpers,"FVP_FAMILY_ORDER, FVP_FAMILY_LABELS, fvp_horizon_choices, fvp_horizon_unavailable, fvp_default_models, fvp_model_meta, fvp_model_label, fvp_actual_series, fvp_forecast_series, fvp_chart, fvp_summary, fvp_empty_chart, .fvp_palette, fvf_chart, acc_*, ttl_*","server/server.R, ui/*",CRITICAL - the reference implementation
+R/taxonomy_navigation.R,18.8,V6.18 shared conditional taxonomy module,"taxonomy_navigation_ui, taxonomy_navigation_server, taxonomy_route_context, taxonomy_control, taxonomy_resolve_selection, taxonomy_viewer_scope","ui/tabs_v6_16_viewer.R, server/server.R",CRITICAL - the Selection reference for P9C
+R/viewer_pilot.R,17.3,V6.17 read-only viewer provider,"viewer_pilot_server, fvp_pilot_data, fvp_pilot_case_data, fvp_pilot_download_rows, fvp_pilot_available",server/server.R,HIGH - download-of-selection reference
+R/forecast_pilot.R,19.4,V6.17 read-only forward forecast provider,forecast_pilot_server plus 31 highcharter references,server/server.R,HIGH - forward chart reference for P9F
+R/llm_explain.R,33.7,assistant UI and server,"llm_explain_ui, llm_explain_server, llm_explain_get, .LLM_DEFAULT_QUICK_PROMPTS, .llm_render_panel, .llm_download_modal","ui/*, server/server.R",HIGH - assistant reference for P9G
+R/llm_compose.R,11.9,deterministic local composer,question-adaptive composition from the evidence pack,R/llm_explain.R,MEDIUM - the answer engine behind the assistant
+R/artifact_export.R,14.6,governed multi-format downloads,"register_artifact_downloads, .artifact_download_modal, .artifact_build_md/txt/html, ARTIFACT_DOWNLOAD_SPECS",server/server.R,HIGH - download modal and format pattern for P9G
+R/data_loader.R,21.5,governed artifact registry,"build_artifact_registry, load_csv_artifact, .tess_read_parquet_file",global.R,MEDIUM - shows the registry pattern V6.24 bypassed
+ui/tabs_v6_16_viewer.R,12.2,Viewer and Forecast sections,"section_explorer(), section_forecast()",ui/body.R,CRITICAL - the layout reference
+ui/tabs.R,126.6,legacy sections and shared UI helpers,"panel(), section_head(), home_collapse(), card_grid(), info_list(), app_sections()",ui/body.R,HIGH - shared layout primitives V6.24 already uses
+ui/sidebar.R,3.7,left navigation,"stage07_menu(), sidebar_group()",ui/body.R,MEDIUM - both groups already registered here
+server/server.R,25.2,root server,"app_server(), viewer_pilot_server(), forecast_pilot_server(), llm_explain_server() x N, v6_24_mvp_server()",app.R,HIGH - wiring reference
+www/custom.css,87.1,stylesheet,"fvx-/fvb-/fvtn-/fv- class families, plus the v24- block appended by P8",ui/body.R,HIGH - the visual language to match

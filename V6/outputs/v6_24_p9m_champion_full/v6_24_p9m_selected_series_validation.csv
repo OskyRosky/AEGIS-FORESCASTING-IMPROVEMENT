@@ -1,0 +1,6 @@
+series_id,case,model_shown,mae_shown,note,result
+CPU__Consumed__Region__EUR-MSIT,presentable,LinearRegression,806.7471,"rank 1, champion_visible TRUE, star badge shown",PASS
+CPU__Consumed__Region__CAN-Go-Local,presentable,LightGBM,"8,420.894",table followed the Viewer selection,PASS
+CPU__Consumed__Region__BRA-Go-Local,presentable,LightGBM,"4,068.416","distinct from CAN, proving the table is not stale",PASS
+CPU__Consumed__Region__AUS-Go-Local,presentable,AutoARIMA,"14,480.88",fourth consecutive change still correct,PASS
+HDD__Basilisk__NA__Forest__apcp150,suppressed,ETS Explicit (tie-break),0,"no champion presented, no winner language",PASS

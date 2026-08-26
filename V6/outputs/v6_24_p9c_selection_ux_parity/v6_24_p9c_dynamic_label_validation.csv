@@ -1,0 +1,9 @@
+case,granularity,key_axis_status,expected_label,observed_label,basis,result
+HDD Basilisk Forest,Forest,IDENTIFIER_VALUE_FOREST,Forest,Forest,IDENTIFIER_VALUE_FOREST,PASS
+HDD Basilisk Region,Region,ROUTING_VALUE_REGION,Region,Region,ROUTING_VALUE_REGION,PASS
+SSD Phoenix,Forest,IDENTIFIER_VALUE_FOREST,Forest,Forest,IDENTIFIER_VALUE_FOREST,PASS
+CPU,Region,ROUTING_VALUE_REGION,Region,Region,ROUTING_VALUE_REGION,PASS
+IOPS,Region,ROUTING_VALUE_REGION,Region,Region,ROUTING_VALUE_REGION,PASS
+any mixed-granularity scope,mixed,MIXED,Operational Key,Operational Key,"neutral fallback, documented",PASS
+ALL,-,-,never the raw word 'Key',no case yields 'Key',-,PASS
+browser-observed,Forest,IDENTIFIER_VALUE_FOREST,Forest,final axis rendered as FOREST in the browser,screenshot,PASS

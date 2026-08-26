@@ -1,0 +1,49 @@
+check_id,check,expected,observed,result
+V1,P9E closure exists and passed,TRUE,TRUE,PASS
+V2,P9G output folder exists,TRUE,TRUE,PASS
+V3,Prechange hashes captured,TRUE,TRUE,PASS
+V4,Postchange hashes captured,TRUE,TRUE,PASS
+V5,Modified files report exists,TRUE,TRUE,PASS
+V6,Existing assistant files inspected,TRUE,TRUE,PASS
+V7,Architecture decision exists,TRUE,TRUE,PASS
+V8,Evidence context builder exists,TRUE,TRUE,PASS
+V9,Context includes selection fields,TRUE,TRUE,PASS
+V10,Context includes signal quality,TRUE,TRUE,PASS
+V11,Context includes applied backtest config,TRUE,TRUE,PASS
+V12,Context includes ranking and champion,TRUE,TRUE,PASS
+V13,Context includes forecast summary,TRUE,TRUE,PASS
+V14,Context includes caveats,TRUE,TRUE,PASS
+V15,Quick prompt contract exists,TRUE,TRUE,PASS
+V16,Viewer assistant panel renders,TRUE,TRUE,PASS
+V17,Forecast assistant panel renders,TRUE,TRUE,PASS
+V18,Quick prompts generate evidence answers,TRUE,TRUE,PASS
+V19,Free text generates evidence answers,TRUE,TRUE,PASS
+V20,Unsupported question returns refusal,TRUE,TRUE,PASS
+V21,No-signal gets no winner claim,TRUE,TRUE,PASS
+V22,champion_visible FALSE suppresses winner language,TRUE,TRUE,PASS
+V23,champion_visible TRUE allows champion explanation,TRUE,TRUE,PASS
+V24,Forecast answer states the governed step count,TRUE,TRUE,PASS
+V25,"Forecast answer does not claim 4-year/1,440",TRUE,TRUE,PASS
+V26,Caveat explanation gives meaning and blocking status,TRUE,TRUE,PASS
+V27,Negative/extreme explained without hiding,TRUE,TRUE,PASS
+V28,Assistant does not recalculate accuracy,TRUE,TRUE,PASS
+V29,Assistant does not regenerate forecasts,TRUE,TRUE,PASS
+V30,Assistant does not execute models,TRUE,TRUE,PASS
+V31,Assistant does not run SQL,TRUE,TRUE,PASS
+V32,Assistant does not mutate artifacts,TRUE,TRUE,PASS
+V33,Charts remain Highcharter,TRUE,TRUE,PASS
+V34,Tables remain DT,TRUE,TRUE,PASS
+V35,Existing Forecasting intact,TRUE,TRUE,PASS
+V36,App launches locally,TRUE,TRUE,PASS
+V37,Browser confirms assistant visible,TRUE,TRUE,PASS
+V38,Browser confirms quick prompts work,TRUE,TRUE,PASS
+V39,Browser confirms free text works,TRUE,TRUE,PASS
+V40,Screenshot evidence exists,TRUE,TRUE,PASS
+V41,No processed artifacts modified,TRUE,TRUE,PASS
+V42,No raw artifacts modified,TRUE,TRUE,PASS
+V43,No V1-V5 modified,TRUE,TRUE,PASS
+V44,No push performed,TRUE,TRUE,PASS
+V45,Closure states download status,TRUE,TRUE,PASS
+V46,Closure states P9H readiness,TRUE,TRUE,PASS
+V47,Every browser-shown number re-derived from artifacts,TRUE,TRUE,PASS
+V48,No network call in the assistant,TRUE,TRUE,PASS

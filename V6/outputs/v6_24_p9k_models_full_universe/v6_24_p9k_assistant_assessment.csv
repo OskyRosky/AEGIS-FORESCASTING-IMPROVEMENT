@@ -1,0 +1,9 @@
+item,implemented,detail,result
+Universe assistant,yes,P9G evidence-aware pattern with a models-specific evidence builder,PASS
+Quick prompts,yes,"6, matching the requested set",PASS
+Refuses causal questions,yes,"routes to unsupported_cause, bounded",PASS
+Refuses action questions,yes,"routes to unsupported_action, bounded",PASS
+Never claims a global champion,yes,guard clean on all 6 answers,PASS
+Never claims a tournament result,yes,the not-a-tournament answer is a denial,PASS
+Never presents MASE/RMSSE as current,yes,named only in the labelled absence list,PASS
+Download,no,deferred with P9G2,DEFERRED

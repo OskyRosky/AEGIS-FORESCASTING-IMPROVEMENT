@@ -1,0 +1,4 @@
+page,expected_heading,observed_heading,renders,result
+Universe,Models - Universe,Models - Universe,"6,023 chars, 1 Highcharts, 2 DT",PASS
+Ranking Diagnostics,Models - Ranking Diagnostics,Models - Ranking Diagnostics,"2 Highcharts, 2 DT",PASS
+Champion,Models - Champion,Models - Champion,"6,801 chars, 1 Highcharts, 4 DT",PASS

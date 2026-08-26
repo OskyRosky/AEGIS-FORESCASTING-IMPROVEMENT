@@ -1,0 +1,10 @@
+stage,name,expected,observed,status
+V6.24-P8,Shiny Read-Only Integration,closed,48/48 PASS,CLOSED
+V6.24-P9B,Forecasting UX Parity Study,closed,"37/37 PASS, 27-element parity map",CLOSED
+V6.24-P9C,Selection UX Parity,progressive selection,"1 new file, 4 modified, 43/43 PASS, browser-verified",CLOSED
+V6.24-P9D,Backtest Configuration Parity,not started,"horizon selector, model families, champion star, Analyze/Reset",READY
+V6.24-P9E,Highcharts Backtest Results,not started,-,PENDING
+V6.24-P9F,Forecast Page Highcharts,not started,-,PENDING
+V6.24-P9G,Assistant + Downloads,not started,-,PENDING
+V6.24-P9H,Visual QA Final,not started,-,PENDING
+V6.24-P10,Handoff,not started,blocked until P9H,PENDING

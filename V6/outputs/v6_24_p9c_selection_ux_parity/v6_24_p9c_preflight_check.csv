@@ -1,0 +1,6 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P9B closure exists and passed,all PASS,37/37 PASS,PASS,
+PF02,navigation_contract loads,140 rows,140 rows,PASS,V6_24_P9C_BLOCKED_SELECTION_CONTRACT_FAILURE
+PF03,Prechange hashes captured,all Shiny files,56 files,PASS,
+PF04,Governed artifacts fingerprinted,22,22,PASS,
+PF05,Legacy Forecasting present before change,present,section_explorer and section_forecast in ui/tabs_v6_16_viewer.R,PASS,

@@ -1,0 +1,7 @@
+check_id,check,expected,observed,result
+SS01,One shared reactive drives both pages,single source,selected_series() is consumed by vw_series and fc_series,PASS
+SS02,Viewer identity uses the shared selection,same series,Viewer identity renders the shared series,PASS
+SS03,Forecast identity uses the SAME shared selection,same series,Forecast identity renders the identical series,PASS
+SS04,Forecast has no independent series selector,none,the second filter bar was removed; Forecast shows a read-only mirror,PASS
+SS05,Browser: Forecast mirrors the Viewer selection,same series,shared-selection banner showed HDD__Basilisk__NA__Forest__apcp150 after selecting it in the Viewer,PASS
+SS06,The mirror explains where to change the selection,explained,'change it from V6.24 MVP -> Viewer',PASS

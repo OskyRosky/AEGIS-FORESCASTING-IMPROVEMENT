@@ -1,0 +1,46 @@
+check_id,check,expected,observed,result
+V1,P9J closure exists and passed,TRUE,TRUE,PASS
+V2,P9K output folder exists,TRUE,TRUE,PASS
+V3,Prechange hashes captured,TRUE,TRUE,PASS
+V4,Postchange hashes captured,TRUE,TRUE,PASS
+V5,Modified files report exists,TRUE,TRUE,PASS
+V6,Models FULL sidebar group exists,TRUE,TRUE,PASS
+V7,Models FULL Universe page exists,TRUE,TRUE,PASS
+V8,Old Models section intact,TRUE,TRUE,PASS
+V9,Old Universe/Tournament/Champion sidebar entries intact,TRUE,TRUE,PASS
+V10,V6.24 MVP pages intact,TRUE,TRUE,PASS
+V11,Universe FULL uses V6.24 artifacts only,TRUE,TRUE,PASS
+V12,Does not use legacy HDD artifacts as data truth,TRUE,TRUE,PASS
+V13,Model list is exactly 15,TRUE,TRUE,PASS
+V14,No extra models,TRUE,TRUE,PASS
+V15,No governed model missing,TRUE,TRUE,PASS
+V16,Display family marked display-only,TRUE,TRUE,PASS
+V17,Summary cards render,TRUE,TRUE,PASS
+V18,Universe table uses DT,TRUE,TRUE,PASS
+V19,One row per governed model,TRUE,TRUE,PASS
+V20,Metrics come from accuracy_metrics,TRUE,TRUE,PASS
+V21,"Medians used, not means",TRUE,TRUE,PASS
+V22,MASE not shown as a current metric,TRUE,TRUE,PASS
+V23,RMSSE not shown as a current metric,TRUE,TRUE,PASS
+V24,No pairwise/head-to-head claim as current evidence,TRUE,TRUE,PASS
+V25,No global champion claim,TRUE,TRUE,PASS
+V26,ETS Explicit not presented as global champion,TRUE,TRUE,PASS
+V27,Champion counts labelled series-level,TRUE,TRUE,PASS
+V28,Page states it is not a tournament,TRUE,TRUE,PASS
+V29,Page names Ranking Diagnostics and Champion FULL as later stages,TRUE,TRUE,PASS
+V30,No SQL run,TRUE,TRUE,PASS
+V31,No model execution,TRUE,TRUE,PASS
+V32,No backtest regeneration,TRUE,TRUE,PASS
+V33,No forecast regeneration,TRUE,TRUE,PASS
+V34,No accuracy recomputed from backtest rows,TRUE,TRUE,PASS
+V35,No ranking recalculation,TRUE,TRUE,PASS
+V36,No processed artifacts modified,TRUE,TRUE,PASS
+V37,No raw artifacts modified,TRUE,TRUE,PASS
+V38,Browser confirms the page is visible,TRUE,TRUE,PASS
+V39,Browser confirms old Models is visible,TRUE,TRUE,PASS
+V40,Browser confirms V6.24 MVP is visible,TRUE,TRUE,PASS
+V41,Screenshot evidence exists,TRUE,TRUE,PASS
+V42,No push performed,TRUE,TRUE,PASS
+V43,Closure states P9L readiness,TRUE,TRUE,PASS
+V44,Champion counts sum to presentable series,TRUE,TRUE,PASS
+V45,Claim guard is context-aware,TRUE,TRUE,PASS

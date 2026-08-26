@@ -1,0 +1,6 @@
+id,question,context,recommendation,blocks
+Q1,Should the hidden legacy groups eventually be removed?,"They remain in stage07_menu() marked hidden, and their sections are still mounted in the DOM.",Keep for one release as a rollback path; revisit after Final Visual QA,no
+Q2,Legacy sections are still reachable in the DOM,"They have no sidebar link, but they are still rendered as hidden sections.",Acceptable per the P9N brief; consider unmounting after QA,no
+Q3,Internal ids still read v24_ and v24mf_,Deliberate: the brief asked for visible labels only.,Do not rename; the cost outweighs the benefit,no
+Q4,'V6.24' still appears in evidence and source notes,For example 'The V6.24 selection is shared across the section'.,Keep - the brief explicitly allows technical disclosure text,no
+Q5,Legacy Champion still contains the last Plotly chart in the app,It is now unreachable from the sidebar.,No action needed while hidden,no

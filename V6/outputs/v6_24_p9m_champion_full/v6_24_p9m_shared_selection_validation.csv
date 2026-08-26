@@ -1,0 +1,11 @@
+check,expected,observed,result
+Viewer owns the selection,yes,selected_series() defined in the MVP server,PASS
+MVP server exposes it,returned,invisible(list(selected_series = selected_series)),PASS
+server.R threads it through,passed,shared_selection passed to the Models FULL server,PASS
+Models FULL server accepts it,argument with a NULL default,shared_selection = NULL,PASS
+Banner when the Viewer has a selection,Shared selection,'Shared selection - CPU / CPU|Organic|Consumed|Region / EUR-MSIT',PASS
+Banner when it does not,fallback disclosed,'No series is selected in V6.24 MVP - Viewer.',PASS
+Fallback selector present only when needed,hidden when shared,v24mfc_series_ui renders empty while a shared selection exists,PASS
+Fallback selector options,140,140,PASS
+Champion follows the Viewer,recomputed,4 consecutive Viewer changes all reflected,PASS
+No write back to the Viewer,read-only,Models FULL never sets the shared selection,PASS

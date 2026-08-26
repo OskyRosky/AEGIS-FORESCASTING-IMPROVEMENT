@@ -1,0 +1,6 @@
+check,expected,observed,result
+Config reads the P9C shared selection,selected_series(),cur_series() is derived from selected_series(); no new selector exists,PASS
+No independent operational selector introduced,0,"Card B contains horizon, history and model controls only",PASS
+Series change resets the configuration,reset,observeEvent on cur_series() calls reset_config(),PASS
+Forecast page still mirrors the selection,unchanged,the P9C shared mirror was not modified,PASS
+Applied config exposed for P9E,available,"applied_cfg() returns series, models, horizon and timestamp",PASS

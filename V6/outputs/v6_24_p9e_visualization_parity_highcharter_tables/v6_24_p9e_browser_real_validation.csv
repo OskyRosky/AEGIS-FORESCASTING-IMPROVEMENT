@@ -1,0 +1,21 @@
+check_id,check,expected,observed,result
+BR1,App reachable,HTTP 200,"HTTP 200, 327,094 bytes",PASS
+BR2,Viewer section opens,is-active,is-active true,PASS
+BR3,Pending state before Analyze,empty-state message,"'Choose a horizon and the models to compare, then click Analyze Backtest.'",PASS
+BR4,Backtest chart is Highcharts,highcharts-container,present,PASS
+BR5,Backtest chart is line-based,every series type line,"7/7 line, 7/7 with a graph path",PASS
+BR6,Legend interactive,clickable items,7 items,PASS
+BR7,Export menu,context button,1,PASS
+BR8,Horizon visible in context,subtitle,'horizon 5 days',PASS
+BR9,Selected models visible,model names,6 model names in the legend,PASS
+BR10,Forecast chart is Highcharts,highcharts-container,present,PASS
+BR11,Forecast shows actual + forecast lines,2 lines,"Observed actual 120 pts, Forecast 30 pts, both line",PASS
+BR12,Forecast colours differ,distinct,#10477e vs #0f9d6e,PASS
+BR13,Champion default,champion when visible,LinearRegression,PASS
+BR14,30-step horizon visible,in subtitle and identity,30 in both,PASS
+BR15,"No 1,440 / 4-year wording",0,0,PASS
+BR16,Tables use DT,dataTables_wrapper,all 8 V6.24 tables,PASS
+BR17,Zero Plotly nodes in V6.24 sections,0,0,PASS
+BR18,Legacy Forecasting still renders,chart present,"section active, 1 highcharts container",PASS
+BR19,No JS console errors,0,0 captured,PASS
+BR20,Screenshots captured,>=8,9,PASS

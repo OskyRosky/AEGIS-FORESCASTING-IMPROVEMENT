@@ -1,0 +1,9 @@
+family,model_count,models,source,classification_type,result
+Growth Baseline,4,"FixedGrowth_1_5, FixedGrowth_3, FixedGrowth_4, FixedGrowth_6",V6_24_DISPLAY_FAMILY (P9D),DISPLAY_GROUPING_ONLY,PASS
+Statistical,5,"ARIMA_Fixed, AutoARIMA, ETS Explicit, ETS_Current, Theta",V6_24_DISPLAY_FAMILY (P9D),DISPLAY_GROUPING_ONLY,PASS
+Machine Learning,3,"LightGBM, LinearRegression, XGBoost",V6_24_DISPLAY_FAMILY (P9D),DISPLAY_GROUPING_ONLY,PASS
+Deep Learning,3,"FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN",V6_24_DISPLAY_FAMILY (P9D),DISPLAY_GROUPING_ONLY,PASS
+governed: Baseline,7,"ARIMA_Fixed, ETS_Current, FixedGrowth_1_5, FixedGrowth_3, FixedGrowth_4, FixedGrowth_6, LinearRegression",accuracy_metrics.model_family,GOVERNED,PASS
+governed: Challenger,5,"AutoARIMA, ETS Explicit, LightGBM, Theta, XGBoost",accuracy_metrics.model_family,GOVERNED,PASS
+governed: Neural,3,"FNAR-V2, NLIN-DLIN_FIXED, SMLP-TCN",accuracy_metrics.model_family,GOVERNED,PASS
+Cross-cutting proof,3,ETS Explicit: Statistical/Challenger; LinearRegression: Machine Learning/Baseline; FNAR-V2: Deep Learning/Neural,both sources,"the two partitions differ, which is why both are shown",PASS

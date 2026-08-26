@@ -1,0 +1,5 @@
+item,implemented,reason,next_step
+Evidence context export (CSV/JSON),no,P9G explicitly says not to implement downloads if it risks the assistant. The assistant was the whole stage and it is validated; adding an export surface now would ship untested code.,P9G2
+Selected forecast rows export,no,"Needs a download contract decision: filename convention, whether caveats travel with the rows, and whether a suppressed champion may be exported.",P9G2
+Selected backtest rows export,no,"Same contract question, plus the applied-config stamp must travel with the file or the export is ambiguous.",P9G2
+Selected ranking rows export,no,"Must carry the champion_visible gate, otherwise an exported CSV would present a winner the UI refuses to present.",P9G2

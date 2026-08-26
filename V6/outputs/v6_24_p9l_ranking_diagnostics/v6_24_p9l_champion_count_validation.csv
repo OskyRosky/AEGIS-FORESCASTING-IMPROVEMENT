@@ -1,0 +1,10 @@
+check,expected,observed,result
+Models leading >=1 series,14,14,PASS
+Counts sum to presentable series,125,125,PASS
+Sum is NOT 140,not 140,125,PASS
+No-signal series excluded,15 excluded,15,PASS
+Gated on champion_visible,gated,champion_visible == TRUE,PASS
+Browser chart sum,125,125,PASS
+Labelled series-level,yes,'Series-level champion count',PASS
+Top model,FixedGrowth_6,FixedGrowth_6,PASS
+Top count,21,21,PASS

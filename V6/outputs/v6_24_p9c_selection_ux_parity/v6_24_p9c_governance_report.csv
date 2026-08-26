@@ -1,0 +1,18 @@
+invariant,expected,observed,result
+Governed artifacts unchanged,0 modified,0 of 22 changed,PASS
+No legacy Forecasting file modified,0,0 legacy files changed,PASS
+Legacy Forecasting still renders,intact,"verified in the browser: Selection, 596 cases pill and Backtest Configuration all present",PASS
+V6.24 MVP still present,intact,all four V6.24 pages render,PASS
+raw Parquet untouched,no diff,clean,PASS
+V1 through V5 untouched,no diff,clean,PASS
+No SQL,none,no DBI/odbc call in any V6.24 file,PASS
+No write call,none,source scan found none,PASS
+No hardcoded no-signal series,none,source scan found none,PASS
+No hardcoded GBRP267,none,source scan found none,PASS
+No route_path positional parsing,none,all route_path uses are whole-field reads,PASS
+No stale manifest readiness,not used,readiness still comes from navigation_contract,PASS
+Charts untouched,P9E/P9F scope,the plotly outputs were left exactly as P8 left them,PASS
+Backtest configuration untouched,P9D scope,no horizon selector or family grouping was added,PASS
+Assistant and downloads untouched,P9G scope,neither was implemented,PASS
+No push,none,none,PASS
+No git add . / -A / --all,not used,not used,PASS

@@ -1,0 +1,10 @@
+card,expected,observed,source,result
+Governed models,15,15,accuracy_metrics,PASS
+Operational series,140,140,navigation_contract,PASS
+Model-series rows,"2,100","2,100",accuracy_metrics,PASS
+Measures available,7,7,accuracy_metrics columns,PASS
+Series with a presentable champion,125,125,navigation_contract.champion_visible,PASS
+Series with no usable signal,15,15,navigation_contract,PASS
+Models leading at least one series,14,14,navigation_contract,PASS
+Champion counts sum to presentable series,125,125,navigation_contract,PASS
+Source named on screen,accuracy_metrics + navigation_contract,shown,-,PASS

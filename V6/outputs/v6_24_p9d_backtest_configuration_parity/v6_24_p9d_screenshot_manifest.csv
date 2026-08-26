@@ -1,0 +1,5 @@
+shot_id,page,selector,what_it_shows,evidence_for
+S1,V6.24 Viewer,.v24-card-section:nth-of-type(2),"Full Card B for a signal-present CPU series: availability banner, horizon radios with 35/45 struck through, four family groups, champion star, 6 of 15 selected, Analyze and Reset",BR02-BR10
+S2,V6.24 Viewer,.v24-fam-grid,The same four family groups for a no-signal series with NO champion star and five defaults,BR11
+S3,V6.24 Viewer,.v24-analyze-block,Analyze block before the first click: 'Nothing analysed yet for this selection.',BR14
+S4,V6.24 Viewer,.v24-analyze-block,Analyze block after the click: 'Analysed: 5 models at horizon 5 days',BR15

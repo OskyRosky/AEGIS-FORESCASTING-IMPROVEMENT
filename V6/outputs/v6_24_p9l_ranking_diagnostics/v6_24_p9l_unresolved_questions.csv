@@ -1,0 +1,6 @@
+id,question,context,recommendation,blocks
+Q1,Should the champion-count chart appear on both Universe and Ranking?,It is on both pages now.,Keep on Ranking; consider removing from Universe at P9I,no
+Q2,Should the disagreement table become a heatmap?,P9L allowed a heatmap; a position table was chosen as lower risk.,Revisit at P9I if the table reads poorly,no
+Q3,Should 'Position' be renamed to make the diagnostic nature clearer?,The column is 'Position' with the disclaimer in the card lead.,Consider 'Diagnostic position' at P9I,no
+Q4,P9M Champion FULL scope,Champion is per-series; the distribution now appears on two pages.,P9M should own per-series lookup and the no-signal explanation,no
+Q5,P9F Forecast champion-first layout still unbuilt,Skipped between P9E and P9G.,Decide before P9I,no

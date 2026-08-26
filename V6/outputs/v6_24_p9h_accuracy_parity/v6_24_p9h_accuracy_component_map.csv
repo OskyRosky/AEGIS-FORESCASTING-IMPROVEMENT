@@ -1,0 +1,8 @@
+block,v624_component,file,library,source_artifact
+A Setup,v24_acc_window / metric / models + Analyze,ui/tabs_v6_24_mvp.R,shiny,accuracy_metrics
+A Setup,shared selection banner,ui/tabs_v6_24_mvp.R,shiny,navigation_contract (via selected_series)
+B Summary,v24_acc_cards,server/v6_24_mvp_server.R,shiny,accuracy_metrics + navigation_contract
+C Heatmap,v6_24_acc_heatmap,R/v6_24_accuracy_helpers.R,highcharter,accuracy_metrics
+D Table,v6_24_acc_table,R/v6_24_accuracy_helpers.R,DT,accuracy_metrics + model_rankings (champion badge)
+E Assistant,v6_24_accuracy_evidence / _answer,R/v6_24_assistant_helpers.R,none (local deterministic),accuracy_metrics + navigation_contract
+F Download,not implemented,-,-,deferred to P9G2

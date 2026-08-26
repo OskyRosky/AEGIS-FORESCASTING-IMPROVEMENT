@@ -1,0 +1,45 @@
+check_id,check,expected,observed,result
+V1,P9K/P9L/P9M work is present,TRUE,TRUE,PASS
+V2,Output folder exists,TRUE,TRUE,PASS
+V3,Prechange hashes captured,TRUE,TRUE,PASS
+V4,Postchange hashes captured,TRUE,TRUE,PASS
+V5,Modified files report exists,TRUE,TRUE,PASS
+V6,Sidebar shows Forecasting as a visible group,TRUE,TRUE,PASS
+V7,Forecasting group contains the five page definitions,TRUE,TRUE,PASS
+V8,Sidebar shows Models as a visible group,TRUE,TRUE,PASS
+V9,Models group contains the three pages,TRUE,TRUE,PASS
+V10,Sidebar does not show V6.24 MVP as a group,TRUE,TRUE,PASS
+V11,Sidebar does not show Models FULL as a group,TRUE,TRUE,PASS
+V12,Old Forecasting group is hidden,TRUE,TRUE,PASS
+V13,Old Models group is hidden,TRUE,TRUE,PASS
+V14,Old Forecasting code not deleted,TRUE,TRUE,PASS
+V15,Old Models code not deleted,TRUE,TRUE,PASS
+V16,Legacy Universe/Tournament/Champion functions remain,TRUE,TRUE,PASS
+V17,Forecasting Overview renders,TRUE,TRUE,PASS
+V18,Forecasting Viewer renders,TRUE,TRUE,PASS
+V19,Forecasting Accuracy renders,TRUE,TRUE,PASS
+V20,Forecasting Forecast renders,TRUE,TRUE,PASS
+V21,Forecasting Taxonomy section retained but hidden,TRUE,TRUE,PASS
+V22,Models Universe renders,TRUE,TRUE,PASS
+V23,Models Ranking Diagnostics renders,TRUE,TRUE,PASS
+V24,Models Champion renders,TRUE,TRUE,PASS
+V25,No artifact files modified,TRUE,TRUE,PASS
+V26,No raw data modified,TRUE,TRUE,PASS
+V27,No SQL run,TRUE,TRUE,PASS
+V28,No model execution,TRUE,TRUE,PASS
+V29,No backtest/forecast/accuracy/ranking regeneration,TRUE,TRUE,PASS
+V30,No champion logic changed,TRUE,TRUE,PASS
+V31,Browser-real validation passes,TRUE,TRUE,PASS
+V32,Screenshot evidence exists,TRUE,TRUE,PASS
+V33,No push performed,TRUE,TRUE,PASS
+V34,Closure summary states QA readiness,TRUE,TRUE,PASS
+V35,No legacy logic file modified,TRUE,TRUE,PASS
+V36,No file deleted,TRUE,TRUE,PASS
+V37,Internal section ids unchanged,TRUE,TRUE,PASS
+V38,app_sidebar filters hidden groups,TRUE,TRUE,PASS
+V41,sidebar_group filters hidden items,TRUE,TRUE,PASS
+V42,"Taxonomy item retained, not deleted",TRUE,TRUE,PASS
+V43,Taxonomy section still mounted,TRUE,TRUE,PASS
+V44,"Group order is Project, Models, Forecasting, Governance, Reference",TRUE,TRUE,PASS
+V39,V6.24 MVP not visible in any page heading,TRUE,TRUE,PASS
+V40,Models FULL not visible in any page heading,TRUE,TRUE,PASS

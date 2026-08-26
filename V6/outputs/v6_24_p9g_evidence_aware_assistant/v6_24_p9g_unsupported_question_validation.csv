@@ -1,0 +1,7 @@
+check_id,question_type,expected,observed,state,result
+UQ1,Causal business question,evidence-not-available,'I do not have evidence for that in the current V6.24 artifacts.',bounded,PASS
+UQ2,Capacity action question,evidence-not-available,"'artifacts do not carry capacity, cost or approval information'",bounded,PASS
+UQ3,Out-of-domain question (weather),unsupported,routes to unsupported,bounded,PASS
+UQ4,Production-readiness question,refused,routes to unsupported_action,bounded,PASS
+UQ5,Bounded answers cite no artifact,none,'no artifact supports this question',bounded,PASS
+UQ6,Bounded answers are visually distinct,amber panel,v24-asst-bounded class applied,bounded,PASS

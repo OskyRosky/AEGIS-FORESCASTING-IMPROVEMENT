@@ -1,0 +1,14 @@
+horizon,expected,observed,result
+5 days,enabled,rendered as a radio option,PASS
+10 days,enabled,rendered as a radio option,PASS
+15 days,enabled,rendered as a radio option,PASS
+20 days,enabled,rendered as a radio option,PASS
+25 days,enabled,rendered as a radio option,PASS
+30 days,enabled,rendered as a radio option,PASS
+35 days,visibly unavailable,struck-through disabled chip,PASS
+45 days,visibly unavailable,struck-through disabled chip,PASS
+range,every enabled horizon within 1-30,5-30,PASS
+default,5 days,5,PASS
+filter semantics,"equality on horizon_steps, matching the legacy viewer",horizon 10 returns only step 10 rows,PASS
+no extrapolation,nothing beyond 30 can be requested,30,PASS
+source,offered horizons intersect the artifact,V6_24_HORIZON_CHOICES intersected with the horizon_steps present for the series,PASS

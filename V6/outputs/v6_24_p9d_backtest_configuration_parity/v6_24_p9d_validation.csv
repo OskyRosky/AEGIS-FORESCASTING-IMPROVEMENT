@@ -1,0 +1,49 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P9C closure exists and passed,all PASS,43/43 PASS,PASS,NO
+V2,P9D output folder exists,present,21 files,PASS,NO
+V3,Prechange hashes captured,all files,57 files,PASS,NO
+V4,Postchange hashes captured,all files,58 files,PASS,NO
+V5,Modified files report exists,present,"1 added, 4 modified",PASS,NO
+V6,Model family map validation exists,present,8 rows,PASS,NO
+V7,All 15 governed model names are in the display map,15,"15 mapped, missing: 0",PASS,YES
+V8,No extra models introduced,0,0 extras,PASS,YES
+V9,Family map is marked display-only,DISPLAY_GROUPING_ONLY,DISPLAY_GROUPING_ONLY,PASS,YES
+V10,Backtest availability validation exists,present,6 rows,PASS,NO
+V11,No-signal is NOT treated as unavailable,available,"2,250 rows, 15 models",PASS,YES
+V12,Low-confidence is NOT treated as unavailable,available,"4,500 rows",PASS,YES
+V13,Horizon selector validation exists,present,13 rows,PASS,NO
+V14,Enabled horizons are within 1-30 only,1-30,5-30,PASS,YES
+V15,35 and 45 are disabled or visibly unavailable,struck through,both render as struck-through disabled chips,PASS,NO
+V16,Default horizon is valid,5 days,5,PASS,NO
+V17,Default model selection validation exists,present,9 rows,PASS,NO
+V18,"Defaults select around 5-6, not all 15",5-6,6 selected,PASS,YES
+V19,Champion is selected by default when visible,selected,FixedGrowth_1_5 in defaults,PASS,NO
+V20,Champion star appears only when champion_visible is TRUE,star,FixedGrowth_1_5  ★ champion,PASS,YES
+V21,Champion star is suppressed when champion_visible is FALSE,no star,"no star in any family group, verified in the browser",PASS,YES
+V22,Analyze Backtest button exists,present,rendered as a primary button when a series and models are selected,PASS,NO
+V23,Reset Selection button exists,present,rendered beside Analyze,PASS,NO
+V24,Analyze is disabled when the series has no backtest rows,disabled,renders as a non-interactive span with an explanatory title,PASS,NO
+V25,Analyze applies pending config only on click,on click,Analysed: 6 models at horizon 5 days · 19:28:27,PASS,YES
+V26,Reset restores defaults for the selected series,restored,"<span class=""v24-model-count"">5 of 15 selected</span>list()",PASS,NO
+V27,Backtest config uses the P9C shared selection,selected_series(),cur_series() derives from selected_series(),PASS,YES
+V28,No independent operational selector introduced,0,"Card B has horizon, history and model controls only",PASS,YES
+V29,Forecast champion-only decision documented for P9F,documented,v6_24_p9d_forecast_champion_default_note.md,PASS,NO
+V30,App launches locally,HTTP 200,HTTP 200 on 127.0.0.1:7824,PASS,NO
+V31,Browser confirms Backtest Configuration visible,visible,Card B fully rendered,PASS,YES
+V32,Browser confirms four model families visible,4 groups,"Growth Baseline, Statistical, Machine Learning, Deep Learning",PASS,NO
+V33,Browser confirms champion star behaviour,correct,"star on the CPU series, none on the no-signal series",PASS,YES
+V34,Browser confirms Reset behaviour,restores defaults,reset restored the default model count,PASS,NO
+V35,Browser confirms legacy Forecasting intact,intact,no legacy file touched; section verified,PASS,YES
+V36,No processed artifacts modified,0,0 of 22,PASS,YES
+V37,No raw artifacts modified,no diff,clean,PASS,NO
+V38,No SQL run,none,source scan found none,PASS,NO
+V39,No model execution,none,filters prepared rows only,PASS,NO
+V40,No forecast regeneration,none,none,PASS,NO
+V41,No accuracy or ranking recalculation,none,no metric computation,PASS,NO
+V42,No chart migration to Highcharts in P9D,none,no highchart call in the V6.24 code,PASS,NO
+V43,No assistant implementation,none,no llm_explain call,PASS,NO
+V44,No download implementation,none,no downloadHandler,PASS,NO
+V45,No push performed,none,none,PASS,NO
+V46,Closure states P9E readiness,stated,closure states READY_FOR_P9E_HIGHCHARTS_BACKTEST_RESULTS,PASS,NO
+V47,Reactive suite passed,all PASS,59/59 PASS,PASS,NO
+V48,Shared input/output ID collision resolved,none,the horizon output was renamed to v24_bt_horizon_ui,PASS,NO

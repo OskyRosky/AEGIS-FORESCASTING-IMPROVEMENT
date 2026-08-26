@@ -1,0 +1,8 @@
+file,bytes,shows
+01_scope_disclosure.png,48447,Scope banner: what the page is and what it does not claim
+02_model_families.png,63893,Four display families with the governed family beside each model
+03_what_changed.png,34544,Previous section vs V6.24 comparison table
+04_universe_cards.png,37287,Eight summary cards read from the artifacts
+05_universe_table.png,126355,"DT table, one row per governed model, cohort medians"
+06_champion_count_chart.png,51370,Highcharter bar chart of series-level champion counts
+07_universe_assistant.png,162564,Evidence-grounded universe assistant answer

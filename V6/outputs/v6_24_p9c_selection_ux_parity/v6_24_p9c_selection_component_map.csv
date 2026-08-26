@@ -1,0 +1,14 @@
+component,file,symbol,responsibility,artifact_source,replaces
+Selection plan,R/v6_24_selection_helpers.R,v6_24_selection_plan(),"Decides per axis whether it is a CHOICE, a CONTEXT statement or LOCKED. This is what makes the selection progressive.",navigation_contract,the always-on six-dropdown bar
+Dynamic final label,R/v6_24_selection_helpers.R,v6_24_final_axis_label(),Region / Forest / Forest+SKU from key_axis_status. Falls back to 'Operational Key' only when the granularity is still mixed.,navigation_contract.key_axis_status,the hardcoded label 'Key'
+Axis narrowing,R/v6_24_selection_helpers.R,v6_24_narrow(),Filters contract rows by the choices made so far.,navigation_contract,v6_24_axis_options / v6_24_resolve
+Single-row resolution,R/v6_24_selection_helpers.R,v6_24_resolve_one(),"Returns the one operational row, or NULL. Detail panels only draw on a row.",navigation_contract,per-page resolved() reactives
+Breadcrumb,R/v6_24_selection_helpers.R,v6_24_breadcrumb(),Chips for the path being built; context axes styled distinctly.,the selection plan,a single line of green text
+Status badge,R/v6_24_selection_helpers.R,v6_24_status_badge(),"Green for AVAILABLE, amber for AVAILABLE_WITH_CAVEAT.",navigation_contract.product_status,a key/value row
+Route cards,R/v6_24_selection_helpers.R,v6_24_route_cards(),Twelve-cell grid resolving the selection back to contract fields.,navigation_contract + actuals_normalized,a flat key/value list
+Context notes,R/v6_24_selection_helpers.R,v6_24_context_notes(),"Champion-not-meaningful, low-confidence and trailing-zero notes. Each branch reads a field; no series is named in code.","champion_visible, low_confidence_backtest_window_flag, trailing_zero_latest_actual_flag",the amber champion panel only
+Demand nature,R/v6_24_selection_helpers.R,v6_24_demand_nature(),Read per series so it stays true if the cohort changes. Never a dropdown.,actuals_normalized.demand_nature,absent
+Selection card UI,ui/tabs_v6_24_mvp.R,v24_selection_card(),"Card A: kicker, title, scope pill, lead, two-column navigator.",navigation_contract,v24_filter_bar()
+Shared mirror UI,ui/tabs_v6_24_mvp.R,v24_shared_selection_banner(),Read-only view of the shared selection for pages that consume it.,the shared reactive,a second independent filter bar
+Shared state,server/v6_24_mvp_server.R,sel reactiveValues + chosen(),Explicit state so a parent change clears every axis below it in one place.,n/a,reading values back from the inputs
+Shared selection,server/v6_24_mvp_server.R,selected_series(),One reactive consumed by both Viewer and Forecast.,navigation_contract,vw_series and fc_series as separate flows

@@ -1,0 +1,14 @@
+page,prompt,intent,expected_behavior,wired,result
+Viewer,Summarize the selected series,summary,"route, signal, champion gate",yes,PASS
+Viewer,Explain the champion,champion,champion only if champion_visible,yes,PASS
+Viewer,Explain the backtest,backtest,"applied horizon, rows, equality note",yes,PASS
+Viewer,Explain the model ranking,ranking,read from model_rankings,yes,PASS
+Viewer,Explain the caveats,caveats,"codes, severity, non-blocking",yes,PASS
+Viewer,What should I pay attention to?,attention,"signal, champion, flags",yes,PASS
+Viewer,Is this series safe to interpret?,risk,signal + champion gate,yes,PASS
+Forecast,Summarize the forecast,forecast,"steps, window, range",yes,PASS
+Forecast,What is the recommended model?,champion,refuses if suppressed,yes,PASS
+Forecast,What is the main forecast risk?,risk,signal + caveats,yes,PASS
+Forecast,Are there negative or extreme values?,flags,"counts, unclipped",yes,PASS
+Forecast,Why is this only a 30-step forecast?,horizon,denies longer horizon,yes,PASS
+Forecast,What should I tell a stakeholder?,stakeholder,gated on champion,yes,PASS

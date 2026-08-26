@@ -3108,14 +3108,35 @@ methodology_dataset_values <- function(df = methodology_run_metadata()) {
 }
 
 # ---------------------------------------------------------------------------
-# Header "Last update" badge (last data ingestion + model computation)
+# Header "Last update" badge (freshness of the governed data being served)
 # ---------------------------------------------------------------------------
-# Returns the date of the most recent governed data-contract build, i.e. the
-# last time Tesseract data was ingested and the forecasting models were
-# (re)computed for this release. Sourced from run_metadata$run_timestamp.
+# P9O | This badge used to read run_metadata$run_timestamp, which records the
+# build date of the legacy HDD pipeline. The product now serves the V6.24
+# governed cohort, so the badge was showing a date roughly two months older
+# than the data on screen.
+#
+# It is now DERIVED from the newest governed V6.24 artifact actually loaded by
+# the dashboard, so it tracks the data automatically and cannot drift. It is
+# never hardcoded: writing a literal date here would be correct for one day and
+# wrong every day after. Falls back to the legacy timestamp only if the V6.24
+# directory cannot be read.
 
 header_last_update <- function() {
   dash <- "\u2014"
+
+  v624 <- tryCatch({
+    if (!dir.exists(V6_24_COHORT_DIR)) NA
+    else {
+      stems <- unlist(V6_24_FILES, use.names = FALSE)
+      f <- list.files(V6_24_COHORT_DIR, full.names = TRUE,
+                      pattern = "\\.(parquet|csv)$")
+      f <- f[tools::file_path_sans_ext(basename(f)) %in% stems]
+      if (!length(f)) NA else max(file.mtime(f), na.rm = TRUE)
+    }
+  }, error = function(e) NA)
+
+  if (!is.na(v624)) return(format(as.Date(v624), "%Y-%m-%d"))
+
   df <- tryCatch(methodology_run_metadata(), error = function(e) NULL)
   ts <- tryCatch(cs_value(df, "run_timestamp", fallback = NA_character_),
                  error = function(e) NA_character_)

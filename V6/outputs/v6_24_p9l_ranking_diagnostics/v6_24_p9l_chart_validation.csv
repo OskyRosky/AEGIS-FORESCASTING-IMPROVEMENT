@@ -1,0 +1,13 @@
+chart,library,check,observed,result
+Diagnostic median,highcharter,type,bar,PASS
+Diagnostic median,highcharter,bars,15,PASS
+Diagnostic median,highcharter,title,'Diagnostic median MAE',PASS
+Diagnostic median,highcharter,export menu,present,PASS
+Diagnostic median,highcharter,subtitle disclaims ranking,'not a ranking',PASS
+Champion count,highcharter,type,bar,PASS
+Champion count,highcharter,bars,14,PASS
+Champion count,highcharter,sum of bars,125,PASS
+Champion count,highcharter,title,'Series-level champion count',PASS
+Champion count,highcharter,tooltip wording,'Number of series where this model is the presentable champion',PASS
+Champion count,highcharter,no-signal excluded,subtitle states 15 excluded,PASS
+Both charts,highcharter,no Plotly,0 plotly nodes,PASS

@@ -1,0 +1,6 @@
+id,question,context,options,recommendation,blocks
+Q1,Should a per-horizon accuracy artifact be built later?,accuracy_metrics aggregates horizons 1-30. A per-horizon view would need a new governed artifact built outside Shiny.,leave as is | build in a future P6D | never,leave as is; the disclosure is honest and the Viewer already compares models per horizon,no
+Q2,Should Accuracy also offer a cohort-wide view?,P9H originally built one; the owner corrected the scope to the selected series. A cohort view would answer a different question.,keep per-series only | add a separate cohort page later,keep per-series only for the MVP,no
+Q3,Is 7 measures too many columns in the heatmap?,"MAE, RMSE, WAPE, SMAPE, MAPE, Median absolute error, Absolute bias.",keep 7 | drop MAPE (duplicates WAPE closely) | let the user choose,judge in P9I visual QA,no
+Q4,Should the accuracy assistant get a download?,The legacy Accuracy assistant has Download explanation.,add in P9G2 | never,fold into the P9G2 download contract,no
+Q5,P9F was skipped and remains unbuilt,The Forecast champion-first executive layout from the P9D note.,run P9F before P9I | fold into P9I | drop,confirm with the owner before P9I,no

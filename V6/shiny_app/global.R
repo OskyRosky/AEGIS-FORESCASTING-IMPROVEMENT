@@ -23,7 +23,14 @@ source("R/forecast_pilot.R")
 # V6.24 | Read-only loader for the governed MVP cohort (P4-P7 artifacts).
 # Everything is cooked outside Shiny; this only reads finished artifacts.
 source("R/v6_24_read_only_loader.R")
+source("R/v6_24_selection_helpers.R")
+source("R/v6_24_backtest_config_helpers.R")
+source("R/v6_24_viz_helpers.R")
+source("R/v6_24_accuracy_helpers.R")
+source("R/v6_24_models_full_helpers.R")
+source("R/v6_24_assistant_helpers.R")
 source("server/v6_24_mvp_server.R")
+source("server/v6_24_models_full_server.R")
 
 # V4.6 | Shiny Local On-Demand LLM explanation panel (mock, read-only)
 source("R/llm_explain.R")
@@ -40,3 +47,4 @@ source("R/artifact_export.R")
 # explanation download modal can export PDF / Word. No network, no Azure;
 # purely points rmarkdown at the local binaries. Safe no-op if absent.
 try(.llm_ensure_pandoc(), silent = TRUE)
+

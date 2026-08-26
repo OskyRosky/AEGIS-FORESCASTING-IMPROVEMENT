@@ -325,6 +325,47 @@ v6_24_fmt_median <- function(x, digits = 4) {
   formatC(as.numeric(x), format = "f", digits = digits)
 }
 
+#' Render a data.frame as a plain HTML table.
+#'
+#' SUPERSEDED BY P9E. Every V6.24 table now renders through v6_24_dt(), which
+#' uses DT - the application's table library. This helper is kept only as a
+#' fallback for any future output that must not depend on an htmlwidget.
+#'
+#' The original reason for it no longer holds. These pages live in CSS-toggled
+#' <section> elements that start hidden, and P8 read that as "htmlwidgets cannot
+#' initialise in a display:none container". P9E measured it in a real browser:
+#' htmlwidgets DEFERS rendering while the container is hidden and completes it
+#' when the section is shown, and www/custom.js already fires a resize on
+#' section switch. DT renders correctly, with no console errors.
+v24_table <- function(df, max_rows = NULL, scroll = FALSE) {
+  if (is.null(df) || !NROW(df)) {
+    return(shiny::tags$p(class = "v24-note", "No rows to display."))
+  }
+  shown <- df
+  note <- NULL
+  if (!is.null(max_rows) && nrow(df) > max_rows) {
+    shown <- df[seq_len(max_rows), , drop = FALSE]
+    note <- shiny::tags$p(class = "v24-note",
+                          sprintf("Showing %d of %d rows.", max_rows, nrow(df)))
+  }
+  cells <- function(r) {
+    lapply(seq_along(shown), function(j) {
+      v <- shown[[j]][r]
+      shiny::tags$td(if (is.na(v)) "" else as.character(v))
+    })
+  }
+  tbl <- shiny::tags$table(
+    class = "v24-tbl",
+    shiny::tags$thead(shiny::tags$tr(
+      lapply(names(shown), function(n) shiny::tags$th(n)))),
+    shiny::tags$tbody(
+      lapply(seq_len(nrow(shown)), function(r) shiny::tags$tr(cells(r))))
+  )
+  shiny::tagList(
+    if (scroll) shiny::tags$div(class = "v24-tbl-scroll", tbl) else tbl,
+    note)
+}
+
 # ---------------------------------------------------------------------
 # Shared presentation helpers.
 #

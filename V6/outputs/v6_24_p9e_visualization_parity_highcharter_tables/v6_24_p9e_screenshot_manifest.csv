@@ -1,0 +1,10 @@
+file,bytes,shows
+01_viewer_backtest_highcharts.png,86426,"Viewer backtest: actual + 6 model lines, legend, export, champion star"
+02_viewer_ranking_dt.png,131603,Viewer ranking rendered by DT with Family and champion badge
+03_forecast_highcharts.png,62813,"Forecast: blue actual line, green forecast line, Forecast start boundary"
+04_forecast_rows_dt.png,56126,"Forecast rows in DT with step, date, model and flags"
+05_taxonomy_dt.png,35940,"Taxonomy counts in DT, sortable and searchable"
+06_overview_full.png,126268,Overview page with DT coverage tables
+07_forecast_no_signal_governance.png,34940,"Champion-suppressed series: 'reference model', no winner claim"
+08_viewer_backtest_no_signal.png,43440,"No-signal backtest: lines drawn, no champion star"
+09_viewer_observed_history.png,59346,Observed history as a single actual line

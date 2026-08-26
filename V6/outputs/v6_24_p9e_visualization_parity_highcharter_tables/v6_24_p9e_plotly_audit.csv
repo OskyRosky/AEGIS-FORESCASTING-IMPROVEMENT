@@ -1,0 +1,20 @@
+file,line,usage,belongs_to_v624,action,result
+ui/tabs_v6_24_mvp.R,18,comment about plotly resize,yes,comment rewritten,REMOVED
+ui/tabs_v6_24_mvp.R,221,plotly::plotlyOutput v24_vw_actuals,yes,replaced with highcharter,REMOVED
+ui/tabs_v6_24_mvp.R,232,plotly::plotlyOutput v24_vw_backtest,yes,replaced with highcharter,REMOVED
+ui/tabs_v6_24_mvp.R,259,plotly::plotlyOutput v24_fc_chart,yes,replaced with highcharter,REMOVED
+server/v6_24_mvp_server.R,454,plotly::renderPlotly v24_vw_actuals,yes,replaced with highcharter,REMOVED
+server/v6_24_mvp_server.R,469,plotly::renderPlotly v24_vw_backtest,yes,replaced with highcharter,REMOVED
+server/v6_24_mvp_server.R,598,plotly::renderPlotly v24_fc_chart,yes,replaced with highcharter,REMOVED
+R/v6_24_read_only_loader.R,331,comment naming DT/plotly,yes,comment rewritten,REMOVED
+R/libraries.R,5,library(plotly),no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+R/helpers.R,1282,legacy plotly builders (20 usages),no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+R/plots.R,1,legacy plotly chart builders,no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+R/cards.R,21,legacy plotlyOutput chart_comparison,no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+server/server.R,310,legacy renderPlotly (5 usages),no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+ui/tabs.R,842,legacy plotlyOutput (3 usages),no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+server/overview_server.R,41,legacy renderPlotly,no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+server/forecast_overlay_server.R,3,legacy renderPlotly,no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+modules/forecast_chart/forecast_chart_ui.R,4,legacy plotlyOutput,no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+ui/tabs/forecast_overlay_tab.R,29,legacy plotlyOutput,no,left untouched (legacy owns it),RETAINED_BY_DESIGN
+R/data_loader.R,412,dependency note only,no,left untouched (legacy owns it),RETAINED_BY_DESIGN

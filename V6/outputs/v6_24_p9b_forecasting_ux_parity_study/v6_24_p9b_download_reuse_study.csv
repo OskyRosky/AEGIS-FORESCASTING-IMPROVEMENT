@@ -1,0 +1,12 @@
+aspect,existing_implementation,location,reusable,v624_target,format,stage,notes
+Whole-artifact download,"register_artifact_downloads() registers dl_<key>_{csv,md,txt,html,pdf,docx} per governed spec",R/artifact_export.R line 288,PATTERN,Not the primary V6.24 need,6 formats,P9G,Designed for tiny artifacts (<= 15 rows) with a preview cap.
+Format modal,".artifact_download_modal(spec, caps) with a button per available format",R/artifact_export.R line 241,"YES, as-is",Reuse for the V6.24 selection download,n/a,P9G,Good UX to reuse rather than rebuild.
+Capability detection,"MD/HTML/TXT always available; PDF/DOCX only when pandoc and LaTeX are present, otherwise clearly disabled",R/llm_explain.R lines 83-88,"YES, as-is",Reuse,n/a,P9G,Nothing is installed at runtime.
+Verbatim CSV,"file.copy of the canonical CSV, never a re-render",R/artifact_export.R line 299,PATTERN,"V6.24 exports a FILTERED subset, so a writer is needed instead of a copy",CSV,P9G,"The read-only guarantee is that rows are never altered, not that the file is copied."
+Filtered-selection download,"fvp_pilot_download_rows(metric, scenario, granularity, series_key, ...) plus uiOutput('fvp_download_ui')",R/viewer_pilot.R line 186,PATTERN,THE closest match for the V6.24 requirement,CSV,P9G,"This, not artifact_export, is the right reference for 'download analysis'."
+V6.24 target: actuals,n/a,n/a,NEW,Observed history for the selected series,CSV,P9G,filtered actuals_normalized
+V6.24 target: backtests,n/a,n/a,NEW,"Backtest rows for the selected series, models and horizon",CSV,P9G,filtered model_backtests_15_models
+V6.24 target: forecasts,n/a,n/a,NEW,The 30 forecast rows for the selected series and model,CSV,P9G,filtered forecast_outputs
+V6.24 target: rankings,n/a,n/a,NEW,The 15 ranking rows for the selected series,CSV,P9G,filtered model_rankings joined to accuracy_metrics
+V6.24 target: contract row,n/a,n/a,NEW,The single navigation_contract row with its caveats,CSV,P9G,filtered navigation_contract
+Filename convention,Artifact key plus extension,R/artifact_export.R,ADAPT,v6_24_<target>_<metric>_<key>_<model>_<yyyymmdd>.csv,CSV,P9G,"The owner asked for metric, route, model and date in the name."

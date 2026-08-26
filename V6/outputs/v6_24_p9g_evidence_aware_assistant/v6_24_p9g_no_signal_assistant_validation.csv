@@ -1,0 +1,9 @@
+check_id,check,expected,observed,result
+NS1,champion_visible FALSE on the probe series,FALSE,FALSE,PASS
+NS2,'Which model is winning?' refuses,no winner,'No model can be presented as a winner for this series.',PASS
+NS3,No 'best' / 'recommended model is' phrasing,absent,regex over lead+body: absent,PASS
+NS4,Reason is quoted from the artifact,artifact reason,NO_SIGNAL_ALL_ZERO_ACTUALS_TECHNICAL_TIE_BREAK,PASS
+NS5,Safety answer warns rather than reassures,warns,'Interpret this series with care',PASS
+NS6,Signal status stated,NO_SIGNAL_ALL_ZERO_ACTUALS,NO_SIGNAL_ALL_ZERO_ACTUALS,PASS
+NS7,Forecast page also refuses a recommendation,refuses,same refusal on the Forecast assistant,PASS
+NS8,Ranking still shown for inspection,"shown, labelled technical",'shown in the table for technical inspection',PASS

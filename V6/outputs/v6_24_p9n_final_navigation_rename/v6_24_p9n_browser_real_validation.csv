@@ -1,0 +1,26 @@
+check_id,check,expected,observed,result
+B1,App reachable,HTTP 200,"HTTP 200, 375,113 bytes",PASS
+B2,Sidebar groups,"Project, Models, Forecasting, Governance, Reference","exactly those five, in that order",PASS
+B3,Forecasting group items,4,"Overview, Viewer, Accuracy, Forecast (Taxonomy hidden on request)",PASS
+B4,Models group items,3,"Universe, Ranking Diagnostics, Champion",PASS
+B5,'V6.24 MVP' visible anywhere,no,no,PASS
+B6,'Models FULL' visible anywhere,no,no,PASS
+B7,Legacy Models group in the sidebar,no,no,PASS
+B8,Legacy Forecasting group in the sidebar,no,no,PASS
+B9,Sections still mounted,22,22 including 7 legacy,PASS
+B10,Forecasting Overview renders,yes,Forecasting - Overview,PASS
+B11,Forecasting Viewer renders,yes,Forecasting - Series Viewer,PASS
+B12,Forecasting Accuracy renders,yes,Forecasting - Accuracy,PASS
+B13,Forecasting Forecast renders,yes,Forecasting - Forecast,PASS
+B14,Forecasting Taxonomy link hidden,no sidebar link,absent from the sidebar; section still mounted,PASS
+B15,Models Universe renders,yes,Models - Universe,PASS
+B16,Models Ranking renders,yes,Models - Ranking Diagnostics,PASS
+B17,Models Champion renders,yes,Models - Champion,PASS
+B18,Champion empty-state pointer,Forecasting - Viewer,'No series is selected in Forecasting -> Viewer.',PASS
+B19,Champion shared-selection pointer,Forecasting - Viewer,'Change it from Forecasting -> Viewer.',PASS
+B20,Accuracy empty-state pointer,Forecasting - Viewer,'Open Forecasting -> Viewer to choose a series.',PASS
+B21,Shared selection still works,champion follows the Viewer,CPU / EUR-MSIT propagated to Models - Champion,PASS
+B22,Assistant still answers,7 prompts,"labels updated, routing unchanged",PASS
+B23,No Plotly on the eight product pages,0,0,PASS
+B24,No JS console errors,0,0,PASS
+B25,Screenshots captured,>=9,9,PASS

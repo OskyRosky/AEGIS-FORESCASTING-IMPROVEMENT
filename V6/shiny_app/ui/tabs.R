@@ -213,31 +213,54 @@ section_home <- function() {
 }
 
 section_overview <- function() {
-  # Read-only governed reads (7.0E loader). Never recompute; safe fallbacks.
-  cs <- home_champion_summary()
-  kr <- home_key_results()
-  au <- home_audit6_summary()
+  # P9O | Rebuilt on the governed V6.24 artifacts.
+  #
+  # This page previously reported the legacy HDD review: ETS Explicit as a
+  # single governed champion, median MASE/RMSSE, and pairwise "better/worse"
+  # counts over 39 series. None of that survives into V6.24 - the cohort is
+  # 140 series, there is no cohort-wide champion, and MASE, RMSSE and pairwise
+  # evidence do not exist in any V6.24 artifact. Every figure below is read
+  # from the same governed tables the Models and Forecasting pages use, through
+  # the read-only accessors. Nothing here is recalculated.
+  cs  <- v6_24_mf_champion_summary()
+  us  <- v6_24_mf_universe_summary()
+  dist <- v6_24_mf_champion_distribution()
+  leg <- v6_24_mf_legacy_champion_facts()
+  nav <- v6_24_tbl("nav_contract")
+  ac  <- v6_24_tbl("accuracy_metrics")
+  bt  <- v6_24_tbl("backtests")
+  fo  <- v6_24_tbl("forecast_outputs")
 
-  champ      <- first_label(cs_value(cs, "selected_champion_model"), APP_CHAMPION)
-  origin     <- cs_value(cs, "model_origin", "challenger")
-  family     <- cs_value(cs, "model_family", "statistical")
-  confidence <- first_label(cs_value(cs, "decision_confidence"), APP_CHAMPION_CONFIDENCE)
-  mase       <- fmt_metric(cs_value(cs, "official_median_mase"), 2)
-  rmsse      <- fmt_metric(cs_value(cs, "official_median_rmsse"), 2)
-  better     <- first_label(cs_value(cs, "supported_better_count"))
-  worse      <- first_label(cs_value(cs, "supported_worse_count"))
-  pairwise   <- first_label(kr_value(kr, "tournament_pairwise_comparisons"))
-  conditions <- cs_value(cs, "conditions",
-                         "Conditions are retained in the governed closure pack.")
+  num <- function(x) if (is.null(x) || !length(x) || is.na(x[1])) "\u2014"
+                     else format(as.integer(x[1]), big.mark = ",", trim = TRUE)
+  cnt <- function(col, value) {
+    if (is.null(nav) || !nrow(nav) || !col %in% names(nav)) return(NA_integer_)
+    sum(as.character(nav[[col]]) == value)
+  }
+  # Composition strings are read straight from the contract, never assumed.
+  metric_mix <- if (!is.null(nav) && nrow(nav)) {
+    t <- sort(table(as.character(nav$metric)), decreasing = TRUE)
+    paste(sprintf("%s %d", names(t), as.integer(t)), collapse = " \u00b7 ")
+  } else "\u2014"
+  family_mix <- if (!is.null(ac) && nrow(ac) && "model_family" %in% names(ac)) {
+    fam <- unique(ac[, c("model_name", "model_family")])
+    t <- sort(table(as.character(fam$model_family)), decreasing = TRUE)
+    paste(sprintf("%s %d", names(t), as.integer(t)), collapse = " \u00b7 ")
+  } else "\u2014"
+  horizon_lab <- if (!is.null(nav) && nrow(nav) &&
+                     "forecast_horizon_label" %in% names(nav))
+    as.character(nav$forecast_horizon_label[1]) else "30 daily steps"
+  bt_h <- if (!is.null(bt) && nrow(bt) && "horizon_steps" %in% names(bt))
+    paste0(min(bt$horizon_steps, na.rm = TRUE), " \u2013 ",
+           max(bt$horizon_steps, na.rm = TRUE), " steps") else "\u2014"
 
-  # Audit #6 governance summary (governed artifact, not hardcoded).
-  verdict    <- cs_value(au, "overall_verdict", "APPROVE_WITH_CONDITIONS_TO_SHINY_MVP")
-  blockers   <- first_label(cs_value(au, "blocker_count"), "0")
-  advisories <- first_label(cs_value(au, "advisory_count"))
-  ready      <- cs_value(au, "ready_for_shiny_mvp", "True")
-  approved   <- if (grepl("APPROVE", toupper(verdict))) "Approved with conditions" else verdict
-
-  ni <- function(x) if (length(x) != 1 || is.na(x)) "\u2014" else as.character(x)
+  present <- cnt("signal_quality_status", "SIGNAL_PRESENT")
+  nosig   <- cnt("signal_quality_status", "NO_SIGNAL_ALL_ZERO_ACTUALS")
+  trail   <- cnt("signal_quality_status", "TRAILING_ZERO_LATEST_ACTUAL")
+  avail   <- cnt("product_status", "AVAILABLE")
+  caveat  <- cnt("product_status", "AVAILABLE_WITH_CAVEAT")
+  top_pct <- if (!is.na(cs$top_share))
+    paste0(format(round(100 * cs$top_share, 1), nsmall = 1), "%") else "\u2014"
 
   panel(
     "overview",
@@ -245,92 +268,145 @@ section_overview <- function() {
     # A. Header --------------------------------------------------------------
     section_head(
       "Executive Overview",
-      "A read-only macro summary of the AEGIS forecast improvement review."
+      "A read-only macro summary of the governed V6.24 forecasting product."
     ),
 
     # B. Intro ---------------------------------------------------------------
     tags$div(
       class = "home-prose",
       tags$p(
-        "Everything below is read directly from the governed closure pack and ",
-        "audit trail. Nothing here is recalculated, and no forecasts or models ",
-        "are run by the dashboard. Expand each section for the most relevant ",
-        "evidence."
+        "Everything below is read directly from the governed V6.24 artifacts ",
+        "\u2014 the same tables the Models and Forecasting pages use. Nothing ",
+        "here is recalculated, and no forecasts or models are run by the ",
+        "dashboard. Expand each section for the underlying evidence."
       )
     ),
 
-    # 1) Models \u2014 governed champion --------------------------------------
+    # 1) Scope ---------------------------------------------------------------
     home_collapse(
-      "Models \u2014 governed champion",
-      "Which model was selected, under what conditions, and the evidence behind it.",
+      "Scope \u2014 the governed cohort",
+      "What the product actually covers: series, models, horizon and evidence volume.",
       tags$div(
         class = "home-prose",
         tags$p(
-          tags$strong(champ), " was selected as the governed champion ",
-          tags$strong("with conditions"), " \u2014 not as an unconditional ",
-          "winner. The selection is supported by consistent accuracy metrics ",
-          "and head-to-head evidence across the model universe."
+          "The product covers ", tags$strong(paste(num(cs$n_series), "series")),
+          " across four metrics, each scored against ",
+          tags$strong(paste(us$n_models, "governed models")),
+          ". Forecasts run ", tags$strong(horizon_lab),
+          " \u2014 this is a short-horizon daily product, not a multi-year plan."
         )
       ),
       info_list(
-        info_row("Champion model", paste0(champ, " (", origin, " \u00b7 ", family, ")")),
-        info_row("Selection status", "Selected with conditions"),
-        info_row("Decision confidence", confidence),
-        info_row("Median MASE (primary)", paste0(mase, " \u00b7 lower is stronger")),
-        info_row("Median RMSSE (guardrail)", paste0(rmsse, " \u00b7 stability check")),
-        info_row("Pairwise evidence",
-                 paste0(ni(better), " better \u00b7 ", ni(worse),
-                        " worse \u00b7 across ", ni(pairwise), " comparisons"))
+        info_row("Series covered", paste0(num(cs$n_series), " \u00b7 ", metric_mix)),
+        info_row("Models compared", paste0(us$n_models, " \u00b7 ", family_mix)),
+        info_row("Forecast horizon", horizon_lab),
+        info_row("Backtest horizons", bt_h),
+        info_row("Backtest rows", num(if (!is.null(bt)) nrow(bt) else NA)),
+        info_row("Accuracy rows", num(if (!is.null(ac)) nrow(ac) else NA)),
+        info_row("Forecast rows", num(if (!is.null(fo)) nrow(fo) else NA))
       )
     ),
 
-    # 2) Forecast \u2014 structural evidence coverage -------------------------
+    # 2) Models --------------------------------------------------------------
     home_collapse(
-      "Forecast \u2014 evidence base",
-      "The data the review was scored on, described as coverage \u2014 not a new performance metric.",
+      "Models \u2014 champion is decided per series",
+      "Why no single model is named for the whole cohort, and what the evidence does support.",
       tags$div(
         class = "home-prose",
         tags$p(
-          "The review compared models on a broad, complete historical backtest. ",
-          "The governed model universe covers ", tags$strong("39 series"), " across ",
-          tags$strong("15 governed models"), ", at ", tags$strong("forecast horizons of 30 / 60 / 180 days"),
-          ", with complete actual and forecast values \u2014 no gaps."
+          "V6.24 records a champion ", tags$strong("per series"),
+          ", not one for the platform. ", tags$strong(num(cs$presentable)),
+          " of ", num(cs$n_series), " series have a champion that may be ",
+          "presented, and ", tags$strong(paste(cs$n_leaders, "different models")),
+          " lead at least one of them. The most frequent leader, ",
+          tags$strong(cs$top_model), ", leads ", num(cs$top_count),
+          " series (", top_pct, " of presentable) \u2014 a count, not a ",
+          "cohort-wide decision."
         ),
         tags$p(
-          "This is the shared, like-for-like basis the tournament used to score ",
-          "every model. It is shown here as evidence coverage, not as a ",
-          "forecast-accuracy improvement."
+          "The earlier review named ", tags$strong(leg$legacy_model),
+          " as champion over ", leg$legacy_entities, " HDD entities. On this ",
+          "cohort that model is the presentable champion on ",
+          tags$strong(paste0(leg$ets_presentable_v624, " of ",
+                             leg$presentable_total)),
+          " series, so the earlier sentence is historical and is not restated ",
+          "here as a current conclusion."
         )
       ),
       info_list(
-        info_row("Series covered", "39"),
-        info_row("Models compared", "15"),
-        info_row("Forecast horizons", "30 / 60 / 180 days"),
-        info_row("Actuals / forecasts", "Complete \u00b7 no missing values")
+        info_row("Champion for the whole cohort", cs$global_champion),
+        info_row("Series with a presentable champion", num(cs$presentable)),
+        info_row("Series with no presentable champion", num(cs$suppressed)),
+        info_row("Models leading at least one series", as.character(cs$n_leaders)),
+        info_row("Most series led",
+                 paste0(cs$top_model, " \u00b7 ", num(cs$top_count),
+                        " series \u00b7 ", top_pct, " of presentable")),
+        info_row("Evidence type", cs$evidence_type),
+        info_row("Ranking policy", cs$ranking_policy)
       )
     ),
 
-    # 3) Governance ----------------------------------------------------------
+    # 3) Evidence base -------------------------------------------------------
     home_collapse(
-      "Governance",
-      "The audited approval state for handing this dashboard off \u2014 with its conditions.",
+      "Evidence base \u2014 signal quality and caveats",
+      "The condition of the data the product is scored on, stated plainly.",
       tags$div(
         class = "home-prose",
         tags$p(
-          tags$strong("Approved with conditions for dashboard handoff."), " ",
-          "Audit #6 cleared this dashboard for handoff with no blockers, under ",
-          "explicit conditions: it must stay read-only, must not recompute ",
-          "metrics or rerun models, and must keep risks and caveats visible. ",
-          "This is a dashboard-handoff approval, not a production sign-off."
+          "The cohort is not uniformly clean, and the product does not claim ",
+          "it is. ", tags$strong(paste(num(nosig), "series")),
+          " have an all-zero observed history: on those a model predicting ",
+          "zero scores a perfect error without having modelled anything, so ",
+          "their champion is suppressed and they are excluded from every ",
+          "\u201cbest model\u201d statement."
         ),
-        tags$p(conditions)
+        tags$p(
+          tags$strong(num(caveat)), " series carry at least one caveat badge ",
+          "\u2014 negative or extreme backtest predictions, trailing zeros, or ",
+          "no signal. Caveats are informational: the series is still shown, ",
+          "with the caveat visible next to it."
+        )
       ),
       info_list(
-        info_row("Audit #6 verdict", approved),
-        info_row("Blockers", ni(blockers)),
-        info_row("Advisories", ni(advisories)),
-        info_row("Ready for handoff", ni(ready)),
-        info_row("Dashboard contract", "Read-only \u00b7 no recompute")
+        info_row("Signal present", num(present)),
+        info_row("No signal \u00b7 all-zero actuals", num(nosig)),
+        info_row("Trailing zero on the latest actual", num(trail)),
+        info_row("Available without caveat", num(avail)),
+        info_row("Available with caveat", num(caveat))
+      )
+    ),
+
+    # 4) Governance ----------------------------------------------------------
+    home_collapse(
+      "Governance \u2014 the read-only contract",
+      "What the dashboard is allowed to do, and what the evidence does not contain.",
+      tags$div(
+        class = "home-prose",
+        tags$p(
+          tags$strong("The dashboard is read-only."), " Every number on every ",
+          "page is read from a governed artifact. Shiny does not run models, ",
+          "does not regenerate backtests or forecasts, and does not recompute ",
+          "accuracy, rankings or champions."
+        ),
+        tags$p(
+          "Just as important is what V6.24 does ", tags$strong("not"),
+          " carry. The measures and evidence listed below existed in the ",
+          "earlier HDD review but have no successor artifact here, so no page ",
+          "reports them. Where a legacy claim depended on them, the absence is ",
+          "disclosed rather than filled in."
+        )
+      ),
+      info_list(
+        info_row("Dashboard contract", "Read-only \u00b7 no recompute"),
+        info_row("Accuracy measures available",
+                 "MAE \u00b7 RMSE \u00b7 WAPE \u00b7 SMAPE \u00b7 MAPE \u00b7 Median absolute error"),
+        info_row("Not available in V6.24",
+                 "MASE \u00b7 RMSSE \u00b7 pairwise / head-to-head evidence \u00b7 p-values \u00b7 a global champion decision"),
+        info_row("Accuracy horizon detail",
+                 "Aggregated over the backtest window \u2014 there is no per-horizon accuracy artifact"),
+        info_row("Aggregate statistic", "Median \u00b7 means are unusable on this cohort"),
+        info_row("Sources",
+                 "navigation_contract \u00b7 accuracy_metrics \u00b7 model_rankings \u00b7 model_backtests_15_models \u00b7 forecast_outputs")
       )
     )
   )
@@ -2756,8 +2832,12 @@ app_sections <- function() {
     section_champion(),
     section_v24_overview(),
     section_v24_viewer(),
+    section_v24_accuracy(),
     section_v24_forecast(),
     section_v24_taxonomy(),
+    section_v24_models_full_universe(),
+    section_v24_models_full_ranking(),
+    section_v24_models_full_champion(),
     section_risks(),
     section_audit(),
     section_artifacts(),

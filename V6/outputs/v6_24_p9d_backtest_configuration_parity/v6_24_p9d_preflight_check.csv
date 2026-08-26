@@ -1,0 +1,6 @@
+check_id,check,expected,observed,result,blocking_token
+PF01,P9C closure exists and passed,all PASS,43/43 PASS,PASS,
+PF02,Shared selection from P9C is available,selected_series(),the backtest config reads cur_series() derived from selected_series(),PASS,
+PF03,Prechange hashes captured,all files,57 files,PASS,
+PF04,Governed artifacts fingerprinted,22,22,PASS,
+PF05,Legacy display family source present,present,data/processed/forecast_viewer_model_outputs.csv classifies the same 15 governed model names,PASS,V6_24_P9D_BLOCKED_MODEL_FAMILY_MAP_FAILURE

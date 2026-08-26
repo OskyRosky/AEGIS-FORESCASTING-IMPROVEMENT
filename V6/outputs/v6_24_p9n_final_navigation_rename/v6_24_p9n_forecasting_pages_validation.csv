@@ -1,0 +1,6 @@
+page,expected_heading,observed_heading,renders,result
+Overview,Forecasting - Overview,Forecasting - Overview,"2,858 chars, 6 DT",PASS
+Viewer,Forecasting - Series Viewer,Forecasting - Series Viewer,"2 Highcharts, 1 DT",PASS
+Accuracy,Forecasting - Accuracy,Forecasting - Accuracy,"1 Highcharts, 1 DT",PASS
+Forecast,Forecasting - Forecast,Forecasting - Forecast,"1 Highcharts, 1 DT",PASS
+Taxonomy,Forecasting - Taxonomy and Availability,Forecasting - Taxonomy and Availability,hidden from the sidebar on request; section retained and still mounted,PASS

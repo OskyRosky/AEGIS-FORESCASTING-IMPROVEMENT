@@ -1,0 +1,13 @@
+block,component,file,library,source_artifact,read_only
+A Disclosure,static no-global-champion statement,ui/tabs_v6_24_models_full.R,shiny,-,yes
+B Guide,static accordion,ui/tabs_v6_24_models_full.R,shiny,-,yes
+C Cards,v24mfc_cards,server/v6_24_models_full_server.R,shiny,navigation_contract,yes
+D Distribution chart,v24mfc_dist_chart,server/v6_24_models_full_server.R,highcharter,navigation_contract,yes
+E Distribution table,v24mfc_dist_table,server/v6_24_models_full_server.R,DT,navigation_contract + accuracy_metrics,yes
+F Selection banner,v24mfc_selection_banner,server/v6_24_models_full_server.R,shiny,shared selected_series(),yes
+G Fallback selector,v24mfc_series_ui,server/v6_24_models_full_server.R,shiny,navigation_contract,yes
+H Selected champion,v24mfc_selected,server/v6_24_models_full_server.R,shiny,navigation_contract,yes
+I Selected ranking,v24mfc_top5,server/v6_24_models_full_server.R,DT,accuracy_metrics + navigation_contract,yes
+J Policy,v24mfc_policy,server/v6_24_models_full_server.R,shiny,navigation_contract,yes
+K Legacy comparison,v24mfc_legacy,server/v6_24_models_full_server.R,shiny,navigation_contract + documented legacy scope,yes
+L Assistant,v24_mfc_asst_*,server/v6_24_models_full_server.R + R/v6_24_assistant_helpers.R,none (local deterministic),navigation_contract + model_rankings,yes

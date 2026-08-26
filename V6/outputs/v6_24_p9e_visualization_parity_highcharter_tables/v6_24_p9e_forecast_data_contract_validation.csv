@@ -1,0 +1,9 @@
+check_id,check,expected,observed,result
+FD1,Rows read from forecast_outputs,artifact read,read,PASS
+FD2,Exactly the governed step count is drawn,30,30,PASS
+FD3,Negative values preserved,no clipping,preserved,PASS
+FD4,Negative / extreme counts surfaced,in subtitle,subtitle,PASS
+FD5,"Boundary is the last observed actual, not a chosen date",max(actual date),max,PASS
+FD6,Browser: 30 forecast points drawn,30,30,PASS
+FD7,Browser: first forecast date matches the contract,2023-07-21,2023-07-21 in both the table and navigation_contract,PASS
+FD8,Browser: no forecast generated in Shiny,read only,no model call in any V6.24 file,PASS

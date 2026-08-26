@@ -1,0 +1,13 @@
+check_id,check,expected,observed,result
+BR1,App reachable,HTTP 200,"HTTP 200, 332,993 bytes",PASS
+BR2,Viewer assistant visible,yes,yes,PASS
+BR3,Forecast assistant visible,yes,yes,PASS
+BR4,Quick prompts generate answers,yes,"7 + 6 wired, sampled in browser",PASS
+BR5,Free-text generates answers,yes,yes,PASS
+BR6,Unsupported question bounded,yes,yes,PASS
+BR7,No-signal winner refused,yes,yes,PASS
+BR8,Charts still Highcharter,yes,Highcharts objects present,PASS
+BR9,Tables still DT,yes,dataTables_wrapper present,PASS
+BR10,Legacy Forecasting intact,yes,section renders,PASS
+BR11,No JS console errors,0,0,PASS
+BR12,Screenshots captured,>=7,7,PASS

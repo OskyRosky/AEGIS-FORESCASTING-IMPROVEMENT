@@ -1,0 +1,13 @@
+check,expected,observed,result
+Suppressed series count,15,15,PASS
+All suppressed carry champion_visible FALSE,15,15,PASS
+Suppressed signal quality,NO_SIGNAL_ALL_ZERO_ACTUALS,NO_SIGNAL_ALL_ZERO_ACTUALS,PASS
+Suppressed excluded from the distribution,yes,"distribution sums to 125, not 140",PASS
+Suppressed series still selectable,yes,the page renders an explanation instead of a champion,PASS
+Suppressed page copy,no presentable champion,'No presentable champion for this series.',PASS
+Tie-break model labelled,not presentable,"'Internal tie-break / reference model, not presentable'",PASS
+Ranking note for a suppressed series,declares the order not meaningful,'No row here is best or recommended.',PASS
+Ranking table champion_visible column,FALSE,FALSE,PASS
+Ranking table badge,tie-break only,tie-break only,PASS
+Browser case checked,HDD__Basilisk__NA__Forest__apcp150,"ETS Explicit, MAE 0, WAPE not computable, no winner language",PASS
+Zero-error rows belong to no-signal series,yes,195 rows with MAE exactly 0,PASS

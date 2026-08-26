@@ -1,0 +1,18 @@
+check_id,invariant,expected,observed,result
+G1,No processed artifact modified,0,0,PASS
+G2,No raw artifact modified,0,0,PASS
+G3,No legacy Shiny file modified beyond the two shared entry points,0,0,PASS
+G4,No SQL executed,0,0,PASS
+G5,No model execution,0,0,PASS
+G6,No forecast regeneration,0,0,PASS
+G7,No accuracy recalculation,0,0,PASS
+G8,No ranking recalculation,0,0,PASS
+G9,No assistant implementation,0,0,PASS
+G10,No download implementation,0,0,PASS
+G11,No artifact write,0,0,PASS
+G12,Plotly still available for legacy,library(plotly) retained,retained,PASS
+G13,Legacy Forecasting helpers untouched,unchanged,unchanged,PASS
+G14,custom.js untouched,unchanged,unchanged,PASS
+G15,No push performed,0,0,PASS
+G16,No git add -A / .,0,0,PASS
+G17,Display family map still grouping-only,DISPLAY_GROUPING_ONLY,present,PASS

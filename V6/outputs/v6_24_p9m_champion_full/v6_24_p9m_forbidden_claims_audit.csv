@@ -1,0 +1,13 @@
+term,must_not_appear_as,occurrences,context_verified,result
+global champion,a claim,several,every occurrence is inside a denial: 'Champion for the whole cohort = Not defined in V6.24',PASS
+the champion of the platform,a claim,1,inside the stakeholder answer as something to avoid saying,PASS
+winner,a claim,2,'must not be read as best ... or a winner' and the no-signal note 'No row here is best or recommended',PASS
+best model overall,anywhere,0,-,PASS
+ETS Explicit is the champion,anywhere,0,ETS Explicit is the presentable champion on 6 of 125 series,PASS
+tournament,a claim,0,Champion FULL makes no tournament claim,PASS
+MASE / RMSSE,current V6.24 metric,0,not present on the page,PASS
+p-value,a claim,0,-,PASS
+Page denies a cohort champion,required,yes,'Not defined in V6.24',PASS
+Leading model labelled a count,required,yes,"'a count, not a cohort decision'",PASS
+No-signal series excluded from best,required,yes,suppressed branch never uses champion language,PASS
+Assistant answers pass the guard,0 assertive hits,0,context-aware guard over all 7 answers plus the out-of-scope answer,PASS

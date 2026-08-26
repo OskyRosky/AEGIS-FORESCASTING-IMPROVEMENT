@@ -1,0 +1,6 @@
+check_id,check,expected,observed
+PF1,P9D closure summary exists,present,present,PASS
+PF2,P9D validation passed,0 FAIL,48 PASS / 0 FAIL,PASS
+PF3,highcharter available,installed,0.9.5,PASS
+PF4,DT available,installed,0.34.0,PASS
+PF5,P9E output folder,exists,exists,PASS

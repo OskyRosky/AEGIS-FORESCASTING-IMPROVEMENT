@@ -1,0 +1,21 @@
+page,element,current_behaviour,strength,weakness_vs_forecasting,priority,target_stage
+Overview,12 metric cards,Cards read straight from taxonomy_counts GLOBAL and navigation_contract.,Genuinely new; the owner wants this kept and carried into Forecasting,Forecast Type card wraps mid-token as GOVERNED_30_STE... ; 12 equal-weight cards give no visual hierarchy,MEDIUM,P9H
+Overview,Horizon banner,Persistent blue banner naming the governed 30-step contract.,Honest and always visible,None material,LOW,-
+Overview,Coverage by metric table,Plain HTML table from taxonomy_counts BY_METRIC.,Correct and reconciles to 140,Static; legacy tables are richer,LOW,P9H
+Overview,Artifact load status table,35 loader validation rows rendered on the product page.,Good evidence that artifacts loaded,Too technical to be a first-class product panel,MEDIUM,P9H
+Viewer,Six flat dropdowns,All six axes always rendered in one row; NOT_APPLICABLE shown as a value.,"Functionally correct: 140/140 paths resolve, zero empty options","The main complaint. No progressive disclosure, no breadcrumb chips, no route cards, no context panel",HIGH,P9C
+Viewer,Selection status line,One green line: 'Selected: <series_id> - path a|b|c'.,Unambiguous,A single line instead of breadcrumb chips and a route panel,HIGH,P9C
+Viewer,Identity key/value list,"Flat list of metric, db_type, scenario, segment, granularity, key, key role, route, product status, signal quality.","Carries key_axis_status, which legacy does not",Flat list instead of the six route metadata cards,HIGH,P9C
+Viewer,Champion block,"Shows champion, rank metric, value, validity, medians; suppressed with an amber panel when champion_visible is FALSE.",The no-signal handling is correct and clear,Not integrated into a Backtest Configuration card,MEDIUM,P9D
+Viewer,Model selector,One flat selectInput listing 15 models ordered by rank.,Defaults to the champion when meaningful,"No family grouping, no checkboxes, no champion star, single model only, no Analyze/Reset",HIGH,P9D
+Viewer,Charts,plotly scatter/line for actuals and backtest.,Renders and is readable,"PLOTLY, not Highcharts. No export menu, no crosshair, no rich tooltip, no title/subtitle context, one model at a time",HIGH,P9E
+Viewer,Ranking table,"Plain HTML table with rank, model, metric, value, WAPE, MAE, RMSE, champion.",Shows 'not computable' honestly instead of 0,No sorting or interactivity,LOW,P9H
+Forecast,Filter bar,A second independent copy of the six dropdowns.,Works,Selection is NOT shared with the Viewer; the user re-selects the series,HIGH,P9C
+Forecast,Forecast chart,plotly: 90 days of history plus 30 forward steps.,Horizon is honest and visible,Plotly; no boundary marker between history and forecast; no legend control,HIGH,P9F
+Forecast,Forecast table,"30 rows with step, date, value, flags.",Flags preserved verbatim,No export,MEDIUM,P9G
+Taxonomy,Scope selector and tables,All 10 taxonomy_counts scopes plus caveat and filter option tables.,Complete and reconciles,Reads as an audit page rather than a product page,LOW,P9H
+Caveats,Badges,Pipe-separated caveat_badge split into coloured chips by severity.,Machine-readable and never hardcoded,"NO_SIGNAL and CHAMPION_NOT_MEANINGFUL both render red, so a normal series with 2 informational badges can look alarming",MEDIUM,P9H
+Assistant,None,No assistant panel on any V6.24 page.,-,Legacy has one per section,HIGH,P9G
+Download,None,No download on any V6.24 page.,-,Legacy exports the current selection in six formats,HIGH,P9G
+Loader,R/v6_24_read_only_loader.R,"Loads 8 artifacts, validates 35 conditions, and also hosts UI tag helpers and v24_table().",Validation at load is a real strength,TECHNICAL DEBT: presentation helpers live in a data loader. They were moved there in P8 to survive UI/server load order. They belong in a dedicated v6_24_ui_helpers.R,MEDIUM,P9C
+Integration,Visual language,"v24- CSS block, independent of the fvx-/fvb-/fvtn- families.",No collision risk,"Different spacing, card and typography scale, so V6.24 reads as a separate product rather than the same one",HIGH,P9H

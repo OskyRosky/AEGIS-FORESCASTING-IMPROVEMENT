@@ -1,0 +1,44 @@
+check_id,check_name,expected,observed,result,blocks_next_stage
+V1,P9B closure exists and passed,all PASS,37/37 PASS,PASS,NO
+V2,P9C output folder exists,present,21 files,PASS,NO
+V3,Prechange hashes captured,all files,56 files,PASS,NO
+V4,Postchange hashes captured,all files,57 files,PASS,NO
+V5,Modified files report exists,present,"1 added, 4 modified",PASS,NO
+V6,Existing Forecasting section remains present,intact,"browser-verified: Selection card, 596-case pill, Backtest Configuration",PASS,YES
+V7,V6.24 MVP section remains present,intact,all four V6.24 pages render,PASS,NO
+V8,navigation_contract exists and loads,140 rows,140 rows,PASS,NO
+V9,Selection options derive from navigation_contract,contract-driven,v6_24_selection_plan reads only operational contract rows,PASS,NO
+V10,Metric is the first selection axis,metric,V6_24_FILTER_AXES[1] = metric,PASS,YES
+V11,The final axis is not first,key last,the operational key is axis 6,PASS,YES
+V12,Demand Nature is not a false active dropdown,not a dropdown,"shown only as a route card cell, read from actuals_normalized",PASS,YES
+V13,Dynamic final label logic exists,present,v6_24_final_axis_label() maps key_axis_status to a label,PASS,NO
+V14,Dynamic labels validated against key_axis_status,all cases,"Region / Forest verified for HDD, SSD, CPU and IOPS, plus the browser",PASS,NO
+V15,No route_path positional parsing,none,all route_path uses are whole-field reads,PASS,YES
+V16,Progressive disclosure implemented,implemented,axes resolve to CHOICE / CONTEXT / LOCKED per branch,PASS,NO
+V17,Downstream options update after parent selection,updates,DB Type appeared after Metric; Granularity after DB Type,PASS,NO
+V18,Parent change resets invalid downstream selections,reset,switching Metric cleared the previously chosen Forest,PASS,YES
+V19,No empty selectable options exposed,0,0 empty options across the full recursive walk,PASS,YES
+V20,Complete selection resolves to exactly one series,140/140,140/140,PASS,YES
+V21,Selected route cards render,12-cell grid,verified reactively and in the browser,PASS,NO
+V22,Breadcrumb renders,chips,six chips including context chips; empty state reads 'Select a Metric',PASS,NO
+V23,Product status renders,badge,AVAILABLE_WITH_CAVEAT badge rendered,PASS,NO
+V24,Caveat badge renders,badges,NO_SIGNAL and CHAMPION_NOT_MEANINGFUL rendered,PASS,NO
+V25,Forecast horizon disclosure renders,30 daily steps,persistent banner plus a route card cell reading '30 daily steps',PASS,NO
+V26,Champion visibility context renders,visible,the route card carries CHAMPION SHOWN and the note explains why,PASS,NO
+V27,No-signal series does not show champion as meaningful,suppressed,'Champion is not a recommendation for this series.',PASS,YES
+V28,Low-confidence series shows a moderate warning,moderate,"blue moderate card, not an error style",PASS,NO
+V29,Viewer and Forecast share the selected series,same series,one selected_series() reactive drives both,PASS,YES
+V30,App launches locally,HTTP 200,HTTP 200 on 127.0.0.1:7824,PASS,NO
+V31,Browser-real validation confirms the UI is visible,not blank,"13 browser checks passed, including the full path walk",PASS,YES
+V32,Screenshot evidence exists,manifest,5 screenshots recorded in the manifest,PASS,NO
+V33,No processed artifacts modified,0,0 of 22 changed,PASS,YES
+V34,No raw artifacts modified,no diff,clean,PASS,NO
+V35,No SQL run,none,source scan found none,PASS,NO
+V36,No model execution,none,none,PASS,NO
+V37,No forecast regeneration,none,none,PASS,NO
+V38,No accuracy or ranking recalculation,none,both read-only,PASS,NO
+V39,Old Forecasting not removed,present,legacy Viewer verified in the browser,PASS,YES
+V40,No push performed,none,none,PASS,NO
+V41,Closure states P9D readiness,stated,closure states READY_FOR_P9D_BACKTEST_CONFIGURATION_PARITY,PASS,NO
+V42,Reactive suite passed,all PASS,41/41 PASS,PASS,NO
+V43,"Charts, config, assistant and downloads untouched",out of scope,"no chart, horizon, family, assistant or download code was added",PASS,NO

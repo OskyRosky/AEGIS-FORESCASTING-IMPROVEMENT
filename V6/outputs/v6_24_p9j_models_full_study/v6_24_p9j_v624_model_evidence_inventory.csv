@@ -1,0 +1,17 @@
+question,answer,evidence,supports_universe,supports_tournament,supports_champion
+Governed model list?,YES - 15 models,accuracy_metrics.model_name distinct = 15,yes,partial,yes
+Display families?,"YES - 4, display-only","V6_24_DISPLAY_FAMILY (P9D), stamped DISPLAY_GROUPING_ONLY",yes,n/a,n/a
+Governed model_family?,YES - 3-valued,Baseline 7 / Challenger 5 / Neural 3,yes,n/a,n/a
+Series covered?,YES - 140 across CPU/HDD/IOPS/SSD,navigation_contract rows = 140,yes,partial,yes
+Model-series rows?,"YES - 2,100",accuracy_metrics rows = 2100 = 140 x 15,yes,partial,yes
+Accuracy metrics?,"YES - MAE, RMSE, WAPE, SMAPE, MAPE, median abs error, bias",accuracy_metrics columns,yes,partial,yes
+MASE / RMSSE?,NO,no column matching mase|rmsse in accuracy_metrics,no,BLOCKS legacy metric parity,no
+Per-series rank fields?,YES,"rank_within_series, primary/secondary/tertiary_rank_metric+value, is_series_champion, ranking_policy_version",n/a,diagnostic only,yes
+Global ranking?,NO,"model_rankings has 15 rows per series, no global position column",no,BLOCKS standings parity,no
+Pairwise tournament?,NO,no pairwise artifact in the cohort folder or V6.24 outputs,no,BLOCKS pairwise parity,no
+Global champion decision?,NO,no champion artifact; champion_* fields live per-series in navigation_contract,no,no,BLOCKS global champion parity
+Per-series champion?,YES - 125 of 140 presentable,"champion_visible TRUE=125, FALSE=15",n/a,n/a,yes
+Champion validity?,YES,MEANINGFUL_ACCURACY_RANKING 125 / NOT_MEANINGFUL_NO_SIGNAL 15,n/a,n/a,yes
+No-signal cases?,YES - 15,no_signal_flag TRUE on 15 series,n/a,n/a,yes
+Caveats affecting interpretation?,YES,"caveat_badge / caveat_message per series, plus wape/smape/mape_status",yes,yes,yes
+Championship spread?,YES - 14 models win at least one series,"{'FixedGrowth_6': 21, 'FixedGrowth_1_5': 17, 'AutoARIMA': 16, 'XGBoost': 13, 'Theta': 12} ...",yes,diagnostic only,yes

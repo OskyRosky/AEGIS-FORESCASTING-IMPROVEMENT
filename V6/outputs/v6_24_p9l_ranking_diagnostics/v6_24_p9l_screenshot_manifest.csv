@@ -1,0 +1,9 @@
+file,bytes,shows
+01_disclosure.png,57133,Not-a-tournament disclosure and scope
+02_setup.png,71265,"Setup card: measure, family, ordering, Analyze"
+03_summary_cards.png,61347,Cards including the two-headlines-disagree card
+04_diagnostic_table.png,107225,"DT diagnostic comparison, one row per model"
+05_median_chart.png,38772,Highcharter diagnostic median bar chart
+06_champion_count_chart.png,46332,Highcharter series-level champion counts summing to 125
+07_metric_disagreement.png,59674,Position of each model under every measure
+08_ranking_assistant.png,175548,Evidence-grounded ranking assistant answer

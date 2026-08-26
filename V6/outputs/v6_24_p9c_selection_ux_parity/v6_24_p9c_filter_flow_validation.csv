@@ -1,0 +1,14 @@
+check_id,check,expected,observed,result
+FF01,Metric is the first and only open axis before any choice,"metric CHOICE, rest LOCKED",CHOICE/LOCKED/LOCKED/LOCKED/LOCKED/LOCKED,PASS
+FF02,Metric offers exactly the governed metrics,"CPU,HDD,IOPS,SSD","CPU,HDD,IOPS,SSD",PASS
+FF03,HDD opens DB Type as a real choice,"Basilisk,EDB","Basilisk,EDB",PASS
+FF04,"IOPS renders DB Type as context, not a dropdown",CONTEXT,CONTEXT / NOT_APPLICABLE,PASS
+FF05,Selection auto-advances past a non-discriminating axis,Scenario becomes the next choice,CHOICE with 2 values,PASS
+FF06,CPU renders the unknown-source DB Type as context,CONTEXT,UNKNOWN_SOURCE_DOES_NOT_CARRY_DBTYPE shown as context,PASS
+FF07,"A single real value is stated, not asked",CONTEXT,SSD DB Type Phoenix rendered as context,PASS
+FF08,Every complete path resolves to exactly one series,140/140,140/140,PASS
+FF09,No reachable option yields zero series,0,0 empty options across the full recursive walk,PASS
+FF10,Downstream controls appear only after the parent is chosen,hidden until parent chosen,Scenario and the final axis are not rendered until DB Type is chosen,PASS
+FF11,Changing a parent clears the downstream selection,cleared,switching Metric to CPU removed the previously chosen Forest,PASS
+FF12,Options derive from navigation_contract only,contract-driven,v6_24_selection_plan reads only operational contract rows,PASS
+FF13,Long option lists get a searchable control,selectize > 12,the 140-key axis renders selectizeInput with search,PASS

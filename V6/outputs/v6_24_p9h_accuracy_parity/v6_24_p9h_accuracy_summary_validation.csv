@@ -1,0 +1,13 @@
+check_id,check,expected,observed,result
+S1,Cards render after Analyze,6-7 cards,7 cards,PASS
+S2,Models compared,15,15,PASS
+S3,Accuracy window disclosed,horizons 1-30,horizons 1-30,PASS
+S4,Selected metric shown,MAE,MAE,PASS
+S5,Target dates from the artifact,300,300,PASS
+S6,Best model from the selected metric,LinearRegression,LinearRegression / MAE 806.7471,PASS
+S7,Weakest model from the selected metric,ARIMA_Fixed,"ARIMA_Fixed / MAE 3,573.428",PASS
+S8,No-signal series gets NO best model,refused,'not meaningful - no signal' on both cards,PASS
+S9,No-signal reason stated,explicit card,'Why no best model' card explains the zero-vs-zero identity,PASS
+S10,Non-computable rows excluded and counted,stated,'Set aside' card reports counts,PASS
+S11,Cards empty before Analyze,placeholder,'Click Analyze Accuracy',PASS
+S12,Changing the series clears the analysis,cleared,'Nothing analysed yet.' after switching series,PASS

@@ -1,0 +1,11 @@
+check_id,check,expected,observed,result
+T1,Library,DT,DT::renderDataTable,PASS
+T2,One row per governed model,15,15,PASS
+T3,Columns,rank/model/family/metrics/champion/status,"Rank, Model, Family, Selected metric, MAE, RMSE, WAPE, SMAPE, Signed bias, Target dates, Champion, Status",PASS
+T4,Ordered best-first,rank 1 = best,rank 1 LinearRegression MAE 806.7471,PASS
+T5,Champion badge gated on champion_visible,gated,'champion' star shown; 'technical only' when suppressed,PASS
+T6,Extreme values readable,scientific notation,values >= 1e6 rendered as 8.2e+23 and badged 'extreme',PASS
+T7,Non-computable never zeroed,explicit text,'not computable',PASS
+T8,No-signal rows badged,badge,'no signal' badge,PASS
+T9,Sortable,yes,DT ordering enabled,PASS
+T10,Empty before Analyze,placeholder,'No rows to display.',PASS

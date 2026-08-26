@@ -1,0 +1,18 @@
+check_id,value_shown_in_browser,expected,recomputed_from_artifact,result
+G1,models compared 15,15,15,PASS
+G2,best model LinearRegression,LinearRegression,LinearRegression,PASS
+G3,best MAE 806.7471,806.7471,806.7471,PASS
+G4,weakest model ARIMA_Fixed,ARIMA_Fixed,ARIMA_Fixed,PASS
+G5,weakest MAE 3573.428,3573.428,3573.428,PASS
+G6,target dates 300,300,300,PASS
+G7,rank1 RMSE 1043.701,1043.701,1043.701,PASS
+G8,rank1 WAPE 0.0937,0.0937,0.0937,PASS
+G9,rank1 SMAPE 0.0942,0.0942,0.0942,PASS
+G10,rank1 signed bias 273.3301,273.3301,273.3301,PASS
+G11,champion is LinearRegression,LinearRegression,LinearRegression,PASS
+G12,champion visible TRUE,TRUE,TRUE,PASS
+G13,no-signal target dates 79,79,79,PASS
+G14,no-signal flag TRUE,TRUE,TRUE,PASS
+G15,every MAE==0 row is no-signal,195 / 195,195 / 195,PASS
+G16,accuracy has no horizon column,none,none,PASS
+G17,accuracy rows 2100 = 140 x 15,2100 140 15,2100 140 15,PASS

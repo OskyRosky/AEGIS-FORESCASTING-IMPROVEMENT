@@ -1,0 +1,21 @@
+check_id,invariant,expected,observed,result
+G1,No processed artifact modified,0,0,PASS
+G2,No raw artifact modified,0,0,PASS
+G3,Governed artifact bytes unchanged,0,0,PASS
+G4,No legacy logic file modified,0,0,PASS
+G5,Legacy Models sections retained,present,present,PASS
+G6,Legacy sidebar definitions retained,present,present,PASS
+G7,Legacy sections still mounted,present,present,PASS
+G8,No SQL,0,0,PASS
+G9,No model execution,0,0,PASS
+G10,No forecast regeneration,0,0,PASS
+G11,No backtest regeneration,0,0,PASS
+G12,No accuracy recalculation,0,0,PASS
+G13,No ranking recalculation,0,0,PASS
+G14,No champion logic changed,0,0,PASS
+G15,No chart logic changed,0,0,PASS
+G16,No artifact write,0,0,PASS
+G17,No network call,0,0,PASS
+G18,No Docker or Azure touched,0,0,PASS
+G19,No file deleted,0,0,PASS
+G20,No push,0,0,PASS

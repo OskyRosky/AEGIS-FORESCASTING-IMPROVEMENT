@@ -1,0 +1,13 @@
+check_id,prompt,expected,observed,result
+A1,Summarize the accuracy view,names the series and best model,"'On CPU / ... / EUR-MSIT, LinearRegression has the lowest MAE at 806.7471.'",PASS
+A2,Which models look strongest?,"ranked list, no champion claim",'LinearRegression is strongest on MAE for this series' + top-5 list,PASS
+A3,Where are the largest errors?,weakest model,"'The largest MAE on this series is ARIMA_Fixed at 3,573.428.'",PASS
+A4,Explain the heatmap,severity is display-only,"'Colour is a display-only severity score, not a governed metric.'",PASS
+A5,Explain the caveats,states counts / no-signal,adapts to excluded / no-signal / extreme,PASS
+A6,What should I tell a stakeholder?,plain framing + median warning,advises against quoting an average across series,PASS
+A7,No-signal: which models look strongest?,refuses,'No model can be called strongest on this series.',PASS
+A8,Causal question,evidence-not-available,"unsupported_cause, bounded",PASS
+A9,Action question,evidence-not-available,"unsupported_action, bounded",PASS
+A10,Evidence line names artifacts,artifacts,accuracy_metrics + navigation_contract,PASS
+A11,"Champion referenced, not decided",read-only,"'chosen by the ranking policy, not by this page'",PASS
+A12,Intent routing,9/9,"9/9, 0 mismatches",PASS

@@ -1,0 +1,10 @@
+block,component,file,library,source_artifact,read_only
+A Disclosure,v24mfr_scope_line,server/v6_24_models_full_server.R,shiny,accuracy_metrics + navigation_contract,yes
+B Guide,static accordion,ui/tabs_v6_24_models_full.R,shiny,-,yes
+C Setup,v24mfr_metric_ui / family / sort + Analyze,server/v6_24_models_full_server.R,shiny,-,yes
+D Cards,v24mfr_cards,server/v6_24_models_full_server.R,shiny,accuracy_metrics + navigation_contract,yes
+E Table,v24mfr_table,server/v6_24_models_full_server.R,DT,accuracy_metrics + navigation_contract,yes
+F Chart 1,v24mfr_metric_chart,server/v6_24_models_full_server.R,highcharter,accuracy_metrics,yes
+G Chart 2,v24mfr_champ_chart,server/v6_24_models_full_server.R,highcharter,navigation_contract,yes
+H Disagreement,v24mfr_disagree,server/v6_24_models_full_server.R,DT,accuracy_metrics,yes
+I Assistant,v24_mfr_asst_*,server/v6_24_models_full_server.R + R/v6_24_assistant_helpers.R,none (local deterministic),accuracy_metrics + navigation_contract,yes

@@ -1,0 +1,26 @@
+check_id,check,expected,observed,result
+V1,P9H closure exists and passed,TRUE,TRUE,PASS
+V2,Existing Universe studied,TRUE,TRUE,PASS
+V3,Existing Tournament studied,TRUE,TRUE,PASS
+V4,Existing Champion studied,TRUE,TRUE,PASS
+V5,Existing Models data sources identified,TRUE,TRUE,PASS
+V6,Existing assistant/download patterns identified,TRUE,TRUE,PASS
+V7,V6.24 model evidence inventory exists,TRUE,TRUE,PASS
+V8,V6.24 governed model list validated,TRUE,TRUE,PASS
+V9,Per-series ranking/champion fields documented,TRUE,TRUE,PASS
+V10,Study states whether a global tournament artifact exists,TRUE,TRUE,PASS
+V11,Study states whether a global champion artifact exists,TRUE,TRUE,PASS
+V12,Parity map exists,TRUE,TRUE,PASS
+V13,Semantic decisions table exists,TRUE,TRUE,PASS
+V14,Build plan exists,TRUE,TRUE,PASS
+V15,No Shiny code modified,TRUE,TRUE,PASS
+V16,No CSS modified,TRUE,TRUE,PASS
+V17,No processed artifacts modified,TRUE,TRUE,PASS
+V18,No raw artifacts modified,TRUE,TRUE,PASS
+V19,No SQL run,TRUE,TRUE,PASS
+V20,No model execution,TRUE,TRUE,PASS
+V21,No forecast/backtest/accuracy regeneration,TRUE,TRUE,PASS
+V22,No ranking recalculation,TRUE,TRUE,PASS
+V23,Old Models section intact,TRUE,TRUE,PASS
+V24,Closure states P9K readiness,TRUE,TRUE,PASS
+V25,No file added to shiny_app,TRUE,TRUE,PASS

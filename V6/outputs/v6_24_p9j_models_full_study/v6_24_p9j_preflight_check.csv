@@ -1,0 +1,5 @@
+check_id,check,expected,observed,result
+PF1,P9H closure exists,present,present,PASS
+PF2,P9H validation passed,0 FAIL,50 PASS / 0 FAIL,PASS
+PF3,Study folder exists,yes,yes,PASS
+PF4,Prechange hashes captured,yes,57 files,PASS

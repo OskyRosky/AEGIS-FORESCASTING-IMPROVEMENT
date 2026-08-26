@@ -6,7 +6,9 @@ app_server <- function(input, output, session) {
   forecast_pilot_server(input, output, session)
 
   # V6.24 | Read-only MVP pages over the governed P4-P7 artifacts.
-  v6_24_mvp_server(input, output, session)
+  v24_mvp <- v6_24_mvp_server(input, output, session)
+  v6_24_models_full_server(input, output, session,
+                           shared_selection = v24_mvp$selected_series)
 
   if (FALSE) {
   # --- Forecast Viewer SECTION 1 : BACKTEST COMPARISON (full artifact) ------

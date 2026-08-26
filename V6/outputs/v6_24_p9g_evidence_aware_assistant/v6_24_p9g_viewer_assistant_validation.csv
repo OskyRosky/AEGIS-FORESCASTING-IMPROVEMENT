@@ -1,0 +1,15 @@
+check_id,check,expected,observed,result
+VW1,Assistant card renders in Viewer,present,present,PASS
+VW2,Kicker matches product pattern,AEGIS EXPLANATION ASSISTANT,AEGIS EXPLANATION ASSISTANT,PASS
+VW3,Quick prompt count,7,7,PASS
+VW4,Free-text box present,yes,yes,PASS
+VW5,Generate button present,yes,yes,PASS
+VW6,Local-only badge shown,Local evidence · no LLM,Local evidence · no LLM,PASS
+VW7,Summary answer names the series,series id,CPU__Consumed__Region__EUR-MSIT,PASS
+VW8,Summary answer states signal quality,SIGNAL_PRESENT,SIGNAL_PRESENT,PASS
+VW9,Champion answer names champion,LinearRegression,LinearRegression,PASS
+VW10,Champion answer cites the policy,P6C_RANKING_POLICY_V2,P6C_RANKING_POLICY_V2,PASS
+VW11,Evidence-used line lists artifacts,artifact names,navigation_contract · model_rankings · accuracy_metrics,PASS
+VW12,Caveat line always shown,present,NEGATIVE_BACKTEST_PREDICTIONS_PRESENT (low),PASS
+VW13,Engine stamp discloses local composition,engine id,V6_24_LOCAL_DETERMINISTIC_EVIDENCE_V1,PASS
+VW14,Free text routes correctly,attention,intent: attention,PASS

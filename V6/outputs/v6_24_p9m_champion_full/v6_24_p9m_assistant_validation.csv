@@ -1,0 +1,15 @@
+prompt,expected,observed,result
+Summarize Champion FULL,per-series framing,'Champion evidence in V6.24 is recorded per series: 125 of 140 series have a presentable champion.',PASS
+Which model leads the most series?,"a count, not a winner",'FixedGrowth_6 leads the most series: 21 of 125 presentable series.',PASS
+What is the champion for this selected series?,scoped to the selection,"'For CPU / CPU|Organic|Consumed|Region / EUR-MSIT, the series-level champion is LinearRegression.'",PASS
+Why is there no global champion?,states the absence,'V6.24 does not define a champion for the whole cohort.',PASS
+Why are no-signal series suppressed?,explains the zero-vs-zero problem,'15 series carry no presentable champion.',PASS
+What changed from the old HDD Champion page?,scope comparison,'The previous Champion page named one model for 39 HDD entities; V6.24 records a champion per series across 140.',PASS
+What should I tell a stakeholder?,no global winner,"'AEGIS picks the best model per series, not once for everything.'",PASS
+Selected series is suppressed,refuses champion language,'there is no presentable champion' and denies best/winner/recommended,PASS
+Causal question,refused,"unsupported_cause, bounded",PASS
+Action question,refused,"unsupported_action, bounded",PASS
+Forward-looking question,declined and redirected,"mc_out_of_scope, 'This page does not carry forecast values.'",PASS
+Winner framing,redirected to the absence,'which model is the best overall winner' routes to mc_no_global,PASS
+Typed questions match their buttons,7/7,7/7,PASS
+Intent routing,no mismatches,0 mismatches over 13 cases,PASS

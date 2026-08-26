@@ -1,0 +1,10 @@
+element,legacy_behaviour,data_source,transfers_to_v624,note
+Champion scope,ONE global champion for the whole model universe,champion_decision.csv,NO,V6.24 has no global champion artifact. Champion is per-series.
+Selected champion,"ETS Explicit, 'selected with conditions'",champion_conditions_protocol.csv,NO - contradicted,"In V6.24 ETS Explicit is the presentable champion on only 6 of 125 signal-present series. It appears as champion_model_name on 21 rows, but 15 of those are the no-signal series where P6C's tie-break crowns it and champion_visible is FALSE."
+Confidence,"medium_confidence, condition C-001, action MONITOR",champion_conditions_protocol.csv,no,Legacy governance record; keep as history.
+Conditional status,"'champion with conditions, not an unconditional winner', condition C-002, KEEP_WITH_CONDITIONS",champion_conditions_protocol.csv,no,The CAUTION is worth carrying; the specific decision is not.
+Approved language,13 approved/forbidden statements by audience,champion_dashboard_language.csv,partly,The discipline of governed wording is reusable; the statements name ETS Explicit and would be false in V6.24.
+Supporting metrics,"median MASE 6.90, median RMSSE 1.86, 8 supported-better 0 supported-worse",tournament artifacts,NO,Neither metric exists in V6.24.
+Leadership chart,champion_leadership_count_chart (Plotly) - per-series leadership counts,champion_series_evidence,adaptable,V6.24 CAN build this honestly from navigation_contract: 14 distinct models win at least one series.
+Series evidence table,champion_series_evidence_table + exceptions,champion_entity_model_scores,adaptable,V6.24 equivalent is model_rankings joined to navigation_contract.
+Assistant,"llm_explain_ui('llm_champion_overview','Champion Overview')",page-keyed mock,no,Use the P9G evidence-aware assistant.

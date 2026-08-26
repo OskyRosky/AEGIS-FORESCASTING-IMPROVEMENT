@@ -1,0 +1,15 @@
+check_id,check,expected,observed,result
+TB1,App table library identified,DT,DT (28 usages in R/helpers.R),PASS
+TB2,V6.24 table helper wraps DT,DT::datatable,DT::datatable,PASS
+TB3,Options mirror the legacy tables,stripe hover row-border / ftip,match,PASS
+TB4,No plain-HTML table left in V6.24 outputs,0 v24_table calls,0 v24_table calls,PASS
+TB5,Ranking table shows rank/model/family/metrics/champion,all,"Rank, Model, Family, Ranked by, Rank value, WAPE, SMAPE, MAE, RMSE, Champion",PASS
+TB6,Forecast table shows step/date/model/value/flags,all,"Step, Date, Model, Predicted value, Negative, Extreme",PASS
+TB7,Taxonomy table keeps medians,median columns,"Median WAPE, Median MAE",PASS
+TB8,Missing values never rendered as zero,em dash,em dash,PASS
+TB9,Browser: ranking table renders 15 rows,15,15 rows,PASS
+TB10,Browser: overview tables render,4 / 5 / 10 rows,4 / 5 / 10 rows,PASS
+TB11,Browser: taxonomy tables render,>0 rows,4 / 9 / 15 rows,PASS
+TB12,Browser: forecast table renders,10 rows per page,"10 rows, 30 total",PASS
+TB13,Browser: DT sorting and search present,present,"sortable headers, search box, 'Showing 1 to 4 of 4 entries'",PASS
+TB14,Champion cell suppressed when not meaningful,technical only,'technical only' badge on the suppressed series,PASS

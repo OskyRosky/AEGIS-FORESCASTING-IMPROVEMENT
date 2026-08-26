@@ -1,0 +1,10 @@
+check,expected,observed,result
+Default set size,"around 5-6, never all 15",6 selected,PASS
+Champion included when meaningful,champion in defaults,FixedGrowth_1_5 in defaults,PASS
+Governance reference always included,ETS Explicit,present in both,PASS
+Growth baseline included,at least one,"FixedGrowth_1_5,FixedGrowth_3",PASS
+No-signal defaults present no winner,"no star, champion not meaningful","leads with ETS Explicit as governance reference; champion validity NOT_MEANINGFUL_NO_SIGNAL so no star is drawn. Note: P6C's tie-break crowns ETS Explicit for every no-signal series, so the reference model and the technical champion coincide by design.",PASS
+All defaults are governed models,15-model vocabulary,all governed,PASS
+At least one model always selected,>0,5 for the no-signal series,PASS
+Browser: signal-present default,6 of 15 selected,"6 of 15 selected: FixedGrowth_1_5 (champion), FixedGrowth_3, ETS Explicit, LightGBM, XGBoost, SMLP-TCN",PASS
+Browser: no-signal default,"5 of 15, no champion lead","ETS Explicit, FixedGrowth_3, LightGBM, XGBoost, SMLP-TCN with no star",PASS

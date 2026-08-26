@@ -1,0 +1,26 @@
+check_id,check,expected,observed,result
+B1,App reachable,HTTP 200,HTTP 200,PASS
+B2,Models FULL has three entries,"Universe, Ranking, Champion","v24mf_universe, v24mf_ranking, v24mf_champion",PASS
+B3,Champion page renders,active,"is-active, 7,059 chars",PASS
+B4,Cards render,8,8,PASS
+B5,Cohort champion card,Not defined in V6.24,'CHAMPION FOR THE WHOLE COHORT = Not defined in V6.24',PASS
+B6,Distribution chart,"highcharter bar, 14, sum 125","bar, 14 bars, sum 125",PASS
+B7,Distribution table,14 rows,14 rows,PASS
+B8,Presentable case,LinearRegression rank 1,"LinearRegression, MAE 806.7471, star badge",PASS
+B9,Suppressed case,no presentable champion,"'No presentable champion for this series.', tie-break only",PASS
+B10,Top-5 table follows the Viewer,updates every time,4 consecutive changes all correct,PASS
+B11,Selection banner,shared vs fallback,both states confirmed,PASS
+B12,Policy accordion,renders when opened,881 chars,PASS
+B13,Assistant answers,7 prompts,"all 7, correct intents",PASS
+B14,No Plotly on the page,0,0,PASS
+B15,No JS console errors,0,0,PASS
+B16,Models FULL Universe intact,content,"6,010 chars, 2 DT, 1 chart",PASS
+B17,Models FULL Ranking intact,content,"3,344 chars, 2 DT, 2 charts",PASS
+B18,Legacy Universe intact,content,802 chars,PASS
+B19,Legacy Tournament intact,content,"3,655 chars",PASS
+B20,Legacy Champion intact,content,"5,355 chars, still Plotly",PASS
+B21,V6.24 Viewer intact,charts + tables,"2 charts, 2 DT",PASS
+B22,V6.24 Accuracy intact,chart + table,"1 chart, 1 DT, 15 rows after Analyze",PASS
+B23,V6.24 Forecast intact,chart + table,"1 chart, 2 DT",PASS
+B24,V6.24 Overview and Taxonomy intact,tables,6 DT each,PASS
+B25,Screenshots captured,>=10,10,PASS

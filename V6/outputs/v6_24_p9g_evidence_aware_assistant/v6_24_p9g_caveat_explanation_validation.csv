@@ -1,0 +1,7 @@
+check_id,check,expected,observed,result
+CV1,Caveat codes listed,codes,NO_SIGNAL; CHAMPION_NOT_MEANINGFUL,PASS
+CV2,Severity shown per code,severity,(high) / (low),PASS
+CV3,Blocking status stated,non-blocking,"'informational, not blocking'",PASS
+CV4,"Contract message quoted, not contradicted",framed,quoted as the contract's materiality assessment,PASS
+CV5,Caveat line present on every answer,always,rendered in the evidence footer of all answers,PASS
+CV6,"Negative/extreme surfaced, not hidden",surfaced,counts printed with 'never clipped',PASS

@@ -1,0 +1,16 @@
+check_id,check,expected,observed,result
+FC1,Forecast output is highcharter,renderHighchart,renderHighchart,PASS
+FC2,Forecast UI is highchartOutput,highchartOutput,highchartOutput,PASS
+FC3,Actual history is a line,"type = ""line""",line,PASS
+FC4,Forecast is a line,"type = ""line""",line,PASS
+FC5,Actual and forecast use different colours,two colours,actual #10477e vs forecast #0f9d6e,PASS
+FC6,Forecast start boundary drawn,plotLine,plotLine,PASS
+FC7,Default model is the champion when champion_visible TRUE,champion,champion,PASS
+FC8,No winner language when champion_visible FALSE,explicit disclaimer,present,PASS
+FC9,Model dropdown still offered for inspection,selectInput,selectInput,PASS
+FC10,Forecast values never clipped,no pmax/pmin,FOUND,FAIL
+FC11,Browser: champion default on signal-present series,champion,"LinearRegression, subtitle says 'champion'",PASS
+FC12,Browser: reference model on suppressed series,no winner,"ETS Explicit, subtitle says 'reference model'",PASS
+FC13,Browser: exactly 30 forecast points,30,"30 points, 'Forecast (30 steps)'",PASS
+FC14,"Browser: no 1,440 / 4-year wording in any V6.24 section",0 occurrences,0 occurrences,PASS
+FC15,Browser: legend and export present,both,"2 legend items, 1 export button",PASS
